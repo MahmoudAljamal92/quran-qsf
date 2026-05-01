@@ -39,7 +39,7 @@ Steps:
 1. Create an arXiv account; if you are not affiliated with a university, request endorsement by emailing a colleague who is.
 2. Category: `cs.CL` (computation and language) primary; `stat.AP` and `math.IT` secondary.
 3. Upload source: convert `docs/PAPER.md` → LaTeX via `pandoc docs/PAPER.md -s -o paper.tex` (one-time conversion; review for formula rendering).
-4. Title: *"The Quranic Structural Fingerprint: A Reproducible Information-Theoretic Characterisation of a Multivariate Outlier in Classical-Arabic Prose, with an 8-Channel Authentication Ring"*.
+4. Title: *"The Quranic Structural Fingerprint: A Reproducible Information-Theoretic Characterisation of the Quran as a Multivariate Outlier Against Classical-Arabic Prose Baselines, with an 8-Channel Authentication Ring"*.
 5. Submit. arXiv will assign an arXiv ID (e.g. `2605.XXXXX`) within ~48 h, which is permanent and citable.
 
 ### 2.3 Git-commit-hash cryptographic anchor (recommended tertiary, takes 60 s)

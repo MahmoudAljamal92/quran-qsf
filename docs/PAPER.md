@@ -1,6 +1,6 @@
 # The Quranic Structural Fingerprint (QSF)
 
-## A Reproducible 5-D Characterisation of a Multivariate Outlier in Classical-Arabic Prose, with Integrity-Locked Replication
+## A Reproducible 5-D Characterisation of the Quran as a Multivariate Outlier Against Classical-Arabic Prose Baselines, with Integrity-Locked Replication
 
 **Version**: v7.9-cand patch H **V3.31** (project closure, 2026-05-01). Body text below is authoritative through V3.22 (§4.47.x). V3.23–V3.31 additions (paradigm-grade Mushaf-as-Tour line F81–F91, multifractal fingerprint F87, IFS fractal portrait, 8-channel Authentication Ring) are synthesised in `docs/THE_QURAN_FINDINGS.md` and the V3.23–V3.31 closure banner directly below. Full patch-by-patch history in `CHANGELOG.md`; v3 canonical release preserved at `docs/old/PAPER.md`.
 **Run of record**: `results/ULTIMATE_REPORT.json`, `results/CLEAN_PIPELINE_REPORT.json`, `results/ULTIMATE_SCORECARD.md`; SHA-pinned checkpoints in `results/checkpoints/`; integrity locks in `results/integrity/`. Ultimate-2 edit-detection layer: `results/experiments/exp20_MASTER_composite/ULTIMATE2_REPORT.json`, `results/experiments/exp{09..19}_*/*.json`, `notebooks/ultimate/QSF_ULTIMATE_2.ipynb`.

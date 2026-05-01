@@ -575,6 +575,11 @@ and measure the deviation percentage.</p>
 (rhyme concentration, verse-ending entropy, letter-pair stability, fractal complexity, and others)
 that were locked in advance and verified across 11 other canonical scriptures. Each measurement
 gives a PASS or FAIL, producing a binary verdict: <em>does the text structurally resemble the Quran?</em></p>
+<p><strong>On genre.</strong> The Quran is traditionally classified <em>neither</em> as prose (نثر) <em>nor</em>
+as poetry (شعر) — classical Arabic scholarship places it in its own category (Q. 36:69 explicitly
+disclaims being poetry). Where the fingerprint layer below talks about "classical-Arabic prose" or
+"Arabic poetry", those names refer only to the <strong>baseline corpora we measure the Quran against</strong>,
+not to a class the Quran belongs to. The whole point is that the Quran is an outlier relative to both.</p>
 <p><strong>Honesty guardrail.</strong> A single common word like <code>كتب</code>, <code>الله</code>, or
 <code>الرحمن</code> appears both in the Quran <em>and</em> in every Arabic newspaper ever printed.
 Reporting it as "Quranic" because it happens to be a substring of the Quran would be a false positive.

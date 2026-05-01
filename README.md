@@ -1,6 +1,8 @@
 # Quranic Structural Fingerprint (QSF)
 
-> A reproducible, SHA-256-locked, deterministic-seed characterisation of the Quran as a **multivariate statistical outlier in classical-Arabic prose**, with cross-tradition replications in 6 alphabets and 5 language families. 70+ positive findings, 63 honest retractions, 2 deployable tools (IFS fractal portrait + 8-channel Authentication Ring), project-closure audit at 0 CRITICAL.
+> A reproducible, SHA-256-locked, deterministic-seed characterisation of the Quran as a **multivariate statistical outlier against classical-Arabic prose baselines**, with cross-tradition replications in 6 alphabets and 5 language families. 70+ positive findings, 63 honest retractions, 2 deployable tools (IFS fractal portrait + 8-channel Authentication Ring), project-closure audit at 0 CRITICAL.
+
+> **On genre (important).** The Quran is traditionally classified **neither** as prose (نثر / *nathr*) **nor** as poetry (شعر / *shiʿr*); classical Arabic scholarship places it in its own category (Q. 36:69 explicitly disclaims being poetry). Throughout this project "classical-Arabic prose" and "Arabic poetry" refer only to the **baseline corpora** (KSUCCA historical prose, Arabic Bible, classical qasida, Maqamat al-Hariri, modern Hindawi prose, etc.) **against which** the Quran's statistics are measured. The whole point of the project is that the Quran does not sit inside either of these classes — it is the outlier.
 
 **Current version**: **v7.9-cand patch H V3.30** (project closure, 2026-05-01).
 
@@ -36,7 +38,7 @@
 ```
 Aljamal, M. (2026). The Quranic Structural Fingerprint —
   A Reproducible Information-Theoretic Characterisation of a Multivariate Outlier
-  in Classical-Arabic Prose, with an 8-Channel Authentication Ring.
+  Against Classical-Arabic Prose Baselines, with an 8-Channel Authentication Ring.
   v7.9-cand patch H V3.30 (project closure, 2026-05-01).
   OSF DOI: 10.17605/OSF.IO/N46Y5 (see docs/PUBLISHING_PLAN.md §2.1).
   arXiv: PENDING (see docs/PUBLISHING_PLAN.md §2.2).
@@ -391,7 +393,7 @@ The locks under `results/integrity/` are the project's tamper-evidence layer. **
 
 Work in progress; cite as:
 
-> Aljamal, M. (2026). *The Quranic Structural Fingerprint — A Reproducible 5-Dimensional Characterisation of a Multivariate Outlier in Classical-Arabic Prose, with Integrity-Locked Replication*. v7.7 (paper-grade) / v7.8-candidate, `docs/PAPER.md`.
+> Aljamal, M. (2026). *The Quranic Structural Fingerprint — A Reproducible 5-Dimensional Characterisation of the Quran as a Multivariate Outlier Against Classical-Arabic Prose Baselines, with Integrity-Locked Replication*. v7.7 (paper-grade) / v7.8-candidate, `docs/PAPER.md`.
 
 ---
 

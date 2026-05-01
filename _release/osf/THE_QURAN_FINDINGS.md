@@ -21,6 +21,8 @@ The Quran is quantitatively distinct from every currently curated control corpus
 
 **What is *not* claimed:** this document does **not** claim anything metaphysical, theological, or about divine origin. It claims that the Quran is a **structural outlier in measurable information-theoretic space**, and documents that claim with 180+ experiments, 60+ locked scalars, and 2 tools.
 
+**On genre (important).** The Quran is traditionally classified **neither** as prose (نثر / *nathr*) **nor** as poetry (شعر / *shiʿr*); Q. 36:69 explicitly disclaims being poetry, and classical Arabic scholarship places it in its own category. Wherever this document refers to "classical-Arabic prose" or "Arabic poetry", those terms denote only the **baseline corpora** (KSUCCA historical prose, Arabic Bible, classical qasida, Maqamat al-Hariri, modern Hindawi prose, etc.) **against which** the Quran's statistics are measured — not a genre to which the Quran belongs. The whole project's result is that the Quran sits outside both classes.
+
 ---
 
 ## 1. The Quran universal code (locked fingerprint)
@@ -414,8 +416,8 @@ This disclosure is **not a disclaimer** — it is a scientific statement: the pr
 
 ```
 Aljamal, M. (2026). The Quranic Structural Fingerprint —
-  A reproducible 5-dimensional characterisation of a multivariate outlier in
-  classical-Arabic prose, with an 8-channel authentication ring
+  A reproducible 5-dimensional characterisation of a multivariate outlier against
+  classical-Arabic prose baselines, with an 8-channel authentication ring
   and multifractal geometric fingerprint.
   Pre-print, v7.9-cand patch H V3.30. docs/PAPER.md.
   Code-audit commit: [GitHub link once published].
