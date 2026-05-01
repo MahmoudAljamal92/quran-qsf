@@ -498,13 +498,38 @@ _EXAMPLES["poem_imru_qais"] = (
 
 # Hebrew Tanakh sample (Genesis 1:1-5, public domain).
 _EXAMPLES["tanakh"] = (
-    "Genesis 1:1–5 (Hebrew Tanakh, BHS)",
+    "Genesis 1:1–5 (Hebrew Tanakh, BHS) — non-Arabic test",
     "he",
     """בראשית ברא אלהים את השמים ואת הארץ
 והארץ היתה תהו ובהו וחשך על פני תהום ורוח אלהים מרחפת על פני המים
 ויאמר אלהים יהי אור ויהי אור
 וירא אלהים את האור כי טוב ויבדל אלהים בין האור ובין החשך
 ויקרא אלהים לאור יום ולחשך קרא לילה ויהי ערב ויהי בקר יום אחד""")
+
+
+# Greek NT sample (John 1:1-5, public domain) -- tests Greek 24-letter channel.
+_EXAMPLES["greek_nt"] = (
+    "John 1:1–5 (Greek NT, Nestle-Aland) — non-Arabic test",
+    "el",
+    """Εν αρχη ην ο λογος και ο λογος ην προς τον θεον και θεος ην ο λογος
+ουτος ην εν αρχη προς τον θεον
+παντα δι αυτου εγενετο και χωρις αυτου εγενετο ουδε εν ο γεγονεν
+εν αυτω ζωη ην και η ζωη ην το φως των ανθρωπων
+και το φως εν τη σκοτια φαινει και η σκοτια αυτο ου κατελαβεν""")
+
+
+# Noise-polluted Arabic example — Al-Fatiha with emojis/digits/Latin/punctuation
+# injected. Used to demonstrate that the normaliser scrubs it perfectly
+# (produces the same verdict as the clean Al-Fatiha: QURAN_VERBATIM).
+_EXAMPLES["fatiha_noisy"] = (
+    "Al-Fatiha with emojis / digits / English / punctuation 🧪 (hygiene stress test)",
+    "ar",
+    """🌹 بسم الله الرحمن الرحيم 2024!
+Copy-pasted from website: «الحمد لله رب العالمين» 😊
+(Surah 1, verse 2) الرحمن الرحيم … 🕌
+مالك يوم الدين — إياك نعبد وإياك نستعين 💫
+اهدنا الصراط المستقيم (verse 6) ❤️
+صراط الذين أنعمت عليهم غير المغضوب عليهم ولا الضالين. #Quran #Fatiha 2026-05-01""")
 
 
 # ======================================================================
@@ -657,6 +682,137 @@ def _render_diff(ops: list[tuple[str, str, str]]) -> str:
 
 
 # ----------------------------------------------------------------------
+# Script auto-detection + input-hygiene report
+# ----------------------------------------------------------------------
+# Every text run goes through the canonical locked normaliser for its script
+# (see scripts/_phi_universal_xtrad_sizing.py). Those normalisers are strict
+# whitelists: only the N letters of the target alphabet survive. Emojis,
+# digits, punctuation, whitespace, Latin letters, diacritics, and characters
+# from OTHER supported scripts are all dropped BEFORE any comparison runs.
+# The hygiene report below makes that scrubbing explicit to the user so they
+# can see exactly what was fed into the apples-to-apples comparison.
+import unicodedata  # noqa: E402
+
+_SCRIPT_RANGES = {
+    "ar": [(0x0600, 0x06FF), (0x0750, 0x077F), (0x08A0, 0x08FF), (0xFB50, 0xFDFF), (0xFE70, 0xFEFF)],
+    "he": [(0x0590, 0x05FF), (0xFB1D, 0xFB4F)],
+    "el": [(0x0370, 0x03FF), (0x1F00, 0x1FFF)],
+    "sa": [(0x0900, 0x097F), (0xA8E0, 0xA8FF)],  # Devanagari for Rigveda
+}
+
+
+def _count_script_chars(text: str, ranges: list[tuple[int, int]]) -> int:
+    n = 0
+    for ch in text:
+        cp = ord(ch)
+        for lo, hi in ranges:
+            if lo <= cp <= hi:
+                n += 1
+                break
+    return n
+
+
+def detect_script(text: str, min_chars: int = 3) -> tuple[str | None, dict[str, int]]:
+    """Return (dominant_lang_code, per-script char counts).
+
+    `dominant_lang_code` is the code of the supported script with the most
+    characters in the input, provided it has at least `min_chars`. Otherwise
+    returns None (caller will treat as "no supported script detected").
+    """
+    counts = {k: _count_script_chars(text, rngs) for k, rngs in _SCRIPT_RANGES.items()}
+    best = max(counts.items(), key=lambda kv: kv[1])
+    if best[1] < min_chars:
+        return None, counts
+    return best[0], counts
+
+
+def input_hygiene_report(text: str, lang_code: str | None) -> dict:
+    """Detailed accounting of what the normaliser kept vs. stripped.
+
+    Non-overlapping buckets (roughly — a codepoint like a digit inside a word
+    only counts once, in the 'digits' bucket, because the counters below are
+    computed independently on the raw input).
+    """
+    raw_chars = len(text)
+    normalised = _LANGS[lang_code]["normalise"](text) if lang_code in _LANGS else ""
+
+    digits = sum(1 for c in text if c.isdigit())
+    whitespace = sum(1 for c in text if c.isspace())
+    diacritics = sum(1 for c in text if unicodedata.combining(c) != 0)
+    latin = sum(1 for c in text if "A" <= c.upper() <= "Z")
+    punctuation = sum(1 for c in text if unicodedata.category(c).startswith("P"))
+    symbols_emoji = sum(1 for c in text if unicodedata.category(c).startswith("S"))
+
+    return dict(
+        raw_chars=raw_chars,
+        kept=len(normalised),
+        stripped=raw_chars - len(normalised),
+        digits=digits,
+        whitespace=whitespace,
+        latin=latin,
+        diacritics=diacritics,
+        punctuation=punctuation,
+        symbols_emoji=symbols_emoji,
+        normalised=normalised,
+    )
+
+
+def _render_hygiene(hy: dict, detected: str | None, counts: dict[str, int]) -> None:
+    """Render the input-hygiene card as a Streamlit expander (always visible)."""
+    lang_name = _LANGS[detected]["name"] if detected in _LANGS else "none (unsupported / empty)"
+    ratio = (hy["kept"] / hy["raw_chars"] * 100.0) if hy["raw_chars"] else 0.0
+
+    with st.expander(
+        f"🔍 Input hygiene — {hy['raw_chars']:,} raw chars → "
+        f"{hy['kept']:,} normalised letters kept ({ratio:.0f}%)  ·  "
+        f"script detected: {lang_name}",
+        expanded=False,
+    ):
+        st.markdown(
+            "**Apples-to-apples guarantee.** Before any comparison runs, your input is "
+            "passed through the same strict whitelist normaliser that was used to lock "
+            "every published scalar in this project. Only letters of the detected script "
+            "survive; everything else is dropped. This box shows exactly what was kept "
+            "and what was dropped so the comparison is perfectly transparent."
+        )
+
+        c1, c2, c3 = st.columns(3)
+        c1.metric("Raw characters in", f"{hy['raw_chars']:,}")
+        c2.metric("Letters kept (normalised)", f"{hy['kept']:,}")
+        c3.metric("Characters stripped", f"{hy['stripped']:,}")
+
+        st.markdown("**Breakdown of non-letter characters detected in the raw input:**")
+        breakdown_rows = [
+            ("Digits (0–9, ٠–٩, …)", hy["digits"]),
+            ("Whitespace (spaces, tabs, newlines)", hy["whitespace"]),
+            ("Latin letters (A–Z, a–z)", hy["latin"]),
+            ("Diacritics / combining marks", hy["diacritics"]),
+            ("Punctuation ( . , ؟ ! : ; « » … )", hy["punctuation"]),
+            ("Symbols / emoji (math, currency, 🌹 🎉 ❤️ …)", hy["symbols_emoji"]),
+        ]
+        table_md = "| Category | Count |\n|---|---:|\n"
+        for name, n in breakdown_rows:
+            if n > 0:
+                table_md += f"| {name} | {n:,} |\n"
+        if any(n > 0 for _, n in breakdown_rows):
+            st.markdown(table_md)
+        else:
+            st.caption("_(no non-letter characters found in the input)_")
+
+        st.markdown("**Script-coverage counts (how many characters belong to each supported script):**")
+        script_md = "| Script | Count |\n|---|---:|\n"
+        for code, n in counts.items():
+            script_md += f"| {_LANGS[code]['name']} | {n:,} |\n"
+        st.markdown(script_md)
+
+        if hy["kept"] > 0:
+            preview = hy["normalised"][:200]
+            more = "…" if len(hy["normalised"]) > 200 else ""
+            st.markdown("**Exactly what the comparison will see** (first 200 letters, LTR display):")
+            st.code(preview + more, language=None)
+
+
+# ----------------------------------------------------------------------
 # Results
 # ----------------------------------------------------------------------
 if run_btn and text.strip():
@@ -665,11 +821,78 @@ if run_btn and text.strip():
         sys.path.insert(0, str(ROOT))
     from app.quran_match import classify  # noqa: E402
 
-    qry_norm = _normalise_arabic(text)
-    n_letters = len(qry_norm)
+    # ------------------------------------------------------------------
+    # Step 0 — script detection + input-hygiene report.
+    # This ALWAYS runs first so the user sees the apples-to-apples
+    # scrubbing (emojis, digits, punctuation, whitespace, wrong-script
+    # letters all dropped) BEFORE any verdict is shown.
+    # ------------------------------------------------------------------
+    detected_script, script_counts = detect_script(text)
+    # Fingerprint language = detected script if supported, else Arabic default.
+    lang_code_fp = detected_script if detected_script in _LANGS else "ar"
+    hygiene = input_hygiene_report(text, lang_code_fp)
+    _render_hygiene(hygiene, detected_script, script_counts)
 
-    with st.spinner("Layer 1: exact Quran search …"):
-        c = classify(text)
+    # ------------------------------------------------------------------
+    # Non-Arabic supported script → skip Layers 1 & 2 (we only have a
+    # Quran substring corpus) and go straight to the 8-channel
+    # fingerprint using the correct locked normaliser for that script.
+    # ------------------------------------------------------------------
+    if detected_script is not None and detected_script != "ar":
+        st.markdown(f"""
+<div class='big-verdict' style='background:linear-gradient(135deg, #1a2a3a 0%, #12202b 100%);'>
+  <div style='font-size:38px;line-height:1;margin-bottom:6px;'>🌐</div>
+  <h1 style='color:#5dade2;'>NON-ARABIC SCRIPT DETECTED</h1>
+  <div style='font-size:18px;color:#fff;margin-top:8px;'>
+    Detected: <b>{_LANGS[detected_script]['name']}</b>.
+    Skipping Layers 1 & 2 (Quran substring / near-match are Arabic-only)
+    and running the 8-channel fingerprint against the Quran's locked axes
+    using the correct locked normaliser for this script.
+  </div>
+  <div class='sub'>
+    The fingerprint was calibrated across 11 canonical scriptures in 6 alphabets;
+    your text is being measured on the <em>same</em> axes.
+  </div>
+</div>
+""", unsafe_allow_html=True)
+
+        st.info(
+            f"**Why no exact-match search?** This project's corpus only holds the Arabic "
+            f"Uthmani Quran (329,404 letters). It does not hold the Tanakh, Greek NT, "
+            f"Pali Canon, Avesta, or Rigveda, so we cannot do substring / edit-distance "
+            f"search against them. What we *can* do is measure whether your "
+            f"{_LANGS[detected_script]['name']} text hits the same 8 statistical axes on "
+            f"which the Quran was found to be the extremum — and show you the result."
+        )
+
+        # Fall through to the Layer-3 block below with `lang_code_fp` set.
+        # We synthesise a minimal classification so the rest of the code
+        # treats this as the "NOT_QURAN → fingerprint" fall-through case
+        # (same display, just using the non-Arabic language code).
+        class _Stub:
+            verdict = "NOT_QURAN"
+            verbatim = None
+            fuzzy = None
+            n_input_letters = hygiene["kept"]
+            deviation_pct = 1.0
+            occurrence_count = 0
+            confidence = "medium"
+            rationale = (
+                f"Non-Arabic input ({_LANGS[detected_script]['name']}): "
+                "routed directly to the structural fingerprint layer."
+            )
+        c = _Stub()
+        qry_norm = hygiene["normalised"]
+        n_letters = hygiene["kept"]
+        # Signal to the Layer-3 block that we are in multi-language mode.
+        _multilang_mode = True
+    else:
+        _multilang_mode = False
+        qry_norm = _normalise_arabic(text)
+        n_letters = len(qry_norm)
+
+        with st.spinner("Layer 1: exact Quran search …"):
+            c = classify(text)
 
     # --- GUARD: TOO SHORT TO DETERMINE ---------------------------------
     if c.verdict == "TOO_SHORT":
@@ -817,7 +1040,7 @@ if run_btn and text.strip():
 
         # Optional: also run fingerprint for interest, but hidden in expander
         if n_letters >= 40:
-            lang_code = "ar"
+            lang_code = lang_code_fp
             data = segment_text(text)
             with st.expander("🔬 Advanced: also run the 8-channel structural fingerprint on this modified text"):
                 channels = score_channels(data, lang_code)
@@ -828,7 +1051,10 @@ if run_btn and text.strip():
         st.stop()
 
     # --- LAYER 3: NOT QURAN → FINGERPRINT ---
-    st.markdown(f"""
+    # (Shown for both Arabic-not-in-Quran case AND the multi-language case
+    # where we routed straight here because the input wasn't Arabic.)
+    if not _multilang_mode:
+        st.markdown(f"""
 <div class='big-verdict' style='background:linear-gradient(135deg, #3a1a1a 0%, #2b1212 100%);'>
   <div style='font-size:38px;line-height:1;margin-bottom:6px;'>❌</div>
   <h1 style='color:#e74c3c;'>NOT IN THE QURAN</h1>
@@ -841,8 +1067,10 @@ if run_btn and text.strip():
 </div>
 """, unsafe_allow_html=True)
 
-    # Fingerprint analysis
-    lang_code = "ar"
+    # Fingerprint analysis — uses the script-aware `lang_code_fp`
+    # (set to "ar" for Arabic or Arabic-fallback, and to "he"/"el"/"sa"
+    # when the user pasted Hebrew / Greek / Devanagari).
+    lang_code = lang_code_fp
     data = segment_text(text)
     n_verses = len(data["verses"])
     n_chaps = len(data["surah_verses"])
