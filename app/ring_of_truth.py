@@ -575,6 +575,13 @@ and measure the deviation percentage.</p>
 (rhyme concentration, verse-ending entropy, letter-pair stability, fractal complexity, and others)
 that were locked in advance and verified across 11 other canonical scriptures. Each measurement
 gives a PASS or FAIL, producing a binary verdict: <em>does the text structurally resemble the Quran?</em></p>
+<p><strong>Honesty guardrail.</strong> A single common word like <code>كتب</code>, <code>الله</code>, or
+<code>الرحمن</code> appears both in the Quran <em>and</em> in every Arabic newspaper ever printed.
+Reporting it as "Quranic" because it happens to be a substring of the Quran would be a false positive.
+So for short or very common inputs we return one of two honest verdicts instead:
+<em>Too Short To Determine</em> (below the specificity floor) or <em>Appears In The Quran — But Ambiguous</em>
+(we show you the occurrence count and tell you why origin cannot be concluded). Confident Quranic-origin
+claims require either <b>≥ 20 letters</b>, or <b>≥ 8 letters AND ≤ 5 occurrences</b> in the Quran.</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -659,7 +666,73 @@ if run_btn and text.strip():
     with st.spinner("Layer 1: exact Quran search …"):
         c = classify(text)
 
-    # --- LAYER 1: EXACT ---
+    # --- GUARD: TOO SHORT TO DETERMINE ---------------------------------
+    if c.verdict == "TOO_SHORT":
+        vh = c.verbatim
+        st.markdown(f"""
+<div class='big-verdict' style='background:linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);'>
+  <div style='font-size:38px;line-height:1;margin-bottom:6px;'>⊘</div>
+  <h1 style='color:#cccccc;'>TOO SHORT TO DETERMINE</h1>
+  <div style='font-size:18px;color:#fff;margin-top:8px;'>
+    Input has <b>{c.n_input_letters}</b> normalised Arabic letter{'' if c.n_input_letters==1 else 's'} —
+    below the specificity threshold needed to distinguish Quranic origin from coincidence.
+  </div>
+  <div class='sub'>
+    Paste at least <b>8 letters</b> of a distinctive passage, or a phrase of
+    <b>14+ letters</b> for a confident verdict.
+  </div>
+</div>
+""", unsafe_allow_html=True)
+
+        st.markdown("#### Why we refuse to guess")
+        st.markdown(
+            f"*{c.rationale}*\n\n"
+            "A single Arabic root like `كتب` (3 letters) appears in newspapers, poetry, contracts, and "
+            "everywhere else in classical and modern Arabic. It also appears dozens of times in the Quran. "
+            "Reporting it as 'Quranic' because we found it somewhere in our corpus would be a **false positive**. "
+            "We only claim Quranic origin when the string is long enough, OR short-but-rare enough, that "
+            "accidental coincidence is statistically implausible."
+        )
+        if vh is not None:
+            st.info(
+                f"ℹ️ For transparency: this exact string does appear **{vh.occurrences} time(s)** "
+                f"in the Quran (first at Surah {vh.surah_start}:{vh.verse_start}). "
+                "That alone is not evidence of origin at this length."
+            )
+        st.stop()
+
+    # --- GUARD: AMBIGUOUS SUBSTRING ------------------------------------
+    if c.verdict == "QURAN_SUBSTRING_AMBIGUOUS":
+        vh = c.verbatim
+        st.markdown(f"""
+<div class='big-verdict' style='background:linear-gradient(135deg, #2d2a14 0%, #1e1c0c 100%);'>
+  <div style='font-size:38px;line-height:1;margin-bottom:6px;'>⚠️</div>
+  <h1 style='color:#f1c40f;'>APPEARS IN THE QURAN — BUT AMBIGUOUS</h1>
+  <div style='font-size:18px;color:#fff;margin-top:8px;'>
+    This exact string is found <b>{vh.occurrences:,}</b> time(s) in the Quran,
+    first at Surah {vh.surah_start}:{vh.verse_start}.
+  </div>
+  <div class='sub'>
+    But it is either too short ({c.n_input_letters} letters) or too common a formula to
+    prove it <em>came from</em> the Quran. The same letters appear in everyday Arabic.
+  </div>
+</div>
+""", unsafe_allow_html=True)
+
+        st.markdown("#### Why this is ambiguous")
+        st.markdown(f"*{c.rationale}*")
+        st.markdown(
+            "**What this means in plain language:** yes, we found your exact letters inside the Quran. "
+            "But the same letters also appear routinely in non-Quranic Arabic. "
+            "For us to say *'this text is from the Quran'*, we require the match to be **distinctive**:\n\n"
+            f"- Either **≥ 20 letters** (long enough that accidental match is unlikely), OR\n"
+            f"- Both **≥ 8 letters** AND **≤ 5 occurrences in the Quran** (short but rare).\n\n"
+            f"Your input is {c.n_input_letters} letters and appears {vh.occurrences:,} time(s), "
+            "which does not meet either bar. Lengthen the input to get a confident verdict."
+        )
+        st.stop()
+
+    # --- LAYER 1: EXACT (long enough + distinctive) --------------------
     if c.verdict == "QURAN_VERBATIM":
         vh = c.verbatim
         st.markdown(f"""
@@ -667,24 +740,31 @@ if run_btn and text.strip():
   <div style='font-size:38px;line-height:1;margin-bottom:6px;'>✅</div>
   <h1 style='color:#2ecc71;'>THIS IS THE QURAN</h1>
   <div style='font-size:18px;color:#fff;margin-top:8px;'>
-    Exact letter-for-letter match found in the canonical Uthmani text
+    Exact letter-for-letter match in the canonical Uthmani text
+    (confidence: <b>{c.confidence}</b>)
   </div>
   <div class='sub'>
     Surah {vh.surah_start}:{vh.verse_start} → {vh.surah_end}:{vh.verse_end}
-    ({vh.n_verses_spanned} verse{'' if vh.n_verses_spanned==1 else 's'})
+    ({vh.n_verses_spanned} verse{'' if vh.n_verses_spanned==1 else 's'}) ·
+    exact substring occurs <b>{vh.occurrences}</b> time{'' if vh.occurrences==1 else 's'} in the Quran
   </div>
 </div>
 """, unsafe_allow_html=True)
 
         st.markdown("#### How we know (mathematical proof)")
         st.markdown(
-            f"Your text has **{n_letters:,}** normalised Arabic letters. "
+            f"Your text has **{c.n_input_letters:,}** normalised Arabic letters. "
             "We compared every one of them, in order, against the entire 329,404-letter "
-            "canonical Quran corpus. The exact same sequence of letters exists at one and only one "
-            f"place: Surah {vh.surah_start}, verse {vh.verse_start}. "
+            f"canonical Quran corpus. The exact same sequence of letters exists at **{vh.occurrences} "
+            "position(s)** in the Quran "
+            f"(first at Surah {vh.surah_start}:{vh.verse_start}). "
+            f"At this length ({c.n_input_letters} letters) and rareness ({vh.occurrences} occurrences), "
+            "an accidental exact match in non-Quranic Arabic is statistically implausible.\n\n"
             "This is a mechanical search — no memorisation, no recognition. "
-            "Try changing a single letter and the tool will immediately report it as modified."
+            "Try changing a single letter and the tool will immediately report it as *modified*."
         )
+        with st.expander("Full rationale"):
+            st.write(c.rationale)
         st.stop()
 
     # --- LAYER 2: MODIFIED ---

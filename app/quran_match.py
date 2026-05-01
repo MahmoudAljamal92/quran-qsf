@@ -113,6 +113,7 @@ class VerbatimHit:
     verse_end: int
     char_offset: int
     n_verses_spanned: int
+    occurrences: int = 1     # how many places in the Quran contain this exact substring
 
 
 def _verse_index_at(offset: int, verse_starts: list[int]) -> int:
@@ -129,15 +130,38 @@ def _verse_index_at(offset: int, verse_starts: list[int]) -> int:
     return max(0, min(len(verse_starts) - 2, lo))
 
 
+def count_verbatim_occurrences(text: str, *, max_count: int = 10_000) -> int:
+    """Count overlapping occurrences of the normalised input in the Quran corpus.
+
+    This is a distinctiveness signal: a short phrase that occurs hundreds of
+    times is a common Arabic formula, not a specific Quranic fingerprint.
+    """
+    _, flat_norm, _ = load_quran()
+    qry = normalise(text)
+    if not qry or not flat_norm:
+        return 0
+    count = 0
+    idx = 0
+    while count < max_count:
+        p = flat_norm.find(qry, idx)
+        if p < 0:
+            break
+        count += 1
+        idx = p + 1   # allow overlapping occurrences
+    return count
+
+
 def verbatim_locate(text: str) -> Optional[VerbatimHit]:
     """Return location if the normalised input is an exact substring of the Quran.
 
-    Matches across verse boundaries. Returns None if no exact match found.
-    Empty / very short inputs (< 3 letters) are rejected to avoid trivial hits.
+    Matches across verse boundaries. Returns None if no exact match found or if
+    the normalised input is empty.  Very-short inputs still return a hit here;
+    the length/distinctiveness judgement is made by `classify()`, not this
+    function, so callers can always see the raw facts.
     """
     verses, flat_norm, verse_starts = load_quran()
     qry = normalise(text)
-    if len(qry) < 3 or not flat_norm:
+    if not qry or not flat_norm:
         return None
     pos = flat_norm.find(qry)
     if pos < 0:
@@ -145,6 +169,17 @@ def verbatim_locate(text: str) -> Optional[VerbatimHit]:
     end = pos + len(qry) - 1
     i_start = _verse_index_at(pos, verse_starts)
     i_end = _verse_index_at(end, verse_starts)
+    # Count all occurrences for the distinctiveness signal.
+    occurrences = 0
+    idx = 0
+    while True:
+        p = flat_norm.find(qry, idx)
+        if p < 0:
+            break
+        occurrences += 1
+        idx = p + 1
+        if occurrences >= 10_000:
+            break
     return VerbatimHit(
         surah_start=verses[i_start].surah,
         verse_start=verses[i_start].verse,
@@ -152,6 +187,7 @@ def verbatim_locate(text: str) -> Optional[VerbatimHit]:
         verse_end=verses[i_end].verse,
         char_offset=pos,
         n_verses_spanned=i_end - i_start + 1,
+        occurrences=occurrences,
     )
 
 
@@ -397,11 +433,20 @@ def fuzzy_locate(text: str, *, max_anchors: int = 400) -> Optional[FuzzyHit]:
 
 @dataclass
 class Classification:
-    verdict: str        # "QURAN_VERBATIM" | "MODIFIED_QURAN" | "NOT_QURAN"
+    # Possible verdicts:
+    #   "QURAN_VERBATIM"              -> exact substring AND long enough / unique enough
+    #   "QURAN_SUBSTRING_AMBIGUOUS"   -> exact substring but short / very common
+    #   "MODIFIED_QURAN"              -> fuzzy match within deviation threshold, long enough
+    #   "NOT_QURAN"                   -> no close Quranic match; fingerprint test is appropriate
+    #   "TOO_SHORT"                   -> input below any inference threshold, no match either
+    verdict: str
     deviation_pct: float
     verbatim: Optional[VerbatimHit]
     fuzzy: Optional[FuzzyHit]
     n_input_letters: int
+    occurrence_count: int = 0
+    confidence: str = "low"           # "high" | "medium" | "low"
+    rationale: str = ""               # one-sentence honest explanation
 
     @property
     def is_quran(self) -> bool:
@@ -411,6 +456,53 @@ class Classification:
     def is_modified_quran(self) -> bool:
         return self.verdict == "MODIFIED_QURAN"
 
+    @property
+    def is_ambiguous(self) -> bool:
+        return self.verdict in ("QURAN_SUBSTRING_AMBIGUOUS", "TOO_SHORT")
+
+
+# ----------------------------------------------------------------------
+# Specificity thresholds (policy choices, not theorems)
+# ----------------------------------------------------------------------
+#
+# We combine TWO independent signals to decide whether an exact substring
+# match against the Quranic corpus is evidence of Quranic origin:
+#
+#   (a) LENGTH  — number of normalised Arabic letters in the input.
+#                 Longer strings are exponentially less likely to appear
+#                 in arbitrary non-Quranic Arabic by chance.
+#
+#   (b) OCCURRENCE COUNT — how many distinct positions of the Quran
+#                 contain this exact substring.  Single common words
+#                 ("الله" appears 2,729 times in the Quran) are NOT
+#                 distinctive — they are ubiquitous in any Arabic text.
+#                 A substring that appears once in the Quran is a much
+#                 sharper fingerprint than one appearing 100+ times.
+#
+# Calibration against user-specified ground-truth:
+#
+#   • "والعاديات ضبحا"  (13 letters, 1 occurrence)  → QURAN_VERBATIM
+#   • "مدهامتان"        (8  letters, 1 occurrence)  → QURAN_VERBATIM
+#   • "الرحمن"          (6  letters, 160 occurrences) → AMBIGUOUS
+#   • "بسم الله الرحمن الرحيم" (19 letters, 114 occurrences) → AMBIGUOUS
+#   • "الله"            (4  letters, 2,729 occurrences) → AMBIGUOUS
+#   • "كتب"             (3  letters) → TOO_SHORT
+#
+# Rule: we call a verbatim match QURAN_VERBATIM iff either
+#   (i)  n >= 20  AND occurrences <= 50   (long enough, not a super-common formula), OR
+#   (ii) n >=  8  AND occurrences <=  5   (medium-length AND rare in the Quran).
+#
+# Everything else that still matches as a substring is flagged
+# QURAN_SUBSTRING_AMBIGUOUS with occurrence count and rationale shown.
+MIN_LETTERS_FOR_ANY_INFERENCE = 4       # below this, refuse to rule anything in/out
+
+MIN_LETTERS_LONG_VERBATIM   = 20        # long-phrase arm
+MAX_OCC_LONG_VERBATIM       = 50
+
+MIN_LETTERS_MEDIUM_VERBATIM = 8         # medium-phrase arm (requires rareness)
+MAX_OCC_MEDIUM_VERBATIM     = 5
+
+MIN_LETTERS_FOR_MODIFIED    = 8         # below this, fuzzy match is not trustworthy
 
 # Threshold: if normalised edit distance / length < this, classify as MODIFIED_QURAN.
 # 0.20 = up to 20% letters changed. Beyond that, the text has diverged enough
@@ -419,22 +511,152 @@ class Classification:
 DEVIATION_THRESHOLD = 0.20
 
 
+def _confidence_for_length(n: int) -> str:
+    if n >= 30:
+        return "high"
+    if n >= MIN_LETTERS_LONG_VERBATIM:
+        return "medium"
+    return "low"
+
+
+def _is_verbatim_unambiguous(n: int, occ: int) -> bool:
+    """Two-arm rule: (long enough) OR (medium + rare in Quran)."""
+    long_arm   = (n >= MIN_LETTERS_LONG_VERBATIM   and occ <= MAX_OCC_LONG_VERBATIM)
+    medium_arm = (n >= MIN_LETTERS_MEDIUM_VERBATIM and occ <= MAX_OCC_MEDIUM_VERBATIM)
+    return long_arm or medium_arm
+
+
 def classify(text: str) -> Classification:
-    """Top-level: run verbatim then fuzzy, return one classification."""
+    """Top-level: run verbatim then fuzzy, then apply distinctiveness guards.
+
+    Returns one `Classification` whose `verdict` reflects both the match facts
+    *and* the distinctiveness of the input.  Short / common inputs are labelled
+    honestly (TOO_SHORT or QURAN_SUBSTRING_AMBIGUOUS) instead of falsely
+    claiming Quranic origin from a coincidental substring match.
+    """
+    raw_len = len(text.strip())
     qry = normalise(text)
     n = len(qry)
 
-    vh = verbatim_locate(text)
-    if vh is not None:
+    # ------------------------------------------------------------------
+    # Case 0: raw text has real content but normalises to almost nothing
+    # (e.g. English text, emojis, pure punctuation). This is NOT_QURAN,
+    # not TOO_SHORT — we know it's not Arabic.
+    # ------------------------------------------------------------------
+    if raw_len >= 8 and n < MIN_LETTERS_FOR_ANY_INFERENCE:
         return Classification(
-            verdict="QURAN_VERBATIM",
+            verdict="NOT_QURAN",
+            deviation_pct=1.0,
+            verbatim=None,
+            fuzzy=None,
+            n_input_letters=n,
+            occurrence_count=0,
+            confidence="high",
+            rationale=(
+                f"Input has {raw_len} raw characters but only {n} Arabic letters "
+                "after normalisation. The text is not in Arabic script, so it "
+                "cannot be Quranic and the fingerprint test is the appropriate "
+                "next step."
+            ),
+        )
+
+    # ------------------------------------------------------------------
+    # Layer 1: exact substring match (always run, always report facts).
+    # ------------------------------------------------------------------
+    vh = verbatim_locate(text)
+    occ = vh.occurrences if vh is not None else 0
+
+    # Case A: too short for any inference.
+    if n < MIN_LETTERS_FOR_ANY_INFERENCE:
+        return Classification(
+            verdict="TOO_SHORT",
+            deviation_pct=1.0,
+            verbatim=vh,
+            fuzzy=None,
+            n_input_letters=n,
+            occurrence_count=occ,
+            confidence="low",
+            rationale=(
+                f"Input is only {n} normalised Arabic letter(s); far too short to "
+                "establish Quranic origin. Any 1–3 letter string will match "
+                "somewhere in any large Arabic corpus."
+            ),
+        )
+
+    # Case B: exact substring found → apply distinctiveness rule.
+    if vh is not None:
+        if _is_verbatim_unambiguous(n, occ):
+            return Classification(
+                verdict="QURAN_VERBATIM",
+                deviation_pct=0.0,
+                verbatim=vh,
+                fuzzy=None,
+                n_input_letters=n,
+                occurrence_count=occ,
+                confidence=_confidence_for_length(n),
+                rationale=(
+                    f"Input is {n} normalised letters and appears at {occ} "
+                    f"position(s) in the Quran. At this length/rareness the "
+                    "match is statistically unlikely to arise by chance in "
+                    "general Arabic."
+                ),
+            )
+        # Short OR very common: be honest, do not claim origin.
+        reason_bits = []
+        if n < MIN_LETTERS_MEDIUM_VERBATIM:
+            reason_bits.append(
+                f"only {n} normalised letter(s) (below the "
+                f"{MIN_LETTERS_MEDIUM_VERBATIM}-letter specificity floor)"
+            )
+        elif n < MIN_LETTERS_LONG_VERBATIM and occ > MAX_OCC_MEDIUM_VERBATIM:
+            reason_bits.append(
+                f"only {n} letters and appears {occ} times in the Quran "
+                f"(> {MAX_OCC_MEDIUM_VERBATIM}, common formula)"
+            )
+        elif occ > MAX_OCC_LONG_VERBATIM:
+            reason_bits.append(
+                f"appears {occ} times in the Quran (> {MAX_OCC_LONG_VERBATIM}, "
+                "common liturgical formula)"
+            )
+        reason = "; ".join(reason_bits) if reason_bits else "ambiguous by thresholds"
+        return Classification(
+            verdict="QURAN_SUBSTRING_AMBIGUOUS",
             deviation_pct=0.0,
             verbatim=vh,
             fuzzy=None,
             n_input_letters=n,
+            occurrence_count=occ,
+            confidence="low",
+            rationale=(
+                f"The input is a substring of the Quran, but {reason}. "
+                "Such a string also appears in everyday Arabic (news, poetry, "
+                "speech), so a substring match alone is not proof of Quranic "
+                "origin."
+            ),
         )
 
+    # ------------------------------------------------------------------
+    # Layer 2: no exact substring → fuzzy match.
+    # ------------------------------------------------------------------
     fh = fuzzy_locate(text)
+
+    if n < MIN_LETTERS_FOR_MODIFIED:
+        return Classification(
+            verdict="TOO_SHORT",
+            deviation_pct=fh.deviation_pct if fh else 1.0,
+            verbatim=None,
+            fuzzy=fh,
+            n_input_letters=n,
+            occurrence_count=0,
+            confidence="low",
+            rationale=(
+                f"Input has {n} normalised letters, below the "
+                f"{MIN_LETTERS_FOR_MODIFIED}-letter threshold required before a "
+                "fuzzy match can be trusted as evidence of a modified Quranic "
+                "passage."
+            ),
+        )
+
     if fh is not None and fh.deviation_pct < DEVIATION_THRESHOLD:
         return Classification(
             verdict="MODIFIED_QURAN",
@@ -442,6 +664,14 @@ def classify(text: str) -> Classification:
             verbatim=None,
             fuzzy=fh,
             n_input_letters=n,
+            occurrence_count=0,
+            confidence=_confidence_for_length(n),
+            rationale=(
+                f"Closest Quranic passage differs by {fh.edit_distance} letter(s) "
+                f"({fh.deviation_pct*100:.2f}% of the input). Below the "
+                f"{DEVIATION_THRESHOLD*100:.0f}% deviation threshold, so the input "
+                "is treated as a modified Quranic passage."
+            ),
         )
 
     return Classification(
@@ -450,4 +680,10 @@ def classify(text: str) -> Classification:
         verbatim=None,
         fuzzy=fh,
         n_input_letters=n,
+        occurrence_count=0,
+        confidence=_confidence_for_length(n),
+        rationale=(
+            "No close match to any Quranic passage. The 8-dimensional structural "
+            "fingerprint is the appropriate test for texts at this distance."
+        ),
     )
