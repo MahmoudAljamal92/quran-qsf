@@ -537,92 +537,198 @@ Copy-pasted from website: «الحمد لله رب العالمين» 😊
 # ======================================================================
 st.set_page_config(page_title="The Quran Fingerprint Test", page_icon="◎", layout="wide")
 
-# --- Custom CSS for clean professional look ---
+# --- Minimalist B&W + accent-color CSS ---------------------------------
+# Design language: true-black surfaces, hairline borders, muted greys for
+# body text, saturated accents only where they carry semantic meaning
+# (green = match, red = mismatch, amber = ambiguous, cyan = informational).
+# No gradients except where they aid verdict recognition at a glance.
 st.markdown("""
 <style>
+:root {
+  --bg-0: #0a0a0c;
+  --bg-1: #141418;
+  --bg-2: #1c1c22;
+  --border: rgba(255,255,255,0.08);
+  --border-strong: rgba(255,255,255,0.14);
+  --text-0: #f5f5f7;
+  --text-1: #b4b4bd;
+  --text-2: #7a7a85;
+  --accent-green: #30d158;
+  --accent-red: #ff453a;
+  --accent-amber: #ffd60a;
+  --accent-cyan: #64d2ff;
+}
+h1, h2, h3, h4 { letter-spacing: -0.3px; }
 .big-verdict {
-  padding: 32px 24px; border-radius: 18px; text-align: center;
-  margin: 16px 0 24px 0; border: 1px solid rgba(255,255,255,0.08);
+  padding: 36px 24px; border-radius: 16px; text-align: center;
+  margin: 16px 0 24px 0; border: 1px solid var(--border);
 }
 .big-verdict h1 {
-  font-size: 48px; font-weight: 800; line-height: 1.05; margin: 0 0 6px 0;
-  letter-spacing: -0.5px;
+  font-size: 44px; font-weight: 800; line-height: 1.05; margin: 0 0 6px 0;
+  letter-spacing: -0.8px;
 }
 .big-verdict .sub {
-  font-size: 16px; color: #c9c9c9; margin-top: 8px; max-width: 720px; margin-left: auto; margin-right: auto;
+  font-size: 15px; color: var(--text-1); margin-top: 10px;
+  max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.55;
 }
+/* Per-axis dimension card -------------------------------------------- */
 .dim-card {
-  border-radius: 12px; padding: 16px 18px; margin-bottom: 12px;
-  border: 1px solid rgba(255,255,255,0.06);
+  background: var(--bg-1); border-radius: 10px; padding: 16px 18px;
+  margin-bottom: 10px; border: 1px solid var(--border);
+  transition: border-color 0.15s;
 }
-.dim-card .row1 { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
-.dim-card .name { font-size: 16px; font-weight: 700; color: #fff; }
+.dim-card:hover { border-color: var(--border-strong); }
+.dim-card .row1 { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; gap: 12px; }
+.dim-card .name { font-size: 15px; font-weight: 700; color: var(--text-0); }
 .dim-card .badge {
-  font-size: 12px; padding: 3px 10px; border-radius: 999px;
-  font-weight: 600; letter-spacing: 0.4px;
+  font-size: 11px; padding: 3px 9px; border-radius: 4px;
+  font-weight: 700; letter-spacing: 0.6px; white-space: nowrap;
 }
-.dim-card .what { font-size: 13.5px; color: #c0c0c0; line-height: 1.5; margin: 6px 0 10px 0; }
-.dim-card .nums { display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
-  font-size: 13px; color: #d0d0d0; }
-.dim-card .nums .label { color: #888; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.4px; }
-.dim-card .nums .val { color: #fff; font-weight: 600; font-size: 14px; }
-.intro-box {
-  background: linear-gradient(135deg, #14202b 0%, #0e1a26 100%);
-  padding: 18px 22px; border-radius: 12px; border-left: 3px solid #4a90e2;
-  margin-bottom: 18px;
+.dim-card .what { font-size: 13px; color: var(--text-1); line-height: 1.5; margin: 6px 0 12px 0; }
+.dim-card .nums { display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  font-size: 13px; color: var(--text-1); margin-bottom: 10px; }
+.dim-card .nums .label { color: var(--text-2); font-size: 10.5px;
+  text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 2px; }
+.dim-card .nums .val { color: var(--text-0); font-weight: 600; font-size: 14px; font-variant-numeric: tabular-nums; }
+/* Similarity bar: horizontal track 0→100% showing how close to Quran ref */
+.sim-bar {
+  display: flex; align-items: center; gap: 10px; margin-top: 4px;
 }
-.intro-box h3 { margin: 0 0 6px 0; font-size: 17px; color: #fff; }
-.intro-box p { margin: 0; font-size: 14px; color: #c9c9c9; line-height: 1.55; }
+.sim-bar .track {
+  flex: 1; height: 6px; background: var(--bg-2); border-radius: 3px; overflow: hidden;
+  position: relative;
+}
+.sim-bar .fill {
+  height: 100%; border-radius: 3px;
+  transition: width 0.4s cubic-bezier(.22,.61,.36,1);
+}
+.sim-bar .pct { font-size: 12px; color: var(--text-1); font-weight: 600;
+  font-variant-numeric: tabular-nums; min-width: 44px; text-align: right; }
+/* "How this works" hero ------------------------------------------------ */
+.howto {
+  background: var(--bg-1); padding: 22px 24px; border-radius: 12px;
+  border: 1px solid var(--border); margin-bottom: 18px;
+}
+.howto h3 { margin: 0 0 10px 0; font-size: 18px; color: var(--text-0); }
+.howto .lead { font-size: 14px; color: var(--text-1); line-height: 1.6; margin: 0 0 14px 0; }
+.howto table { width: 100%; border-collapse: collapse; margin: 8px 0 12px 0; font-size: 13px; }
+.howto table th { text-align: left; color: var(--text-2); font-weight: 600;
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px;
+  padding: 8px 10px; border-bottom: 1px solid var(--border); }
+.howto table td { padding: 10px; border-bottom: 1px solid var(--border);
+  color: var(--text-1); line-height: 1.5; vertical-align: top; }
+.howto table td.layer-num { color: var(--accent-cyan); font-weight: 700;
+  font-size: 15px; width: 48px; font-variant-numeric: tabular-nums; }
+.howto table td.layer-name { color: var(--text-0); font-weight: 600; white-space: nowrap; width: 160px; }
+.howto .callout {
+  background: var(--bg-2); border-left: 3px solid var(--accent-amber);
+  padding: 12px 14px; border-radius: 6px; margin-top: 10px;
+  font-size: 13px; color: var(--text-1); line-height: 1.55;
+}
+.howto .callout strong { color: var(--text-0); }
+.howto .callout.cyan { border-left-color: var(--accent-cyan); }
+.howto .callout.green { border-left-color: var(--accent-green); }
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown("# 🕌 The Quran Verification & Fingerprint Test")
+st.markdown("# The Quran Fingerprint Test")
 st.markdown(
-    "_Paste any text. The tool checks — in order — whether it is **exactly** the Quran, "
-    "**near** the Quran (with differences highlighted), or a **different** text whose statistical "
-    "structure is then measured against the Quran's 8-dimensional mathematical fingerprint._"
+    "<span style='color:#b4b4bd;font-size:15px;'>Paste any text in Arabic, Hebrew, Greek or "
+    "Devanagari. The tool runs three ordered checks — <b>exact match</b> → <b>near match</b> → "
+    "<b>structural fingerprint</b> — and reports per-axis results with transparent deviation bars.</span>",
+    unsafe_allow_html=True,
 )
 
-# --- "How we know — math, not memorisation" intro box ---
+# --- "How this works" — compact table + honest math/memorisation callout ---
 st.markdown("""
-<div class='intro-box'>
-<h3>How this works (in plain language)</h3>
-<p><strong>We did NOT memorise the Quran.</strong> Instead we built three mathematical layers that
-work on <em>any</em> passage, even one verse or one word:</p>
-<p><strong>Layer 1 — Exact match:</strong> we compare your text letter-by-letter against the
-entire canonical Quran (114 surahs, 6,236 verses). If every letter matches, we tell you exactly
-which surah and verse it comes from. We do not "recognise" it — we <em>search</em> for it.</p>
-<p><strong>Layer 2 — Near match:</strong> if a letter is changed, a word is reordered, or a verse
-is inserted, we find the closest passage in the Quran, show you exactly which characters differ,
-and measure the deviation percentage.</p>
-<p><strong>Layer 3 — Structural fingerprint:</strong> for texts that are not in the Quran at all
-(poetry, modern Arabic, translations), we run 8 independent mathematical measurements
-(rhyme concentration, verse-ending entropy, letter-pair stability, fractal complexity, and others)
-that were locked in advance and verified across 11 other canonical scriptures. Each measurement
-gives a PASS or FAIL, producing a binary verdict: <em>does the text structurally resemble the Quran?</em></p>
-<p><strong>On genre.</strong> The Quran is traditionally classified <em>neither</em> as prose (نثر) <em>nor</em>
-as poetry (شعر) — classical Arabic scholarship places it in its own category (Q. 36:69 explicitly
-disclaims being poetry). Where the fingerprint layer below talks about "classical-Arabic prose" or
-"Arabic poetry", those names refer only to the <strong>baseline corpora we measure the Quran against</strong>,
-not to a class the Quran belongs to. The whole point is that the Quran is an outlier relative to both.</p>
-<p><strong>Honesty guardrail.</strong> A single common word like <code>كتب</code>, <code>الله</code>, or
-<code>الرحمن</code> appears both in the Quran <em>and</em> in every Arabic newspaper ever printed.
-Reporting it as "Quranic" because it happens to be a substring of the Quran would be a false positive.
-So for short or very common inputs we return one of two honest verdicts instead:
-<em>Too Short To Determine</em> (below the specificity floor) or <em>Appears In The Quran — But Ambiguous</em>
-(we show you the occurrence count and tell you why origin cannot be concluded). Confident Quranic-origin
-claims require either <b>≥ 20 letters</b>, or <b>≥ 8 letters AND ≤ 5 occurrences</b> in the Quran.</p>
+<div class='howto'>
+<h3>How this works</h3>
+<p class='lead'>
+Three independent layers run in order. Each one is transparent: you can see exactly what was
+measured, what the reference value is, and how far your text sits from it.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style='width:48px;'>Layer</th>
+      <th style='width:160px;'>Name</th>
+      <th>What it does (plain language)</th>
+      <th style='width:200px;'>Triggers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class='layer-num'>1</td>
+      <td class='layer-name'>Exact match</td>
+      <td>Letter-by-letter search of your normalised text against the entire Uthmani
+      Quran (329,404 letters, 114 surahs, 6,236 verses). Returns the first surah:ayah if
+      every letter aligns.</td>
+      <td>Input is a verbatim Quranic passage.</td>
+    </tr>
+    <tr>
+      <td class='layer-num'>2</td>
+      <td class='layer-name'>Near match</td>
+      <td>Levenshtein edit-distance search: finds the Quranic passage that requires the
+      fewest letter substitutions, insertions, or deletions to equal your text. Shows the
+      diff character-by-character.</td>
+      <td>Input is a modified Quran (typo, quote error, substitution).</td>
+    </tr>
+    <tr>
+      <td class='layer-num'>3</td>
+      <td class='layer-name'>Structural fingerprint</td>
+      <td>Eight independent mathematical measurements (entropy, rhyme concentration,
+      fractal dimension, bigram stability, and four others) computed on your text, then
+      compared — axis by axis — to the Quran's pre-locked reference values.</td>
+      <td>Input is not (close to) a Quranic passage. Also runs on Hebrew / Greek / Sanskrit.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class='callout cyan'>
+<strong>Does the tool "memorise" the Quran?</strong> Partially — but only where it must.
+Layers 1 &amp; 2 search against a stored copy of the Uthmani Quran (329&nbsp;KB, public domain,
+bundled in the repo). Layer 3 does <em>not</em> touch the Quran's letters at all — it only
+uses six pre-locked numbers (H_EL = 0.9685, p_max = 0.7273, C_Ω = 0.7985, D_max = 3.84,
+F75 = 5.316, d_info = 1.667). Those six numbers are all you would need to rebuild the
+fingerprint test from scratch; the Quran corpus itself is only used for exact-search.
+</div>
+
+<div class='callout'>
+<strong>Honesty guardrail.</strong> A single common word like <code>كتب</code>,
+<code>الله</code>, or <code>الرحمن</code> appears both in the Quran <em>and</em> in every
+Arabic newspaper ever printed. For short or very common inputs we return one of two honest
+verdicts instead of a Quranic attribution: <em>Too Short To Determine</em> (below the
+specificity floor) or <em>Appears In The Quran — But Ambiguous</em> (with the occurrence
+count shown, so you can judge). Confident Quranic-origin claims require either
+<b>≥ 20 letters</b>, or <b>≥ 8 letters AND ≤ 5 occurrences</b> in the Quran.
+</div>
+
+<div class='callout green'>
+<strong>On genre.</strong> The Quran is traditionally classified <em>neither</em> as prose
+(نثر / <em>nathr</em>) <em>nor</em> as poetry (شعر / <em>shiʿr</em>). Classical Arabic
+scholarship places it in its own category; Q. 36:69 explicitly disclaims being poetry.
+Where this project's docs mention "classical-Arabic prose" or "Arabic poetry", those
+terms refer only to the <strong>baseline corpora</strong> the Quran was measured against —
+never to a class the Quran itself belongs to. The whole project result is that the Quran
+is the outlier relative to both.
+</div>
 </div>
 """, unsafe_allow_html=True)
 
 # --- Sidebar: example loader ---
+# IMPORTANT: Because the text_area widget below uses `key="main_text_area"`,
+# Streamlit treats that key as the source of truth. To populate the widget
+# from an example click or file upload, we must WRITE to
+# `st.session_state["main_text_area"]` directly and then call `st.rerun()` —
+# setting `value=` on the widget is ignored once a key is in session_state.
 with st.sidebar:
     st.markdown("### Try a built-in example")
-    st.caption("Click one to load it into the input box.")
-    chosen_example = None
-    for key, (label, ex_lang, _content) in _EXAMPLES.items():
+    st.caption("Click one to load it into the input box — it will populate the text area on the next redraw.")
+    for key, (label, ex_lang, content) in _EXAMPLES.items():
         if st.button(label, key=f"ex_{key}", use_container_width=True):
-            chosen_example = key
+            st.session_state["main_text_area"] = content
+            st.rerun()
 
     st.markdown("---")
     with st.expander("ℹ️ About this tool"):
@@ -637,22 +743,18 @@ with st.sidebar:
 # --- Main input area ---
 st.markdown("### Paste your text")
 
-if "text_buffer" not in st.session_state:
-    st.session_state.text_buffer = ""
-if chosen_example is not None:
-    st.session_state.text_buffer = _EXAMPLES[chosen_example][2]
-
 up = st.file_uploader(
     "Or upload a .txt / .md file",
     type=["txt", "md"],
     label_visibility="collapsed",
 )
 if up is not None:
-    st.session_state.text_buffer = up.read().decode("utf-8", errors="replace")
+    st.session_state["main_text_area"] = up.read().decode("utf-8", errors="replace")
+    st.rerun()
 
+# The widget uses its own key as the source of truth; do not pass `value=`.
 text = st.text_area(
     "Any length — one word, one verse, one surah, or a whole book.",
-    value=st.session_state.text_buffer,
     height=240,
     key="main_text_area",
 )
@@ -679,6 +781,90 @@ def _render_diff(ops: list[tuple[str, str, str]]) -> str:
         elif kind == "del":
             out.append(f"<span style='color:#3498db;text-decoration:line-through;'>-{a}</span>")
     return "".join(out)
+
+
+# ----------------------------------------------------------------------
+# Per-axis channel card renderer (shared by all verdict branches)
+# ----------------------------------------------------------------------
+def _render_channel_cards(channels: list[dict]) -> None:
+    """Render the full 8-axis structural-fingerprint breakdown.
+
+    Each card shows: axis name, status badge, plain-language description of
+    what the axis measures, the Quran reference value, the user's value,
+    a horizontal similarity bar (0-100% = how close to the Quran reference
+    on this axis), and a one-line interpretation.
+    """
+    status_order = {"PASS": 0, "FAIL": 1, "N/A": 2}
+    sorted_ch = sorted(channels, key=lambda c: (status_order[c["status"]], c["d"]))
+
+    for ch in sorted_ch:
+        if ch["status"] == "PASS":
+            badge_bg = "rgba(48,209,88,0.16)"; badge_color = "var(--accent-green)"
+            border = "rgba(48,209,88,0.32)"; bg = "rgba(48,209,88,0.04)"
+            badge_text = "MATCH"
+        elif ch["status"] == "FAIL":
+            badge_bg = "rgba(255,69,58,0.16)"; badge_color = "var(--accent-red)"
+            border = "rgba(255,69,58,0.32)"; bg = "rgba(255,69,58,0.04)"
+            badge_text = "NO MATCH"
+        else:
+            badge_bg = "rgba(122,122,133,0.14)"; badge_color = "var(--text-2)"
+            border = "rgba(122,122,133,0.25)"; bg = "rgba(122,122,133,0.03)"
+            badge_text = "NOT TESTABLE"
+
+        your_val_display = ch["value"] if ch["status"] != "N/A" else "—"
+
+        if ch["status"] == "N/A":
+            bar_html = (
+                "<div class='sim-bar'>"
+                "<div class='track'></div>"
+                "<div class='pct' style='color:var(--text-2);'>N/A</div>"
+                "</div>"
+            )
+            bar_caption = "Not measurable on this input."
+        else:
+            sim_pct = max(0.0, min(100.0, (1.0 - float(ch["d"])) * 100.0))
+            fill_color = "var(--accent-green)" if ch["status"] == "PASS" else "var(--accent-red)"
+            bar_html = (
+                f"<div class='sim-bar'>"
+                f"<div class='track'><div class='fill' style='width:{sim_pct:.1f}%;background:{fill_color};'></div></div>"
+                f"<div class='pct'>{sim_pct:.1f}%</div>"
+                f"</div>"
+            )
+            if ch["status"] == "PASS":
+                bar_caption = (
+                    f"Your value is <b>{sim_pct:.1f}%</b> close to the Quran's locked reference on this axis — "
+                    f"within the pre-registered tolerance band."
+                )
+            else:
+                bar_caption = (
+                    f"Your value is <b>{sim_pct:.1f}%</b> close to the Quran's locked reference — "
+                    f"outside the pre-registered tolerance band for this axis."
+                )
+
+        st.markdown(f"""
+<div class='dim-card' style='background:{bg};border-color:{border};'>
+  <div class='row1'>
+    <div class='name'>{ch['plain_label']}</div>
+    <div class='badge' style='background:{badge_bg};color:{badge_color};'>{badge_text}</div>
+  </div>
+  <div class='what'>{ch['plain_what']}</div>
+  <div class='nums'>
+    <div>
+      <div class='label'>Quran reference</div>
+      <div class='val'>{ch['plain_quran']}</div>
+    </div>
+    <div>
+      <div class='label'>Your text</div>
+      <div class='val'>{your_val_display}</div>
+    </div>
+  </div>
+  {bar_html}
+  <div style='font-size:11.5px;color:var(--text-2);margin-top:6px;line-height:1.4;'>{bar_caption}</div>
+</div>
+""", unsafe_allow_html=True)
+
+        if ch["status"] == "N/A":
+            st.caption(f"↳ _Why not tested:_ {ch['note']}")
 
 
 # ----------------------------------------------------------------------
@@ -993,6 +1179,25 @@ if run_btn and text.strip():
         )
         with st.expander("Full rationale"):
             st.write(c.rationale)
+
+        # --- ALSO show the 8-axis structural fingerprint for this passage.
+        # Even for a verbatim match, the user asked to see the per-axis bars
+        # so they can verify exactly which mathematical dimensions this
+        # Quranic passage satisfies vs. the locked Quran-wide references.
+        data = segment_text(text)
+        if c.n_input_letters >= 20 and len(data["verses"]) >= 1:
+            with st.expander(
+                "📊 **See this passage's structural fingerprint** (8 axes vs. Quran references)",
+                expanded=True,
+            ):
+                st.caption(
+                    "The per-axis similarity bars below show how this specific passage scores "
+                    "on each of the 8 locked mathematical dimensions. Short passages will have "
+                    "several axes marked N/A because they require a full chapter or multiple "
+                    "chapters to compute (e.g. dual-mode contrast needs all 114 surahs)."
+                )
+                channels_v = score_channels(data, lang_code_fp)
+                _render_channel_cards(channels_v)
         st.stop()
 
     # --- LAYER 2: MODIFIED ---
@@ -1038,16 +1243,20 @@ if run_btn and text.strip():
             "by the structural fingerprint test instead."
         )
 
-        # Optional: also run fingerprint for interest, but hidden in expander
-        if n_letters >= 40:
-            lang_code = lang_code_fp
+        # Also show the 8-axis fingerprint breakdown on the modified text.
+        if n_letters >= 20:
             data = segment_text(text)
-            with st.expander("🔬 Advanced: also run the 8-channel structural fingerprint on this modified text"):
-                channels = score_channels(data, lang_code)
-                # simple pass/fail summary
-                n_pass = sum(1 for ch in channels if ch["status"] == "PASS")
-                n_total = sum(1 for ch in channels if ch["status"] != "N/A")
-                st.write(f"Structural fingerprint: **{n_pass}/{n_total}** channels PASS (shown for interest only)")
+            with st.expander(
+                "� **See this modified text's structural fingerprint** (8 axes vs. Quran references)",
+                expanded=True,
+            ):
+                st.caption(
+                    "Even when the edit distance from the nearest canonical passage is small, "
+                    "the axis-by-axis similarity bars below show precisely which mathematical "
+                    "dimensions are preserved and which are disturbed by the modification."
+                )
+                channels_m = score_channels(data, lang_code_fp)
+                _render_channel_cards(channels_m)
         st.stop()
 
     # --- LAYER 3: NOT QURAN → FINGERPRINT ---
@@ -1141,45 +1350,7 @@ if run_btn and text.strip():
         "(pre-registered) and verified against 11 other canonical scriptures."
     )
 
-    pass_color = "#2ecc71"; fail_color = "#e74c3c"; na_color = "#888"
-    for ch in sorted_channels:
-        if ch["status"] == "PASS":
-            badge_bg = "rgba(46, 204, 113, 0.18)"; badge_color = pass_color
-            border = "rgba(46, 204, 113, 0.35)"; bg = "rgba(46, 204, 113, 0.05)"
-            badge_text = "✅ MATCH"
-        elif ch["status"] == "FAIL":
-            badge_bg = "rgba(231, 76, 60, 0.18)"; badge_color = fail_color
-            border = "rgba(231, 76, 60, 0.35)"; bg = "rgba(231, 76, 60, 0.05)"
-            badge_text = "❌ NO MATCH"
-        else:
-            badge_bg = "rgba(149, 165, 166, 0.18)"; badge_color = na_color
-            border = "rgba(149, 165, 166, 0.30)"; bg = "rgba(149, 165, 166, 0.04)"
-            badge_text = "⊘ NOT TESTABLE"
-
-        your_val_display = ch["value"] if ch["status"] != "N/A" else "—"
-
-        st.markdown(f"""
-<div class='dim-card' style='background:{bg};border-color:{border};'>
-  <div class='row1'>
-    <div class='name'>{ch['plain_label']}</div>
-    <div class='badge' style='background:{badge_bg};color:{badge_color};'>{badge_text}</div>
-  </div>
-  <div class='what'>{ch['plain_what']}</div>
-  <div class='nums'>
-    <div>
-      <div class='label'>Quran reference</div>
-      <div class='val'>{ch['plain_quran']}</div>
-    </div>
-    <div>
-      <div class='label'>Your text</div>
-      <div class='val'>{your_val_display}</div>
-    </div>
-  </div>
-</div>
-""", unsafe_allow_html=True)
-
-        if ch["status"] == "N/A":
-            st.caption(f"↳ _Why not tested:_ {ch['note']}")
+    _render_channel_cards(sorted_channels)
 
     # --- ADVANCED / TECHNICAL VIEW ---
     with st.expander("🔬 Advanced — technical channel codes, weights, and deviation scores"):
