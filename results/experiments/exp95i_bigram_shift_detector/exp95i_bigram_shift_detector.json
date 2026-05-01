@@ -1,0 +1,1211 @@
+{
+  "experiment": "exp95i_bigram_shift_detector",
+  "schema_version": "1.0",
+  "hypothesis": "H42",
+  "verdict": "FAIL_audit_hook_violated",
+  "prereg_hash_expected": "9a67de356aff74aef306d38b2e6df829943a1472e7b544345814b4887b03e53c",
+  "prereg_hash_actual": "9a67de356aff74aef306d38b2e6df829943a1472e7b544345814b4887b03e53c",
+  "parent_planning_doc": "docs/reference/sprints/POST_V1_PATHS_FORWARD_2026-04-26.md",
+  "frozen_constants": {
+    "K_PEERS": 50,
+    "LENGTH_LO_FRAC": 0.5,
+    "LENGTH_HI_FRAC": 1.5,
+    "TAU_PERCENTILE": 5,
+    "MAX_VARIANT_DELTA_AUDIT": 2.0,
+    "PER_SURAH_BAR": 0.99,
+    "PER_SURAH_BAR_STRICT": 0.999,
+    "AGGREGATE_BAR": 0.99,
+    "AGGREGATE_BAR_STRICT": 0.999,
+    "FPR_TARGET": 0.05,
+    "FLOOR_P90": 0.9
+  },
+  "n_surahs_scored": 114,
+  "n_variants_total": 139266,
+  "n_ctrl_matched_total": 5589,
+  "n_peers_in_pool": 4814,
+  "tau_high": null,
+  "audit": {
+    "max_variant_delta": 2.0,
+    "max_variant_delta_le_2": true,
+    "surahs_with_zero_ctrl": [
+      "Q:108"
+    ],
+    "audit_violations": [
+      "1 surah(s) with zero length-matched ctrl peers"
+    ]
+  },
+  "aggregate": {
+    "recall": null,
+    "fpr": null,
+    "min_per_surah_recall": null,
+    "max_per_surah_recall": null,
+    "n_surahs_below_99": null,
+    "n_surahs_below_999": null,
+    "n_surahs_perfect": null
+  },
+  "q100_regression": {
+    "recall": null,
+    "passes_999": false
+  },
+  "ctrl_null_summary": {
+    "n_pool": 5589,
+    "min": 58.5,
+    "max": 10529.0,
+    "p01": 75.44,
+    "p05": 85.0,
+    "p25": 224.0,
+    "p50": 572.5,
+    "p95": 3578.7999999999984
+  },
+  "variant_delta_summary": {
+    "n_pool": 139266,
+    "min": 1.0,
+    "max": 2.0,
+    "p01": 1.0,
+    "p50": 2.0,
+    "p99": 2.0
+  },
+  "per_surah": {
+    "Q:001": {
+      "n_canon": 143,
+      "n_variants": 513,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 85.0,
+      "ctrl_delta_max": 124.0,
+      "ctrl_delta_p05_per_surah": 86.175
+    },
+    "Q:002": {
+      "n_canon": 26268,
+      "n_variants": 594,
+      "n_ctrl_matched": 36,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 6734.5,
+      "ctrl_delta_max": 10529.0,
+      "ctrl_delta_p05_per_surah": 6980.25
+    },
+    "Q:003": {
+      "n_canon": 15004,
+      "n_variants": 594,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 3797.0,
+      "ctrl_delta_max": 6590.0,
+      "ctrl_delta_p05_per_surah": 3912.8
+    },
+    "Q:004": {
+      "n_canon": 16351,
+      "n_variants": 3726,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 4139.5,
+      "ctrl_delta_max": 7189.0,
+      "ctrl_delta_p05_per_surah": 4370.55
+    },
+    "Q:005": {
+      "n_canon": 12225,
+      "n_variants": 2862,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 2891.5,
+      "ctrl_delta_max": 5428.5,
+      "ctrl_delta_p05_per_surah": 3147.45
+    },
+    "Q:006": {
+      "n_canon": 12745,
+      "n_variants": 2349,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 3058.5,
+      "ctrl_delta_max": 5726.0,
+      "ctrl_delta_p05_per_surah": 3310.4
+    },
+    "Q:007": {
+      "n_canon": 14454,
+      "n_variants": 621,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 3535.0,
+      "ctrl_delta_max": 6088.0,
+      "ctrl_delta_p05_per_surah": 3710.4
+    },
+    "Q:008": {
+      "n_canon": 5406,
+      "n_variants": 2727,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 1547.5,
+      "ctrl_delta_max": 2380.0,
+      "ctrl_delta_p05_per_surah": 1610.125
+    },
+    "Q:009": {
+      "n_canon": 11115,
+      "n_variants": 999,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 2852.5,
+      "ctrl_delta_max": 4862.5,
+      "ctrl_delta_p05_per_surah": 2938.4
+    },
+    "Q:010": {
+      "n_canon": 7608,
+      "n_variants": 1080,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 2001.0,
+      "ctrl_delta_max": 2600.5,
+      "ctrl_delta_p05_per_surah": 2062.05
+    },
+    "Q:011": {
+      "n_canon": 7836,
+      "n_variants": 1431,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 1927.0,
+      "ctrl_delta_max": 2784.0,
+      "ctrl_delta_p05_per_surah": 2050.45
+    },
+    "Q:012": {
+      "n_canon": 7326,
+      "n_variants": 1080,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 1830.0,
+      "ctrl_delta_max": 2459.5,
+      "ctrl_delta_p05_per_surah": 1935.175
+    },
+    "Q:013": {
+      "n_canon": 3564,
+      "n_variants": 1998,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 956.0,
+      "ctrl_delta_max": 1275.0,
+      "ctrl_delta_p05_per_surah": 1014.175
+    },
+    "Q:014": {
+      "n_canon": 3558,
+      "n_variants": 2268,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 899.0,
+      "ctrl_delta_max": 1313.0,
+      "ctrl_delta_p05_per_surah": 977.575
+    },
+    "Q:015": {
+      "n_canon": 2901,
+      "n_variants": 1134,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 872.5,
+      "ctrl_delta_max": 1267.0,
+      "ctrl_delta_p05_per_surah": 879.325
+    },
+    "Q:016": {
+      "n_canon": 7851,
+      "n_variants": 1539,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 2050.5,
+      "ctrl_delta_max": 2889.5,
+      "ctrl_delta_p05_per_surah": 2154.35
+    },
+    "Q:017": {
+      "n_canon": 6662,
+      "n_variants": 2862,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 1565.0,
+      "ctrl_delta_max": 2160.5,
+      "ctrl_delta_p05_per_surah": 1646.5
+    },
+    "Q:018": {
+      "n_canon": 6571,
+      "n_variants": 1593,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 1515.5,
+      "ctrl_delta_max": 2047.0,
+      "ctrl_delta_p05_per_surah": 1636.15
+    },
+    "Q:019": {
+      "n_canon": 3954,
+      "n_variants": 648,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 1082.0,
+      "ctrl_delta_max": 1508.0,
+      "ctrl_delta_p05_per_surah": 1108.075
+    },
+    "Q:020": {
+      "n_canon": 5418,
+      "n_variants": 567,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 1346.5,
+      "ctrl_delta_max": 2111.0,
+      "ctrl_delta_p05_per_surah": 1419.375
+    },
+    "Q:021": {
+      "n_canon": 5113,
+      "n_variants": 1323,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 1346.5,
+      "ctrl_delta_max": 1713.0,
+      "ctrl_delta_p05_per_surah": 1405.3
+    },
+    "Q:022": {
+      "n_canon": 5333,
+      "n_variants": 1458,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 1397.5,
+      "ctrl_delta_max": 1750.0,
+      "ctrl_delta_p05_per_surah": 1439.05
+    },
+    "Q:023": {
+      "n_canon": 4502,
+      "n_variants": 837,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 1215.5,
+      "ctrl_delta_max": 1688.5,
+      "ctrl_delta_p05_per_surah": 1284.175
+    },
+    "Q:024": {
+      "n_canon": 5773,
+      "n_variants": 1782,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 1614.5,
+      "ctrl_delta_max": 2343.5,
+      "ctrl_delta_p05_per_surah": 1637.075
+    },
+    "Q:025": {
+      "n_canon": 3897,
+      "n_variants": 1674,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 1062.5,
+      "ctrl_delta_max": 1508.5,
+      "ctrl_delta_p05_per_surah": 1103.175
+    },
+    "Q:026": {
+      "n_canon": 5649,
+      "n_variants": 594,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 1668.0,
+      "ctrl_delta_max": 2367.5,
+      "ctrl_delta_p05_per_surah": 1691.9
+    },
+    "Q:027": {
+      "n_canon": 4809,
+      "n_variants": 1107,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 1277.5,
+      "ctrl_delta_max": 1703.5,
+      "ctrl_delta_p05_per_surah": 1292.65
+    },
+    "Q:028": {
+      "n_canon": 5949,
+      "n_variants": 594,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 1496.5,
+      "ctrl_delta_max": 2084.5,
+      "ctrl_delta_p05_per_surah": 1591.05
+    },
+    "Q:029": {
+      "n_canon": 4336,
+      "n_variants": 594,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 1226.0,
+      "ctrl_delta_max": 1677.5,
+      "ctrl_delta_p05_per_surah": 1283.35
+    },
+    "Q:030": {
+      "n_canon": 3491,
+      "n_variants": 594,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 1005.5,
+      "ctrl_delta_max": 1429.5,
+      "ctrl_delta_p05_per_surah": 1060.575
+    },
+    "Q:031": {
+      "n_canon": 2190,
+      "n_variants": 594,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 659.0,
+      "ctrl_delta_max": 947.5,
+      "ctrl_delta_p05_per_surah": 685.075
+    },
+    "Q:032": {
+      "n_canon": 1582,
+      "n_variants": 594,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 505.0,
+      "ctrl_delta_max": 737.0,
+      "ctrl_delta_p05_per_surah": 549.45
+    },
+    "Q:033": {
+      "n_canon": 5807,
+      "n_variants": 2106,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 1575.5,
+      "ctrl_delta_max": 2190.5,
+      "ctrl_delta_p05_per_surah": 1603.375
+    },
+    "Q:034": {
+      "n_canon": 3613,
+      "n_variants": 2241,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 952.5,
+      "ctrl_delta_max": 1314.5,
+      "ctrl_delta_p05_per_surah": 1028.4
+    },
+    "Q:035": {
+      "n_canon": 3257,
+      "n_variants": 2916,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 933.5,
+      "ctrl_delta_max": 1179.0,
+      "ctrl_delta_p05_per_surah": 946.3
+    },
+    "Q:036": {
+      "n_canon": 3087,
+      "n_variants": 567,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 886.5,
+      "ctrl_delta_max": 1257.0,
+      "ctrl_delta_p05_per_surah": 944.4
+    },
+    "Q:037": {
+      "n_canon": 3918,
+      "n_variants": 810,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 1101.0,
+      "ctrl_delta_max": 1640.0,
+      "ctrl_delta_p05_per_surah": 1133.5
+    },
+    "Q:038": {
+      "n_canon": 3084,
+      "n_variants": 891,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 819.0,
+      "ctrl_delta_max": 1167.5,
+      "ctrl_delta_p05_per_surah": 880.025
+    },
+    "Q:039": {
+      "n_canon": 4888,
+      "n_variants": 1296,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 1285.5,
+      "ctrl_delta_max": 1712.0,
+      "ctrl_delta_p05_per_surah": 1344.3
+    },
+    "Q:040": {
+      "n_canon": 5127,
+      "n_variants": 567,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 1380.0,
+      "ctrl_delta_max": 1717.0,
+      "ctrl_delta_p05_per_surah": 1412.85
+    },
+    "Q:041": {
+      "n_canon": 3384,
+      "n_variants": 567,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 933.0,
+      "ctrl_delta_max": 1300.0,
+      "ctrl_delta_p05_per_surah": 979.25
+    },
+    "Q:042": {
+      "n_canon": 3541,
+      "n_variants": 567,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 952.5,
+      "ctrl_delta_max": 1290.5,
+      "ctrl_delta_p05_per_surah": 1038.75
+    },
+    "Q:043": {
+      "n_canon": 3628,
+      "n_variants": 567,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 999.0,
+      "ctrl_delta_max": 1369.0,
+      "ctrl_delta_p05_per_surah": 1032.525
+    },
+    "Q:044": {
+      "n_canon": 1493,
+      "n_variants": 567,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 518.5,
+      "ctrl_delta_max": 758.5,
+      "ctrl_delta_p05_per_surah": 548.275
+    },
+    "Q:045": {
+      "n_canon": 2104,
+      "n_variants": 567,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 679.5,
+      "ctrl_delta_max": 976.5,
+      "ctrl_delta_p05_per_surah": 697.7
+    },
+    "Q:046": {
+      "n_canon": 2686,
+      "n_variants": 567,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 763.0,
+      "ctrl_delta_max": 1008.5,
+      "ctrl_delta_p05_per_surah": 775.975
+    },
+    "Q:047": {
+      "n_canon": 2442,
+      "n_variants": 1404,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 801.5,
+      "ctrl_delta_max": 1080.5,
+      "ctrl_delta_p05_per_surah": 811.7
+    },
+    "Q:048": {
+      "n_canon": 2529,
+      "n_variants": 999,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 774.5,
+      "ctrl_delta_max": 1019.0,
+      "ctrl_delta_p05_per_surah": 808.25
+    },
+    "Q:049": {
+      "n_canon": 1552,
+      "n_variants": 2160,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 546.0,
+      "ctrl_delta_max": 787.0,
+      "ctrl_delta_p05_per_surah": 576.4
+    },
+    "Q:050": {
+      "n_canon": 1526,
+      "n_variants": 864,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 484.5,
+      "ctrl_delta_max": 720.0,
+      "ctrl_delta_p05_per_surah": 498.95
+    },
+    "Q:051": {
+      "n_canon": 1565,
+      "n_variants": 864,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 519.5,
+      "ctrl_delta_max": 759.5,
+      "ctrl_delta_p05_per_surah": 529.825
+    },
+    "Q:052": {
+      "n_canon": 1343,
+      "n_variants": 675,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 464.5,
+      "ctrl_delta_max": 672.0,
+      "ctrl_delta_p05_per_surah": 479.725
+    },
+    "Q:053": {
+      "n_canon": 1452,
+      "n_variants": 783,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 519.0,
+      "ctrl_delta_max": 731.0,
+      "ctrl_delta_p05_per_surah": 527.9
+    },
+    "Q:054": {
+      "n_canon": 1488,
+      "n_variants": 1080,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 514.0,
+      "ctrl_delta_max": 791.0,
+      "ctrl_delta_p05_per_surah": 530.525
+    },
+    "Q:055": {
+      "n_canon": 1666,
+      "n_variants": 675,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 650.0,
+      "ctrl_delta_max": 991.5,
+      "ctrl_delta_p05_per_surah": 679.475
+    },
+    "Q:056": {
+      "n_canon": 1775,
+      "n_variants": 837,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 628.0,
+      "ctrl_delta_max": 843.5,
+      "ctrl_delta_p05_per_surah": 646.525
+    },
+    "Q:057": {
+      "n_canon": 2564,
+      "n_variants": 1539,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 802.0,
+      "ctrl_delta_max": 1019.0,
+      "ctrl_delta_p05_per_surah": 807.125
+    },
+    "Q:058": {
+      "n_canon": 2065,
+      "n_variants": 2403,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 672.0,
+      "ctrl_delta_max": 972.5,
+      "ctrl_delta_p05_per_surah": 695.5
+    },
+    "Q:059": {
+      "n_canon": 1989,
+      "n_variants": 1647,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 630.0,
+      "ctrl_delta_max": 936.0,
+      "ctrl_delta_p05_per_surah": 666.925
+    },
+    "Q:060": {
+      "n_canon": 1579,
+      "n_variants": 5940,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 552.5,
+      "ctrl_delta_max": 783.5,
+      "ctrl_delta_p05_per_surah": 574.125
+    },
+    "Q:061": {
+      "n_canon": 985,
+      "n_variants": 1647,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 353.5,
+      "ctrl_delta_max": 573.0,
+      "ctrl_delta_p05_per_surah": 366.375
+    },
+    "Q:062": {
+      "n_canon": 787,
+      "n_variants": 1890,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 313.0,
+      "ctrl_delta_max": 452.5,
+      "ctrl_delta_p05_per_surah": 321.125
+    },
+    "Q:063": {
+      "n_canon": 820,
+      "n_variants": 2592,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 337.5,
+      "ctrl_delta_max": 503.5,
+      "ctrl_delta_p05_per_surah": 348.15
+    },
+    "Q:064": {
+      "n_canon": 1110,
+      "n_variants": 2025,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 408.0,
+      "ctrl_delta_max": 603.5,
+      "ctrl_delta_p05_per_surah": 422.0
+    },
+    "Q:065": {
+      "n_canon": 1222,
+      "n_variants": 4887,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 429.5,
+      "ctrl_delta_max": 632.5,
+      "ctrl_delta_p05_per_surah": 442.625
+    },
+    "Q:066": {
+      "n_canon": 1124,
+      "n_variants": 1971,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 391.5,
+      "ctrl_delta_max": 580.5,
+      "ctrl_delta_p05_per_surah": 412.725
+    },
+    "Q:067": {
+      "n_canon": 1366,
+      "n_variants": 1350,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 486.0,
+      "ctrl_delta_max": 650.5,
+      "ctrl_delta_p05_per_surah": 499.225
+    },
+    "Q:068": {
+      "n_canon": 1308,
+      "n_variants": 945,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 446.5,
+      "ctrl_delta_max": 667.5,
+      "ctrl_delta_p05_per_surah": 463.9
+    },
+    "Q:069": {
+      "n_canon": 1152,
+      "n_variants": 648,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 395.0,
+      "ctrl_delta_max": 598.5,
+      "ctrl_delta_p05_per_surah": 416.85
+    },
+    "Q:070": {
+      "n_canon": 990,
+      "n_variants": 891,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 359.0,
+      "ctrl_delta_max": 586.5,
+      "ctrl_delta_p05_per_surah": 372.225
+    },
+    "Q:071": {
+      "n_canon": 984,
+      "n_variants": 1647,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 376.0,
+      "ctrl_delta_max": 606.5,
+      "ctrl_delta_p05_per_surah": 386.0
+    },
+    "Q:072": {
+      "n_canon": 1128,
+      "n_variants": 1701,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 411.0,
+      "ctrl_delta_max": 607.5,
+      "ctrl_delta_p05_per_surah": 417.3
+    },
+    "Q:073": {
+      "n_canon": 873,
+      "n_variants": 810,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 331.0,
+      "ctrl_delta_max": 480.0,
+      "ctrl_delta_p05_per_surah": 346.925
+    },
+    "Q:074": {
+      "n_canon": 1054,
+      "n_variants": 810,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 370.0,
+      "ctrl_delta_max": 577.5,
+      "ctrl_delta_p05_per_surah": 389.35
+    },
+    "Q:075": {
+      "n_canon": 695,
+      "n_variants": 918,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 299.5,
+      "ctrl_delta_max": 443.5,
+      "ctrl_delta_p05_per_surah": 303.225
+    },
+    "Q:076": {
+      "n_canon": 1106,
+      "n_variants": 1458,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 410.0,
+      "ctrl_delta_max": 613.5,
+      "ctrl_delta_p05_per_surah": 415.725
+    },
+    "Q:077": {
+      "n_canon": 860,
+      "n_variants": 864,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 346.0,
+      "ctrl_delta_max": 530.5,
+      "ctrl_delta_p05_per_surah": 358.675
+    },
+    "Q:078": {
+      "n_canon": 815,
+      "n_variants": 756,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 321.5,
+      "ctrl_delta_max": 443.0,
+      "ctrl_delta_p05_per_surah": 325.3
+    },
+    "Q:079": {
+      "n_canon": 804,
+      "n_variants": 864,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 313.5,
+      "ctrl_delta_max": 449.5,
+      "ctrl_delta_p05_per_surah": 319.675
+    },
+    "Q:080": {
+      "n_canon": 571,
+      "n_variants": 702,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 237.5,
+      "ctrl_delta_max": 363.0,
+      "ctrl_delta_p05_per_surah": 246.75
+    },
+    "Q:081": {
+      "n_canon": 454,
+      "n_variants": 810,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 209.0,
+      "ctrl_delta_max": 304.5,
+      "ctrl_delta_p05_per_surah": 213.65
+    },
+    "Q:082": {
+      "n_canon": 352,
+      "n_variants": 864,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 157.5,
+      "ctrl_delta_max": 251.5,
+      "ctrl_delta_p05_per_surah": 166.675
+    },
+    "Q:083": {
+      "n_canon": 769,
+      "n_variants": 810,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 319.5,
+      "ctrl_delta_max": 473.5,
+      "ctrl_delta_p05_per_surah": 326.925
+    },
+    "Q:084": {
+      "n_canon": 464,
+      "n_variants": 837,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 204.0,
+      "ctrl_delta_max": 297.0,
+      "ctrl_delta_p05_per_surah": 209.675
+    },
+    "Q:085": {
+      "n_canon": 488,
+      "n_variants": 918,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 204.0,
+      "ctrl_delta_max": 291.5,
+      "ctrl_delta_p05_per_surah": 208.8
+    },
+    "Q:086": {
+      "n_canon": 273,
+      "n_variants": 864,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 127.0,
+      "ctrl_delta_max": 188.5,
+      "ctrl_delta_p05_per_surah": 131.125
+    },
+    "Q:087": {
+      "n_canon": 315,
+      "n_variants": 864,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 145.5,
+      "ctrl_delta_max": 226.5,
+      "ctrl_delta_p05_per_surah": 147.725
+    },
+    "Q:088": {
+      "n_canon": 401,
+      "n_variants": 918,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 183.0,
+      "ctrl_delta_max": 265.0,
+      "ctrl_delta_p05_per_surah": 185.4
+    },
+    "Q:089": {
+      "n_canon": 603,
+      "n_variants": 675,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 245.5,
+      "ctrl_delta_max": 353.0,
+      "ctrl_delta_p05_per_surah": 252.725
+    },
+    "Q:090": {
+      "n_canon": 361,
+      "n_variants": 891,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 159.0,
+      "ctrl_delta_max": 231.0,
+      "ctrl_delta_p05_per_surah": 164.5
+    },
+    "Q:091": {
+      "n_canon": 272,
+      "n_variants": 837,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 135.0,
+      "ctrl_delta_max": 224.5,
+      "ctrl_delta_p05_per_surah": 141.725
+    },
+    "Q:092": {
+      "n_canon": 333,
+      "n_variants": 810,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 152.0,
+      "ctrl_delta_max": 235.0,
+      "ctrl_delta_p05_per_surah": 154.5
+    },
+    "Q:093": {
+      "n_canon": 184,
+      "n_variants": 648,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 93.5,
+      "ctrl_delta_max": 151.5,
+      "ctrl_delta_p05_per_surah": 99.9
+    },
+    "Q:094": {
+      "n_canon": 121,
+      "n_variants": 837,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 87.0,
+      "ctrl_delta_max": 111.0,
+      "ctrl_delta_p05_per_surah": 87.725
+    },
+    "Q:095": {
+      "n_canon": 181,
+      "n_variants": 891,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 89.5,
+      "ctrl_delta_max": 143.0,
+      "ctrl_delta_p05_per_surah": 97.45
+    },
+    "Q:096": {
+      "n_canon": 307,
+      "n_variants": 972,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 140.5,
+      "ctrl_delta_max": 224.5,
+      "ctrl_delta_p05_per_surah": 149.4
+    },
+    "Q:097": {
+      "n_canon": 134,
+      "n_variants": 999,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 81.5,
+      "ctrl_delta_max": 112.5,
+      "ctrl_delta_p05_per_surah": 82.725
+    },
+    "Q:098": {
+      "n_canon": 423,
+      "n_variants": 1917,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 195.5,
+      "ctrl_delta_max": 271.0,
+      "ctrl_delta_p05_per_surah": 198.45
+    },
+    "Q:099": {
+      "n_canon": 177,
+      "n_variants": 999,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 100.0,
+      "ctrl_delta_max": 154.0,
+      "ctrl_delta_p05_per_surah": 101.675
+    },
+    "Q:100": {
+      "n_canon": 188,
+      "n_variants": 864,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 96.0,
+      "ctrl_delta_max": 148.0,
+      "ctrl_delta_p05_per_surah": 99.85
+    },
+    "Q:101": {
+      "n_canon": 179,
+      "n_variants": 675,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 103.0,
+      "ctrl_delta_max": 144.5,
+      "ctrl_delta_p05_per_surah": 103.95
+    },
+    "Q:102": {
+      "n_canon": 142,
+      "n_variants": 837,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 90.5,
+      "ctrl_delta_max": 125.5,
+      "ctrl_delta_p05_per_surah": 92.225
+    },
+    "Q:103": {
+      "n_canon": 92,
+      "n_variants": 675,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 67.0,
+      "ctrl_delta_max": 89.0,
+      "ctrl_delta_p05_per_surah": 68.95
+    },
+    "Q:104": {
+      "n_canon": 153,
+      "n_variants": 837,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 82.0,
+      "ctrl_delta_max": 124.5,
+      "ctrl_delta_p05_per_surah": 89.0
+    },
+    "Q:105": {
+      "n_canon": 116,
+      "n_variants": 1134,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 77.5,
+      "ctrl_delta_max": 105.0,
+      "ctrl_delta_p05_per_surah": 81.5
+    },
+    "Q:106": {
+      "n_canon": 96,
+      "n_variants": 756,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 62.0,
+      "ctrl_delta_max": 94.0,
+      "ctrl_delta_p05_per_surah": 71.85
+    },
+    "Q:107": {
+      "n_canon": 133,
+      "n_variants": 972,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 77.5,
+      "ctrl_delta_max": 122.5,
+      "ctrl_delta_p05_per_surah": 81.45
+    },
+    "Q:108": {
+      "n_canon": 62,
+      "n_variants": 891,
+      "n_ctrl_matched": 0,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": null,
+      "ctrl_delta_max": null,
+      "ctrl_delta_p05_per_surah": null
+    },
+    "Q:109": {
+      "n_canon": 118,
+      "n_variants": 918,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 77.5,
+      "ctrl_delta_max": 109.5,
+      "ctrl_delta_p05_per_surah": 81.95
+    },
+    "Q:110": {
+      "n_canon": 99,
+      "n_variants": 972,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 69.5,
+      "ctrl_delta_max": 92.0,
+      "ctrl_delta_p05_per_surah": 71.9
+    },
+    "Q:111": {
+      "n_canon": 100,
+      "n_variants": 891,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 70.5,
+      "ctrl_delta_max": 92.5,
+      "ctrl_delta_p05_per_surah": 71.5
+    },
+    "Q:112": {
+      "n_canon": 66,
+      "n_variants": 783,
+      "n_ctrl_matched": 3,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 58.5,
+      "ctrl_delta_max": 62.5,
+      "ctrl_delta_p05_per_surah": 58.7
+    },
+    "Q:113": {
+      "n_canon": 92,
+      "n_variants": 864,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 71.5,
+      "ctrl_delta_max": 93.0,
+      "ctrl_delta_p05_per_surah": 73.675
+    },
+    "Q:114": {
+      "n_canon": 99,
+      "n_variants": 864,
+      "n_ctrl_matched": 50,
+      "var_delta_min": 1.0,
+      "var_delta_max": 2.0,
+      "ctrl_delta_min": 78.0,
+      "ctrl_delta_max": 99.0,
+      "ctrl_delta_p05_per_surah": 79.225
+    }
+  },
+  "wall_time_s": 1323.573
+}

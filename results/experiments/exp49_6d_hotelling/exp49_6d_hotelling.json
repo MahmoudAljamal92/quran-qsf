@@ -1,0 +1,123 @@
+{
+  "experiment": "exp49_6d_hotelling",
+  "schema_version": 1,
+  "prereg": {
+    "extra_metric": "n_communities",
+    "ridge_lambda": 1e-06,
+    "gate_formula": "T2_6D >= 5D_T2 * 6/5",
+    "gate_threshold": 4268.807345405562,
+    "five_d_T2_baseline": 3557.339454504635,
+    "band_A": [
+      15,
+      100
+    ],
+    "control_pool": [
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "source_notes": "experiments/exp48_verse_graph_topology/notes.md"
+  },
+  "row_counts": {
+    "n_quran_bandA": 68,
+    "n_ctrl_bandA": 2509,
+    "n_quran_dropped_nan_6th": 0,
+    "n_ctrl_dropped_nan_6th": 0,
+    "ctrl_per_corpus_nan": {
+      "poetry_jahili": 0,
+      "poetry_islami": 0,
+      "poetry_abbasi": 0,
+      "ksucca": 0,
+      "arabic_bible": 0,
+      "hindawi": 0
+    }
+  },
+  "row_alignment_check": {
+    "quran_5d_matches_phase06": true,
+    "ctrl_5d_matches_phase06": true,
+    "note": "First 5 columns of the 6-D matrices are byte-identical to phase_06_phi_m.X_QURAN / X_CTRL_POOL. Asserted at build time; a drift raises AssertionError."
+  },
+  "five_d_sanity": {
+    "T2": 3557.3394545046353,
+    "F": 710.3626980606927,
+    "df1": 5,
+    "df2": 2571,
+    "p_F_tail": 0.0,
+    "scipy_log10_p_F_tail": -Infinity,
+    "highprec_log10_p_F_tail": -480.2531098456136,
+    "highprec_dps": 80,
+    "locked_T2": 3557.339454504635,
+    "abs_delta_vs_locked": 4.547473508864641e-13
+  },
+  "six_d_hotelling": {
+    "T2": 3823.592202180557,
+    "F": 636.0279585504227,
+    "df1": 6,
+    "df2": 2570,
+    "p_F_tail": 0.0,
+    "scipy_log10_p_F_tail": -Infinity,
+    "highprec_log10_p_F_tail": -502.4987321054333,
+    "highprec_dps": 80,
+    "n_quran": 68,
+    "n_ctrl": 2509,
+    "p_dim": 6
+  },
+  "gate_verdict": {
+    "verdict": "SIGNIFICANT_BUT_REDUNDANT",
+    "gate_threshold": 4268.807345405562,
+    "observed_T2_6D": 3823.592202180557,
+    "observed_gate_ratio_6D_over_5D": 1.0748460334137546,
+    "marginal_delta_T2_6D_minus_5D": 266.25274767592146,
+    "per_dim_T2_5D": 711.467890900927,
+    "per_dim_T2_6D": 637.2653670300928,
+    "per_dim_gain_ratio": 0.8957050278447954,
+    "interpretation": "PROMOTE_6TH_CHANNEL = the n_communities column provides enough NEW multivariate separation to overcome the 6/5 dimension penalty; it is non-redundant with the 5-D Phi_M and graduates to a full 6th channel. SIGNIFICANT_BUT_REDUNDANT = signal is real (exp48 d=+0.937) but duplicates information already present in (EL, VL_CV, CN, H_cond, T); stays in the supplementary ledger."
+  },
+  "n_communities_means_bandA": {
+    "quran": 6.955882352941177,
+    "ctrl_pool": 5.796731765643683,
+    "note": "Means over rows that entered the 6-D T^2. exp48's corpus_means use ALL units with >=5 verses (not just Band-A), so the numbers are not one-to-one comparable."
+  },
+  "centroids": {
+    "mu_QURAN_bandA_6D": [
+      0.7074338713106889,
+      0.4823916757649949,
+      0.08596828788694996,
+      0.8671010277271484,
+      -0.482402750487046,
+      6.955882352941177
+    ],
+    "mu_CTRL_POOL_bandA_6D": [
+      0.11080323011588314,
+      0.20034806488234075,
+      0.027711546452416184,
+      0.8251763392447035,
+      -2.4449410750637703,
+      5.796731765643683
+    ],
+    "mu_CTRL_POOL_5D_locked": [
+      0.11080323011588314,
+      0.20034806488234075,
+      0.027711546452416184,
+      0.8251763392447035,
+      -2.4449410750637703
+    ],
+    "feature_cols_6D": [
+      "EL",
+      "VL_CV",
+      "CN",
+      "H_cond",
+      "T",
+      "n_communities"
+    ]
+  },
+  "reference": {
+    "prereg_doc": "experiments/exp48_verse_graph_topology/notes.md",
+    "input_checkpoint": "phase_06_phi_m.pkl",
+    "depends_on_exp48_verdict": "PROMOTE"
+  },
+  "runtime_seconds": 7.95
+}

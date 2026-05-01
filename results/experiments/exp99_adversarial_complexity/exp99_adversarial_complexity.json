@@ -1,0 +1,88 @@
+{
+  "experiment": "exp99_adversarial_complexity",
+  "prereg_sha256": "a92c6e6c26551c7a35abaa5dac8ee79797148c7351702a6407e20737d7bd45db",
+  "hypothesis": "H54",
+  "n_forgeries": 1000000,
+  "markov_order": 3,
+  "generator_seed": 99000,
+  "length_sample_range": [
+    5,
+    50
+  ],
+  "n_train_verses": 130434,
+  "n_quran_verses": 6236,
+  "svm_w": [
+    5.238876016863266,
+    5.8639699045570755,
+    0.49931000516879376,
+    -0.9451012462890134,
+    0.9147695040839672
+  ],
+  "svm_b": -1.8146355324839272,
+  "f55_tau": 2.0,
+  "f56_threshold": 0.5,
+  "n_gate1_pass": 1000000,
+  "n_f55_pass": 0,
+  "n_f56_pass": 1000000,
+  "n_gate1_f55_pass": 0,
+  "n_gate1_f56_pass": 1000000,
+  "n_f55_f56_pass": 0,
+  "n_joint_pass": 0,
+  "joint_pass_details": [],
+  "scaling": {
+    "k1_gate1_only": {
+      "n_pass": 1000000,
+      "rate": 1.0,
+      "first_idx": 0
+    },
+    "k1_f55_only": {
+      "n_pass": 0,
+      "rate": 0.0,
+      "first_idx": null
+    },
+    "k1_f56_only": {
+      "n_pass": 1000000,
+      "rate": 1.0,
+      "first_idx": 0
+    },
+    "k2_gate1_f55": {
+      "n_pass": 0,
+      "rate": 0.0,
+      "first_idx": null
+    },
+    "k2_gate1_f56": {
+      "n_pass": 1000000,
+      "rate": 1.0,
+      "first_idx": 0
+    },
+    "k2_f55_f56": {
+      "n_pass": 0,
+      "rate": 0.0,
+      "first_idx": null
+    },
+    "k3_joint": {
+      "n_pass": 0,
+      "rate": 0.0,
+      "first_idx": null
+    }
+  },
+  "f55_delta_stats": {
+    "n_sampled": 1000,
+    "min": 75.5,
+    "p05": 114.5,
+    "median": 385.75,
+    "p95": 593.025,
+    "max": 675.0
+  },
+  "clopper_pearson_upper_if_zero": 2.9957277863923437e-06,
+  "bayes_nats_if_zero": 13.815511557963774,
+  "audit": {
+    "a1_valid_arabic_rate": 1.0,
+    "a2_eval_ok_rate": 1.0,
+    "a3_verbatim_hit_rate": 4.1e-05,
+    "failures": []
+  },
+  "verdict": "PASS_H54_meta_finding",
+  "wall_time_gen_s": 4420.948741436005,
+  "wall_time_total_s": 4504.394555091858
+}

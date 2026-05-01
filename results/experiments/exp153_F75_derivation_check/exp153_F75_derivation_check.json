@@ -1,0 +1,212 @@
+{
+  "experiment": "exp153_F75_derivation_check",
+  "hypothesis_id": "H98_F75_Geometric_Derivation",
+  "hypothesis": "F75's universal Q ~ 5.75 bits (CV 2.04%) reduces to Shannon-Renyi-inf gap H_1 - H_inf ~ 0.94 bits across 11 oral canons. Under geometric distribution assumption gap_geom(p_max) = ((1-p_max)/p_max) * log2(1/(1-p_max)), peaking at exactly 1.00 bit when p_max = 0.5. Tests whether geometric prediction matches empirical gap per-corpus, with Quran (p_max=0.73) correctly identified as the lowest-gap outlier.",
+  "verdict": "FAIL_F75_geometric_derivation_no_match",
+  "verdict_reason": "3/5 PREREG criteria PASS. A1 non-Quran residuals <= 0.30 bits: 6/10 (need >= 8); FAIL. A2 mean abs residual: 0.2522 bits (ceiling 0.25); FAIL. A3 Pearson r: 0.7443 (floor 0.7); PASS. A4 gap_geom(0.5) == 1.00: drift 0.00e+00; PASS. A5 Quran lowest-gap_geom: rank 1/11; PASS.",
+  "prereg_hash": "397a5725e449b72f3dbc93bbc074c11b013396e36462f53020255e64570e3e68",
+  "input_sizing_sha256": "0f8dcf0f69106020fac6c596716b4729d78fdece828ebb83aba3aa2b0a79fc22",
+  "frozen_constants": {
+    "SEED": 42,
+    "GAP_RESIDUAL_FLOOR": 0.3,
+    "MEAN_RESIDUAL_CEILING": 0.25,
+    "CORRELATION_FLOOR": 0.7,
+    "LOG2_28": 4.807354922057604,
+    "EXPECTED_CORPORA": [
+      "quran",
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "hindawi",
+      "ksucca",
+      "arabic_bible",
+      "hebrew_tanakh",
+      "greek_nt",
+      "pali",
+      "avestan_yasna"
+    ]
+  },
+  "results": {
+    "p_max_per_corpus": {
+      "quran": 0.7272727272727273,
+      "poetry_jahili": 0.264391447368421,
+      "poetry_islami": 0.2857142857142857,
+      "poetry_abbasi": 0.2857142857142857,
+      "hindawi": 0.1836734693877551,
+      "ksucca": 0.28001792114695345,
+      "arabic_bible": 0.2727272727272727,
+      "hebrew_tanakh": 0.2413793103448276,
+      "greek_nt": 0.3333333333333333,
+      "pali": 0.4808201058201058,
+      "avestan_yasna": 0.375
+    },
+    "H_EL_per_corpus": {
+      "quran": 0.9685208240372034,
+      "poetry_jahili": 2.779539763336115,
+      "poetry_islami": 2.688721875540867,
+      "poetry_abbasi": 2.7516291673878226,
+      "hindawi": 3.478902741597457,
+      "ksucca": 2.907891879501107,
+      "arabic_bible": 2.918295834054489,
+      "hebrew_tanakh": 3.053090083530327,
+      "greek_nt": 2.433671200186647,
+      "pali": 2.089938976016876,
+      "avestan_yasna": 2.1180782093497093
+    },
+    "Q_locked": {
+      "quran": 5.31644412745751,
+      "poetry_jahili": 5.667642099278081,
+      "poetry_islami": 5.6887218755408675,
+      "poetry_abbasi": 5.751629167387822,
+      "hindawi": 5.841472820982165,
+      "ksucca": 5.878837869278973,
+      "arabic_bible": 5.851181638195952,
+      "hebrew_tanakh": 5.809818932517963,
+      "greek_nt": 5.656063621523095,
+      "pali": 5.840863027773002,
+      "avestan_yasna": 5.5103956321284695
+    },
+    "Q_recomputed": {
+      "quran": 5.31644412745751,
+      "poetry_jahili": 5.667642099278081,
+      "poetry_islami": 5.6887218755408675,
+      "poetry_abbasi": 5.751629167387822,
+      "hindawi": 5.841472820982165,
+      "ksucca": 5.878837869278973,
+      "arabic_bible": 5.851181638195952,
+      "hebrew_tanakh": 5.809818932517963,
+      "greek_nt": 5.656063621523095,
+      "pali": 5.840863027773002,
+      "avestan_yasna": 5.5103956321284695
+    },
+    "Q_recompute_max_drift": 0.0,
+    "gap_empirical": {
+      "quran": 0.5090892053999063,
+      "poetry_jahili": 0.860287177220477,
+      "poetry_islami": 0.8813669534832638,
+      "poetry_abbasi": 0.9442742453302184,
+      "hindawi": 1.0341178989245616,
+      "ksucca": 1.0714829472213694,
+      "arabic_bible": 1.0438267161383479,
+      "hebrew_tanakh": 1.0024640104603595,
+      "greek_nt": 0.8487086994654911,
+      "pali": 1.0335081057153985,
+      "avestan_yasna": 0.7030407100708658
+    },
+    "gap_empirical_alternative_form": {
+      "quran": 0.5090892053999061,
+      "poetry_jahili": 0.8602871772204765,
+      "poetry_islami": 0.8813669534832629,
+      "poetry_abbasi": 0.9442742453302184,
+      "hindawi": 1.0341178989245612,
+      "ksucca": 1.071482947221369,
+      "arabic_bible": 1.0438267161383479,
+      "hebrew_tanakh": 1.002464010460359,
+      "greek_nt": 0.8487086994654909,
+      "pali": 1.0335081057153974,
+      "avestan_yasna": 0.7030407100708653
+    },
+    "gap_alt_match_max_drift": 1.1102230246251565e-15,
+    "gap_geometric_predicted": {
+      "quran": 0.7029259192185529,
+      "poetry_jahili": 1.232517614696284,
+      "poetry_islami": 1.2135670679256043,
+      "poetry_abbasi": 1.2135670679256043,
+      "hindawi": 1.3012522187904254,
+      "ksucca": 1.218664202773806,
+      "arabic_bible": 1.225150983032793,
+      "hebrew_tanakh": 1.2525837546837213,
+      "greek_nt": 1.1699250014423122,
+      "pali": 1.0211409362407642,
+      "avestan_yasna": 1.1301198418543965
+    },
+    "residuals_abs": {
+      "quran": 0.19383671381864653,
+      "poetry_jahili": 0.372230437475807,
+      "poetry_islami": 0.33220011444234054,
+      "poetry_abbasi": 0.2692928225953859,
+      "hindawi": 0.2671343198658638,
+      "ksucca": 0.14718125555243655,
+      "arabic_bible": 0.18132426689444503,
+      "hebrew_tanakh": 0.2501197442233618,
+      "greek_nt": 0.32121630197682105,
+      "pali": 0.012367169474634343,
+      "avestan_yasna": 0.42707913178353074
+    },
+    "criteria": {
+      "A1_per_corpus_residual_le_0p30_non_quran": {
+        "verdict": "FAIL",
+        "n_pass": 6,
+        "n_required": 8,
+        "n_total": 10,
+        "passing_corpora": [
+          "poetry_abbasi",
+          "hindawi",
+          "ksucca",
+          "arabic_bible",
+          "hebrew_tanakh",
+          "pali"
+        ],
+        "failing_corpora": [
+          "poetry_jahili",
+          "poetry_islami",
+          "greek_nt",
+          "avestan_yasna"
+        ]
+      },
+      "A2_mean_abs_residual": {
+        "verdict": "FAIL",
+        "observed": 0.25218020710029754,
+        "ceiling": 0.25
+      },
+      "A3_pearson_correlation": {
+        "verdict": "PASS",
+        "observed": 0.7442506239289438,
+        "floor": 0.7
+      },
+      "A4_geometric_at_half_eq_one": {
+        "verdict": "PASS",
+        "observed_value": 1.0,
+        "drift_from_1p0": 0.0
+      },
+      "A5_quran_lowest_gap_geom_rank_1": {
+        "verdict": "PASS",
+        "quran_rank": 1,
+        "sorted_by_gap_geom_ascending": [
+          "quran",
+          "pali",
+          "avestan_yasna",
+          "greek_nt",
+          "poetry_islami",
+          "poetry_abbasi",
+          "ksucca",
+          "arabic_bible",
+          "poetry_jahili",
+          "hebrew_tanakh",
+          "hindawi"
+        ]
+      }
+    },
+    "cluster_descriptive": {
+      "non_quran_emp_mean": 0.9423077464030353,
+      "non_quran_emp_std": 0.11728987683143044,
+      "non_quran_geom_mean": 1.1978488689365712,
+      "non_quran_geom_std": 0.07685162218345803,
+      "bits_to_one_in_emp_stdunits": 0.49187751880650626,
+      "interpretation_one_bit_conjecture": "Non-Quran cluster mean = 0.9423 bits +/- 0.1173; distance from 1.00 bit = 0.0577 bits = 0.49 std-units. Compatible with '1-bit conjecture' if bits_to_one < 1.0."
+    }
+  },
+  "audit_report": {
+    "ok": true,
+    "checks": {
+      "Q_recompute_drift_le_1e-12": true,
+      "gap_alt_drift_le_1e-12": true,
+      "input_sha256_locked": "0f8dcf0f69106020fac6c596716b4729d78fdece828ebb83aba3aa2b0a79fc22",
+      "all_corpora_present": true,
+      "no_brown_stouffer_used": true,
+      "t_squared_invariant": true,
+      "no_locked_finding_status_changed": true
+    }
+  },
+  "wall_time_s": 0.0016341209411621094
+}

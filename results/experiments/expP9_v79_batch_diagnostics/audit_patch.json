@@ -1,0 +1,140 @@
+{
+  "experiment": "expP9_v79_batch_diagnostics",
+  "schema_version": 1,
+  "payload_tag": "audit_patch",
+  "audit_findings": {
+    "issue_1_missing_hebrew_greek_NT": "PREREG.md NON_ARABIC lists hebrew_tanakh + greek_nt; the main run.py used phase_06_phi_m.pkl which only contains iliad_greek among non-Arabic corpora; the supplement used load_all(include_cross_lang=False) which also omits these.",
+    "issue_2_paper_bible_noon_rate_wrong": "PAPER §4.41.8 said 'Bible reaches only 14.7 % ن-finals'. 14.7 % is Bible's ا (alif) rate, not its ن rate. Bible's actual ن rate = 7.53 %. Quran-vs-Bible ن-gap is therefore 42.57 pp (not 35.4 pp); the direction makes the verse-end-selection claim STRONGER not weaker.",
+    "issue_3_n9_phurst_off_by_2x": "N9 Brown synthesis used p_Hurst=4e-4 (claimed '2/5000 perms'). Actual Hurst JSON has p_one_sided=1.9996e-4 = ≈2/10001 (10000 perms). Joint Brown p slightly understated.",
+    "issue_4_R3_quran_not_most_extreme": "expP4_cross_tradition_R3 has Rigveda z=-18.93, Tanakh z=-15.29, Greek NT z=-12.06 all more extreme than Quran z=-8.92. The Quran is 4th most extreme on R3, not 1st.",
+    "issue_5_hadith_post_hoc": "The hadith_bukhari corpus was added post-hoc (not in the PREREG.md frozen 2026-04-26 morning). Hadith results are EXPLORATORY, not pre-registered."
+  },
+  "patch_1_per_corpus_noon_rate": {
+    "quran": {
+      "n_verse_finals": 6236,
+      "p_noon": 0.50096215522771,
+      "p_alif": 0.1521808851828095,
+      "dominant_letter": "ن",
+      "p_dominant": 0.50096215522771,
+      "is_arabic_script": true
+    },
+    "poetry_jahili": {
+      "n_verse_finals": 2561,
+      "p_noon": 0.10074189769621242,
+      "p_alif": 0.1850839515814135,
+      "dominant_letter": "ا",
+      "p_dominant": 0.1850839515814135,
+      "is_arabic_script": true
+    },
+    "poetry_islami": {
+      "n_verse_finals": 10295,
+      "p_noon": 0.10917921321029626,
+      "p_alif": 0.20621661000485672,
+      "dominant_letter": "ا",
+      "p_dominant": 0.20621661000485672,
+      "is_arabic_script": true
+    },
+    "poetry_abbasi": {
+      "n_verse_finals": 76499,
+      "p_noon": 0.10298173832337677,
+      "p_alif": 0.1756362828272265,
+      "dominant_letter": "ا",
+      "p_dominant": 0.1756362828272265,
+      "is_arabic_script": true
+    },
+    "ksucca": {
+      "n_verse_finals": 1967,
+      "p_noon": 0.062023385866802234,
+      "p_alif": 0.11845449923741738,
+      "dominant_letter": "ا",
+      "p_dominant": 0.11845449923741738,
+      "is_arabic_script": true
+    },
+    "arabic_bible": {
+      "n_verse_finals": 31083,
+      "p_noon": 0.07531448058424219,
+      "p_alif": 0.1468005018820577,
+      "dominant_letter": "ا",
+      "p_dominant": 0.1468005018820577,
+      "is_arabic_script": true
+    },
+    "hadith_bukhari": {
+      "n_verse_finals": 7271,
+      "p_noon": 0.07330490991610507,
+      "p_alif": 0.14743501581625637,
+      "dominant_letter": "ه",
+      "p_dominant": 0.16160088020904964,
+      "is_arabic_script": true
+    },
+    "hindawi": {
+      "n_verse_finals": 1793,
+      "p_noon": 0.09871723368655884,
+      "p_alif": 0.12325711098717233,
+      "dominant_letter": "ا",
+      "p_dominant": 0.12325711098717233,
+      "is_arabic_script": true
+    }
+  },
+  "patch_2_hebrew_greek_nt_n1": {
+    "hebrew_tanakh": {
+      "n_quran": 114,
+      "n_ctrl": 921,
+      "auc": 0.9820513553155418,
+      "w": 6.58823537790736,
+      "b": -2.294117645941396,
+      "median_el_quran": 0.7271518777002326,
+      "median_el_ctrl": 0.12121212121212122
+    },
+    "greek_nt": {
+      "n_quran": 114,
+      "n_ctrl": 260,
+      "auc": 0.9622300944669365,
+      "w": 5.565927588573312,
+      "b": -2.3605600925477237,
+      "median_el_quran": 0.7271518777002326,
+      "median_el_ctrl": 0.2
+    }
+  },
+  "patch_3_brown_synthesis": {
+    "p_vals_corrected": {
+      "EL_full114": 0.00162260604727446,
+      "R3_canonical_path": 2.331441054085851e-19,
+      "J1_mushaf_smoothness": 1e-06,
+      "Hurst_unit_words_corrected": 0.0002
+    },
+    "brown_orig_p_hurst_4e-4": {
+      "chi2_T": 141.93181706453282,
+      "c_scale": 6.4375,
+      "df_eff": 2.4854368932038833,
+      "p": 3.282832657274223e-05
+    },
+    "brown_correct_p_hurst_2e-4": {
+      "chi2_T": 143.31811142565272,
+      "c_scale": 6.4375,
+      "df_eff": 2.4854368932038833,
+      "p": 2.954138896761223e-05
+    },
+    "log10_p_orig": -4.483751254911444,
+    "log10_p_correct": -4.5295690890244655
+  },
+  "cross_tradition_disclosure": {
+    "R3_quran_vs_strongest": {
+      "quran_z": -8.92,
+      "rigveda_z": -18.93,
+      "hebrew_tanakh_z": -15.29,
+      "greek_nt_z": -12.06,
+      "quran_rank_among_oral_liturgical": "4th most extreme (Rigveda > Tanakh > NT > Quran)",
+      "note": "The Quran's R3 path-minimality z is real but is not the most extreme; multiple oral-liturgical canons exceed it."
+    },
+    "Hurst_quran_vs_others": {
+      "quran_p": 0.00019996,
+      "ties_with": [
+        "hebrew_tanakh",
+        "greek_nt",
+        "rigveda"
+      ],
+      "note": "All four corpora hit the same p≈2e-4 floor (1 hit in 10000 perms). Hurst H is not Quran-specific."
+    }
+  },
+  "runtime_seconds": 20.35
+}

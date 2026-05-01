@@ -1,0 +1,1002 @@
+{
+  "experiment": "expP9_v79_batch_diagnostics",
+  "schema_version": 1,
+  "prereg_document": "experiments/expP9_v79_batch_diagnostics/PREREG.md",
+  "prereg_hash": "b7978038e65ee5718141f9440a4b53d0dddf60e4e972e260e4be45c43ebecc0f",
+  "frozen_constants": {
+    "seed": 42,
+    "min_verses": 2,
+    "n_boot_auc": 500,
+    "n_boot_renyi2": 10000,
+    "n_sim_bag": 5000,
+    "corruption_levels": [
+      0.01,
+      0.05,
+      0.1,
+      0.2,
+      0.5
+    ],
+    "el_boundary": 0.314,
+    "arabic_ctrl": [
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "non_arabic": [
+      "hebrew_tanakh",
+      "greek_nt",
+      "iliad_greek",
+      "pali_dn",
+      "pali_mn",
+      "rigveda",
+      "avestan_yasna"
+    ],
+    "band_a": [
+      15,
+      100
+    ]
+  },
+  "payload_tag": "N4_boundary_distance",
+  "boundary": 0.314,
+  "n_above": 107,
+  "n_below": 7,
+  "ranking": [
+    {
+      "rank": 1,
+      "label": "Q:106",
+      "n_verses": 4,
+      "el": 0.0,
+      "delta_to_boundary": -0.314,
+      "above_boundary": false
+    },
+    {
+      "rank": 2,
+      "label": "Q:001",
+      "n_verses": 7,
+      "el": 0.16666666666666666,
+      "delta_to_boundary": -0.14733333333333334,
+      "above_boundary": false
+    },
+    {
+      "rank": 3,
+      "label": "Q:060",
+      "n_verses": 13,
+      "el": 0.16666666666666666,
+      "delta_to_boundary": -0.14733333333333334,
+      "above_boundary": false
+    },
+    {
+      "rank": 4,
+      "label": "Q:101",
+      "n_verses": 11,
+      "el": 0.2,
+      "delta_to_boundary": -0.11399999999999999,
+      "above_boundary": false
+    },
+    {
+      "rank": 5,
+      "label": "Q:109",
+      "n_verses": 6,
+      "el": 0.2,
+      "delta_to_boundary": -0.11399999999999999,
+      "above_boundary": false
+    },
+    {
+      "rank": 6,
+      "label": "Q:049",
+      "n_verses": 18,
+      "el": 0.23529411764705882,
+      "delta_to_boundary": -0.07870588235294118,
+      "above_boundary": false
+    },
+    {
+      "rank": 7,
+      "label": "Q:022",
+      "n_verses": 78,
+      "el": 0.2727272727272727,
+      "delta_to_boundary": -0.041272727272727294,
+      "above_boundary": false
+    },
+    {
+      "rank": 8,
+      "label": "Q:042",
+      "n_verses": 53,
+      "el": 0.34615384615384615,
+      "delta_to_boundary": 0.032153846153846144,
+      "above_boundary": true
+    },
+    {
+      "rank": 9,
+      "label": "Q:013",
+      "n_verses": 43,
+      "el": 0.35714285714285715,
+      "delta_to_boundary": 0.04314285714285715,
+      "above_boundary": true
+    },
+    {
+      "rank": 10,
+      "label": "Q:057",
+      "n_verses": 29,
+      "el": 0.35714285714285715,
+      "delta_to_boundary": 0.04314285714285715,
+      "above_boundary": true
+    },
+    {
+      "rank": 11,
+      "label": "Q:014",
+      "n_verses": 52,
+      "el": 0.39215686274509803,
+      "delta_to_boundary": 0.07815686274509803,
+      "above_boundary": true
+    },
+    {
+      "rank": 12,
+      "label": "Q:064",
+      "n_verses": 18,
+      "el": 0.4117647058823529,
+      "delta_to_boundary": 0.09776470588235292,
+      "above_boundary": true
+    },
+    {
+      "rank": 13,
+      "label": "Q:102",
+      "n_verses": 8,
+      "el": 0.42857142857142855,
+      "delta_to_boundary": 0.11457142857142855,
+      "above_boundary": true
+    },
+    {
+      "rank": 14,
+      "label": "Q:059",
+      "n_verses": 24,
+      "el": 0.43478260869565216,
+      "delta_to_boundary": 0.12078260869565216,
+      "above_boundary": true
+    },
+    {
+      "rank": 15,
+      "label": "Q:061",
+      "n_verses": 14,
+      "el": 0.46153846153846156,
+      "delta_to_boundary": 0.14753846153846156,
+      "above_boundary": true
+    },
+    {
+      "rank": 16,
+      "label": "Q:058",
+      "n_verses": 22,
+      "el": 0.47619047619047616,
+      "delta_to_boundary": 0.16219047619047616,
+      "above_boundary": true
+    },
+    {
+      "rank": 17,
+      "label": "Q:050",
+      "n_verses": 45,
+      "el": 0.4772727272727273,
+      "delta_to_boundary": 0.1632727272727273,
+      "above_boundary": true
+    },
+    {
+      "rank": 18,
+      "label": "Q:040",
+      "n_verses": 85,
+      "el": 0.4880952380952381,
+      "delta_to_boundary": 0.17409523809523808,
+      "above_boundary": true
+    },
+    {
+      "rank": 19,
+      "label": "Q:086",
+      "n_verses": 17,
+      "el": 0.5,
+      "delta_to_boundary": 0.186,
+      "above_boundary": true
+    },
+    {
+      "rank": 20,
+      "label": "Q:110",
+      "n_verses": 3,
+      "el": 0.5,
+      "delta_to_boundary": 0.186,
+      "above_boundary": true
+    },
+    {
+      "rank": 21,
+      "label": "Q:113",
+      "n_verses": 5,
+      "el": 0.5,
+      "delta_to_boundary": 0.186,
+      "above_boundary": true
+    },
+    {
+      "rank": 22,
+      "label": "Q:034",
+      "n_verses": 54,
+      "el": 0.5283018867924528,
+      "delta_to_boundary": 0.21430188679245282,
+      "above_boundary": true
+    },
+    {
+      "rank": 23,
+      "label": "Q:003",
+      "n_verses": 200,
+      "el": 0.5376884422110553,
+      "delta_to_boundary": 0.22368844221105527,
+      "above_boundary": true
+    },
+    {
+      "rank": 24,
+      "label": "Q:024",
+      "n_verses": 64,
+      "el": 0.5396825396825397,
+      "delta_to_boundary": 0.22568253968253965,
+      "above_boundary": true
+    },
+    {
+      "rank": 25,
+      "label": "Q:083",
+      "n_verses": 36,
+      "el": 0.5428571428571428,
+      "delta_to_boundary": 0.22885714285714281,
+      "above_boundary": true
+    },
+    {
+      "rank": 26,
+      "label": "Q:066",
+      "n_verses": 12,
+      "el": 0.5454545454545454,
+      "delta_to_boundary": 0.2314545454545454,
+      "above_boundary": true
+    },
+    {
+      "rank": 27,
+      "label": "Q:038",
+      "n_verses": 88,
+      "el": 0.5517241379310345,
+      "delta_to_boundary": 0.23772413793103447,
+      "above_boundary": true
+    },
+    {
+      "rank": 28,
+      "label": "Q:008",
+      "n_verses": 75,
+      "el": 0.5540540540540541,
+      "delta_to_boundary": 0.24005405405405406,
+      "above_boundary": true
+    },
+    {
+      "rank": 29,
+      "label": "Q:011",
+      "n_verses": 123,
+      "el": 0.5573770491803278,
+      "delta_to_boundary": 0.24337704918032782,
+      "above_boundary": true
+    },
+    {
+      "rank": 30,
+      "label": "Q:084",
+      "n_verses": 25,
+      "el": 0.5833333333333334,
+      "delta_to_boundary": 0.26933333333333337,
+      "above_boundary": true
+    },
+    {
+      "rank": 31,
+      "label": "Q:089",
+      "n_verses": 30,
+      "el": 0.5862068965517241,
+      "delta_to_boundary": 0.2722068965517241,
+      "above_boundary": true
+    },
+    {
+      "rank": 32,
+      "label": "Q:002",
+      "n_verses": 286,
+      "el": 0.6035087719298246,
+      "delta_to_boundary": 0.28950877192982455,
+      "above_boundary": true
+    },
+    {
+      "rank": 33,
+      "label": "Q:041",
+      "n_verses": 54,
+      "el": 0.6037735849056604,
+      "delta_to_boundary": 0.28977358490566035,
+      "above_boundary": true
+    },
+    {
+      "rank": 34,
+      "label": "Q:031",
+      "n_verses": 34,
+      "el": 0.6060606060606061,
+      "delta_to_boundary": 0.2920606060606061,
+      "above_boundary": true
+    },
+    {
+      "rank": 35,
+      "label": "Q:046",
+      "n_verses": 35,
+      "el": 0.6176470588235294,
+      "delta_to_boundary": 0.30364705882352944,
+      "above_boundary": true
+    },
+    {
+      "rank": 36,
+      "label": "Q:085",
+      "n_verses": 22,
+      "el": 0.6190476190476191,
+      "delta_to_boundary": 0.30504761904761907,
+      "above_boundary": true
+    },
+    {
+      "rank": 37,
+      "label": "Q:005",
+      "n_verses": 120,
+      "el": 0.6218487394957983,
+      "delta_to_boundary": 0.30784873949579833,
+      "above_boundary": true
+    },
+    {
+      "rank": 38,
+      "label": "Q:056",
+      "n_verses": 96,
+      "el": 0.631578947368421,
+      "delta_to_boundary": 0.317578947368421,
+      "above_boundary": true
+    },
+    {
+      "rank": 39,
+      "label": "Q:039",
+      "n_verses": 75,
+      "el": 0.6351351351351351,
+      "delta_to_boundary": 0.3211351351351351,
+      "above_boundary": true
+    },
+    {
+      "rank": 40,
+      "label": "Q:035",
+      "n_verses": 45,
+      "el": 0.6590909090909091,
+      "delta_to_boundary": 0.34509090909090906,
+      "above_boundary": true
+    },
+    {
+      "rank": 41,
+      "label": "Q:052",
+      "n_verses": 49,
+      "el": 0.6666666666666666,
+      "delta_to_boundary": 0.35266666666666663,
+      "above_boundary": true
+    },
+    {
+      "rank": 42,
+      "label": "Q:082",
+      "n_verses": 19,
+      "el": 0.6666666666666666,
+      "delta_to_boundary": 0.35266666666666663,
+      "above_boundary": true
+    },
+    {
+      "rank": 43,
+      "label": "Q:096",
+      "n_verses": 19,
+      "el": 0.6666666666666666,
+      "delta_to_boundary": 0.35266666666666663,
+      "above_boundary": true
+    },
+    {
+      "rank": 44,
+      "label": "Q:107",
+      "n_verses": 7,
+      "el": 0.6666666666666666,
+      "delta_to_boundary": 0.35266666666666663,
+      "above_boundary": true
+    },
+    {
+      "rank": 45,
+      "label": "Q:070",
+      "n_verses": 44,
+      "el": 0.6744186046511628,
+      "delta_to_boundary": 0.36041860465116277,
+      "above_boundary": true
+    },
+    {
+      "rank": 46,
+      "label": "Q:009",
+      "n_verses": 129,
+      "el": 0.6796875,
+      "delta_to_boundary": 0.3656875,
+      "above_boundary": true
+    },
+    {
+      "rank": 47,
+      "label": "Q:012",
+      "n_verses": 111,
+      "el": 0.7,
+      "delta_to_boundary": 0.38599999999999995,
+      "above_boundary": true
+    },
+    {
+      "rank": 48,
+      "label": "Q:062",
+      "n_verses": 11,
+      "el": 0.7,
+      "delta_to_boundary": 0.38599999999999995,
+      "above_boundary": true
+    },
+    {
+      "rank": 49,
+      "label": "Q:015",
+      "n_verses": 99,
+      "el": 0.7040816326530612,
+      "delta_to_boundary": 0.3900816326530612,
+      "above_boundary": true
+    },
+    {
+      "rank": 50,
+      "label": "Q:044",
+      "n_verses": 59,
+      "el": 0.7068965517241379,
+      "delta_to_boundary": 0.3928965517241379,
+      "above_boundary": true
+    },
+    {
+      "rank": 51,
+      "label": "Q:094",
+      "n_verses": 8,
+      "el": 0.7142857142857143,
+      "delta_to_boundary": 0.4002857142857143,
+      "above_boundary": true
+    },
+    {
+      "rank": 52,
+      "label": "Q:095",
+      "n_verses": 8,
+      "el": 0.7142857142857143,
+      "delta_to_boundary": 0.4002857142857143,
+      "above_boundary": true
+    },
+    {
+      "rank": 53,
+      "label": "Q:099",
+      "n_verses": 8,
+      "el": 0.7142857142857143,
+      "delta_to_boundary": 0.4002857142857143,
+      "above_boundary": true
+    },
+    {
+      "rank": 54,
+      "label": "Q:037",
+      "n_verses": 182,
+      "el": 0.7237569060773481,
+      "delta_to_boundary": 0.4097569060773481,
+      "above_boundary": true
+    },
+    {
+      "rank": 55,
+      "label": "Q:016",
+      "n_verses": 128,
+      "el": 0.7244094488188977,
+      "delta_to_boundary": 0.4104094488188977,
+      "above_boundary": true
+    },
+    {
+      "rank": 56,
+      "label": "Q:068",
+      "n_verses": 52,
+      "el": 0.7254901960784313,
+      "delta_to_boundary": 0.41149019607843135,
+      "above_boundary": true
+    },
+    {
+      "rank": 57,
+      "label": "Q:069",
+      "n_verses": 52,
+      "el": 0.7254901960784313,
+      "delta_to_boundary": 0.41149019607843135,
+      "above_boundary": true
+    },
+    {
+      "rank": 58,
+      "label": "Q:051",
+      "n_verses": 60,
+      "el": 0.7288135593220338,
+      "delta_to_boundary": 0.41481355932203384,
+      "above_boundary": true
+    },
+    {
+      "rank": 59,
+      "label": "Q:026",
+      "n_verses": 227,
+      "el": 0.7433628318584071,
+      "delta_to_boundary": 0.4293628318584071,
+      "above_boundary": true
+    },
+    {
+      "rank": 60,
+      "label": "Q:081",
+      "n_verses": 29,
+      "el": 0.75,
+      "delta_to_boundary": 0.436,
+      "above_boundary": true
+    },
+    {
+      "rank": 61,
+      "label": "Q:104",
+      "n_verses": 9,
+      "el": 0.75,
+      "delta_to_boundary": 0.436,
+      "above_boundary": true
+    },
+    {
+      "rank": 62,
+      "label": "Q:111",
+      "n_verses": 5,
+      "el": 0.75,
+      "delta_to_boundary": 0.436,
+      "above_boundary": true
+    },
+    {
+      "rank": 63,
+      "label": "Q:029",
+      "n_verses": 69,
+      "el": 0.7647058823529411,
+      "delta_to_boundary": 0.4507058823529411,
+      "above_boundary": true
+    },
+    {
+      "rank": 64,
+      "label": "Q:075",
+      "n_verses": 40,
+      "el": 0.7692307692307693,
+      "delta_to_boundary": 0.45523076923076927,
+      "above_boundary": true
+    },
+    {
+      "rank": 65,
+      "label": "Q:077",
+      "n_verses": 50,
+      "el": 0.7755102040816326,
+      "delta_to_boundary": 0.4615102040816326,
+      "above_boundary": true
+    },
+    {
+      "rank": 66,
+      "label": "Q:006",
+      "n_verses": 165,
+      "el": 0.7804878048780488,
+      "delta_to_boundary": 0.4664878048780488,
+      "above_boundary": true
+    },
+    {
+      "rank": 67,
+      "label": "Q:036",
+      "n_verses": 83,
+      "el": 0.7804878048780488,
+      "delta_to_boundary": 0.4664878048780488,
+      "above_boundary": true
+    },
+    {
+      "rank": 68,
+      "label": "Q:080",
+      "n_verses": 42,
+      "el": 0.7804878048780488,
+      "delta_to_boundary": 0.4664878048780488,
+      "above_boundary": true
+    },
+    {
+      "rank": 69,
+      "label": "Q:043",
+      "n_verses": 89,
+      "el": 0.7840909090909091,
+      "delta_to_boundary": 0.47009090909090906,
+      "above_boundary": true
+    },
+    {
+      "rank": 70,
+      "label": "Q:090",
+      "n_verses": 20,
+      "el": 0.7894736842105263,
+      "delta_to_boundary": 0.4754736842105263,
+      "above_boundary": true
+    },
+    {
+      "rank": 71,
+      "label": "Q:074",
+      "n_verses": 56,
+      "el": 0.8,
+      "delta_to_boundary": 0.48600000000000004,
+      "above_boundary": true
+    },
+    {
+      "rank": 72,
+      "label": "Q:088",
+      "n_verses": 26,
+      "el": 0.8,
+      "delta_to_boundary": 0.48600000000000004,
+      "above_boundary": true
+    },
+    {
+      "rank": 73,
+      "label": "Q:093",
+      "n_verses": 11,
+      "el": 0.8,
+      "delta_to_boundary": 0.48600000000000004,
+      "above_boundary": true
+    },
+    {
+      "rank": 74,
+      "label": "Q:100",
+      "n_verses": 11,
+      "el": 0.8,
+      "delta_to_boundary": 0.48600000000000004,
+      "above_boundary": true
+    },
+    {
+      "rank": 75,
+      "label": "Q:065",
+      "n_verses": 12,
+      "el": 0.8181818181818182,
+      "delta_to_boundary": 0.5041818181818183,
+      "above_boundary": true
+    },
+    {
+      "rank": 76,
+      "label": "Q:020",
+      "n_verses": 135,
+      "el": 0.8208955223880597,
+      "delta_to_boundary": 0.5068955223880598,
+      "above_boundary": true
+    },
+    {
+      "rank": 77,
+      "label": "Q:079",
+      "n_verses": 46,
+      "el": 0.8222222222222222,
+      "delta_to_boundary": 0.5082222222222221,
+      "above_boundary": true
+    },
+    {
+      "rank": 78,
+      "label": "Q:027",
+      "n_verses": 93,
+      "el": 0.8260869565217391,
+      "delta_to_boundary": 0.5120869565217392,
+      "above_boundary": true
+    },
+    {
+      "rank": 79,
+      "label": "Q:032",
+      "n_verses": 30,
+      "el": 0.8275862068965517,
+      "delta_to_boundary": 0.5135862068965518,
+      "above_boundary": true
+    },
+    {
+      "rank": 80,
+      "label": "Q:055",
+      "n_verses": 78,
+      "el": 0.8311688311688312,
+      "delta_to_boundary": 0.5171688311688312,
+      "above_boundary": true
+    },
+    {
+      "rank": 81,
+      "label": "Q:010",
+      "n_verses": 109,
+      "el": 0.8333333333333334,
+      "delta_to_boundary": 0.5193333333333334,
+      "above_boundary": true
+    },
+    {
+      "rank": 82,
+      "label": "Q:045",
+      "n_verses": 37,
+      "el": 0.8333333333333334,
+      "delta_to_boundary": 0.5193333333333334,
+      "above_boundary": true
+    },
+    {
+      "rank": 83,
+      "label": "Q:030",
+      "n_verses": 60,
+      "el": 0.847457627118644,
+      "delta_to_boundary": 0.533457627118644,
+      "above_boundary": true
+    },
+    {
+      "rank": 84,
+      "label": "Q:098",
+      "n_verses": 8,
+      "el": 0.8571428571428571,
+      "delta_to_boundary": 0.5431428571428571,
+      "above_boundary": true
+    },
+    {
+      "rank": 85,
+      "label": "Q:067",
+      "n_verses": 30,
+      "el": 0.8620689655172413,
+      "delta_to_boundary": 0.5480689655172413,
+      "above_boundary": true
+    },
+    {
+      "rank": 86,
+      "label": "Q:007",
+      "n_verses": 206,
+      "el": 0.8780487804878049,
+      "delta_to_boundary": 0.5640487804878049,
+      "above_boundary": true
+    },
+    {
+      "rank": 87,
+      "label": "Q:028",
+      "n_verses": 88,
+      "el": 0.8850574712643678,
+      "delta_to_boundary": 0.5710574712643679,
+      "above_boundary": true
+    },
+    {
+      "rank": 88,
+      "label": "Q:053",
+      "n_verses": 62,
+      "el": 0.8852459016393442,
+      "delta_to_boundary": 0.5712459016393443,
+      "above_boundary": true
+    },
+    {
+      "rank": 89,
+      "label": "Q:087",
+      "n_verses": 19,
+      "el": 0.8888888888888888,
+      "delta_to_boundary": 0.5748888888888888,
+      "above_boundary": true
+    },
+    {
+      "rank": 90,
+      "label": "Q:021",
+      "n_verses": 112,
+      "el": 0.8918918918918919,
+      "delta_to_boundary": 0.5778918918918918,
+      "above_boundary": true
+    },
+    {
+      "rank": 91,
+      "label": "Q:047",
+      "n_verses": 38,
+      "el": 0.8918918918918919,
+      "delta_to_boundary": 0.5778918918918918,
+      "above_boundary": true
+    },
+    {
+      "rank": 92,
+      "label": "Q:073",
+      "n_verses": 20,
+      "el": 0.8947368421052632,
+      "delta_to_boundary": 0.5807368421052632,
+      "above_boundary": true
+    },
+    {
+      "rank": 93,
+      "label": "Q:078",
+      "n_verses": 40,
+      "el": 0.9230769230769231,
+      "delta_to_boundary": 0.6090769230769231,
+      "above_boundary": true
+    },
+    {
+      "rank": 94,
+      "label": "Q:071",
+      "n_verses": 28,
+      "el": 0.9259259259259259,
+      "delta_to_boundary": 0.611925925925926,
+      "above_boundary": true
+    },
+    {
+      "rank": 95,
+      "label": "Q:023",
+      "n_verses": 118,
+      "el": 0.9316239316239316,
+      "delta_to_boundary": 0.6176239316239316,
+      "above_boundary": true
+    },
+    {
+      "rank": 96,
+      "label": "Q:019",
+      "n_verses": 98,
+      "el": 0.9484536082474226,
+      "delta_to_boundary": 0.6344536082474226,
+      "above_boundary": true
+    },
+    {
+      "rank": 97,
+      "label": "Q:004",
+      "n_verses": 176,
+      "el": 0.9542857142857143,
+      "delta_to_boundary": 0.6402857142857143,
+      "above_boundary": true
+    },
+    {
+      "rank": 98,
+      "label": "Q:033",
+      "n_verses": 73,
+      "el": 0.9722222222222222,
+      "delta_to_boundary": 0.6582222222222223,
+      "above_boundary": true
+    },
+    {
+      "rank": 99,
+      "label": "Q:025",
+      "n_verses": 77,
+      "el": 0.9736842105263158,
+      "delta_to_boundary": 0.6596842105263159,
+      "above_boundary": true
+    },
+    {
+      "rank": 100,
+      "label": "Q:018",
+      "n_verses": 110,
+      "el": 0.981651376146789,
+      "delta_to_boundary": 0.667651376146789,
+      "above_boundary": true
+    },
+    {
+      "rank": 101,
+      "label": "Q:017",
+      "n_verses": 111,
+      "el": 0.990909090909091,
+      "delta_to_boundary": 0.6769090909090909,
+      "above_boundary": true
+    },
+    {
+      "rank": 102,
+      "label": "Q:048",
+      "n_verses": 29,
+      "el": 1.0,
+      "delta_to_boundary": 0.6859999999999999,
+      "above_boundary": true
+    },
+    {
+      "rank": 103,
+      "label": "Q:054",
+      "n_verses": 55,
+      "el": 1.0,
+      "delta_to_boundary": 0.6859999999999999,
+      "above_boundary": true
+    },
+    {
+      "rank": 104,
+      "label": "Q:063",
+      "n_verses": 11,
+      "el": 1.0,
+      "delta_to_boundary": 0.6859999999999999,
+      "above_boundary": true
+    },
+    {
+      "rank": 105,
+      "label": "Q:072",
+      "n_verses": 28,
+      "el": 1.0,
+      "delta_to_boundary": 0.6859999999999999,
+      "above_boundary": true
+    },
+    {
+      "rank": 106,
+      "label": "Q:076",
+      "n_verses": 31,
+      "el": 1.0,
+      "delta_to_boundary": 0.6859999999999999,
+      "above_boundary": true
+    },
+    {
+      "rank": 107,
+      "label": "Q:091",
+      "n_verses": 15,
+      "el": 1.0,
+      "delta_to_boundary": 0.6859999999999999,
+      "above_boundary": true
+    },
+    {
+      "rank": 108,
+      "label": "Q:092",
+      "n_verses": 21,
+      "el": 1.0,
+      "delta_to_boundary": 0.6859999999999999,
+      "above_boundary": true
+    },
+    {
+      "rank": 109,
+      "label": "Q:097",
+      "n_verses": 5,
+      "el": 1.0,
+      "delta_to_boundary": 0.6859999999999999,
+      "above_boundary": true
+    },
+    {
+      "rank": 110,
+      "label": "Q:103",
+      "n_verses": 3,
+      "el": 1.0,
+      "delta_to_boundary": 0.6859999999999999,
+      "above_boundary": true
+    },
+    {
+      "rank": 111,
+      "label": "Q:105",
+      "n_verses": 5,
+      "el": 1.0,
+      "delta_to_boundary": 0.6859999999999999,
+      "above_boundary": true
+    },
+    {
+      "rank": 112,
+      "label": "Q:108",
+      "n_verses": 3,
+      "el": 1.0,
+      "delta_to_boundary": 0.6859999999999999,
+      "above_boundary": true
+    },
+    {
+      "rank": 113,
+      "label": "Q:112",
+      "n_verses": 4,
+      "el": 1.0,
+      "delta_to_boundary": 0.6859999999999999,
+      "above_boundary": true
+    },
+    {
+      "rank": 114,
+      "label": "Q:114",
+      "n_verses": 6,
+      "el": 1.0,
+      "delta_to_boundary": 0.6859999999999999,
+      "above_boundary": true
+    }
+  ],
+  "closest_to_boundary_top5": [
+    {
+      "rank": 8,
+      "label": "Q:042",
+      "n_verses": 53,
+      "el": 0.34615384615384615,
+      "delta_to_boundary": 0.032153846153846144,
+      "above_boundary": true
+    },
+    {
+      "rank": 7,
+      "label": "Q:022",
+      "n_verses": 78,
+      "el": 0.2727272727272727,
+      "delta_to_boundary": -0.041272727272727294,
+      "above_boundary": false
+    },
+    {
+      "rank": 9,
+      "label": "Q:013",
+      "n_verses": 43,
+      "el": 0.35714285714285715,
+      "delta_to_boundary": 0.04314285714285715,
+      "above_boundary": true
+    },
+    {
+      "rank": 10,
+      "label": "Q:057",
+      "n_verses": 29,
+      "el": 0.35714285714285715,
+      "delta_to_boundary": 0.04314285714285715,
+      "above_boundary": true
+    },
+    {
+      "rank": 11,
+      "label": "Q:014",
+      "n_verses": 52,
+      "el": 0.39215686274509803,
+      "delta_to_boundary": 0.07815686274509803,
+      "above_boundary": true
+    }
+  ]
+}

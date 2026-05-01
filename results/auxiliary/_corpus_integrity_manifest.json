@@ -1,0 +1,54 @@
+{
+  "quran": {
+    "path": "data/corpora/ar/quran_bare.txt",
+    "size": 781176,
+    "sha256": "228df2a717671aeb9d2ff573002bd28d6b3f973f4bc7153554e3a81663d67610",
+    "provenance": "Tanzil.net 'simple-clean' (uthmani-skeleton); CC-BY-3.0; 6,236 verses."
+  },
+  "poetry": {
+    "path": "data/corpora/ar/poetry_raw.csv",
+    "size": 20078635,
+    "sha256": "0bb5d746934bf09777f3d80232e78eb8269f1927c77e2af8f3c1610eef6e0253",
+    "provenance": "Arabic Poetry Comprehensive (Hugging Face arbml/Ashaar); CC-BY-4.0."
+  },
+  "hindawi": {
+    "path": "data/corpora/ar/hindawi.txt",
+    "size": 414837,
+    "sha256": "2b7fbfe9b4be32dfcff65e50dd9e1eb0abe032512cc72b40a1b18d4ba854f751",
+    "provenance": "Hindawi Foundation modern Arabic prose (publicly licensed)."
+  },
+  "ksucca": {
+    "path": "data/corpora/ar/ksucca.txt",
+    "size": 1260611,
+    "sha256": "b7c92a8bf15bb3bb4f97a3de2ae0f4f1b736ffa28ce073a0e721746de54ed858",
+    "provenance": "Classical Arabic Ksucca prose (KSU Arabic corpus)."
+  },
+  "arabic_bible": {
+    "path": "data/corpora/ar/arabic_bible.xlsx",
+    "size": 1999406,
+    "sha256": "5b57b622ca84920b73bf77611ce53df0172f9825defc3887e23959d56d5f2156",
+    "provenance": "Smith Van Dyke 1865 Arabic Bible; PUBLIC DOMAIN."
+  },
+  "hebrew_tanakh": {
+    "path": "data/corpora/he/tanakh_wlc.txt",
+    "size": 5764202,
+    "sha256": "f317b359f562fa919b983865faceac8be52252f77c011a8549588150135d8d99",
+    "provenance": "Westminster Leningrad Codex (WLC); PUBLIC DOMAIN; 929 chapters."
+  },
+  "greek_nt": {
+    "path": "data/corpora/el/opengnt_v3_3.csv",
+    "size": 46440555,
+    "sha256": "d2853da46d1f3942c5155a7017b4f8c90906c7ba34c2373f5f4e1e39d7fea721",
+    "provenance": "OpenGNT v3.3 (NA28 + Robinson Pierpont 2020); CC-BY-SA-4.0; 7,957 verses."
+  },
+  "pali": {
+    "n_files": 187,
+    "aggregate_sha256": "70fd2b21426df76bb2e844a8f4b88f46c125b81be97dc840a4940051755962f6",
+    "provenance": "SuttaCentral root-pli-ms (Mahasangiti, Bilara); CC0-1.0; PUBLIC DOMAIN"
+  },
+  "avestan": {
+    "n_files": 12,
+    "aggregate_sha256": "cb0aadc4d97e876e2e7d28208c114929803e37e24600a65ded0c122786e60ead",
+    "provenance": "Avesta.org Geldner-1896 edition; PUBLIC DOMAIN"
+  }
+}

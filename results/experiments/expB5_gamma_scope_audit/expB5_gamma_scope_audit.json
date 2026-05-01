@@ -1,0 +1,57 @@
+{
+  "experiment": "expB5_gamma_scope_audit",
+  "task_id": "B5",
+  "title": "Scope reclassification of exp55: raw Cohen d (LENGTH_DRIVEN) vs length-controlled gamma residual (LENGTH_CONTROLLED_PASS) — the same experiment yields two scope-distinct verdicts on two different statistics.",
+  "source": "results\\experiments\\exp55_gamma_length_stratified\\exp55_gamma_length_stratified.json",
+  "raw_d": {
+    "scope": "Per-decile RAW Cohen d for the Quran-vs-control gzip-NCD contrast, sliced by 10 letter-count deciles.",
+    "value": 0.534019,
+    "is_length_controlled": false,
+    "decile_gate": {
+      "n_deciles_above_0p3": 5,
+      "required_for_LENGTH_INDEPENDENT": 7,
+      "passes": false
+    },
+    "sign_test_gate": {
+      "n_positive": 8,
+      "n_negative": 2,
+      "p_two_sided": 0.109375,
+      "alpha_strict": 0.05,
+      "passes": false
+    },
+    "verdict": "LENGTH_DRIVEN",
+    "applies_to_gamma": false
+  },
+  "gamma": {
+    "scope": "Length-controlled REGRESSION RESIDUAL: the Quran-indicator coefficient in `log NCD ~ alpha + beta * log(n) + gamma * I(Q)`. By construction, gamma absorbs ONLY the residual difference after the log(n) length term. It is the project's authoritative length-controlled scalar.",
+    "value": 0.07161122826827443,
+    "ci_95": [
+      0.06571475381757211,
+      0.07750770271897675
+    ],
+    "p_value": 0.0,
+    "p_threshold": 0.001,
+    "is_length_controlled": true,
+    "passes_threshold": true,
+    "verdict": "LENGTH_CONTROLLED_PASS",
+    "covered_by_LENGTH_DRIVEN_label": false
+  },
+  "scope_summary": "exp55 yields TWO scope-distinct verdicts on the SAME dataset: (a) raw d is LENGTH_DRIVEN at the per-decile level (only 5/10 deciles pass d > 0.30; sign-test p = 0.109 > 0.05), while (b) the length-controlled residual gamma = +0.07161 (95 % CI [0.0657, 0.0775], p ≈ 0) PASSES its strict gate. The 'LENGTH_DRIVEN' label applies ONLY to (a). Any cross-reference treating gamma as 'retracted by exp55' or 'length-driven' is mis-citing the scope. Cite gamma as the authoritative length-controlled main result, exactly as RANKED_FINDINGS.md:103 already instructs.",
+  "b5_verdict": "B5_CONFIRMED_GAMMA_IS_LENGTH_CONTROLLED_NOT_LENGTH_DRIVEN",
+  "citation_hygiene": {
+    "correct_citation_template_per_RANKED_FINDINGS_md_103": "exp55 (v7.6): formal pre-registered sign test + d > 0.30 count yields verdict LENGTH_DRIVEN (5/10 deciles above 0.30, sign-test p = 0.109 > 0.10); gamma remains strongly positive (p ≈ 0). Cite gamma = +0.0716 as the authoritative length-controlled scalar, not the raw d = +0.534.",
+    "incorrect_phrasings_to_avoid": [
+      "'exp55 retracts gamma'",
+      "'gamma is length-driven'",
+      "'gamma_gzip = +0.0716 was retracted by length stratification'",
+      "'exp55 LENGTH_DRIVEN verdict means the gzip-NCD effect is an artifact of length'  (true for raw d; FALSE for gamma)"
+    ],
+    "separate_universality_question_S10": "A separate retraction-adjacent claim is the cross-COMPRESSOR universality of gamma (S10 in OPPORTUNITY_TABLE_DETAIL): gamma_gzip = +0.0716 ; gamma_brotli = +0.0871 ; gamma_zstd = -0.0294 ; gamma_bzip2 = -0.0483. This is about NON-UNIVERSALITY of gamma's sign across compressors, not about exp55's length stratification. Do not conflate the two."
+  },
+  "recommendation": [
+    "1. Treat exp55 as the canonical reference for BOTH (a) raw-d LENGTH_DRIVEN verdict AND (b) gamma LENGTH_CONTROLLED_PASS. Do not let 'LENGTH_DRIVEN' propagate to gamma when summarising.",
+    "2. RANKED_FINDINGS.md row 4 is correctly worded ('PAPER-GRADE ; gamma=+0.0716, p≈0'). Use that wording elsewhere.",
+    "3. Distinguish from the S10 cross-compressor non-universality issue: that is about gamma_gzip vs gamma_zstd, NOT about length-stratification of gamma_gzip itself.",
+    "4. The OPPORTUNITY_TABLE_DETAIL.md B5 entry can now be marked DONE with this artifact as the citable structured proof."
+  ]
+}

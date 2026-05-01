@@ -1,0 +1,71 @@
+{
+  "experiment": "exp95f_short_envelope_replication",
+  "schema_version": 1,
+  "hypothesis_id": "H39",
+  "prereg_document": "experiments/exp95f_short_envelope_replication/PREREG.md",
+  "prereg_hash": "83a7b25ac69e703604a82be5c6f7c1d597ccd953f07df7f624ccc1c55d972a14",
+  "parent_receipt": {
+    "path": "results/experiments/exp95e_full_114_consensus_universal/short/exp95e_full_114_consensus_universal.json",
+    "sha256": "65868a8d15cc476a76d2d12bb33fa2a3661834dad4134766afe60ef254948eb9"
+  },
+  "envelope_csv": {
+    "path": "results/experiments/exp95e_full_114_consensus_universal/short/envelope_table.csv",
+    "sha256": "51f265e8f9bc49f421753d0724111145b6f28beb7533adfec7c1e16f9a2a2c84"
+  },
+  "frozen_thresholds": {
+    "phase_lower_total_max": 188,
+    "phase_upper_total_min": 873,
+    "phase_lower_k2_min": 0.9,
+    "phase_upper_k2_max": 0.1,
+    "corr_threshold_fail": -0.7,
+    "corr_threshold_full": -0.85
+  },
+  "audit_report": {
+    "ok": true,
+    "tau_drift_sentinel": {
+      "ok": true,
+      "max_drift": 0.0,
+      "tol": 1e-12
+    },
+    "prereg_hash_sentinel": {
+      "ok": true,
+      "actual": "ec14a1f6dcb81c3a54b0daeafa2b10f8707457ee4305de07d58ee7ede568e9a7",
+      "expected": "ec14a1f6dcb81c3a54b0daeafa2b10f8707457ee4305de07d58ee7ede568e9a7"
+    },
+    "q100_regression_h39": {
+      "ok": true,
+      "K2_actual": 1.0,
+      "K2_min": 0.99,
+      "K2_ok": true,
+      "gzip_solo_actual": 0.9948914431673053,
+      "gzip_solo_min": 0.98,
+      "gzip_solo_ok": true
+    },
+    "variant_count_sanity": {
+      "ok": true,
+      "n_variants_total": 355428,
+      "min": 300000,
+      "max": 500000
+    }
+  },
+  "verdict_block": {
+    "verdict": "FAIL_envelope_phase_boundary",
+    "branch": 5,
+    "n_lower_band": 21,
+    "n_upper_band": 72,
+    "lower_band_violations": [],
+    "upper_band_violations": [
+      {
+        "surah": "Q:055",
+        "n_total_letters": 1666,
+        "recall_K2": 0.2671957671957672,
+        "required_max": 0.1
+      }
+    ],
+    "pearson": -0.8519280957936343,
+    "spearman": -0.8563891586283077
+  },
+  "verdict": "FAIL_envelope_phase_boundary",
+  "f55_promotion": false,
+  "completed_at_utc": "2026-04-28T15:01:35.049187+00:00"
+}

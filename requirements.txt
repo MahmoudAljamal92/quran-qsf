@@ -1,0 +1,49 @@
+# QSF Project — Python Dependencies
+# Install: pip install -r requirements.txt
+# Tested with Python 3.11.9 on Windows 10/11
+# All CPU scripts run with these dependencies only.
+
+# === CPU SCRIPTS (all local analysis) ===
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+scikit-learn>=1.2.0
+matplotlib>=3.7.0
+
+# DFA Hurst exponent (used by legacy pipeline scripts)
+nolds>=0.5.2
+
+# Graph-topology experiments (exp48 verse-graph port of DEEPSCAN Gem #4)
+networkx>=3.0
+
+# === TESTED VERSIONS (for exact reproducibility) ===
+# numpy==2.4.4
+# pandas==3.0.1
+# scipy==1.16.2
+# scikit-learn==1.8.0
+
+# === STREAMLIT CLOUD WEB APP (app/ring_of_truth.py) ===
+streamlit>=1.30
+
+# === GPU SCRIPTS (Colab only — uncomment if needed) ===
+# sentence-transformers>=2.2.0
+# torch>=2.0.0
+# transformers>=4.30.0
+
+# === FULL-PIPELINE ONLY (not needed for Streamlit app deployment) ===
+# Arabic morphological analysis (REQUIRED for Φ_M / T / H_cond reproducibility
+# of the research pipeline; NOT needed for the Ring-of-Truth Streamlit app).
+# Exact version 1.5.7 is pinned because src/cache/cameltools_root_cache.pkl.gz
+# (SHA-256 82b24d12…) was built against this analyser. Different analyser
+# versions may return different root candidates, which would drift the
+# H_cond component of features_5d and hence Φ_M. To bypass CamelTools, a
+# pre-warmed root cache at src/cache/cameltools_root_cache.pkl.gz must be
+# present; the project's cache covers all Band-A Arabic corpora.
+#
+# For local research reproducibility, uncomment the next line:
+# camel-tools==1.5.7
+#
+# For Streamlit Cloud deploy of the Ring-of-Truth web app, keep it commented
+# (camel-tools needs Java + heavy native libs and will time out on free tier).
+# If you need it locally, run separately: pip install camel-tools==1.5.7
+

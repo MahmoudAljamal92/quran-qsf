@@ -1,0 +1,268 @@
+{
+  "experiment": "exp158_F_universal_chinese_extension",
+  "hypothesis_id": "H103_F_Universal_LogographicExtension_Daodejing",
+  "hypothesis": "F-Universal Shannon-Renyi-infinity gap H_1 - H_inf in [0.5, 1.5] bits for at least one of three plausible 'verse-final unit' granularities (chapter_final, line_final, phrase_final) of the Daodejing (Wang Bi recension, 81 chapters, classical Chinese).",
+  "verdict": "DIRECTIONAL_F_UNIVERSAL_LARGER_GAP_FOR_LOGOGRAPHIC",
+  "verdict_reason": "0/3 granularities have F-Universal gap in [0.5, 1.5]; 1/3 in widened [0.5, 2.5]. chapter_final gap=1.5969 (in_band=False); line_final gap=2.6588 (in_band=False); phrase_final gap=3.9856 (in_band=False). V3.21 11-corpus pool mean gap = 0.9029 (CV = 0.1812). ",
+  "completed_at_utc": "2026-04-30T18:11:10Z",
+  "prereg_document": "experiments/exp158_F_universal_chinese_extension/PREREG.md",
+  "prereg_hash": "5d593c51cb8ad54fd187e489d821ec3e65f25e5f21dcae0f211e2d04529e6251",
+  "corpus_path": "data/corpora/zh/daodejing_wangbi.txt",
+  "corpus_sha256_locked_at_run_start": "a05c5cb00650263e61d107dbeb7f8b887752bcc82fd42fd286b928d2a4d527bd",
+  "input_exp156_sha256": "ff6f95611b1de5c81ed31f347264d3ecf0c8fde2176c4f6579e4474adadaaef6",
+  "frozen_constants": {
+    "EXPECTED_N_CHAPTERS": 81,
+    "GRANULARITIES": [
+      "chapter_final",
+      "line_final",
+      "phrase_final"
+    ],
+    "GAP_BAND": [
+      0.5,
+      1.5
+    ],
+    "GAP_WIDENED_BAND": [
+      0.5,
+      2.5
+    ],
+    "V321_GAP_MEAN": 0.943,
+    "V321_GAP_CV": 0.12
+  },
+  "v321_pool_reference": {
+    "n_corpora": 11,
+    "gap_per_corpus": {
+      "quran": 0.5090892053999061,
+      "poetry_jahili": 0.8602871772204765,
+      "poetry_islami": 0.8813669534832629,
+      "poetry_abbasi": 0.9442742453302184,
+      "hindawi": 1.0341178989245612,
+      "ksucca": 1.071482947221369,
+      "arabic_bible": 1.0438267161383479,
+      "hebrew_tanakh": 1.002464010460359,
+      "greek_nt": 0.8487086994654909,
+      "pali": 1.0335081057153974,
+      "avestan_yasna": 0.7030407100708653
+    },
+    "gap_mean": 0.9029242426754777,
+    "gap_std": 0.16360397781022792,
+    "gap_cv_observed": 0.18119347125451948
+  },
+  "results": {
+    "n_chapters_parsed": 81,
+    "chapter_count_ok": true,
+    "monotonicity_ok": true,
+    "granularities": {
+      "chapter_final": {
+        "n": 81,
+        "n_distinct": 57,
+        "p_max": 0.06172839506172839,
+        "p_max_char": "此",
+        "H_1": 5.614799929388315,
+        "H_inf": 4.017921907997263,
+        "gap": 1.5968780213910527,
+        "log2_n": 6.339850002884624,
+        "log2_n_distinct": 5.832890014164741,
+        "top_5_freqs": [
+          [
+            "此",
+            5,
+            0.06172839506172839
+          ],
+          [
+            "之",
+            5,
+            0.06172839506172839
+          ],
+          [
+            "矣",
+            4,
+            0.04938271604938271
+          ],
+          [
+            "下",
+            3,
+            0.037037037037037035
+          ],
+          [
+            "成",
+            3,
+            0.037037037037037035
+          ]
+        ]
+      },
+      "line_final": {
+        "n": 234,
+        "n_distinct": 144,
+        "p_max": 0.05555555555555555,
+        "p_max_char": "之",
+        "H_1": 6.828720968687584,
+        "H_inf": 4.169925001442312,
+        "gap": 2.658795967245272,
+        "log2_n": 7.870364719583405,
+        "log2_n_distinct": 7.169925001442312,
+        "top_5_freqs": [
+          [
+            "之",
+            13,
+            0.05555555555555555
+          ],
+          [
+            "人",
+            7,
+            0.029914529914529916
+          ],
+          [
+            "為",
+            5,
+            0.021367521367521368
+          ],
+          [
+            "此",
+            5,
+            0.021367521367521368
+          ],
+          [
+            "下",
+            5,
+            0.021367521367521368
+          ]
+        ]
+      },
+      "phrase_final": {
+        "n": 1183,
+        "n_distinct": 446,
+        "p_max": 0.06170752324598478,
+        "p_max_char": "之",
+        "H_1": 8.00399975458393,
+        "H_inf": 4.018409799459771,
+        "gap": 3.9855899551241585,
+        "log2_n": 10.208234358339789,
+        "log2_n_distinct": 8.800899899920305,
+        "top_5_freqs": [
+          [
+            "之",
+            73,
+            0.06170752324598478
+          ],
+          [
+            "者",
+            36,
+            0.030431107354184278
+          ],
+          [
+            "道",
+            28,
+            0.023668639053254437
+          ],
+          [
+            "下",
+            21,
+            0.01775147928994083
+          ],
+          [
+            "有",
+            14,
+            0.011834319526627219
+          ]
+        ]
+      }
+    },
+    "criteria": {
+      "C1_per_granularity_in_band": {
+        "verdict": "FAIL",
+        "n_pass_in_narrow_band": 0,
+        "per_granularity": {
+          "chapter_final": false,
+          "line_final": false,
+          "phrase_final": false
+        },
+        "narrow_band": [
+          0.5,
+          1.5
+        ]
+      },
+      "C2_per_granularity_widened_band": {
+        "verdict": "PASS",
+        "n_pass_in_widened_band": 1,
+        "per_granularity": {
+          "chapter_final": true,
+          "line_final": false,
+          "phrase_final": false
+        },
+        "widened_band": [
+          0.5,
+          2.5
+        ]
+      },
+      "C3_v321_byte_equivalence": {
+        "verdict": "PASS",
+        "exp156_sha256_match": true
+      },
+      "C4_chapter_count_sanity": {
+        "verdict": "PASS",
+        "expected": 81,
+        "observed": 81
+      },
+      "C5_granularity_monotonicity": {
+        "verdict": "PASS",
+        "n_chapter": 81,
+        "n_line": 234,
+        "n_phrase": 1183,
+        "monotone_strict_lt": true
+      },
+      "P2_chapter_smallest_gap": {
+        "verdict": "PASS",
+        "gaps": {
+          "chapter_final": 1.5968780213910527,
+          "line_final": 2.658795967245272,
+          "phrase_final": 3.9855899551241585
+        }
+      },
+      "P3_phrase_largest_gap": {
+        "verdict": "PASS",
+        "gaps": {
+          "chapter_final": 1.5968780213910527,
+          "line_final": 2.658795967245272,
+          "phrase_final": 3.9855899551241585
+        }
+      },
+      "P4_H_inf_chapter_at_least_3_5": {
+        "verdict": "PASS",
+        "observed": 4.017921907997263,
+        "lower": 3.5
+      },
+      "P5_H_1_chapter_at_most_log2_81": {
+        "verdict": "PASS",
+        "observed": 5.614799929388315,
+        "upper": 6.339850002884624
+      }
+    },
+    "comparison_to_v321_pool": {
+      "v321_gap_mean": 0.9029242426754777,
+      "v321_gap_cv": 0.18119347125451948,
+      "v321_gap_min": 0.5090892053999061,
+      "v321_gap_max": 1.071482947221369,
+      "delta_chapter_vs_pool_mean": 0.6939537787155751,
+      "delta_line_vs_pool_mean": 1.7558717245697943,
+      "delta_phrase_vs_pool_mean": 3.082665712448681
+    }
+  },
+  "audit_report": {
+    "ok": true,
+    "checks": {
+      "prereg_hash_match": true,
+      "corpus_sha256_locked": "a05c5cb00650263e61d107dbeb7f8b887752bcc82fd42fd286b928d2a4d527bd",
+      "exp156_input_sha256_locked": "ff6f95611b1de5c81ed31f347264d3ecf0c8fde2176c4f6579e4474adadaaef6",
+      "chapter_splitter_pattern": "第[一二三四五六七八九十百零〇\\d]+章",
+      "chapter_count_correct_for_wang_bi_recension": true,
+      "granularity_strict_monotonicity": true,
+      "no_locked_finding_status_changed": true,
+      "F75_PASS_status_unaffected": true,
+      "F_universal_label_alias_only": true,
+      "no_brown_stouffer_used": true,
+      "T_squared_invariant": true,
+      "scope_clarification": "Test of F-Universal Shannon-Renyi-infinity gap on a single logographic-script corpus (Daodejing). NOT a population claim about Sino-Tibetan or Chinese-language family scriptural texts. NOT an N>=50 extension. The verdict is interpreted as evidence about whether the 1-bit gap is a property of oral-tradition canons specifically (in which case Daodejing may not extend) or of canonical literary corpora more generally (in which case it should extend)."
+    }
+  },
+  "wall_time_s": 0.008127689361572266
+}

@@ -1,0 +1,50 @@
+{
+  "audit": "Tier-2 zero-trust audit",
+  "generated_utc": "2026-04-23T19:02:03+00:00",
+  "experiments_audited": [
+    "E5",
+    "E6",
+    "E7",
+    "E8",
+    "E9"
+  ],
+  "n_flags": 4,
+  "flags_by_severity": {
+    "HIGH": 0,
+    "MED": 0,
+    "LOW": 4
+  },
+  "verdicts": {
+    "E5": null,
+    "E6": "PARTIAL_STRUCTURE",
+    "E7": "WEAK_PERSISTENT",
+    "E8": "STRUCTURED_NCD",
+    "E9": "STRUCTURED_DYNAMICS"
+  },
+  "flags": [
+    {
+      "task": "E6",
+      "severity": "LOW",
+      "code": "A6_LENGTH_CONFOUND",
+      "message": "Moran's I on mushaf order may be length-driven; follow-up: partial out log(n_verses)."
+    },
+    {
+      "task": "E7",
+      "severity": "LOW",
+      "code": "A6_WEAK_CRITERION",
+      "message": "Pre-registered 'median_resid>0' tripped on noise-level value (-0.019) while Wilcoxon p=2.7e-11 and intercept-at-median-n=0.89 show robust persistence. Document criterion as too strict; headline finding stands."
+    },
+    {
+      "task": "E8",
+      "severity": "LOW",
+      "code": "A6_LENGTH_CONFOUND",
+      "message": "Mushaf is approximately length-sorted; Mantel r(NCD, |i-j|)=0.59 may be partly driven by length. Follow-up: re-run Mantel with length-residualised NCD."
+    },
+    {
+      "task": "E9",
+      "severity": "LOW",
+      "code": "A6_SUBSAMPLING",
+      "message": "RQA computed on stride-5 subsample (N_rqa=1248) of 6236-pt series. Rhythmic periods < 5 verses may be under-represented; overall verdict safely outside both 95% CIs but higher-resolution follow-up could refine DET/LAM."
+    }
+  ]
+}

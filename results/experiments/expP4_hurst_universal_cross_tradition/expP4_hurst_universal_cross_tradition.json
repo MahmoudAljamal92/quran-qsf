@@ -1,0 +1,138 @@
+{
+  "experiment": "expP4_hurst_universal_cross_tradition",
+  "schema_version": 1,
+  "title": "R/S Hurst exponent across all 8 cross-tradition religious-text corpora, on three canonical-order time-series (verse word-count, unit word-count, unit EL-rate).",
+  "n_corpora": 8,
+  "canonical_order": [
+    "quran",
+    "hebrew_tanakh",
+    "greek_nt",
+    "iliad_greek",
+    "pali_dn",
+    "pali_mn",
+    "rigveda",
+    "avestan_yasna"
+  ],
+  "per_corpus": {
+    "quran": {
+      "n_units": 114,
+      "n_verses": 6236,
+      "H_verse_words": 0.7392948517440815,
+      "H_unit_words": 0.9139449853727155,
+      "H_unit_EL": 0.7829084896197748,
+      "tradition_class": "oral_liturgical",
+      "H_max": 0.9139449853727155,
+      "passes_HU1_floor_0.6": true
+    },
+    "hebrew_tanakh": {
+      "n_units": 921,
+      "n_verses": 28377,
+      "H_verse_words": 0.6790431418921249,
+      "H_unit_words": 0.7729436339519103,
+      "H_unit_EL": 0.6254952432130655,
+      "tradition_class": "narrative_or_mixed"
+    },
+    "greek_nt": {
+      "n_units": 260,
+      "n_verses": 7941,
+      "H_verse_words": 0.6155173240714135,
+      "H_unit_words": 0.792565121571139,
+      "H_unit_EL": 0.6399937021635719,
+      "tradition_class": "narrative_or_mixed"
+    },
+    "iliad_greek": {
+      "n_units": 24,
+      "n_verses": 15687,
+      "H_verse_words": 0.5996073324404728,
+      "H_unit_words": NaN,
+      "H_unit_EL": NaN,
+      "tradition_class": "narrative_or_mixed"
+    },
+    "pali_dn": {
+      "n_units": 34,
+      "n_verses": 14498,
+      "H_verse_words": 0.7200930036953261,
+      "H_unit_words": NaN,
+      "H_unit_EL": NaN,
+      "tradition_class": "oral_liturgical"
+    },
+    "pali_mn": {
+      "n_units": 152,
+      "n_verses": 24243,
+      "H_verse_words": 0.7078793103289011,
+      "H_unit_words": 0.6732392139238199,
+      "H_unit_EL": 0.7123102740770821,
+      "tradition_class": "oral_liturgical",
+      "H_max": 0.7123102740770821,
+      "passes_HU1_floor_0.6": true
+    },
+    "rigveda": {
+      "n_units": 1024,
+      "n_verses": 18079,
+      "H_verse_words": 0.7332183975572208,
+      "H_unit_words": 0.7861412157677876,
+      "H_unit_EL": 0.5958015162866293,
+      "tradition_class": "oral_liturgical",
+      "H_max": 0.7861412157677876,
+      "passes_HU1_floor_0.6": true
+    },
+    "avestan_yasna": {
+      "n_units": 72,
+      "n_verses": 4167,
+      "H_verse_words": 0.7116563540488198,
+      "H_unit_words": 0.6323268433635668,
+      "H_unit_EL": 0.655183479140103,
+      "tradition_class": "oral_liturgical",
+      "H_max": 0.7116563540488198,
+      "passes_HU1_floor_0.6": true
+    }
+  },
+  "by_tradition_class": {
+    "oral_liturgical": {
+      "n_corpora": 4,
+      "mean_H_max": 0.7810132073166013,
+      "median_H_max": 0.7492257449224349,
+      "min_H_max": 0.7116563540488198,
+      "max_H_max": 0.9139449853727155,
+      "n_above_0.6": 4
+    }
+  },
+  "sanity_checks": {
+    "rigveda_drift_vs_expP4_rigveda_deepdive": {
+      "H_verse_words": 1.8397557220883876e-05,
+      "H_unit_words": 4.1215767787594615e-05,
+      "H_unit_EL": 1.5162866292550703e-06,
+      "max": 4.1215767787594615e-05,
+      "ok": false
+    },
+    "quran_H_verse_vs_locked_Supp_A_Hurst": {
+      "locked_value": 0.7381,
+      "current_H_verse_words": 0.7392948517440815,
+      "abs_drift": 0.0011948517440815154,
+      "tolerance": 0.05,
+      "ok": true
+    }
+  },
+  "pre_registered_outcomes": {
+    "PRED_HU_1_universal_oral_corpora_H_above_0.6": "PASS",
+    "PRED_HU_1_per_corpus_pass_status": {
+      "quran": true,
+      "pali_mn": true,
+      "rigveda": true,
+      "avestan_yasna": true
+    },
+    "PRED_HU_2_iliad_negative_control_H_at_or_below_0.55": "FAIL",
+    "PRED_HU_2_iliad_H_verse_words": 0.5996073324404728,
+    "PRED_HU_3_three_of_three_above_quran": "FAIL",
+    "PRED_HU_3_n_above_locked_quran": 1,
+    "overall_verdict": "PARTIAL_SUPPORT"
+  },
+  "interpretation": [
+    "If PRED-HU-1 PASSES (all 4 oral corpora exceed H=0.6 on at least one canonical series) and PRED-HU-2 PASSES (Iliad stays at H≤0.55 as negative control), then long-range positive memory is a robust property of oral-liturgical religious canon orderings — a NEW universality candidate to add to LC1 alongside the LC2 path-minimality finding.",
+    "If PRED-HU-3 PASSES (all 3 cross-tradition oral corpora exceed the locked Quran Hurst), then the Quran is the FLOOR of the oral-liturgical Hurst distribution, not the ceiling. This would be a major reframe of the Quran-as-extreme-outlier narrative."
+  ],
+  "extends": {
+    "expP4_rigveda_deepdive": "Rigveda Hurst values must reproduce exactly (drift < 1e-6).",
+    "Supp_A_Hurst (locked)": "Quran R/S Hurst H = 0.7381 must reproduce within ±0.05 on H_verse_words. Different chunk grid / window choice may add small drift."
+  }
+}

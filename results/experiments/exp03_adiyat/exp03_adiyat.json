@@ -1,0 +1,237 @@
+{
+  "experiment": "exp03_adiyat",
+  "description": "Sūra 100 (Ādiyāt) deep-dive. Uses locked μ_ctrl and S_inv from phase_06_phi_m; computes 5-D features fresh via src.features (canonical CamelTools-backed extractor). Sandbox: no writes outside results/experiments/exp03_adiyat/.",
+  "Q1_position_in_5D": {
+    "surah_100_features": {
+      "EL": 0.8,
+      "VL_CV": 0.3872983346207417,
+      "CN": 0.2,
+      "H_cond": 0.0,
+      "T": -1.5394847569315018
+    },
+    "surah_100_phi_m": 10.286340978295431,
+    "surah_100_n_verses": 11,
+    "rank_all_surahs": {
+      "rank": 33,
+      "n": 114,
+      "top_fraction": 0.2807017543859649
+    },
+    "rank_short_surahs": {
+      "rank": 10,
+      "n": 28
+    },
+    "quran_mean_phi_m": 8.811942216315382,
+    "quran_median_phi_m": 8.961870719847859,
+    "control_pool_mean_phi_m": 2.0570346355404885,
+    "control_pool_95pct_phi_m": 3.330211211735666,
+    "control_pool_max_phi_m": 17.637101535955473
+  },
+  "Q2_oath_subclass": {
+    "oath_surah_numbers": [
+      37,
+      51,
+      52,
+      53,
+      77,
+      79,
+      85,
+      86,
+      89,
+      91,
+      92,
+      93,
+      95,
+      100,
+      103
+    ],
+    "oath_labels_found": [
+      "Q:037",
+      "Q:051",
+      "Q:052",
+      "Q:053",
+      "Q:077",
+      "Q:079",
+      "Q:085",
+      "Q:086",
+      "Q:089",
+      "Q:091",
+      "Q:092",
+      "Q:093",
+      "Q:095",
+      "Q:100",
+      "Q:103"
+    ],
+    "n_oath_surahs_found": 15,
+    "oath_centroid_5d": {
+      "EL": 0.7747837126596203,
+      "VL_CV": 0.4513131365937083,
+      "CN": 0.11854756400175027,
+      "H_cond": 0.6595629968788689,
+      "T": -0.5989603224263819
+    },
+    "d_surah100_to_oath_centroid_local_maha_LOO": 2.066578654995791,
+    "rank_surah100_within_oath_subclass_LOO": 11,
+    "oath_local_maha_distances_LOO": {
+      "Q:037": 4.461375211412127,
+      "Q:051": 0.8081345301660007,
+      "Q:052": 0.9635925051104166,
+      "Q:053": 6.670528721503996,
+      "Q:077": 3.4957305955400675,
+      "Q:079": 1.5163839182468388,
+      "Q:085": 3.1786563239367718,
+      "Q:086": 2.4285649442693558,
+      "Q:089": 2.234044008477807,
+      "Q:091": 2.992688553246234,
+      "Q:092": 2.0246924817626293,
+      "Q:093": 2.2103200539079175,
+      "Q:095": 3.0380563877999003,
+      "Q:100": 2.066578654995791,
+      "Q:103": 7.398453494758691
+    },
+    "oath_local_maha_distances_biased_non_LOO": {
+      "Q:037": 2.7725737205782064,
+      "Q:051": 0.7649988825209482,
+      "Q:052": 0.9036656423840408,
+      "Q:053": 3.1545979070900287,
+      "Q:077": 2.4711142663087435,
+      "Q:079": 1.360682879409222,
+      "Q:085": 2.3438301208625605,
+      "Q:086": 1.9715534299006334,
+      "Q:089": 1.8566013380725306,
+      "Q:091": 2.2613573532634144,
+      "Q:092": 1.7237250775560664,
+      "Q:093": 1.8420235754974523,
+      "Q:095": 2.282032597117119,
+      "Q:100": 1.751081107874194,
+      "Q:103": 3.2273935538842426
+    },
+    "audit_note": "2026-04-19 fix: distances are computed LEAVE-ONE-OUT (the target surah is excluded from μ and Σ estimation). The previous non-LOO numbers are retained under 'oath_local_maha_distances_biased_non_LOO' for transparency; do not cite them as primary."
+  },
+  "Q3_plosive_density": {
+    "plosive_set": "ءبتثدضطقك",
+    "gallop_set": "بتدطقك",
+    "surah_100_plosive_density": 0.16489361702127658,
+    "surah_100_gallop_density": 0.14893617021276595,
+    "quran_plosive_density_mean": 0.1514134340102061,
+    "quran_plosive_density_std": 0.021270068221704942,
+    "quran_gallop_density_mean": 0.13807955929573582,
+    "quran_gallop_density_std": 0.021020811986378545,
+    "surah_100_gallop_rank_in_quran": 23,
+    "n_quran_surahs": 114,
+    "control_gallop_mean": 0.16940004148327126,
+    "control_gallop_std": 0.02878537882228997,
+    "surah_100_z_vs_ctrl_gallop": -0.7109120014310564,
+    "p_tail_surah_100_vs_ctrl_gallop": 0.7777542372881356,
+    "n_ctrl_units": 4719
+  },
+  "Q4_letter_chi2": {
+    "chi2": 17.173363129732962,
+    "df": 12,
+    "p_chi2": 0.1431915234966195,
+    "letters_used": [
+      "أ",
+      "ا",
+      "ب",
+      "ت",
+      "ر",
+      "ع",
+      "ك",
+      "ل",
+      "م",
+      "ن",
+      "ه",
+      "و",
+      "ي"
+    ],
+    "top_overrepresented": [
+      [
+        "ب",
+        {
+          "obs": 12,
+          "expected": 6.550772736427887,
+          "obs_over_exp": 1.8318449567437685
+        }
+      ],
+      [
+        "ر",
+        {
+          "obs": 12,
+          "expected": 7.129496857047519,
+          "obs_over_exp": 1.68314822779366
+        }
+      ],
+      [
+        "ع",
+        {
+          "obs": 6,
+          "expected": 5.311941415726487,
+          "obs_over_exp": 1.129530529504044
+        }
+      ],
+      [
+        "ه",
+        {
+          "obs": 9,
+          "expected": 8.450841577759139,
+          "obs_over_exp": 1.0649826904442432
+        }
+      ],
+      [
+        "ل",
+        {
+          "obs": 22,
+          "expected": 21.82479430270345,
+          "obs_over_exp": 1.0080278281145059
+        }
+      ]
+    ],
+    "top_underrepresented": [
+      [
+        "ك",
+        {
+          "obs": 2,
+          "expected": 5.931357076077186,
+          "obs_over_exp": 0.3371909622616647
+        }
+      ],
+      [
+        "أ",
+        {
+          "obs": 2,
+          "expected": 5.152566218446471,
+          "obs_over_exp": 0.3881560983806263
+        }
+      ],
+      [
+        "ت",
+        {
+          "obs": 3,
+          "expected": 5.943790602106123,
+          "obs_over_exp": 0.5047284133692361
+        }
+      ],
+      [
+        "ن",
+        {
+          "obs": 11,
+          "expected": 15.469001860820265,
+          "obs_over_exp": 0.7110995330513659
+        }
+      ],
+      [
+        "و",
+        {
+          "obs": 10,
+          "expected": 14.017670277078842,
+          "obs_over_exp": 0.7133853059985023
+        }
+      ]
+    ]
+  },
+  "caveats": [
+    "Sūra 100 has 11 verses, below Band-A lower cutoff of 15.",
+    "Oath-opening surah list fixed from classical tafsīr, not data-driven.",
+    "Plosive set 'gallop' is a fixed phonetic hypothesis; see notes.md.",
+    "χ² uses only letters with expected count > 5 (Cochran's rule)."
+  ]
+}

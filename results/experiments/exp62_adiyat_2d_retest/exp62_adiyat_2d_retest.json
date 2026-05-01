@@ -1,0 +1,181 @@
+{
+  "experiment": "exp62_adiyat_2d_retest",
+  "hypothesis": "Adiyat anomaly re-test under 2D (T, EL) parsimony model from exp60",
+  "schema_version": 1,
+  "surah_100_label": "Q:100",
+  "surah_100_n_verses": 11,
+  "surah_100_features": {
+    "EL": 0.8,
+    "VL_CV": 0.3872983346207417,
+    "CN": 0.2,
+    "H_cond": 0.0,
+    "T": -1.5394847569315018
+  },
+  "surah_100_z_scores": {
+    "EL": 8.747239299554764,
+    "VL_CV": 1.1179316584461902,
+    "CN": 4.306411905791616,
+    "H_cond": -2.478696290018923,
+    "T": 1.9401874961332848
+  },
+  "ctrl_means": {
+    "EL": 0.11080323011588314,
+    "VL_CV": 0.20034806488234075,
+    "CN": 0.027711546452416184,
+    "H_cond": 0.8251763392447035,
+    "T": -2.4449410750637703
+  },
+  "ctrl_stds": {
+    "EL": 0.07879020411836625,
+    "VL_CV": 0.1672287105620057,
+    "CN": 0.04000742551261237,
+    "H_cond": 0.3329074007846299,
+    "T": 0.4666849569625667
+  },
+  "analysis_5D": {
+    "phi_m": 10.286340978295431,
+    "rank": 33,
+    "n_surahs": 114,
+    "ctrl_95th_pct": 3.330211211735666,
+    "above_ctrl95": true,
+    "quran_mean_phi_m": 8.811942216315382,
+    "quran_median_phi_m": 8.961870719847859
+  },
+  "analysis_2D_TE": {
+    "features_used": [
+      "T",
+      "EL"
+    ],
+    "indices": [
+      4,
+      0
+    ],
+    "mu_ctrl_2d": [
+      -2.444941075063774,
+      0.11080323011588303
+    ],
+    "phi_m": 8.998182266083251,
+    "rank": 45,
+    "n_surahs": 114,
+    "ctrl_95th_pct": 2.4160136115806337,
+    "above_ctrl95": true,
+    "quran_mean_phi_m": 7.997753352300071,
+    "quran_median_phi_m": 8.365518936322871
+  },
+  "analysis_3D_residual": {
+    "features_used": [
+      "VL_CV",
+      "CN",
+      "H_cond"
+    ],
+    "indices": [
+      1,
+      2,
+      3
+    ],
+    "phi_m": 5.357240401775719,
+    "rank": 8,
+    "n_surahs": 114,
+    "ctrl_95th_pct": 2.5960174764955983,
+    "above_ctrl95": true
+  },
+  "rank_correlation": {
+    "spearman_rho": 0.9268058565035137,
+    "spearman_p": 1.8635878812501273e-49,
+    "note": "Correlation between 114-surah Phi_M rankings in 5D vs 2D"
+  },
+  "top10_5D": [
+    {
+      "label": "Q:103",
+      "phi_m": 17.060987042177935
+    },
+    {
+      "label": "Q:108",
+      "phi_m": 17.05852323526174
+    },
+    {
+      "label": "Q:102",
+      "phi_m": 14.60320761128759
+    },
+    {
+      "label": "Q:073",
+      "phi_m": 13.358815871251926
+    },
+    {
+      "label": "Q:076",
+      "phi_m": 12.29550910317629
+    },
+    {
+      "label": "Q:054",
+      "phi_m": 12.219926684119917
+    },
+    {
+      "label": "Q:072",
+      "phi_m": 12.127974215188262
+    },
+    {
+      "label": "Q:105",
+      "phi_m": 12.034348897551629
+    },
+    {
+      "label": "Q:063",
+      "phi_m": 12.031313873053021
+    },
+    {
+      "label": "Q:092",
+      "phi_m": 12.031280644581525
+    }
+  ],
+  "top10_2D": [
+    {
+      "label": "Q:054",
+      "phi_m": 11.8065042231405
+    },
+    {
+      "label": "Q:072",
+      "phi_m": 11.687253405508587
+    },
+    {
+      "label": "Q:017",
+      "phi_m": 11.643744750600115
+    },
+    {
+      "label": "Q:004",
+      "phi_m": 11.60206032003951
+    },
+    {
+      "label": "Q:092",
+      "phi_m": 11.539881788412734
+    },
+    {
+      "label": "Q:076",
+      "phi_m": 11.49831845082257
+    },
+    {
+      "label": "Q:018",
+      "phi_m": 11.46078514928511
+    },
+    {
+      "label": "Q:048",
+      "phi_m": 11.447558193082982
+    },
+    {
+      "label": "Q:114",
+      "phi_m": 11.439352399993965
+    },
+    {
+      "label": "Q:097",
+      "phi_m": 11.386693449340266
+    }
+  ],
+  "verdict": {
+    "verdict": "ANOMALY_SURVIVES",
+    "interpretation": {
+      "ANOMALY_STRENGTHENS": "Surah 100 ranks higher in 2D than 5D — the residual features were diluting its anomaly",
+      "ANOMALY_SURVIVES": "Surah 100 remains above ctrl 95th pct in 2D, anomaly is robust to dimension reduction",
+      "ANOMALY_WEAKENS": "Surah 100 falls below ctrl 95th pct in 2D — its anomaly was driven by VL_CV/CN/H_cond, not (T,EL)"
+    },
+    "exp60_reference": "Fisher(T,EL) = 100.9% of total; negative cross-term = -9.7%"
+  },
+  "runtime_seconds": 1.01
+}

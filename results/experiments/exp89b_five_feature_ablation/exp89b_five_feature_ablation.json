@@ -1,0 +1,353 @@
+{
+  "experiment": "exp89b_five_feature_ablation",
+  "hypothesis": "H-5FA — descriptive 5-feature ablation AUC profile (single, pairs, full)",
+  "schema_version": 1,
+  "prereg_document": "experiments/exp89b_five_feature_ablation/PREREG.md",
+  "data": {
+    "n_quran_bandA": 68,
+    "n_ctrl_bandA": 2509,
+    "feat_cols": [
+      "EL",
+      "VL_CV",
+      "CN",
+      "H_cond",
+      "T"
+    ]
+  },
+  "single_feature": [
+    {
+      "features": [
+        "EL"
+      ],
+      "auc": 0.997105,
+      "accuracy": 0.991851,
+      "w": [
+        4.741036
+      ],
+      "b": -2.625498,
+      "ci": {
+        "median": 0.997195,
+        "ci_lo": 0.994763,
+        "ci_hi": 0.999064,
+        "n_valid": 500
+      }
+    },
+    {
+      "features": [
+        "VL_CV"
+      ],
+      "auc": 0.904772,
+      "accuracy": 0.973613,
+      "w": [
+        0.0
+      ],
+      "b": -1.0,
+      "ci": {
+        "median": 0.894489,
+        "ci_lo": 0.078948,
+        "ci_hi": 0.924548,
+        "n_valid": 500
+      }
+    },
+    {
+      "features": [
+        "CN"
+      ],
+      "auc": 0.830267,
+      "accuracy": 0.973613,
+      "w": [
+        0.0
+      ],
+      "b": -1.0,
+      "ci": {
+        "median": 0.821312,
+        "ci_lo": 0.1349,
+        "ci_hi": 0.869599,
+        "n_valid": 500
+      }
+    },
+    {
+      "features": [
+        "H_cond"
+      ],
+      "auc": 0.518255,
+      "accuracy": 0.973613,
+      "w": [
+        1e-06
+      ],
+      "b": -1.0,
+      "ci": {
+        "median": 0.51215,
+        "ci_lo": 0.429052,
+        "ci_hi": 0.591302,
+        "n_valid": 500
+      }
+    },
+    {
+      "features": [
+        "T"
+      ],
+      "auc": 0.967687,
+      "accuracy": 0.984866,
+      "w": [
+        1.162642
+      ],
+      "b": 0.595973,
+      "ci": {
+        "median": 0.96786,
+        "ci_lo": 0.949558,
+        "ci_hi": 0.985424,
+        "n_valid": 500
+      }
+    }
+  ],
+  "single_feature_ranked": [
+    "EL",
+    "T",
+    "VL_CV",
+    "CN",
+    "H_cond"
+  ],
+  "two_feature_pairs": [
+    {
+      "features": [
+        "EL",
+        "VL_CV"
+      ],
+      "auc": 0.997738,
+      "accuracy": 0.992239,
+      "w": [
+        4.693535,
+        0.608172
+      ],
+      "b": -2.80246,
+      "ci": {
+        "median": 0.99774,
+        "ci_lo": 0.996005,
+        "ci_hi": 0.999185,
+        "n_valid": 500
+      }
+    },
+    {
+      "features": [
+        "EL",
+        "CN"
+      ],
+      "auc": 0.997808,
+      "accuracy": 0.993015,
+      "w": [
+        4.636168,
+        1.651635
+      ],
+      "b": -2.622638,
+      "ci": {
+        "median": 0.997845,
+        "ci_lo": 0.996347,
+        "ci_hi": 0.999168,
+        "n_valid": 500
+      }
+    },
+    {
+      "features": [
+        "EL",
+        "H_cond"
+      ],
+      "auc": 0.996987,
+      "accuracy": 0.992239,
+      "w": [
+        4.689751,
+        0.092049
+      ],
+      "b": -2.688373,
+      "ci": {
+        "median": 0.997119,
+        "ci_lo": 0.994165,
+        "ci_hi": 0.999071,
+        "n_valid": 500
+      }
+    },
+    {
+      "features": [
+        "EL",
+        "T"
+      ],
+      "auc": 0.997503,
+      "accuracy": 0.991463,
+      "w": [
+        4.178955,
+        0.532877
+      ],
+      "b": -1.522087,
+      "ci": {
+        "median": 0.997691,
+        "ci_lo": 0.995366,
+        "ci_hi": 0.999183,
+        "n_valid": 500
+      }
+    },
+    {
+      "features": [
+        "VL_CV",
+        "CN"
+      ],
+      "auc": 0.921307,
+      "accuracy": 0.973613,
+      "w": [
+        0.001257,
+        0.000521
+      ],
+      "b": -1.000463,
+      "ci": {
+        "median": 0.913878,
+        "ci_lo": 0.07904,
+        "ci_hi": 0.945127,
+        "n_valid": 500
+      }
+    },
+    {
+      "features": [
+        "VL_CV",
+        "H_cond"
+      ],
+      "auc": 0.901836,
+      "accuracy": 0.973613,
+      "w": [
+        0.000983,
+        -0.000114
+      ],
+      "b": -1.000122,
+      "ci": {
+        "median": 0.781065,
+        "ci_lo": 0.092621,
+        "ci_hi": 0.91283,
+        "n_valid": 500
+      }
+    },
+    {
+      "features": [
+        "VL_CV",
+        "T"
+      ],
+      "auc": 0.978442,
+      "accuracy": 0.985642,
+      "w": [
+        1.151396,
+        1.100187
+      ],
+      "b": 0.083451,
+      "ci": {
+        "median": 0.977343,
+        "ci_lo": 0.963586,
+        "ci_hi": 0.989292,
+        "n_valid": 500
+      }
+    },
+    {
+      "features": [
+        "CN",
+        "H_cond"
+      ],
+      "auc": 0.801327,
+      "accuracy": 0.973613,
+      "w": [
+        0.002917,
+        -0.000133
+      ],
+      "b": -1.00023,
+      "ci": {
+        "median": 0.754878,
+        "ci_lo": 0.593469,
+        "ci_hi": 0.859455,
+        "n_valid": 500
+      }
+    },
+    {
+      "features": [
+        "CN",
+        "T"
+      ],
+      "auc": 0.970957,
+      "accuracy": 0.985254,
+      "w": [
+        1.960237,
+        1.041971
+      ],
+      "b": 0.377267,
+      "ci": {
+        "median": 0.971453,
+        "ci_lo": 0.953009,
+        "ci_hi": 0.987673,
+        "n_valid": 500
+      }
+    },
+    {
+      "features": [
+        "H_cond",
+        "T"
+      ],
+      "auc": 0.989186,
+      "accuracy": 0.985254,
+      "w": [
+        -1.252999,
+        1.294644
+      ],
+      "b": 2.022964,
+      "ci": {
+        "median": 0.9893,
+        "ci_lo": 0.98247,
+        "ci_hi": 0.994832,
+        "n_valid": 500
+      }
+    }
+  ],
+  "two_feature_ranked_top3": [
+    "EL+CN",
+    "EL+VL_CV",
+    "EL+T"
+  ],
+  "full_5D": {
+    "features": [
+      "EL",
+      "VL_CV",
+      "CN",
+      "H_cond",
+      "T"
+    ],
+    "auc": 0.998312,
+    "accuracy": 0.992239,
+    "w": [
+      3.48742,
+      0.773631,
+      1.237694,
+      -0.56928,
+      0.713219
+    ],
+    "b": -0.744607,
+    "ci": {
+      "median": 0.998403,
+      "ci_lo": 0.997121,
+      "ci_hi": 0.99933,
+      "n_valid": 500
+    }
+  },
+  "headline": {
+    "best_single_feature": "EL",
+    "best_single_auc": 0.997105,
+    "best_pair": "EL+CN",
+    "best_pair_auc": 0.997808,
+    "full_5D_auc": 0.998312,
+    "delta_best_pair_minus_best_single": 0.000703,
+    "delta_full_minus_best_single": 0.001207,
+    "single_features_over_0_95": [
+      "EL",
+      "T"
+    ],
+    "single_features_over_0_99": [
+      "EL"
+    ],
+    "best_pair_is_redundant_vs_best_single": true,
+    "full_5D_is_redundant_vs_best_single": true
+  },
+  "n_boot": 500,
+  "runtime_seconds": 111.43
+}

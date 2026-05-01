@@ -1,0 +1,190 @@
+{
+  "experiment": "expA5_segmentation_sensitivity",
+  "task_id": "A5",
+  "title": "Segmentation-sensitivity: 5-D Phi_M signal under fixed-W-verse rewindowing of Quran + control corpora.",
+  "method": "For each W in [20, 40, 80]: (1) flatten each corpus's verse list across all its native units, (2) regroup into non-overlapping W-verse windows, (3) compute 5-D features via src.features.features_5d on each window, (4) compute Hotelling T^2 of Quran-windows vs ARABIC_CTRL_POOL-windows with pooled covariance + ridge=1e-6 (matching exp49/exp53 byte-for-byte).",
+  "window_sizes_tested": [
+    20,
+    40,
+    80
+  ],
+  "ridge_lambda": 1e-06,
+  "results_per_W": [
+    {
+      "W": 20,
+      "n_quran_windows": 311,
+      "n_ctrl_windows": 6207,
+      "hotelling": {
+        "T2": 14394.034393665683,
+        "F": 2877.0396553576097,
+        "df1": 5,
+        "df2": 6512,
+        "p_F_tail": 0.0,
+        "cohen_d_pooled": 6.971518415270312,
+        "n_target": 311,
+        "n_control": 6207
+      },
+      "per_feature": {
+        "EL": {
+          "quran_mean": 0.718734134371298,
+          "ctrl_mean": 0.10652658712998056,
+          "quran_sd": 0.20727942931972826,
+          "ctrl_sd": 0.08665066147541377,
+          "cohen_d": 6.384376294090284
+        },
+        "VL_CV": {
+          "quran_mean": 0.46468533252599664,
+          "ctrl_mean": 0.15675108465889154,
+          "quran_sd": 0.17579676256809795,
+          "ctrl_sd": 0.19683431312478414,
+          "cohen_d": 1.5720183262481793
+        },
+        "CN": {
+          "quran_mean": 0.08038585209003214,
+          "ctrl_mean": 0.02720188581652294,
+          "quran_sd": 0.07380039862593302,
+          "ctrl_sd": 0.045184361531013885,
+          "cohen_d": 1.1329557823319705
+        },
+        "H_cond": {
+          "quran_mean": 0.5564368411719487,
+          "ctrl_mean": 0.6196490541218141,
+          "quran_sd": 0.2787097707807771,
+          "ctrl_sd": 0.3175708984189305,
+          "cohen_d": -0.2001460538826747
+        },
+        "T": {
+          "quran_mean": -0.45560070431189115,
+          "ctrl_mean": -2.4881997721884,
+          "quran_sd": 0.8404355168688776,
+          "ctrl_sd": 0.4814977557962451,
+          "cohen_d": 4.029777879039087
+        }
+      },
+      "t2_per_unit_pair": 2.208351395161964
+    },
+    {
+      "W": 40,
+      "n_quran_windows": 155,
+      "n_ctrl_windows": 3103,
+      "hotelling": {
+        "T2": 11066.617506432012,
+        "F": 2210.6044306460017,
+        "df1": 5,
+        "df2": 3252,
+        "p_F_tail": 0.0,
+        "cohen_d_pooled": 8.658172875109337,
+        "n_target": 155,
+        "n_control": 3103
+      },
+      "per_feature": {
+        "EL": {
+          "quran_mean": 0.7202646815550041,
+          "ctrl_mean": 0.10665443697992844,
+          "quran_sd": 0.18319205047122927,
+          "ctrl_sd": 0.06592900672658068,
+          "cohen_d": 8.107354097615186
+        },
+        "VL_CV": {
+          "quran_mean": 0.5005153494107186,
+          "ctrl_mean": 0.1689485740435237,
+          "quran_sd": 0.18850432000724318,
+          "ctrl_sd": 0.1984453288666402,
+          "cohen_d": 1.674694769867359
+        },
+        "CN": {
+          "quran_mean": 0.08039702233250619,
+          "ctrl_mean": 0.02719452638885446,
+          "quran_sd": 0.052846388315582214,
+          "ctrl_sd": 0.03534014569345287,
+          "cohen_d": 1.463273308295695
+        },
+        "H_cond": {
+          "quran_mean": 0.8447148813690698,
+          "ctrl_mean": 0.8591185907877288,
+          "quran_sd": 0.2535475359538101,
+          "ctrl_sd": 0.27552024514646356,
+          "cohen_d": -0.05246858801345741
+        },
+        "T": {
+          "quran_mean": -0.36829670692876754,
+          "ctrl_mean": -2.6122208945058047,
+          "quran_sd": 0.8887376086609015,
+          "ctrl_sd": 0.41090571999908876,
+          "cohen_d": 5.040100602096669
+        }
+      },
+      "t2_per_unit_pair": 3.3967518435948474
+    },
+    {
+      "W": 80,
+      "n_quran_windows": 77,
+      "n_ctrl_windows": 1550,
+      "hotelling": {
+        "T2": 8633.613496593143,
+        "F": 1722.4723049818442,
+        "df1": 5,
+        "df2": 1621,
+        "p_F_tail": 0.0,
+        "cohen_d_pooled": 10.84872913426795,
+        "n_target": 77,
+        "n_control": 1550
+      },
+      "per_feature": {
+        "EL": {
+          "quran_mean": 0.7223409501890515,
+          "ctrl_mean": 0.10685177623519805,
+          "quran_sd": 0.14500131895083324,
+          "ctrl_sd": 0.05204151304726034,
+          "cohen_d": 10.308394105679485
+        },
+        "VL_CV": {
+          "quran_mean": 0.5344775051036881,
+          "ctrl_mean": 0.1777183174145984,
+          "quran_sd": 0.1443293729481068,
+          "ctrl_sd": 0.19529610829608032,
+          "cohen_d": 1.846461590792104
+        },
+        "CN": {
+          "quran_mean": 0.07973039618609239,
+          "ctrl_mean": 0.027235606369946916,
+          "quran_sd": 0.0369084682592198,
+          "ctrl_sd": 0.026664416960406986,
+          "cohen_d": 1.927859896087085
+        },
+        "H_cond": {
+          "quran_mean": 1.1849972760935892,
+          "ctrl_mean": 1.1205094710426922,
+          "quran_sd": 0.23375395438927568,
+          "ctrl_sd": 0.23035800506317086,
+          "cohen_d": 0.27975177689133673
+        },
+        "T": {
+          "quran_mean": -0.268677510067779,
+          "ctrl_mean": -2.592252242688912,
+          "quran_sd": 0.9065952156355478,
+          "ctrl_sd": 0.33585502228746394,
+          "cohen_d": 6.081834961608128
+        }
+      },
+      "t2_per_unit_pair": 5.306461890960752
+    }
+  ],
+  "locked_phi_m_baseline": {
+    "T2_baseline_per_surah": 3557.339454504635,
+    "n_quran_baseline": 68,
+    "n_ctrl_baseline": 2509,
+    "note": "Locked Phi_M Hotelling T^2 = 3557.34 was computed on Band-A surah units (15-100 verses), not on fixed-W windows. Direct T^2 comparison is not apples-to-apples because the unit count and unit-size distributions differ; we report the per-W T^2 absolute value AND its per-window normalisation T^2 / (n_q + n_c) to allow rough cross-W comparability."
+  },
+  "summary": {
+    "min_cohen_d_pooled": 6.971518415270312,
+    "max_cohen_d_pooled": 10.84872913426795,
+    "verdict": "SIGNAL_SURVIVES_FIXED_W_REWINDOWING"
+  },
+  "interpretation": [
+    "If `verdict = SIGNAL_SURVIVES_FIXED_W_REWINDOWING`, the Quran's 5-D fingerprint is NOT an artefact of canonical surah boundaries; the same separation appears under a uniform-W segmentation. This is the strongest defence against the reviewer's worry.",
+    "If `verdict = SIGNAL_COLLAPSES_UNDER_REWINDOWING`, the 5-D fingerprint depends on the surah-scale aggregation; future writing must specify that Phi_M is a property of the canonical surah segmentation rather than a segmentation-invariant text feature.",
+    "Sentence-boundary and topic-shift segmentations are not covered here (heavier external dependencies; deferred)."
+  ],
+  "runtime_seconds": 32.31
+}

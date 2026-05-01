@@ -1,0 +1,64 @@
+{
+  "experiment": "exp38_ccas_normalised",
+  "schema_version": 1,
+  "seed": 42,
+  "bands": {
+    "lo": 15,
+    "hi": 100
+  },
+  "n_pert_per_unit": 20,
+  "k_windows": 10,
+  "alphabet": "ARABIC_CONS_28 (hamza folded, ة->ه, ى->ي)",
+  "arabic_ctrl": [
+    "poetry_jahili",
+    "poetry_islami",
+    "poetry_abbasi",
+    "ksucca",
+    "arabic_bible",
+    "hindawi"
+  ],
+  "n_quran_units": 68,
+  "n_ctrl_units": 200,
+  "n_q_perturbations": 1360,
+  "n_ctrl_perturbations": 4000,
+  "per_unit_sigma_intra_doc": {
+    "quran_median": 2.9109934032812124,
+    "ctrl_median": 2.270013639306357
+  },
+  "per_unit_canon_frob": {
+    "quran_median": 159.54309070007082,
+    "ctrl_median": 120.17210755133155
+  },
+  "raw_frobenius_summary": {
+    "n_q": 1360,
+    "n_ctrl": 4000,
+    "q_mean": 1.9964795386275775,
+    "q_median": 2.0,
+    "ctrl_mean": 1.9983637033051564,
+    "ctrl_median": 2.0,
+    "cohen_d": -0.026393875509880132,
+    "mw_p_greater": 0.34464418733609203,
+    "mw_p_less": 0.6554283838169687
+  },
+  "normalised_ccas_summary": {
+    "n_q": 1360,
+    "n_ctrl": 4000,
+    "q_mean": 0.9817242282467006,
+    "q_median": 0.6720258754520472,
+    "ctrl_mean": 1.0587155382702214,
+    "ctrl_median": 0.8771844726726925,
+    "cohen_d": -0.11942242853693517,
+    "mw_p_greater": 1.0,
+    "mw_p_less": 4.547257445785005e-17
+  },
+  "verdicts": {
+    "raw_frobenius": "FAILS (raw; d=-0.026, p_greater=3.446e-01)",
+    "normalised_ccas": "FAILS (norm; d=-0.119, p_greater=1.000e+00)"
+  },
+  "notes": "CCAS_norm = |M_edited - M_canonical|_F / sigma_intra_doc where sigma_intra_doc is the std of Frobenius distances between K=10 random equal-length sub-document matrices and their mean. Tests whether the Quran's bigram structure is SPECIFICALLY more sensitive to a fixed-size edit than Arabic controls' bigram structure is -- the one variant of the letter-transition-matrix detector that was not tested by exp09/exp30.",
+  "provenance": {
+    "input_checkpoint": "phase_06_phi_m.pkl",
+    "perturbation_policy": "exp29::_apply_perturbation (internal, non-boundary word, non-terminal verse)",
+    "design_doc": "2026-04-20 deep-scan synthesis"
+  }
+}

@@ -1,0 +1,845 @@
+{
+  "experiment": "exp163_quran_geometric_shape",
+  "schema_version": 1,
+  "hypothesis": "Beyond the already-locked Hotelling T^2 = 3,557 centroid offset, the Quran's per-surah point cloud in 5-D Phi_M space has geometrically distinct shape (Frame A) or its canonical orderings (Mushaf, Nuzul, length) trace a notably non-random trajectory through that space (Frame B). Frame C generates diagnostic 2D/3D figures of the corpus polytope.",
+  "verdict": "PASS_GEOMETRY_AND_TRAJECTORY_DISTINCT",
+  "completed_at_utc": "2026-05-01T06:12:04Z",
+  "wall_time_s": 39.05721926689148,
+  "frozen_constants": {
+    "SEED": 42,
+    "N_BOOTSTRAP": 10000,
+    "N_SUBSAMPLE": 200,
+    "ALPHA_BHL": 0.01,
+    "FEAT_COLS": [
+      "EL",
+      "VL_CV",
+      "CN",
+      "H_cond",
+      "T"
+    ],
+    "CORPORA_FOR_FRAME_A": [
+      "quran",
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hadith_bukhari",
+      "hindawi"
+    ],
+    "SEVEN_FROZEN_DESC": [
+      "sphericity_log10",
+      "isotropy",
+      "intrinsic_dim_95pct",
+      "anisotropy_westin",
+      "linearity_westin",
+      "planarity_westin",
+      "symmetry_score"
+    ],
+    "FIVE_TRAJ_DESC": [
+      "arc_length",
+      "mean_curvature_rad",
+      "curvature_variance",
+      "closure_ratio_0closed_1straight",
+      "smoothness_curvature_var"
+    ]
+  },
+  "frame_A": {
+    "n_target": 68,
+    "per_corpus_descriptors": {
+      "quran": {
+        "sphericity_log10": 2.6705841995230664,
+        "isotropy": 0.002135088102367086,
+        "intrinsic_dim_95pct": 3,
+        "anisotropy_westin": 0.9957389215731183,
+        "linearity_westin": 0.9311883996303438,
+        "planarity_westin": 0.06667651226728913,
+        "symmetry_score": 0.2120787025804852,
+        "regularity_NN_CV": 0.6466814669981851,
+        "logvol": -3.3682670360110096
+      },
+      "poetry_jahili": {
+        "sphericity_log10": 2.126304711461321,
+        "isotropy": 0.00747645803337944,
+        "intrinsic_dim_95pct": 2.0,
+        "anisotropy_westin": 0.9851580494636479,
+        "linearity_westin": 0.5607527311108782,
+        "planarity_westin": 0.43247218514755803,
+        "symmetry_score": 0.2624161696810367,
+        "regularity_NN_CV": 0.4892041798740617,
+        "logvol": -4.053457643098326
+      },
+      "poetry_islami": {
+        "sphericity_log10": 2.039821495290643,
+        "isotropy": 0.009123976298178859,
+        "intrinsic_dim_95pct": 2.0,
+        "anisotropy_westin": 0.9819170401499795,
+        "linearity_westin": 0.41044085442786504,
+        "planarity_westin": 0.5758566719527598,
+        "symmetry_score": 0.27179448003554935,
+        "regularity_NN_CV": 0.5120412871463074,
+        "logvol": -4.000361065726921
+      },
+      "poetry_abbasi": {
+        "sphericity_log10": 2.102606542091137,
+        "isotropy": 0.007895751979579698,
+        "intrinsic_dim_95pct": 2.0,
+        "anisotropy_westin": 0.9843322050861346,
+        "linearity_westin": 0.398099205259472,
+        "planarity_westin": 0.594981668957852,
+        "symmetry_score": 0.27517257129264416,
+        "regularity_NN_CV": 0.5765203846418567,
+        "logvol": -4.014889169652327
+      },
+      "ksucca": {
+        "sphericity_log10": 2.8934151569232456,
+        "isotropy": 0.001278158884256873,
+        "intrinsic_dim_95pct": 3,
+        "anisotropy_westin": 0.9974469454408529,
+        "linearity_westin": 0.5468669213884965,
+        "planarity_westin": 0.45185491972724673,
+        "symmetry_score": 0.32331078142512903,
+        "regularity_NN_CV": 0.5576664525938678,
+        "logvol": -3.8306480598973502
+      },
+      "arabic_bible": {
+        "sphericity_log10": 2.195376353110812,
+        "isotropy": 0.006377107330000076,
+        "intrinsic_dim_95pct": 2.0,
+        "anisotropy_westin": 0.9873266049697664,
+        "linearity_westin": 0.8287708694460918,
+        "planarity_westin": 0.16510170916379935,
+        "symmetry_score": 0.2668500216433787,
+        "regularity_NN_CV": 0.51553709982435,
+        "logvol": -4.427446044766555
+      },
+      "hadith_bukhari": {
+        "sphericity_log10": 11.510581016599488,
+        "isotropy": 3.0861638802664696e-12,
+        "intrinsic_dim_95pct": 3.0,
+        "anisotropy_westin": 0.9999999999938278,
+        "linearity_westin": 0.7197322499716776,
+        "planarity_westin": 0.280267750025059,
+        "symmetry_score": 0.4189277953892314,
+        "regularity_NN_CV": 0.8535091456500139,
+        "logvol": -8.691301842427453
+      },
+      "hindawi": {
+        "sphericity_log10": 2.678608835320351,
+        "isotropy": 0.002095999577758418,
+        "intrinsic_dim_95pct": 2.0,
+        "anisotropy_westin": 0.9958167688961639,
+        "linearity_westin": 0.8227010521048606,
+        "planarity_westin": 0.175257993391454,
+        "symmetry_score": 0.25571771846714486,
+        "regularity_NN_CV": 0.595443680264653,
+        "logvol": -5.001261131690792
+      }
+    },
+    "per_corpus_desc_subsample_std": {
+      "quran": {
+        "sphericity_log10": 0.0,
+        "isotropy": 0.0,
+        "intrinsic_dim_95pct": 0.0,
+        "anisotropy_westin": 0.0,
+        "linearity_westin": 0.0,
+        "planarity_westin": 0.0,
+        "symmetry_score": 0.0,
+        "regularity_NN_CV": 0.0,
+        "logvol": 0.0
+      },
+      "poetry_jahili": {
+        "sphericity_log10": 0.1242901474235871,
+        "isotropy": 0.002081248764613951,
+        "intrinsic_dim_95pct": 0.48885069295235745,
+        "anisotropy_westin": 0.004098067110360122,
+        "linearity_westin": 0.07374906414066384,
+        "planarity_westin": 0.07270199534976123,
+        "symmetry_score": 0.012674503313511833,
+        "regularity_NN_CV": 0.06175458270795495,
+        "logvol": 0.08852724832086387
+      },
+      "poetry_islami": {
+        "sphericity_log10": 0.21927837292358401,
+        "isotropy": 0.005136568928247057,
+        "intrinsic_dim_95pct": 0.3962007067131506,
+        "anisotropy_westin": 0.010013988013389515,
+        "linearity_westin": 0.13630714109066577,
+        "planarity_westin": 0.13472867277314968,
+        "symmetry_score": 0.02100469185101718,
+        "regularity_NN_CV": 0.09070577597216462,
+        "logvol": 0.13712349122492482
+      },
+      "poetry_abbasi": {
+        "sphericity_log10": 0.19797431990828399,
+        "isotropy": 0.003292492996288018,
+        "intrinsic_dim_95pct": 0.3,
+        "anisotropy_westin": 0.006466106763684161,
+        "linearity_westin": 0.1372016993502742,
+        "planarity_westin": 0.13632888698153284,
+        "symmetry_score": 0.02138741248248681,
+        "regularity_NN_CV": 0.11461906830158902,
+        "logvol": 0.1297034029537013
+      },
+      "ksucca": {
+        "sphericity_log10": 0.0,
+        "isotropy": 0.0,
+        "intrinsic_dim_95pct": 0.0,
+        "anisotropy_westin": 0.0,
+        "linearity_westin": 0.0,
+        "planarity_westin": 0.0,
+        "symmetry_score": 0.0,
+        "regularity_NN_CV": 0.0,
+        "logvol": 0.0
+      },
+      "arabic_bible": {
+        "sphericity_log10": 0.2125160945844827,
+        "isotropy": 0.003994693810705536,
+        "intrinsic_dim_95pct": 0.403701622488689,
+        "anisotropy_westin": 0.007831273330920655,
+        "linearity_westin": 0.042434454150637,
+        "planarity_westin": 0.042189371259391144,
+        "symmetry_score": 0.023513140390512693,
+        "regularity_NN_CV": 0.14997807313406794,
+        "logvol": 0.16132982427641865
+      },
+      "hadith_bukhari": {
+        "sphericity_log10": 0.0639608300314816,
+        "isotropy": 5.225207169240361e-13,
+        "intrinsic_dim_95pct": 0.12155245781143219,
+        "anisotropy_westin": 1.0450680514290987e-12,
+        "linearity_westin": 0.06500931498141742,
+        "planarity_westin": 0.06500931498104973,
+        "symmetry_score": 0.028489423190363804,
+        "regularity_NN_CV": 0.11044941223789134,
+        "logvol": 0.087781555850516
+      },
+      "hindawi": {
+        "sphericity_log10": 0.037588132506436896,
+        "isotropy": 0.00018465666961749633,
+        "intrinsic_dim_95pct": 0.0,
+        "anisotropy_westin": 0.0003677150713897597,
+        "linearity_westin": 0.017781380457647128,
+        "planarity_westin": 0.017659976754711725,
+        "symmetry_score": 0.009855612456605333,
+        "regularity_NN_CV": 0.038058087970719,
+        "logvol": 0.034036636206897224
+      }
+    },
+    "quran_vs_bootstrap_pool_null": {
+      "sphericity_log10": {
+        "observed": 2.6705841995230664,
+        "null_median": 2.470520857524135,
+        "null_std": 0.2280503964167373,
+        "null_p25": 2.3248158573618727,
+        "null_p75": 2.609595806419609,
+        "p_two_sided_vs_bootstrap": 0.33
+      },
+      "isotropy": {
+        "observed": 0.002135088102367086,
+        "null_median": 0.0033843801777344107,
+        "null_std": 0.002864231732041163,
+        "null_p25": 0.00245699458693176,
+        "null_p75": 0.004733519251769392,
+        "p_two_sided_vs_bootstrap": 0.33
+      },
+      "intrinsic_dim_95pct": {
+        "observed": 3,
+        "null_median": 3.0,
+        "null_std": 0.40780572580580576,
+        "null_p25": 3.0,
+        "null_p75": 3.0,
+        "p_two_sided_vs_bootstrap": 1.0
+      },
+      "anisotropy_westin": {
+        "observed": 0.9957389215731183,
+        "null_median": 0.9932540704348585,
+        "null_std": 0.005626316536854498,
+        "null_p25": 0.9905775627854667,
+        "null_p75": 0.9950980548791012,
+        "p_two_sided_vs_bootstrap": 0.33
+      },
+      "linearity_westin": {
+        "observed": 0.9311883996303438,
+        "null_median": 0.8025632156191375,
+        "null_std": 0.05691415928770556,
+        "null_p25": 0.7624971461072139,
+        "null_p75": 0.836969192670391,
+        "p_two_sided_vs_bootstrap": 0.0004
+      },
+      "planarity_westin": {
+        "observed": 0.06667651226728913,
+        "null_median": 0.19347198083838468,
+        "null_std": 0.05613181169025575,
+        "null_p25": 0.15944643251481647,
+        "null_p75": 0.23279446043682833,
+        "p_two_sided_vs_bootstrap": 0.0004
+      },
+      "symmetry_score": {
+        "observed": 0.2120787025804852,
+        "null_median": 0.3124292354003141,
+        "null_std": 0.043834737502854895,
+        "null_p25": 0.28489241565568496,
+        "null_p75": 0.34451369360510375,
+        "p_two_sided_vs_bootstrap": 0.0
+      },
+      "regularity_NN_CV": {
+        "observed": 0.6466814669981851,
+        "null_median": 0.7336299664088656,
+        "null_std": 0.30074041446323324,
+        "null_p25": 0.5664544681313917,
+        "null_p75": 1.046403702136269,
+        "p_two_sided_vs_bootstrap": 0.7756
+      },
+      "logvol": {
+        "observed": -3.3682670360110096,
+        "null_median": -4.153459000157913,
+        "null_std": 0.1982773762479669,
+        "null_p25": -4.286103386041537,
+        "null_p75": -4.024196853511313,
+        "p_two_sided_vs_bootstrap": 0.0002
+      }
+    },
+    "quran_rank_in_8_corpora": {
+      "sphericity_log10": {
+        "rank_low": 5,
+        "rank_high": 4,
+        "out_of": 8
+      },
+      "isotropy": {
+        "rank_low": 4,
+        "rank_high": 5,
+        "out_of": 8
+      },
+      "intrinsic_dim_95pct": {
+        "rank_low": 6,
+        "rank_high": 1,
+        "out_of": 8
+      },
+      "anisotropy_westin": {
+        "rank_low": 5,
+        "rank_high": 4,
+        "out_of": 8
+      },
+      "linearity_westin": {
+        "rank_low": 8,
+        "rank_high": 1,
+        "out_of": 8
+      },
+      "planarity_westin": {
+        "rank_low": 1,
+        "rank_high": 8,
+        "out_of": 8
+      },
+      "symmetry_score": {
+        "rank_low": 1,
+        "rank_high": 8,
+        "out_of": 8
+      },
+      "regularity_NN_CV": {
+        "rank_low": 7,
+        "rank_high": 2,
+        "out_of": 8
+      },
+      "logvol": {
+        "rank_low": 8,
+        "rank_high": 1,
+        "out_of": 8
+      }
+    },
+    "bhl_alpha": 0.01,
+    "bhl_survivors_among_7_descriptors": [
+      "symmetry_score",
+      "linearity_westin",
+      "planarity_westin"
+    ],
+    "n_bhl_survivors": 3,
+    "seven_frozen_descriptors": [
+      "sphericity_log10",
+      "isotropy",
+      "intrinsic_dim_95pct",
+      "anisotropy_westin",
+      "linearity_westin",
+      "planarity_westin",
+      "symmetry_score"
+    ],
+    "radar_png": "C:\\Users\\mtj_2\\OneDrive\\Desktop\\Quran\\results\\experiments\\exp163_quran_geometric_shape\\frame_A_radar.png",
+    "radar_status": "ok"
+  },
+  "frame_B": {
+    "n_surahs": 114,
+    "orderings": [
+      "mushaf",
+      "nuzul",
+      "length_asc"
+    ],
+    "n_permutations": 10000,
+    "per_ordering": {
+      "mushaf": {
+        "descriptors": {
+          "arc_length": 264.82205776860417,
+          "mean_curvature_rad": 2.0556841558530707,
+          "curvature_variance": 0.3779688732044374,
+          "closure_ratio_0closed_1straight": 0.01621394269280976,
+          "smoothness_curvature_var": 0.3779688732044374
+        },
+        "p_values": {
+          "arc_length": {
+            "observed": 264.82205776860417,
+            "null_median": 324.42823848563864,
+            "null_std": 7.5380569388916525,
+            "p_two_sided_vs_random_orderings": 0.0
+          },
+          "mean_curvature_rad": {
+            "observed": 2.0556841558530707,
+            "null_median": 2.09515905135526,
+            "null_std": 0.041321191171350316,
+            "p_two_sided_vs_random_orderings": 0.3424
+          },
+          "curvature_variance": {
+            "observed": 0.3779688732044374,
+            "null_median": 0.23581086505974358,
+            "null_std": 0.03013793336183395,
+            "p_two_sided_vs_random_orderings": 0.0
+          },
+          "closure_ratio_0closed_1straight": {
+            "observed": 0.01621394269280976,
+            "null_median": 0.008153244138863945,
+            "null_std": 0.004240565576874849,
+            "p_two_sided_vs_random_orderings": 0.1542
+          },
+          "smoothness_curvature_var": {
+            "observed": 0.3779688732044374,
+            "null_median": 0.23581086505974358,
+            "null_std": 0.03013793336183395,
+            "p_two_sided_vs_random_orderings": 0.0
+          }
+        }
+      },
+      "nuzul": {
+        "descriptors": {
+          "arc_length": 275.0067566952383,
+          "mean_curvature_rad": 2.055388768306485,
+          "curvature_variance": 0.3104986475074126,
+          "closure_ratio_0closed_1straight": 0.011737117691821104,
+          "smoothness_curvature_var": 0.3104986475074126
+        },
+        "p_values": {
+          "arc_length": {
+            "observed": 275.0067566952383,
+            "null_median": 324.42823848563864,
+            "null_std": 7.5380569388916525,
+            "p_two_sided_vs_random_orderings": 0.0
+          },
+          "mean_curvature_rad": {
+            "observed": 2.055388768306485,
+            "null_median": 2.09515905135526,
+            "null_std": 0.041321191171350316,
+            "p_two_sided_vs_random_orderings": 0.3392
+          },
+          "curvature_variance": {
+            "observed": 0.3104986475074126,
+            "null_median": 0.23581086505974358,
+            "null_std": 0.03013793336183395,
+            "p_two_sided_vs_random_orderings": 0.0214
+          },
+          "closure_ratio_0closed_1straight": {
+            "observed": 0.011737117691821104,
+            "null_median": 0.008153244138863945,
+            "null_std": 0.004240565576874849,
+            "p_two_sided_vs_random_orderings": 0.3538
+          },
+          "smoothness_curvature_var": {
+            "observed": 0.3104986475074126,
+            "null_median": 0.23581086505974358,
+            "null_std": 0.03013793336183395,
+            "p_two_sided_vs_random_orderings": 0.0214
+          }
+        }
+      },
+      "length_asc": {
+        "descriptors": {
+          "arc_length": 273.95152801026893,
+          "mean_curvature_rad": 2.0389677969193167,
+          "curvature_variance": 0.328284517083793,
+          "closure_ratio_0closed_1straight": 0.019120795394882817,
+          "smoothness_curvature_var": 0.328284517083793
+        },
+        "p_values": {
+          "arc_length": {
+            "observed": 273.95152801026893,
+            "null_median": 324.42823848563864,
+            "null_std": 7.5380569388916525,
+            "p_two_sided_vs_random_orderings": 0.0
+          },
+          "mean_curvature_rad": {
+            "observed": 2.0389677969193167,
+            "null_median": 2.09515905135526,
+            "null_std": 0.041321191171350316,
+            "p_two_sided_vs_random_orderings": 0.1758
+          },
+          "curvature_variance": {
+            "observed": 0.328284517083793,
+            "null_median": 0.23581086505974358,
+            "null_std": 0.03013793336183395,
+            "p_two_sided_vs_random_orderings": 0.0056
+          },
+          "closure_ratio_0closed_1straight": {
+            "observed": 0.019120795394882817,
+            "null_median": 0.008153244138863945,
+            "null_std": 0.004240565576874849,
+            "p_two_sided_vs_random_orderings": 0.081
+          },
+          "smoothness_curvature_var": {
+            "observed": 0.328284517083793,
+            "null_median": 0.23581086505974358,
+            "null_std": 0.03013793336183395,
+            "p_two_sided_vs_random_orderings": 0.0056
+          }
+        }
+      }
+    },
+    "bhl_alpha": 0.01,
+    "bhl_survivors": [
+      "mushaf/arc_length",
+      "mushaf/curvature_variance",
+      "mushaf/smoothness_curvature_var",
+      "nuzul/arc_length",
+      "length_asc/arc_length"
+    ],
+    "n_bhl_survivors": 5,
+    "five_traj_descriptors": [
+      "arc_length",
+      "mean_curvature_rad",
+      "curvature_variance",
+      "closure_ratio_0closed_1straight",
+      "smoothness_curvature_var"
+    ],
+    "trajectory_png": "C:\\Users\\mtj_2\\OneDrive\\Desktop\\Quran\\results\\experiments\\exp163_quran_geometric_shape\\frame_B_trajectories.png",
+    "trajectory_status": "ok"
+  },
+  "frame_C": {
+    "names": [
+      "quran",
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hadith_bukhari",
+      "hindawi"
+    ],
+    "feat_names": [
+      "EL",
+      "VL_CV",
+      "CN",
+      "H_cond",
+      "T",
+      "F_universal_gap"
+    ],
+    "raw_means_per_corpus": [
+      [
+        0.7062633038455213,
+        0.4646185566096261,
+        0.08711735551761604,
+        0.8632501781636921,
+        -0.29247507943616413,
+        1.5750232534477622
+      ],
+      [
+        0.0996912825688848,
+        0.13854386391344586,
+        0.02686759416890009,
+        0.48631684556945076,
+        -2.29891645838517,
+        1.7145645955193265
+      ],
+      [
+        0.10063771006299896,
+        0.1343666300766454,
+        0.028567414337302872,
+        0.49028624795581566,
+        -2.2416541037197844,
+        1.7045593534906378
+      ],
+      [
+        0.09901059322055392,
+        0.13191473699711845,
+        0.02472377714150114,
+        0.4887008926804781,
+        -2.3052861873280204,
+        1.6925739715981596
+      ],
+      [
+        0.14428399246426826,
+        0.9824907590343452,
+        0.011311603251995882,
+        1.056972542427039,
+        -2.011939561521211,
+        1.5757922153694572
+      ],
+      [
+        0.13343039470568133,
+        0.34651806640957733,
+        0.03125068729528151,
+        0.9442172266051453,
+        -2.1225815085539304,
+        1.5997158180945088
+      ],
+      [
+        0.15700793201992325,
+        0.7021032743657278,
+        0.0,
+        0.12657225137690886,
+        -3.112845335024225,
+        1.493864215013864
+      ],
+      [
+        0.06525248915822204,
+        0.38111284692051395,
+        0.014216004461013532,
+        0.7715174910799834,
+        -2.6195511698595384,
+        1.639310094859057
+      ]
+    ],
+    "z_vectors_per_corpus": [
+      [
+        2.6197105230086177,
+        0.1911902804035434,
+        2.4206870114611982,
+        0.7277802705508626,
+        2.3999291681093964,
+        -0.6828330262702049
+      ],
+      [
+        -0.4475489114484637,
+        -0.9545982187574991,
+        -0.046652782927684315,
+        -0.5799538000857097,
+        -0.2268256025115516,
+        1.2458961287512695
+      ],
+      [
+        -0.4427631010936744,
+        -0.9692765320265755,
+        0.022958014707356963,
+        -0.5661823389496277,
+        -0.15185996191402817,
+        1.1076044818651352
+      ],
+      [
+        -0.45099096078863626,
+        -0.9778921987882772,
+        -0.13444607779195755,
+        -0.5716825771306168,
+        -0.235164603124148,
+        0.9419435017791489
+      ],
+      [
+        -0.22205646317043293,
+        2.0109328941804314,
+        -0.683699545790053,
+        1.3998814462358438,
+        0.14887335426049128,
+        -0.6722044967214925
+      ],
+      [
+        -0.2769399707426446,
+        -0.22380108951114008,
+        0.13284303334020423,
+        1.0086876849125177,
+        0.004025233977395396,
+        -0.3415343929088607
+      ],
+      [
+        -0.15771517759085088,
+        1.025683923812366,
+        -1.1469307390300068,
+        -1.8280531902750665,
+        -1.2923895318089467,
+        -1.8046066977652735
+      ],
+      [
+        -0.6216959381739154,
+        -0.10223905931284838,
+        -0.5647589139690582,
+        0.4095225047417953,
+        -0.64658805698861,
+        0.20573450127024728
+      ]
+    ],
+    "svd_var_explained": [
+      0.5117928702068509,
+      0.31861456145780614,
+      0.14857011512344517,
+      0.01992988827767877,
+      0.000944825962829235,
+      0.00014773897138971458
+    ],
+    "embedding_2d": [
+      [
+        -4.347078881943369,
+        0.07920180525209036
+      ],
+      [
+        0.8002562510227101,
+        1.527117203546622
+      ],
+      [
+        0.699450689049452,
+        1.4710403378460204
+      ],
+      [
+        0.8163076311068759,
+        1.3202035899254625
+      ],
+      [
+        -0.29504065377166744,
+        -2.125478365690645
+      ],
+      [
+        -0.27303959922804155,
+        -0.12771594798452668
+      ],
+      [
+        1.7079762726927696,
+        -2.1245896121907752
+      ],
+      [
+        0.8911682910712715,
+        -0.01977901070424985
+      ]
+    ],
+    "embedding_3d": [
+      [
+        -4.347078881943369,
+        0.07920180525209036,
+        -0.7807313219609681
+      ],
+      [
+        0.8002562510227101,
+        1.527117203546622,
+        -0.08129360282475345
+      ],
+      [
+        0.699450689049452,
+        1.4710403378460204,
+        -0.12489419107449033
+      ],
+      [
+        0.8163076311068759,
+        1.3202035899254625,
+        -0.1600204610188738
+      ],
+      [
+        -0.29504065377166744,
+        -2.125478365690645,
+        1.46774562290297
+      ],
+      [
+        -0.27303959922804155,
+        -0.12771594798452668,
+        0.7945443700703422
+      ],
+      [
+        1.7079762726927696,
+        -2.1245896121907752,
+        -1.7959056242058657
+      ],
+      [
+        0.8911682910712715,
+        -0.01977901070424985,
+        0.6805552081116393
+      ]
+    ],
+    "pairwise_z_distances": [
+      [
+        0.0,
+        5.398025802269207,
+        5.278841324796288,
+        5.347605837320354,
+        5.152029106481779,
+        4.442159540408749,
+        6.523974847296988,
+        5.447734525193604
+      ],
+      [
+        5.398025802269207,
+        0.0,
+        0.17325732313256711,
+        0.3174701109334587,
+        4.122021048253205,
+        2.385875130949717,
+        4.149081658384637,
+        1.8062329234948729
+      ],
+      [
+        5.278841324796288,
+        0.17325732313256711,
+        0.0,
+        0.24358048344373853,
+        4.068573691973312,
+        2.2803124628023776,
+        4.099251021243925,
+        1.771809080991934
+      ],
+      [
+        5.347605837320354,
+        0.3174701109334587,
+        0.24358048344373853,
+        0.0,
+        3.990888300200318,
+        2.2073713023939465,
+        3.919844744289125,
+        1.6294520890374131
+      ],
+      [
+        5.152029106481779,
+        4.122021048253205,
+        4.068573691973312,
+        3.990888300200318,
+        0.0,
+        2.4386771445202453,
+        3.8689241324053776,
+        2.650226568217896
+      ],
+      [
+        4.442159540408749,
+        2.385875130949717,
+        2.2803124628023776,
+        2.2073713023939465,
+        2.4386771445202453,
+        0.0,
+        3.883506001722612,
+        1.3046387588914146
+      ],
+      [
+        6.523974847296988,
+        4.149081658384637,
+        4.099251021243925,
+        3.919844744289125,
+        3.8689241324053776,
+        3.883506001722612,
+        0.0,
+        3.360310805312212
+      ],
+      [
+        5.447734525193604,
+        1.8062329234948729,
+        1.771809080991934,
+        1.6294520890374131,
+        2.650226568217896,
+        1.3046387588914146,
+        3.360310805312212,
+        0.0
+      ]
+    ],
+    "quran_nearest": "arabic_bible",
+    "quran_farthest": "hadith_bukhari",
+    "polytope_2d_png": "C:\\Users\\mtj_2\\OneDrive\\Desktop\\Quran\\results\\experiments\\exp163_quran_geometric_shape\\frame_C_polytope_2d.png",
+    "polytope_2d_status": "ok",
+    "polytope_3d_png": "C:\\Users\\mtj_2\\OneDrive\\Desktop\\Quran\\results\\experiments\\exp163_quran_geometric_shape\\frame_C_polytope_3d.png",
+    "polytope_3d_status": "ok"
+  }
+}

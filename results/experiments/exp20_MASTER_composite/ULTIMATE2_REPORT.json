@@ -1,0 +1,253 @@
+{
+  "schema": "QSF_ULTIMATE_2",
+  "schema_version": 3,
+  "generated_at": "2026-04-20T05:36:27+00:00",
+  "fast_mode": true,
+  "force_rerun": false,
+  "project_root": "C:\\Users\\mtj_2\\OneDrive\\Desktop\\Quran",
+  "n_corpora": 9,
+  "r_experiments": [
+    "R1",
+    "R10",
+    "R11",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "per_experiment": {
+    "R1": {
+      "runtime_seconds": 112.15,
+      "cache_hit": true,
+      "verdict_expected": "At least 3 of 9 channels fire (|z|>2) on every genuine single-letter canonical variant; headline rate >= 0.80.",
+      "schema_version": 3
+    },
+    "R2": {
+      "runtime_seconds": 1.08,
+      "cache_hit": true,
+      "verdict_expected": "log_amp_median > 0 (bootstrap 95% CI excludes 0)",
+      "schema_version": 3
+    },
+    "R3": {
+      "runtime_seconds": 1175.54,
+      "cache_hit": true,
+      "verdict_expected": "Quran |z| > every other scripture; p_one_sided < 0.05",
+      "schema_version": 3
+    },
+    "R4": {
+      "runtime_seconds": 75.61,
+      "cache_hit": true,
+      "verdict_expected": "AUC > 0.90 with AUC_ci95 lower bound > 0.80",
+      "schema_version": 3
+    },
+    "R5": {
+      "runtime_seconds": 1857.88,
+      "cache_hit": true,
+      "verdict_expected": "no strategy below real Quran path length",
+      "schema_version": 3
+    },
+    "R6": {
+      "runtime_seconds": 6.78,
+      "cache_hit": true,
+      "verdict_expected": "quran rank 1 (informative; not an assertion)",
+      "schema_version": 3
+    },
+    "R7": {
+      "runtime_seconds": 12.23,
+      "cache_hit": true,
+      "verdict_expected": "log_ratio_mean > 0 with ci95 lower bound > 0 at every rate",
+      "schema_version": 3
+    },
+    "R8": {
+      "runtime_seconds": 2734.01,
+      "cache_hit": true,
+      "verdict_expected": "Quran rate decreases slowly; controls crash fast",
+      "schema_version": 3
+    },
+    "R9": {
+      "runtime_seconds": 4.98,
+      "cache_hit": true,
+      "verdict_expected": "VIS_log > 0 at every scale; VIS > 1",
+      "schema_version": 3
+    },
+    "R10": {
+      "runtime_seconds": 50.47,
+      "cache_hit": true,
+      "verdict_expected": "Quran sig_rate_calibrated above all Arabic controls",
+      "schema_version": 3
+    },
+    "R11": {
+      "runtime_seconds": 0.53,
+      "cache_hit": true,
+      "verdict_expected": "AUC > 0.90 when H_nano_ln, RST, VL_CV all available; otherwise null-return and skip",
+      "schema_version": 3
+    }
+  },
+  "TDL": {
+    "statement": "Under the (optimistic) independence assumption, the probability that at least one of the 6 edit-detection channels (R1, R2, R4, R7, R9, R11) fires on a random single-letter edit is bounded above by P_detect_upper. A correlation-pessimistic lower bound is P_detect_lower = max(edit_detection_rate_k). Corpus-authenticity channels (R3, R5, R6, R8, R10) are reported separately as ``structural_signature_score`` and DO NOT enter the P_detect composite (audit-round-2 F-ULT2-MASTER-R3). All rates are null-calibrated so an uninformative channel contributes r=0 (F-ULT2-M1).",
+    "N_edit_detection_channels": 5,
+    "N_corpus_authenticity_channels": 5,
+    "N_channels": 10,
+    "expected_fired": 1.5334865899234942,
+    "P_detect_upper": 0.9909742126296973,
+    "P_detect_lower": 0.9810477628254153,
+    "P_detect": 0.9909742126296973,
+    "P_detect_is_upper_bound": true,
+    "structural_signature_score": 0.34032423874056394,
+    "edit_detection_rates": {
+      "R1_nine_channel": 0.4944,
+      "R2_sliding_window": 0.981,
+      "R4_char_lm": 0.058,
+      "R7_noise_curve": 0.0,
+      "R9_VIS": 0.0
+    },
+    "corpus_authenticity_rates": {
+      "R3_cross_scripture": 0.9601,
+      "R5_adversarial": 0.0,
+      "R6_word_graph": 0.1429,
+      "R8_null_ladder": 0.5987,
+      "R10_verse_internal": 0.0
+    },
+    "raw_rates_for_reference": {
+      "R1_nine_channel": 0.5,
+      "R2_sliding_window": 2.3247,
+      "R4_char_lm": 0.529,
+      "R7_noise_curve": 0.0,
+      "R9_VIS": -0.7231,
+      "R3_cross_scripture": 0.998,
+      "R5_adversarial": 0.0,
+      "R6_word_graph": 0.5714,
+      "R8_null_ladder": 0.6188,
+      "R10_verse_internal": 0.025
+    },
+    "channel_rates": {
+      "R1_nine_channel": 0.4944,
+      "R2_sliding_window": 0.981,
+      "R4_char_lm": 0.058,
+      "R7_noise_curve": 0.0,
+      "R9_VIS": 0.0,
+      "R3_cross_scripture": 0.9601,
+      "R5_adversarial": 0.0,
+      "R6_word_graph": 0.1429,
+      "R8_null_ladder": 0.5987,
+      "R10_verse_internal": 0.0
+    },
+    "per_channel_notes": {
+      "R1_nine_channel": "fraction of single-letter canonical variants with >=3 of 9 channels firing, calibrated above 0.011 null baseline (Bin(9, 0.0456).sf(2))",
+      "R2_sliding_window": "tanh(log_amp CI lower bound); 0 if CI includes 0",
+      "R4_char_lm": "2*AUC - 1 (Gini); 0 at AUC=0.5 (random baseline)",
+      "R7_noise_curve": "fraction of (corpus, rate) log-ratio CIs excluding zero, calibrated above the alpha=0.05 type-I baseline",
+      "R9_VIS": "tanh(VIS_log); 0 if VIS_log <= 0",
+      "R11_symbolic": "skipped (features missing) - excluded from composite",
+      "R3_cross_scripture": "max(0, 1 - p/0.05); 0 if p >= 0.05",
+      "R5_adversarial": "1 - mean(fraction of forgeries below real), calibrated above 0.5 null",
+      "R6_word_graph": "fraction of controls whose Q < Quran's Q, calibrated above 0.5 null",
+      "R8_null_ladder": "mean of per-null-rung sig_rates (Quran); calibrated above 0.05 type-I baseline",
+      "R10_verse_internal": "sig_rate_calibrated = (sig_rate - 0.05) / 0.95 on verses with >= 5 words"
+    },
+    "benjamini_hochberg_p_values": {
+      "R3_cross_scripture": {
+        "p": 0.001996007984031936,
+        "reject_BH_0.05": true
+      }
+    }
+  },
+  "coverage": {
+    "expected_edit_detection": [
+      "R1_nine_channel",
+      "R2_sliding_window",
+      "R4_char_lm",
+      "R7_noise_curve",
+      "R9_VIS",
+      "R11_symbolic"
+    ],
+    "expected_corpus_authenticity": [
+      "R3_cross_scripture",
+      "R5_adversarial",
+      "R6_word_graph",
+      "R8_null_ladder",
+      "R10_verse_internal"
+    ],
+    "present_edit_detection": [
+      "R1_nine_channel",
+      "R2_sliding_window",
+      "R4_char_lm",
+      "R7_noise_curve",
+      "R9_VIS"
+    ],
+    "present_corpus_authenticity": [
+      "R10_verse_internal",
+      "R3_cross_scripture",
+      "R5_adversarial",
+      "R6_word_graph",
+      "R8_null_ladder"
+    ],
+    "missing_edit_detection": [
+      "R11_symbolic"
+    ],
+    "missing_corpus_authenticity": [],
+    "expected_channels": [
+      "R1_nine_channel",
+      "R2_sliding_window",
+      "R4_char_lm",
+      "R7_noise_curve",
+      "R9_VIS",
+      "R11_symbolic",
+      "R3_cross_scripture",
+      "R5_adversarial",
+      "R6_word_graph",
+      "R8_null_ladder",
+      "R10_verse_internal"
+    ],
+    "present_channels": [
+      "R10_verse_internal",
+      "R1_nine_channel",
+      "R2_sliding_window",
+      "R3_cross_scripture",
+      "R4_char_lm",
+      "R5_adversarial",
+      "R6_word_graph",
+      "R7_noise_curve",
+      "R8_null_ladder",
+      "R9_VIS"
+    ],
+    "missing_channels": [
+      "R11_symbolic"
+    ],
+    "coverage_ok": false,
+    "position_scale_matrix": {
+      "letter_swap": [
+        "R1",
+        "R2",
+        "R4",
+        "R7",
+        "R9_L1"
+      ],
+      "word_order": [
+        "R9_L2",
+        "R10"
+      ],
+      "verse_order": [
+        "R3",
+        "R5",
+        "R6",
+        "R8",
+        "R9_L3"
+      ],
+      "verse_block": [
+        "R8",
+        "R9_L4"
+      ],
+      "adversarial": [
+        "R5"
+      ],
+      "symbolic_closure": [
+        "R11"
+      ]
+    }
+  }
+}

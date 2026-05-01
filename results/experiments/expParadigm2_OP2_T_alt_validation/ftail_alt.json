@@ -1,0 +1,26 @@
+{
+  "experiment": "expParadigm2_OP2_T_alt_validation::ftail_alt",
+  "canonical": {
+    "T2": 3557.3394545046367,
+    "F": 710.3626980606929,
+    "df1": 5,
+    "df2": 2571,
+    "highprec_log10_p_F_tail": -480.2531098456137,
+    "sigma_equivalent": 47.028154367241385
+  },
+  "alt_T_alt": {
+    "T2": 3867.7881019895403,
+    "F": 772.3559774924356,
+    "df1": 5,
+    "df2": 2571,
+    "highprec_log10_p_F_tail": -507.8017727318584,
+    "highprec_dps": 80,
+    "sigma_equivalent": 48.358180116466905
+  },
+  "comparison": {
+    "delta_log10_p_alt_minus_canon": -27.5486628862447,
+    "delta_sigma_alt_minus_canon": 1.3300257492255199,
+    "T2_ratio_alt_over_canon": 1.0872698969146126
+  },
+  "interpretation": "Hotelling T-squared under T_alt produces a deeper F-tail log10 p-value than the canonical T. The sigma gain is the increase in the chi-squared-df1 tail equivalent when the F-tail probability is mapped to a one-tailed normal sigma."
+}

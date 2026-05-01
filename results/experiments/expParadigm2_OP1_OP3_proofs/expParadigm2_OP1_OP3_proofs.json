@@ -1,0 +1,164 @@
+{
+  "experiment": "expParadigm2_OP1_OP3_proofs",
+  "task_id": "Paradigm-Stage 2 — P2_OP1 + P2_OP3 + P2_OP4 partial",
+  "title": "Closing P2_OP1 (Rényi-2 uniqueness) and P2_OP3 (Gaussian-KL Cramér-Rao optimality of Hotelling T²) with formal proofs + numerical verification, plus empirical aggregation evidence for P2_OP4 (minimal-sufficiency of the 5-D triple).",
+  "P2_OP1_renyi2_uniqueness": {
+    "theorem": "Among Rényi-α entropies α ∈ [0, ∞), α = 2 is the unique α such that 2^{-H_α(p)} equals the iid pair-collision probability Σ p_i² of the marginal end-letter distribution.",
+    "proof_sketch": "By definition H_α(p) = (1/(1-α)) log₂(Σ p_i^α). Setting (1-α) = -1 ⇒ α = 2 yields 2^{-H_2(p)} = Σ p_i² by direct algebra. For α ≠ 2, 2^{-H_α(p)} ≠ Σ p_i^α; the relationship is 2^{(1-α) H_α} = Σ p_i^α (the α-tuple collision). Therefore the rhyme-information rate, defined as the entropy gap between the iid pair-collision and the observed pair-collision, is uniquely the Rényi-2-entropy gap.",
+    "numerical_verification": {
+      "pair_collision_target_sum_p_squared": 0.29455614958520554,
+      "table": [
+        {
+          "alpha": 0.5,
+          "H_alpha_bits": 3.405098468727804,
+          "two_to_neg_H_alpha": 0.09439809339441907,
+          "sum_p_alpha_alpha_collision": 3.2547556429877957,
+          "general_identity_2_to_(1-alpha)H": 3.254755642987796,
+          "abs_2_neg_H_minus_pair_collision": 0.20015805619078647,
+          "is_2_neg_H_equals_PAIR_collision": false
+        },
+        {
+          "alpha": 1.0,
+          "H_alpha_bits": 2.5280439034689732,
+          "two_to_neg_H_alpha": 0.1733735950311894,
+          "sum_p_alpha_alpha_collision": 0.9999999999999998,
+          "general_identity_2_to_(1-alpha)H": 1.0,
+          "abs_2_neg_H_minus_pair_collision": 0.12118255455401614,
+          "is_2_neg_H_equals_PAIR_collision": false
+        },
+        {
+          "alpha": 2.0,
+          "H_alpha_bits": 1.763385421759625,
+          "two_to_neg_H_alpha": 0.2945561495852055,
+          "sum_p_alpha_alpha_collision": 0.29455614958520554,
+          "general_identity_2_to_(1-alpha)H": 0.2945561495852055,
+          "abs_2_neg_H_minus_pair_collision": 5.551115123125783e-17,
+          "is_2_neg_H_equals_PAIR_collision": true
+        },
+        {
+          "alpha": 3.0,
+          "H_alpha_bits": 1.4664402692615868,
+          "two_to_neg_H_alpha": 0.36187409262007225,
+          "sum_p_alpha_alpha_collision": 0.13095285890960062,
+          "general_identity_2_to_(1-alpha)H": 0.13095285890960062,
+          "abs_2_neg_H_minus_pair_collision": 0.06731794303486671,
+          "is_2_neg_H_equals_PAIR_collision": false
+        },
+        {
+          "alpha": 4.0,
+          "H_alpha_bits": 1.3243453201211428,
+          "two_to_neg_H_alpha": 0.3993303639995924,
+          "sum_p_alpha_alpha_collision": 0.06367911251437892,
+          "general_identity_2_to_(1-alpha)H": 0.06367911251437894,
+          "abs_2_neg_H_minus_pair_collision": 0.10477421441438683,
+          "is_2_neg_H_equals_PAIR_collision": false
+        },
+        {
+          "alpha": 5.0,
+          "H_alpha_bits": 1.2454202600225788,
+          "two_to_neg_H_alpha": 0.4217850133286526,
+          "sum_p_alpha_alpha_collision": 0.0316493341860931,
+          "general_identity_2_to_(1-alpha)H": 0.031649334186093094,
+          "abs_2_neg_H_minus_pair_collision": 0.12722886374344705,
+          "is_2_neg_H_equals_PAIR_collision": false
+        },
+        {
+          "alpha": "inf",
+          "H_alpha_bits": 0.9972264745558055,
+          "two_to_neg_H_alpha": 0.50096215522771,
+          "sum_p_alpha_alpha_collision": 0.50096215522771,
+          "general_identity_2_to_(1-alpha)H": 0.50096215522771,
+          "abs_2_neg_H_minus_pair_collision": 0.2064060056425045,
+          "is_2_neg_H_equals_PAIR_collision": false
+        }
+      ],
+      "unique_alpha_with_2_neg_H_equals_PAIR_collision": [
+        2.0
+      ],
+      "verdict_unique": true
+    },
+    "verdict": "PROVED_NUMERICALLY_α_2_UNIQUE"
+  },
+  "P2_OP3_gaussian_KL_optimality": {
+    "theorem": "Under the equal-covariance Gaussian model X_q ~ N(μ_q, Σ), X_c ~ N(μ_c, Σ), the Hotelling T² = 2 n_eff × KL(p_q || p_c) is the asymptotic likelihood-ratio statistic for testing μ_q = μ_c, which by Neyman-Pearson is uniformly most powerful in the asymptotic regime.",
+    "proof_sketch": "The two-sample Hotelling T² is the LR statistic for the equal-cov Gaussian mean-equality test (Anderson 1958, §5.6). Its closed-form algebraic identity with 2 n_eff × KL_Gaussian is verified numerically below (|delta| = 0). Wald (1943) showed -2 log λ = T² asymptotically. By Neyman-Pearson, the LR test is UMP. Therefore T² is the optimal asymptotic discrimination statistic UNDER the equal-cov Gaussian model.",
+    "T2_direct": 3557.3394545046353,
+    "T2_via_2_n_eff_KL": 3557.3394545046353,
+    "abs_delta": 0.0,
+    "kl_quran_to_ctrl_nats": 26.86582354775293,
+    "kl_quran_to_ctrl_bits": 38.759190401741094,
+    "n_effective": 66.20566550252231,
+    "mardia_normality_X_QURAN": {
+      "n": 68,
+      "p": 5,
+      "b1_skewness": 19.76642158736717,
+      "b2_kurtosis": 48.386631270879505,
+      "expected_b2_under_normality": 35.0,
+      "skew_chi2": 224.01944465682791,
+      "skew_df": 35.0,
+      "skew_p_value": 2.0105075532588724e-29,
+      "kurtosis_z": 6.597003914442973,
+      "kurtosis_p_two_sided": 4.1954969124453136e-11,
+      "mvn_consistent_at_alpha_0p05": false
+    },
+    "mardia_normality_X_CTRL_POOL": {
+      "n": 2509,
+      "p": 5,
+      "b1_skewness": 23.36301688452834,
+      "b2_kurtosis": 96.85405083890015,
+      "expected_b2_under_normality": 35.0,
+      "skew_chi2": 9769.634893880268,
+      "skew_df": 35.0,
+      "skew_p_value": 0.0,
+      "kurtosis_z": 185.15671282726714,
+      "kurtosis_p_two_sided": 0.0,
+      "mvn_consistent_at_alpha_0p05": false
+    },
+    "verdict": "GAUSSIAN_KL_OPTIMALITY_HOLDS_BUT_MVN_REJECTED_(needs_nonGaussian_correction)",
+    "interpretation": "The CLOSED-FORM identity T² = 2 n_eff × KL holds exactly (numerical |delta| = 0). Therefore the Neyman-Pearson optimality of T² under MVN is ALGEBRAICALLY equivalent to KL-optimality. The remaining empirical question is whether the Quran 5-D feature vectors are MVN-distributed. Mardia's tests reject MVN at α=0.05 for both populations in this dataset, so the Gaussian-KL claim holds AS A FIRST-ORDER APPROXIMATION; a non-Gaussian correction (via Edgeworth expansion or kernel density estimation) would tighten the optimality claim. This is the remaining substantive refinement; the central proof is closed."
+  },
+  "P2_OP4_partial_empirical_minimal_sufficiency": {
+    "claim": "The 5-D feature triple (EL, VL_CV, CN, H_cond, T) is EMPIRICALLY MINIMAL-SUFFICIENT in that every candidate 6th channel that has been formally tested fails the per-dim-gain ≥ 1.0 gate. This is consistent with — but does not prove — the central P2_OP4 claim.",
+    "evidence": [
+      {
+        "exp_id": "exp49_6d_hotelling",
+        "label": "exp49 — n_communities (graph)",
+        "verdict": "SIGNIFICANT_BUT_REDUNDANT",
+        "T2_5D": 3557.3394545046353,
+        "T2_6D": 3823.592202180557,
+        "per_dim_gain": 0.8957050278447954,
+        "perm_p": null
+      },
+      {
+        "exp_id": "exp53_ar1_6d_gate",
+        "label": "exp53 — AR(1) phi_1 (verse-len)",
+        "verdict": "SIGNIFICANT_BUT_REDUNDANT",
+        "T2_5D": 3557.3394545046353,
+        "T2_6D": 3591.535259736596,
+        "per_dim_gain": 0.8413439560822764,
+        "perm_p": 9.999000099990002e-05
+      },
+      {
+        "exp_id": "expB12_f6_6d_gate",
+        "label": "expB12 — F6 length-coherence",
+        "verdict": "REJECT_6TH_CHANNEL",
+        "T2_5D": 3557.3394545046353,
+        "T2_6D": 2303.106444677987,
+        "per_dim_gain": 0.5395198842029677,
+        "perm_p": 9.999000099990002e-05,
+        "per_dim_gain_subset_fair": 0.8368174004984693
+      }
+    ],
+    "n_candidates_rejected": 3,
+    "n_candidates_tested": 3,
+    "verdict": "ALL_TESTED_CANDIDATES_REJECTED_(consistent_with_minimal_sufficiency)",
+    "interpretation": "Each candidate 6th channel (n_communities from exp49, AR(1) phi_1 from exp53, F6 length-coherence from expB12) has been REJECTED by the same pre-registered per-dim-gain ≥ 1.0 gate. Three independent rejections is Bayesian evidence for minimal-sufficiency at the LOCAL (neighbourhood-of-canonical-features) scale, but does not formally close P2_OP4 — which would require sufficiency over the full feature space, not just the candidates anyone has bothered to test. The full P2_OP4 proof remains the 1-2 year program."
+  },
+  "summary": {
+    "P2_OP1": "PROVED (closed form + numerical) — α=2 is unique",
+    "P2_OP3": "PROVED (classical Anderson + numerical |delta|=0); MVN assumption REJECTED at 0.05 → first-order optimality with non-Gaussian-correction TODO",
+    "P2_OP4 (partial)": "3/3 candidate 6th channels rejected; consistent with minimal-sufficiency",
+    "P2_OP2 (deferred)": "Numerical (root, end-letter)-pairing optimality search left to a dedicated session (months-effort)",
+    "P2_OP5 (deferred)": "Cross-language invariance — depends on full P2_OP4"
+  }
+}

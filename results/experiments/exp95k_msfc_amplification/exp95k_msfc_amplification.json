@@ -1,0 +1,132 @@
+{
+  "experiment": "exp95k_msfc_amplification",
+  "schema_version": "1.0",
+  "hypothesis": "H44",
+  "verdict": "FAIL_audit_quran_drift",
+  "prereg_hash_expected": "a6331765ac99eb9388fb82b811326310c86b77e971d0522050a8107dab3ac822",
+  "prereg_hash_actual": "a6331765ac99eb9388fb82b811326310c86b77e971d0522050a8107dab3ac822",
+  "frozen_constants": {
+    "TAU_HIGH": 2.0,
+    "EPS_TOP1": 0.05,
+    "MIN_UNITS_PER_CORPUS": 20,
+    "ARABIC_POOL": [
+      "quran",
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "QURAN_REPRO_TARGET": 73.5,
+    "QURAN_REPRO_TOL": 0.5
+  },
+  "per_corpus": {
+    "quran": {
+      "n_units": 114,
+      "n_peer_units": 4719,
+      "safety_margin": 55.0,
+      "delta_p05": 66.65,
+      "delta_median": 458.0,
+      "delta_max": 7661.0
+    },
+    "poetry_jahili": {
+      "n_units": 133,
+      "n_peer_units": 4700,
+      "safety_margin": 39.0,
+      "delta_p05": 69.6,
+      "delta_median": 160.0,
+      "delta_max": 578.0
+    },
+    "poetry_islami": {
+      "n_units": 465,
+      "n_peer_units": 4368,
+      "safety_margin": 11.0,
+      "delta_p05": 69.0,
+      "delta_median": 148.0,
+      "delta_max": 981.0
+    },
+    "poetry_abbasi": {
+      "n_units": 2823,
+      "n_peer_units": 2010,
+      "safety_margin": 11.0,
+      "delta_p05": 70.0,
+      "delta_median": 151.0,
+      "delta_max": 2997.0
+    },
+    "ksucca": {
+      "n_units": 41,
+      "n_peer_units": 4792,
+      "safety_margin": 427.0,
+      "delta_p05": 592.0,
+      "delta_median": 1968.0,
+      "delta_max": 32240.0
+    },
+    "arabic_bible": {
+      "n_units": 1183,
+      "n_peer_units": 3650,
+      "safety_margin": 84.0,
+      "delta_p05": 178.2,
+      "delta_median": 491.0,
+      "delta_max": 1991.0
+    },
+    "hindawi": {
+      "n_units": 74,
+      "n_peer_units": 4759,
+      "safety_margin": 100.0,
+      "delta_p05": 229.45000000000002,
+      "delta_median": 382.5,
+      "delta_max": 505.0
+    }
+  },
+  "ranking": [
+    {
+      "rank": 1,
+      "corpus": "ksucca",
+      "safety_margin": 427.0
+    },
+    {
+      "rank": 2,
+      "corpus": "hindawi",
+      "safety_margin": 100.0
+    },
+    {
+      "rank": 3,
+      "corpus": "arabic_bible",
+      "safety_margin": 84.0
+    },
+    {
+      "rank": 4,
+      "corpus": "quran",
+      "safety_margin": 55.0
+    },
+    {
+      "rank": 5,
+      "corpus": "poetry_jahili",
+      "safety_margin": 39.0
+    },
+    {
+      "rank": 6,
+      "corpus": "poetry_islami",
+      "safety_margin": 11.0
+    },
+    {
+      "rank": 7,
+      "corpus": "poetry_abbasi",
+      "safety_margin": 11.0
+    }
+  ],
+  "quran_rank": null,
+  "quran_safety_margin": null,
+  "next_corpus": null,
+  "next_safety_margin": null,
+  "margin_ratio_quran_over_next": null,
+  "audit": {
+    "quran_drift_value": 55.0,
+    "quran_drift_target": 73.5,
+    "quran_drift_tol": 0.5,
+    "quran_drift_violated": true
+  },
+  "wall_time_s": 57.43,
+  "ts_utc": "2026-04-27T00:41:21Z"
+}

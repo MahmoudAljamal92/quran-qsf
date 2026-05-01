@@ -1,0 +1,153 @@
+{
+  "experiment": "exp108_F55_y28_bigram",
+  "hypothesis_id": "H63",
+  "hypothesis": "F55 analytic-bound bigram-shift detector (frozen tau = 2.0, no calibration) generalises off-shelf to Avestan Yasna 28 (Ahunavaiti Gatha, ch. 1) with per-variant recall = 1.000 and per-(canon, peer)-pair FPR = 0.000 against the full 72-yasna peer pool of all other Yasna chapters.",
+  "verdict": "PASS_universal_perfect_recall_zero_fpr",
+  "verdict_reason": "variant recall = 1.000000 >= 1.0 AND peer FPR = 0.000000 <= 0.0. F55 detector generalises off-shelf to Avestan Yasna 28.",
+  "started_at_utc": "2026-04-28T23:24:43.941703+00:00",
+  "completed_at_utc": "2026-04-28T23:24:44.358534+00:00",
+  "wall_time_s": 0.41683006286621094,
+  "prereg_hash": "585acd8d8bdd6302e6536911981e8126b3f824ef185ac8c43a48ee8c736eb62b",
+  "prereg_expected_hash": "585acd8d8bdd6302e6536911981e8126b3f824ef185ac8c43a48ee8c736eb62b",
+  "prereg_document": "experiments/exp108_F55_y28_bigram/PREREG.md",
+  "amendment_chain": [
+    "exp95j_bigram_shift_universal (F55 PASS_universal_perfect_recall_zero_fpr on Quran V1)",
+    "exp105_F55_psalm78_bigram (F59 PASS on Hebrew Psalm 78)",
+    "exp106_F55_mark1_bigram (F60 PASS on Greek NT Mark 1)",
+    "exp107_F55_dn1_bigram (F61 PASS on Pali Digha Nikaya 1)",
+    "exp108_F55_y28_bigram (this run; F55 -> Avestan Yasna 28)"
+  ],
+  "frozen_constants": {
+    "SEED": 42,
+    "TAU_HIGH": 2.0,
+    "AUDIT_TOL": 1e-09,
+    "RECALL_FLOOR": 1.0,
+    "FPR_CEIL": 0.0,
+    "PARTIAL_FPR_BAND_HI": 0.05,
+    "TARGET_YASNA": 28,
+    "TARGET_MIN_LETTERS": 1000,
+    "TARGET_MIN_VERSES": 10,
+    "ALPHABET_COVERAGE_FLOOR": 18,
+    "N_YASNAS_EXPECTED": 73,
+    "PEER_AUDIT_FLOOR_F55": 50,
+    "PEER_POOL_STRATEGY": "all_other_yasna_chapters_no_length_matching",
+    "AVESTAN_ALPHABET_26": "abcdefghijklmnopqrstuvwxyz",
+    "N_SUBSTITUTIONS_PER_POS": 25,
+    "calibration_source": "frozen_analytic_theorem_no_data_calibration"
+  },
+  "audit_report": {
+    "ok": true,
+    "checks": {
+      "normaliser_sentinel": "OK",
+      "n_yasnas_total": 73,
+      "corpus_complete": true,
+      "target_yasna": 28,
+      "target_n_verses": 13,
+      "target_n_letters": 1658,
+      "target_n_distinct_chars": 24,
+      "alphabet_coverage_ok": true,
+      "peer_pool_size": 72,
+      "peer_pool_strategy": "all_other_yasna_chapters_no_length_matching",
+      "max_variant_delta": 2.0,
+      "n_variants_total": 41450,
+      "n_variants_fired": 41450,
+      "n_variants_zero_delta": 0,
+      "n_variants_above_tau": 0,
+      "variant_recall": 1.0,
+      "min_peer_delta": 291.0,
+      "n_peer_pairs_total": 72,
+      "n_peer_pairs_fired": 0,
+      "peer_fpr": 0.0,
+      "five_closest_peers": [
+        {
+          "yasna": 50,
+          "n_letters": 1466,
+          "delta": 291.0
+        },
+        {
+          "yasna": 33,
+          "n_letters": 1841,
+          "delta": 300.5
+        },
+        {
+          "yasna": 30,
+          "n_letters": 1471,
+          "delta": 329.5
+        },
+        {
+          "yasna": 45,
+          "n_letters": 1708,
+          "delta": 330.0
+        },
+        {
+          "yasna": 53,
+          "n_letters": 1757,
+          "delta": 339.5
+        }
+      ],
+      "sentinel_determinism": "OK"
+    },
+    "warnings": [],
+    "errors": []
+  },
+  "pre_stage_diagnostic_receipt": "results/auxiliary/_y28_bigram_sizing.json",
+  "yasna_28": {
+    "yasna": 28,
+    "n_verses": 13,
+    "n_letters": 1658,
+    "source_file": "y28to34.htm"
+  },
+  "peers_n": 72,
+  "peer_records_top10_closest": [
+    {
+      "yasna": 50,
+      "n_letters": 1466,
+      "delta": 291.0
+    },
+    {
+      "yasna": 33,
+      "n_letters": 1841,
+      "delta": 300.5
+    },
+    {
+      "yasna": 30,
+      "n_letters": 1471,
+      "delta": 329.5
+    },
+    {
+      "yasna": 45,
+      "n_letters": 1708,
+      "delta": 330.0
+    },
+    {
+      "yasna": 53,
+      "n_letters": 1757,
+      "delta": 339.5
+    },
+    {
+      "yasna": 49,
+      "n_letters": 1540,
+      "delta": 340.0
+    },
+    {
+      "yasna": 48,
+      "n_letters": 1593,
+      "delta": 342.5
+    },
+    {
+      "yasna": 58,
+      "n_letters": 1388,
+      "delta": 347.0
+    },
+    {
+      "yasna": 29,
+      "n_letters": 1526,
+      "delta": 353.0
+    },
+    {
+      "yasna": 60,
+      "n_letters": 1446,
+      "delta": 355.0
+    }
+  ]
+}

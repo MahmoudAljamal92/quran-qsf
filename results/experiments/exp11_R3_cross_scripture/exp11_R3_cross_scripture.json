@@ -1,0 +1,42 @@
+{
+  "exp": "exp11_R3_cross_scripture",
+  "schema_version": 3,
+  "seed": 42,
+  "fast_mode": true,
+  "runtime_seconds": 1175.54,
+  "n_perm": 500,
+  "metric": "bigram_jaccard_path",
+  "per_scripture": {
+    "quran": {
+      "n_units": 114,
+      "alphabet": "arabic",
+      "canonical_path": 56.70004695550523,
+      "null_mean": 70.05980766389197,
+      "null_std": 1.0385411479057354,
+      "z": -12.863968592206898,
+      "percentile": 0.0,
+      "p_one_sided": 0.001996007984031936
+    },
+    "arabic_bible": {
+      "n_units": 1183,
+      "alphabet": "arabic",
+      "canonical_path": 574.3893948041638,
+      "null_mean": 623.6432880551189,
+      "null_std": 0.930041225127924,
+      "z": -52.95882797467118,
+      "percentile": 0.0,
+      "p_one_sided": 0.001996007984031936
+    },
+    "iliad_greek": {
+      "n_units": 24,
+      "alphabet": "greek",
+      "canonical_path": 1.651100299786669,
+      "null_mean": 1.690401049594535,
+      "null_std": 0.03741142996297214,
+      "z": -1.0505011395103907,
+      "percentile": 14.000000000000002,
+      "p_one_sided": 0.14171656686626746
+    }
+  },
+  "verdict_expected": "Quran |z| > every other scripture; p_one_sided < 0.05"
+}

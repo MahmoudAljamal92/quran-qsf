@@ -1,0 +1,175 @@
+{
+  "experiment": "exp113_joint_extremality_3way",
+  "hypothesis_id": "H68",
+  "verdict": "PASS_quran_jointly_extremal_2way_F55_F63",
+  "started_at_utc": "2026-04-29T09:04:38.902873+00:00",
+  "completed_at_utc": "2026-04-29T09:04:39.415785+00:00",
+  "prereg_document": "experiments/exp113_joint_extremality_3way/PREREG.md",
+  "prereg_sha256": "46fbd65cd6f1d940eb199cb504eb88d592b7002ef84226da94fd3f30bb981aa0",
+  "frozen_constants": {
+    "TAU": 2.0,
+    "N_PERMS": 10000,
+    "SEED": 42,
+    "TRADITIONS": [
+      "quran",
+      "hebrew_tanakh",
+      "greek_nt",
+      "pali",
+      "avestan_yasna"
+    ]
+  },
+  "source_receipt_sha256": {
+    "f55_quran": "73b4af4817620f647794df1f3195239a0a603c7510fd6404042cdd83114c7c64",
+    "f55_hebrew_tanakh": "fb1e04cc8a9fd2c72581f93e4bd5d0c848cfc64d4a6cbe5455cf17cabd390fc6",
+    "f55_greek_nt": "7a7c68d0336ade126f11cbc1bdff702c0e7c4d8661fed5aff94420b7f526d230",
+    "f55_pali": "3288e4467918620339b3fccb9cf16f4f0c0045353d33442f0ff8bb4c7f443f58",
+    "f55_avestan_yasna": "f8f556aa62af2f7a374b4454d48b20878b089f43e45d65856d0ef2f10f1592bb",
+    "f63": "0f8dcf0f69106020fac6c596716b4729d78fdece828ebb83aba3aa2b0a79fc22",
+    "lc2": "301f548eba93f6f8594af1204c7a931748aac3496e7d90a2b0b72a1c3ebb991c"
+  },
+  "metrics_per_tradition": {
+    "quran": {
+      "F55_safety_per_char": 0.32021947554952757,
+      "F63_p_max": 0.7272727272727273,
+      "F63_H_EL": 0.9685208240372034,
+      "LC2_z": -8.919964506138243
+    },
+    "hebrew_tanakh": {
+      "F55_safety_per_char": 0.2846057046979866,
+      "F63_p_max": 0.2413793103448276,
+      "F63_H_EL": 3.053090083530327,
+      "LC2_z": -15.285841419236908
+    },
+    "greek_nt": {
+      "F55_safety_per_char": 0.1511331444759207,
+      "F63_p_max": 0.3333333333333333,
+      "F63_H_EL": 2.433671200186647,
+      "LC2_z": -12.062700485400704
+    },
+    "pali": {
+      "F55_safety_per_char": 0.16294473258233955,
+      "F63_p_max": 0.4808201058201058,
+      "F63_H_EL": 2.089938976016876,
+      "LC2_z": -0.26388180017624346
+    },
+    "avestan_yasna": {
+      "F55_safety_per_char": 0.17430639324487335,
+      "F63_p_max": 0.375,
+      "F63_H_EL": 2.1180782093497093,
+      "LC2_z": -3.9801100562503526
+    }
+  },
+  "f55_details_per_tradition": {
+    "quran": {
+      "n_units": 114,
+      "median_per_char_margin": 0.32021947554952757,
+      "min_per_char_margin": 0.23033023892862578,
+      "max_per_char_margin": 0.8629032258064516
+    },
+    "hebrew_tanakh": {
+      "n_units": 1,
+      "min_peer_delta": 680.5,
+      "n_canon": 2384,
+      "per_char_margin": 0.2846057046979866
+    },
+    "greek_nt": {
+      "n_units": 1,
+      "min_peer_delta": 535.5,
+      "n_canon": 3530,
+      "per_char_margin": 0.1511331444759207
+    },
+    "pali": {
+      "n_units": 1,
+      "min_peer_delta": 9867.0,
+      "n_canon": 60542,
+      "per_char_margin": 0.16294473258233955
+    },
+    "avestan_yasna": {
+      "n_units": 1,
+      "min_peer_delta": 291.0,
+      "n_canon": 1658,
+      "per_char_margin": 0.17430639324487335
+    }
+  },
+  "ranks_per_axis": {
+    "F55_safety_per_char": {
+      "quran": 1,
+      "hebrew_tanakh": 2,
+      "greek_nt": 5,
+      "pali": 4,
+      "avestan_yasna": 3
+    },
+    "F63_p_max": {
+      "quran": 1,
+      "hebrew_tanakh": 5,
+      "greek_nt": 4,
+      "pali": 2,
+      "avestan_yasna": 3
+    },
+    "F63_H_EL": {
+      "quran": 1,
+      "hebrew_tanakh": 5,
+      "greek_nt": 4,
+      "pali": 2,
+      "avestan_yasna": 3
+    },
+    "LC2_z": {
+      "quran": 3,
+      "hebrew_tanakh": 1,
+      "greek_nt": 2,
+      "pali": 5,
+      "avestan_yasna": 4
+    }
+  },
+  "quran_ranks": {
+    "F55_safety_per_char": 1,
+    "F63_p_max": 1,
+    "F63_H_EL": 1,
+    "LC2_z": 3
+  },
+  "quran_top1_3way_F55_F63pmax_LC2": false,
+  "quran_top1_2way_F55_F63pmax": true,
+  "perm_null_3way": {
+    "any_tradition_top1_on_all": 0.0405,
+    "per_position_top1_on_all": [
+      0.0076,
+      0.0088,
+      0.0067,
+      0.0096,
+      0.0078
+    ]
+  },
+  "perm_null_2way": {
+    "any_tradition_top1_on_all": 0.1996,
+    "per_position_top1_on_all": [
+      0.0414,
+      0.0377,
+      0.0404,
+      0.0394,
+      0.0407
+    ]
+  },
+  "borda_count": {
+    "quran": 5,
+    "hebrew_tanakh": 8,
+    "greek_nt": 11,
+    "pali": 11,
+    "avestan_yasna": 10
+  },
+  "quran_borda_rank": 1,
+  "pairwise_spearman_correlations": {
+    "F55_vs_F63_p_max": 0.29999999999999993,
+    "F55_vs_F63_H_EL": -0.29999999999999993,
+    "F55_vs_LC2_z": -0.19999999999999996,
+    "F63_p_max_vs_F63_H_EL": -0.9999999999999998,
+    "F63_p_max_vs_LC2_z": 0.6999999999999998,
+    "F63_H_EL_vs_LC2_z": -0.6999999999999998
+  },
+  "audit_report": {
+    "ok": true,
+    "n_traditions": 5,
+    "all_metrics_present": true,
+    "perm_seed": 42,
+    "perm_n": 10000
+  }
+}

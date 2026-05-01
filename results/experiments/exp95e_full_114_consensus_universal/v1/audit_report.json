@@ -1,0 +1,800 @@
+{
+  "scope": "v1",
+  "tau_drift_sentinel": {
+    "ok": true,
+    "max_drift": 0.0,
+    "tol": 1e-12,
+    "per_compressor": {
+      "bz2": {
+        "locked": 0.29584120982986767,
+        "from_exp95c_receipt": 0.29584120982986767,
+        "abs_drift": 0.0,
+        "ok": true
+      },
+      "gzip": {
+        "locked": 0.04960835509138381,
+        "from_exp95c_receipt": 0.04960835509138381,
+        "abs_drift": 0.0,
+        "ok": true
+      },
+      "lzma": {
+        "locked": 0.02857142857142857,
+        "from_exp95c_receipt": 0.02857142857142857,
+        "abs_drift": 0.0,
+        "ok": true
+      },
+      "zstd": {
+        "locked": 0.029978586723768737,
+        "from_exp95c_receipt": 0.029978586723768737,
+        "abs_drift": 0.0,
+        "ok": true
+      }
+    }
+  },
+  "prereg_fingerprint": {
+    "ok": true,
+    "deferred": false,
+    "actual_hash": "ec14a1f6dcb81c3a54b0daeafa2b10f8707457ee4305de07d58ee7ede568e9a7",
+    "expected_hash": "ec14a1f6dcb81c3a54b0daeafa2b10f8707457ee4305de07d58ee7ede568e9a7"
+  },
+  "q100_regression": {
+    "ok": true,
+    "K2_recall_q100": {
+      "expected": 1.0,
+      "actual": 1.0,
+      "abs_diff": 0.0,
+      "tol": 0.001,
+      "ok": true
+    },
+    "gzip_solo_recall_q100": {
+      "expected": 0.990741,
+      "actual": 0.9907407407407407,
+      "abs_diff": 2.592592592831622e-07,
+      "tol": 0.001,
+      "ok": true
+    }
+  },
+  "variant_count_sanity": {
+    "ok": false,
+    "n_surahs": 114,
+    "mismatches": [
+      {
+        "surah": "Q:004",
+        "n_variants": 3726,
+        "expected": 3888,
+        "n_canon_consonants_v1": 144
+      },
+      {
+        "surah": "Q:005",
+        "n_variants": 2862,
+        "expected": 3132,
+        "n_canon_consonants_v1": 116
+      },
+      {
+        "surah": "Q:006",
+        "n_variants": 2349,
+        "expected": 2376,
+        "n_canon_consonants_v1": 88
+      },
+      {
+        "surah": "Q:008",
+        "n_variants": 2727,
+        "expected": 2916,
+        "n_canon_consonants_v1": 108
+      },
+      {
+        "surah": "Q:009",
+        "n_variants": 999,
+        "expected": 1107,
+        "n_canon_consonants_v1": 41
+      },
+      {
+        "surah": "Q:010",
+        "n_variants": 1080,
+        "expected": 1107,
+        "n_canon_consonants_v1": 41
+      },
+      {
+        "surah": "Q:011",
+        "n_variants": 1431,
+        "expected": 1485,
+        "n_canon_consonants_v1": 55
+      },
+      {
+        "surah": "Q:012",
+        "n_variants": 1080,
+        "expected": 1107,
+        "n_canon_consonants_v1": 41
+      },
+      {
+        "surah": "Q:013",
+        "n_variants": 1998,
+        "expected": 2133,
+        "n_canon_consonants_v1": 79
+      },
+      {
+        "surah": "Q:014",
+        "n_variants": 2268,
+        "expected": 2457,
+        "n_canon_consonants_v1": 91
+      },
+      {
+        "surah": "Q:015",
+        "n_variants": 1134,
+        "expected": 1188,
+        "n_canon_consonants_v1": 44
+      },
+      {
+        "surah": "Q:016",
+        "n_variants": 1539,
+        "expected": 1647,
+        "n_canon_consonants_v1": 61
+      },
+      {
+        "surah": "Q:017",
+        "n_variants": 2862,
+        "expected": 3078,
+        "n_canon_consonants_v1": 114
+      },
+      {
+        "surah": "Q:018",
+        "n_variants": 1593,
+        "expected": 1647,
+        "n_canon_consonants_v1": 61
+      },
+      {
+        "surah": "Q:021",
+        "n_variants": 1323,
+        "expected": 1350,
+        "n_canon_consonants_v1": 50
+      },
+      {
+        "surah": "Q:022",
+        "n_variants": 1458,
+        "expected": 1593,
+        "n_canon_consonants_v1": 59
+      },
+      {
+        "surah": "Q:023",
+        "n_variants": 837,
+        "expected": 891,
+        "n_canon_consonants_v1": 33
+      },
+      {
+        "surah": "Q:024",
+        "n_variants": 1782,
+        "expected": 1890,
+        "n_canon_consonants_v1": 70
+      },
+      {
+        "surah": "Q:025",
+        "n_variants": 1674,
+        "expected": 1701,
+        "n_canon_consonants_v1": 63
+      },
+      {
+        "surah": "Q:027",
+        "n_variants": 1107,
+        "expected": 1161,
+        "n_canon_consonants_v1": 43
+      },
+      {
+        "surah": "Q:033",
+        "n_variants": 2106,
+        "expected": 2160,
+        "n_canon_consonants_v1": 80
+      },
+      {
+        "surah": "Q:034",
+        "n_variants": 2241,
+        "expected": 2322,
+        "n_canon_consonants_v1": 86
+      },
+      {
+        "surah": "Q:035",
+        "n_variants": 2916,
+        "expected": 3213,
+        "n_canon_consonants_v1": 119
+      },
+      {
+        "surah": "Q:038",
+        "n_variants": 891,
+        "expected": 918,
+        "n_canon_consonants_v1": 34
+      },
+      {
+        "surah": "Q:047",
+        "n_variants": 1404,
+        "expected": 1458,
+        "n_canon_consonants_v1": 54
+      },
+      {
+        "surah": "Q:048",
+        "n_variants": 999,
+        "expected": 1026,
+        "n_canon_consonants_v1": 38
+      },
+      {
+        "surah": "Q:049",
+        "n_variants": 2160,
+        "expected": 2241,
+        "n_canon_consonants_v1": 83
+      },
+      {
+        "surah": "Q:050",
+        "n_variants": 864,
+        "expected": 891,
+        "n_canon_consonants_v1": 33
+      },
+      {
+        "surah": "Q:053",
+        "n_variants": 783,
+        "expected": 837,
+        "n_canon_consonants_v1": 31
+      },
+      {
+        "surah": "Q:054",
+        "n_variants": 1080,
+        "expected": 1107,
+        "n_canon_consonants_v1": 41
+      },
+      {
+        "surah": "Q:056",
+        "n_variants": 837,
+        "expected": 891,
+        "n_canon_consonants_v1": 33
+      },
+      {
+        "surah": "Q:057",
+        "n_variants": 1539,
+        "expected": 1566,
+        "n_canon_consonants_v1": 58
+      },
+      {
+        "surah": "Q:058",
+        "n_variants": 2403,
+        "expected": 2484,
+        "n_canon_consonants_v1": 92
+      },
+      {
+        "surah": "Q:059",
+        "n_variants": 1647,
+        "expected": 1674,
+        "n_canon_consonants_v1": 62
+      },
+      {
+        "surah": "Q:060",
+        "n_variants": 5940,
+        "expected": 6453,
+        "n_canon_consonants_v1": 239
+      },
+      {
+        "surah": "Q:061",
+        "n_variants": 1647,
+        "expected": 1674,
+        "n_canon_consonants_v1": 62
+      },
+      {
+        "surah": "Q:062",
+        "n_variants": 1890,
+        "expected": 1917,
+        "n_canon_consonants_v1": 71
+      },
+      {
+        "surah": "Q:063",
+        "n_variants": 2592,
+        "expected": 2727,
+        "n_canon_consonants_v1": 101
+      },
+      {
+        "surah": "Q:064",
+        "n_variants": 2025,
+        "expected": 2106,
+        "n_canon_consonants_v1": 78
+      },
+      {
+        "surah": "Q:065",
+        "n_variants": 4887,
+        "expected": 5184,
+        "n_canon_consonants_v1": 192
+      },
+      {
+        "surah": "Q:066",
+        "n_variants": 1971,
+        "expected": 2052,
+        "n_canon_consonants_v1": 76
+      },
+      {
+        "surah": "Q:067",
+        "n_variants": 1350,
+        "expected": 1404,
+        "n_canon_consonants_v1": 52
+      },
+      {
+        "surah": "Q:069",
+        "n_variants": 648,
+        "expected": 675,
+        "n_canon_consonants_v1": 25
+      },
+      {
+        "surah": "Q:070",
+        "n_variants": 891,
+        "expected": 945,
+        "n_canon_consonants_v1": 35
+      },
+      {
+        "surah": "Q:071",
+        "n_variants": 1647,
+        "expected": 1890,
+        "n_canon_consonants_v1": 70
+      },
+      {
+        "surah": "Q:072",
+        "n_variants": 1701,
+        "expected": 1836,
+        "n_canon_consonants_v1": 68
+      },
+      {
+        "surah": "Q:073",
+        "n_variants": 810,
+        "expected": 837,
+        "n_canon_consonants_v1": 31
+      },
+      {
+        "surah": "Q:074",
+        "n_variants": 810,
+        "expected": 837,
+        "n_canon_consonants_v1": 31
+      },
+      {
+        "surah": "Q:075",
+        "n_variants": 918,
+        "expected": 972,
+        "n_canon_consonants_v1": 36
+      },
+      {
+        "surah": "Q:076",
+        "n_variants": 1458,
+        "expected": 1593,
+        "n_canon_consonants_v1": 59
+      },
+      {
+        "surah": "Q:078",
+        "n_variants": 756,
+        "expected": 783,
+        "n_canon_consonants_v1": 29
+      },
+      {
+        "surah": "Q:080",
+        "n_variants": 702,
+        "expected": 729,
+        "n_canon_consonants_v1": 27
+      },
+      {
+        "surah": "Q:081",
+        "n_variants": 810,
+        "expected": 837,
+        "n_canon_consonants_v1": 31
+      },
+      {
+        "surah": "Q:082",
+        "n_variants": 864,
+        "expected": 918,
+        "n_canon_consonants_v1": 34
+      },
+      {
+        "surah": "Q:084",
+        "n_variants": 837,
+        "expected": 891,
+        "n_canon_consonants_v1": 33
+      },
+      {
+        "surah": "Q:085",
+        "n_variants": 918,
+        "expected": 945,
+        "n_canon_consonants_v1": 35
+      },
+      {
+        "surah": "Q:086",
+        "n_variants": 864,
+        "expected": 891,
+        "n_canon_consonants_v1": 33
+      },
+      {
+        "surah": "Q:087",
+        "n_variants": 864,
+        "expected": 918,
+        "n_canon_consonants_v1": 34
+      },
+      {
+        "surah": "Q:088",
+        "n_variants": 918,
+        "expected": 972,
+        "n_canon_consonants_v1": 36
+      },
+      {
+        "surah": "Q:090",
+        "n_variants": 891,
+        "expected": 918,
+        "n_canon_consonants_v1": 34
+      },
+      {
+        "surah": "Q:092",
+        "n_variants": 810,
+        "expected": 864,
+        "n_canon_consonants_v1": 32
+      },
+      {
+        "surah": "Q:093",
+        "n_variants": 648,
+        "expected": 675,
+        "n_canon_consonants_v1": 25
+      },
+      {
+        "surah": "Q:094",
+        "n_variants": 837,
+        "expected": 864,
+        "n_canon_consonants_v1": 32
+      },
+      {
+        "surah": "Q:096",
+        "n_variants": 972,
+        "expected": 999,
+        "n_canon_consonants_v1": 37
+      },
+      {
+        "surah": "Q:097",
+        "n_variants": 999,
+        "expected": 1080,
+        "n_canon_consonants_v1": 40
+      },
+      {
+        "surah": "Q:098",
+        "n_variants": 1917,
+        "expected": 2025,
+        "n_canon_consonants_v1": 75
+      },
+      {
+        "surah": "Q:099",
+        "n_variants": 999,
+        "expected": 1053,
+        "n_canon_consonants_v1": 39
+      },
+      {
+        "surah": "Q:101",
+        "n_variants": 675,
+        "expected": 702,
+        "n_canon_consonants_v1": 26
+      },
+      {
+        "surah": "Q:102",
+        "n_variants": 837,
+        "expected": 864,
+        "n_canon_consonants_v1": 32
+      },
+      {
+        "surah": "Q:104",
+        "n_variants": 837,
+        "expected": 891,
+        "n_canon_consonants_v1": 33
+      },
+      {
+        "surah": "Q:105",
+        "n_variants": 1134,
+        "expected": 1188,
+        "n_canon_consonants_v1": 44
+      },
+      {
+        "surah": "Q:106",
+        "n_variants": 756,
+        "expected": 783,
+        "n_canon_consonants_v1": 29
+      },
+      {
+        "surah": "Q:107",
+        "n_variants": 972,
+        "expected": 1026,
+        "n_canon_consonants_v1": 38
+      },
+      {
+        "surah": "Q:108",
+        "n_variants": 891,
+        "expected": 945,
+        "n_canon_consonants_v1": 35
+      },
+      {
+        "surah": "Q:109",
+        "n_variants": 918,
+        "expected": 945,
+        "n_canon_consonants_v1": 35
+      },
+      {
+        "surah": "Q:110",
+        "n_variants": 972,
+        "expected": 1026,
+        "n_canon_consonants_v1": 38
+      },
+      {
+        "surah": "Q:111",
+        "n_variants": 891,
+        "expected": 918,
+        "n_canon_consonants_v1": 34
+      },
+      {
+        "surah": "Q:112",
+        "n_variants": 783,
+        "expected": 810,
+        "n_canon_consonants_v1": 30
+      },
+      {
+        "surah": "Q:113",
+        "n_variants": 864,
+        "expected": 891,
+        "n_canon_consonants_v1": 33
+      },
+      {
+        "surah": "Q:114",
+        "n_variants": 864,
+        "expected": 891,
+        "n_canon_consonants_v1": 33
+      }
+    ]
+  },
+  "missed_variant_clusters": {
+    "n_missed": 112842,
+    "top_pairs": [
+      [
+        "ل->ق",
+        743
+      ],
+      [
+        "ل->ف",
+        740
+      ],
+      [
+        "ل->و",
+        737
+      ],
+      [
+        "ل->ه",
+        736
+      ],
+      [
+        "ل->ي",
+        736
+      ],
+      [
+        "ل->ك",
+        735
+      ],
+      [
+        "ل->ن",
+        735
+      ],
+      [
+        "ل->م",
+        729
+      ],
+      [
+        "ل->ح",
+        716
+      ],
+      [
+        "ل->س",
+        716
+      ],
+      [
+        "ل->ب",
+        714
+      ],
+      [
+        "ل->ذ",
+        714
+      ],
+      [
+        "ل->ج",
+        713
+      ],
+      [
+        "ل->ر",
+        713
+      ],
+      [
+        "ل->ض",
+        713
+      ],
+      [
+        "ل->ا",
+        712
+      ],
+      [
+        "ل->ث",
+        712
+      ],
+      [
+        "ل->غ",
+        712
+      ],
+      [
+        "ل->ع",
+        711
+      ],
+      [
+        "ل->ت",
+        710
+      ]
+    ],
+    "by_orig_consonant": {
+      "ل": 19401,
+      "ا": 18504,
+      "م": 11929,
+      "ر": 7465,
+      "ي": 7346,
+      "ن": 6609,
+      "ح": 6137,
+      "ه": 5263,
+      "و": 4773,
+      "ب": 4744,
+      "س": 4286,
+      "ت": 2843,
+      "ك": 2316,
+      "ع": 1873,
+      "ق": 1592,
+      "د": 1465,
+      "ف": 1426,
+      "ذ": 1001,
+      "ز": 727,
+      "ج": 718,
+      "ش": 388,
+      "خ": 378,
+      "ص": 378,
+      "ض": 375,
+      "ط": 347,
+      "ث": 281,
+      "غ": 169,
+      "ظ": 108
+    },
+    "by_replacement_consonant": {
+      "ض": 4176,
+      "ث": 4174,
+      "ط": 4169,
+      "ظ": 4166,
+      "غ": 4159,
+      "ف": 4157,
+      "ج": 4153,
+      "ص": 4151,
+      "خ": 4150,
+      "ز": 4148,
+      "ش": 4148,
+      "ذ": 4146,
+      "ق": 4140,
+      "د": 4114,
+      "ك": 4112,
+      "ع": 4097,
+      "ت": 4069,
+      "س": 4032,
+      "و": 4019,
+      "ب": 3994,
+      "ه": 3985,
+      "ح": 3959,
+      "ن": 3947,
+      "ي": 3917,
+      "ر": 3896,
+      "م": 3734,
+      "ا": 3477,
+      "ل": 3453
+    },
+    "by_surah": {
+      "Q:060": 5940,
+      "Q:065": 4887,
+      "Q:004": 3726,
+      "Q:035": 2916,
+      "Q:005": 2862,
+      "Q:017": 2862,
+      "Q:008": 2727,
+      "Q:063": 2591,
+      "Q:058": 2396,
+      "Q:006": 2349,
+      "Q:014": 2268,
+      "Q:034": 2241,
+      "Q:049": 2160,
+      "Q:033": 2106,
+      "Q:064": 2025,
+      "Q:013": 1998,
+      "Q:066": 1971,
+      "Q:024": 1782,
+      "Q:072": 1701,
+      "Q:025": 1674,
+      "Q:062": 1668,
+      "Q:059": 1647,
+      "Q:061": 1647,
+      "Q:071": 1647,
+      "Q:018": 1593,
+      "Q:016": 1539,
+      "Q:057": 1539,
+      "Q:022": 1458,
+      "Q:076": 1458,
+      "Q:011": 1431,
+      "Q:047": 1404,
+      "Q:067": 1350,
+      "Q:021": 1323,
+      "Q:039": 1296,
+      "Q:015": 1134,
+      "Q:027": 1107,
+      "Q:010": 1080,
+      "Q:012": 1080,
+      "Q:054": 1080,
+      "Q:009": 999,
+      "Q:048": 999,
+      "Q:068": 945,
+      "Q:075": 895,
+      "Q:038": 891,
+      "Q:070": 891,
+      "Q:050": 864,
+      "Q:051": 864,
+      "Q:085": 847,
+      "Q:023": 837,
+      "Q:056": 837,
+      "Q:079": 836,
+      "Q:037": 810,
+      "Q:073": 810,
+      "Q:074": 810,
+      "Q:083": 799,
+      "Q:053": 783,
+      "Q:078": 748,
+      "Q:052": 675,
+      "Q:084": 653,
+      "Q:019": 648,
+      "Q:069": 648,
+      "Q:089": 642,
+      "Q:007": 621,
+      "Q:002": 594,
+      "Q:003": 594,
+      "Q:026": 594,
+      "Q:028": 594,
+      "Q:029": 594,
+      "Q:030": 594,
+      "Q:031": 594,
+      "Q:032": 594,
+      "Q:020": 567,
+      "Q:036": 567,
+      "Q:040": 567,
+      "Q:041": 567,
+      "Q:042": 567,
+      "Q:043": 567,
+      "Q:044": 567,
+      "Q:045": 567,
+      "Q:046": 567,
+      "Q:080": 563,
+      "Q:088": 561,
+      "Q:077": 543,
+      "Q:098": 462,
+      "Q:055": 415,
+      "Q:082": 365,
+      "Q:081": 270,
+      "Q:092": 245,
+      "Q:090": 193,
+      "Q:087": 127,
+      "Q:105": 39,
+      "Q:110": 31,
+      "Q:106": 30,
+      "Q:113": 25,
+      "Q:109": 23,
+      "Q:096": 19,
+      "Q:094": 18,
+      "Q:107": 14,
+      "Q:091": 12,
+      "Q:097": 6,
+      "Q:095": 5,
+      "Q:111": 2,
+      "Q:001": 1,
+      "Q:086": 1,
+      "Q:099": 1,
+      "Q:114": 1
+    },
+    "warnings": [],
+    "warn_threshold": 0.1
+  },
+  "self_check_pre_ts": "2026-04-26T22:31:26",
+  "runtime_seconds": 3287.74
+}

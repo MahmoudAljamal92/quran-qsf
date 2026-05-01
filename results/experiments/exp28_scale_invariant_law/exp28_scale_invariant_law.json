@@ -1,0 +1,331 @@
+{
+  "experiment": "exp28_scale_invariant_law",
+  "schema_version": 1,
+  "hypothesis": "Scale-invariant Markov-1 law: the Quran exhibits bigram sufficiency at 4 independent scales (L0 chars, L1 roots, L2 verse-lengths, L3 surah-path) simultaneously.",
+  "scales": {
+    "L0_char_intra_word": {
+      "scale": "L0_char_intra_word",
+      "metric": "char H3/H2 (intra-word, '#'-separated)",
+      "direction": "lower == more Markov-1-sufficient",
+      "per_corpus_pooled_ratio": {
+        "quran": 0.7136404951799491,
+        "poetry_jahili": 0.7985488184728708,
+        "poetry_islami": 0.8325411756112733,
+        "poetry_abbasi": 0.8572064983727522,
+        "ksucca": 0.6600047751472659,
+        "arabic_bible": 0.7874154966307509,
+        "hindawi": 0.7648655151668418
+      },
+      "ranking_low_is_better": [
+        {
+          "corpus": "ksucca",
+          "ratio": 0.6600047751472659
+        },
+        {
+          "corpus": "quran",
+          "ratio": 0.7136404951799491
+        },
+        {
+          "corpus": "hindawi",
+          "ratio": 0.7648655151668418
+        },
+        {
+          "corpus": "arabic_bible",
+          "ratio": 0.7874154966307509
+        },
+        {
+          "corpus": "poetry_jahili",
+          "ratio": 0.7985488184728708
+        },
+        {
+          "corpus": "poetry_islami",
+          "ratio": 0.8325411756112733
+        },
+        {
+          "corpus": "poetry_abbasi",
+          "ratio": 0.8572064983727522
+        }
+      ],
+      "quran_rank_1_is_best": 2,
+      "n_corpora_ranked": 7,
+      "per_unit_quran_mean": 0.32901170601815793,
+      "per_unit_ctrl_mean": 0.2876850021878002,
+      "per_unit_cohen_d_q_minus_c": 0.45730226343286007,
+      "per_unit_mwu_p_less": 0.9997966164526331,
+      "law_supported": false,
+      "source": "exp27_hchar_bigram (2026-04-20, new)"
+    },
+    "L1_root_verse_boundary": {
+      "scale": "L1_root_verse_boundary",
+      "metric": "root H3/H2 on verse-final roots (CamelTools)",
+      "direction": "lower == more Markov-1-sufficient",
+      "per_corpus_pooled_ratio": {
+        "quran": 0.22200325346788072,
+        "poetry_jahili": 0.2578868288428483,
+        "poetry_islami": 0.28774398370166404,
+        "poetry_abbasi": 0.3430765736009754,
+        "ksucca": 0.6113926874804632,
+        "arabic_bible": 0.8606266472360634,
+        "hindawi": 0.32243343722158185
+      },
+      "ranking_low_is_better": [
+        {
+          "corpus": "quran",
+          "ratio": 0.22200325346788072
+        },
+        {
+          "corpus": "poetry_jahili",
+          "ratio": 0.2578868288428483
+        },
+        {
+          "corpus": "poetry_islami",
+          "ratio": 0.28774398370166404
+        },
+        {
+          "corpus": "hindawi",
+          "ratio": 0.32243343722158185
+        },
+        {
+          "corpus": "poetry_abbasi",
+          "ratio": 0.3430765736009754
+        },
+        {
+          "corpus": "ksucca",
+          "ratio": 0.6113926874804632
+        },
+        {
+          "corpus": "arabic_bible",
+          "ratio": 0.8606266472360634
+        }
+      ],
+      "quran_rank_1_is_best": 1,
+      "n_corpora_ranked": 7,
+      "law_supported": true,
+      "source": "T11 locked (src/extended_tests.py:test_bigram_sufficiency)"
+    },
+    "L1b_root_markov_order": {
+      "scale": "L1b_root_markov_order_H2_over_H1",
+      "metric": "root H2/H1 (overhead of order-2 beyond order-1)",
+      "direction": "lower == more Markov-1-sufficient",
+      "per_corpus_H2_over_H1_mean": {
+        "quran": 0.11116703042112458,
+        "poetry_jahili": 0.026785222400038288,
+        "poetry_islami": 0.03008193908692004,
+        "poetry_abbasi": 0.036299667441106326,
+        "ksucca": 0.22212650355662034,
+        "arabic_bible": 0.1647874682432062,
+        "hadith_bukhari": 0.31689986269026743,
+        "hindawi": 0.04191241570341831
+      },
+      "quran_mean": 0.11116703042112458,
+      "ctrl_mean": 0.07820357960838144,
+      "cohens_d_q_minus_c": 0.4247059441469991,
+      "mwu_p_less": 0.9999658197557663,
+      "law_supported": false,
+      "source": "T28 locked (src/extended_tests3.py:test_markov_order_sufficiency)"
+    },
+    "L2_verse_length_coherence": {
+      "scale": "L2_verse_length_coherence",
+      "metric": "F6 = Spearman rho(len_i, len_{i+1}) within a unit",
+      "direction": "higher == stronger lag-1 coherence (Markov-1-like)",
+      "quran_mean": 0.15800888445261413,
+      "ctrl_mean": -0.036295237598984245,
+      "cohens_d_q_minus_c_pool": 0.8268640797794753,
+      "mwu_p_two_sided": 3.684758751290557e-12,
+      "law_supported": true,
+      "source": "T32 locked (src/extended_tests4.py: F6 length coherence)"
+    },
+    "L3_surah_order_path": {
+      "scale": "L3_surah_order_path_minimality",
+      "metric": "canonical-order path z vs 2000 random permutations",
+      "direction": "lower z (more negative) == more optimal canonical order",
+      "quran_z_path": -2.4442155304240654,
+      "quran_pct_perms_below_canon": 0.5,
+      "quran_p_empirical_one_sided": 0.005,
+      "quran_canon_path_cost": 80.7688014302242,
+      "quran_perm_cost_mean": 94.99779290260659,
+      "law_supported": true,
+      "source": "T8 locked (src/extended_tests.py:test_path_optimality)"
+    }
+  },
+  "char_root_gap_analysis": {
+    "gap_available": true,
+    "gap_definition": "char_H3/H2  -  root_H3/H2  (both pooled)",
+    "per_corpus": [
+      {
+        "corpus": "arabic_bible",
+        "char_H3_H2": 0.7874154966307509,
+        "root_H3_H2": 0.8606266472360634,
+        "gap": -0.07321115060531247
+      },
+      {
+        "corpus": "hindawi",
+        "char_H3_H2": 0.7648655151668418,
+        "root_H3_H2": 0.32243343722158185,
+        "gap": 0.4424320779452599
+      },
+      {
+        "corpus": "ksucca",
+        "char_H3_H2": 0.6600047751472659,
+        "root_H3_H2": 0.6113926874804632,
+        "gap": 0.048612087666802695
+      },
+      {
+        "corpus": "poetry_abbasi",
+        "char_H3_H2": 0.8572064983727522,
+        "root_H3_H2": 0.3430765736009754,
+        "gap": 0.5141299247717768
+      },
+      {
+        "corpus": "poetry_islami",
+        "char_H3_H2": 0.8325411756112733,
+        "root_H3_H2": 0.28774398370166404,
+        "gap": 0.5447971919096093
+      },
+      {
+        "corpus": "poetry_jahili",
+        "char_H3_H2": 0.7985488184728708,
+        "root_H3_H2": 0.2578868288428483,
+        "gap": 0.5406619896300225
+      },
+      {
+        "corpus": "quran",
+        "char_H3_H2": 0.7136404951799491,
+        "root_H3_H2": 0.22200325346788072,
+        "gap": 0.49163724171206835
+      }
+    ],
+    "ranking_high_gap_is_more_root_locked": [
+      {
+        "corpus": "poetry_islami",
+        "gap": 0.5447971919096093
+      },
+      {
+        "corpus": "poetry_jahili",
+        "gap": 0.5406619896300225
+      },
+      {
+        "corpus": "poetry_abbasi",
+        "gap": 0.5141299247717768
+      },
+      {
+        "corpus": "quran",
+        "gap": 0.49163724171206835
+      },
+      {
+        "corpus": "hindawi",
+        "gap": 0.4424320779452599
+      },
+      {
+        "corpus": "ksucca",
+        "gap": 0.048612087666802695
+      },
+      {
+        "corpus": "arabic_bible",
+        "gap": -0.07321115060531247
+      }
+    ],
+    "quran_rank_high_gap_1_is_best": 4,
+    "is_new_quran_fingerprint": false
+  },
+  "headline_table": [
+    {
+      "scale": "L0_char_intra_word",
+      "metric": "char H3/H2 (intra-word, '#'-separated)",
+      "direction": "lower == more Markov-1-sufficient",
+      "law_supported": false
+    },
+    {
+      "scale": "L1_root_verse_boundary",
+      "metric": "root H3/H2 on verse-final roots (CamelTools)",
+      "direction": "lower == more Markov-1-sufficient",
+      "law_supported": true
+    },
+    {
+      "scale": "L1b_root_markov_order_H2_over_H1",
+      "metric": "root H2/H1 (overhead of order-2 beyond order-1)",
+      "direction": "lower == more Markov-1-sufficient",
+      "law_supported": false
+    },
+    {
+      "scale": "L2_verse_length_coherence",
+      "metric": "F6 = Spearman rho(len_i, len_{i+1}) within a unit",
+      "direction": "higher == stronger lag-1 coherence (Markov-1-like)",
+      "law_supported": true
+    },
+    {
+      "scale": "L3_surah_order_path_minimality",
+      "metric": "canonical-order path z vs 2000 random permutations",
+      "direction": "lower z (more negative) == more optimal canonical order",
+      "law_supported": true
+    }
+  ],
+  "n_scales_supported": 3,
+  "n_scales_total": 5,
+  "verdict": "PARTIAL_LAW_HOLDS_AT_MAJORITY_SCALES",
+  "interpretation": "Law SUPPORTED at: ['L1_root_verse_boundary', 'L2_verse_length_coherence', 'L3_surah_order_path_minimality']  |  Law FAILS at:     ['L0_char_intra_word', 'L1b_root_markov_order_H2_over_H1']  |  Uniform scale-invariance claim is NOT supported. Report the scales that DO hold as separate locked findings. Revise any paper text that implied character-scale bigram-sufficiency for the Quran. Character-scale ratio rankings are dominated by genre/meter effects (see exp27 ranking: ksucca < quran < poetry), not by Quran-specific structure.  |  Char-root gap does NOT rank Quran #1. No new fingerprint candidate from this angle.",
+  "provenance": {
+    "t11_source": "results/CLEAN_PIPELINE_REPORT.json#results.T11_bigram_suf",
+    "t28_source": "results/CLEAN_PIPELINE_REPORT.json#results.T28_markov_order",
+    "t32_source": "results/CLEAN_PIPELINE_REPORT.json#results.T32_f6_length_coherence",
+    "t8_source": "results/CLEAN_PIPELINE_REPORT.json#results.T8_path",
+    "exp27_source": "results/experiments/exp27_hchar_bigram/exp27_hchar_bigram.json",
+    "clean_report_status": "ok",
+    "corpus_fingerprint": {
+      "quran": {
+        "n_units": 114,
+        "n_verses": 6236,
+        "n_words": 78248,
+        "sha256_12": "e5e6ccb9083c"
+      },
+      "poetry_jahili": {
+        "n_units": 133,
+        "n_verses": 2561,
+        "n_words": 17520,
+        "sha256_12": "328a4cac108b"
+      },
+      "poetry_islami": {
+        "n_units": 465,
+        "n_verses": 10295,
+        "n_words": 70614,
+        "sha256_12": "baf8244d1307"
+      },
+      "poetry_abbasi": {
+        "n_units": 2823,
+        "n_verses": 76499,
+        "n_words": 526821,
+        "sha256_12": "ec5c5160a7fb"
+      },
+      "ksucca": {
+        "n_units": 41,
+        "n_verses": 1967,
+        "n_words": 131831,
+        "sha256_12": "b2604438bd5c"
+      },
+      "arabic_bible": {
+        "n_units": 1183,
+        "n_verses": 31083,
+        "n_words": 434944,
+        "sha256_12": "2467b701ae1f"
+      },
+      "hadith_bukhari": {
+        "n_units": 95,
+        "n_verses": 7271,
+        "n_words": 543791,
+        "sha256_12": "c623a7431b51"
+      },
+      "hindawi": {
+        "n_units": 74,
+        "n_verses": 1793,
+        "n_words": 20764,
+        "sha256_12": "afab15ce9b2c"
+      },
+      "iliad_greek": {
+        "n_units": 24,
+        "n_verses": 15687,
+        "n_words": 111895,
+        "sha256_12": "25f8f65e55c1"
+      }
+    }
+  }
+}

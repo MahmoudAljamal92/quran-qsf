@@ -1,0 +1,18 @@
+{
+  "corpus": "daodejing_wangbi",
+  "language": "Classical Chinese (Traditional, 繁體)",
+  "edition": "Wang Bi recension (王弼本); 81 chapters",
+  "source_url": "https://www.gutenberg.org/cache/epub/7337/pg7337.txt",
+  "source_id": "Project Gutenberg eBook #7337",
+  "credits": "Produced by Ching-yi Chen",
+  "license": "PUBLIC DOMAIN (Project Gutenberg License)",
+  "fetched_at_utc": "2026-04-29T05:50:00Z",
+  "files": [
+    {
+      "filename": "daodejing_wangbi.txt",
+      "size_bytes": 21643,
+      "sha256": "a05c5cb00650263e61d107dbeb7f8b887752bcc82fd42fd286b928d2a4d527bd",
+      "n_chapters": 81
+    }
+  ]
+}

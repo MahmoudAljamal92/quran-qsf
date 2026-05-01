@@ -1,0 +1,93 @@
+{
+  "experiment": "exp41_gzip_formalised",
+  "schema_version": 1,
+  "seed": 42,
+  "bands": {
+    "lo": 15,
+    "hi": 100
+  },
+  "n_pert_per_unit": 20,
+  "k_null_splits": 30,
+  "gzip_level": 9,
+  "window_l0": 3,
+  "alphabet": "ARABIC_CONS_28 (hamza folded, ة->ه, ى->ي)",
+  "arabic_ctrl": [
+    "poetry_jahili",
+    "poetry_islami",
+    "poetry_abbasi",
+    "ksucca",
+    "arabic_bible",
+    "hindawi"
+  ],
+  "n_quran_units": 68,
+  "n_ctrl_units": 200,
+  "doc_scale_summary": {
+    "n_q": 1360,
+    "n_ctrl": 4000,
+    "q_mean": 0.04426869250087006,
+    "q_median": 0.04256015828561078,
+    "q_p95": 0.057696843251088537,
+    "ctrl_mean": 0.04171417062625784,
+    "ctrl_median": 0.041353642763126766,
+    "ctrl_p95": 0.04953033506831489,
+    "cohen_d": 0.5340188442507182,
+    "mw_p_greater": 6.602232916882247e-39,
+    "mw_p_less": 1.0
+  },
+  "window_scale_summary": {
+    "n_q": 1360,
+    "n_ctrl": 4000,
+    "q_mean": 0.07725048739577017,
+    "q_median": 0.07407407407407407,
+    "q_p95": 0.11365074798619101,
+    "ctrl_mean": 0.0717066092647468,
+    "ctrl_median": 0.07142857142857142,
+    "ctrl_p95": 0.09803921568627451,
+    "cohen_d": 0.3285943535145162,
+    "mw_p_greater": 4.3791351107382986e-13,
+    "mw_p_less": 0.9999999999995621
+  },
+  "natural_variation_null": {
+    "quran_nat_p95": 0.8582256852786172,
+    "ctrl_nat_p95": 0.8801036445592486,
+    "quran_nat_mean": 0.797836545910144,
+    "ctrl_nat_mean": 0.80667073950842,
+    "n_q": 2040,
+    "n_ctrl": 6000
+  },
+  "adiyat_variants_doc_scale": {
+    "A_ayn_to_ghayn": {
+      "ncd_doc": 0.06532663316582915,
+      "z_vs_ctrl_null": 5.580792363622358,
+      "z_vs_quran_null": 3.4369153756834816,
+      "fires_vs_ctrl_p95": true,
+      "fires_vs_quran_p95": true
+    },
+    "B_dad_to_sad": {
+      "ncd_doc": 0.06532663316582915,
+      "z_vs_ctrl_null": 5.580792363622358,
+      "z_vs_quran_null": 3.4369153756834816,
+      "fires_vs_ctrl_p95": true,
+      "fires_vs_quran_p95": true
+    },
+    "C_both": {
+      "ncd_doc": 0.08040201005025126,
+      "z_vs_ctrl_null": 9.143849289782306,
+      "z_vs_quran_null": 5.897402630000395,
+      "fires_vs_ctrl_p95": true,
+      "fires_vs_quran_p95": true
+    }
+  },
+  "verdicts": {
+    "population_doc": "SUPPORTS Quran-population specificity",
+    "population_window": "SUPPORTS Quran-population specificity",
+    "adiyat": "ADIYAT_HITS_3_OF_3 (vs ctrl 95th percentile; Band-A doc-scale gzip NCD edit detection, Adiyat = 1/108 of the test set)"
+  },
+  "notes": "gzip NCD formalised as R12 candidate. doc-scale NCD on normalised 28-letter consonant stream; window-scale NCD on a 3-verse window containing the perturbation site. NaturalVariationNull = NCD between two random halves of the same canonical document. CtrlPerturbationNull = NCD(canonical, edited) on 200 ctrl units x 20 internal single-letter swaps each. Direct Adiyat-variant branch reports each variant's percentile under both nulls. A pre-registered R12 PASS requires population d >= +0.3 AND MW p_greater <= 0.05, OR all 3 Adiyat variants above ctrl-null 95th percentile.",
+  "provenance": {
+    "input_checkpoint": "phase_06_phi_m.pkl",
+    "perturbation_policy": "exp29-style internal single-letter swap",
+    "adiyat_source": "Surah 100 verse 1 from phase_06 CORPORA",
+    "design_doc": "2026-04-20 deep-scan synthesis"
+  }
+}

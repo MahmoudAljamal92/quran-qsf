@@ -1,0 +1,72 @@
+{
+  "audit": "Tier-5 zero-trust audit (E14/E18/E19/E20)",
+  "generated_utc": "2026-04-23T21:51:55+00:00",
+  "experiments_audited": [
+    "E14",
+    "E18",
+    "E19",
+    "E20"
+  ],
+  "n_flags": 8,
+  "flags_by_severity": {
+    "HIGH": 0,
+    "MED": 0,
+    "LOW": 8
+  },
+  "verdicts": {
+    "E14": "MULTISCALE_LAW",
+    "E18": "NULL_UTF8_CONFOUND",
+    "E19": "NULL_NO_RING",
+    "E20": "DERIVED_ANALYTIC"
+  },
+  "flags": [
+    {
+      "task": "E14",
+      "severity": "LOW",
+      "code": "A6_ABS_DEV_FRAME",
+      "message": "E14 uses absolute-deviation framing for S2/S3/S5 and raw distance for S1/S4. Mixing is defensible (each scale's null mean is explicitly zero under the frame chosen) but a future sensitivity pass should verify that a uniform raw-distance framing gives the same Brown verdict."
+    },
+    {
+      "task": "E14",
+      "severity": "LOW",
+      "code": "A6_FISHER_CAP_LITERAL",
+      "message": "S5_L_TEL observed p=0.000856 is within the finite-resolution null (null_pool_size=2335 → minimum p ≈ 4.3e-4). Fisher uses the clipped value; conservative. The Brown-combined p=1.4e-6 is therefore robust to a 2× tightening."
+    },
+    {
+      "task": "E18",
+      "severity": "LOW",
+      "code": "A6_B_AT_n63_borderline",
+      "message": "Arm B (compact alphabet) shows (n=63, nsym=16) at Fisher p=0.031 — borderline and not at the focal configs (31, 8/12). The confound verdict applies to the ORIGINAL UTF-8 signal's configs only; a trailing borderline at (63, 16) on the compact alphabet is expected residual structure in Arabic letter statistics."
+    },
+    {
+      "task": "E18",
+      "severity": "LOW",
+      "code": "A6_POETRY_ARM_UNDERPOWERED",
+      "message": "Arm C (poetry control) chunker split on '\\n\\n' which yielded only 1 unit. Arm C is informational; the decisive rule uses A-vs-B contrast alone, which is adequate. A future run with a better-tokenised Arabic control would add independent confound confirmation."
+    },
+    {
+      "task": "E19",
+      "severity": "LOW",
+      "code": "A6_PER_SURAH_SLIGHT_EXCESS",
+      "message": "6 vs expected ~4.0 — within Poisson noise (√4=2 SD), but worth a future replication with larger B."
+    },
+    {
+      "task": "E19",
+      "severity": "LOW",
+      "code": "A6_SIMPLE_FEATURES",
+      "message": "E19 uses a simple 5-D per-verse feature vector (chars, words, connector_count, unique_letters, mean_word_length). Richer semantic features (e.g., root-vector embeddings) could still reveal higher-order ring structure; this test only rules out ring structure at the surface-lexical/length feature level."
+    },
+    {
+      "task": "E20",
+      "severity": "LOW",
+      "code": "A6_ANALYTIC_MATCH_IS_COINCIDENTAL",
+      "message": "E20 DERIVED_ANALYTIC passes on 1/√26=0.19612 at 0.04% rel_err, but 26 has no canonical Arabic/Quranic grounding (abjad has 28 letters, not 26). The match is a numerical coincidence; the report's markdown flags this explicitly and recommends publication as 'empirical parameter with coincidence note'."
+    },
+    {
+      "task": "E20",
+      "severity": "LOW",
+      "code": "A6_B_SWEEP_NOT_INVARIANT",
+      "message": "Sensitivity sweep on chars_nospace shows exclusion count {1, 2, 3} across the ±10% neighborhood — NOT strictly invariant. However, Hotelling T² ratio (max/min) over corresponding Band-A drops = 1.14, so the downstream outlier claim survives. This is the honest reading; the STABLE_MAGIC branch would have triggered if downstream_stable were False."
+    }
+  ]
+}

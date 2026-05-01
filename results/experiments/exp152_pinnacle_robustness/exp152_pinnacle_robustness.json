@@ -1,0 +1,196 @@
+{
+  "experiment": "exp152_pinnacle_robustness",
+  "hypothesis_id": "H97_5_Surah_Pinnacle_Trio",
+  "hypothesis": "The Quran's joint-T² extremum at sūrah-pool resolution is structurally characterised by a stable trio {Q:074, Q:073, Q:002} spanning the entire Quranic revelation timeline (Nöldeke chrono ranks 2/3/84) and bimodal in mechanism (rhyme-extreme + length-extreme). Tests trio-as-SET bootstrap robustness, chronological-span shuffle null, rank-4 separation, and bimodal-mechanism directionality.",
+  "verdict": "FAIL_pinnacle_trio_indeterminate",
+  "verdict_reason": "Only 2/5 PREREG criteria PASS",
+  "prereg_hash": "918fdba20fad013fb95e136931bbe2c732825b5935ebbbe83c29a1378c4975f1",
+  "frozen_constants": {
+    "TRIO_SURAH_IDS": [
+      74,
+      73,
+      2
+    ],
+    "AXES": [
+      "H_EL_surah",
+      "p_max_surah",
+      "Delta_max_surah",
+      "VL_CV_surah",
+      "bigram_distinct_surah",
+      "gzip_eff_surah",
+      "n_verses_surah",
+      "mean_verse_words_surah"
+    ],
+    "N_BOOTSTRAP": 1000,
+    "N_CHRONO_SHUFFLE": 10000,
+    "RIDGE": 0.001,
+    "SEED": 42,
+    "ALPHABET_SIZE_AR": 28,
+    "GAP_RANK4_FLOOR": 1.2,
+    "TRIO_RANGE_FLOOR": 80,
+    "TRIO_BOOT_FREQ_FLOOR": 0.9,
+    "CHRONO_NULL_ALPHA": 0.05,
+    "HEL_TOP12_BITS_CEILING": 0.5,
+    "RANK3_VERSECOUNT_FLOOR": 100
+  },
+  "results": {
+    "top10_by_T2": [
+      {
+        "rank": 1,
+        "surah_id": 74,
+        "T2": 40.28612248703813,
+        "n_verses": 56,
+        "period": "Meccan",
+        "chrono_rank": 2
+      },
+      {
+        "rank": 2,
+        "surah_id": 73,
+        "T2": 39.39003538673332,
+        "n_verses": 20,
+        "period": "Meccan",
+        "chrono_rank": 3
+      },
+      {
+        "rank": 3,
+        "surah_id": 2,
+        "T2": 35.322736576306475,
+        "n_verses": 286,
+        "period": "Medinan",
+        "chrono_rank": 84
+      },
+      {
+        "rank": 4,
+        "surah_id": 108,
+        "T2": 28.62965248195192,
+        "n_verses": 3,
+        "period": "Meccan",
+        "chrono_rank": 12
+      },
+      {
+        "rank": 5,
+        "surah_id": 112,
+        "T2": 23.381393884837777,
+        "n_verses": 4,
+        "period": "Meccan",
+        "chrono_rank": 19
+      },
+      {
+        "rank": 6,
+        "surah_id": 26,
+        "T2": 16.487808803036636,
+        "n_verses": 227,
+        "period": "Meccan",
+        "chrono_rank": 44
+      },
+      {
+        "rank": 7,
+        "surah_id": 60,
+        "T2": 15.368773159983277,
+        "n_verses": 13,
+        "period": "Medinan",
+        "chrono_rank": 88
+      },
+      {
+        "rank": 8,
+        "surah_id": 113,
+        "T2": 13.832578689037126,
+        "n_verses": 5,
+        "period": "Meccan",
+        "chrono_rank": 17
+      },
+      {
+        "rank": 9,
+        "surah_id": 3,
+        "T2": 12.497442262742378,
+        "n_verses": 200,
+        "period": "Medinan",
+        "chrono_rank": 86
+      },
+      {
+        "rank": 10,
+        "surah_id": 65,
+        "T2": 11.171156397584086,
+        "n_verses": 12,
+        "period": "Medinan",
+        "chrono_rank": 96
+      }
+    ],
+    "actual_top3_sids": [
+      2,
+      73,
+      74
+    ],
+    "trio_set_PREREG_locked": [
+      74,
+      73,
+      2
+    ],
+    "criteria": {
+      "A1_trio_set_bootstrap_freq": {
+        "value": 0.089,
+        "floor": 0.9,
+        "PASS": false,
+        "n_bootstrap": 1000
+      },
+      "A2_trio_chrono_range": {
+        "value": 82,
+        "floor": 80,
+        "PASS": true,
+        "trio_chrono_ranks_sorted": [
+          2,
+          3,
+          84
+        ]
+      },
+      "A3_chrono_shuffle_null_p": {
+        "value": 0.1984,
+        "alpha": 0.05,
+        "PASS": false,
+        "null_range_min": 2,
+        "null_range_p50": 57,
+        "null_range_p99": 107,
+        "null_range_max": 113,
+        "n_shuffle": 10000
+      },
+      "A4_gap_to_rank4": {
+        "value": 1.2337815346719232,
+        "T2_rank3": 35.322736576306475,
+        "T2_rank4": 28.62965248195192,
+        "floor": 1.2,
+        "PASS": true
+      },
+      "A5_bimodal_mechanism": {
+        "rhyme_extreme": {
+          "HEL_top1_bits": 1.7661202510720027,
+          "HEL_top2_bits": 0.5689955935892812,
+          "HEL_top12_median_bits": 1.167557922330642,
+          "ceiling_bits": 0.5,
+          "PASS": false
+        },
+        "length_extreme": {
+          "rank3_n_verses": 286,
+          "rank3_n_verses_rank": 114,
+          "floor_rank": 100,
+          "PASS": true
+        },
+        "PASS": false
+      },
+      "n_pass_of_5": 2
+    }
+  },
+  "audit_report": {
+    "feature_matrix_sha256": "0b0e751b5358f3b045049985bb4c894afc592e7fea189d5ce4a7ee4791974e55",
+    "matrix_matches_exp151_locked": true,
+    "exp151_matrix_sha256_expected": "0b0e751b5358f3b045049985bb4c894afc592e7fea189d5ce4a7ee4791974e55",
+    "n_surahs_processed": 114,
+    "F79_match_check": {
+      "median_H_EL_surah_now": 0.9685208240372032,
+      "F79_implied_H_EL_median": 0.9685209220576039,
+      "diff": -9.802040068507267e-08,
+      "match_within_001": true
+    },
+    "actual_top3_matches_PREREG_trio": true
+  },
+  "wall_time_s": 1.3874025344848633
+}

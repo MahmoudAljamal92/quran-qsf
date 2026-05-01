@@ -1,0 +1,202 @@
+{
+  "experiment": "exp93_unified_stack",
+  "hypothesis": "H30 — Unified Stack Law (single logistic formula binds L_TEL + PhiMag + R12 into one P_Q(x))",
+  "schema_version": 1,
+  "prereg_document": "experiments/exp93_unified_stack/PREREG.md",
+  "frozen_constants": {
+    "seed": 42,
+    "n_splits": 5,
+    "lr_C": 1.0,
+    "w_T": 0.5329,
+    "w_EL": 4.179,
+    "b_TEL": -1.5221,
+    "band_a": [
+      15,
+      100
+    ],
+    "n_pert_per_unit": 20,
+    "ctrl_n_units": 200,
+    "gzip_level": 9,
+    "fpr_target": 0.05,
+    "auc_stage1_gate": 0.9975,
+    "recall_gate": 0.99,
+    "overfit_gap_max": 0.01
+  },
+  "stage1_classification": {
+    "n_q": 68,
+    "n_ctrl": 2509,
+    "univariate": {
+      "auc_L_TEL": 0.997503,
+      "auc_PhiMag": 0.994748,
+      "auc_R12_halfsplit": 0.514442
+    },
+    "sanity": {
+      "exp89_auc_L_expected": 0.9971,
+      "observed_auc_L": 0.997503,
+      "within_tolerance": true,
+      "tol": 0.002
+    },
+    "logistic_stack": {
+      "auc_oof": 0.997198,
+      "recall_at_5pct_fpr": 0.985294,
+      "threshold_at_5pct_fpr": 0.217578,
+      "train_aucs": [
+        0.998108,
+        0.998514,
+        0.998478,
+        0.997962,
+        0.997953
+      ],
+      "test_aucs": [
+        0.998577,
+        0.995304,
+        0.997006,
+        0.998774,
+        0.999387
+      ],
+      "overfit_gap": 0.00321,
+      "fold_coefficients": [
+        {
+          "w_L": 2.730928914690961,
+          "w_Phi": 0.7928425487832836,
+          "w_R12h": 0.6397039023720414,
+          "b": -4.698830568793014
+        },
+        {
+          "w_L": 2.1727931988482685,
+          "w_Phi": 1.3026493337024074,
+          "w_R12h": 1.3108377519071184,
+          "b": -4.736578636601652
+        },
+        {
+          "w_L": 3.002453435715645,
+          "w_Phi": 0.7208733457877519,
+          "w_R12h": 0.5315592839981192,
+          "b": -5.220671267092201
+        },
+        {
+          "w_L": 2.591098351372763,
+          "w_Phi": 0.9632570162622791,
+          "w_R12h": 0.6318752471944806,
+          "b": -4.586559713861807
+        },
+        {
+          "w_L": 2.8067290818345914,
+          "w_Phi": 0.8514965315744022,
+          "w_R12h": 0.7359594758344751,
+          "b": -4.646286338446924
+        }
+      ]
+    },
+    "fisher_combined": {
+      "auc": 0.998083,
+      "recall_at_5pct_fpr": 1.0,
+      "n_p_clipped_to_min": 0
+    }
+  },
+  "stage2_edit_detection": {
+    "executed": true,
+    "n_q_edits": 1360,
+    "n_ctrl_edits": 4000,
+    "r12_only_baseline": {
+      "cohen_d": 0.521377,
+      "sanity_ok": true,
+      "recall_at_5pct_fpr": 0.145588,
+      "auc": 0.613339,
+      "threshold_5pct": 0.049608
+    },
+    "logistic_stack": {
+      "auc_oof": 0.613031,
+      "recall_at_5pct_fpr": 0.144853,
+      "threshold_at_5pct_fpr": 0.658967,
+      "train_aucs": [
+        0.612134,
+        0.613497,
+        0.615089,
+        0.610771,
+        0.615344
+      ],
+      "test_aucs": [
+        0.617746,
+        0.613171,
+        0.607452,
+        0.624938,
+        0.605618
+      ],
+      "overfit_gap": 0.009726,
+      "fold_coefficients": [
+        {
+          "w_absdL": 0.0,
+          "w_NCDedit": 0.4795878808249692,
+          "w_absdPhi": 0.0,
+          "b": -0.04484522419520616
+        },
+        {
+          "w_absdL": 0.0,
+          "w_NCDedit": 0.481148233173442,
+          "w_absdPhi": 0.0,
+          "b": -0.04478853212070691
+        },
+        {
+          "w_absdL": 0.0,
+          "w_NCDedit": 0.47671646795667233,
+          "w_absdPhi": 0.0,
+          "b": -0.04485717392205562
+        },
+        {
+          "w_absdL": 0.0,
+          "w_NCDedit": 0.4623460231803815,
+          "w_absdPhi": 0.0,
+          "b": -0.042662789317699554
+        },
+        {
+          "w_absdL": 0.0,
+          "w_NCDedit": 0.4872656024541592,
+          "w_absdPhi": 0.0,
+          "b": -0.046084031054229625
+        }
+      ]
+    },
+    "adiyat_3_variants": [
+      {
+        "variant": "A_ayn_to_ghayn",
+        "dL": 0.0,
+        "ncd_edit": 0.065327,
+        "dPhi": 0.0,
+        "fires_R12_only": true
+      },
+      {
+        "variant": "B_dad_to_sad",
+        "dL": 0.10658,
+        "ncd_edit": 0.065327,
+        "dPhi": 0.282843,
+        "fires_R12_only": true
+      },
+      {
+        "variant": "C_both",
+        "dL": 0.10658,
+        "ncd_edit": 0.080402,
+        "dPhi": 0.282843,
+        "fires_R12_only": true
+      }
+    ],
+    "runtime_seconds": 38.87
+  },
+  "prereg_gates": {
+    "sanity_L_ok": true,
+    "sanity_R12_ok": true,
+    "stage1_logistic_auc_ok": false,
+    "stage1_logistic_recall_ok": false,
+    "stage1_fisher_auc_ok": true,
+    "stage1_fisher_recall_ok": true,
+    "stage1_auc_ok": true,
+    "stage1_recall_ok": true,
+    "stage1_overfit_ok": true,
+    "stage2a_non_inferior": true,
+    "stage2b_adiyat_3_of_3": true,
+    "stage2_overfit_ok": true,
+    "parsimony_no_gain": true
+  },
+  "verdict": "PASS_unified",
+  "runtime_seconds": 145.72
+}

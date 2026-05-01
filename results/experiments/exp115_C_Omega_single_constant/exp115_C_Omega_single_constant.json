@@ -1,0 +1,142 @@
+{
+  "experiment": "exp115_C_Omega_single_constant",
+  "hypothesis_id": "H70",
+  "verdict": "PASS_quran_unique_C_Omega_max",
+  "started_at_utc": "2026-04-29T09:23:39.633154+00:00",
+  "completed_at_utc": "2026-04-29T09:23:39.744052+00:00",
+  "prereg_document": "experiments/exp115_C_Omega_single_constant/PREREG.md",
+  "prereg_sha256": "2e83f62e9b7fa728d1677e3492f02226f28543f1c1cf7a3093a701b691287e96",
+  "frozen_constants": {
+    "FORMULA": "C_Omega(text, A) := 1 - H_EL(text) / log2(A)",
+    "INTERPRETATION": "fraction of alphabet's max entropy used for rhyme prediction; = I(end-letter; text) / log2(A)",
+    "RATIO_FLOOR_QURAN_OVER_RANK2": 1.3,
+    "Z_FLOOR_QURAN_VS_PEERS": -2.0,
+    "N_PERMS": 10000,
+    "SEED": 42
+  },
+  "source_receipt_sha256": {
+    "exp114": "8ddef208abfa6c97eef370a7ca276ed3e045568ab2c8536e74722955134b73f3"
+  },
+  "ranked_corpora_by_C_Omega_desc": [
+    {
+      "corpus": "quran",
+      "alphabet_size": 28,
+      "H_EL_bits": 0.9685208240372034,
+      "R_HEL_normalised": 0.2014664695534203,
+      "C_Omega": 0.7985335304465797,
+      "is_oral_canon": true
+    },
+    {
+      "corpus": "rigveda",
+      "alphabet_size": 47,
+      "H_EL_bits": 2.287783719941071,
+      "R_HEL_normalised": 0.4118727382045744,
+      "C_Omega": 0.5881272617954256,
+      "is_oral_canon": true
+    },
+    {
+      "corpus": "pali",
+      "alphabet_size": 31,
+      "H_EL_bits": 2.089938976016876,
+      "R_HEL_normalised": 0.4218522733213355,
+      "C_Omega": 0.5781477266786645,
+      "is_oral_canon": true
+    },
+    {
+      "corpus": "avestan_yasna",
+      "alphabet_size": 26,
+      "H_EL_bits": 2.1180782093497093,
+      "R_HEL_normalised": 0.45061278015652473,
+      "C_Omega": 0.5493872198434753,
+      "is_oral_canon": true
+    },
+    {
+      "corpus": "greek_nt",
+      "alphabet_size": 24,
+      "H_EL_bits": 2.433671200186647,
+      "R_HEL_normalised": 0.5307941340422875,
+      "C_Omega": 0.4692058659577125,
+      "is_oral_canon": true
+    },
+    {
+      "corpus": "poetry_islami",
+      "alphabet_size": 28,
+      "H_EL_bits": 2.688721875540867,
+      "R_HEL_normalised": 0.5592933992046635,
+      "C_Omega": 0.4407066007953365,
+      "is_oral_canon": false
+    },
+    {
+      "corpus": "poetry_abbasi",
+      "alphabet_size": 28,
+      "H_EL_bits": 2.7516291673878226,
+      "R_HEL_normalised": 0.5723790342091266,
+      "C_Omega": 0.4276209657908734,
+      "is_oral_canon": false
+    },
+    {
+      "corpus": "poetry_jahili",
+      "alphabet_size": 28,
+      "H_EL_bits": 2.779539763336115,
+      "R_HEL_normalised": 0.5781848455962223,
+      "C_Omega": 0.4218151544037777,
+      "is_oral_canon": false
+    },
+    {
+      "corpus": "ksucca",
+      "alphabet_size": 28,
+      "H_EL_bits": 2.907891879501107,
+      "R_HEL_normalised": 0.6048839594012118,
+      "C_Omega": 0.39511604059878824,
+      "is_oral_canon": false
+    },
+    {
+      "corpus": "arabic_bible",
+      "alphabet_size": 28,
+      "H_EL_bits": 2.918295834054489,
+      "R_HEL_normalised": 0.6070481338218782,
+      "C_Omega": 0.39295186617812183,
+      "is_oral_canon": false
+    },
+    {
+      "corpus": "hebrew_tanakh",
+      "alphabet_size": 22,
+      "H_EL_bits": 3.053090083530327,
+      "R_HEL_normalised": 0.6846365960115974,
+      "C_Omega": 0.31536340398840257,
+      "is_oral_canon": true
+    },
+    {
+      "corpus": "hindawi",
+      "alphabet_size": 28,
+      "H_EL_bits": 3.478902741597457,
+      "R_HEL_normalised": 0.7236625541491009,
+      "C_Omega": 0.27633744585089914,
+      "is_oral_canon": false
+    }
+  ],
+  "quran_C_Omega": 0.7985335304465797,
+  "quran_rank": 1,
+  "rank2_C_Omega": 0.5881272617954256,
+  "ratio_quran_to_rank2": 1.357756360432654,
+  "margin_pass_at_1_3": true,
+  "form_A_rank_based_perm_null": {
+    "perm_p_quran_global_max": 0.0824,
+    "perm_n": 10000,
+    "perm_seed": 42,
+    "note": "saturates at 1/N=0.083 with N=12; see form_B for non-saturating test."
+  },
+  "form_B_z_score_parametric": {
+    "peer_mean": 0.44134359562558884,
+    "peer_std": 0.10042778828057092,
+    "quran_z_vs_peers": 3.556684269727107,
+    "parametric_p_t_one_tailed_upper": 0.002604963997235421,
+    "z_pass_at_minus_2": true,
+    "p_pass_at_0_05": true
+  },
+  "audit_report": {
+    "ok": true,
+    "n_corpora": 12,
+    "exp114_audit_ok": true
+  }
+}

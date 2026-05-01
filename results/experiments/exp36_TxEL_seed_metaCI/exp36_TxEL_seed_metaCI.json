@@ -1,0 +1,130 @@
+{
+  "experiment": "exp36_TxEL_seed_metaCI",
+  "features": [
+    "T",
+    "EL"
+  ],
+  "n_total": 2577,
+  "n_quran": 68,
+  "n_ctrl": 2509,
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "protocol": "byte-exact parity with exp22 / _build.py Cell 71 per seed: outer StratifiedKFold(5, shuffle=True, random_state=seed), inner StratifiedKFold(3, shuffle=True, random_state=seed+1), StandardScaler fit inside each inner-train fold, LogisticRegression C tuned over {0.01, 0.1, 1.0, 10.0}, best-C refit on full outer-train with fresh StandardScaler.",
+  "per_seed": [
+    {
+      "seed": 42,
+      "auc_fold": [
+        0.9971542401821287,
+        0.9998577120091064,
+        0.9954376960364985,
+        0.9978547349065278,
+        0.9993870671161508
+      ],
+      "best_C_per_fold": [
+        1.0,
+        0.01,
+        0.01,
+        0.1,
+        0.1
+      ],
+      "auc_mean_within_seed": 0.9979382900500825,
+      "auc_std_within_seed": 0.0017788916297918399
+    },
+    {
+      "seed": 43,
+      "auc_fold": [
+        0.9960159362549801,
+        0.9933124644280023,
+        1.0,
+        0.9975482684646032,
+        0.9981612013484523
+      ],
+      "best_C_per_fold": [
+        0.01,
+        10.0,
+        0.01,
+        1.0,
+        0.1
+      ],
+      "auc_mean_within_seed": 0.9970075740992076,
+      "auc_std_within_seed": 0.002510726991084614
+    },
+    {
+      "seed": 44,
+      "auc_fold": [
+        0.99800796812749,
+        0.9972965281730222,
+        0.9970059880239521,
+        0.9927980386147718,
+        1.0
+      ],
+      "best_C_per_fold": [
+        10.0,
+        0.1,
+        0.1,
+        0.1,
+        0.01
+      ],
+      "auc_mean_within_seed": 0.9970217045878472,
+      "auc_std_within_seed": 0.002634297278077374
+    },
+    {
+      "seed": 45,
+      "auc_fold": [
+        0.9982925441092771,
+        0.9960159362549801,
+        0.9995722840034217,
+        0.9989273674532638,
+        0.9940239043824701
+      ],
+      "best_C_per_fold": [
+        0.01,
+        10.0,
+        0.1,
+        0.1,
+        0.01
+      ],
+      "auc_mean_within_seed": 0.9973664072406827,
+      "auc_std_within_seed": 0.0022997997639689688
+    },
+    {
+      "seed": 46,
+      "auc_fold": [
+        0.9972965281730222,
+        0.9978656801365965,
+        0.9935842600513259,
+        0.9940239043824702,
+        0.9992338338951885
+      ],
+      "best_C_per_fold": [
+        0.01,
+        0.01,
+        10.0,
+        0.01,
+        0.01
+      ],
+      "auc_mean_within_seed": 0.9964008413277206,
+      "auc_std_within_seed": 0.0024777416066045226
+    }
+  ],
+  "meta_summary": {
+    "auc_mean_across_seeds": 0.9971469634611081,
+    "auc_std_across_seeds": 0.0005626212669914468,
+    "auc_min_across_seeds": 0.9964008413277206,
+    "auc_max_across_seeds": 0.9979382900500825,
+    "n_seeds": 5,
+    "n_folds_total": 25,
+    "all_folds_mean": 0.9971469634611081,
+    "all_folds_std": 0.0022142991170042915,
+    "all_folds_min": 0.9927980386147718,
+    "all_folds_max": 1.0
+  },
+  "verdict": "META_STABLE",
+  "baseline_5D_nested_AUC_locked": 0.998,
+  "note": "Meta-CI across 5 independent seeds. A verdict of META_STABLE (std < 0.005) supports a Zipf-class parsimony claim at PNAS-grade precision: the (T, EL) fingerprint classifies Quran vs Arabic ctrl at AUC ~ 0.998 regardless of the fold randomisation."
+}

@@ -1,0 +1,169 @@
+{
+  "experiment": "exp76_zipf",
+  "hypothesis": "H7 — Does the Quran have a unique Zipf/Heaps exponent pair?",
+  "schema_version": 1,
+  "per_corpus": {
+    "quran": {
+      "n_tokens": 78248,
+      "vocab_size": 14868,
+      "ttr": 0.19,
+      "hapax_ratio": 0.5857,
+      "zipf": {
+        "alpha": 0.9958,
+        "R2": 0.9752,
+        "std_err": 0.0015
+      },
+      "heaps": {
+        "beta": 0.7819,
+        "K": 2.39,
+        "R2": 0.998
+      },
+      "zipf_heaps": {
+        "beta_predicted": 1.0042,
+        "beta_residual": -0.2223
+      }
+    },
+    "poetry_jahili": {
+      "n_tokens": 17520,
+      "vocab_size": 12175,
+      "ttr": 0.6949,
+      "hapax_ratio": 0.8873,
+      "zipf": {
+        "alpha": 0.4049,
+        "R2": 0.7386,
+        "std_err": 0.0024
+      },
+      "heaps": {
+        "beta": 0.9493,
+        "K": 1.19,
+        "R2": 0.9995
+      },
+      "zipf_heaps": {
+        "beta_predicted": 2.47,
+        "beta_residual": -1.5207
+      }
+    },
+    "poetry_islami": {
+      "n_tokens": 70614,
+      "vocab_size": 38184,
+      "ttr": 0.5407,
+      "hapax_ratio": 0.8217,
+      "zipf": {
+        "alpha": 0.5326,
+        "R2": 0.8483,
+        "std_err": 0.0013
+      },
+      "heaps": {
+        "beta": 0.9196,
+        "K": 1.44,
+        "R2": 0.9995
+      },
+      "zipf_heaps": {
+        "beta_predicted": 1.8776,
+        "beta_residual": -0.9581
+      }
+    },
+    "poetry_abbasi": {
+      "n_tokens": 526821,
+      "vocab_size": 225460,
+      "ttr": 0.428,
+      "hapax_ratio": 0.7729,
+      "zipf": {
+        "alpha": 0.6232,
+        "R2": 0.9006,
+        "std_err": 0.0005
+      },
+      "heaps": {
+        "beta": 0.9259,
+        "K": 1.31,
+        "R2": 0.9994
+      },
+      "zipf_heaps": {
+        "beta_predicted": 1.6047,
+        "beta_residual": -0.6787
+      }
+    },
+    "ksucca": {
+      "n_tokens": 131831,
+      "vocab_size": 22530,
+      "ttr": 0.1709,
+      "hapax_ratio": 0.6109,
+      "zipf": {
+        "alpha": 1.0037,
+        "R2": 0.9725,
+        "std_err": 0.0013
+      },
+      "heaps": {
+        "beta": 0.8041,
+        "K": 1.97,
+        "R2": 0.9986
+      },
+      "zipf_heaps": {
+        "beta_predicted": 0.9963,
+        "beta_residual": -0.1922
+      }
+    },
+    "arabic_bible": {
+      "n_tokens": 434944,
+      "vocab_size": 67940,
+      "ttr": 0.1562,
+      "hapax_ratio": 0.5808,
+      "zipf": {
+        "alpha": 1.03,
+        "R2": 0.9766,
+        "std_err": 0.0007
+      },
+      "heaps": {
+        "beta": 0.8025,
+        "K": 2.41,
+        "R2": 0.9988
+      },
+      "zipf_heaps": {
+        "beta_predicted": 0.9709,
+        "beta_residual": -0.1684
+      }
+    },
+    "hindawi": {
+      "n_tokens": 20764,
+      "vocab_size": 10306,
+      "ttr": 0.4963,
+      "hapax_ratio": 0.7813,
+      "zipf": {
+        "alpha": 0.6179,
+        "R2": 0.8965,
+        "std_err": 0.0023
+      },
+      "heaps": {
+        "beta": 0.8872,
+        "K": 1.57,
+        "R2": 0.9999
+      },
+      "zipf_heaps": {
+        "beta_predicted": 1.6185,
+        "beta_residual": -0.7313
+      }
+    }
+  },
+  "outlier_test": {
+    "quran_alpha": 0.9958,
+    "quran_beta": 0.7819,
+    "ctrl_centroid_alpha": 0.702,
+    "ctrl_centroid_beta": 0.8814,
+    "mahalanobis_d": 2.3941,
+    "z_alpha": 1.1454,
+    "z_beta": -1.5627
+  },
+  "bootstrap": {
+    "n_boot": 10000,
+    "alpha_ci": [
+      0.9378,
+      1.0392
+    ],
+    "beta_ci": [
+      0.7243,
+      0.7842
+    ]
+  },
+  "verdict": "DISTINCT",
+  "runtime_seconds": 530.93
+}

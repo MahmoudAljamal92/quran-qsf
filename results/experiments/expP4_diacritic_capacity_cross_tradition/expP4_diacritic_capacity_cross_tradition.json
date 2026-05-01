@@ -1,0 +1,206 @@
+{
+  "experiment": "expP4_diacritic_capacity_cross_tradition",
+  "task_id": "P4 / A2 cross-tradition extension",
+  "schema_version": 1,
+  "title": "Diacritic-channel capacity ratio across 6 religious orthographies: Arabic + Hebrew + Greek + Devanagari (Vedic) + Latin-IAST (Pāli) + Latin-Geldner (Avestan).",
+  "pre_reg": {
+    "band_lo": 0.55,
+    "band_hi": 0.75,
+    "max_spread_6": 0.3,
+    "PRED_A2_EXT_1": "≥1 of 3 new corpora primitives R ∈ [0.55, 0.75]",
+    "PRED_A2_EXT_2": "6-corpus primitives spread ≤ 0.30",
+    "PRED_A2_EXT_3": "Vedic primitives R is lowest or 2nd-lowest of 6"
+  },
+  "results_per_corpus": {
+    "quran_arabic": {
+      "n_pairs": 320543,
+      "n_distinct_base_letters": 36,
+      "n_distinct_diacritic_strings": 60,
+      "n_distinct_primitive_diacritics": 25,
+      "H_diacritic_marginal_bits": 3.0423991453827495,
+      "H_base_letter_marginal_bits": 4.518092289948211,
+      "H_diacritic_given_base_bits": 2.1746961451132134,
+      "H_max_combinations_bits": 5.906890595608519,
+      "H_max_primitives_bits": 4.643856189774724,
+      "ratio_R_combinations": 0.368162590776608,
+      "ratio_R_primitives": 0.4682953253164175,
+      "redundancy_combinations": 0.631837409223392,
+      "redundancy_primitives": 0.5317046746835825,
+      "base_letter_alphabet": "Arabic rasm (U+0621-U+064A)",
+      "diacritic_alphabet": "Arabic harakat (U+064B-U+065F + Quranic annotations)"
+    },
+    "tanakh_hebrew": {
+      "n_pairs": 1261611,
+      "n_distinct_base_letters": 27,
+      "n_distinct_diacritic_strings": 111,
+      "n_distinct_primitive_diacritics": 15,
+      "H_diacritic_marginal_bits": 3.5893427808593126,
+      "H_base_letter_marginal_bits": 4.275006562069211,
+      "H_diacritic_given_base_bits": 2.714310295752838,
+      "H_max_combinations_bits": 6.794415866350106,
+      "H_max_primitives_bits": 3.9068905956085187,
+      "ratio_R_combinations": 0.3994913395271666,
+      "ratio_R_primitives": 0.6947495020218425,
+      "redundancy_combinations": 0.6005086604728334,
+      "redundancy_primitives": 0.3052504979781575,
+      "base_letter_alphabet": "Hebrew consonants (U+05D0-U+05EA)",
+      "diacritic_alphabet": "Hebrew niqqud (U+05B0-U+05BC,U+05BF,U+05C1-U+05C2,U+05C7)"
+    },
+    "nt_greek": {
+      "n_pairs": 362642,
+      "n_distinct_base_letters": 7,
+      "n_distinct_diacritic_strings": 24,
+      "n_distinct_primitive_diacritics": 8,
+      "H_diacritic_marginal_bits": 2.3659915097959194,
+      "H_base_letter_marginal_bits": 2.6850557696934834,
+      "H_diacritic_given_base_bits": 2.0878358897973084,
+      "H_max_combinations_bits": 4.584962500721156,
+      "H_max_primitives_bits": 3.0,
+      "ratio_R_combinations": 0.45536596852622424,
+      "ratio_R_primitives": 0.6959452965991028,
+      "redundancy_combinations": 0.5446340314737758,
+      "redundancy_primitives": 0.30405470340089724,
+      "base_letter_alphabet": "Greek vowels α/ε/η/ι/ο/υ/ω (case-folded)",
+      "diacritic_alphabet": "Greek combining marks (Unicode Mn category, NFD)"
+    },
+    "rigveda_devanagari": {
+      "n_pairs": 512219,
+      "n_distinct_base_letters": 45,
+      "n_distinct_diacritic_strings": 79,
+      "n_distinct_primitive_diacritics": 17,
+      "H_diacritic_marginal_bits": 4.071842967937586,
+      "H_base_letter_marginal_bits": 4.306117073989799,
+      "H_diacritic_given_base_bits": 3.7531003840936834,
+      "H_max_combinations_bits": 6.303780748177103,
+      "H_max_primitives_bits": 4.087462841250339,
+      "ratio_R_combinations": 0.5953729252368092,
+      "ratio_R_primitives": 0.918198043592642,
+      "redundancy_combinations": 0.4046270747631908,
+      "redundancy_primitives": 0.08180195640735799,
+      "base_letter_alphabet": "Devanagari consonants U+0915-U+0939 + independent vowels U+0905-U+0914",
+      "diacritic_alphabet": "Devanagari nukta + matras + virama + Vedic accents + anusvara + visarga (U+093C, U+093E-U+094D, U+0951-U+0954, U+0902-U+0903)"
+    },
+    "pali_iast": {
+      "n_pairs": 2807810,
+      "n_distinct_base_letters": 21,
+      "n_distinct_diacritic_strings": 5,
+      "n_distinct_primitive_diacritics": 5,
+      "H_diacritic_marginal_bits": 0.8119814280299118,
+      "H_base_letter_marginal_bits": 3.8304026007944576,
+      "H_diacritic_given_base_bits": 0.46659356290908716,
+      "H_max_combinations_bits": 2.321928094887362,
+      "H_max_primitives_bits": 2.321928094887362,
+      "ratio_R_combinations": 0.20095090969288687,
+      "ratio_R_primitives": 0.20095090969288687,
+      "redundancy_combinations": 0.7990490903071131,
+      "redundancy_primitives": 0.7990490903071131,
+      "base_letter_alphabet": "Latin a-z + IAST precomposed letters (case-folded)",
+      "diacritic_alphabet": "Combining marks Mn (NFD-decomposed: macron, dot, tilde, ring, etc.)"
+    },
+    "avestan_geldner": {
+      "n_pairs": 135990,
+      "n_distinct_base_letters": 26,
+      "n_distinct_diacritic_strings": 1,
+      "n_distinct_primitive_diacritics": 1,
+      "H_diacritic_marginal_bits": -0.0,
+      "H_base_letter_marginal_bits": 4.063713713639152,
+      "H_diacritic_given_base_bits": 0.0,
+      "H_max_combinations_bits": 0.0,
+      "H_max_primitives_bits": 0.0,
+      "ratio_R_combinations": 0.0,
+      "ratio_R_primitives": 0.0,
+      "redundancy_combinations": 0.0,
+      "redundancy_primitives": 0.0,
+      "base_letter_alphabet": "Latin a-z + Avestan precomposed (ə, ŋ, others)",
+      "diacritic_alphabet": "Combining marks Mn (NFD-decomposed)"
+    }
+  },
+  "universal_band_combinations": {
+    "denominator_convention": "combinations",
+    "R_per_corpus": {
+      "quran_arabic": 0.368162590776608,
+      "tanakh_hebrew": 0.3994913395271666,
+      "nt_greek": 0.45536596852622424,
+      "rigveda_devanagari": 0.5953729252368092,
+      "pali_iast": 0.20095090969288687,
+      "avestan_geldner": 0.0
+    },
+    "in_band_per_corpus": {
+      "quran_arabic": false,
+      "tanakh_hebrew": false,
+      "nt_greek": false,
+      "rigveda_devanagari": true,
+      "pali_iast": false,
+      "avestan_geldner": false
+    },
+    "n_in_band": 1,
+    "n_total": 6,
+    "R_min": 0.0,
+    "R_max": 0.5953729252368092,
+    "spread": 0.5953729252368092,
+    "passes_PRED_A2_EXT_1": "PASS",
+    "passes_PRED_A2_EXT_2": "FAIL"
+  },
+  "universal_band_primitives": {
+    "denominator_convention": "primitives",
+    "R_per_corpus": {
+      "quran_arabic": 0.4682953253164175,
+      "tanakh_hebrew": 0.6947495020218425,
+      "nt_greek": 0.6959452965991028,
+      "rigveda_devanagari": 0.918198043592642,
+      "pali_iast": 0.20095090969288687,
+      "avestan_geldner": 0.0
+    },
+    "in_band_per_corpus": {
+      "quran_arabic": false,
+      "tanakh_hebrew": true,
+      "nt_greek": true,
+      "rigveda_devanagari": false,
+      "pali_iast": false,
+      "avestan_geldner": false
+    },
+    "n_in_band": 2,
+    "n_total": 6,
+    "R_min": 0.0,
+    "R_max": 0.918198043592642,
+    "spread": 0.918198043592642,
+    "passes_PRED_A2_EXT_1": "FAIL",
+    "passes_PRED_A2_EXT_2": "FAIL"
+  },
+  "pre_registered_outcomes": {
+    "PRED_A2_EXT_1_combinations": "PASS",
+    "PRED_A2_EXT_1_primitives": "FAIL",
+    "PRED_A2_EXT_2_combinations": "FAIL",
+    "PRED_A2_EXT_2_primitives": "FAIL",
+    "PRED_A2_EXT_3_vedic_low_primitives": "FAIL",
+    "vedic_primitives_rank_from_low": 5,
+    "overall_verdict": "NO_SUPPORT"
+  },
+  "sanity_check_3_corpus_subset_reproduces_locked_A2": {
+    "combinations": {
+      "drift_arabic": 0.0,
+      "drift_hebrew": 0.0,
+      "drift_greek": 0.0,
+      "max_drift": 0.0,
+      "ok": true
+    },
+    "primitives": {
+      "drift_arabic": 0.0,
+      "drift_hebrew": 0.0,
+      "drift_greek": 0.0,
+      "max_drift": 0.0,
+      "ok": true
+    }
+  },
+  "extends": {
+    "experiment": "expA2_diacritic_capacity_universal",
+    "relationship": "strict superset: 3 locked corpora + 3 new ones; the 3-corpus subset must reproduce the locked A2 R values to within 1e-6."
+  },
+  "provenance": {
+    "data_sources": {
+      "rigveda_devanagari": "github.com/bhavykhatri/DharmicData",
+      "pali_iast": "github.com/suttacentral/bilara-data",
+      "avestan_geldner": "avesta.org/yasna/ (Geldner 1896)"
+    }
+  }
+}

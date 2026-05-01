@@ -1,0 +1,38 @@
+{
+  "experiment_id": "expE13_auth_gate",
+  "task": "E13",
+  "tier": 3,
+  "title": "1-of-865 authentication gate: single-scalar composite statistic",
+  "generated_utc": "2026-04-23T19:56:14+00:00",
+  "window_N": 5,
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "n_texts": 865,
+  "n_variants": 864,
+  "gate_definition": "s(text) = logP(no_edit | channel_features) - logP(edit | channel_features) under KDE-NB fusion",
+  "canon_feature_norm_whole": 18722277601592.355,
+  "canon_rank_per_seed": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "canon_rank_mean": 1.0,
+  "canon_rank_max": 1,
+  "empirical_p_mean": 0.0011560693641618498,
+  "theoretical_uniform_p": 0.0011560693641618498,
+  "verdict": "GATE_SOLID",
+  "pre_registered_criteria": {
+    "null": "Under uniform prior, P(rank=1 | canonical) = 1/865",
+    "GATE_SOLID": "rank=1 on all 5 seeds AND empirical p<=0.01",
+    "GATE_USEFUL": "rank<=10 on all 5 seeds (top 1.2%)",
+    "NULL_GATE_FAILS": "any seed has rank>10",
+    "side_effects": "no mutation of any pinned artefact; outputs under expE13 folder only"
+  }
+}

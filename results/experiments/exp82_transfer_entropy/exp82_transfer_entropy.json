@@ -1,0 +1,139 @@
+{
+  "experiment": "exp82_transfer_entropy",
+  "hypothesis": "H11 — Does the canonical surah ordering carry directed information flow?",
+  "schema_version": 1,
+  "n_surahs": 114,
+  "n_bins": 3,
+  "n_perm": 10000,
+  "te_pairs": {
+    "EL->VL_CV": {
+      "te": 0.091429,
+      "p_perm": 0.362764,
+      "p_bh": 0.659571,
+      "bh_rank": 11
+    },
+    "EL->CN": {
+      "te": 0.052187,
+      "p_perm": 0.825417,
+      "p_bh": 0.971079,
+      "bh_rank": 17
+    },
+    "EL->H_cond": {
+      "te": 0.07228,
+      "p_perm": 0.578942,
+      "p_bh": 0.89068,
+      "bh_rank": 13
+    },
+    "EL->T": {
+      "te": 0.104561,
+      "p_perm": 0.289371,
+      "p_bh": 0.578742,
+      "bh_rank": 10
+    },
+    "VL_CV->EL": {
+      "te": 0.076221,
+      "p_perm": 0.539846,
+      "p_bh": 0.899743,
+      "bh_rank": 12
+    },
+    "VL_CV->CN": {
+      "te": 0.051005,
+      "p_perm": 0.842716,
+      "p_bh": 0.936351,
+      "bh_rank": 18
+    },
+    "VL_CV->H_cond": {
+      "te": 0.123012,
+      "p_perm": 0.138786,
+      "p_bh": 0.396531,
+      "bh_rank": 7
+    },
+    "VL_CV->T": {
+      "te": 0.128313,
+      "p_perm": 0.114389,
+      "p_bh": 0.571945,
+      "bh_rank": 4
+    },
+    "CN->EL": {
+      "te": 0.069816,
+      "p_perm": 0.615038,
+      "p_bh": 0.878626,
+      "bh_rank": 14
+    },
+    "CN->VL_CV": {
+      "te": 0.18893,
+      "p_perm": 0.009399,
+      "p_bh": 0.18798,
+      "bh_rank": 1
+    },
+    "CN->H_cond": {
+      "te": 0.062857,
+      "p_perm": 0.736726,
+      "p_bh": 0.920907,
+      "bh_rank": 16
+    },
+    "CN->T": {
+      "te": 0.14063,
+      "p_perm": 0.069593,
+      "p_bh": 0.463953,
+      "bh_rank": 3
+    },
+    "H_cond->EL": {
+      "te": 0.045073,
+      "p_perm": 0.891111,
+      "p_bh": 0.938012,
+      "bh_rank": 19
+    },
+    "H_cond->VL_CV": {
+      "te": 0.117259,
+      "p_perm": 0.176882,
+      "p_bh": 0.442205,
+      "bh_rank": 8
+    },
+    "H_cond->CN": {
+      "te": 0.127816,
+      "p_perm": 0.125787,
+      "p_bh": 0.503148,
+      "bh_rank": 5
+    },
+    "H_cond->T": {
+      "te": 0.141929,
+      "p_perm": 0.031897,
+      "p_bh": 0.31897,
+      "bh_rank": 2
+    },
+    "T->EL": {
+      "te": 0.103866,
+      "p_perm": 0.287171,
+      "p_bh": 0.638158,
+      "bh_rank": 9
+    },
+    "T->VL_CV": {
+      "te": 0.123909,
+      "p_perm": 0.131687,
+      "p_bh": 0.438957,
+      "bh_rank": 6
+    },
+    "T->CN": {
+      "te": 0.068837,
+      "p_perm": 0.640036,
+      "p_bh": 0.853381,
+      "bh_rank": 15
+    },
+    "T->H_cond": {
+      "te": 0.029393,
+      "p_perm": 0.958704,
+      "p_bh": 0.958704,
+      "bh_rank": 20
+    }
+  },
+  "summary": {
+    "n_sig_bh": 0,
+    "n_sig_raw_p01": 1,
+    "total_te_canonical": 1.919323,
+    "total_te_reverse": 1.983752
+  },
+  "verdict": "SUGGESTIVE",
+  "runtime_seconds": 52.48,
+  "note": "Features computed with h_cond_initials (fast proxy) not CamelTools h_cond_roots"
+}

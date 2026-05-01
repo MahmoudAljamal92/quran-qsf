@@ -1,0 +1,1144 @@
+{
+  "experiment": "exp137_The_Quran_Constant",
+  "hypothesis_id": "H88",
+  "hypothesis": "Ω(T) = log₂(A_T) − H_EL(T) is the project's unifying Pythagoras-equation constant: rigorously identical to D_KL(p_T || u_{A_T}) by Theorem 1; captures source redundancy / channel-capacity-gap by Theorem 2; achieves global maximum at the Quran across 12 corpora / 6 alphabets with margin ≥ 0.5 bits to runner-up.",
+  "verdict": "PARTIAL_omega_theorem_only",
+  "verdict_reason": "Theorems verify but Quran-uniqueness fragile: bootstrap-CI-sep (fail), margin (fail).",
+  "prereg_hash": "6d29ecfd756f71680e107106af9a6b6ab5cc480a382dc0620b9fac64a4516949",
+  "frozen_constants": {
+    "EXPECTED_CORPORA": [
+      "quran",
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "hindawi",
+      "ksucca",
+      "arabic_bible",
+      "hebrew_tanakh",
+      "greek_nt",
+      "pali",
+      "avestan_yasna",
+      "rigveda"
+    ],
+    "ALPHABET_SIZES": {
+      "quran": 28,
+      "poetry_jahili": 28,
+      "poetry_islami": 28,
+      "poetry_abbasi": 28,
+      "hindawi": 28,
+      "ksucca": 28,
+      "arabic_bible": 28,
+      "hebrew_tanakh": 22,
+      "greek_nt": 24,
+      "pali": 31,
+      "avestan_yasna": 26,
+      "rigveda": 47
+    },
+    "N_BOOTSTRAP": 1000,
+    "N_MC": 100000,
+    "NOISE_RATES": [
+      0.001,
+      0.01,
+      0.05,
+      0.1
+    ],
+    "MARGIN_THRESHOLDS": [
+      2.5,
+      3.0,
+      3.3,
+      3.5,
+      3.8,
+      4.0
+    ],
+    "SEED": 42,
+    "THEOREM_1_TOL": 1e-12,
+    "THEOREM_2_LIMIT_TOL": 0.05,
+    "MC_REL_TOL": 0.01
+  },
+  "results": {
+    "sub_A_theorem_1_identity": {
+      "quran": {
+        "H_EL": 2.470720215424587,
+        "alphabet_size": 28,
+        "log2_A": 4.807354922057604,
+        "omega_definition": 2.3366347066330166,
+        "omega_KL_divergence": 2.336634706633017,
+        "abs_diff": 4.440892098500626e-16,
+        "identity_holds": true,
+        "n_distinct_letters": 25,
+        "n_total_finals": 6236
+      },
+      "poetry_jahili": {
+        "H_EL": 3.814724800590194,
+        "alphabet_size": 28,
+        "log2_A": 4.807354922057604,
+        "omega_definition": 0.9926301214674096,
+        "omega_KL_divergence": 0.9926301214674094,
+        "abs_diff": 2.220446049250313e-16,
+        "identity_holds": true,
+        "n_distinct_letters": 28,
+        "n_total_finals": 2496
+      },
+      "poetry_islami": {
+        "H_EL": 3.7575399257495903,
+        "alphabet_size": 28,
+        "log2_A": 4.807354922057604,
+        "omega_definition": 1.0498149963080134,
+        "omega_KL_divergence": 1.0498149963080137,
+        "abs_diff": 2.220446049250313e-16,
+        "identity_holds": true,
+        "n_distinct_letters": 28,
+        "n_total_finals": 10085
+      },
+      "poetry_abbasi": {
+        "H_EL": 3.8225714330036857,
+        "alphabet_size": 28,
+        "log2_A": 4.807354922057604,
+        "omega_definition": 0.984783489053918,
+        "omega_KL_divergence": 0.9847834890539187,
+        "abs_diff": 6.661338147750939e-16,
+        "identity_holds": true,
+        "n_distinct_letters": 28,
+        "n_total_finals": 75259
+      },
+      "hindawi": {
+        "H_EL": 3.883206737347789,
+        "alphabet_size": 28,
+        "log2_A": 4.807354922057604,
+        "omega_definition": 0.9241481847098147,
+        "omega_KL_divergence": 0.9241481847098153,
+        "abs_diff": 5.551115123125783e-16,
+        "identity_holds": true,
+        "n_distinct_letters": 28,
+        "n_total_finals": 3462
+      },
+      "ksucca": {
+        "H_EL": 3.7553346508420575,
+        "alphabet_size": 28,
+        "log2_A": 4.807354922057604,
+        "omega_definition": 1.0520202712155462,
+        "omega_KL_divergence": 1.0520202712155466,
+        "abs_diff": 4.440892098500626e-16,
+        "identity_holds": true,
+        "n_distinct_letters": 26,
+        "n_total_finals": 2013
+      },
+      "arabic_bible": {
+        "H_EL": 3.7052353604390245,
+        "alphabet_size": 28,
+        "log2_A": 4.807354922057604,
+        "omega_definition": 1.1021195616185793,
+        "omega_KL_divergence": 1.1021195616185793,
+        "abs_diff": 0.0,
+        "identity_holds": true,
+        "n_distinct_letters": 28,
+        "n_total_finals": 31083
+      },
+      "hebrew_tanakh": {
+        "H_EL": 3.6684898740231513,
+        "alphabet_size": 22,
+        "log2_A": 4.459431618637297,
+        "omega_definition": 0.790941744614146,
+        "omega_KL_divergence": 0.7909417446141458,
+        "abs_diff": 2.220446049250313e-16,
+        "identity_holds": true,
+        "n_distinct_letters": 22,
+        "n_total_finals": 28465
+      },
+      "greek_nt": {
+        "H_EL": 2.807380532925843,
+        "alphabet_size": 24,
+        "log2_A": 4.584962500721156,
+        "omega_definition": 1.7775819677953129,
+        "omega_KL_divergence": 1.7775819677953135,
+        "abs_diff": 6.661338147750939e-16,
+        "identity_holds": true,
+        "n_distinct_letters": 20,
+        "n_total_finals": 7941
+      },
+      "pali": {
+        "H_EL": 2.3257207515452003,
+        "alphabet_size": 31,
+        "log2_A": 4.954196310386875,
+        "omega_definition": 2.6284755588416746,
+        "omega_KL_divergence": 2.628475558841675,
+        "abs_diff": 4.440892098500626e-16,
+        "identity_holds": true,
+        "n_distinct_letters": 9,
+        "n_total_finals": 43588
+      },
+      "avestan_yasna": {
+        "H_EL": 2.6953395037429346,
+        "alphabet_size": 26,
+        "log2_A": 4.700439718141093,
+        "omega_definition": 2.005100214398158,
+        "omega_KL_divergence": 2.0051002143981576,
+        "abs_diff": 4.440892098500626e-16,
+        "identity_holds": true,
+        "n_distinct_letters": 9,
+        "n_total_finals": 761
+      },
+      "rigveda": {
+        "H_EL": 3.7117277703381943,
+        "alphabet_size": 47,
+        "log2_A": 5.554588851677638,
+        "omega_definition": 1.8428610813394433,
+        "omega_KL_divergence": 1.842861081339443,
+        "abs_diff": 2.220446049250313e-16,
+        "identity_holds": true,
+        "n_distinct_letters": 33,
+        "n_total_finals": 10209
+      }
+    },
+    "sub_B_bootstrap_stability": {
+      "quran": {
+        "mean": 2.3397366515885114,
+        "std": 0.023420010237755955,
+        "p5": 2.3008153799294493,
+        "p95": 2.377907130029292,
+        "min": 2.2683982475061164,
+        "max": 2.4133335371719786
+      },
+      "poetry_jahili": {
+        "mean": 1.0010090505054128,
+        "std": 0.0267920784398139,
+        "p5": 0.9585537295882672,
+        "p95": 1.0449405827226697,
+        "min": 0.912606373751208,
+        "max": 1.0928269825098105
+      },
+      "poetry_islami": {
+        "mean": 1.0520528580257291,
+        "std": 0.013844628632560526,
+        "p5": 1.029492728804654,
+        "p95": 1.07531719434152,
+        "min": 0.9978103266091831,
+        "max": 1.1014132641044219
+      },
+      "poetry_abbasi": {
+        "mean": 0.9850012537513999,
+        "std": 0.0048620859135535596,
+        "p5": 0.9772208237156446,
+        "p95": 0.9928669130089033,
+        "min": 0.9679722222956961,
+        "max": 1.0003642016564278
+      },
+      "hindawi": {
+        "mean": 0.929021371006299,
+        "std": 0.022286216174118252,
+        "p5": 0.8933135465833499,
+        "p95": 0.9654432378861713,
+        "min": 0.8505568365223062,
+        "max": 0.9975517173241668
+      },
+      "ksucca": {
+        "mean": 1.061283582103658,
+        "std": 0.03048120485868181,
+        "p5": 1.0102196955201481,
+        "p95": 1.112955720405539,
+        "min": 0.973653266500957,
+        "max": 1.1531348826157477
+      },
+      "arabic_bible": {
+        "mean": 1.1026623969177376,
+        "std": 0.007898934104522038,
+        "p5": 1.0898109147032584,
+        "p95": 1.1158986201614187,
+        "min": 1.077414391128959,
+        "max": 1.1258114587603298
+      },
+      "hebrew_tanakh": {
+        "mean": 0.7916850108875482,
+        "std": 0.007364966168353618,
+        "p5": 0.7791261035527253,
+        "p95": 0.8038138152096164,
+        "min": 0.7675277560179992,
+        "max": 0.8135668877834039
+      },
+      "greek_nt": {
+        "mean": 1.7789126401623256,
+        "std": 0.014394493507394676,
+        "p5": 1.7542647161068308,
+        "p95": 1.8023903357917663,
+        "min": 1.7386032175637922,
+        "max": 1.8255386725578058
+      },
+      "pali": {
+        "mean": 2.6288467448544726,
+        "std": 0.005940898998019023,
+        "p5": 2.61894906308104,
+        "p95": 2.638231700775157,
+        "min": 2.601254488237903,
+        "max": 2.6494475766589662
+      },
+      "avestan_yasna": {
+        "mean": 2.0142546844325193,
+        "std": 0.029644101691075408,
+        "p5": 1.9643020936361009,
+        "p95": 2.064044425558629,
+        "min": 1.9224499654171052,
+        "max": 2.0974386013750443
+      },
+      "rigveda": {
+        "mean": 1.8455122376487176,
+        "std": 0.014915665982914626,
+        "p5": 1.8213400832894915,
+        "p95": 1.869905319378443,
+        "min": 1.7983702248044557,
+        "max": 1.8949260257879743
+      }
+    },
+    "sub_C_per_letter_decomposition": {
+      "quran": {
+        "top_1_letter": "ن",
+        "top_1_p": 0.50096215522771,
+        "top_1_omega": 1.90873015875491,
+        "top_1_ratio_of_total": 0.8168714405108284,
+        "top_3_cumulative_omega": 2.4015145160676536,
+        "top_3_ratio_of_total": 1.0277663467252547,
+        "omega_total": 2.3366347066330175,
+        "n_distinct_letters_used": 25
+      },
+      "poetry_jahili": {
+        "top_1_letter": "ا",
+        "top_1_p": 0.1999198717948718,
+        "top_1_omega": 0.4967706352394935,
+        "top_1_ratio_of_total": 0.500458956962857,
+        "top_3_cumulative_omega": 0.8816398931262912,
+        "top_3_ratio_of_total": 0.8881857139525039,
+        "omega_total": 0.9926301214674089,
+        "n_distinct_letters_used": 28
+      },
+      "poetry_islami": {
+        "top_1_letter": "ا",
+        "top_1_p": 0.22240951908775408,
+        "top_1_omega": 0.5868598463710946,
+        "top_1_ratio_of_total": 0.5590126340688233,
+        "top_3_cumulative_omega": 1.0157492562566741,
+        "top_3_ratio_of_total": 0.9675507206782703,
+        "omega_total": 1.0498149963080134,
+        "n_distinct_letters_used": 28
+      },
+      "poetry_abbasi": {
+        "top_1_letter": "ا",
+        "top_1_p": 0.18958529876825364,
+        "top_1_omega": 0.4565733312411563,
+        "top_1_ratio_of_total": 0.46362813381425194,
+        "top_3_cumulative_omega": 0.8947504894687023,
+        "top_3_ratio_of_total": 0.9085758437403216,
+        "omega_total": 0.984783489053919,
+        "n_distinct_letters_used": 28
+      },
+      "hindawi": {
+        "top_1_letter": "ه",
+        "top_1_p": 0.1464471403812825,
+        "top_1_omega": 0.29813809150635856,
+        "top_1_ratio_of_total": 0.3226085344743438,
+        "top_3_cumulative_omega": 0.7037127488910426,
+        "top_3_ratio_of_total": 0.7614717645222778,
+        "omega_total": 0.9241481847098149,
+        "n_distinct_letters_used": 28
+      },
+      "ksucca": {
+        "top_1_letter": "ه",
+        "top_1_p": 0.21212121212121213,
+        "top_1_omega": 0.5452184870696147,
+        "top_1_ratio_of_total": 0.5182585373945764,
+        "top_3_cumulative_omega": 0.989179876969766,
+        "top_3_ratio_of_total": 0.9402669359468022,
+        "omega_total": 1.0520202712155466,
+        "n_distinct_letters_used": 26
+      },
+      "arabic_bible": {
+        "top_1_letter": "ه",
+        "top_1_p": 0.20483865778721488,
+        "top_1_omega": 0.5161759731721804,
+        "top_1_ratio_of_total": 0.46834843618429334,
+        "top_3_cumulative_omega": 1.035672941889957,
+        "top_3_ratio_of_total": 0.9397101530154877,
+        "omega_total": 1.102119561618579,
+        "n_distinct_letters_used": 28
+      },
+      "hebrew_tanakh": {
+        "top_1_letter": "ו",
+        "top_1_p": 0.1494466889162129,
+        "top_1_omega": 0.2566200590703316,
+        "top_1_ratio_of_total": 0.32444874836581233,
+        "top_3_cumulative_omega": 0.6396797715580063,
+        "top_3_ratio_of_total": 0.8087571251787559,
+        "omega_total": 0.7909417446141458,
+        "n_distinct_letters_used": 22
+      },
+      "greek_nt": {
+        "top_1_letter": "ν",
+        "top_1_p": 0.3206145321747891,
+        "top_1_omega": 0.9438488572393368,
+        "top_1_ratio_of_total": 0.5309734652686464,
+        "top_3_cumulative_omega": 1.6109152537826095,
+        "top_3_ratio_of_total": 0.9062396463104225,
+        "omega_total": 1.777581967795313,
+        "n_distinct_letters_used": 20
+      },
+      "pali": {
+        "top_1_letter": "i",
+        "top_1_p": 0.4693952463980912,
+        "top_1_omega": 1.813307373788633,
+        "top_1_ratio_of_total": 0.6898703576257436,
+        "top_3_cumulative_omega": 2.3714294092138117,
+        "top_3_ratio_of_total": 0.9022071372270475,
+        "omega_total": 2.6284755588416755,
+        "n_distinct_letters_used": 9
+      },
+      "avestan_yasna": {
+        "top_1_letter": "a",
+        "top_1_p": 0.24967148488830487,
+        "top_1_omega": 0.6737491586912142,
+        "top_1_ratio_of_total": 0.33601769819442356,
+        "top_3_cumulative_omega": 1.5526049014739018,
+        "top_3_ratio_of_total": 0.7743278317587358,
+        "omega_total": 2.005100214398158,
+        "n_distinct_letters_used": 9
+      },
+      "rigveda": {
+        "top_1_letter": "म",
+        "top_1_p": 0.19081202860221375,
+        "top_1_omega": 0.6038843652208631,
+        "top_1_ratio_of_total": 0.3276884901068847,
+        "top_3_cumulative_omega": 1.424176165329339,
+        "top_3_ratio_of_total": 0.7728071202709472,
+        "omega_total": 1.8428610813394433,
+        "n_distinct_letters_used": 33
+      }
+    },
+    "sub_D_channel_capacity_MC": {
+      "quran": {
+        "per_noise_rate": {
+          "eps=0.001": {
+            "I_empirical": 2.4577084044549906,
+            "I_theoretical": 2.460313491592529,
+            "abs_diff": 0.0026050871375384865,
+            "rel_error": 0.001058843576820874,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 2.4763062118307113,
+            "h_A_eps": 0.015992720238182292
+          },
+          "eps=0.01": {
+            "I_empirical": 2.4015914894852903,
+            "I_theoretical": 2.397721329132071,
+            "abs_diff": 0.0038701603532191875,
+            "rel_error": 0.0016140993142935885,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 2.524364090035194,
+            "h_A_eps": 0.12664276090312276
+          },
+          "eps=0.05": {
+            "I_empirical": 2.1978605186865776,
+            "I_theoretical": 2.198015906666247,
+            "abs_diff": 0.00015538797966918594,
+            "rel_error": 7.069465657546786e-05,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 2.713660988818261,
+            "h_A_eps": 0.5156450821520141
+          },
+          "eps=0.1": {
+            "I_empirical": 1.9930643967387276,
+            "I_theoretical": 1.9931999989949045,
+            "abs_diff": 0.00013560225617692545,
+            "rel_error": 6.803243841325735e-05,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 2.9206918426563013,
+            "h_A_eps": 0.9274918436613968
+          }
+        },
+        "theorem_2_limit_check": {
+          "eps_min": 0.001,
+          "capacity_at_eps_min_on_support": 4.627863469536542,
+          "I_th_at_eps_min": 2.460313491592529,
+          "gap_to_capacity_at_eps_min": 2.1675499779440126,
+          "omega_on_support": 2.1731359743501373,
+          "match_within_tol": true,
+          "tol": 0.05
+        },
+        "n_letters_support": 25
+      },
+      "poetry_jahili": {
+        "per_noise_rate": {
+          "eps=0.001": {
+            "I_empirical": 3.8151098431655175,
+            "I_theoretical": 3.8011189602567335,
+            "abs_diff": 0.01399088290878403,
+            "rel_error": 0.003680727452907463,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.817281605496358,
+            "h_A_eps": 0.016162645239624605
+          },
+          "eps=0.01": {
+            "I_empirical": 3.7334190665961806,
+            "I_theoretical": 3.711394295254617,
+            "abs_diff": 0.022024771341563554,
+            "rel_error": 0.0059343657907014605,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.839736306172163,
+            "h_A_eps": 0.12834201091754588
+          },
+          "eps=0.05": {
+            "I_empirical": 3.424777394171614,
+            "I_theoretical": 3.4069452338262116,
+            "abs_diff": 0.01783216034540258,
+            "rel_error": 0.005234061342798855,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.9310865660503413,
+            "h_A_eps": 0.5241413322241296
+          },
+          "eps=0.1": {
+            "I_empirical": 3.105714744432122,
+            "I_theoretical": 3.087895139851667,
+            "abs_diff": 0.01781960458045484,
+            "rel_error": 0.0057707932988005665,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 4.032379483657295,
+            "h_A_eps": 0.9444843438056281
+          }
+        },
+        "theorem_2_limit_check": {
+          "eps_min": 0.001,
+          "capacity_at_eps_min_on_support": 4.791192276817979,
+          "I_th_at_eps_min": 3.8011189602567335,
+          "gap_to_capacity_at_eps_min": 0.9900733165612454,
+          "omega_on_support": 0.9926301214674096,
+          "match_within_tol": true,
+          "tol": 0.05
+        },
+        "n_letters_support": 28
+      },
+      "poetry_islami": {
+        "per_noise_rate": {
+          "eps=0.001": {
+            "I_empirical": 3.7438038406420784,
+            "I_theoretical": 3.7439784976726274,
+            "abs_diff": 0.00017465703054897475,
+            "rel_error": 4.665011582132402e-05,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.7601411429122518,
+            "h_A_eps": 0.016162645239624605
+          },
+          "eps=0.01": {
+            "I_empirical": 3.6515933695324465,
+            "I_theoretical": 3.654728385462063,
+            "abs_diff": 0.0031350159296166247,
+            "rel_error": 0.0008577972420843166,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.783070396379609,
+            "h_A_eps": 0.12834201091754588
+          },
+          "eps=0.05": {
+            "I_empirical": 3.352456702078805,
+            "I_theoretical": 3.3530463900358214,
+            "abs_diff": 0.000589687957016416,
+            "rel_error": 0.00017586632823475974,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.877187722259951,
+            "h_A_eps": 0.5241413322241296
+          },
+          "eps=0.1": {
+            "I_empirical": 3.0342210858533605,
+            "I_theoretical": 3.03791469355205,
+            "abs_diff": 0.0036936076986893163,
+            "rel_error": 0.001215836542918394,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.982399037357678,
+            "h_A_eps": 0.9444843438056281
+          }
+        },
+        "theorem_2_limit_check": {
+          "eps_min": 0.001,
+          "capacity_at_eps_min_on_support": 4.791192276817979,
+          "I_th_at_eps_min": 3.7439784976726274,
+          "gap_to_capacity_at_eps_min": 1.0472137791453515,
+          "omega_on_support": 1.0498149963080134,
+          "match_within_tol": true,
+          "tol": 0.05
+        },
+        "n_letters_support": 28
+      },
+      "poetry_abbasi": {
+        "per_noise_rate": {
+          "eps=0.001": {
+            "I_empirical": 3.814848158161052,
+            "I_theoretical": 3.808856830198071,
+            "abs_diff": 0.00599132796298063,
+            "rel_error": 0.0015729989942071582,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.8250194754376956,
+            "h_A_eps": 0.016162645239624605
+          },
+          "eps=0.01": {
+            "I_empirical": 3.7207027236372516,
+            "I_theoretical": 3.7183069761929346,
+            "abs_diff": 0.0023957474443170312,
+            "rel_error": 0.0006443113652681702,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.8466489871104805,
+            "h_A_eps": 0.12834201091754588
+          },
+          "eps=0.05": {
+            "I_empirical": 3.4088769960244267,
+            "I_theoretical": 3.4117242971030026,
+            "abs_diff": 0.0028473010785758923,
+            "rel_error": 0.0008345636489424486,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.9358656293271324,
+            "h_A_eps": 0.5241413322241296
+          },
+          "eps=0.1": {
+            "I_empirical": 3.0814300085479402,
+            "I_theoretical": 3.0913013903689914,
+            "abs_diff": 0.009871381821051184,
+            "rel_error": 0.003193277061824403,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 4.0357857341746195,
+            "h_A_eps": 0.9444843438056281
+          }
+        },
+        "theorem_2_limit_check": {
+          "eps_min": 0.001,
+          "capacity_at_eps_min_on_support": 4.791192276817979,
+          "I_th_at_eps_min": 3.808856830198071,
+          "gap_to_capacity_at_eps_min": 0.9823354466199077,
+          "omega_on_support": 0.984783489053918,
+          "match_within_tol": true,
+          "tol": 0.05
+        },
+        "n_letters_support": 28
+      },
+      "hindawi": {
+        "per_noise_rate": {
+          "eps=0.001": {
+            "I_empirical": 3.868011499944451,
+            "I_theoretical": 3.8694109547157924,
+            "abs_diff": 0.0013994547713416239,
+            "rel_error": 0.0003616712692757685,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.885573599955417,
+            "h_A_eps": 0.016162645239624605
+          },
+          "eps=0.01": {
+            "I_empirical": 3.781646564777205,
+            "I_theoretical": 3.7780056658404018,
+            "abs_diff": 0.003640898936803083,
+            "rel_error": 0.0009637092314929549,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.9063476767579477,
+            "h_A_eps": 0.12834201091754588
+          },
+          "eps=0.05": {
+            "I_empirical": 3.4680872430834473,
+            "I_theoretical": 3.467002206153586,
+            "abs_diff": 0.0010850369298611717,
+            "rel_error": 0.0003129611304934674,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.991143538377716,
+            "h_A_eps": 0.5241413322241296
+          },
+          "eps=0.1": {
+            "I_empirical": 3.1437420070367734,
+            "I_theoretical": 3.1412658679993535,
+            "abs_diff": 0.0024761390374199443,
+            "rel_error": 0.0007882615294187044,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 4.0857502118049815,
+            "h_A_eps": 0.9444843438056281
+          }
+        },
+        "theorem_2_limit_check": {
+          "eps_min": 0.001,
+          "capacity_at_eps_min_on_support": 4.791192276817979,
+          "I_th_at_eps_min": 3.8694109547157924,
+          "gap_to_capacity_at_eps_min": 0.9217813221021864,
+          "omega_on_support": 0.9241481847098147,
+          "match_within_tol": true,
+          "tol": 0.05
+        },
+        "n_letters_support": 28
+      },
+      "ksucca": {
+        "per_noise_rate": {
+          "eps=0.001": {
+            "I_empirical": 3.749998475710474,
+            "I_theoretical": 3.741558822008035,
+            "abs_diff": 0.008439653702438932,
+            "rel_error": 0.002255651749424991,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.7576104359352707,
+            "h_A_eps": 0.016051613927235864
+          },
+          "eps=0.01": {
+            "I_empirical": 3.662764300687493,
+            "I_theoretical": 3.6504636935702637,
+            "abs_diff": 0.012300607117229134,
+            "rel_error": 0.0033696012752831325,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.777695391363922,
+            "h_A_eps": 0.12723169779365842
+          },
+          "eps=0.05": {
+            "I_empirical": 3.3387963341803735,
+            "I_theoretical": 3.342213466039245,
+            "abs_diff": 0.0034171318588716026,
+            "rel_error": 0.0010224158012627305,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.8608032326439377,
+            "h_A_eps": 0.5185897666046925
+          },
+          "eps=0.1": {
+            "I_empirical": 3.035852130083522,
+            "I_theoretical": 3.02140076189432,
+            "abs_diff": 0.014451368189202007,
+            "rel_error": 0.004783002761984303,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.9547819744610737,
+            "h_A_eps": 0.9333812125667538
+          }
+        },
+        "theorem_2_limit_check": {
+          "eps_min": 0.001,
+          "capacity_at_eps_min_on_support": 4.684388104213856,
+          "I_th_at_eps_min": 3.741558822008035,
+          "gap_to_capacity_at_eps_min": 0.9428292822058215,
+          "omega_on_support": 0.9451050672990351,
+          "match_within_tol": true,
+          "tol": 0.05
+        },
+        "n_letters_support": 26
+      },
+      "arabic_bible": {
+        "per_noise_rate": {
+          "eps=0.001": {
+            "I_empirical": 3.6930888121032677,
+            "I_theoretical": 3.6919582770307082,
+            "abs_diff": 0.0011305350725594465,
+            "rel_error": 0.00030621556034178424,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.7081209222703326,
+            "h_A_eps": 0.016162645239624605
+          },
+          "eps=0.01": {
+            "I_empirical": 3.607401865887848,
+            "I_theoretical": 3.6049386255225033,
+            "abs_diff": 0.002463240365344621,
+            "rel_error": 0.000683296061659745,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.7332806364400493,
+            "h_A_eps": 0.12834201091754588
+          },
+          "eps=0.05": {
+            "I_empirical": 3.3110017819556505,
+            "I_theoretical": 3.31052098828327,
+            "abs_diff": 0.00048079367238074155,
+            "rel_error": 0.0001452320266454694,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.8346623205073995,
+            "h_A_eps": 0.5241413322241296
+          },
+          "eps=0.1": {
+            "I_empirical": 3.0112291595331504,
+            "I_theoretical": 3.002167406910272,
+            "abs_diff": 0.009061752622878227,
+            "rel_error": 0.0030184035047546775,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.9466517507159002,
+            "h_A_eps": 0.9444843438056281
+          }
+        },
+        "theorem_2_limit_check": {
+          "eps_min": 0.001,
+          "capacity_at_eps_min_on_support": 4.791192276817979,
+          "I_th_at_eps_min": 3.6919582770307082,
+          "gap_to_capacity_at_eps_min": 1.0992339997872707,
+          "omega_on_support": 1.1021195616185793,
+          "match_within_tol": true,
+          "tol": 0.05
+        },
+        "n_letters_support": 28
+      },
+      "hebrew_tanakh": {
+        "per_noise_rate": {
+          "eps=0.001": {
+            "I_empirical": 3.652982749240282,
+            "I_theoretical": 3.654641927615125,
+            "abs_diff": 0.0016591783748429734,
+            "rel_error": 0.0004539920483880859,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.670442002775365,
+            "h_A_eps": 0.015800075160239898
+          },
+          "eps=0.01": {
+            "I_empirical": 3.5672470091445643,
+            "I_theoretical": 3.563046561669636,
+            "abs_diff": 0.004200447474928204,
+            "rel_error": 0.0011788921088249499,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.687762871793335,
+            "h_A_eps": 0.12471631012369878
+          },
+          "eps=0.05": {
+            "I_empirical": 3.2525371440113853,
+            "I_theoretical": 3.2540905724098885,
+            "abs_diff": 0.0015534283985032538,
+            "rel_error": 0.00047737712394182937,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.7601034006647827,
+            "h_A_eps": 0.5060128282548942
+          },
+          "eps=0.1": {
+            "I_empirical": 2.9343699679391584,
+            "I_theoretical": 2.93377624161173,
+            "abs_diff": 0.0005937263274282678,
+            "rel_error": 0.000202376145462986,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.8420035774788874,
+            "h_A_eps": 0.9082273358671573
+          }
+        },
+        "theorem_2_limit_check": {
+          "eps_min": 0.001,
+          "capacity_at_eps_min_on_support": 4.443631543477057,
+          "I_th_at_eps_min": 3.654641927615125,
+          "gap_to_capacity_at_eps_min": 0.7889896158619321,
+          "omega_on_support": 0.790941744614146,
+          "match_within_tol": true,
+          "tol": 0.05
+        },
+        "n_letters_support": 22
+      },
+      "greek_nt": {
+        "per_noise_rate": {
+          "eps=0.001": {
+            "I_empirical": 2.795007450068522,
+            "I_theoretical": 2.7964019576949433,
+            "abs_diff": 0.0013945076264212375,
+            "rel_error": 0.0004986792483762676,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 2.812057642945848,
+            "h_A_eps": 0.015655685250904723
+          },
+          "eps=0.01": {
+            "I_empirical": 2.7274505244057945,
+            "I_theoretical": 2.7284792890036944,
+            "abs_diff": 0.0010287645978999116,
+            "rel_error": 0.0003770468781075357,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 2.8517517000340415,
+            "h_A_eps": 0.12327241103034704
+          },
+          "eps=0.05": {
+            "I_empirical": 2.5014149244484543,
+            "I_theoretical": 2.504362979606925,
+            "abs_diff": 0.0029480551584706305,
+            "rel_error": 0.0011771676799556211,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.00315631239506,
+            "h_A_eps": 0.4987933327881354
+          },
+          "eps=0.1": {
+            "I_empirical": 2.2751024155211876,
+            "I_theoretical": 2.269569818679468,
+            "abs_diff": 0.005532596841719695,
+            "rel_error": 0.002437729298382543,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.163358163613108,
+            "h_A_eps": 0.8937883449336399
+          }
+        },
+        "theorem_2_limit_check": {
+          "eps_min": 0.001,
+          "capacity_at_eps_min_on_support": 4.306272409636458,
+          "I_th_at_eps_min": 2.7964019576949433,
+          "gap_to_capacity_at_eps_min": 1.5098704519415147,
+          "omega_on_support": 1.5145475619615194,
+          "match_within_tol": true,
+          "tol": 0.05
+        },
+        "n_letters_support": 20
+      },
+      "pali": {
+        "per_noise_rate": {
+          "eps=0.001": {
+            "I_empirical": 2.312823471898399,
+            "I_theoretical": 2.3138921742032523,
+            "abs_diff": 0.0010687023048534527,
+            "rel_error": 0.00046186348558849397,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 2.3282999319407134,
+            "h_A_eps": 0.014407757737461137
+          },
+          "eps=0.01": {
+            "I_empirical": 2.2379190194078125,
+            "I_theoretical": 2.239191706286086,
+            "abs_diff": 0.0012726868782735323,
+            "rel_error": 0.0005683688782433039,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 2.349984842181997,
+            "h_A_eps": 0.1107931358959112
+          },
+          "eps=0.05": {
+            "I_empirical": 1.9871746261954204,
+            "I_theoretical": 1.997331899321982,
+            "abs_diff": 0.010157273126561561,
+            "rel_error": 0.005085420770583781,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 2.4337288564379382,
+            "h_A_eps": 0.4363969571159563
+          },
+          "eps=0.1": {
+            "I_empirical": 1.7509236345885775,
+            "I_theoretical": 1.755585852844369,
+            "abs_diff": 0.004662218255791606,
+            "rel_error": 0.002655648112131892,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 2.5245814464336505,
+            "h_A_eps": 0.7689955935892814
+          }
+        },
+        "theorem_2_limit_check": {
+          "eps_min": 0.001,
+          "capacity_at_eps_min_on_support": 3.155517243704851,
+          "I_th_at_eps_min": 2.3138921742032523,
+          "gap_to_capacity_at_eps_min": 0.8416250695015988,
+          "omega_on_support": 0.8442042498971118,
+          "match_within_tol": true,
+          "tol": 0.05
+        },
+        "n_letters_support": 9
+      },
+      "avestan_yasna": {
+        "per_noise_rate": {
+          "eps=0.001": {
+            "I_empirical": 2.676749032458715,
+            "I_theoretical": 2.682415762047264,
+            "abs_diff": 0.005666729588549302,
+            "rel_error": 0.002112547081152088,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 2.6968235197847252,
+            "h_A_eps": 0.014407757737461137
+          },
+          "eps=0.01": {
+            "I_empirical": 2.594753323256864,
+            "I_theoretical": 2.598996885077442,
+            "abs_diff": 0.004243561820578279,
+            "rel_error": 0.0016327691060129277,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 2.709790020973353,
+            "h_A_eps": 0.1107931358959112
+          },
+          "eps=0.05": {
+            "I_empirical": 2.321615705750062,
+            "I_theoretical": 2.3251381311127703,
+            "abs_diff": 0.0035224253627084146,
+            "rel_error": 0.0015149316574248617,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 2.761535088228727,
+            "h_A_eps": 0.4363969571159563
+          },
+          "eps=0.1": {
+            "I_empirical": 2.045027378164653,
+            "I_theoretical": 2.0484706808611364,
+            "abs_diff": 0.003443302696483297,
+            "rel_error": 0.0016809138293528325,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 2.817466274450418,
+            "h_A_eps": 0.7689955935892814
+          }
+        },
+        "theorem_2_limit_check": {
+          "eps_min": 0.001,
+          "capacity_at_eps_min_on_support": 3.155517243704851,
+          "I_th_at_eps_min": 2.682415762047264,
+          "gap_to_capacity_at_eps_min": 0.4731014816575869,
+          "omega_on_support": 0.4745854976993775,
+          "match_within_tol": true,
+          "tol": 0.05
+        },
+        "n_letters_support": 9
+      },
+      "rigveda": {
+        "per_noise_rate": {
+          "eps=0.001": {
+            "I_empirical": 3.703341888717129,
+            "I_theoretical": 3.698867729248759,
+            "abs_diff": 0.0044741594683701535,
+            "rel_error": 0.001209602450228426,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.7152754869862203,
+            "h_A_eps": 0.016407757737461136
+          },
+          "eps=0.01": {
+            "I_empirical": 3.616978974634269,
+            "I_theoretical": 3.615085735070219,
+            "abs_diff": 0.0018932395640498534,
+            "rel_error": 0.0005237053012832846,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.74587887096613,
+            "h_A_eps": 0.1307931358959112
+          },
+          "eps=0.05": {
+            "I_empirical": 3.3293460585136634,
+            "I_theoretical": 3.330829498689639,
+            "abs_diff": 0.00148344017597557,
+            "rel_error": 0.0004453665900818883,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 3.867226455805595,
+            "h_A_eps": 0.5363969571159561
+          },
+          "eps=0.1": {
+            "I_empirical": 3.0363173879149095,
+            "I_theoretical": 3.0311747509943707,
+            "abs_diff": 0.0051426369205387346,
+            "rel_error": 0.0016965821316806968,
+            "match_within_1pct": true,
+            "H_Y_theoretical": 4.000170344583652,
+            "h_A_eps": 0.9689955935892811
+          }
+        },
+        "theorem_2_limit_check": {
+          "eps_min": 0.001,
+          "capacity_at_eps_min_on_support": 5.027986361620992,
+          "I_th_at_eps_min": 3.698867729248759,
+          "gap_to_capacity_at_eps_min": 1.329118632372233,
+          "omega_on_support": 1.332666349020259,
+          "match_within_tol": true,
+          "tol": 0.05
+        },
+        "n_letters_support": 33
+      }
+    },
+    "sub_E_margin_tightness": {
+      "tau=2.5": {
+        "n_corpora_above": 1,
+        "corpora_above": [
+          "pali"
+        ],
+        "quran_above": false,
+        "quran_unique": false
+      },
+      "tau=3.0": {
+        "n_corpora_above": 0,
+        "corpora_above": [],
+        "quran_above": false,
+        "quran_unique": false
+      },
+      "tau=3.3": {
+        "n_corpora_above": 0,
+        "corpora_above": [],
+        "quran_above": false,
+        "quran_unique": false
+      },
+      "tau=3.5": {
+        "n_corpora_above": 0,
+        "corpora_above": [],
+        "quran_above": false,
+        "quran_unique": false
+      },
+      "tau=3.8": {
+        "n_corpora_above": 0,
+        "corpora_above": [],
+        "quran_above": false,
+        "quran_unique": false
+      },
+      "tau=4.0": {
+        "n_corpora_above": 0,
+        "corpora_above": [],
+        "quran_above": false,
+        "quran_unique": false
+      }
+    },
+    "sub_F_quran_neighbours": {
+      "pali": {
+        "tvd_to_quran_skeleton": 0.10702981377376818,
+        "skeleton_length": 9,
+        "quran_skeleton_length": 25
+      },
+      "greek_nt": {
+        "tvd_to_quran_skeleton": 0.19325186415303558,
+        "skeleton_length": 20,
+        "quran_skeleton_length": 25
+      },
+      "avestan_yasna": {
+        "tvd_to_quran_skeleton": 0.29588380468965325,
+        "skeleton_length": 9,
+        "quran_skeleton_length": 25
+      },
+      "arabic_bible": {
+        "tvd_to_quran_skeleton": 0.29932962392462137,
+        "skeleton_length": 28,
+        "quran_skeleton_length": 25
+      },
+      "poetry_islami": {
+        "tvd_to_quran_skeleton": 0.30022181565735495,
+        "skeleton_length": 28,
+        "quran_skeleton_length": 25
+      },
+      "ksucca": {
+        "tvd_to_quran_skeleton": 0.3056769866936114,
+        "skeleton_length": 26,
+        "quran_skeleton_length": 25
+      },
+      "rigveda": {
+        "tvd_to_quran_skeleton": 0.3101501266254965,
+        "skeleton_length": 33,
+        "quran_skeleton_length": 25
+      },
+      "poetry_abbasi": {
+        "tvd_to_quran_skeleton": 0.32717920891038665,
+        "skeleton_length": 28,
+        "quran_skeleton_length": 25
+      },
+      "poetry_jahili": {
+        "tvd_to_quran_skeleton": 0.3332606063222646,
+        "skeleton_length": 28,
+        "quran_skeleton_length": 25
+      },
+      "hebrew_tanakh": {
+        "tvd_to_quran_skeleton": 0.3754851929273619,
+        "skeleton_length": 22,
+        "quran_skeleton_length": 25
+      },
+      "hindawi": {
+        "tvd_to_quran_skeleton": 0.3842541898126791,
+        "skeleton_length": 28,
+        "quran_skeleton_length": 25
+      }
+    },
+    "summary": {
+      "quran_omega_pooled": 2.3366347066330166,
+      "runner_up_corpus": [
+        "pali",
+        2.6284755588416746
+      ],
+      "margin_to_runner_up_bits": -0.29184085220865796,
+      "largest_unique_threshold_bits": null,
+      "closest_neighbour": "pali",
+      "closest_neighbour_tvd": 0.10702981377376818
+    },
+    "criteria_pass": {
+      "A_theorem_1_identity": true,
+      "B_bootstrap_CI_separation": false,
+      "C_top_1_letter_ratio_70pct": true,
+      "D_channel_capacity_MC_1pct": true,
+      "E_uniquely_above_3p3_bits": false,
+      "F_global_max_margin_0p5_bits": false
+    }
+  },
+  "audit_report": {
+    "ok": true,
+    "checks": {
+      "A1_eleven_pool_loaders": "_phi_universal_xtrad_sizing",
+      "A2_rigveda_via_loader_v2": true,
+      "A3_n_corpora": 12,
+      "A4_pooled_omega_in_range": false,
+      "A5_deterministic_seed": 42,
+      "A6_theorem_1_identity_max_diff": 6.661338147750939e-16
+    }
+  },
+  "wall_time_s": 18.3877
+}

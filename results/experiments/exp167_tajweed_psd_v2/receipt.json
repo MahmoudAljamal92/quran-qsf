@@ -1,0 +1,73 @@
+{
+  "experiment": "exp167_tajweed_psd_v2",
+  "frozen_at": "2026-05-01",
+  "verdict": "PASS_STRUCTURED_QURAN_REFERENCE",
+  "audit": {
+    "W_v2": 77881,
+    "mean_dur_v2": 8.64255723475559,
+    "std_dur_v2": 3.319145121821612,
+    "max_dur_v2": 24.0
+  },
+  "thresholds_pre_committed": {
+    "drift_max": 0.5,
+    "pink_band": [
+      0.8,
+      1.2
+    ],
+    "shuffle_alpha": 0.0125,
+    "window_max_dev": 0.1,
+    "riwayat_cv_max": 0.05,
+    "beta_v1_reference": 0.1583
+  },
+  "T1_primary": {
+    "beta_v2": 0.18740556172183886,
+    "R2": 0.667692227105756,
+    "ci_95": [
+      0.15668450195052835,
+      0.2231512262070879
+    ],
+    "drift_v2_v1": 0.02910556172183887,
+    "drift_pass": true
+  },
+  "T2_shuffle": {
+    "n_perm": 5000,
+    "null_mean": 0.00025153135762804305,
+    "null_std": 0.01362144759925313,
+    "p_shuffle": 0.0001999600079984003,
+    "pass": true
+  },
+  "T3_windows": {
+    "nperseg_1024": {
+      "beta": 0.18059371405469632,
+      "R2": 0.7924625654922847
+    },
+    "nperseg_2048": {
+      "beta": 0.18740556172183886,
+      "R2": 0.667692227105756
+    },
+    "nperseg_4096": {
+      "beta": 0.18397518291040377,
+      "R2": 0.46929789217981477
+    }
+  },
+  "T3_max_dev": 0.006811847667142545,
+  "T3_pass": true,
+  "T4_riwayat_betas": {
+    "hafs": 0.18740556172183886,
+    "warsh": 0.18606807959640032,
+    "qalun": 0.18230790168858368,
+    "duri": 0.1846991192358269,
+    "shuba": 0.18283690557111618,
+    "sousi": 0.19049375793205298
+  },
+  "T4_riwayat_W": {
+    "hafs": 77881,
+    "warsh": 77654,
+    "qalun": 77654,
+    "duri": 77636,
+    "shuba": 77659,
+    "sousi": 77654
+  },
+  "T4_cv": 0.015029501779730288,
+  "T4_pass": true
+}

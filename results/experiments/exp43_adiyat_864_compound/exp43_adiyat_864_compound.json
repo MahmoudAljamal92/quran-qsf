@@ -1,0 +1,84 @@
+{
+  "experiment": "exp43_adiyat_864_compound",
+  "schema_version": 1,
+  "adiyat_label": "Q:100",
+  "canonical_verse1": "بسم الله الرحمن الرحيم والعاديات ضبحا",
+  "canonical_phi_m": 10.286340978295431,
+  "canonical_h_char_window": 1.0675728932311923,
+  "canonical_win_frob": 10.723805294763608,
+  "n_variants": 864,
+  "exp41_thresholds": {
+    "doc_ctrl_p95": 0.04953033506831489,
+    "win_ctrl_p95": 0.09803921568627451
+  },
+  "detection_rates": {
+    "D1_phi_m_moves": 0.032407407407407406,
+    "D2_ncd_doc_above_ctrl95": 0.9907407407407407,
+    "D3_ncd_win_above_ctrl95": 0.23726851851851852,
+    "D4_h_char_moves_uncalibrated": 0.78125,
+    "D5_ccas_frob_moves_tautological": 1.0,
+    "NCD_AND_CCAS_F_headline": 0.9907407407407407,
+    "NCD_doc_OR_NCD_win": 0.9907407407407407,
+    "_audit_notes": "D4 threshold 0.01 bits is not calibrated against an independent natural-variation null; treat r4 as exploratory. D5 CCAS Frob > 0 fires on any edit by construction; r5 near 100% is tautological. The paper-grade compound is NCD_AND_CCAS_F which combines exp41-ctrl-p95-calibrated D2 with D5. ALL_of_5 and ANY_of_5 were dropped because the intersection was empty (ALL) or uninformative (ANY always near 100% due to D5)."
+  },
+  "phi_m_distribution": {
+    "canonical": 10.286340978295431,
+    "variant_mean": 10.252980902767794,
+    "variant_median": 10.286340978295431,
+    "variant_min": 9.19846840178323,
+    "variant_max": 10.286340978295431,
+    "pct_variants_below_canonical": 100.0,
+    "pct_variants_above_canonical": 96.75925925925925
+  },
+  "hand_picked_variants": [
+    {
+      "name": "A_ayn_to_ghayn",
+      "n_positions": 1,
+      "variants": [
+        {
+          "pos": 26,
+          "orig": "ع",
+          "repl": "غ",
+          "phi_m_var": 10.286340978295431,
+          "phi_m_delta": 0.0,
+          "ncd_doc": 0.06532663316582915,
+          "ncd_win": 0.08791208791208792,
+          "h_char_delta": 0.034482758620689946,
+          "ccas_frob_delta": 2.0,
+          "D1_phi_m_moves": false,
+          "D2_ncd_doc_above_ctrl95": true,
+          "D3_ncd_win_above_ctrl95": false,
+          "D4_h_char_moves": true,
+          "D5_ccas_frob_moves": true
+        }
+      ]
+    },
+    {
+      "name": "B_dad_to_sad",
+      "n_positions": 1,
+      "variants": [
+        {
+          "pos": 33,
+          "orig": "ض",
+          "repl": "ص",
+          "phi_m_var": 10.112884792687332,
+          "phi_m_delta": -0.1734561856080994,
+          "ncd_doc": 0.06532663316582915,
+          "ncd_win": 0.0989010989010989,
+          "h_char_delta": 0.007183908045976128,
+          "ccas_frob_delta": 2.0,
+          "D1_phi_m_moves": true,
+          "D2_ncd_doc_above_ctrl95": true,
+          "D3_ncd_win_above_ctrl95": true,
+          "D4_h_char_moves": false,
+          "D5_ccas_frob_moves": true
+        }
+      ]
+    }
+  ],
+  "verdict": {
+    "phi_m_structural_blindness": "CONFIRMED",
+    "ncd_and_frob_joint_headline": "FIRES 856/864 (99.1%) variants via BOTH gzip NCD doc (exp41 ctrl-p95 calibrated) AND CCAS Frobenius window (tautological but part of the pre-registered compound)"
+  },
+  "notes": "This test answers the 28/864 question rigorously. Phi_M only detects variants whose edit falls inside a 5-D sensitivity window (verse-terminal letter, verse-opening word, final-root). The letter-scale detectors (gzip NCD, CCAS Frobenius, H_char) see every letter edit by construction; the interesting test is whether they fire ABOVE ctrl-null 95th percentile, which is the pre-registered Quran-specificity criterion from exp41."
+}

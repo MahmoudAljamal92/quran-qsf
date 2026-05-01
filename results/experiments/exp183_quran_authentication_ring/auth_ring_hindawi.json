@@ -1,0 +1,92 @@
+{
+  "experiment": "exp183_quran_authentication_ring",
+  "input_file": "data\\corpora\\ar\\hindawi.txt",
+  "input_format": "plain_text",
+  "n_arabic_letters": 172131,
+  "n_verses": 3575,
+  "n_chapters": 1,
+  "results": [
+    {
+      "test": "T1_F55_bigram_shift",
+      "status": "PASS",
+      "delta_observed": 4,
+      "delta_theorem_bound_k1": 2,
+      "interpretation": "Single-letter edit produces detectable Δ≥2 (F55 forgery-detection baseline)"
+    },
+    {
+      "test": "T2_F67_C_Omega",
+      "status": "FAIL",
+      "H_EL": 3.883206737347789,
+      "C_Omega": 0.1922363128358887,
+      "threshold": 0.7,
+      "quran_reference": 0.7985,
+      "interpretation": "Rhyme channel uses ≥ 70 % of alphabet's Shannon capacity (F67 universal)"
+    },
+    {
+      "test": "T3_F75_F84_invariant",
+      "status": "PASS",
+      "H_EL": 3.883206737347789,
+      "p_max": 0.1464471403812825,
+      "F75_value": 5.919013587042095,
+      "reference": 5.75,
+      "tolerance": 0.5,
+      "distance_from_reference": 0.16901358704209457,
+      "interpretation": "Universal invariant H_EL + log2(p_max·A) ≈ 5.75 bits"
+    },
+    {
+      "test": "T4_F76_one_bit",
+      "status": "FAIL",
+      "H_EL": 3.883206737347789,
+      "threshold": 1.0,
+      "interpretation": "Verse-final entropy < 1 bit (F76 Arabic-alphabet unique universal)"
+    },
+    {
+      "test": "T5_F79_alphabet_corrected",
+      "status": "FAIL",
+      "D_max": 0.9241481847098147,
+      "threshold": 3.5,
+      "reference": 3.84,
+      "interpretation": "Alphabet-corrected gap ≥ 3.5 bits (F79 unique across 6-alphabet / 6-tradition pool)"
+    },
+    {
+      "test": "T6_F82_dual_mode",
+      "status": "SKIP",
+      "reason": "only 1 chapters (need ≥50 for signal)"
+    },
+    {
+      "test": "T7_F87_fractal_dim",
+      "status": "PASS",
+      "d_info": 1.7015791830138949,
+      "H_bits": 4.2095898102752605,
+      "quran_reference": 1.667,
+      "tolerance": 0.05,
+      "distance_from_reference": 0.03457918301389484,
+      "interpretation": "IFS fractal dimension of letter-frequency attractor matches Quran's d_info = 1.667 (F87-linked)"
+    },
+    {
+      "test": "T8_rhyme_presence",
+      "status": "FAIL",
+      "p_max": 0.1464471403812825,
+      "threshold": 0.3,
+      "uniform_baseline": 0.03571428571428571,
+      "interpretation": "Max verse-final-letter probability ≥ 0.30 indicates presence of a rhyme channel"
+    }
+  ],
+  "n_pass": 3,
+  "n_fail": 4,
+  "n_skip": 1,
+  "core_pass": 1,
+  "core_total": 5,
+  "composite_score": 0.5555555555555556,
+  "composite_weights": {
+    "T1_F55_bigram_shift": 2.0,
+    "T2_F67_C_Omega": 1.0,
+    "T3_F75_F84_invariant": 1.0,
+    "T4_F76_one_bit": 1.0,
+    "T5_F79_alphabet_corrected": 1.0,
+    "T6_F82_dual_mode": 2.0,
+    "T7_F87_fractal_dim": 2.0,
+    "T8_rhyme_presence": 1.0
+  },
+  "verdict": "NON_RHYMED_TEXT"
+}

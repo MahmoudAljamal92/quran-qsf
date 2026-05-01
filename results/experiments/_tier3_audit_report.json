@@ -1,0 +1,48 @@
+{
+  "audit": "Tier-3 zero-trust audit",
+  "generated_utc": "2026-04-23T19:57:35+00:00",
+  "experiments_audited": [
+    "E10",
+    "E11",
+    "E12",
+    "E13"
+  ],
+  "n_flags": 4,
+  "flags_by_severity": {
+    "HIGH": 0,
+    "MED": 0,
+    "LOW": 4
+  },
+  "verdicts": {
+    "E10": "NULL_NO_GAIN",
+    "E11": "LOCAL_AMPLIFICATION",
+    "E12": "BAYES_CALIBRATED",
+    "E13": "GATE_SOLID"
+  },
+  "flags": [
+    {
+      "task": "E10",
+      "severity": "LOW",
+      "code": "A6_CHANNEL_SATURATION",
+      "message": "E10 NULL_NO_GAIN because single channels saturate to AUC=1.0 at all non-degenerate N on the Adiyat single-letter enumeration. Harder (multi-letter, noisier) problems may yet show composite gain — not tested here."
+    },
+    {
+      "task": "E11",
+      "severity": "LOW",
+      "code": "A6_DESIGN_TRIVIALITY",
+      "message": "E11 LOCAL_AMPLIFICATION verdict is guaranteed-by-design: as N→whole surah, signal and null windows overlap → AUC→0.5. Headline = 'edits detectable at small N via simple NCD/L1 channels at AUC=1.0'."
+    },
+    {
+      "task": "E12",
+      "severity": "LOW",
+      "code": "A6_PERFECT_BAYES_SEPARATION",
+      "message": "KDE-NB achieves Brier=0 and ECE=0 because the training data is perfectly class-separable. Posteriors saturate to 0/1. Realistic noisy tasks will give softer probabilities and more informative calibration."
+    },
+    {
+      "task": "E13",
+      "severity": "LOW",
+      "code": "A6_GATE_ON_KNOWN_EDITS",
+      "message": "GATE_SOLID is evaluated on the 864 single-letter edits the gate was explicitly trained on. Real-world deployment requires testing on OUT-OF-DISTRIBUTION edits (multi-letter, insertion/deletion, cross-surah). Queued as follow-up."
+    }
+  ]
+}

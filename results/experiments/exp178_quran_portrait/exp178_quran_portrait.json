@@ -1,0 +1,124 @@
+{
+  "experiment": "exp178_quran_portrait",
+  "finding_id": "F88",
+  "portrait_A": {
+    "file": "results\\experiments\\exp178_quran_portrait\\portrait_A_mushaf_tour.png",
+    "explained_variance_ratio": [
+      0.21488021213966244,
+      0.1438259703068434
+    ],
+    "mean_segment_length_2d": 0.03348979711773862,
+    "classical_pair_mean_segment_2d": 0.030412393522898734
+  },
+  "portrait_B": {
+    "file": "results\\experiments\\exp178_quran_portrait\\portrait_B_yeganeh.png",
+    "image_size": 1200,
+    "letters_used": [
+      "ن",
+      "ا",
+      "م"
+    ],
+    "channel_stats": {
+      "R_min": -0.008626440539956093,
+      "R_max": 0.08865299820899963,
+      "G_min": -0.07411205768585205,
+      "G_max": 0.07411205768585205,
+      "B_min": -0.009257341735064983,
+      "B_max": 0.0876525342464447
+    },
+    "equation_notes": "See docstring of portrait_b_yeganeh for the closed-form equation"
+  },
+  "classical_pairs_used": [
+    [
+      2,
+      3
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      50,
+      51
+    ],
+    [
+      52,
+      53
+    ],
+    [
+      54,
+      55
+    ],
+    [
+      56,
+      57
+    ],
+    [
+      58,
+      59
+    ],
+    [
+      62,
+      63
+    ],
+    [
+      64,
+      65
+    ],
+    [
+      66,
+      67
+    ],
+    [
+      68,
+      69
+    ],
+    [
+      70,
+      71
+    ],
+    [
+      72,
+      73
+    ],
+    [
+      86,
+      87
+    ],
+    [
+      92,
+      93
+    ],
+    [
+      103,
+      104
+    ],
+    [
+      113,
+      114
+    ]
+  ],
+  "blocks_used": [
+    [
+      "tiwal",
+      2,
+      9
+    ],
+    [
+      "mi'in",
+      10,
+      35
+    ],
+    [
+      "mathani",
+      36,
+      49
+    ],
+    [
+      "mufassal",
+      50,
+      114
+    ]
+  ],
+  "verdict": "PASS_F88_portrait_renders"
+}

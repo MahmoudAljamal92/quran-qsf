@@ -1,0 +1,150 @@
+{
+  "experiment": "exp55_gamma_length_stratified",
+  "schema_version": 1,
+  "ts_start": "2026-04-21T10:42:18",
+  "ts_end": "2026-04-21T10:42:19",
+  "prereg_sha256": "f67d7d14db81bd93d929053035b6fb70d0c83cc5aacf940cb08b90907c2a2fd4",
+  "inputs": {
+    "length_audit": "results\\experiments\\exp41_gzip_formalised\\length_audit.json",
+    "exp41_main": "results\\experiments\\exp41_gzip_formalised\\exp41_gzip_formalised.json"
+  },
+  "headline_d_crosscheck": 0.534019,
+  "sign_test": {
+    "n_total": 10,
+    "n_positive": 8,
+    "n_negative": 2,
+    "p_two_sided": 0.109375,
+    "alpha_strict": 0.05,
+    "alpha_loose": 0.1
+  },
+  "d_above_threshold": {
+    "threshold": 0.3,
+    "count": 5,
+    "required_for_LENGTH_INDEPENDENT": 7
+  },
+  "log_linear_gamma": {
+    "gamma": 0.07161122826827443,
+    "gamma_p": 0.0,
+    "gamma_ci95": [
+      0.06571475381757211,
+      0.07750770271897675
+    ],
+    "gamma_threshold_p": 0.001,
+    "pass": true
+  },
+  "per_decile": [
+    {
+      "decile": 1,
+      "n_q": 200,
+      "n_ctrl": 360,
+      "n_letters_lo": 272.0,
+      "n_letters_hi": 483.0,
+      "cohen_d": 1.379194643240184,
+      "se_d": 0.097346,
+      "ci95_lo": 1.188397,
+      "ci95_hi": 1.569992
+    },
+    {
+      "decile": 2,
+      "n_q": 60,
+      "n_ctrl": 500,
+      "n_letters_lo": 483.0,
+      "n_letters_hi": 672.0,
+      "cohen_d": 0.2924534704924599,
+      "se_d": 0.136905,
+      "ci95_lo": 0.024119,
+      "ci95_hi": 0.560788
+    },
+    {
+      "decile": 3,
+      "n_q": 120,
+      "n_ctrl": 440,
+      "n_letters_lo": 672.0,
+      "n_letters_hi": 886.0,
+      "cohen_d": 1.046345937860204,
+      "se_d": 0.107627,
+      "ci95_lo": 0.835397,
+      "ci95_hi": 1.257295
+    },
+    {
+      "decile": 4,
+      "n_q": 100,
+      "n_ctrl": 460,
+      "n_letters_lo": 886.0,
+      "n_letters_hi": 1124.0,
+      "cohen_d": 0.4963742913760375,
+      "se_d": 0.111328,
+      "ci95_lo": 0.278172,
+      "ci95_hi": 0.714577
+    },
+    {
+      "decile": 5,
+      "n_q": 80,
+      "n_ctrl": 460,
+      "n_letters_lo": 1124.0,
+      "n_letters_hi": 1350.5,
+      "cohen_d": 0.2589523930926125,
+      "se_d": 0.121392,
+      "ci95_lo": 0.021024,
+      "ci95_hi": 0.496881
+    },
+    {
+      "decile": 6,
+      "n_q": 100,
+      "n_ctrl": 440,
+      "n_letters_lo": 1350.5,
+      "n_letters_hi": 1526.0,
+      "cohen_d": -0.5517580902148584,
+      "se_d": 0.112047,
+      "ci95_lo": -0.771371,
+      "ci95_hi": -0.332145
+    },
+    {
+      "decile": 7,
+      "n_q": 120,
+      "n_ctrl": 440,
+      "n_letters_lo": 1526.0,
+      "n_letters_hi": 1781.0,
+      "cohen_d": 1.1326868384356694,
+      "se_d": 0.108405,
+      "ci95_lo": 0.920214,
+      "ci95_hi": 1.34516
+    },
+    {
+      "decile": 8,
+      "n_q": 80,
+      "n_ctrl": 480,
+      "n_letters_lo": 1781.0,
+      "n_letters_hi": 2200.0,
+      "cohen_d": 2.0065800849935664,
+      "se_d": 0.134827,
+      "ci95_lo": 1.742319,
+      "ci95_hi": 2.270841
+    },
+    {
+      "decile": 9,
+      "n_q": 140,
+      "n_ctrl": 420,
+      "n_letters_lo": 2200.0,
+      "n_letters_hi": 3087.0,
+      "cohen_d": 0.28511006443096887,
+      "se_d": 0.097961,
+      "ci95_lo": 0.093106,
+      "ci95_hi": 0.477114
+    },
+    {
+      "decile": 10,
+      "n_q": 400,
+      "n_ctrl": 140,
+      "n_letters_lo": 3087.0,
+      "n_letters_hi": 14561.0,
+      "cohen_d": -1.502238055429277,
+      "se_d": 0.108316,
+      "ci95_lo": -1.714538,
+      "ci95_hi": -1.289938
+    }
+  ],
+  "verdict": "LENGTH_DRIVEN",
+  "falsifier_triggered": false,
+  "notes": "Analytic SE(d) used for CI (Hedges & Olkin approximation) because raw per-unit NCD values are not stored in the summary JSON. Pre-registered decision rules applied verbatim."
+}

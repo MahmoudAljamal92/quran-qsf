@@ -1,0 +1,1139 @@
+{
+    "corpus":  "pali_tipitaka",
+    "source":  "https://github.com/suttacentral/bilara-data",
+    "edition":  "Mahāsaṃghīti (root/pli/ms)",
+    "license":  "CC0 1.0 Universal",
+    "fetched_at":  "2026-04-25",
+    "collections":  [
+                        {
+                            "id":  "dn",
+                            "name":  "Dīgha Nikāya",
+                            "n_suttas":  34,
+                            "size_bytes":  1836650
+                        },
+                        {
+                            "id":  "mn",
+                            "name":  "Majjhima Nikāya",
+                            "n_suttas":  152,
+                            "size_bytes":  3099582
+                        }
+                    ],
+    "files":  [
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn1_root-pli-ms.json",
+                      "size_bytes":  97736,
+                      "sha256":  "d452f3135456ee3681e7fbeae6ef3013928fd20b1d214e838de26d6c4fc2ebc8"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn10_root-pli-ms.json",
+                      "size_bytes":  40652,
+                      "sha256":  "ce3481d318f08bc5ac584e97eea4c50598438edf839b9d2999bc23d8ef206b45"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn11_root-pli-ms.json",
+                      "size_bytes":  21708,
+                      "sha256":  "3f4883502fba411f96bb5f5bf64285ba8d86434c74999c3c4496eea320e8f3d2"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn12_root-pli-ms.json",
+                      "size_bytes":  20533,
+                      "sha256":  "4ee96cc062e9f74260e7a3964f0ca2b71e3f9fc584ac90f5eb8f2a393e98b664"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn13_root-pli-ms.json",
+                      "size_bytes":  33812,
+                      "sha256":  "2edfb8e53dad195eb73081d22f4709f5ba5ed235935afa76dfb01c67ea0d8326"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn14_root-pli-ms.json",
+                      "size_bytes":  108123,
+                      "sha256":  "6bddef36e160442927b6d61adc9d86a5073ccf444f2b20363aaaef2261338567"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn15_root-pli-ms.json",
+                      "size_bytes":  33925,
+                      "sha256":  "4636018525433f8472eeee5e1d12193912dd505f75e89e2a72357ca0e8bf2c6a"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn16_root-pli-ms.json",
+                      "size_bytes":  194999,
+                      "sha256":  "59f32cff580ab5b1f3f36e1f213630063ac8b771e30b2445bfa8f6ab40c0b4f4"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn17_root-pli-ms.json",
+                      "size_bytes":  57620,
+                      "sha256":  "1b4cca94f84f3568a92ff4def39913c4cab80c452818590a2b583427274f9734"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn18_root-pli-ms.json",
+                      "size_bytes":  36373,
+                      "sha256":  "719d3dfe4d79fdc406fa20f97c38a647e8d8ff8878153eccac4eaa8928c0dd00"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn19_root-pli-ms.json",
+                      "size_bytes":  59564,
+                      "sha256":  "625b23b7b1a6793358d936262f46bdead298c7d15104598d735cbe78ca304b24"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn2_root-pli-ms.json",
+                      "size_bytes":  88767,
+                      "sha256":  "63f1ca0d82341e6366f03148b20a4db7c863b940ec63b509bf83ca4e33a84bcf"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn20_root-pli-ms.json",
+                      "size_bytes":  17214,
+                      "sha256":  "503a2b7b6915af7f880e614a1fda163ff55bd994b9e30dd89280bd7abc90ecda"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn21_root-pli-ms.json",
+                      "size_bytes":  45254,
+                      "sha256":  "fcf3fb036a0ce5e88f3920c795c3d7df2880143a923e5808b1a6266f1d976fd7"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn22_root-pli-ms.json",
+                      "size_bytes":  49705,
+                      "sha256":  "9954ab40a7b4eb5c99ab99996278faca85df26a34d26e28893228b6554f354e7"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn23_root-pli-ms.json",
+                      "size_bytes":  81047,
+                      "sha256":  "4a6836dc80b75224bf96958d7973e55cd464121852630a16940d51f980d9f16d"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn24_root-pli-ms.json",
+                      "size_bytes":  69307,
+                      "sha256":  "ddb4864ca4a76071675596ed363b256f7c32e9e287d54ceafa3911eef10255c2"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn25_root-pli-ms.json",
+                      "size_bytes":  42946,
+                      "sha256":  "498597ea18b0727642e3d375657fa94274073028dd298645517a9a699af78e51"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn26_root-pli-ms.json",
+                      "size_bytes":  44636,
+                      "sha256":  "df64b34b6a1ff2c6919d5684afabffbdb2233d36feee413cc510c3153acbfa4a"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn27_root-pli-ms.json",
+                      "size_bytes":  37984,
+                      "sha256":  "4bab330dd32f057784d062a33456053820a1dc534db28730a455cf0ddfed8023"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn28_root-pli-ms.json",
+                      "size_bytes":  34268,
+                      "sha256":  "01d7133232f295becc258fdaeaf3f950586a46a5505668de3b7edd19fad7333c"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn29_root-pli-ms.json",
+                      "size_bytes":  50695,
+                      "sha256":  "b24c6aaccec4fda11da63057c112a925bab1e92d6a04cbd3722575daad7c34ea"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn3_root-pli-ms.json",
+                      "size_bytes":  52564,
+                      "sha256":  "1b6a259222fa0cafd4e5188508b7e5ef8dcb9cde101223c2b3f7ab50a07e8424"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn30_root-pli-ms.json",
+                      "size_bytes":  57098,
+                      "sha256":  "ac7753a93abe20bfd6c7487c380a256e782b642115cb2d6429efb0bf69a322c7"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn31_root-pli-ms.json",
+                      "size_bytes":  22981,
+                      "sha256":  "01c59b53193284e7ebd9a881c3c1df8b8356da4af570b51ab044853f69634ab2"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn32_root-pli-ms.json",
+                      "size_bytes":  38343,
+                      "sha256":  "909ce0857f7557d008cb2c777c695476d86c3c3de3d51f08002a0cdcac9f359a"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn33_root-pli-ms.json",
+                      "size_bytes":  119432,
+                      "sha256":  "dfc9fa7b3751ed20efc83cffb4f7fce5b18972d23871c7b2dbb7d8cceb72f0e1"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn34_root-pli-ms.json",
+                      "size_bytes":  83595,
+                      "sha256":  "1a828291ee2234db82ce03aa28ab033286a86dbab5726cfe286eb0ded7ff66c8"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn4_root-pli-ms.json",
+                      "size_bytes":  35794,
+                      "sha256":  "6a689273e4d04b799b14a07c800a7a412b57c917d06f853495c8624a2076e9f2"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn5_root-pli-ms.json",
+                      "size_bytes":  50537,
+                      "sha256":  "04c8c616b044ef9b9f65f2332dd4596615ae9e98757ff2665a92e8c90093be0d"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn6_root-pli-ms.json",
+                      "size_bytes":  20628,
+                      "sha256":  "45553fb02ed4c09f9d7b7cad7a1ce6203fe93cf2d279dc666ac8bc7972491081"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn7_root-pli-ms.json",
+                      "size_bytes":  4426,
+                      "sha256":  "1669eac4b3623b60452697842c4f63a4116ba1a856fb40b610e8a3b8bfb33f03"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn8_root-pli-ms.json",
+                      "size_bytes":  31828,
+                      "sha256":  "e6d3254fd61bff69ff864b2a956c879fc4e3af4bf60c1fa5e446fe4c8207747a"
+                  },
+                  {
+                      "collection":  "dn",
+                      "filename":  "dn9_root-pli-ms.json",
+                      "size_bytes":  52556,
+                      "sha256":  "f0c7e554f78954ff67dbf325b58d849dcbeceaec1c8f8abfb3a9a9a71a77b056"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn1_root-pli-ms.json",
+                      "size_bytes":  21734,
+                      "sha256":  "60275a739cff01ca73cba9ff7d16da28bc7a26a3607db7fa36c630426174ed7b"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn10_root-pli-ms.json",
+                      "size_bytes":  31398,
+                      "sha256":  "a27345790e9c4bbc6b4c46319b1dc41817953bd551302a2b1d42d8d188ca4071"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn100_root-pli-ms.json",
+                      "size_bytes":  38553,
+                      "sha256":  "9a3ccb69862a31eda6bb8409e4e92feb60b50f514d3227eefccf8dbabbfb7cb7"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn101_root-pli-ms.json",
+                      "size_bytes":  45187,
+                      "sha256":  "b1f6221978e3cff76eb9e31235cefb4d1e753c24005a86b1782cb571d34a1731"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn102_root-pli-ms.json",
+                      "size_bytes":  23577,
+                      "sha256":  "56964d0efe6f73a5a0a98cce962314aa1e7c001968179454c09e8dec47491224"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn103_root-pli-ms.json",
+                      "size_bytes":  13281,
+                      "sha256":  "95b6eebbfb42bae5540f814a40ed29ce09f6941dd3a2a1a20f24025cfb1fc7f3"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn104_root-pli-ms.json",
+                      "size_bytes":  19700,
+                      "sha256":  "5a657b8425c3fffc04b4ec2e4147ae279d9c6d215f3cf5823abbdd4e1cc7f651"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn105_root-pli-ms.json",
+                      "size_bytes":  22785,
+                      "sha256":  "0b30c4e51c1233cd2f9e46cf30cb8f11a7770a857811457327a4908fb1b04b8f"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn106_root-pli-ms.json",
+                      "size_bytes":  12187,
+                      "sha256":  "c43dca5ff17ba503675d54192a99fc9214c26dbf679dc777c9870cc8f1a8d92b"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn107_root-pli-ms.json",
+                      "size_bytes":  14048,
+                      "sha256":  "5813679d8ad9fd7b0f872677f85db9d5082de127ba55fbc7ba4a01235c6008e5"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn108_root-pli-ms.json",
+                      "size_bytes":  20292,
+                      "sha256":  "6c3b7f1c4c95fc2c66a82ec4d981113ee90258d7d5ab3bdd8ff23304d0c86d55"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn109_root-pli-ms.json",
+                      "size_bytes":  13037,
+                      "sha256":  "eb27f414c632f8609d32308a6836949ab804e01ae3661ff627552a838a685239"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn11_root-pli-ms.json",
+                      "size_bytes":  14183,
+                      "sha256":  "c8ac0a90b3c59f43ccf6593241429bdea5eaa31ff37d08f77bb4c14099a42187"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn110_root-pli-ms.json",
+                      "size_bytes":  9641,
+                      "sha256":  "fc733d0f9848c828f7bc5066180e779f15d402789c7634fb3aa63293ef7808ce"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn111_root-pli-ms.json",
+                      "size_bytes":  10714,
+                      "sha256":  "46b8f985fd2cd025681dee12ac0063f56d088bed4c9efe55249080fc6bcd69d7"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn112_root-pli-ms.json",
+                      "size_bytes":  18609,
+                      "sha256":  "4ed9fb06f2b3b98b9250cfa216e39f0a682c1e0a297038945e890b90db6398f5"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn113_root-pli-ms.json",
+                      "size_bytes":  20060,
+                      "sha256":  "3d89a9403ebdca15540b659b343295c251b4bdec1428a1f131b4309831fcf6a6"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn114_root-pli-ms.json",
+                      "size_bytes":  37908,
+                      "sha256":  "fe083ec971de854fe0779c62db49262e55ca441414113678a337b860433645c2"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn115_root-pli-ms.json",
+                      "size_bytes":  16722,
+                      "sha256":  "8cf2375b4c0a17893bd35fd6ab6e3381d8d92d360e4192069bb87b0fd5c6f5e5"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn116_root-pli-ms.json",
+                      "size_bytes":  6750,
+                      "sha256":  "dfda1fb79d57f3a918bb1c3cae9b730ed3d6fc0a262c2837a8a240ca0dc287fc"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn117_root-pli-ms.json",
+                      "size_bytes":  15939,
+                      "sha256":  "9ca872ba963b52d7262270f8093fe8b7b297c4c24e1adf9806705664c80bc18e"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn118_root-pli-ms.json",
+                      "size_bytes":  21652,
+                      "sha256":  "610d0a13daa3a8c8c91e8abaf96a973e5c2f1dd8e63d3199c75edf88ceb52235"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn119_root-pli-ms.json",
+                      "size_bytes":  23848,
+                      "sha256":  "019ccf307def70845353818656c3c4cee9f0968ed666e9463061b1979eea5239"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn12_root-pli-ms.json",
+                      "size_bytes":  52167,
+                      "sha256":  "7fc309171875b76dd00f1b3790553cfaf38c9803ef6f26a8d57b035ad72c984f"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn120_root-pli-ms.json",
+                      "size_bytes":  16740,
+                      "sha256":  "08bfc09b84fed18b80d79c1f635ccb5a1ab667c82e7e054f5131f977606cf3ab"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn121_root-pli-ms.json",
+                      "size_bytes":  13511,
+                      "sha256":  "ef238db1fc6b75b6e4c6e5cf57a1ddd7e1362a37488b478f7a7d69465e7d218e"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn122_root-pli-ms.json",
+                      "size_bytes":  19941,
+                      "sha256":  "6d109788fccc3a73d6fe0a4cbb0f5a76212e79e2254e304fbe9eee66213f1d26"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn123_root-pli-ms.json",
+                      "size_bytes":  14856,
+                      "sha256":  "2d2bcf099997c2f5653076b6605651dd055a1dad4d89a41b39f89739bb62a2cd"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn124_root-pli-ms.json",
+                      "size_bytes":  7494,
+                      "sha256":  "c0e3c4e17b80fff34a5f7d48c26e7c7f18842894c32b0c78938ccaa9104f0aaf"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn125_root-pli-ms.json",
+                      "size_bytes":  21218,
+                      "sha256":  "02e325b1ab4a7826da425bb42648e89d5d732c55e671bd5d6df3f8d72657236d"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn126_root-pli-ms.json",
+                      "size_bytes":  18585,
+                      "sha256":  "f2f6f0925b00144a05c0f7bd03a6ac404e377f70e380f5fbc2b3f909f79b6c16"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn127_root-pli-ms.json",
+                      "size_bytes":  18074,
+                      "sha256":  "79674ccdc745bc0dc0a160a430e5fa8301854b8c17d973f1f7a4f2300210d7ad"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn128_root-pli-ms.json",
+                      "size_bytes":  27469,
+                      "sha256":  "65fefc550f962bb7b0235c528bc4f151c60ae42633b6e1eacb35a0eb246d4b46"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn129_root-pli-ms.json",
+                      "size_bytes":  38225,
+                      "sha256":  "bca3e88a6812b8cf2886ad081bb2d2150dbffa3f5b305b62d25c7208f61ea0e0"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn13_root-pli-ms.json",
+                      "size_bytes":  20918,
+                      "sha256":  "43db3ce29f6ff3016cc912c7155c88ebb8e87305ee3db7cddeb2a6bd45d06c24"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn130_root-pli-ms.json",
+                      "size_bytes":  22543,
+                      "sha256":  "e029571f2760a208a107a152a751d82d057eea235628e90a2f7798c01a03000c"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn131_root-pli-ms.json",
+                      "size_bytes":  6157,
+                      "sha256":  "cbbf3461faad3b255265f74f47593bca0e711978d6df345ae6f2bddf8bb2cfaa"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn132_root-pli-ms.json",
+                      "size_bytes":  8625,
+                      "sha256":  "9c8ee16a5323b0f06c3a65c9f92e9fd7ae0d279eac2cd169ddc103eb9651e231"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn133_root-pli-ms.json",
+                      "size_bytes":  21282,
+                      "sha256":  "df05290e7a0e365c9aa69f40a53a20e7460f5ce50bf50353d3e399254e74557a"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn134_root-pli-ms.json",
+                      "size_bytes":  9280,
+                      "sha256":  "89149421cdff664604aeeb4346d7a9f00e93b6185031b98b87d704cd4060bbbf"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn135_root-pli-ms.json",
+                      "size_bytes":  17000,
+                      "sha256":  "2d649add7ab9020ba7c555ec19723f449be85456a8ee6a91505dd76fea6a080a"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn136_root-pli-ms.json",
+                      "size_bytes":  22403,
+                      "sha256":  "e7d326a12c118286ff471bcbcfc5aa9ddd7f8d327def1edc239c2e1b3ab59436"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn137_root-pli-ms.json",
+                      "size_bytes":  19031,
+                      "sha256":  "7e204a499565cc8da30f80eb897f2694e7056da477357034e2a162227229e10f"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn138_root-pli-ms.json",
+                      "size_bytes":  20794,
+                      "sha256":  "b046999f06cd45a9fd7492ef263831fa4a4aa5fd51d88eaa4f2fed38ce8bb8a4"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn139_root-pli-ms.json",
+                      "size_bytes":  19977,
+                      "sha256":  "96f12bd571ad5dd548db56517d945ca55832d1ec2b25c299d21d0132761ddfe2"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn14_root-pli-ms.json",
+                      "size_bytes":  17696,
+                      "sha256":  "9fdbbdcd05bed1bc19af3496d85388b5cf13b219be3466b0dcdf7d1f929428b5"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn140_root-pli-ms.json",
+                      "size_bytes":  26606,
+                      "sha256":  "92d94cf71bde407973649318f60641ea96e4ced19882bd4c29cac1973558df25"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn141_root-pli-ms.json",
+                      "size_bytes":  12673,
+                      "sha256":  "be6278e7e6e7474ce92422299c87441a724191cf9dd4134ba9e15f0b29bd8cd8"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn142_root-pli-ms.json",
+                      "size_bytes":  13142,
+                      "sha256":  "a1849ee90bb7253487548f7d367525dfab255473e1c937e5ec153a20ca67efd4"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn143_root-pli-ms.json",
+                      "size_bytes":  16900,
+                      "sha256":  "370301141202aa009f60420819a425b1e1858bd32b3cb4fe1e0521bab8327ef6"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn144_root-pli-ms.json",
+                      "size_bytes":  10004,
+                      "sha256":  "2f56fce91ab4145636e4176a8d72cf5734c16857a5a1a5b63967815ddda7343b"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn145_root-pli-ms.json",
+                      "size_bytes":  8619,
+                      "sha256":  "c8ce9715ea503c87f4ec8d952efcc4a821b086d3ee566afe296b45919fd20293"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn146_root-pli-ms.json",
+                      "size_bytes":  32612,
+                      "sha256":  "6f46f6e2e1bb88b02e40b689cd15fd93013542324fd3174970da9a9bd7470c24"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn147_root-pli-ms.json",
+                      "size_bytes":  9092,
+                      "sha256":  "0a20c5fe43dabf7e45a166a15456a4d2a4056bdb122b41bb0d94204ca23eca67"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn148_root-pli-ms.json",
+                      "size_bytes":  22079,
+                      "sha256":  "4d2f278b9e0e2677d464e43e7c695d1283062547affa8e98e8b6cef4093bc25d"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn149_root-pli-ms.json",
+                      "size_bytes":  11479,
+                      "sha256":  "94501de9af4813961cc73fb2c9a7594aed4b232c34520e815c9c2bb225b65df7"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn15_root-pli-ms.json",
+                      "size_bytes":  28141,
+                      "sha256":  "16ae812d6e93fce6e08c695ed3f8f8b9750b0f4237975621d434130ab54c86ce"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn150_root-pli-ms.json",
+                      "size_bytes":  8282,
+                      "sha256":  "0897c3a74e5d091fd101ad30d79f61fc19d046950230a4c1c475d3b78cb21ffc"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn151_root-pli-ms.json",
+                      "size_bytes":  13054,
+                      "sha256":  "59e43002a652a7216d036834bdda9b55899bab025e96639d97930f4ba013a8e0"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn152_root-pli-ms.json",
+                      "size_bytes":  14015,
+                      "sha256":  "65a432a0d50d9fb42d6ca434a54f4c6a1b9977757bcd738ca244fec3ea0c081c"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn16_root-pli-ms.json",
+                      "size_bytes":  10577,
+                      "sha256":  "7c8aa7b4258821be3b03c1f663661c006341d837f17bc361299f5181d7da8f33"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn17_root-pli-ms.json",
+                      "size_bytes":  13224,
+                      "sha256":  "860c3d00edd5a85f2f70dab10b8f111de9c97e97735bce9c2879bec155e5beed"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn18_root-pli-ms.json",
+                      "size_bytes":  19676,
+                      "sha256":  "1657a69976660e17fef355c9cbc30b5355d486a3bb0c161815c3279791571166"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn19_root-pli-ms.json",
+                      "size_bytes":  14693,
+                      "sha256":  "f97c9d0f98862090d4925d09c714a14e5f1fd84f532bace9ab7f53784d55ff25"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn2_root-pli-ms.json",
+                      "size_bytes":  14857,
+                      "sha256":  "27863d8bef8b0665fb2f0ca83bbbdae2f8e09efdd8eb149be1b8155f11e496bd"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn20_root-pli-ms.json",
+                      "size_bytes":  11478,
+                      "sha256":  "04dc504eeccb5b4d78bf75ea90fe800accf146dbe41af5870ddb6bb9de3c9a44"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn21_root-pli-ms.json",
+                      "size_bytes":  23528,
+                      "sha256":  "fa30020e3924642a9d5c6aee0b3cc7faa54cf57db03d293c84c83408d20b5031"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn22_root-pli-ms.json",
+                      "size_bytes":  38445,
+                      "sha256":  "d23fea0d47b582c4661b074586cb157a92a830c5d89e8896c8df39db2a7433e8"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn23_root-pli-ms.json",
+                      "size_bytes":  8776,
+                      "sha256":  "da7766766c91b184fcefb04a7f652678f634674629dcec65160fdf1601f20f35"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn24_root-pli-ms.json",
+                      "size_bytes":  17962,
+                      "sha256":  "0b77f95975ff2a4cc388855329b7957158c2faf30ab394661deef3421e549979"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn25_root-pli-ms.json",
+                      "size_bytes":  26867,
+                      "sha256":  "6b940ad681293c45f914539a94abd637270ad93b928681fa3b2cb50d59e65965"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn26_root-pli-ms.json",
+                      "size_bytes":  42556,
+                      "sha256":  "e6a0e66b7f5d3ff319df2269dacaece2aa09e849da0856e11811ae70c729d169"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn27_root-pli-ms.json",
+                      "size_bytes":  23301,
+                      "sha256":  "a255c026d59ef001bb1e8c08324591b0c79b60623fe9fe0da95f5c27819d9956"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn28_root-pli-ms.json",
+                      "size_bytes":  20987,
+                      "sha256":  "7b6f6c5c371305c7793413c6a39661986e189d6de4cb1b6153a3fa2083ff6dcb"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn29_root-pli-ms.json",
+                      "size_bytes":  20314,
+                      "sha256":  "2cca2b3947ef2b86afc4afb96107aa7c020a3085e781b42bfe2b265d5756e970"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn3_root-pli-ms.json",
+                      "size_bytes":  11802,
+                      "sha256":  "035e47bf8b6ab85caed78020661383c670496c78edbcf2f1ae0f84a9f20088b9"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn30_root-pli-ms.json",
+                      "size_bytes":  20381,
+                      "sha256":  "592a1caa4509a74c2fb05aa11df04c9083654631d7a6019d395d24968e6a91c2"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn31_root-pli-ms.json",
+                      "size_bytes":  17342,
+                      "sha256":  "1baa26670d6693d3dfdb07b3848b8034e49bbb3db1ae035c5ac860f3434af298"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn32_root-pli-ms.json",
+                      "size_bytes":  22136,
+                      "sha256":  "a2ad61edf152f7ca0726d7713d23581ae6d91a7189cda8097c3a7826d3fbe87a"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn33_root-pli-ms.json",
+                      "size_bytes":  13552,
+                      "sha256":  "9d6e5b24cf5e956512a35a93342c11fcf688db7dfb81e8ef720691f86727eb94"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn34_root-pli-ms.json",
+                      "size_bytes":  6307,
+                      "sha256":  "78a4382a39435bb96ae064e92dc317d279cc15c93ac8ab0f17e8360f41703b63"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn35_root-pli-ms.json",
+                      "size_bytes":  27269,
+                      "sha256":  "61075a5b6697a6910e751b7cab660ff71a71d2f559cf1745a8e5e55e4f5ebd36"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn36_root-pli-ms.json",
+                      "size_bytes":  46483,
+                      "sha256":  "b3de9cd975813d3dcde13ff98d213d2a29b1fc0b619a5001b55bd2a314600706"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn37_root-pli-ms.json",
+                      "size_bytes":  13267,
+                      "sha256":  "04a251a15700e639d3852b8b180d08909be3409d689421536dd56965f7bcae90"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn38_root-pli-ms.json",
+                      "size_bytes":  45164,
+                      "sha256":  "afd9bd6323292aebe58f160513b322416091d3c3929a60aee2bb003d8e482b60"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn39_root-pli-ms.json",
+                      "size_bytes":  25629,
+                      "sha256":  "89a206543b7f29d466be7f3ac640ec93bbe8676c96d0afe60f6d56b49f086e20"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn4_root-pli-ms.json",
+                      "size_bytes":  22516,
+                      "sha256":  "24ee758967a50908123102533d62907952b9ed526782a55a5039180d88ca3cbb"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn40_root-pli-ms.json",
+                      "size_bytes":  11227,
+                      "sha256":  "d9db914f55d6c213db4da2f602c86a817f508abe402f003f7ee3fc9da3c8cfe6"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn41_root-pli-ms.json",
+                      "size_bytes":  16014,
+                      "sha256":  "d17bb3857b1f5c031f71b7aee757acc997f917c7a64f57fcd918cae59625e3ad"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn42_root-pli-ms.json",
+                      "size_bytes":  13221,
+                      "sha256":  "424f50f1c0c3706def56663673cce10db3a180b0dab3655f5952435d3aca42e9"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn43_root-pli-ms.json",
+                      "size_bytes":  20035,
+                      "sha256":  "b6d3193d66b1967831922c4f89f49fb8eb81fe4f4542a7fdb30c353108cad783"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn44_root-pli-ms.json",
+                      "size_bytes":  16262,
+                      "sha256":  "da10c672b62443682b5c248c9ad8a5c409864cb75615162fd68333f9d647738b"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn45_root-pli-ms.json",
+                      "size_bytes":  11434,
+                      "sha256":  "ef381e082e8066fa9c7070d7b8a534c52e69664810a5035326386667814b3323"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn46_root-pli-ms.json",
+                      "size_bytes":  21277,
+                      "sha256":  "7d4774ab6d6160d71e70b27dc072990efae20002c663532ae7f129d591ac6f43"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn47_root-pli-ms.json",
+                      "size_bytes":  8644,
+                      "sha256":  "6d4f285b75f147a77945183338df9c84870102c365aa68220b045cd8f94a6384"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn48_root-pli-ms.json",
+                      "size_bytes":  14545,
+                      "sha256":  "9ffb1bd76b840ade5b19815fd47156d7fd5ac4ca118ee6286626392dae1d78d3"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn49_root-pli-ms.json",
+                      "size_bytes":  17003,
+                      "sha256":  "e63e05b4dd473c3bc200a66ddcd6edd08eef80257a031fed40d622ebf3c79604"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn5_root-pli-ms.json",
+                      "size_bytes":  25998,
+                      "sha256":  "148fa610e7fe1992f8eb0730740a1c2830fe917dd90b82d7e0b2a3f6e11a7102"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn50_root-pli-ms.json",
+                      "size_bytes":  20336,
+                      "sha256":  "13020adba212b58b2249dadd46df8a13fb8b0713722e00cabbeb37e2bb044069"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn51_root-pli-ms.json",
+                      "size_bytes":  26621,
+                      "sha256":  "678a0c0d3d1c5b7e6b224ce8964cb260b92b66aae38e0cbbc6b95f4c2e374897"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn52_root-pli-ms.json",
+                      "size_bytes":  9567,
+                      "sha256":  "a8975d33876e5d8a17d83369e729bf1ff547a7644cb0dae18cb16f7e000cb57d"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn53_root-pli-ms.json",
+                      "size_bytes":  14374,
+                      "sha256":  "39c8e45ba572adc5c848f5ab050569b3d0de7068148e87c46165542a92c0ce58"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn54_root-pli-ms.json",
+                      "size_bytes":  24933,
+                      "sha256":  "ffa463ed7cc6b53d756a85154beb564e41ac19bbd4cb5a01cfecb52626b88408"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn55_root-pli-ms.json",
+                      "size_bytes":  8563,
+                      "sha256":  "8cbcf6e20ffba21a58543d5ebff6daadda9ac82888ee9a5d1bfbe046e782fe9e"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn56_root-pli-ms.json",
+                      "size_bytes":  42147,
+                      "sha256":  "6eef6282ca8cd44dc559781da63c2cf78c64ea3b346ad72cfff27808f2fdd73f"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn57_root-pli-ms.json",
+                      "size_bytes":  13159,
+                      "sha256":  "803179171ab57cbcb05dd15264a6da57d05c36840090b6c648ab55f64a01fdf5"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn58_root-pli-ms.json",
+                      "size_bytes":  11295,
+                      "sha256":  "dccb14bfac66b9a4a2542fd26707be7a1121359298343b5967f3e28797b7591f"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn59_root-pli-ms.json",
+                      "size_bytes":  10879,
+                      "sha256":  "664f5dd3d1cf04211ef090b1d33f4cb2731e672cd2d6388236d22c5ca4bce8d7"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn6_root-pli-ms.json",
+                      "size_bytes":  9082,
+                      "sha256":  "8809d867099dac09f1b618bb1ee62850d1cd62b39f99099519914b8db57ade73"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn60_root-pli-ms.json",
+                      "size_bytes":  37459,
+                      "sha256":  "02bdfb439893a5777f4ece07f6fdd96e197956e7ecc8137d5e633202057d5d11"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn61_root-pli-ms.json",
+                      "size_bytes":  18410,
+                      "sha256":  "6f13aa74d0a30bcf23df39d6632030f661d46ed5e761675179d08dbd56787ab3"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn62_root-pli-ms.json",
+                      "size_bytes":  14800,
+                      "sha256":  "f7695588bdf8939674435613762500bcd08d7626aa64653e26d0723f534fe498"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn63_root-pli-ms.json",
+                      "size_bytes":  17230,
+                      "sha256":  "27ea0f2c861c4927c9b17639a2ff4a776fbe4003caeddb08f0a3ebbfd9b4356d"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn64_root-pli-ms.json",
+                      "size_bytes":  13483,
+                      "sha256":  "fcb8826299a951ce726eec289d467bfd57f2298928ef59643e6aaf17a928cd21"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn65_root-pli-ms.json",
+                      "size_bytes":  26827,
+                      "sha256":  "1ac261c967ac9e2d33d47fb3aca71db0ffb30c5941aeb90afe1f29f2ff9207fa"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn66_root-pli-ms.json",
+                      "size_bytes":  24631,
+                      "sha256":  "b17e439f2454f96e478c82778c64c3a9102ff365c303a7aa9aad675ac588cefd"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn67_root-pli-ms.json",
+                      "size_bytes":  15863,
+                      "sha256":  "b697d1b02357b56c3eb79080c8890a58a5d6011539e23b38a8be118470c5101d"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn68_root-pli-ms.json",
+                      "size_bytes":  19193,
+                      "sha256":  "ee5c650a53a195741b4e8010b11f7606934308f2f3c1805b7e6912c1a86fb87a"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn69_root-pli-ms.json",
+                      "size_bytes":  11193,
+                      "sha256":  "f3c35c8f55890fa42ab1ce0f3adee780616c90c7c4bca682cc5154acdac3bb0e"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn7_root-pli-ms.json",
+                      "size_bytes":  13361,
+                      "sha256":  "3561fc6418aef1b900960ad71dfd67337d4b3c8d997702463f42be693df22df2"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn70_root-pli-ms.json",
+                      "size_bytes":  24720,
+                      "sha256":  "036d316360a0344a293ca81d08139b8efb438b7ae6cc36fe046195b369c85b24"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn71_root-pli-ms.json",
+                      "size_bytes":  5725,
+                      "sha256":  "038e6937db3fc63741651fc2838509c44248222099d72c7a58d21dafd33fb6f3"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn72_root-pli-ms.json",
+                      "size_bytes":  16984,
+                      "sha256":  "79469d1384c21c5adbd09b465c250f44d83b7ab93bfe51396d65bfc73afa5246"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn73_root-pli-ms.json",
+                      "size_bytes":  20902,
+                      "sha256":  "3f89fd93ae8c810954c6b8a90f1de622aed7644ad6bc942e560e0a30f5168ee2"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn74_root-pli-ms.json",
+                      "size_bytes":  10817,
+                      "sha256":  "6558f26de491f5e404dccbc8ac83fb56deb125cecdfe0fde54a6c1fa740a3949"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn75_root-pli-ms.json",
+                      "size_bytes":  30693,
+                      "sha256":  "f9d0c24f56d733c24414f36becb6d8efa1fb332de58ec201ad5689773b43cf9d"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn76_root-pli-ms.json",
+                      "size_bytes":  34958,
+                      "sha256":  "49e89d48d4dc7524e105c5e46604ee77519f769789905233c43046ca8b16d6c8"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn77_root-pli-ms.json",
+                      "size_bytes":  53424,
+                      "sha256":  "8665926585da7fadea97781790bb004da639d42e735d74735207150a00113c58"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn78_root-pli-ms.json",
+                      "size_bytes":  17320,
+                      "sha256":  "d0b469b12eb1608ee62fee690068bf52e91fd394305918e625649979c5b3fdd9"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn79_root-pli-ms.json",
+                      "size_bytes":  24846,
+                      "sha256":  "0a10ab6eb6f6c679730c012febcb36adf847a718cb62bf0074db33d74bcb147a"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn8_root-pli-ms.json",
+                      "size_bytes":  20853,
+                      "sha256":  "fd971a7fc8c1c17770214f25d36504d5ebbbdc0387896e8c4071ab6e02f6f1e4"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn80_root-pli-ms.json",
+                      "size_bytes":  11383,
+                      "sha256":  "dc4f571b8839fa441a52df262c436303c6e659355c04959aed0d8bf460653106"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn81_root-pli-ms.json",
+                      "size_bytes":  23197,
+                      "sha256":  "573dc485377dc1c133f9311e966d23108e5cd22c8b9e9ea5531eb9e9add931fb"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn82_root-pli-ms.json",
+                      "size_bytes":  44475,
+                      "sha256":  "062b302a2a0fc8e71533792ba4b4640190fed958c3ac6d4b48e0541bf268206f"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn83_root-pli-ms.json",
+                      "size_bytes":  22728,
+                      "sha256":  "c6b3d635ffe86cea054d156b396868060f55950ef85c1ed5a225bbb0c75e8f77"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn84_root-pli-ms.json",
+                      "size_bytes":  18250,
+                      "sha256":  "cf54150ab2676c29f439fbf08f44d0c7deca1b71c2f92818e32af19f8607caf0"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn85_root-pli-ms.json",
+                      "size_bytes":  61925,
+                      "sha256":  "81707d1535c996e4abf7cc1c904807d3fec916b4d259690c7cb56edbe76d9323"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn86_root-pli-ms.json",
+                      "size_bytes":  18581,
+                      "sha256":  "fa3c2b630cb95a46944608e68421c6d706897333e42bfb55a2092ca868c02f92"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn87_root-pli-ms.json",
+                      "size_bytes":  15103,
+                      "sha256":  "bf4f4a230605afd63ca207864a01f3df1674fabafbddcf8d059124f198e08f98"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn88_root-pli-ms.json",
+                      "size_bytes":  13382,
+                      "sha256":  "abe8c1a41302b3122b0081fdcfef952965f56068ee5e3fc2fef7388cd6defdfd"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn89_root-pli-ms.json",
+                      "size_bytes":  17351,
+                      "sha256":  "f427d8e126661dbebd525012f459af28efb9629db9a33aa14ef61e35b8b7a9b3"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn9_root-pli-ms.json",
+                      "size_bytes":  30021,
+                      "sha256":  "8a7259c025a984bc8bdf7528ab9df1f8a69047e53117aedcf4980164455218a7"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn90_root-pli-ms.json",
+                      "size_bytes":  19098,
+                      "sha256":  "b4641ad817d3ada1323e14aee17aa0ab34b795b56e63d22d361b97f3e456d323"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn91_root-pli-ms.json",
+                      "size_bytes":  32559,
+                      "sha256":  "29095e6b8b5e52821a55a09cb9f91cac1426b74a96850b01076a022fbaeb4d56"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn92_root-pli-ms.json",
+                      "size_bytes":  17048,
+                      "sha256":  "734bee5b2446ce430bf31cbf86a3536bc74721a7fefdb7f9efb792b54b4262a6"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn93_root-pli-ms.json",
+                      "size_bytes":  25427,
+                      "sha256":  "a5d3392c41ed93259e15bc6b669cc5817bda6b39ca283ed2b04c0b5895661179"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn94_root-pli-ms.json",
+                      "size_bytes":  28912,
+                      "sha256":  "ccb9c48e1ac5e0db1dbc582b0ba279b8a4073f5a157a7ed4260e59a7b3c8c3bb"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn95_root-pli-ms.json",
+                      "size_bytes":  33490,
+                      "sha256":  "535f17e4549788fbff7c22ed8761fa1774544a3da30f7109a1b316dc79cb3fcd"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn96_root-pli-ms.json",
+                      "size_bytes":  18821,
+                      "sha256":  "93e27903154ac1ea85e38dcbcfea13dfeb711fc94cd3adf491cf35d9da5ac35f"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn97_root-pli-ms.json",
+                      "size_bytes":  28925,
+                      "sha256":  "c8f289ff36a2986e8e0e743e33311fec5c2e3240c0113dc51c739646083a3920"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn98_root-pli-ms.json",
+                      "size_bytes":  16080,
+                      "sha256":  "72d6b58a025a13f69817c5485a97f22e3ce8ed81c94e4a8231f12d9e1c0cdcaf"
+                  },
+                  {
+                      "collection":  "mn",
+                      "filename":  "mn99_root-pli-ms.json",
+                      "size_bytes":  30940,
+                      "sha256":  "666992848ed1f667f548cff9dbea88d46c26b7cd1af0f9429f29728ddafb1606"
+                  }
+              ]
+}

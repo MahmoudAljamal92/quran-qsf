@@ -1,0 +1,16 @@
+{
+  "experiment": "expP12_bootstrap_t2_ci",
+  "prereg_sha256": "45a576a435f4b11bf56e65866368353dc23c0f9351ff52d8c5a37044343aa0dd",
+  "n_quran": 114,
+  "n_ctrl": 4719,
+  "n_boot": 1000,
+  "point_estimate_T2": 3685.451465159369,
+  "locked_band_A_T2": 3557.34,
+  "locked_full_T2": 3685.45,
+  "bootstrap_median": 3731.15008663322,
+  "bootstrap_ci_lo_2.5": 3146.2851470694777,
+  "bootstrap_ci_hi_97.5": 4363.853786979659,
+  "bias_mean_minus_point": 42.91437249448654,
+  "verdict": "STABLE",
+  "wall_time_s": 73.13086938858032
+}

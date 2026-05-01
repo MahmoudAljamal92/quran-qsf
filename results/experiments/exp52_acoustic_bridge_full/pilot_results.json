@@ -1,0 +1,627 @@
+{
+  "experiment": "exp52_acoustic_bridge_full",
+  "mode": "pilot",
+  "date": "2026-04-21 01:05:38",
+  "surahs_requested": [
+    1,
+    103,
+    108,
+    112,
+    114
+  ],
+  "surahs_processed": [
+    1,
+    103,
+    108,
+    112,
+    114
+  ],
+  "n_verses_total": 27,
+  "n_verses_real_with_pitch": 23,
+  "n_letters_total": 1117,
+  "wall_s_total": 11.82,
+  "per_surah_diagnostics": {
+    "1": {
+      "n_verses_total": 7,
+      "n_verses_aligned": 7,
+      "n_chars_clean": 291,
+      "n_chars_aligned": 285,
+      "alignment_time_s": 1.81,
+      "mode": "single-pass",
+      "wall_s": 4.49,
+      "audio_s": 51.96,
+      "rt_factor": 11.6
+    },
+    "103": {
+      "n_verses_total": 4,
+      "n_verses_aligned": 4,
+      "n_chars_clean": 229,
+      "n_chars_aligned": 226,
+      "alignment_time_s": 0.66,
+      "mode": "single-pass",
+      "wall_s": 1.42,
+      "audio_s": 27.4,
+      "rt_factor": 19.3
+    },
+    "108": {
+      "n_verses_total": 4,
+      "n_verses_aligned": 4,
+      "n_chars_clean": 180,
+      "n_chars_aligned": 177,
+      "alignment_time_s": 0.95,
+      "mode": "single-pass",
+      "wall_s": 1.36,
+      "audio_s": 21.32,
+      "rt_factor": 15.7
+    },
+    "112": {
+      "n_verses_total": 5,
+      "n_verses_aligned": 5,
+      "n_chars_clean": 189,
+      "n_chars_aligned": 185,
+      "alignment_time_s": 0.82,
+      "mode": "single-pass",
+      "wall_s": 1.19,
+      "audio_s": 18.91,
+      "rt_factor": 15.9
+    },
+    "114": {
+      "n_verses_total": 7,
+      "n_verses_aligned": 7,
+      "n_chars_clean": 250,
+      "n_chars_aligned": 244,
+      "alignment_time_s": 2.0,
+      "mode": "single-pass",
+      "wall_s": 2.59,
+      "audio_s": 38.45,
+      "rt_factor": 14.8
+    }
+  },
+  "hypotheses": {
+    "H1_syllable_pitch": {
+      "r": 0.24863897485080408,
+      "p": 0.25261872828772025,
+      "n": 23,
+      "threshold": "r >= 0.30 and p < 1e-10",
+      "pass_": false
+    },
+    "H2_madd_pitch": {
+      "r": 0.42342024455766386,
+      "p": 0.044087796206405606,
+      "n": 23,
+      "threshold": "r >= 0.25 and p < 1e-5",
+      "pass_": false
+    },
+    "H3_shuffle_null": {
+      "note": "deferred to full run (needs many surahs)"
+    },
+    "H4_madd_duration": {
+      "median_madd_s": 0.08000000000000096,
+      "median_short_s": 0.11999999999999922,
+      "ratio": 0.666666666666679,
+      "ci95": [
+        0.5000000000000167,
+        1.8333333333333357
+      ],
+      "n_madd": 106,
+      "n_short": 304,
+      "threshold": "ratio >= 1.8 and CI95 excludes 1.0",
+      "pass_": false
+    },
+    "H5_fawasil_silence": {
+      "mean_silence_before_s": 0.10260869565217393,
+      "median_silence_before_s": 0.11999999999999922,
+      "max_silence_before_s": 0.17999999999999972,
+      "n": 23,
+      "note": "full comparison to internal silence deferred (needs word-level align)",
+      "pass_": null
+    },
+    "H6_emphatic_duration": {
+      "mean_emphatic_s": 0.06782608695652187,
+      "mean_non_emphatic_s": 0.06629629629629613,
+      "diff_ms": 1.5297906602257383,
+      "p": 0.8488780664755279,
+      "n_emphatic": 23,
+      "n_non_emphatic": 54,
+      "threshold": "diff_ms >= 20 and p < 0.01",
+      "pass_": false
+    }
+  },
+  "correlations_pooled": [
+    {
+      "text": "syllable_count",
+      "acoustic": "Duration_s",
+      "r": 0.761304,
+      "p": 4e-06,
+      "rho": 0.459516,
+      "p_rho": 0.015894,
+      "n": 27
+    },
+    {
+      "text": "syllable_count",
+      "acoustic": "Mean_Pitch_Hz",
+      "r": 0.257945,
+      "p": 0.193939,
+      "rho": 0.386977,
+      "p_rho": 0.04614,
+      "n": 27
+    },
+    {
+      "text": "syllable_count",
+      "acoustic": "Pitch_Variance",
+      "r": 0.546356,
+      "p": 0.003194,
+      "rho": 0.611971,
+      "p_rho": 0.000693,
+      "n": 27
+    },
+    {
+      "text": "syllable_count",
+      "acoustic": "Mean_Intensity_dB",
+      "r": 0.226005,
+      "p": 0.256992,
+      "rho": 0.19979,
+      "p_rho": 0.31773,
+      "n": 27
+    },
+    {
+      "text": "syllable_count",
+      "acoustic": "HNR_dB",
+      "r": 0.114127,
+      "p": 0.570839,
+      "rho": -0.106042,
+      "p_rho": 0.598592,
+      "n": 27
+    },
+    {
+      "text": "syllable_count",
+      "acoustic": "Spectral_Centroid_Hz",
+      "r": -0.044805,
+      "p": 0.824387,
+      "rho": -0.021208,
+      "p_rho": 0.916376,
+      "n": 27
+    },
+    {
+      "text": "syllable_count_full",
+      "acoustic": "Duration_s",
+      "r": 0.76134,
+      "p": 4e-06,
+      "rho": 0.449988,
+      "p_rho": 0.018516,
+      "n": 27
+    },
+    {
+      "text": "syllable_count_full",
+      "acoustic": "Mean_Pitch_Hz",
+      "r": 0.244115,
+      "p": 0.219783,
+      "rho": 0.378063,
+      "p_rho": 0.05185,
+      "n": 27
+    },
+    {
+      "text": "syllable_count_full",
+      "acoustic": "Pitch_Variance",
+      "r": 0.532399,
+      "p": 0.004253,
+      "rho": 0.599369,
+      "p_rho": 0.000954,
+      "n": 27
+    },
+    {
+      "text": "syllable_count_full",
+      "acoustic": "Mean_Intensity_dB",
+      "r": 0.230126,
+      "p": 0.248184,
+      "rho": 0.19979,
+      "p_rho": 0.31773,
+      "n": 27
+    },
+    {
+      "text": "syllable_count_full",
+      "acoustic": "HNR_dB",
+      "r": 0.102843,
+      "p": 0.60973,
+      "rho": -0.111267,
+      "p_rho": 0.580589,
+      "n": 27
+    },
+    {
+      "text": "syllable_count_full",
+      "acoustic": "Spectral_Centroid_Hz",
+      "r": -0.043876,
+      "p": 0.827971,
+      "rho": -0.011987,
+      "p_rho": 0.952679,
+      "n": 27
+    },
+    {
+      "text": "madd_count",
+      "acoustic": "Duration_s",
+      "r": 0.755799,
+      "p": 5e-06,
+      "rho": 0.6378,
+      "p_rho": 0.000345,
+      "n": 27
+    },
+    {
+      "text": "madd_count",
+      "acoustic": "Mean_Pitch_Hz",
+      "r": 0.194092,
+      "p": 0.332008,
+      "rho": 0.152584,
+      "p_rho": 0.447376,
+      "n": 27
+    },
+    {
+      "text": "madd_count",
+      "acoustic": "Pitch_Variance",
+      "r": 0.613659,
+      "p": 0.000664,
+      "rho": 0.496406,
+      "p_rho": 0.008446,
+      "n": 27
+    },
+    {
+      "text": "madd_count",
+      "acoustic": "Mean_Intensity_dB",
+      "r": -0.245437,
+      "p": 0.217217,
+      "rho": -0.405873,
+      "p_rho": 0.03568,
+      "n": 27
+    },
+    {
+      "text": "madd_count",
+      "acoustic": "HNR_dB",
+      "r": 0.378271,
+      "p": 0.051711,
+      "rho": 0.341788,
+      "p_rho": 0.080997,
+      "n": 27
+    },
+    {
+      "text": "madd_count",
+      "acoustic": "Spectral_Centroid_Hz",
+      "r": -0.288867,
+      "p": 0.143923,
+      "rho": -0.37027,
+      "p_rho": 0.057284,
+      "n": 27
+    },
+    {
+      "text": "madd_count_full",
+      "acoustic": "Duration_s",
+      "r": 0.713655,
+      "p": 2.9e-05,
+      "rho": 0.373829,
+      "p_rho": 0.05475,
+      "n": 27
+    },
+    {
+      "text": "madd_count_full",
+      "acoustic": "Mean_Pitch_Hz",
+      "r": 0.258633,
+      "p": 0.192711,
+      "rho": 0.405451,
+      "p_rho": 0.03589,
+      "n": 27
+    },
+    {
+      "text": "madd_count_full",
+      "acoustic": "Pitch_Variance",
+      "r": 0.531774,
+      "p": 0.004307,
+      "rho": 0.558552,
+      "p_rho": 0.002461,
+      "n": 27
+    },
+    {
+      "text": "madd_count_full",
+      "acoustic": "Mean_Intensity_dB",
+      "r": 0.104055,
+      "p": 0.605499,
+      "rho": 0.176583,
+      "p_rho": 0.378272,
+      "n": 27
+    },
+    {
+      "text": "madd_count_full",
+      "acoustic": "HNR_dB",
+      "r": 0.322085,
+      "p": 0.101337,
+      "rho": 0.205387,
+      "p_rho": 0.304077,
+      "n": 27
+    },
+    {
+      "text": "madd_count_full",
+      "acoustic": "Spectral_Centroid_Hz",
+      "r": -0.133355,
+      "p": 0.507256,
+      "rho": -0.066375,
+      "p_rho": 0.742203,
+      "n": 27
+    },
+    {
+      "text": "word_count",
+      "acoustic": "Duration_s",
+      "r": 0.683073,
+      "p": 8.6e-05,
+      "rho": 0.41642,
+      "p_rho": 0.030725,
+      "n": 27
+    },
+    {
+      "text": "word_count",
+      "acoustic": "Mean_Pitch_Hz",
+      "r": 0.145632,
+      "p": 0.468578,
+      "rho": 0.179846,
+      "p_rho": 0.369379,
+      "n": 27
+    },
+    {
+      "text": "word_count",
+      "acoustic": "Pitch_Variance",
+      "r": 0.418462,
+      "p": 0.029832,
+      "rho": 0.451018,
+      "p_rho": 0.018217,
+      "n": 27
+    },
+    {
+      "text": "word_count",
+      "acoustic": "Mean_Intensity_dB",
+      "r": 0.31465,
+      "p": 0.109929,
+      "rho": 0.312938,
+      "p_rho": 0.111982,
+      "n": 27
+    },
+    {
+      "text": "word_count",
+      "acoustic": "HNR_dB",
+      "r": 0.034228,
+      "p": 0.865413,
+      "rho": -0.213509,
+      "p_rho": 0.284926,
+      "n": 27
+    },
+    {
+      "text": "word_count",
+      "acoustic": "Spectral_Centroid_Hz",
+      "r": 0.008832,
+      "p": 0.965126,
+      "rho": 0.091326,
+      "p_rho": 0.650523,
+      "n": 27
+    },
+    {
+      "text": "char_count",
+      "acoustic": "Duration_s",
+      "r": 0.760996,
+      "p": 4e-06,
+      "rho": 0.454338,
+      "p_rho": 0.017278,
+      "n": 27
+    },
+    {
+      "text": "char_count",
+      "acoustic": "Mean_Pitch_Hz",
+      "r": 0.235075,
+      "p": 0.237875,
+      "rho": 0.346643,
+      "p_rho": 0.076499,
+      "n": 27
+    },
+    {
+      "text": "char_count",
+      "acoustic": "Pitch_Variance",
+      "r": 0.529842,
+      "p": 0.004477,
+      "rho": 0.587733,
+      "p_rho": 0.001266,
+      "n": 27
+    },
+    {
+      "text": "char_count",
+      "acoustic": "Mean_Intensity_dB",
+      "r": 0.227215,
+      "p": 0.254385,
+      "rho": 0.21386,
+      "p_rho": 0.284115,
+      "n": 27
+    },
+    {
+      "text": "char_count",
+      "acoustic": "HNR_dB",
+      "r": 0.092724,
+      "p": 0.645515,
+      "rho": -0.13982,
+      "p_rho": 0.486695,
+      "n": 27
+    },
+    {
+      "text": "char_count",
+      "acoustic": "Spectral_Centroid_Hz",
+      "r": -0.028202,
+      "p": 0.888947,
+      "rho": 0.019887,
+      "p_rho": 0.921571,
+      "n": 27
+    },
+    {
+      "text": "emphatic_count",
+      "acoustic": "Duration_s",
+      "r": 0.586831,
+      "p": 0.001293,
+      "rho": 0.098327,
+      "p_rho": 0.625598,
+      "n": 27
+    },
+    {
+      "text": "emphatic_count",
+      "acoustic": "Mean_Pitch_Hz",
+      "r": 0.217431,
+      "p": 0.275958,
+      "rho": 0.333369,
+      "p_rho": 0.089268,
+      "n": 27
+    },
+    {
+      "text": "emphatic_count",
+      "acoustic": "Pitch_Variance",
+      "r": 0.332154,
+      "p": 0.090513,
+      "rho": 0.308451,
+      "p_rho": 0.117497,
+      "n": 27
+    },
+    {
+      "text": "emphatic_count",
+      "acoustic": "Mean_Intensity_dB",
+      "r": 0.117616,
+      "p": 0.55904,
+      "rho": 0.276798,
+      "p_rho": 0.1622,
+      "n": 27
+    },
+    {
+      "text": "emphatic_count",
+      "acoustic": "HNR_dB",
+      "r": 0.105023,
+      "p": 0.602132,
+      "rho": -0.27141,
+      "p_rho": 0.170868,
+      "n": 27
+    },
+    {
+      "text": "emphatic_count",
+      "acoustic": "Spectral_Centroid_Hz",
+      "r": 0.021534,
+      "p": 0.915096,
+      "rho": 0.144123,
+      "p_rho": 0.473246,
+      "n": 27
+    },
+    {
+      "text": "emphatic_count_full",
+      "acoustic": "Duration_s",
+      "r": 0.640472,
+      "p": 0.00032,
+      "rho": 0.154225,
+      "p_rho": 0.442445,
+      "n": 27
+    },
+    {
+      "text": "emphatic_count_full",
+      "acoustic": "Mean_Pitch_Hz",
+      "r": 0.184304,
+      "p": 0.357431,
+      "rho": 0.309798,
+      "p_rho": 0.115821,
+      "n": 27
+    },
+    {
+      "text": "emphatic_count_full",
+      "acoustic": "Pitch_Variance",
+      "r": 0.257643,
+      "p": 0.194481,
+      "rho": 0.155572,
+      "p_rho": 0.438421,
+      "n": 27
+    },
+    {
+      "text": "emphatic_count_full",
+      "acoustic": "Mean_Intensity_dB",
+      "r": 0.119892,
+      "p": 0.551406,
+      "rho": 0.23841,
+      "p_rho": 0.23109,
+      "n": 27
+    },
+    {
+      "text": "emphatic_count_full",
+      "acoustic": "HNR_dB",
+      "r": 0.236152,
+      "p": 0.235669,
+      "rho": -0.249185,
+      "p_rho": 0.210052,
+      "n": 27
+    },
+    {
+      "text": "emphatic_count_full",
+      "acoustic": "Spectral_Centroid_Hz",
+      "r": 0.006505,
+      "p": 0.974311,
+      "rho": 0.322594,
+      "p_rho": 0.100768,
+      "n": 27
+    },
+    {
+      "text": "ghunnah_count",
+      "acoustic": "Duration_s",
+      "r": 0.062574,
+      "p": 0.756512,
+      "rho": 0.244558,
+      "p_rho": 0.21892,
+      "n": 27
+    },
+    {
+      "text": "ghunnah_count",
+      "acoustic": "Mean_Pitch_Hz",
+      "r": -0.552518,
+      "p": 0.002803,
+      "rho": -0.492954,
+      "p_rho": 0.008987,
+      "n": 27
+    },
+    {
+      "text": "ghunnah_count",
+      "acoustic": "Pitch_Variance",
+      "r": -0.364834,
+      "p": 0.06133,
+      "rho": -0.426669,
+      "p_rho": 0.026456,
+      "n": 27
+    },
+    {
+      "text": "ghunnah_count",
+      "acoustic": "Mean_Intensity_dB",
+      "r": 0.241381,
+      "p": 0.225153,
+      "rho": 0.100824,
+      "p_rho": 0.616805,
+      "n": 27
+    },
+    {
+      "text": "ghunnah_count",
+      "acoustic": "HNR_dB",
+      "r": -0.033711,
+      "p": 0.867428,
+      "rho": -0.018141,
+      "p_rho": 0.928437,
+      "n": 27
+    },
+    {
+      "text": "ghunnah_count",
+      "acoustic": "Spectral_Centroid_Hz",
+      "r": 0.336046,
+      "p": 0.086572,
+      "rho": 0.281887,
+      "p_rho": 0.154302,
+      "n": 27
+    }
+  ],
+  "settings": {
+    "model": "jonatasgrosman/wav2vec2-large-xlsr-53-arabic",
+    "fp16": true,
+    "sample_rate": 16000,
+    "pitch_floor_hz": 75.0,
+    "pitch_ceiling_hz": 500.0,
+    "max_seconds_single_alignment": 60.0,
+    "ctc_frame_s": 0.02
+  }
+}

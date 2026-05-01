@@ -1,0 +1,147 @@
+{
+  "experiment": "expP4_quran_hurst_forensics",
+  "schema_version": 1,
+  "title": "Forensic check on Quran H_unit_words = 0.914 from expP4_hurst_universal_cross_tradition: rule out the trivial descending-length monotonic explanation.",
+  "n_perm": 5000,
+  "seed_base": 42,
+  "results_per_corpus": {
+    "quran": {
+      "n_units": 114,
+      "n_valid_perms": 5000,
+      "H_canon": 0.9139449853727155,
+      "perm_mean": 0.587856976815095,
+      "perm_std": 0.0880423743789434,
+      "z_canon_vs_null": 3.7037620902192434,
+      "pct_perms_above_canon": 0.0,
+      "p_one_sided": 0.0001999600079984003,
+      "H_descending_ceiling": 1.0070480644818078,
+      "H_residual_after_linear_detrend": 0.841264268070962,
+      "word_count_summary": {
+        "min": 14.0,
+        "max": 6145.0,
+        "mean": 686.3859649122807,
+        "median": 348.0
+      }
+    },
+    "hebrew_tanakh": {
+      "n_units": 921,
+      "n_valid_perms": 5000,
+      "H_canon": 0.7729436339519103,
+      "perm_mean": 0.5798851035532097,
+      "perm_std": 0.0296952689707252,
+      "z_canon_vs_null": 6.501322839979177,
+      "pct_perms_above_canon": 0.0,
+      "p_one_sided": 0.0001999600079984003,
+      "H_descending_ceiling": 0.9996050571454821,
+      "H_residual_after_linear_detrend": 0.7798006248234748,
+      "word_count_summary": {
+        "min": 50.0,
+        "max": 1414.0,
+        "mean": 350.17372421281215,
+        "median": 334.0
+      }
+    },
+    "greek_nt": {
+      "n_units": 260,
+      "n_valid_perms": 5000,
+      "H_canon": 0.792565121571139,
+      "perm_mean": 0.5857080646308254,
+      "perm_std": 0.055047023422210954,
+      "z_canon_vs_null": 3.7578245667112453,
+      "pct_perms_above_canon": 0.0,
+      "p_one_sided": 0.0001999600079984003,
+      "H_descending_ceiling": 0.9944190949800592,
+      "H_residual_after_linear_detrend": 0.8076304512117776,
+      "word_count_summary": {
+        "min": 186.0,
+        "max": 1241.0,
+        "mean": 530.8192307692308,
+        "median": 494.5
+      }
+    },
+    "iliad_greek": {
+      "n_units": 24,
+      "skipped": true,
+      "reason": "Hurst undefined on this length"
+    },
+    "pali_dn": {
+      "n_units": 34,
+      "skipped": true,
+      "reason": "Hurst undefined on this length"
+    },
+    "pali_mn": {
+      "n_units": 152,
+      "n_valid_perms": 5000,
+      "H_canon": 0.6732392139238199,
+      "perm_mean": 0.5943206285835225,
+      "perm_std": 0.07720151873830937,
+      "z_canon_vs_null": 1.0222413578132883,
+      "pct_perms_above_canon": 0.1578,
+      "p_one_sided": 0.1578,
+      "H_descending_ceiling": 0.9997191522885164,
+      "H_residual_after_linear_detrend": 0.6836364643867725,
+      "word_count_summary": {
+        "min": 344.0,
+        "max": 4748.0,
+        "mean": 1526.9736842105262,
+        "median": 1400.5
+      }
+    },
+    "rigveda": {
+      "n_units": 1024,
+      "n_valid_perms": 5000,
+      "H_canon": 0.7861412157677876,
+      "perm_mean": 0.576047626605421,
+      "perm_std": 0.026683009946660924,
+      "z_canon_vs_null": 7.873684025240843,
+      "pct_perms_above_canon": 0.0,
+      "p_one_sided": 0.0001999600079984003,
+      "H_descending_ceiling": 0.9847219333988961,
+      "H_residual_after_linear_detrend": 0.7860035407766037,
+      "word_count_summary": {
+        "min": 23.0,
+        "max": 1006.0,
+        "mean": 155.044921875,
+        "median": 127.5
+      }
+    },
+    "avestan_yasna": {
+      "n_units": 72,
+      "n_valid_perms": 5000,
+      "H_canon": 0.6323268433635668,
+      "perm_mean": 0.6148135398358815,
+      "perm_std": 0.14434479823474367,
+      "z_canon_vs_null": 0.12132964777299389,
+      "pct_perms_above_canon": 0.4614,
+      "p_one_sided": 0.4614,
+      "H_descending_ceiling": 1.0838063684387105,
+      "H_residual_after_linear_detrend": 0.6413326141425454,
+      "word_count_summary": {
+        "min": 45.0,
+        "max": 833.0,
+        "mean": 299.2916666666667,
+        "median": 247.5
+      }
+    }
+  },
+  "sanity": {
+    "quran_H_canon": 0.9139449853727155,
+    "expected_from_locked_universal_test": 0.914,
+    "abs_drift": 5.5014627284522e-05,
+    "ok_within_1e-3": true
+  },
+  "pre_registered_outcomes": {
+    "PRED_Q1_canon_vs_perm_null": "PASS",
+    "PRED_Q2_descending_ceiling_above_0.95": "PASS",
+    "PRED_Q3_detrended_residual_above_0.6": "PASS",
+    "PRED_Q4_other_corpora_canonical_significant": "FAIL",
+    "PRED_Q4_n_other_corpora_significant_z_above_3": 3,
+    "overall_verdict": "PARTIAL_SUPPORT"
+  },
+  "interpretation": [
+    "If PRED-Q1 PASSES, the canonical Mushaf order is genuinely more Hurst-extreme than random permutations of the same word-counts -- the 0.914 is structural.",
+    "If PRED-Q3 PASSES (detrended residual H > 0.6), then the Hurst is NOT solely the trivial descending-length effect -- there is genuine long-range memory in the residuals.",
+    "If PRED-Q4 PASSES, the canonical-order Hurst is a cross-tradition phenomenon, not a Quran-specific artefact.",
+    "If all three PASS, the new Quran finding is robust and joins the cross-tradition LC-Hurst universal candidate with strong supporting evidence."
+  ]
+}

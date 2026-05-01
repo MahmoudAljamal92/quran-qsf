@@ -1,0 +1,363 @@
+{
+  "schema": "MANIFEST_v8",
+  "generated_utc": "2026-04-26T21:53:46+00:00",
+  "generator": "results/experiments/expE4_sha_manifest/run.py",
+  "root": "C:\\Users\\mtj_2\\OneDrive\\Desktop\\Quran",
+  "scopes": {
+    "results_root_headlines": {
+      "count": 3,
+      "files": [
+        {
+          "path": "results/CLEAN_PIPELINE_REPORT.json",
+          "sha256": "cada5edcf806249c685ae6fc82c7e65e6a08cf11721c30d30b8db6e96ed21da3",
+          "size_bytes": 74371,
+          "mtime_utc": "2026-04-24T15:13:11+00:00"
+        },
+        {
+          "path": "results/ULTIMATE_REPORT.json",
+          "sha256": "677bf8d5ca9f2cdfcd586834970f806b70e4dbb4f7f73e68122e6abc447acb03",
+          "size_bytes": 23019,
+          "mtime_utc": "2026-04-24T16:28:09+00:00"
+        },
+        {
+          "path": "results/ULTIMATE_SCORECARD.md",
+          "sha256": "dac77e0abe0e032e4103c659dae37e438d44626a2b7fd14b07eff7da816d1451",
+          "size_bytes": 11013,
+          "mtime_utc": "2026-04-24T16:28:09+00:00"
+        }
+      ]
+    },
+    "results_checkpoints": {
+      "count": 22,
+      "files": [
+        {
+          "path": "results/checkpoints/_manifest.json",
+          "sha256": "db751770d7ceb4b8e12d212ebac71e5c7165fff61f2a559bd2e372503d909aa2",
+          "size_bytes": 9655,
+          "mtime_utc": "2026-04-24T16:28:17+00:00"
+        },
+        {
+          "path": "results/checkpoints/phase_02_locks.pkl",
+          "sha256": "b1b11a845439cd16afc6ce87c779552f271f616af907ecfcc0a932a9a970bf16",
+          "size_bytes": 501,
+          "mtime_utc": "2026-04-24T15:10:13+00:00"
+        },
+        {
+          "path": "results/checkpoints/phase_03_integrity.pkl",
+          "sha256": "dd76b2d0a151c2ae2a205e310391fac3ede45800056e477fc4fb0190677b472a",
+          "size_bytes": 24380672,
+          "mtime_utc": "2026-04-24T15:10:50+00:00"
+        },
+        {
+          "path": "results/checkpoints/phase_04_leakage.pkl",
+          "sha256": "053ad97a53550bcd0c0f1226375a0e5818cb24504ea2265c0df7c292fa75aadf",
+          "size_bytes": 641,
+          "mtime_utc": "2026-04-24T15:10:57+00:00"
+        },
+        {
+          "path": "results/checkpoints/phase_05_cameltools.pkl",
+          "sha256": "469fa967fcf99991dd355c2bd5d0ed267ca7796d56a5f8a5d8ecf3c2dda95ab1",
+          "size_bytes": 405,
+          "mtime_utc": "2026-04-24T15:11:02+00:00"
+        },
+        {
+          "path": "results/checkpoints/phase_06_phi_m.pkl",
+          "sha256": "dddb6a3fec4caa3b35a6984869f564704aa091a48a4e1626f97aa2895e1f9583",
+          "size_bytes": 24485687,
+          "mtime_utc": "2026-04-24T15:11:04+00:00"
+        },
+        {
+          "path": "results/checkpoints/phase_07_core.pkl",
+          "sha256": "3c12a42f64dadbf7cb311264c847153bdf947ba2683e17209ea877ee70e444c7",
+          "size_bytes": 31793,
+          "mtime_utc": "2026-04-24T15:13:11+00:00"
+        },
+        {
+          "path": "results/checkpoints/phase_08_scalefree_path.pkl",
+          "sha256": "2ef4407f81dc830c49e128ea33c9e36f3cb346058508c70f13482053b97049d8",
+          "size_bytes": 7619,
+          "mtime_utc": "2026-04-24T15:13:12+00:00"
+        },
+        {
+          "path": "results/checkpoints/phase_09_markov.pkl",
+          "sha256": "d9acf123c6d7ad8072aac9428f5c66d8bc8eb403bfd56a2436d2c05662f4073b",
+          "size_bytes": 4230,
+          "mtime_utc": "2026-04-24T15:13:12+00:00"
+        },
+        {
+          "path": "results/checkpoints/phase_10_dual_channel.pkl",
+          "sha256": "22f2b5e47a4a0c400c0a8fd49ea702713c70b90301d383497509f2629b4702b4",
+          "size_bytes": 4981,
+          "mtime_utc": "2026-04-24T15:13:19+00:00"
+        },
+        {
+          "path": "results/checkpoints/phase_11_adversarial.pkl",
+          "sha256": "fd49d3c71760842ab59fe157447918a5ff4a8f0f72087f87c2dd33526432ce71",
+          "size_bytes": 6157,
+          "mtime_utc": "2026-04-24T15:56:51+00:00"
+        },
+        {
+          "path": "results/checkpoints/phase_12_robust.pkl",
+          "sha256": "fd9bf968b5ca914525ecf3cac21cb7de24f2407e14cbe45b9b84ba5426d9c64b",
+          "size_bytes": 7024,
+          "mtime_utc": "2026-04-24T15:56:51+00:00"
+        },
+        {
+          "path": "results/checkpoints/phase_13_classifier.pkl",
+          "sha256": "a6c022065c5c22cbb41d6b373f84c29410f41d19b3853a752dbedfe96ac4b3ce",
+          "size_bytes": 5824,
+          "mtime_utc": "2026-04-24T15:56:52+00:00"
+        },
+        {
+          "path": "results/checkpoints/phase_14_topology.pkl",
+          "sha256": "389008fc6fb0ed1fbde5860a144c82fd93625ec50c1558b06faac900051a5c5c",
+          "size_bytes": 24462050,
+          "mtime_utc": "2026-04-24T15:57:23+00:00"
+        },
+        {
+          "path": "results/checkpoints/phase_15_epigenetic.pkl",
+          "sha256": "51e9b91366cfd3661d0fdd0f159f9498ad1020ac8bcfdb524c0d70ecf6f1f70a",
+          "size_bytes": 7500,
+          "mtime_utc": "2026-04-24T15:57:23+00:00"
+        },
+        {
+          "path": "results/checkpoints/phase_16_crosslang.pkl",
+          "sha256": "90d5a2c6e376f1bcd9fc5927b0d1fc94b978f5b9bc6a04d5eea61d29a1a80030",
+          "size_bytes": 7860,
+          "mtime_utc": "2026-04-24T15:57:23+00:00"
+        },
+        {
+          "path": "results/checkpoints/phase_17_external.pkl",
+          "sha256": "23f2967541c7c4dca2644686f1661a1145c08203b34d6690aa4442a882c7a74a",
+          "size_bytes": 13519,
+          "mtime_utc": "2026-04-24T15:59:13+00:00"
+        },
+        {
+          "path": "results/checkpoints/phase_18_discovery.pkl",
+          "sha256": "ba5d93032e9baf2838cd29d53af205d083323b7465d8bb5cdb3a849cc4bf854a",
+          "size_bytes": 13573,
+          "mtime_utc": "2026-04-24T16:27:15+00:00"
+        },
+        {
+          "path": "results/checkpoints/phase_19_adiyat_nulls.pkl",
+          "sha256": "451790e7c4be1973b0c00145eee6b0d8b493d8c36072f2e7de6a04971868b8bd",
+          "size_bytes": 9264,
+          "mtime_utc": "2026-04-24T16:28:08+00:00"
+        },
+        {
+          "path": "results/checkpoints/phase_20_gaps_honest.pkl",
+          "sha256": "e2aab53cafed1fa7ae5804a3a4b5f3f4c11ebc39b5d870ece9c28d9a64262e5f",
+          "size_bytes": 10204,
+          "mtime_utc": "2026-04-24T16:28:09+00:00"
+        },
+        {
+          "path": "results/checkpoints/phase_21_final_scorecard.pkl",
+          "sha256": "f6ebb2f9d9a733ac60463823ff403e11c81063b0e36e2e3f3b675ad6de2bc136",
+          "size_bytes": 9867,
+          "mtime_utc": "2026-04-24T16:28:17+00:00"
+        },
+        {
+          "path": "results/checkpoints/phase_22_tda_appendix.pkl",
+          "sha256": "ee7afc36c28e47099d6d41fc402a39592ad3b42ef86b357d33ce7bdcac72ed27",
+          "size_bytes": 9672,
+          "mtime_utc": "2026-04-24T16:28:09+00:00"
+        }
+      ]
+    },
+    "results_integrity": {
+      "count": 8,
+      "files": [
+        {
+          "path": "results/integrity/code_lock.json",
+          "sha256": "16319dc5c7b063d9309bc662117943f657886ac38a91cf2ed92beeb87ba5ef64",
+          "size_bytes": 1235,
+          "mtime_utc": "2026-04-24T15:10:13+00:00"
+        },
+        {
+          "path": "results/integrity/corpus_lock.json",
+          "sha256": "e736115e0daa1696a164a002736c8d029358ed2f2a87f4e4b89d6393c71b14bd",
+          "size_bytes": 15894,
+          "mtime_utc": "2026-04-25T14:58:43+00:00"
+        },
+        {
+          "path": "results/integrity/fdr_coverage_audit.json",
+          "sha256": "23b25dada854db9653ae0f2fa551c2cab8158053baf825c96f111d7e497d1dad",
+          "size_bytes": 3246,
+          "mtime_utc": "2026-04-24T16:28:09+00:00"
+        },
+        {
+          "path": "results/integrity/headline_baselines.json",
+          "sha256": "733d020a208a006a7b28c249eeccd053831e28e78237e8eb591bdc7200b93795",
+          "size_bytes": 315,
+          "mtime_utc": "2026-04-19T15:59:00+00:00"
+        },
+        {
+          "path": "results/integrity/MANIFEST_v8.json",
+          "sha256": "40efb36329cc5649b06b3e372e15d2428d402d1274a27d6d8a17f65cf39e0169",
+          "size_bytes": 14068,
+          "mtime_utc": "2026-04-23T17:47:34+00:00"
+        },
+        {
+          "path": "results/integrity/names_registry.json",
+          "sha256": "5561943cb0f01123910493ae2553fbc219b626dabf4f51793ae3be3d022a6f28",
+          "size_bytes": 2631,
+          "mtime_utc": "2026-04-24T22:33:42+00:00"
+        },
+        {
+          "path": "results/integrity/preregistration.json",
+          "sha256": "d9cf2b3c72a689add0d13cc4a0c1aa38114ef1ee703b596d5e989fccb685c08a",
+          "size_bytes": 2633,
+          "mtime_utc": "2026-04-24T15:10:13+00:00"
+        },
+        {
+          "path": "results/integrity/results_lock.json",
+          "sha256": "21c835878c754aa40663df6b83df5632db1f6705e1b2dee9846c8f1953e58d81",
+          "size_bytes": 11460,
+          "mtime_utc": "2026-04-26T12:31:38+00:00"
+        }
+      ]
+    },
+    "notebooks_ultimate": {
+      "count": 10,
+      "files": [
+        {
+          "path": "notebooks/ultimate/_audit_check.py",
+          "sha256": "8419ea40fc2418a032d02a73a23caeed808a01dd26ae6e0f64dcb93b2cd662ba",
+          "size_bytes": 16125,
+          "mtime_utc": "2026-04-26T21:43:19+00:00"
+        },
+        {
+          "path": "notebooks/ultimate/_build.py",
+          "sha256": "1b0b80a40f8e00687f25ef45173b2bc0b1185715449e0dd0c9d8a7e446aa790f",
+          "size_bytes": 301633,
+          "mtime_utc": "2026-04-24T22:32:14+00:00"
+        },
+        {
+          "path": "notebooks/ultimate/_build_ultimate2.py",
+          "sha256": "c5984b46d59945ade08cef16aafa1c3e11c4c5a7e54d386da4bced5e49f1cdd8",
+          "size_bytes": 36493,
+          "mtime_utc": "2026-04-19T23:29:35+00:00"
+        },
+        {
+          "path": "notebooks/ultimate/_smoke_hsic_tda.py",
+          "sha256": "34e88d1d013a81b8ed215b5ebc319cb30ae7a3b861189d910d8eaa5d28d7b08e",
+          "size_bytes": 9559,
+          "mtime_utc": "2026-04-18T15:42:56+00:00"
+        },
+        {
+          "path": "notebooks/ultimate/_verify_syntax.py",
+          "sha256": "02793e090047fa64c9b936bc8fcda347620d1d898b883b32ae429aaee0b2bcf3",
+          "size_bytes": 1433,
+          "mtime_utc": "2026-04-18T13:59:15+00:00"
+        },
+        {
+          "path": "notebooks/ultimate/QSF_ULTIMATE.ipynb",
+          "sha256": "b0eed204c4b3f43a37263f4a657fcbdaceffe6b462bc81ad4bb8411611237ff7",
+          "size_bytes": 435420,
+          "mtime_utc": "2026-04-19T17:16:03+00:00"
+        },
+        {
+          "path": "notebooks/ultimate/QSF_ULTIMATE_2.ipynb",
+          "sha256": "16e97030791817fd8617a67ca121c6dd3070ae0d932ff33afbb584bf57cb86ce",
+          "size_bytes": 308339,
+          "mtime_utc": "2026-04-20T06:11:31+00:00"
+        },
+        {
+          "path": "notebooks/ultimate/QSF_ULTIMATE_REBUILD_2026_04_24.ipynb",
+          "sha256": "9523e5526e742631466aa16a5815b72472c034e2196fd71721f768e0cd1a3f34",
+          "size_bytes": 557960,
+          "mtime_utc": "2026-04-24T16:28:19+00:00"
+        },
+        {
+          "path": "notebooks/ultimate/README.md",
+          "sha256": "370db319a407b881423b03fc45fd6abfe2c0877e00861355126c9c3a99ea1928",
+          "size_bytes": 7043,
+          "mtime_utc": "2026-04-18T07:03:37+00:00"
+        },
+        {
+          "path": "notebooks/ultimate/README_ULTIMATE_2.md",
+          "sha256": "be0a70ad2ad056f69d550db744302014a6fe6662b116070b1c0c09d2056c0fb3",
+          "size_bytes": 4656,
+          "mtime_utc": "2026-04-19T23:15:26+00:00"
+        }
+      ]
+    },
+    "archive_audits": {
+      "count": 6,
+      "files": [
+        {
+          "path": "archive/audits/ADIYAT_BREAKTHROUGH_AUDIT_2026-04-20.md",
+          "sha256": "232e5f74ab963c9c8e6afa5033de92cb1765281387d1e28153d72bc1cb4fe780",
+          "size_bytes": 6856,
+          "mtime_utc": "2026-04-19T20:27:46+00:00"
+        },
+        {
+          "path": "archive/audits/AUDIT_2026-04-19.md",
+          "sha256": "78a3e3d7f8f3f5eacd525639dd7eb1378577e58a745ab41b9122e8c080c6878b",
+          "size_bytes": 12924,
+          "mtime_utc": "2026-04-19T18:43:24+00:00"
+        },
+        {
+          "path": "archive/audits/AUDIT_ULTIMATE2.md",
+          "sha256": "9155bc21d570607258923d6c8cd3333f0dbdd1731e061f6b860540c5856cba44",
+          "size_bytes": 3256,
+          "mtime_utc": "2026-04-19T23:15:15+00:00"
+        },
+        {
+          "path": "archive/audits/AUDIT_ULTIMATE2_FIXES.md",
+          "sha256": "e366a69a68242afbf31aada340d0882f4fd0c5a221685d9bca127236b8a72261",
+          "size_bytes": 11897,
+          "mtime_utc": "2026-04-19T22:30:59+00:00"
+        },
+        {
+          "path": "archive/audits/AUDIT_ULTIMATE2_ROUND2.md",
+          "sha256": "262b7e9b9cbc12b6f01b8fb2efdedab947121bb07753e482ec1e4a120f76eca6",
+          "size_bytes": 17067,
+          "mtime_utc": "2026-04-19T23:14:55+00:00"
+        },
+        {
+          "path": "archive/audits/AUDIT_V2_AND_PARADIGM.md",
+          "sha256": "34b22dc5b650d49de92504f8cf9b80fa774d755f3ed8a98de0da3b60fe19fca1",
+          "size_bytes": 14967,
+          "mtime_utc": "2026-04-19T19:13:25+00:00"
+        }
+      ]
+    }
+  },
+  "totals": {
+    "files": 49,
+    "bytes": 75394211
+  },
+  "diff_vs_checkpoints_manifest": {
+    "prior_manifest": "results/checkpoints/_manifest.json",
+    "compared_scope": "results_checkpoints (22 phase_*.pkl only)",
+    "status": "CLEAN",
+    "matches": [
+      "phase_02_locks.pkl",
+      "phase_03_integrity.pkl",
+      "phase_04_leakage.pkl",
+      "phase_05_cameltools.pkl",
+      "phase_06_phi_m.pkl",
+      "phase_07_core.pkl",
+      "phase_08_scalefree_path.pkl",
+      "phase_09_markov.pkl",
+      "phase_10_dual_channel.pkl",
+      "phase_11_adversarial.pkl",
+      "phase_12_robust.pkl",
+      "phase_13_classifier.pkl",
+      "phase_14_topology.pkl",
+      "phase_15_epigenetic.pkl",
+      "phase_16_crosslang.pkl",
+      "phase_17_external.pkl",
+      "phase_18_discovery.pkl",
+      "phase_19_adiyat_nulls.pkl",
+      "phase_20_gaps_honest.pkl",
+      "phase_21_final_scorecard.pkl",
+      "phase_22_tda_appendix.pkl"
+    ],
+    "hash_drift": [],
+    "only_in_prior": [],
+    "only_in_new": [],
+    "prior_parse_error": null
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "experiment": "exp98_per_verse_mdl",
+  "schema_version": "1.0",
+  "hypothesis": "H53",
+  "verdict": "FAIL_quran_not_top_1",
+  "prereg_hash_expected": "6218b65ce6b7bb9bb51db269e8d32f23a8f63e3b0b5e68037793d9c218bbc11f",
+  "prereg_hash_actual": "6218b65ce6b7bb9bb51db269e8d32f23a8f63e3b0b5e68037793d9c218bbc11f",
+  "frozen_constants": {
+    "ARABIC_POOL": [
+      "quran",
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "COMPRESSORS": [
+      "gzip",
+      "bz2",
+      "zstd"
+    ],
+    "MIN_VERSE_BYTES": 5,
+    "MARGIN_THRESHOLD": 0.015,
+    "N_QURAN_VERSES_EXPECTED": 6236
+  },
+  "per_corpus": {
+    "quran": {
+      "n_verses_total": 6236,
+      "n_verses_valid": 6236,
+      "n_failed": 0,
+      "completion_rate": 1.0,
+      "median_mdl_rate": 0.82,
+      "p05_mdl_rate": 0.5307105108631827,
+      "p25_mdl_rate": 0.6958428680396644,
+      "p75_mdl_rate": 1.0334745762711866,
+      "p95_mdl_rate": 1.3214285714285714,
+      "wall_time_s": 0.9964289665222168
+    },
+    "poetry_jahili": {
+      "n_verses_total": 2561,
+      "n_verses_valid": 2561,
+      "n_failed": 0,
+      "completion_rate": 1.0,
+      "median_mdl_rate": 0.8297872340425532,
+      "p05_mdl_rate": 0.7456140350877193,
+      "p25_mdl_rate": 0.7924528301886793,
+      "p75_mdl_rate": 0.8725490196078431,
+      "p95_mdl_rate": 0.9743589743589743,
+      "wall_time_s": 0.32582855224609375
+    },
+    "poetry_islami": {
+      "n_verses_total": 10295,
+      "n_verses_valid": 10295,
+      "n_failed": 0,
+      "completion_rate": 1.0,
+      "median_mdl_rate": 0.84375,
+      "p05_mdl_rate": 0.7666666666666667,
+      "p25_mdl_rate": 0.8125,
+      "p75_mdl_rate": 0.8783783783783784,
+      "p95_mdl_rate": 0.9583333333333334,
+      "wall_time_s": 1.3369498252868652
+    },
+    "poetry_abbasi": {
+      "n_verses_total": 76499,
+      "n_verses_valid": 76499,
+      "n_failed": 0,
+      "completion_rate": 1.0,
+      "median_mdl_rate": 0.8947368421052632,
+      "p05_mdl_rate": 0.7818181818181819,
+      "p25_mdl_rate": 0.8431372549019608,
+      "p75_mdl_rate": 0.9487179487179487,
+      "p95_mdl_rate": 1.0344827586206897,
+      "wall_time_s": 9.50864028930664
+    },
+    "ksucca": {
+      "n_verses_total": 1967,
+      "n_verses_valid": 1967,
+      "n_failed": 0,
+      "completion_rate": 1.0,
+      "median_mdl_rate": 0.5198776758409785,
+      "p05_mdl_rate": 0.2986199496614789,
+      "p25_mdl_rate": 0.40400712652487475,
+      "p75_mdl_rate": 0.8256648374841705,
+      "p95_mdl_rate": 1.36,
+      "wall_time_s": 0.7776820659637451
+    },
+    "arabic_bible": {
+      "n_verses_total": 31083,
+      "n_verses_valid": 31083,
+      "n_failed": 0,
+      "completion_rate": 1.0,
+      "median_mdl_rate": 0.753731343283582,
+      "p05_mdl_rate": 0.5652173913043478,
+      "p25_mdl_rate": 0.6686931776184493,
+      "p75_mdl_rate": 0.8555555555555555,
+      "p95_mdl_rate": 1.0144927536231885,
+      "wall_time_s": 4.616604804992676
+    },
+    "hindawi": {
+      "n_verses_total": 1793,
+      "n_verses_valid": 1793,
+      "n_failed": 0,
+      "completion_rate": 1.0,
+      "median_mdl_rate": 0.782608695652174,
+      "p05_mdl_rate": 0.7218543046357616,
+      "p25_mdl_rate": 0.7569444444444444,
+      "p75_mdl_rate": 0.8613861386138614,
+      "p95_mdl_rate": 1.4285714285714286,
+      "wall_time_s": 0.24477624893188477
+    }
+  },
+  "ranking": [
+    {
+      "rank": 1,
+      "corpus": "ksucca",
+      "median_mdl_rate": 0.5198776758409785
+    },
+    {
+      "rank": 2,
+      "corpus": "arabic_bible",
+      "median_mdl_rate": 0.753731343283582
+    },
+    {
+      "rank": 3,
+      "corpus": "hindawi",
+      "median_mdl_rate": 0.782608695652174
+    },
+    {
+      "rank": 4,
+      "corpus": "quran",
+      "median_mdl_rate": 0.82
+    },
+    {
+      "rank": 5,
+      "corpus": "poetry_jahili",
+      "median_mdl_rate": 0.8297872340425532
+    },
+    {
+      "rank": 6,
+      "corpus": "poetry_islami",
+      "median_mdl_rate": 0.84375
+    },
+    {
+      "rank": 7,
+      "corpus": "poetry_abbasi",
+      "median_mdl_rate": 0.8947368421052632
+    }
+  ],
+  "headline": {
+    "quran_rank": 4,
+    "quran_median_mdl_rate": 0.82,
+    "next_corpus": "ksucca",
+    "next_median_mdl_rate": 0.5198776758409785,
+    "margin_pct": -36.600283434027006
+  },
+  "audit_failures": [],
+  "wall_time_s": 18.1811580657959
+}

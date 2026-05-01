@@ -1,0 +1,73 @@
+{
+  "files": {
+    "quran_bare": {
+      "path": "data\\corpora\\ar\\quran_bare.txt",
+      "exists": true,
+      "size": 781176,
+      "sha256": "228df2a717671aeb9d2ff573002bd28d6b3f973f4bc7153554e3a81663d67610"
+    },
+    "quran_vocal": {
+      "path": "data\\corpora\\ar\\quran_vocal.txt",
+      "exists": true,
+      "size": 1409328,
+      "sha256": "552b674213e20d95cc34c5e7a34317b04ca051d357ac5760a9060e9ec3a4fa1f"
+    },
+    "tashkeela": {
+      "path": "data\\corpora\\ar\\tashkeela.txt",
+      "exists": true,
+      "size": 2546267,
+      "sha256": "f12d7151c17335b871cf40720b7620be8a24a8605f53ee9dfa8c87568f073413"
+    },
+    "arabic_bible": {
+      "path": "data\\corpora\\ar\\arabic_bible.xlsx",
+      "exists": true,
+      "size": 1999406,
+      "sha256": "5b57b622ca84920b73bf77611ce53df0172f9825defc3887e23959d56d5f2156"
+    },
+    "hadith_bukhari": {
+      "path": "data\\corpora\\ar\\hadith.json",
+      "exists": true,
+      "size": 16244012,
+      "sha256": "04ef41c228b414c49b906a253bd888137f14aa5ca7a8c97a61189248e27ca340"
+    },
+    "hindawi": {
+      "path": "data\\corpora\\ar\\hindawi.txt",
+      "exists": true,
+      "size": 414837,
+      "sha256": "2b7fbfe9b4be32dfcff65e50dd9e1eb0abe032512cc72b40a1b18d4ba854f751"
+    },
+    "ksucca": {
+      "path": "data\\corpora\\ar\\ksucca.txt",
+      "exists": true,
+      "size": 1260611,
+      "sha256": "b7c92a8bf15bb3bb4f97a3de2ae0f4f1b736ffa28ce073a0e721746de54ed858"
+    },
+    "poetry_raw_csv": {
+      "path": "data\\corpora\\ar\\poetry_raw.csv",
+      "exists": true,
+      "size": 20078635,
+      "sha256": "0bb5d746934bf09777f3d80232e78eb8269f1927c77e2af8f3c1610eef6e0253"
+    },
+    "hebrew_tanakh_wlc": {
+      "path": "data\\corpora\\he\\tanakh_wlc.txt",
+      "exists": true,
+      "size": 5764202,
+      "sha256": "f317b359f562fa919b983865faceac8be52252f77c011a8549588150135d8d99"
+    },
+    "iliad_perseus": {
+      "path": "data\\corpora\\el\\iliad_perseus.xml",
+      "exists": true,
+      "size": 2060388,
+      "sha256": "e148b39a615a0fba193ee693a974a082004ee2701373d74569539c4617c56f52"
+    },
+    "greek_nt_opengnt": {
+      "path": "data\\corpora\\el\\opengnt_v3_3.csv",
+      "exists": true,
+      "size": 46440555,
+      "sha256": "d2853da46d1f3942c5155a7017b4f8c90906c7ba34c2373f5f4e1e39d7fea721"
+    }
+  },
+  "timestamp": "2026-04-27T21:48:20.686601",
+  "combined": "d8b235959bc9876ffdab461ae67edb711546146eeb4902f3f193bc0661a12570",
+  "derived_rhyme_letters": "\u0646\u0627\u0645\u0631\u0649\u062f\u0628\u0629\u0644"
+}

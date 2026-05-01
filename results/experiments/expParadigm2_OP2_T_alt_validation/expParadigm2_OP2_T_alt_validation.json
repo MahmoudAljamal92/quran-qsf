@@ -1,0 +1,53 @@
+{
+  "experiment": "expParadigm2_OP2_T_alt_validation",
+  "task_id": "Paradigm-Stage 2 — P2_OP2 follow-up: T_alt Φ_M validation",
+  "title": "Does replacing the canonical T = H_cond(primary_root) − H(end_letter) with T_alt = H_cond(first_letter_of_last_word) − H(end_letter) PRODUCE a stronger Hotelling T² on the 5-D feature matrix?",
+  "band_A_range": [
+    15,
+    100
+  ],
+  "n_quran_band_A": 68,
+  "n_ctrl_band_A": 2509,
+  "n_quran_dropped_t_alt_nan": 0,
+  "n_ctrl_dropped_t_alt_nan": 0,
+  "T_alt_pct_pos_quran": 0.5147058823529411,
+  "T_alt_pct_pos_ctrl_pooled": 0.0,
+  "T_canon_pct_pos_quran": 0.39705882352941174,
+  "cohen_d_single_feature": {
+    "T_canonical": 3.9987041346486687,
+    "T_alt": 5.278890339974237
+  },
+  "hotelling_T2_canonical": {
+    "T2": 3557.3394545046353,
+    "F": 710.3626980606927,
+    "df1": 5,
+    "df2": 2571,
+    "n_eff": 66.20566550252231,
+    "n_quran": 68,
+    "n_ctrl": 2509,
+    "cohen_d_pooled_mahalanobis": 7.330187384747123
+  },
+  "hotelling_T2_alt": {
+    "T2": 3867.7881019895403,
+    "F": 772.3559774924356,
+    "df1": 5,
+    "df2": 2571,
+    "n_eff": 66.20566550252231,
+    "n_quran": 68,
+    "n_ctrl": 2509,
+    "cohen_d_pooled_mahalanobis": 7.643350207767731
+  },
+  "T2_ratio_alt_over_canon": 1.0872698969146128,
+  "alignment_check": {
+    "max_abs_delta_first4_cols_Q": 0.0,
+    "max_abs_delta_first4_cols_C": 0.0,
+    "clean_alignment": true
+  },
+  "verdict": "T_ALT_REFINES_PHI_M_POSITIVELY",
+  "interpretation": [
+    "If T²_alt > T²_canonical by > 5 %, the P2_OP2 refinement REFINES the project's Φ_M headline: replacing T (CamelTools-root-based) with T_alt (CamelTools-free surface-token-based) produces a stronger multivariate separation.",
+    "The single-feature Cohen d comparison helps interpret: d_T_alt > d_T_canonical means T_alt carries MORE marginal discrimination, which usually translates to higher T² in the multivariate matrix (unless there's strong redundancy with the other 4 features).",
+    "A positive verdict here would make T_alt a publishable replacement for the canonical T, validated at the same 5-D Hotelling level that Φ_M = 3557.34 was originally established at."
+  ],
+  "runtime_seconds": 1.92
+}

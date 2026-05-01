@@ -1,0 +1,149 @@
+{
+  "experiment": "exp73_prime_structure",
+  "hypothesis": "H13 — Is there a non-random prime-number structure in the Quran's surah/verse counts?",
+  "schema_version": 1,
+  "per_corpus": {
+    "quran": {
+      "n_units": 114,
+      "n_prime": 32,
+      "frac_prime": 0.2807,
+      "expected_frac": 0.2133,
+      "max_verse_count": 286,
+      "prime_positions": [
+        1,
+        10,
+        13,
+        26,
+        33,
+        36,
+        42,
+        43,
+        44,
+        45,
+        48,
+        57,
+        60,
+        62,
+        63,
+        76,
+        81,
+        82,
+        86,
+        87
+      ],
+      "sum_prime_verse_counts": 1076,
+      "sum_prime_positions": 2239,
+      "runs_test": {
+        "runs": 44,
+        "z": -0.7086,
+        "p": 0.47858354569021344
+      },
+      "verse_counts_sample": [
+        7,
+        286,
+        200,
+        176,
+        120,
+        165,
+        206,
+        75,
+        129,
+        109,
+        123,
+        111,
+        43,
+        52,
+        99,
+        128,
+        111,
+        110,
+        98,
+        135
+      ]
+    },
+    "arabic_bible": {
+      "n_units": 1183,
+      "n_prime": 329,
+      "frac_prime": 0.2781,
+      "expected_frac": 0.2273,
+      "max_verse_count": 176,
+      "prime_positions": [
+        4,
+        11,
+        14,
+        15,
+        16,
+        18,
+        19,
+        22,
+        24,
+        25,
+        30,
+        32,
+        38,
+        39,
+        40,
+        44,
+        46,
+        48,
+        49,
+        55
+      ],
+      "sum_prime_verse_counts": 8097,
+      "sum_prime_positions": 205675,
+      "runs_test": {
+        "runs": 444,
+        "z": -2.319,
+        "p": 0.020395941100433745
+      },
+      "verse_counts_sample": [
+        54,
+        55,
+        24,
+        43,
+        26,
+        81,
+        40,
+        40,
+        44,
+        14,
+        47,
+        40,
+        14,
+        17,
+        29,
+        43,
+        27,
+        17,
+        19,
+        8
+      ]
+    }
+  },
+  "permutation_test": {
+    "n_perm": 10000,
+    "observed_n_prime": 32,
+    "perm_mean": 32.0,
+    "perm_std": 0.0,
+    "p_value": 1.0
+  },
+  "number_checks": {
+    "n_surahs_114": {
+      "prime": false,
+      "factorization": "2×3×19"
+    },
+    "n_verses_6236": {
+      "prime": false,
+      "factorization": "4×1559"
+    },
+    "1559_prime": true
+  },
+  "verdict": {
+    "verdict": "NULL",
+    "prereg": {
+      "SIGNIFICANT": "runs p < 0.01 OR perm p < 0.01",
+      "NULL": "no significant pattern"
+    }
+  },
+  "runtime_seconds": 2.9
+}

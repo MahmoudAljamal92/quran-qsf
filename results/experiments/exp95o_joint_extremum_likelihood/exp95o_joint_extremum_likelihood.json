@@ -1,0 +1,261 @@
+{
+  "experiment": "exp95o_joint_extremum_likelihood",
+  "schema_version": "1.0",
+  "hypothesis": "H48",
+  "verdict": "FAIL_audit_el_rate_quran_drift",
+  "prereg_hash_expected": "31eaf358d10a500405348a65e29dc52245003e923d29426628a878e591fbc660",
+  "prereg_hash_actual": "31eaf358d10a500405348a65e29dc52245003e923d29426628a878e591fbc660",
+  "frozen_constants": {
+    "N_PERM": 100000,
+    "RNG_SEED": 95000,
+    "MIN_VERSES_PER_UNIT": 2,
+    "MIN_UNITS_PER_CORPUS": 5,
+    "ARABIC_POOL": [
+      "quran",
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "PANEL": [
+      "el_rate",
+      "vl_cv",
+      "cn_rate",
+      "h_cond_roots",
+      "h_el",
+      "H_2",
+      "H_3",
+      "Gini",
+      "gzip_ratio",
+      "log10_nb"
+    ],
+    "EL_RATE_QURAN_LOCKED": 0.7271,
+    "EL_RATE_TOL": 0.02,
+    "P_MAX_QURAN_LOCKED": 0.501,
+    "P_MAX_TOL": 0.02
+  },
+  "audit": {
+    "non_finite_features": [],
+    "el_rate_quran_actual": 0.7062633038455213,
+    "el_rate_quran_drift": 0.020836696154478695,
+    "el_rate_quran_pass": false,
+    "p_max_quran_actual": 0.50096215522771,
+    "p_max_quran_drift": 3.78447722899633e-05,
+    "p_max_quran_pass": true
+  },
+  "corpus_sizes": {
+    "quran": 114,
+    "poetry_jahili": 133,
+    "poetry_islami": 465,
+    "poetry_abbasi": 2823,
+    "ksucca": 41,
+    "arabic_bible": 1183,
+    "hindawi": 74
+  },
+  "M_matrix": {
+    "quran": {
+      "el_rate": 0.7062633038455213,
+      "vl_cv": 0.4646185566096261,
+      "cn_rate": 0.08711735551761604,
+      "h_cond_roots": 0.8632501781636921,
+      "h_el": 1.1557252575998562,
+      "H_2": 7.109348127963872,
+      "H_3": 8.887501593259326,
+      "Gini": 0.5415536836547626,
+      "gzip_ratio": 0.3905576457222086,
+      "log10_nb": 2.4044181734922145
+    },
+    "poetry_jahili": {
+      "el_rate": 0.0996912825688848,
+      "vl_cv": 0.13854386391344586,
+      "cn_rate": 0.02686759416890009,
+      "h_cond_roots": 0.48631684556945076,
+      "h_el": 2.7852333039546213,
+      "H_2": 7.0376202879757646,
+      "H_3": 8.210434360309664,
+      "Gini": 0.4972122368964769,
+      "gzip_ratio": 0.4815327950667698,
+      "log10_nb": 2.2638315777364797
+    },
+    "poetry_islami": {
+      "el_rate": 0.10063771006299896,
+      "vl_cv": 0.1343666300766454,
+      "cn_rate": 0.028567414337302872,
+      "h_cond_roots": 0.49028624795581566,
+      "h_el": 2.7319403516755987,
+      "H_2": 7.024178682543768,
+      "H_3": 8.222187219591326,
+      "Gini": 0.5012352261703159,
+      "gzip_ratio": 0.4814526126271549,
+      "log10_nb": 2.263540674083257
+    },
+    "poetry_abbasi": {
+      "el_rate": 0.09901059322055392,
+      "vl_cv": 0.13191473699711845,
+      "cn_rate": 0.02472377714150114,
+      "h_cond_roots": 0.4887008926804781,
+      "h_el": 2.7939870800085096,
+      "H_2": 7.045649734965966,
+      "H_3": 8.28912577249017,
+      "Gini": 0.49291848010204037,
+      "gzip_ratio": 0.4788554805689375,
+      "log10_nb": 2.277747404308657
+    },
+    "ksucca": {
+      "el_rate": 0.14428399246426826,
+      "vl_cv": 0.9824907590343452,
+      "cn_rate": 0.011311603251995882,
+      "h_cond_roots": 1.056972542427039,
+      "h_el": 3.06891210394825,
+      "H_2": 7.714784887365424,
+      "H_3": 10.093708121596377,
+      "Gini": 0.5162539770125358,
+      "gzip_ratio": 0.27047491787272104,
+      "log10_nb": 2.675825449669376
+    },
+    "arabic_bible": {
+      "el_rate": 0.13343039470568133,
+      "vl_cv": 0.34651806640957733,
+      "cn_rate": 0.03125068729528151,
+      "h_cond_roots": 0.9442172266051453,
+      "h_el": 3.0667987351590793,
+      "H_2": 7.45509264304822,
+      "H_3": 9.218526749283447,
+      "Gini": 0.5275039185800474,
+      "gzip_ratio": 0.35672172524726037,
+      "log10_nb": 2.4869482070546947
+    },
+    "hindawi": {
+      "el_rate": 0.06525248915822204,
+      "vl_cv": 0.38111284692051395,
+      "cn_rate": 0.014216004461013532,
+      "h_cond_roots": 0.7715174910799834,
+      "h_el": 3.3910686609395206,
+      "H_2": 7.656086627215468,
+      "H_3": 9.39387731196081,
+      "Gini": 0.502036990502479,
+      "gzip_ratio": 0.39936700227327976,
+      "log10_nb": 2.5227079000586192
+    }
+  },
+  "rank_matrix": {
+    "quran": {
+      "el_rate": 1,
+      "vl_cv": 2,
+      "cn_rate": 1,
+      "h_cond_roots": 3,
+      "h_el": 7,
+      "H_2": 4,
+      "H_3": 4,
+      "Gini": 1,
+      "gzip_ratio": 5,
+      "log10_nb": 4
+    },
+    "poetry_jahili": {
+      "el_rate": 5,
+      "vl_cv": 5,
+      "cn_rate": 4,
+      "h_cond_roots": 7,
+      "h_el": 5,
+      "H_2": 6,
+      "H_3": 7,
+      "Gini": 6,
+      "gzip_ratio": 1,
+      "log10_nb": 6
+    },
+    "poetry_islami": {
+      "el_rate": 4,
+      "vl_cv": 6,
+      "cn_rate": 3,
+      "h_cond_roots": 5,
+      "h_el": 6,
+      "H_2": 7,
+      "H_3": 6,
+      "Gini": 5,
+      "gzip_ratio": 2,
+      "log10_nb": 7
+    },
+    "poetry_abbasi": {
+      "el_rate": 6,
+      "vl_cv": 7,
+      "cn_rate": 5,
+      "h_cond_roots": 6,
+      "h_el": 4,
+      "H_2": 5,
+      "H_3": 5,
+      "Gini": 7,
+      "gzip_ratio": 3,
+      "log10_nb": 5
+    },
+    "ksucca": {
+      "el_rate": 2,
+      "vl_cv": 1,
+      "cn_rate": 7,
+      "h_cond_roots": 1,
+      "h_el": 2,
+      "H_2": 1,
+      "H_3": 1,
+      "Gini": 3,
+      "gzip_ratio": 7,
+      "log10_nb": 1
+    },
+    "arabic_bible": {
+      "el_rate": 3,
+      "vl_cv": 4,
+      "cn_rate": 2,
+      "h_cond_roots": 2,
+      "h_el": 3,
+      "H_2": 3,
+      "H_3": 3,
+      "Gini": 2,
+      "gzip_ratio": 6,
+      "log10_nb": 3
+    },
+    "hindawi": {
+      "el_rate": 7,
+      "vl_cv": 3,
+      "cn_rate": 6,
+      "h_cond_roots": 4,
+      "h_el": 1,
+      "H_2": 2,
+      "H_3": 2,
+      "Gini": 4,
+      "gzip_ratio": 4,
+      "log10_nb": 2
+    }
+  },
+  "S_per_corpus": {
+    "quran": 4,
+    "poetry_jahili": 3,
+    "poetry_islami": 2,
+    "poetry_abbasi": 2,
+    "ksucca": 7,
+    "arabic_bible": 0,
+    "hindawi": 2
+  },
+  "S_obs": 4,
+  "quran_top_features": [
+    "el_rate",
+    "cn_rate",
+    "Gini"
+  ],
+  "quran_bottom_features": [
+    "h_el"
+  ],
+  "p_naive_binomial_indep": 0.3127163328918774,
+  "p_perm_correlation_corrected": 1.0,
+  "perm_max_S_distribution": {
+    "4": 374,
+    "5": 5605,
+    "6": 17591,
+    "7": 27969,
+    "8": 28601,
+    "9": 15991,
+    "10": 3869
+  },
+  "wall_time_s": 80.97,
+  "permutation_wall_time_s": 55.37,
+  "ts_utc": "2026-04-27T10:40:42Z"
+}

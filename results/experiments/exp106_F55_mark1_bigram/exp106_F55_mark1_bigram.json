@@ -1,0 +1,157 @@
+{
+  "experiment": "exp106_F55_mark1_bigram",
+  "hypothesis_id": "H61",
+  "hypothesis": "F55 analytic-bound bigram-shift detector (frozen tau = 2.0, no calibration) generalises off-shelf to Greek NT Mark 1 with per-variant recall = 1.000 and per-(canon, peer)-pair FPR = 0.000 against the full Greek NT peer pool of all 259 other chapters.",
+  "verdict": "PASS_universal_perfect_recall_zero_fpr",
+  "verdict_reason": "variant recall = 1.000000 >= 1.0 AND peer FPR = 0.000000 <= 0.0. F55 detector generalises off-shelf to Greek NT Mark 1.",
+  "started_at_utc": "2026-04-28T22:42:47.553559+00:00",
+  "completed_at_utc": "2026-04-28T22:42:50.562559+00:00",
+  "wall_time_s": 3.009000778198242,
+  "prereg_hash": "8397a433112e607c78a010b046725cc2ebcdd00db380fc0673bb58cbee0880e8",
+  "prereg_expected_hash": "8397a433112e607c78a010b046725cc2ebcdd00db380fc0673bb58cbee0880e8",
+  "prereg_document": "experiments/exp106_F55_mark1_bigram/PREREG.md",
+  "amendment_chain": [
+    "exp95j_bigram_shift_universal (F55 PASS_universal_perfect_recall_zero_fpr on Quran V1)",
+    "exp105_F55_psalm78_bigram (F59 PASS_universal_perfect_recall_zero_fpr on Hebrew Psalm 78)",
+    "exp106_F55_mark1_bigram (this run; F55 -> Greek NT Mark 1)"
+  ],
+  "frozen_constants": {
+    "SEED": 42,
+    "TAU_HIGH": 2.0,
+    "AUDIT_TOL": 1e-09,
+    "RECALL_FLOOR": 1.0,
+    "FPR_CEIL": 0.0,
+    "PARTIAL_FPR_BAND_HI": 0.05,
+    "TARGET_BOOK_NUMBER": 41,
+    "TARGET_CHAPTER": 1,
+    "TARGET_MIN_LETTERS": 1000,
+    "TARGET_MIN_VERSES": 10,
+    "PEER_AUDIT_FLOOR": 100,
+    "PEER_POOL_STRATEGY": "all_other_greek_nt_chapters_no_length_matching",
+    "GREEK_LETTERS_24": "αβγδεζηθικλμνξοπρστυφχψω",
+    "calibration_source": "frozen_analytic_theorem_no_data_calibration"
+  },
+  "audit_report": {
+    "ok": true,
+    "checks": {
+      "normaliser_sentinel": "OK",
+      "n_chapters_total": 260,
+      "target_book_number": 41,
+      "target_chapter": 1,
+      "target_n_verses": 45,
+      "target_n_letters": 3530,
+      "peer_pool_size": 259,
+      "peer_pool_strategy": "all_other_greek_nt_chapters_no_length_matching",
+      "max_variant_delta": 2.0,
+      "n_variants_total": 81190,
+      "n_variants_fired": 81190,
+      "n_variants_zero_delta": 0,
+      "n_variants_above_tau": 0,
+      "variant_recall": 1.0,
+      "min_peer_delta": 535.5,
+      "n_peer_pairs_total": 259,
+      "n_peer_pairs_fired": 0,
+      "peer_fpr": 0.0,
+      "five_closest_peers": [
+        {
+          "book": 41,
+          "chapter": 5,
+          "delta": 535.5
+        },
+        {
+          "book": 42,
+          "chapter": 4,
+          "delta": 563.5
+        },
+        {
+          "book": 40,
+          "chapter": 8,
+          "delta": 602.5
+        },
+        {
+          "book": 42,
+          "chapter": 5,
+          "delta": 619.0
+        },
+        {
+          "book": 41,
+          "chapter": 8,
+          "delta": 643.5
+        }
+      ],
+      "sentinel_determinism": "OK"
+    },
+    "warnings": [],
+    "errors": []
+  },
+  "pre_stage_diagnostic_receipt": "results/auxiliary/_mark1_bigram_sizing.json",
+  "mark_1": {
+    "book": 41,
+    "chapter": 1,
+    "n_verses": 45,
+    "n_letters": 3530
+  },
+  "peers_n": 259,
+  "peer_records_top10_closest": [
+    {
+      "book": 41,
+      "chapter": 5,
+      "n_letters": 3395,
+      "delta": 535.5
+    },
+    {
+      "book": 42,
+      "chapter": 4,
+      "n_letters": 3725,
+      "delta": 563.5
+    },
+    {
+      "book": 40,
+      "chapter": 8,
+      "n_letters": 2893,
+      "delta": 602.5
+    },
+    {
+      "book": 42,
+      "chapter": 5,
+      "n_letters": 3694,
+      "delta": 619.0
+    },
+    {
+      "book": 41,
+      "chapter": 8,
+      "n_letters": 3191,
+      "delta": 643.5
+    },
+    {
+      "book": 42,
+      "chapter": 19,
+      "n_letters": 3612,
+      "delta": 646.0
+    },
+    {
+      "book": 40,
+      "chapter": 9,
+      "n_letters": 3221,
+      "delta": 653.5
+    },
+    {
+      "book": 41,
+      "chapter": 15,
+      "n_letters": 3424,
+      "delta": 668.0
+    },
+    {
+      "book": 41,
+      "chapter": 3,
+      "n_letters": 2737,
+      "delta": 673.5
+    },
+    {
+      "book": 42,
+      "chapter": 13,
+      "n_letters": 3235,
+      "delta": 673.5
+    }
+  ]
+}

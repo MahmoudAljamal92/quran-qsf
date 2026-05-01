@@ -1,0 +1,56 @@
+{
+  "experiment": "expP9_v79_batch_diagnostics",
+  "schema_version": 1,
+  "prereg_document": "experiments/expP9_v79_batch_diagnostics/PREREG.md",
+  "prereg_hash": "b7978038e65ee5718141f9440a4b53d0dddf60e4e972e260e4be45c43ebecc0f",
+  "frozen_constants": {
+    "seed": 42,
+    "min_verses": 2,
+    "n_boot_auc": 500,
+    "n_boot_renyi2": 10000,
+    "n_sim_bag": 5000,
+    "corruption_levels": [
+      0.01,
+      0.05,
+      0.1,
+      0.2,
+      0.5
+    ],
+    "el_boundary": 0.314,
+    "arabic_ctrl": [
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "non_arabic": [
+      "hebrew_tanakh",
+      "greek_nt",
+      "iliad_greek",
+      "pali_dn",
+      "pali_mn",
+      "rigveda",
+      "avestan_yasna"
+    ],
+    "band_a": [
+      15,
+      100
+    ]
+  },
+  "summary": {
+    "N1_verdict": "PASS_quran_specific_cross_script",
+    "N1_min_auc_arabic": 0.9751818570817288,
+    "N1_min_auc_nonarabic": 0.9780701754385965,
+    "N4_n_above": 107,
+    "N4_n_below": 7,
+    "N6_pct_lock_on": 43.859649122807014,
+    "N6_verdict": "FAIL_consistent_with_pool_iid",
+    "N8_f_max_at_AUC_95": 0.5,
+    "N9_brown_log10_p": -4.483751254911444,
+    "NEW2_quran_arabic_rank_by_p_max": 1,
+    "C1plus_v2_verdict": "PASS_at_half"
+  },
+  "runtime_seconds": 52.85
+}

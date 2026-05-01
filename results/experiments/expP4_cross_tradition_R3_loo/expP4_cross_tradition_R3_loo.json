@@ -1,0 +1,261 @@
+{
+  "experiment": "expP4_cross_tradition_R3_loo",
+  "parent_experiment": "expP4_cross_tradition_R3",
+  "parent_json_sha256": "301f548eba93f6f8594af1204c7a931748aac3496e7d90a2b0b72a1c3ebb991c",
+  "schema_version": 1,
+  "method": "deterministic recomputation of LC2 pre-registered gates and BH-adjustment after removing each corpus in turn from the parent's per_corpus dict; per-corpus z-scores are independent so no re-permutation is needed.",
+  "thresholds": {
+    "z_pass": -2.0,
+    "alpha_BH": 0.05,
+    "min_new_oral_passes": 2
+  },
+  "full_set_sanity": {
+    "full_verdict": "SUPPORT",
+    "parent_verdict": "SUPPORT",
+    "match": "OK"
+  },
+  "leave_one_out": {
+    "quran": {
+      "n_corpora": 7,
+      "kept_corpora": [
+        "hebrew_tanakh",
+        "greek_nt",
+        "iliad_greek",
+        "pali_dn",
+        "pali_mn",
+        "rigveda",
+        "avestan_yasna"
+      ],
+      "n_new_oral_present": 4,
+      "n_new_oral_pass": 3,
+      "new_oral_passes": [
+        "pali_mn",
+        "rigveda",
+        "avestan_yasna"
+      ],
+      "min_bh_p": 0.00028,
+      "control_present": [
+        "iliad_greek"
+      ],
+      "PRED_LC2_1_two_or_more_new_oral_pass": "PASS",
+      "PRED_LC2_2_BH_min_p_lt_alpha": "PASS",
+      "PRED_LC2_3_negative_control_fails": "PASS",
+      "verdict": "SUPPORT",
+      "dropped": "quran",
+      "dropped_z": -8.919964506138243,
+      "dropped_class": "oral_liturgical"
+    },
+    "hebrew_tanakh": {
+      "n_corpora": 7,
+      "kept_corpora": [
+        "quran",
+        "greek_nt",
+        "iliad_greek",
+        "pali_dn",
+        "pali_mn",
+        "rigveda",
+        "avestan_yasna"
+      ],
+      "n_new_oral_present": 4,
+      "n_new_oral_pass": 3,
+      "new_oral_passes": [
+        "pali_mn",
+        "rigveda",
+        "avestan_yasna"
+      ],
+      "min_bh_p": 0.00028,
+      "control_present": [
+        "iliad_greek"
+      ],
+      "PRED_LC2_1_two_or_more_new_oral_pass": "PASS",
+      "PRED_LC2_2_BH_min_p_lt_alpha": "PASS",
+      "PRED_LC2_3_negative_control_fails": "PASS",
+      "verdict": "SUPPORT",
+      "dropped": "hebrew_tanakh",
+      "dropped_z": -15.285841419236908,
+      "dropped_class": "narrative_or_mixed"
+    },
+    "greek_nt": {
+      "n_corpora": 7,
+      "kept_corpora": [
+        "quran",
+        "hebrew_tanakh",
+        "iliad_greek",
+        "pali_dn",
+        "pali_mn",
+        "rigveda",
+        "avestan_yasna"
+      ],
+      "n_new_oral_present": 4,
+      "n_new_oral_pass": 3,
+      "new_oral_passes": [
+        "pali_mn",
+        "rigveda",
+        "avestan_yasna"
+      ],
+      "min_bh_p": 0.00028,
+      "control_present": [
+        "iliad_greek"
+      ],
+      "PRED_LC2_1_two_or_more_new_oral_pass": "PASS",
+      "PRED_LC2_2_BH_min_p_lt_alpha": "PASS",
+      "PRED_LC2_3_negative_control_fails": "PASS",
+      "verdict": "SUPPORT",
+      "dropped": "greek_nt",
+      "dropped_z": -12.062700485400704,
+      "dropped_class": "narrative_or_mixed"
+    },
+    "iliad_greek": {
+      "n_corpora": 7,
+      "kept_corpora": [
+        "quran",
+        "hebrew_tanakh",
+        "greek_nt",
+        "pali_dn",
+        "pali_mn",
+        "rigveda",
+        "avestan_yasna"
+      ],
+      "n_new_oral_present": 4,
+      "n_new_oral_pass": 3,
+      "new_oral_passes": [
+        "pali_mn",
+        "rigveda",
+        "avestan_yasna"
+      ],
+      "min_bh_p": 0.00023333333333333333,
+      "control_present": [],
+      "PRED_LC2_1_two_or_more_new_oral_pass": "PASS",
+      "PRED_LC2_2_BH_min_p_lt_alpha": "PASS",
+      "PRED_LC2_3_negative_control_fails": "VACUOUS",
+      "verdict": "SUPPORT",
+      "dropped": "iliad_greek",
+      "dropped_z": 0.3359634886972237,
+      "dropped_class": "narrative_or_mixed"
+    },
+    "pali_dn": {
+      "n_corpora": 7,
+      "kept_corpora": [
+        "quran",
+        "hebrew_tanakh",
+        "greek_nt",
+        "iliad_greek",
+        "pali_mn",
+        "rigveda",
+        "avestan_yasna"
+      ],
+      "n_new_oral_present": 3,
+      "n_new_oral_pass": 3,
+      "new_oral_passes": [
+        "pali_mn",
+        "rigveda",
+        "avestan_yasna"
+      ],
+      "min_bh_p": 0.00023333333333333333,
+      "control_present": [
+        "iliad_greek"
+      ],
+      "PRED_LC2_1_two_or_more_new_oral_pass": "PASS",
+      "PRED_LC2_2_BH_min_p_lt_alpha": "PASS",
+      "PRED_LC2_3_negative_control_fails": "PASS",
+      "verdict": "SUPPORT",
+      "dropped": "pali_dn",
+      "dropped_z": -0.26388180017624346,
+      "dropped_class": "oral_liturgical"
+    },
+    "pali_mn": {
+      "n_corpora": 7,
+      "kept_corpora": [
+        "quran",
+        "hebrew_tanakh",
+        "greek_nt",
+        "iliad_greek",
+        "pali_dn",
+        "rigveda",
+        "avestan_yasna"
+      ],
+      "n_new_oral_present": 3,
+      "n_new_oral_pass": 2,
+      "new_oral_passes": [
+        "rigveda",
+        "avestan_yasna"
+      ],
+      "min_bh_p": 0.00028,
+      "control_present": [
+        "iliad_greek"
+      ],
+      "PRED_LC2_1_two_or_more_new_oral_pass": "PASS",
+      "PRED_LC2_2_BH_min_p_lt_alpha": "PASS",
+      "PRED_LC2_3_negative_control_fails": "PASS",
+      "verdict": "SUPPORT",
+      "dropped": "pali_mn",
+      "dropped_z": -3.4649325543092067,
+      "dropped_class": "oral_liturgical"
+    },
+    "rigveda": {
+      "n_corpora": 7,
+      "kept_corpora": [
+        "quran",
+        "hebrew_tanakh",
+        "greek_nt",
+        "iliad_greek",
+        "pali_dn",
+        "pali_mn",
+        "avestan_yasna"
+      ],
+      "n_new_oral_present": 3,
+      "n_new_oral_pass": 2,
+      "new_oral_passes": [
+        "pali_mn",
+        "avestan_yasna"
+      ],
+      "min_bh_p": 0.00028,
+      "control_present": [
+        "iliad_greek"
+      ],
+      "PRED_LC2_1_two_or_more_new_oral_pass": "PASS",
+      "PRED_LC2_2_BH_min_p_lt_alpha": "PASS",
+      "PRED_LC2_3_negative_control_fails": "PASS",
+      "verdict": "SUPPORT",
+      "dropped": "rigveda",
+      "dropped_z": -18.934295084339738,
+      "dropped_class": "oral_liturgical"
+    },
+    "avestan_yasna": {
+      "n_corpora": 7,
+      "kept_corpora": [
+        "quran",
+        "hebrew_tanakh",
+        "greek_nt",
+        "iliad_greek",
+        "pali_dn",
+        "pali_mn",
+        "rigveda"
+      ],
+      "n_new_oral_present": 3,
+      "n_new_oral_pass": 2,
+      "new_oral_passes": [
+        "pali_mn",
+        "rigveda"
+      ],
+      "min_bh_p": 0.00028,
+      "control_present": [
+        "iliad_greek"
+      ],
+      "PRED_LC2_1_two_or_more_new_oral_pass": "PASS",
+      "PRED_LC2_2_BH_min_p_lt_alpha": "PASS",
+      "PRED_LC2_3_negative_control_fails": "PASS",
+      "verdict": "SUPPORT",
+      "dropped": "avestan_yasna",
+      "dropped_z": -3.9801100562503526,
+      "dropped_class": "oral_liturgical"
+    }
+  },
+  "robustness_summary": {
+    "n_drops_tested": 8,
+    "n_still_SUPPORT": 8,
+    "fraction_robust": 1.0,
+    "fragile_drops": [],
+    "interpretation": "The LC2 SUPPORT verdict is robust to 8/8 single-corpus drops. Fragile drops: none."
+  }
+}

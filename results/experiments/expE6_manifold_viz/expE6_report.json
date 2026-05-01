@@ -1,0 +1,87 @@
+{
+  "experiment_id": "expE6_manifold_viz",
+  "task": "E6",
+  "tier": 2,
+  "title": "2-D embeddings of 114x5 Quran feature matrix with Moran's I + silhouette tests",
+  "generated_utc": "2026-04-23T18:11:24+00:00",
+  "seed": 42,
+  "n_shuffles": 1000,
+  "embeddings": [
+    "PCA",
+    "TSNE",
+    "Isomap"
+  ],
+  "note_umap": "UMAP not installed — replaced by Isomap (sklearn) as non-linear embedding",
+  "inputs": {
+    "source": "phase_06_phi_m.pkl state['FEATS']",
+    "features": [
+      "EL",
+      "VL_CV",
+      "CN",
+      "H_cond",
+      "T"
+    ],
+    "n_quran_units": 114,
+    "n_ctrl_units": 4719,
+    "arabic_ctrl_families": [
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "z_score_ref": "Arabic control pool mean/sd (matches §4.36 protocol)"
+  },
+  "medinan_surahs_count": 28,
+  "meccan_surahs_count": 86,
+  "pca_explained_variance_ratio": [
+    0.4975243704657455,
+    0.24576333845048082
+  ],
+  "stats": {
+    "PCA": {
+      "embedding": "PCA",
+      "morans_I": 0.11824388638604968,
+      "morans_I_null_mean": -0.007153421899350927,
+      "morans_I_null_sd": 0.06869970652092591,
+      "morans_I_p": 0.042,
+      "silhouette": 0.008278333574385873,
+      "silhouette_null_mean": -0.0026534568586235895,
+      "silhouette_null_sd": 0.03444057810556974,
+      "silhouette_p": 0.353,
+      "sec": 38.2031409740448
+    },
+    "TSNE": {
+      "embedding": "TSNE",
+      "morans_I": 0.20646363096089654,
+      "morans_I_null_mean": -0.009207752104830437,
+      "morans_I_null_sd": 0.08642540396092142,
+      "morans_I_p": 0.004,
+      "silhouette": 0.03384605795145035,
+      "silhouette_null_mean": -0.0023494218274599916,
+      "silhouette_null_sd": 0.0216811719812675,
+      "silhouette_p": 0.057,
+      "sec": 41.67309641838074
+    },
+    "ISO": {
+      "embedding": "ISO",
+      "morans_I": 0.1342030019569037,
+      "morans_I_null_mean": -0.006779536919798834,
+      "morans_I_null_sd": 0.07153054178661115,
+      "morans_I_p": 0.031,
+      "silhouette": 0.004292592489081376,
+      "silhouette_null_mean": -0.0012108076427621687,
+      "silhouette_null_sd": 0.02973818881428177,
+      "silhouette_p": 0.389,
+      "sec": 40.314181327819824
+    }
+  },
+  "verdict": "PARTIAL_STRUCTURE",
+  "pre_registered_criteria": {
+    "null": "Moran's I and silhouette inside 95% CI of 1000 label shuffles",
+    "POSITIVE_STRUCTURE": "Moran's I p<0.05 AND silhouette p<0.05 on >=2 of 3 embeddings",
+    "PARTIAL_STRUCTURE": "Either metric sig on >=2 embeddings",
+    "WEAK_STRUCTURE": "Any metric sig on >=1 embedding"
+  }
+}

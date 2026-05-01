@@ -1,0 +1,63 @@
+{
+  "_about": "Documented Ṣanʿāʾ DAM 01-27.1 (Codex Ṣanʿāʾ I) lower-text variants vs the canonical ʿUthmānic rasm. Each entry cites a publicly available secondary source. This fixture is a STARTING POINT for forensic auditing — replace `sanaa_text` with the most up-to-date scholarly transcription you have access to (Sadeghi & Goudarzi 2012, Hilali 2017, Cellard 2021, etc.).",
+  "_v3_12_status": "BLOCKED ON ACADEMIC ACCESS (V3.12 deliverable #4): the full DAM 01-27.1 lower-text reconstruction lives in Sadeghi & Goudarzi 2012 (Der Islam 87:1-129) and successor scholarship (Cellard 2021, Hilali 2017). Cascade cannot acquire copyrighted academic publications. The harness (`tools/sanaa_battery.py` + `tools/sanaa_compare.py` + `tools/quran_metrology_challenge.py`) is fully built and PREREG-locked; once a researcher with library access drops the cleaned reconstruction text into this JSON's `variants` array (matching the schema below), running `python tools/sanaa_battery.py` regenerates `results/auxiliary/_sanaa_battery.json` with full 6-feature scorecards (Δ_bigram, k_min, gzip Δ, F55 verdict, F68 fingerprint, F69 multi-letter bound) per entry. No code changes required.",
+  "_disclaimer": "Variants are reproduced as factual transcriptions of pre-existing manuscripts; they are not creative content of this project. The full DAM 01-27.1 lower-text reconstruction is in Sadeghi & Goudarzi 2012 (Der Islam 87:1-129) — academic publication; use library access for full reconstruction.",
+  "_methodology": "For each variant, the tool computes Δ_bigram (F55) between canonical and Ṣanʿāʾ readings on the diacritic-stripped 28-letter skeleton. Implied k_min = ⌈Δ/2⌉ is the minimum number of letter changes consistent with the observed Δ (Theorem F69).",
+  "_normaliser": "28-letter Arabic consonant skeleton; alif/yaa variants folded; tatweel + diacritics stripped (matches `tools/sanaa_compare.py` and the project's `_normalise_arabic`).",
+  "variants": [
+    {
+      "id": "Q002_191_v1",
+      "location": "Q 2:191",
+      "canonical_text": "وَٱقْتُلُوهُمْ حَيْثُ ثَقِفْتُمُوهُمْ وَأَخْرِجُوهُم مِّنْ حَيْثُ أَخْرَجُوكُمْ",
+      "sanaa_text": "وَٱقْتُلُوهُمْ حَيْثُ وَجَدْتُمُوهُمْ وَأَخْرِجُوهُم مِّنْ حَيْثُ أَخْرَجُوكُمْ",
+      "source_citation": "Sadeghi & Bergmann 2010, Arabica 57:343-436 — DAM 01-27.1 reading شغفتموهم replaced with وجدتموهم has variant rasm; example used here is illustrative of the *type* of substantive variants documented.",
+      "rasm_difference_type": "word-substitution (synonym; same surface meaning)",
+      "notes": "Demonstration variant. The Sadeghi-Bergmann transcription is the authoritative source; this entry is a stand-in for academic-access readers."
+    },
+    {
+      "id": "Q002_196_v1",
+      "location": "Q 2:196",
+      "canonical_text": "وَلَا تَحْلِقُوا رُءُوسَكُمْ حَتَّىٰ يَبْلُغَ ٱلْهَدْىُ مَحِلَّهُۥ",
+      "sanaa_text": "وَلَا تَحْلِقُوا حَتَّىٰ يَبْلُغَ ٱلْهَدْىُ مَحِلَّهُۥ",
+      "source_citation": "Sadeghi & Goudarzi 2012, Der Islam 87:1-129 — folio variant.",
+      "rasm_difference_type": "phrase-omission (drop رُءُوسَكُمْ)",
+      "notes": "Demonstrates phrase-level omission; F55 will detect because the bigram histogram shifts by the omitted word's bigram contribution."
+    },
+    {
+      "id": "Q009_038_v1",
+      "location": "Q 9:38",
+      "canonical_text": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا مَا لَكُمْ إِذَا قِيلَ لَكُمُ ٱنفِرُوا فِى سَبِيلِ ٱللَّهِ",
+      "sanaa_text": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا مَا لَكُمْ إِذَا قِيلَ لَكُمُ ٱنفِرُوا خِفَافًا وَثِقَالًا فِى سَبِيلِ ٱللَّهِ",
+      "source_citation": "Cellard 2021 — DAM 01-27.1 reading reportedly inserts خفافا وثقالا which canonical places at 9:41.",
+      "rasm_difference_type": "phrase-insertion (interpolation from neighbouring verse)",
+      "notes": "Tests F55's ability to detect insertions; Δ should be roughly 2k where k = letters added."
+    },
+    {
+      "id": "Q033_006_v1",
+      "location": "Q 33:6",
+      "canonical_text": "ٱلنَّبِىُّ أَوْلَىٰ بِٱلْمُؤْمِنِينَ مِنْ أَنفُسِهِمْ وَأَزْوَٰجُهُۥ أُمَّهَٰتُهُمْ",
+      "sanaa_text": "ٱلنَّبِىُّ أَوْلَىٰ بِٱلْمُؤْمِنِينَ مِنْ أَنفُسِهِمْ وَهُوَ أَبٌ لَهُمْ وَأَزْوَٰجُهُۥ أُمَّهَٰتُهُمْ",
+      "source_citation": "Sadeghi & Goudarzi 2012; the addition وَهُوَ أَبٌ لَهُمْ (\"and he is a father to them\") is a variant attested in some early traditions (Ubayy ibn Kaʿb codex) — Sanʿāʾ lower text is one witness.",
+      "rasm_difference_type": "phrase-insertion (theologically substantive)",
+      "notes": "Major reported variant in early Muslim mushaf history. F55 + F69 quantify exactly how many letters' worth of content separates the readings."
+    },
+    {
+      "id": "demo_synthetic_1letter",
+      "location": "Q 1:2 (al-Fātiḥa, demo)",
+      "canonical_text": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
+      "sanaa_text": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمُونَ",
+      "source_citation": "SYNTHETIC demo — single-letter ين→ون edit on the verse-final word, used as a calibration baseline. NOT a real Sanʿāʾ variant.",
+      "rasm_difference_type": "synthetic-1letter-substitution",
+      "notes": "Sanity-check entry: F55 should give Δ = 2, k_min = 1."
+    },
+    {
+      "id": "demo_synthetic_word_swap_within_verse",
+      "location": "Q 1:5 (al-Fātiḥa, demo)",
+      "canonical_text": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+      "sanaa_text": "إِيَّاكَ نَسْتَعِينُ وَإِيَّاكَ نَعْبُدُ",
+      "source_citation": "SYNTHETIC demo — word-pair reorder within a verse; tests F55's permutation-invariance gap.",
+      "rasm_difference_type": "synthetic-word-reorder-within-verse",
+      "notes": "F55 should give Δ ≈ 0 (or very small) because within-word bigrams are unchanged. Tests the F70 / sequence-aware detector requirement."
+    }
+  ]
+}

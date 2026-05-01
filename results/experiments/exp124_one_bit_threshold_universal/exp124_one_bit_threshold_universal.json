@@ -1,0 +1,118 @@
+{
+  "experiment": "exp124_one_bit_threshold_universal",
+  "hypothesis_id": "H78",
+  "hypothesis": "The Quran is the unique literary corpus in the locked 11-pool with verse-final-letter Shannon entropy H_EL < 1 bit.",
+  "verdict": "PASS_one_bit_categorical_universal",
+  "verdict_reason": "Quran (H_EL=0.9685) is the unique 11-pool corpus with H_EL<1 bit; runner-up=pali at H_EL=2.0899 (gap=1.1214 bits >= 0.3).",
+  "prereg_hash": "c8e44e0a2748c15cfd632731aa7f2d2ffd1b9ce418fe0ef9997c299ba039016c",
+  "input_sizing_sha256": "0f8dcf0f69106020fac6c596716b4729d78fdece828ebb83aba3aa2b0a79fc22",
+  "frozen_constants": {
+    "EXPECTED_CORPORA": [
+      "quran",
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "hindawi",
+      "ksucca",
+      "arabic_bible",
+      "hebrew_tanakh",
+      "greek_nt",
+      "pali",
+      "avestan_yasna"
+    ],
+    "ONE_BIT_THRESHOLD": 1.0,
+    "GAP_THRESHOLD_FOR_CATEGORICAL": 0.3
+  },
+  "results": {
+    "H_EL_per_corpus": {
+      "quran": 0.9685208240372034,
+      "poetry_jahili": 2.779539763336115,
+      "poetry_islami": 2.688721875540867,
+      "poetry_abbasi": 2.7516291673878226,
+      "hindawi": 3.478902741597457,
+      "ksucca": 2.907891879501107,
+      "arabic_bible": 2.918295834054489,
+      "hebrew_tanakh": 3.053090083530327,
+      "greek_nt": 2.433671200186647,
+      "pali": 2.089938976016876,
+      "avestan_yasna": 2.1180782093497093
+    },
+    "H_EL_sorted_ascending": [
+      {
+        "corpus": "quran",
+        "H_EL": 0.9685208240372034,
+        "below_one_bit": true
+      },
+      {
+        "corpus": "pali",
+        "H_EL": 2.089938976016876,
+        "below_one_bit": false
+      },
+      {
+        "corpus": "avestan_yasna",
+        "H_EL": 2.1180782093497093,
+        "below_one_bit": false
+      },
+      {
+        "corpus": "greek_nt",
+        "H_EL": 2.433671200186647,
+        "below_one_bit": false
+      },
+      {
+        "corpus": "poetry_islami",
+        "H_EL": 2.688721875540867,
+        "below_one_bit": false
+      },
+      {
+        "corpus": "poetry_abbasi",
+        "H_EL": 2.7516291673878226,
+        "below_one_bit": false
+      },
+      {
+        "corpus": "poetry_jahili",
+        "H_EL": 2.779539763336115,
+        "below_one_bit": false
+      },
+      {
+        "corpus": "ksucca",
+        "H_EL": 2.907891879501107,
+        "below_one_bit": false
+      },
+      {
+        "corpus": "arabic_bible",
+        "H_EL": 2.918295834054489,
+        "below_one_bit": false
+      },
+      {
+        "corpus": "hebrew_tanakh",
+        "H_EL": 3.053090083530327,
+        "below_one_bit": false
+      },
+      {
+        "corpus": "hindawi",
+        "H_EL": 3.478902741597457,
+        "below_one_bit": false
+      }
+    ],
+    "quran_H_EL": 0.9685208240372034,
+    "n_below_one_bit": 1,
+    "below_one_bit_corpora": [
+      "quran"
+    ],
+    "quran_is_unique_below_one_bit": true,
+    "quran_is_minimum": true,
+    "runner_up_corpus": "pali",
+    "runner_up_H_EL": 2.089938976016876,
+    "gap_to_runner_up_bits": 1.1214181519796724
+  },
+  "audit_report": {
+    "ok": true,
+    "checks": {
+      "A1_input_sha256_match": true,
+      "A2_h_el_only_used": true,
+      "A3_corpora_match": true,
+      "A4_deterministic": true
+    }
+  },
+  "wall_time_s": 0.000978
+}

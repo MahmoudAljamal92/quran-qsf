@@ -1,0 +1,31 @@
+{
+  "experiment": "exp92_genai_adversarial_forge",
+  "schema_version": 1,
+  "mode": "SCAFFOLD_ONLY",
+  "execution_deferred_reason": "LLM API credentials not available in this session. Pre-registered spec frozen in PREREG.md; execution requires replacing _call_llm() with real API calls and supplying credentials.",
+  "prereg_document": "experiments/exp92_genai_adversarial_forge/PREREG.md",
+  "prereg_constants": {
+    "w_T": 0.5329,
+    "w_EL": 4.179,
+    "b": -1.5221,
+    "attack_budget_per_model": 10000,
+    "near_miss_margin": 0.1,
+    "oov_cutoff": 0.95,
+    "prompt_variants": [
+      "V1_direct",
+      "V2_informed",
+      "V3_coached",
+      "V4_iterative"
+    ],
+    "models_target": [
+      "gpt-4o",
+      "claude-3.5-sonnet",
+      "claude-3-opus",
+      "gemini-1.5-pro",
+      "llama-3.1-405b-instruct"
+    ]
+  },
+  "total_attempts_budget": 200000,
+  "verdict": "NOT_EXECUTED",
+  "runtime_seconds": 0.0
+}

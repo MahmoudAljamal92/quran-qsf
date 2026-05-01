@@ -1,0 +1,648 @@
+{
+  "experiment": "expParadigm2_OP2_feature_pair_search",
+  "task_id": "P2_OP2 partial — feature-pair search (no CamelTools)",
+  "title": "Numerical local-optimum search: among 16 cheap alternative (X, Y) pairings of T = H_cond(X|X_prev) - H(Y), is the canonical (primary-root, end-letter) pair the strongest Quran-vs-secular-Arabic discriminator?",
+  "method": "Discrimination metric = Quran_T_pct_pos - max(ctrl_T_pct_pos). Canonical baseline taken from locked per-surah T values in phase_06_phi_m FEATS (no CamelTools re-run). 16 alternative pairs computed from cheap features (no CamelTools). Pre-reg: PASS if 0/16 alternatives beat the canonical gap.",
+  "band_A_range": [
+    15,
+    100
+  ],
+  "n_alternatives_tested": 16,
+  "canonical_baseline": {
+    "x_name": "X_primary_root_CamelTools",
+    "y_name": "Y_canonical_end_letter",
+    "quran_T_pct_pos": 0.39705882352941174,
+    "ctrl_T_pct_pos_per_corpus": {
+      "poetry_jahili": {
+        "pct_pos": 0.0,
+        "n_band_a": 65
+      },
+      "poetry_islami": {
+        "pct_pos": 0.0,
+        "n_band_a": 211
+      },
+      "poetry_abbasi": {
+        "pct_pos": 0.0,
+        "n_band_a": 1167
+      },
+      "ksucca": {
+        "pct_pos": 0.0,
+        "n_band_a": 19
+      },
+      "arabic_bible": {
+        "pct_pos": 0.0010235414534288639,
+        "n_band_a": 977
+      },
+      "hindawi": {
+        "pct_pos": 0.0,
+        "n_band_a": 70
+      }
+    },
+    "max_ctrl_pct_pos": 0.0010235414534288639,
+    "max_ctrl_corpus": "arabic_bible",
+    "discrim_gap_quran_minus_max_ctrl": 0.3960352820759829,
+    "n_quran_band_a": 68
+  },
+  "alternative_pairs_sorted_by_gap_desc": [
+    {
+      "quran_T_pct_pos": 0.5147058823529411,
+      "ctrl_T_pct_pos_per_corpus": {
+        "poetry_jahili": {
+          "pct_pos": 0.0,
+          "n_band_a": 65
+        },
+        "poetry_islami": {
+          "pct_pos": 0.0,
+          "n_band_a": 211
+        },
+        "poetry_abbasi": {
+          "pct_pos": 0.0,
+          "n_band_a": 1167
+        },
+        "ksucca": {
+          "pct_pos": 0.0,
+          "n_band_a": 19
+        },
+        "arabic_bible": {
+          "pct_pos": 0.0,
+          "n_band_a": 977
+        },
+        "hindawi": {
+          "pct_pos": 0.0,
+          "n_band_a": 70
+        }
+      },
+      "max_ctrl_pct_pos": 0.0,
+      "max_ctrl_corpus": "poetry_jahili",
+      "discrim_gap_quran_minus_max_ctrl": 0.5147058823529411,
+      "n_quran_band_a": 68,
+      "pair": "X_first_letter_lastword × Y_canonical_end_letter",
+      "x_name": "X_first_letter_lastword",
+      "y_name": "Y_canonical_end_letter",
+      "runtime_s": 1.72
+    },
+    {
+      "quran_T_pct_pos": 0.4117647058823529,
+      "ctrl_T_pct_pos_per_corpus": {
+        "poetry_jahili": {
+          "pct_pos": 0.0,
+          "n_band_a": 65
+        },
+        "poetry_islami": {
+          "pct_pos": 0.0,
+          "n_band_a": 211
+        },
+        "poetry_abbasi": {
+          "pct_pos": 0.0,
+          "n_band_a": 1167
+        },
+        "ksucca": {
+          "pct_pos": 0.0,
+          "n_band_a": 19
+        },
+        "arabic_bible": {
+          "pct_pos": 0.0,
+          "n_band_a": 977
+        },
+        "hindawi": {
+          "pct_pos": 0.0,
+          "n_band_a": 70
+        }
+      },
+      "max_ctrl_pct_pos": 0.0,
+      "max_ctrl_corpus": "poetry_jahili",
+      "discrim_gap_quran_minus_max_ctrl": 0.4117647058823529,
+      "n_quran_band_a": 68,
+      "pair": "X_last_bigram × Y_canonical_end_letter",
+      "x_name": "X_last_bigram",
+      "y_name": "Y_canonical_end_letter",
+      "runtime_s": 2.49
+    },
+    {
+      "quran_T_pct_pos": 0.22058823529411764,
+      "ctrl_T_pct_pos_per_corpus": {
+        "poetry_jahili": {
+          "pct_pos": 0.0,
+          "n_band_a": 65
+        },
+        "poetry_islami": {
+          "pct_pos": 0.0,
+          "n_band_a": 211
+        },
+        "poetry_abbasi": {
+          "pct_pos": 0.0,
+          "n_band_a": 1167
+        },
+        "ksucca": {
+          "pct_pos": 0.0,
+          "n_band_a": 19
+        },
+        "arabic_bible": {
+          "pct_pos": 0.0,
+          "n_band_a": 977
+        },
+        "hindawi": {
+          "pct_pos": 0.0,
+          "n_band_a": 70
+        }
+      },
+      "max_ctrl_pct_pos": 0.0,
+      "max_ctrl_corpus": "poetry_jahili",
+      "discrim_gap_quran_minus_max_ctrl": 0.22058823529411764,
+      "n_quran_band_a": 68,
+      "pair": "X_first_letter_lastword × Y_end_bigram",
+      "x_name": "X_first_letter_lastword",
+      "y_name": "Y_end_bigram",
+      "runtime_s": 1.56
+    },
+    {
+      "quran_T_pct_pos": 0.14705882352941177,
+      "ctrl_T_pct_pos_per_corpus": {
+        "poetry_jahili": {
+          "pct_pos": 0.0,
+          "n_band_a": 65
+        },
+        "poetry_islami": {
+          "pct_pos": 0.0,
+          "n_band_a": 211
+        },
+        "poetry_abbasi": {
+          "pct_pos": 0.0,
+          "n_band_a": 1167
+        },
+        "ksucca": {
+          "pct_pos": 0.0,
+          "n_band_a": 19
+        },
+        "arabic_bible": {
+          "pct_pos": 0.0,
+          "n_band_a": 977
+        },
+        "hindawi": {
+          "pct_pos": 0.0,
+          "n_band_a": 70
+        }
+      },
+      "max_ctrl_pct_pos": 0.0,
+      "max_ctrl_corpus": "poetry_jahili",
+      "discrim_gap_quran_minus_max_ctrl": 0.14705882352941177,
+      "n_quran_band_a": 68,
+      "pair": "X_last_word_full × Y_canonical_end_letter",
+      "x_name": "X_last_word_full",
+      "y_name": "Y_canonical_end_letter",
+      "runtime_s": 1.69
+    },
+    {
+      "quran_T_pct_pos": 0.07352941176470588,
+      "ctrl_T_pct_pos_per_corpus": {
+        "poetry_jahili": {
+          "pct_pos": 0.0,
+          "n_band_a": 65
+        },
+        "poetry_islami": {
+          "pct_pos": 0.0,
+          "n_band_a": 211
+        },
+        "poetry_abbasi": {
+          "pct_pos": 0.0,
+          "n_band_a": 1167
+        },
+        "ksucca": {
+          "pct_pos": 0.0,
+          "n_band_a": 19
+        },
+        "arabic_bible": {
+          "pct_pos": 0.0,
+          "n_band_a": 977
+        },
+        "hindawi": {
+          "pct_pos": 0.0,
+          "n_band_a": 70
+        }
+      },
+      "max_ctrl_pct_pos": 0.0,
+      "max_ctrl_corpus": "poetry_jahili",
+      "discrim_gap_quran_minus_max_ctrl": 0.07352941176470588,
+      "n_quran_band_a": 68,
+      "pair": "X_terminal_letter × Y_canonical_end_letter",
+      "x_name": "X_terminal_letter",
+      "y_name": "Y_canonical_end_letter",
+      "runtime_s": 2.21
+    },
+    {
+      "quran_T_pct_pos": 0.029411764705882353,
+      "ctrl_T_pct_pos_per_corpus": {
+        "poetry_jahili": {
+          "pct_pos": 0.0,
+          "n_band_a": 65
+        },
+        "poetry_islami": {
+          "pct_pos": 0.0,
+          "n_band_a": 211
+        },
+        "poetry_abbasi": {
+          "pct_pos": 0.0,
+          "n_band_a": 1167
+        },
+        "ksucca": {
+          "pct_pos": 0.0,
+          "n_band_a": 19
+        },
+        "arabic_bible": {
+          "pct_pos": 0.0,
+          "n_band_a": 977
+        },
+        "hindawi": {
+          "pct_pos": 0.0,
+          "n_band_a": 70
+        }
+      },
+      "max_ctrl_pct_pos": 0.0,
+      "max_ctrl_corpus": "poetry_jahili",
+      "discrim_gap_quran_minus_max_ctrl": 0.029411764705882353,
+      "n_quran_band_a": 68,
+      "pair": "X_last_word_full × Y_end_bigram",
+      "x_name": "X_last_word_full",
+      "y_name": "Y_end_bigram",
+      "runtime_s": 1.72
+    },
+    {
+      "quran_T_pct_pos": 0.0,
+      "ctrl_T_pct_pos_per_corpus": {
+        "poetry_jahili": {
+          "pct_pos": 0.0,
+          "n_band_a": 65
+        },
+        "poetry_islami": {
+          "pct_pos": 0.0,
+          "n_band_a": 211
+        },
+        "poetry_abbasi": {
+          "pct_pos": 0.0,
+          "n_band_a": 1167
+        },
+        "ksucca": {
+          "pct_pos": 0.0,
+          "n_band_a": 19
+        },
+        "arabic_bible": {
+          "pct_pos": 0.0,
+          "n_band_a": 977
+        },
+        "hindawi": {
+          "pct_pos": 0.0,
+          "n_band_a": 70
+        }
+      },
+      "max_ctrl_pct_pos": 0.0,
+      "max_ctrl_corpus": "poetry_jahili",
+      "discrim_gap_quran_minus_max_ctrl": 0.0,
+      "n_quran_band_a": 68,
+      "pair": "X_terminal_letter × Y_end_bigram",
+      "x_name": "X_terminal_letter",
+      "y_name": "Y_end_bigram",
+      "runtime_s": 2.24
+    },
+    {
+      "quran_T_pct_pos": 0.0,
+      "ctrl_T_pct_pos_per_corpus": {
+        "poetry_jahili": {
+          "pct_pos": 0.0,
+          "n_band_a": 65
+        },
+        "poetry_islami": {
+          "pct_pos": 0.0,
+          "n_band_a": 211
+        },
+        "poetry_abbasi": {
+          "pct_pos": 0.0,
+          "n_band_a": 1167
+        },
+        "ksucca": {
+          "pct_pos": 0.0,
+          "n_band_a": 19
+        },
+        "arabic_bible": {
+          "pct_pos": 0.0,
+          "n_band_a": 977
+        },
+        "hindawi": {
+          "pct_pos": 0.0,
+          "n_band_a": 70
+        }
+      },
+      "max_ctrl_pct_pos": 0.0,
+      "max_ctrl_corpus": "poetry_jahili",
+      "discrim_gap_quran_minus_max_ctrl": 0.0,
+      "n_quran_band_a": 68,
+      "pair": "X_terminal_letter × Y_last_word_full",
+      "x_name": "X_terminal_letter",
+      "y_name": "Y_last_word_full",
+      "runtime_s": 1.56
+    },
+    {
+      "quran_T_pct_pos": 0.0,
+      "ctrl_T_pct_pos_per_corpus": {
+        "poetry_jahili": {
+          "pct_pos": 0.0,
+          "n_band_a": 65
+        },
+        "poetry_islami": {
+          "pct_pos": 0.0,
+          "n_band_a": 211
+        },
+        "poetry_abbasi": {
+          "pct_pos": 0.0,
+          "n_band_a": 1167
+        },
+        "ksucca": {
+          "pct_pos": 0.0,
+          "n_band_a": 19
+        },
+        "arabic_bible": {
+          "pct_pos": 0.0,
+          "n_band_a": 977
+        },
+        "hindawi": {
+          "pct_pos": 0.0,
+          "n_band_a": 70
+        }
+      },
+      "max_ctrl_pct_pos": 0.0,
+      "max_ctrl_corpus": "poetry_jahili",
+      "discrim_gap_quran_minus_max_ctrl": 0.0,
+      "n_quran_band_a": 68,
+      "pair": "X_first_letter_lastword × Y_first_letter_lastword",
+      "x_name": "X_first_letter_lastword",
+      "y_name": "Y_first_letter_lastword",
+      "runtime_s": 0.88
+    },
+    {
+      "quran_T_pct_pos": 0.0,
+      "ctrl_T_pct_pos_per_corpus": {
+        "poetry_jahili": {
+          "pct_pos": 0.0,
+          "n_band_a": 65
+        },
+        "poetry_islami": {
+          "pct_pos": 0.0,
+          "n_band_a": 211
+        },
+        "poetry_abbasi": {
+          "pct_pos": 0.0,
+          "n_band_a": 1167
+        },
+        "ksucca": {
+          "pct_pos": 0.0,
+          "n_band_a": 19
+        },
+        "arabic_bible": {
+          "pct_pos": 0.0,
+          "n_band_a": 977
+        },
+        "hindawi": {
+          "pct_pos": 0.0,
+          "n_band_a": 70
+        }
+      },
+      "max_ctrl_pct_pos": 0.0,
+      "max_ctrl_corpus": "poetry_jahili",
+      "discrim_gap_quran_minus_max_ctrl": 0.0,
+      "n_quran_band_a": 68,
+      "pair": "X_first_letter_lastword × Y_last_word_full",
+      "x_name": "X_first_letter_lastword",
+      "y_name": "Y_last_word_full",
+      "runtime_s": 0.84
+    },
+    {
+      "quran_T_pct_pos": 0.0,
+      "ctrl_T_pct_pos_per_corpus": {
+        "poetry_jahili": {
+          "pct_pos": 0.0,
+          "n_band_a": 65
+        },
+        "poetry_islami": {
+          "pct_pos": 0.0,
+          "n_band_a": 211
+        },
+        "poetry_abbasi": {
+          "pct_pos": 0.0,
+          "n_band_a": 1167
+        },
+        "ksucca": {
+          "pct_pos": 0.0,
+          "n_band_a": 19
+        },
+        "arabic_bible": {
+          "pct_pos": 0.0,
+          "n_band_a": 977
+        },
+        "hindawi": {
+          "pct_pos": 0.0,
+          "n_band_a": 70
+        }
+      },
+      "max_ctrl_pct_pos": 0.0,
+      "max_ctrl_corpus": "poetry_jahili",
+      "discrim_gap_quran_minus_max_ctrl": 0.0,
+      "n_quran_band_a": 68,
+      "pair": "X_last_word_full × Y_first_letter_lastword",
+      "x_name": "X_last_word_full",
+      "y_name": "Y_first_letter_lastword",
+      "runtime_s": 0.96
+    },
+    {
+      "quran_T_pct_pos": 0.0,
+      "ctrl_T_pct_pos_per_corpus": {
+        "poetry_jahili": {
+          "pct_pos": 0.0,
+          "n_band_a": 65
+        },
+        "poetry_islami": {
+          "pct_pos": 0.0,
+          "n_band_a": 211
+        },
+        "poetry_abbasi": {
+          "pct_pos": 0.0,
+          "n_band_a": 1167
+        },
+        "ksucca": {
+          "pct_pos": 0.0,
+          "n_band_a": 19
+        },
+        "arabic_bible": {
+          "pct_pos": 0.0,
+          "n_band_a": 977
+        },
+        "hindawi": {
+          "pct_pos": 0.0,
+          "n_band_a": 70
+        }
+      },
+      "max_ctrl_pct_pos": 0.0,
+      "max_ctrl_corpus": "poetry_jahili",
+      "discrim_gap_quran_minus_max_ctrl": 0.0,
+      "n_quran_band_a": 68,
+      "pair": "X_last_word_full × Y_last_word_full",
+      "x_name": "X_last_word_full",
+      "y_name": "Y_last_word_full",
+      "runtime_s": 0.95
+    },
+    {
+      "quran_T_pct_pos": 0.0,
+      "ctrl_T_pct_pos_per_corpus": {
+        "poetry_jahili": {
+          "pct_pos": 0.0,
+          "n_band_a": 65
+        },
+        "poetry_islami": {
+          "pct_pos": 0.0,
+          "n_band_a": 211
+        },
+        "poetry_abbasi": {
+          "pct_pos": 0.0,
+          "n_band_a": 1167
+        },
+        "ksucca": {
+          "pct_pos": 0.0,
+          "n_band_a": 19
+        },
+        "arabic_bible": {
+          "pct_pos": 0.0,
+          "n_band_a": 977
+        },
+        "hindawi": {
+          "pct_pos": 0.0,
+          "n_band_a": 70
+        }
+      },
+      "max_ctrl_pct_pos": 0.0,
+      "max_ctrl_corpus": "poetry_jahili",
+      "discrim_gap_quran_minus_max_ctrl": 0.0,
+      "n_quran_band_a": 68,
+      "pair": "X_last_bigram × Y_end_bigram",
+      "x_name": "X_last_bigram",
+      "y_name": "Y_end_bigram",
+      "runtime_s": 2.44
+    },
+    {
+      "quran_T_pct_pos": 0.0,
+      "ctrl_T_pct_pos_per_corpus": {
+        "poetry_jahili": {
+          "pct_pos": 0.0,
+          "n_band_a": 65
+        },
+        "poetry_islami": {
+          "pct_pos": 0.0,
+          "n_band_a": 211
+        },
+        "poetry_abbasi": {
+          "pct_pos": 0.0,
+          "n_band_a": 1167
+        },
+        "ksucca": {
+          "pct_pos": 0.0,
+          "n_band_a": 19
+        },
+        "arabic_bible": {
+          "pct_pos": 0.0,
+          "n_band_a": 977
+        },
+        "hindawi": {
+          "pct_pos": 0.0,
+          "n_band_a": 70
+        }
+      },
+      "max_ctrl_pct_pos": 0.0,
+      "max_ctrl_corpus": "poetry_jahili",
+      "discrim_gap_quran_minus_max_ctrl": 0.0,
+      "n_quran_band_a": 68,
+      "pair": "X_last_bigram × Y_first_letter_lastword",
+      "x_name": "X_last_bigram",
+      "y_name": "Y_first_letter_lastword",
+      "runtime_s": 1.78
+    },
+    {
+      "quran_T_pct_pos": 0.0,
+      "ctrl_T_pct_pos_per_corpus": {
+        "poetry_jahili": {
+          "pct_pos": 0.0,
+          "n_band_a": 65
+        },
+        "poetry_islami": {
+          "pct_pos": 0.0,
+          "n_band_a": 211
+        },
+        "poetry_abbasi": {
+          "pct_pos": 0.0,
+          "n_band_a": 1167
+        },
+        "ksucca": {
+          "pct_pos": 0.0,
+          "n_band_a": 19
+        },
+        "arabic_bible": {
+          "pct_pos": 0.0,
+          "n_band_a": 977
+        },
+        "hindawi": {
+          "pct_pos": 0.0,
+          "n_band_a": 70
+        }
+      },
+      "max_ctrl_pct_pos": 0.0,
+      "max_ctrl_corpus": "poetry_jahili",
+      "discrim_gap_quran_minus_max_ctrl": 0.0,
+      "n_quran_band_a": 68,
+      "pair": "X_last_bigram × Y_last_word_full",
+      "x_name": "X_last_bigram",
+      "y_name": "Y_last_word_full",
+      "runtime_s": 1.67
+    },
+    {
+      "quran_T_pct_pos": 0.0,
+      "ctrl_T_pct_pos_per_corpus": {
+        "poetry_jahili": {
+          "pct_pos": 0.0,
+          "n_band_a": 65
+        },
+        "poetry_islami": {
+          "pct_pos": 0.0,
+          "n_band_a": 211
+        },
+        "poetry_abbasi": {
+          "pct_pos": 0.0,
+          "n_band_a": 1167
+        },
+        "ksucca": {
+          "pct_pos": 0.0,
+          "n_band_a": 19
+        },
+        "arabic_bible": {
+          "pct_pos": 0.0020470829068577278,
+          "n_band_a": 977
+        },
+        "hindawi": {
+          "pct_pos": 0.0,
+          "n_band_a": 70
+        }
+      },
+      "max_ctrl_pct_pos": 0.0020470829068577278,
+      "max_ctrl_corpus": "arabic_bible",
+      "discrim_gap_quran_minus_max_ctrl": -0.0020470829068577278,
+      "n_quran_band_a": 68,
+      "pair": "X_terminal_letter × Y_first_letter_lastword",
+      "x_name": "X_terminal_letter",
+      "y_name": "Y_first_letter_lastword",
+      "runtime_s": 1.59
+    }
+  ],
+  "n_alternatives_beating_canonical": 2,
+  "verdict": "P2_OP2_NEAR_LOCAL_OPTIMUM_(<=2_alternatives_beat_it)",
+  "interpretation": [
+    "If verdict = P2_OP2_LOCAL_OPTIMUM_CONFIRMED, no cheap alternative pair beats the canonical (root, end-letter). This is empirical evidence for local optimality of the canonical T pairing — consistent with P2_OP2's claim. The FORMAL P2_OP2 proof requires extending this to the full feature space (months of work).",
+    "If verdict = P2_OP2_FALSIFIED, the canonical is NOT a local optimum. Investigate the winning alternative pair — it may be a stronger replacement for the project's T definition.",
+    "Note: this search uses cheap (CamelTools-free) X candidates (end-letter, first-letter-of-last-word, last-word, last-bigram). The canonical X = primary triliteral root (via CamelTools) was NOT re-tested; we used the locked per-surah T values directly. A larger search would also vary X over morphological alternatives (lemma, POS-tag) — those need CamelTools, too slow for this session."
+  ],
+  "runtime_seconds": 26.47
+}

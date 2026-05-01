@@ -1,0 +1,62 @@
+{
+  "schema": "mark1_bigram_sizing_v1",
+  "filed_as": "exploratory_diagnostic",
+  "purpose": "Sanity check before exp106_F55_mark1_bigram PREREG draft",
+  "target_book_number": 41,
+  "target_chapter": 1,
+  "target_n_verses": 45,
+  "target_n_letters_skeleton": 3530,
+  "target_n_chars_with_spaces": 3530,
+  "tau_high": 2.0,
+  "safety_margin_x": 5.0,
+  "peer_pool_strategy": "all_other_greek_nt_chapters_no_length_matching_matches_exp95j_arabic_protocol",
+  "variant_audit": {
+    "n_sampled": 1000,
+    "min": 1.0,
+    "mean": 1.999,
+    "max": 2.0,
+    "n_zero": 0,
+    "n_above_tau": 0,
+    "theorem_ok": true
+  },
+  "peer_audit": {
+    "n_peers": 259,
+    "min": 535.5,
+    "p5": 683.0,
+    "median": 943.0,
+    "mean": 951.9517374517375,
+    "max": 1438.0,
+    "min_over_tau_ratio": 267.75,
+    "fpr_floor_ok": true,
+    "five_closest": [
+      {
+        "book": "41",
+        "chapter": "5",
+        "delta": 535.5
+      },
+      {
+        "book": "42",
+        "chapter": "4",
+        "delta": 563.5
+      },
+      {
+        "book": "40",
+        "chapter": "8",
+        "delta": 602.5
+      },
+      {
+        "book": "42",
+        "chapter": "5",
+        "delta": 619.0
+      },
+      {
+        "book": "41",
+        "chapter": "8",
+        "delta": 643.5
+      }
+    ]
+  },
+  "verdict": "PROCEED_TO_PREREG",
+  "message": "Variant theorem holds (max = 2.00 <= 2.0); peer min = 535.50 >= 5.0x safety margin of tau = 2.0. Cross-tradition F55 on Greek NT Mark 1 is safe to PREREG and run.",
+  "wall_time_s": 2.5789737701416016
+}

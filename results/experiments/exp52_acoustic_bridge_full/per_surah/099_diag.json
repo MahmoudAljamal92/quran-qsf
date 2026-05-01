@@ -1,0 +1,11 @@
+{
+  "n_verses_total": 9,
+  "n_verses_aligned": 9,
+  "n_chars_clean": 416,
+  "n_chars_aligned": 408,
+  "alignment_time_s": 2.59,
+  "mode": "per-verse",
+  "wall_s": 3.57,
+  "audio_s": 62.48,
+  "rt_factor": 17.5
+}

@@ -1,0 +1,131 @@
+{
+  "experiment": "exp99_lc4_el_sufficiency",
+  "hypothesis": "LC4 — EL Asymptotic Sufficiency Theorem (α_EL ≥ 0.95 under pooled Σ̂)",
+  "schema_version": 1,
+  "prereg_document": "experiments/exp99_lc4_el_sufficiency/PREREG.md",
+  "frozen_constants": {
+    "seed": 42,
+    "band_a": [
+      15,
+      100
+    ],
+    "feat_names": [
+      "EL",
+      "VL_CV",
+      "CN",
+      "H_cond",
+      "T"
+    ],
+    "min_eig_gate": 1e-08,
+    "alignment_gate": 0.95,
+    "alignment_gate_tight": 0.99,
+    "auc_match_tol": 0.003,
+    "auc_gap_tol": 0.005,
+    "auc_gap_tol_tight": 0.001,
+    "observed_auc_EL_prereg": 0.9971,
+    "observed_auc_5D_prereg": 0.998,
+    "bootstrap_n": 1000
+  },
+  "means": {
+    "mu_Q": {
+      "EL": 0.7074338713106889,
+      "VL_CV": 0.4823916757649949,
+      "CN": 0.08596828788694996,
+      "H_cond": 0.8671010277271484,
+      "T": -0.482402750487046
+    },
+    "mu_C": {
+      "EL": 0.11080323011588314,
+      "VL_CV": 0.20034806488234075,
+      "CN": 0.027711546452416184,
+      "H_cond": 0.8251763392447035,
+      "T": -2.4449410750637703
+    },
+    "delta_mu": {
+      "EL": 0.5966306411948058,
+      "VL_CV": 0.28204361088265417,
+      "CN": 0.05825674143453378,
+      "H_cond": 0.041924688482444905,
+      "T": 1.9625383245767243
+    }
+  },
+  "covariance": {
+    "eigvals_sorted": [
+      0.0016270473819460438,
+      0.004827771779925838,
+      0.025554666988864962,
+      0.06187318174682814,
+      0.2957733455874644
+    ],
+    "min_eig": 0.0016270473819460438,
+    "max_eig": 0.2957733455874644,
+    "cond_number": 181.78533020575108,
+    "pd_ok": true
+  },
+  "fisher_direction": {
+    "w_raw": [
+      75.71264417842237,
+      1.3234426526930543,
+      33.22920598360094,
+      -3.952653818298599,
+      3.272622181953368
+    ],
+    "w_unit": [
+      0.9138156522171929,
+      0.015973324191303595,
+      0.4010607325641083,
+      -0.04770665410186148,
+      0.03949899526180417
+    ],
+    "alignments_abs_cos": {
+      "EL": 0.913816,
+      "VL_CV": 0.015973,
+      "CN": 0.401061,
+      "H_cond": 0.047707,
+      "T": 0.039499
+    },
+    "alpha_EL": 0.913816,
+    "bootstrap_alpha_EL_95ci": {
+      "lo": 0.828838,
+      "hi": 0.965382,
+      "width": 0.136545
+    }
+  },
+  "mahalanobis_separation": {
+    "Delta": 7.330655,
+    "Delta_squared": 53.73851
+  },
+  "predictions_lda": {
+    "auc_EL_predicted": 0.999595,
+    "auc_w_predicted": 0.999876,
+    "predicted_gap": 0.000281
+  },
+  "empirical": {
+    "auc_EL_empirical": 0.997105,
+    "auc_w_empirical": 0.998195,
+    "empirical_gap": 0.00109,
+    "observed_auc_EL_frozen_prereg": 0.9971,
+    "observed_auc_5D_frozen_prereg": 0.998
+  },
+  "prediction_match": {
+    "pred_vs_empirical_EL_diff": 0.002491,
+    "pred_vs_prereg_EL_diff": 0.002495,
+    "tolerance": 0.003
+  },
+  "bootstrap_auc_gap_95ci": {
+    "lo": 4e-05,
+    "hi": 0.001602,
+    "width": 0.001562,
+    "n_boot_valid": 1000
+  },
+  "prereg_gates": {
+    "covariance_pd": true,
+    "alignment_pass": false,
+    "alignment_tight": false,
+    "prediction_match_EL": true,
+    "gap_within_tol": true,
+    "gap_tight": false
+  },
+  "verdict": "FAIL_alignment_below_gate",
+  "runtime_seconds": 1.59
+}

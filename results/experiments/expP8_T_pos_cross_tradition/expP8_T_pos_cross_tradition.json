@@ -1,0 +1,742 @@
+{
+  "experiment": "expP8_T_pos_cross_tradition",
+  "schema_version": 1,
+  "prereg_document": "experiments/expP8_T_pos_cross_tradition/PREREG.md",
+  "prereg_hash": "953ffa5456f3e93e14a5036f34c3c914a0a19050a68cece1f67740e6f8ca204f",
+  "frozen_constants": {
+    "seed": 42,
+    "n_bootstrap": 5000,
+    "band_a_lo": 15,
+    "band_a_hi": 100,
+    "min_verses": 2,
+    "oral_liturgical": [
+      "avestan_yasna",
+      "pali_dn",
+      "pali_mn",
+      "quran",
+      "rigveda"
+    ],
+    "narrative_or_mixed": [
+      "greek_nt",
+      "hebrew_tanakh",
+      "iliad_greek"
+    ],
+    "arabic_ctrl": [
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ]
+  },
+  "feature_definitions": {
+    "T_lang": "h_cond_initials(verses) - h_el(verses)  (language-agnostic; src/features.py:200-235)",
+    "T_canon": "h_cond_roots(verses) - h_el(verses)  (Arabic-only via CamelTools; src/features.py:139-178)"
+  },
+  "per_corpus_T_lang": {
+    "quran": {
+      "n_units": 114,
+      "tradition_class": "oral_liturgical",
+      "all_units": {
+        "scope": "all_units",
+        "n": 114,
+        "n_pos": 102,
+        "pct": 0.8947368421052632,
+        "mean_t": 1.5922850051452389,
+        "median_t": 1.5626946630221172
+      },
+      "band_a": {
+        "scope": "band_a",
+        "n": 68,
+        "n_pos": 63,
+        "pct": 0.9264705882352942,
+        "mean_t": 1.6289088579223068,
+        "median_t": 1.6425426624410724
+      },
+      "all_units_bootstrap": {
+        "median": 0.8947368421052632,
+        "ci_lo": 0.8333333333333334,
+        "ci_hi": 0.9473684210526315,
+        "n_used": 114
+      },
+      "band_a_bootstrap": {
+        "median": 0.9264705882352942,
+        "ci_lo": 0.867279411764706,
+        "ci_hi": 0.9852941176470589,
+        "n_used": 68
+      }
+    },
+    "hebrew_tanakh": {
+      "n_units": 921,
+      "tradition_class": "narrative_or_mixed",
+      "all_units": {
+        "scope": "all_units",
+        "n": 921,
+        "n_pos": 296,
+        "pct": 0.32138979370249726,
+        "mean_t": -0.1266560963112587,
+        "median_t": -0.13264871811533796
+      },
+      "band_a": {
+        "scope": "band_a",
+        "n": 775,
+        "n_pos": 257,
+        "pct": 0.33161290322580644,
+        "mean_t": -0.11595632452067188,
+        "median_t": -0.11536762559597857
+      },
+      "all_units_bootstrap": {
+        "median": 0.32138979370249726,
+        "ci_lo": 0.2920738327904452,
+        "ci_hi": 0.3517915309446254,
+        "n_used": 921
+      },
+      "band_a_bootstrap": {
+        "median": 0.33161290322580644,
+        "ci_lo": 0.29935483870967744,
+        "ci_hi": 0.3638709677419355,
+        "n_used": 775
+      }
+    },
+    "greek_nt": {
+      "n_units": 260,
+      "tradition_class": "narrative_or_mixed",
+      "all_units": {
+        "scope": "all_units",
+        "n": 260,
+        "n_pos": 258,
+        "pct": 0.9923076923076923,
+        "mean_t": 0.7188882378436965,
+        "median_t": 0.7321804150011562
+      },
+      "band_a": {
+        "scope": "band_a",
+        "n": 241,
+        "n_pos": 239,
+        "pct": 0.991701244813278,
+        "mean_t": 0.7222991879880499,
+        "median_t": 0.7388572363122807
+      },
+      "all_units_bootstrap": {
+        "median": 0.9923076923076923,
+        "ci_lo": 0.9807692307692307,
+        "ci_hi": 1.0,
+        "n_used": 260
+      },
+      "band_a_bootstrap": {
+        "median": 0.991701244813278,
+        "ci_lo": 0.979253112033195,
+        "ci_hi": 1.0,
+        "n_used": 241
+      }
+    },
+    "iliad_greek": {
+      "n_units": 24,
+      "tradition_class": "narrative_or_mixed",
+      "all_units": {
+        "scope": "all_units",
+        "n": 24,
+        "n_pos": 24,
+        "pct": 1.0,
+        "mean_t": 1.1610547976776704,
+        "median_t": 1.1468858426226858
+      },
+      "band_a": {
+        "scope": "band_a",
+        "n": 0,
+        "n_pos": 0,
+        "pct": NaN,
+        "mean_t": NaN,
+        "median_t": NaN
+      },
+      "all_units_bootstrap": {
+        "median": 1.0,
+        "ci_lo": 1.0,
+        "ci_hi": 1.0,
+        "n_used": 24
+      },
+      "band_a_bootstrap": {
+        "median": null,
+        "ci_lo": null,
+        "ci_hi": null,
+        "n_used": 0
+      }
+    },
+    "pali_dn": {
+      "n_units": 34,
+      "tradition_class": "oral_liturgical",
+      "all_units": {
+        "scope": "all_units",
+        "n": 34,
+        "n_pos": 33,
+        "pct": 0.9705882352941176,
+        "mean_t": 1.3519887115460196,
+        "median_t": 1.4229451132067195
+      },
+      "band_a": {
+        "scope": "band_a",
+        "n": 1,
+        "n_pos": 0,
+        "pct": 0.0,
+        "mean_t": -0.03523279228191556,
+        "median_t": -0.03523279228191556
+      },
+      "all_units_bootstrap": {
+        "median": 0.9705882352941176,
+        "ci_lo": 0.9117647058823529,
+        "ci_hi": 1.0,
+        "n_used": 34
+      },
+      "band_a_bootstrap": {
+        "median": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n_used": 1
+      }
+    },
+    "pali_mn": {
+      "n_units": 152,
+      "tradition_class": "oral_liturgical",
+      "all_units": {
+        "scope": "all_units",
+        "n": 152,
+        "n_pos": 152,
+        "pct": 1.0,
+        "mean_t": 1.1826972508074138,
+        "median_t": 1.1961888879480038
+      },
+      "band_a": {
+        "scope": "band_a",
+        "n": 33,
+        "n_pos": 33,
+        "pct": 1.0,
+        "mean_t": 0.992342652214057,
+        "median_t": 0.9960065143397809
+      },
+      "all_units_bootstrap": {
+        "median": 1.0,
+        "ci_lo": 1.0,
+        "ci_hi": 1.0,
+        "n_used": 152
+      },
+      "band_a_bootstrap": {
+        "median": 1.0,
+        "ci_lo": 1.0,
+        "ci_hi": 1.0,
+        "n_used": 33
+      }
+    },
+    "rigveda": {
+      "n_units": 1024,
+      "tradition_class": "oral_liturgical",
+      "all_units": {
+        "scope": "all_units",
+        "n": 1024,
+        "n_pos": 124,
+        "pct": 0.12109375,
+        "mean_t": -0.4468234625073081,
+        "median_t": -0.4559964180863756
+      },
+      "band_a": {
+        "scope": "band_a",
+        "n": 535,
+        "n_pos": 79,
+        "pct": 0.14766355140186915,
+        "mean_t": -0.35006893138344464,
+        "median_t": -0.3622126348033188
+      },
+      "all_units_bootstrap": {
+        "median": 0.12109375,
+        "ci_lo": 0.1015625,
+        "ci_hi": 0.140625,
+        "n_used": 1024
+      },
+      "band_a_bootstrap": {
+        "median": 0.14766355140186915,
+        "ci_lo": 0.11775700934579439,
+        "ci_hi": 0.17943925233644858,
+        "n_used": 535
+      }
+    },
+    "avestan_yasna": {
+      "n_units": 72,
+      "tradition_class": "oral_liturgical",
+      "all_units": {
+        "scope": "all_units",
+        "n": 72,
+        "n_pos": 35,
+        "pct": 0.4861111111111111,
+        "mean_t": -0.032148782469621454,
+        "median_t": -0.009957431281428342
+      },
+      "band_a": {
+        "scope": "band_a",
+        "n": 51,
+        "n_pos": 23,
+        "pct": 0.45098039215686275,
+        "mean_t": -0.056051949622766474,
+        "median_t": -0.10498292016236155
+      },
+      "all_units_bootstrap": {
+        "median": 0.4861111111111111,
+        "ci_lo": 0.375,
+        "ci_hi": 0.5972222222222222,
+        "n_used": 72
+      },
+      "band_a_bootstrap": {
+        "median": 0.45098039215686275,
+        "ci_lo": 0.3137254901960784,
+        "ci_hi": 0.5882352941176471,
+        "n_used": 51
+      }
+    },
+    "poetry_jahili": {
+      "n_units": 133,
+      "tradition_class": "arabic_ctrl",
+      "all_units": {
+        "scope": "all_units",
+        "n": 133,
+        "n_pos": 3,
+        "pct": 0.022556390977443608,
+        "mean_t": -0.6920823909119629,
+        "median_t": -0.6956155577300014
+      },
+      "band_a": {
+        "scope": "band_a",
+        "n": 65,
+        "n_pos": 0,
+        "pct": 0.0,
+        "mean_t": -0.6302880386944462,
+        "median_t": -0.6463670767141902
+      },
+      "all_units_bootstrap": {
+        "median": 0.022556390977443608,
+        "ci_lo": 0.0,
+        "ci_hi": 0.05263157894736842,
+        "n_used": 133
+      },
+      "band_a_bootstrap": {
+        "median": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n_used": 65
+      }
+    },
+    "poetry_islami": {
+      "n_units": 465,
+      "tradition_class": "arabic_ctrl",
+      "all_units": {
+        "scope": "all_units",
+        "n": 465,
+        "n_pos": 23,
+        "pct": 0.04946236559139785,
+        "mean_t": -0.6123071859740766,
+        "median_t": -0.6096110587279273
+      },
+      "band_a": {
+        "scope": "band_a",
+        "n": 211,
+        "n_pos": 12,
+        "pct": 0.05687203791469194,
+        "mean_t": -0.5111366576493316,
+        "median_t": -0.5186660418824367
+      },
+      "all_units_bootstrap": {
+        "median": 0.04946236559139785,
+        "ci_lo": 0.03220430107526884,
+        "ci_hi": 0.06881720430107527,
+        "n_used": 465
+      },
+      "band_a_bootstrap": {
+        "median": 0.05687203791469194,
+        "ci_lo": 0.02843601895734597,
+        "ci_hi": 0.09004739336492891,
+        "n_used": 211
+      }
+    },
+    "poetry_abbasi": {
+      "n_units": 2823,
+      "tradition_class": "arabic_ctrl",
+      "all_units": {
+        "scope": "all_units",
+        "n": 2823,
+        "n_pos": 167,
+        "pct": 0.05915692525681899,
+        "mean_t": -0.6124231873103186,
+        "median_t": -0.63450923728282
+      },
+      "band_a": {
+        "scope": "band_a",
+        "n": 1167,
+        "n_pos": 65,
+        "pct": 0.055698371893744644,
+        "mean_t": -0.5214064263945162,
+        "median_t": -0.5377253497739112
+      },
+      "all_units_bootstrap": {
+        "median": 0.05915692525681899,
+        "ci_lo": 0.05100956429330499,
+        "ci_hi": 0.06801275239107332,
+        "n_used": 2823
+      },
+      "band_a_bootstrap": {
+        "median": 0.055698371893744644,
+        "ci_lo": 0.04284490145672665,
+        "ci_hi": 0.06855184233076264,
+        "n_used": 1167
+      }
+    },
+    "ksucca": {
+      "n_units": 41,
+      "tradition_class": "arabic_ctrl",
+      "all_units": {
+        "scope": "all_units",
+        "n": 41,
+        "n_pos": 35,
+        "pct": 0.8536585365853658,
+        "mean_t": 0.4641623911549145,
+        "median_t": 0.40428371063997837
+      },
+      "band_a": {
+        "scope": "band_a",
+        "n": 19,
+        "n_pos": 16,
+        "pct": 0.8421052631578947,
+        "mean_t": 0.3067768093719982,
+        "median_t": 0.29727214352751963
+      },
+      "all_units_bootstrap": {
+        "median": 0.8536585365853658,
+        "ci_lo": 0.7317073170731707,
+        "ci_hi": 0.9512195121951219,
+        "n_used": 41
+      },
+      "band_a_bootstrap": {
+        "median": 0.8421052631578947,
+        "ci_lo": 0.6842105263157895,
+        "ci_hi": 1.0,
+        "n_used": 19
+      }
+    },
+    "arabic_bible": {
+      "n_units": 1183,
+      "tradition_class": "arabic_ctrl",
+      "all_units": {
+        "scope": "all_units",
+        "n": 1183,
+        "n_pos": 194,
+        "pct": 0.16398985629754861,
+        "mean_t": -0.3095562392373088,
+        "median_t": -0.3341430555558471
+      },
+      "band_a": {
+        "scope": "band_a",
+        "n": 977,
+        "n_pos": 144,
+        "pct": 0.1473899692937564,
+        "mean_t": -0.32477321916640856,
+        "median_t": -0.3434756726848933
+      },
+      "all_units_bootstrap": {
+        "median": 0.16398985629754861,
+        "ci_lo": 0.1437024513947591,
+        "ci_hi": 0.18512256973795435,
+        "n_used": 1183
+      },
+      "band_a_bootstrap": {
+        "median": 0.1473899692937564,
+        "ci_lo": 0.12589559877175024,
+        "ci_hi": 0.16888433981576254,
+        "n_used": 977
+      }
+    },
+    "hindawi": {
+      "n_units": 74,
+      "tradition_class": "arabic_ctrl",
+      "all_units": {
+        "scope": "all_units",
+        "n": 74,
+        "n_pos": 3,
+        "pct": 0.04054054054054054,
+        "mean_t": -0.5178150274921896,
+        "median_t": -0.498538800266487
+      },
+      "band_a": {
+        "scope": "band_a",
+        "n": 70,
+        "n_pos": 3,
+        "pct": 0.04285714285714286,
+        "mean_t": -0.5091598681475996,
+        "median_t": -0.48660975629328673
+      },
+      "all_units_bootstrap": {
+        "median": 0.04054054054054054,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0945945945945946,
+        "n_used": 74
+      },
+      "band_a_bootstrap": {
+        "median": 0.04285714285714286,
+        "ci_lo": 0.0,
+        "ci_hi": 0.1,
+        "n_used": 70
+      }
+    }
+  },
+  "per_corpus_T_canon": {
+    "quran": {
+      "n_units": 114,
+      "all_units": {
+        "scope": "all_units",
+        "n": 114,
+        "n_pos": 51,
+        "pct": 0.4473684210526316,
+        "mean_t": -0.2924750794361642,
+        "median_t": -0.3051923000668825
+      },
+      "band_a": {
+        "scope": "band_a",
+        "n": 68,
+        "n_pos": 27,
+        "pct": 0.39705882352941174,
+        "mean_t": -0.4824027504870459,
+        "median_t": -0.7073794239919595
+      },
+      "all_units_bootstrap": {
+        "median": 0.4473684210526316,
+        "ci_lo": 0.35964912280701755,
+        "ci_hi": 0.5350877192982456,
+        "n_used": 114
+      },
+      "band_a_bootstrap": {
+        "median": 0.39705882352941174,
+        "ci_lo": 0.27941176470588236,
+        "ci_hi": 0.5147058823529411,
+        "n_used": 68
+      }
+    },
+    "poetry_jahili": {
+      "n_units": 133,
+      "all_units": {
+        "scope": "all_units",
+        "n": 133,
+        "n_pos": 0,
+        "pct": 0.0,
+        "mean_t": -2.2989164583851696,
+        "median_t": -2.321928094887362
+      },
+      "band_a": {
+        "scope": "band_a",
+        "n": 65,
+        "n_pos": 0,
+        "pct": 0.0,
+        "mean_t": -2.5861355456069375,
+        "median_t": -2.6108969684279844
+      },
+      "all_units_bootstrap": {
+        "median": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n_used": 133
+      },
+      "band_a_bootstrap": {
+        "median": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n_used": 65
+      }
+    },
+    "poetry_islami": {
+      "n_units": 465,
+      "all_units": {
+        "scope": "all_units",
+        "n": 465,
+        "n_pos": 0,
+        "pct": 0.0,
+        "mean_t": -2.2416541037197857,
+        "median_t": -2.3000772090273127
+      },
+      "band_a": {
+        "scope": "band_a",
+        "n": 211,
+        "n_pos": 0,
+        "pct": 0.0,
+        "mean_t": -2.51024564065123,
+        "median_t": -2.4920274558100863
+      },
+      "all_units_bootstrap": {
+        "median": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n_used": 465
+      },
+      "band_a_bootstrap": {
+        "median": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n_used": 211
+      }
+    },
+    "poetry_abbasi": {
+      "n_units": 2823,
+      "all_units": {
+        "scope": "all_units",
+        "n": 2823,
+        "n_pos": 0,
+        "pct": 0.0,
+        "mean_t": -2.305286187328021,
+        "median_t": -2.343670791657317
+      },
+      "band_a": {
+        "scope": "band_a",
+        "n": 1167,
+        "n_pos": 0,
+        "pct": 0.0,
+        "mean_t": -2.5996006472816275,
+        "median_t": -2.6379642067107287
+      },
+      "all_units_bootstrap": {
+        "median": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n_used": 2823
+      },
+      "band_a_bootstrap": {
+        "median": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n_used": 1167
+      }
+    },
+    "ksucca": {
+      "n_units": 41,
+      "all_units": {
+        "scope": "all_units",
+        "n": 41,
+        "n_pos": 0,
+        "pct": 0.0,
+        "mean_t": -2.011939561521211,
+        "median_t": -1.9688870442871385
+      },
+      "band_a": {
+        "scope": "band_a",
+        "n": 19,
+        "n_pos": 0,
+        "pct": 0.0,
+        "mean_t": -2.116285534038229,
+        "median_t": -2.1174950075073777
+      },
+      "all_units_bootstrap": {
+        "median": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n_used": 41
+      },
+      "band_a_bootstrap": {
+        "median": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n_used": 19
+      }
+    },
+    "arabic_bible": {
+      "n_units": 1183,
+      "all_units": {
+        "scope": "all_units",
+        "n": 1183,
+        "n_pos": 1,
+        "pct": 0.0008453085376162299,
+        "mean_t": -2.1225815085539317,
+        "median_t": -2.145323770878744
+      },
+      "band_a": {
+        "scope": "band_a",
+        "n": 977,
+        "n_pos": 1,
+        "pct": 0.0010235414534288639,
+        "mean_t": -2.2301339645430103,
+        "median_t": -2.243695846462962
+      },
+      "all_units_bootstrap": {
+        "median": 0.0008453085376162299,
+        "ci_lo": 0.0,
+        "ci_hi": 0.00253592561284869,
+        "n_used": 1183
+      },
+      "band_a_bootstrap": {
+        "median": 0.0010235414534288639,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0030706243602865915,
+        "n_used": 977
+      }
+    },
+    "hindawi": {
+      "n_units": 74,
+      "all_units": {
+        "scope": "all_units",
+        "n": 74,
+        "n_pos": 0,
+        "pct": 0.0,
+        "mean_t": -2.6195511698595375,
+        "median_t": -2.636651155919279
+      },
+      "band_a": {
+        "scope": "band_a",
+        "n": 70,
+        "n_pos": 0,
+        "pct": 0.0,
+        "mean_t": -2.625889325860609,
+        "median_t": -2.636651155919279
+      },
+      "all_units_bootstrap": {
+        "median": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n_used": 74
+      },
+      "band_a_bootstrap": {
+        "median": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "n_used": 70
+      }
+    }
+  },
+  "class_summary_band_a_T_lang": {
+    "oral_liturgical": {
+      "n_corpora": 5,
+      "median_pct": 0.45098039215686275,
+      "max_pct": 1.0,
+      "min_pct": 0.0
+    },
+    "narrative_or_mixed": {
+      "n_corpora": 2,
+      "median_pct": 0.6616570740195422,
+      "max_pct": 0.991701244813278,
+      "min_pct": 0.33161290322580644
+    },
+    "arabic_ctrl": {
+      "n_corpora": 6,
+      "median_pct": 0.05628520490421829,
+      "max_pct": 0.8421052631578947
+    }
+  },
+  "headline": {
+    "quran_band_a_pct_T_lang": 0.9264705882352942,
+    "next_highest_non_quran_pct_T_lang": 1.0,
+    "next_highest_non_quran_corpus": "pali_mn",
+    "quran_over_next_highest_ratio": 0.9264705882352942,
+    "max_arabic_ctrl_pct_T_lang": 0.8421052631578947,
+    "quran_over_max_arabic_ratio": 1.100183823529412
+  },
+  "T_canon_sanity_quran_band_a_locked_0.397": {
+    "locked_T_canon_pct_quran_band_a": 0.397,
+    "tol": 0.05,
+    "observed": 0.39705882352941174,
+    "within_tol": true
+  },
+  "pre_registered_verdict": "FAIL_QURAN_NOT_HIGHEST",
+  "interpretation": "PASS_QURAN_UNIQUE means the Quran is the unique enrichment outlier under the language-agnostic T surrogate; PASS_ORAL_CLASS_LAW means the enrichment is a class property of oral-liturgical canons (in which case Quran is the strongest instance per the 5x-Arabic-ctrl gate); PARTIAL_LANG_AGNOSTIC_DOWNGRADE means the enrichment exists but is smaller under T_lang than under T_canon; FAIL_NO_ENRICHMENT_UNDER_T_LANG means the locked 39.7 % is a CamelTools morphological-analyser artefact, not a structural property.",
+  "runtime_seconds": 43.69
+}

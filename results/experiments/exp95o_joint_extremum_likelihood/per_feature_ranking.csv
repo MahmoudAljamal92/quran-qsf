@@ -1,0 +1,13 @@
+feature,quran,poetry_jahili,poetry_islami,poetry_abbasi,ksucca,arabic_bible,hindawi
+el_rate,0.706263 (rank 1),0.099691 (rank 5),0.100638 (rank 4),0.099011 (rank 6),0.144284 (rank 2),0.133430 (rank 3),0.065252 (rank 7)
+vl_cv,0.464619 (rank 2),0.138544 (rank 5),0.134367 (rank 6),0.131915 (rank 7),0.982491 (rank 1),0.346518 (rank 4),0.381113 (rank 3)
+cn_rate,0.087117 (rank 1),0.026868 (rank 4),0.028567 (rank 3),0.024724 (rank 5),0.011312 (rank 7),0.031251 (rank 2),0.014216 (rank 6)
+h_cond_roots,0.863250 (rank 3),0.486317 (rank 7),0.490286 (rank 5),0.488701 (rank 6),1.056973 (rank 1),0.944217 (rank 2),0.771517 (rank 4)
+h_el,1.155725 (rank 7),2.785233 (rank 5),2.731940 (rank 6),2.793987 (rank 4),3.068912 (rank 2),3.066799 (rank 3),3.391069 (rank 1)
+H_2,7.109348 (rank 4),7.037620 (rank 6),7.024179 (rank 7),7.045650 (rank 5),7.714785 (rank 1),7.455093 (rank 3),7.656087 (rank 2)
+H_3,8.887502 (rank 4),8.210434 (rank 7),8.222187 (rank 6),8.289126 (rank 5),10.093708 (rank 1),9.218527 (rank 3),9.393877 (rank 2)
+Gini,0.541554 (rank 1),0.497212 (rank 6),0.501235 (rank 5),0.492918 (rank 7),0.516254 (rank 3),0.527504 (rank 2),0.502037 (rank 4)
+gzip_ratio,0.390558 (rank 5),0.481533 (rank 1),0.481453 (rank 2),0.478855 (rank 3),0.270475 (rank 7),0.356722 (rank 6),0.399367 (rank 4)
+log10_nb,2.404418 (rank 4),2.263832 (rank 6),2.263541 (rank 7),2.277747 (rank 5),2.675825 (rank 1),2.486948 (rank 3),2.522708 (rank 2)
+
+S(corpus),4,3,2,2,7,0,2

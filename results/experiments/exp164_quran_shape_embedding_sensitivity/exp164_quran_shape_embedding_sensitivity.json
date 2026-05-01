@@ -1,0 +1,329 @@
+{
+  "experiment": "exp164_quran_shape_embedding_sensitivity",
+  "schema_version": 1,
+  "hypothesis": "The three exp163 BHL-significant cloud-shape descriptors (linearity_westin, planarity_westin, symmetry_score) for the Quran's 68 Band-A surahs persist as BHL-significant under independent embeddings (whitened-Phi_M and alphabet-freq-PCA5).",
+  "verdict": "FAIL_PIPELINE_SPECIFIC",
+  "completed_at_utc": "2026-05-01T06:44:29Z",
+  "wall_time_s": 26.47418522834778,
+  "frozen_constants": {
+    "SEED": 43,
+    "N_BOOTSTRAP": 10000,
+    "N_SUBSAMPLE": 200,
+    "ALPHA_BHL": 0.01,
+    "PCA_DIMS": 5,
+    "TARGET_DESC": [
+      "linearity_westin",
+      "planarity_westin",
+      "symmetry_score"
+    ],
+    "FEAT_COLS": [
+      "EL",
+      "VL_CV",
+      "CN",
+      "H_cond",
+      "T"
+    ],
+    "CORPORA": [
+      "quran",
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hadith_bukhari",
+      "hindawi"
+    ]
+  },
+  "audit_hooks": {
+    "A1_n_band_A_quran": 68,
+    "A1_pass": true,
+    "A2_isotropy_err_whitened": 0.00017322570911883358,
+    "A2_pass": false,
+    "A3_pca_var_explained": [
+      0.1681861597863593,
+      0.10953185642911431,
+      0.09291278674623747,
+      0.07653458632776124,
+      0.06653536951414117
+    ],
+    "A4_valid_alphabet_n_per_corpus": {
+      "quran": 68,
+      "poetry_jahili": 133,
+      "poetry_islami": 465,
+      "poetry_abbasi": 2823,
+      "ksucca": 41,
+      "arabic_bible": 1183,
+      "hadith_bukhari": 95,
+      "hindawi": 74
+    }
+  },
+  "per_embedding": {
+    "raw_phi_m": {
+      "embedding_name": "raw_phi_m",
+      "transform_info": "identity (raw 5-D Phi_M)",
+      "n_quran": 68,
+      "n_pool": 4882,
+      "per_corpus_desc": {
+        "quran": {
+          "linearity_westin": 0.9311883996303438,
+          "planarity_westin": 0.06667651226728913,
+          "symmetry_score": 0.2120787025804852
+        },
+        "poetry_jahili": {
+          "linearity_westin": 0.5468070227444757,
+          "planarity_westin": 0.4466314899554782,
+          "symmetry_score": 0.26353989579444415
+        },
+        "poetry_islami": {
+          "linearity_westin": 0.42555228213342156,
+          "planarity_westin": 0.5641037122387117,
+          "symmetry_score": 0.2729355284316155
+        },
+        "poetry_abbasi": {
+          "linearity_westin": 0.3826520718005337,
+          "planarity_westin": 0.6104023452176424,
+          "symmetry_score": 0.2756393522581063
+        },
+        "ksucca": {
+          "linearity_westin": 0.5468669213884965,
+          "planarity_westin": 0.45185491972724673,
+          "symmetry_score": 0.32331078142512903
+        },
+        "arabic_bible": {
+          "linearity_westin": 0.8368920067106167,
+          "planarity_westin": 0.1552503537614724,
+          "symmetry_score": 0.2700417457986659
+        },
+        "hadith_bukhari": {
+          "linearity_westin": 0.7153618591272438,
+          "planarity_westin": 0.2846381408698416,
+          "symmetry_score": 0.419160920304574
+        },
+        "hindawi": {
+          "linearity_westin": 0.8241214616431326,
+          "planarity_westin": 0.17388266571256136,
+          "symmetry_score": 0.25539502959539206
+        }
+      },
+      "quran_results": {
+        "linearity_westin": {
+          "observed": 0.9311883996303438,
+          "null_median": 0.5103484102772313,
+          "null_std": 0.1382122238162118,
+          "p_two_sided_vs_bootstrap": 0.0,
+          "quran_rank_low_in_8_corpora": 8
+        },
+        "planarity_westin": {
+          "observed": 0.06667651226728913,
+          "null_median": 0.48303662293493355,
+          "null_std": 0.13670046127792665,
+          "p_two_sided_vs_bootstrap": 0.0,
+          "quran_rank_low_in_8_corpora": 1
+        },
+        "symmetry_score": {
+          "observed": 0.2120787025804852,
+          "null_median": 0.28828667555535903,
+          "null_std": 0.02720569573789229,
+          "p_two_sided_vs_bootstrap": 0.0,
+          "quran_rank_low_in_8_corpora": 1
+        }
+      },
+      "extra": {}
+    },
+    "whitened_phi_m": {
+      "embedding_name": "whitened_phi_m",
+      "transform_info": "Mahalanobis-whiten via combined-pool cov; ridge=1e-6; post-whiten isotropy_err = 1.73e-04",
+      "n_quran": 68,
+      "n_pool": 4882,
+      "per_corpus_desc": {
+        "quran": {
+          "linearity_westin": 0.46031958945836066,
+          "planarity_westin": 0.4550456228149359,
+          "symmetry_score": 0.39259775714716305
+        },
+        "poetry_jahili": {
+          "linearity_westin": 0.20286971895457978,
+          "planarity_westin": 0.5963494200316404,
+          "symmetry_score": 0.4577115708759069
+        },
+        "poetry_islami": {
+          "linearity_westin": 0.2869293060161796,
+          "planarity_westin": 0.5614413076799343,
+          "symmetry_score": 0.48475342873306837
+        },
+        "poetry_abbasi": {
+          "linearity_westin": 0.313394483933625,
+          "planarity_westin": 0.5300462756392927,
+          "symmetry_score": 0.4759859015007496
+        },
+        "ksucca": {
+          "linearity_westin": 0.756780567192073,
+          "planarity_westin": 0.2198372427840977,
+          "symmetry_score": 0.4302948326435997
+        },
+        "arabic_bible": {
+          "linearity_westin": 0.3263762709593758,
+          "planarity_westin": 0.5492504171741035,
+          "symmetry_score": 0.44085545020794903
+        },
+        "hadith_bukhari": {
+          "linearity_westin": 0.7389430896198168,
+          "planarity_westin": 0.261056910379852,
+          "symmetry_score": 0.4583072373483489
+        },
+        "hindawi": {
+          "linearity_westin": 0.6957881172891212,
+          "planarity_westin": 0.14349181188440946,
+          "symmetry_score": 0.430142609847472
+        }
+      },
+      "quran_results": {
+        "linearity_westin": {
+          "observed": 0.46031958945836066,
+          "null_median": 0.23526019577458118,
+          "null_std": 0.13982913838800226,
+          "p_two_sided_vs_bootstrap": 0.184,
+          "quran_rank_low_in_8_corpora": 5
+        },
+        "planarity_westin": {
+          "observed": 0.4550456228149359,
+          "null_median": 0.41513233900463076,
+          "null_std": 0.11466139218605483,
+          "p_two_sided_vs_bootstrap": 0.7326,
+          "quran_rank_low_in_8_corpora": 4
+        },
+        "symmetry_score": {
+          "observed": 0.39259775714716305,
+          "null_median": 0.4852855134298436,
+          "null_std": 0.0386977033749163,
+          "p_two_sided_vs_bootstrap": 0.0038,
+          "quran_rank_low_in_8_corpora": 1
+        }
+      },
+      "extra": {
+        "isotropy_err_post_whiten": 0.00017322570911883358
+      }
+    },
+    "alphabet_freq_pca5": {
+      "embedding_name": "alphabet_freq_pca5",
+      "transform_info": "per-unit 28-letter freq vector (>= 50 letters), PCA-5 on combined pool; top-5 PC var explained = [0.168, 0.11, 0.093, 0.077, 0.067]",
+      "n_quran": 68,
+      "n_pool": 4882,
+      "per_corpus_desc": {
+        "quran": {
+          "linearity_westin": 0.3509477992247422,
+          "planarity_westin": 0.5251599973843492,
+          "symmetry_score": 0.41896577694735787
+        },
+        "poetry_jahili": {
+          "linearity_westin": 0.4018884344706459,
+          "planarity_westin": 0.3845414385216772,
+          "symmetry_score": 0.42112677811097454
+        },
+        "poetry_islami": {
+          "linearity_westin": 0.28434961772648876,
+          "planarity_westin": 0.4537754651128494,
+          "symmetry_score": 0.4086063465999863
+        },
+        "poetry_abbasi": {
+          "linearity_westin": 0.36620101730630694,
+          "planarity_westin": 0.3979937099326608,
+          "symmetry_score": 0.407343448994021
+        },
+        "ksucca": {
+          "linearity_westin": 0.3427708096934926,
+          "planarity_westin": 0.4836982537902553,
+          "symmetry_score": 0.43118853447880573
+        },
+        "arabic_bible": {
+          "linearity_westin": 0.3162093757852822,
+          "planarity_westin": 0.4125105470379433,
+          "symmetry_score": 0.42344974028486754
+        },
+        "hadith_bukhari": {
+          "linearity_westin": 0.3390538008619024,
+          "planarity_westin": 0.4832556385495398,
+          "symmetry_score": 0.4067674246053007
+        },
+        "hindawi": {
+          "linearity_westin": 0.22207630132702935,
+          "planarity_westin": 0.41989343449746186,
+          "symmetry_score": 0.39730770998573595
+        }
+      },
+      "quran_results": {
+        "linearity_westin": {
+          "observed": 0.3509477992247422,
+          "null_median": 0.3366570738012078,
+          "null_std": 0.12689354496851804,
+          "p_two_sided_vs_bootstrap": 0.9126,
+          "quran_rank_low_in_8_corpora": 6
+        },
+        "planarity_westin": {
+          "observed": 0.5251599973843492,
+          "null_median": 0.38835047191936467,
+          "null_std": 0.1077588609807615,
+          "p_two_sided_vs_bootstrap": 0.2526,
+          "quran_rank_low_in_8_corpora": 8
+        },
+        "symmetry_score": {
+          "observed": 0.41896577694735787,
+          "null_median": 0.4179282039745409,
+          "null_std": 0.01835732409582214,
+          "p_two_sided_vs_bootstrap": 0.9506,
+          "quran_rank_low_in_8_corpora": 5
+        }
+      },
+      "extra": {
+        "pca_var_explained": [
+          0.1681861597863593,
+          0.10953185642911431,
+          0.09291278674623747,
+          0.07653458632776124,
+          0.06653536951414117
+        ],
+        "valid_count_per_corpus": {
+          "quran": 68,
+          "poetry_jahili": 133,
+          "poetry_islami": 465,
+          "poetry_abbasi": 2823,
+          "ksucca": 41,
+          "arabic_bible": 1183,
+          "hadith_bukhari": 95,
+          "hindawi": 74
+        }
+      }
+    }
+  },
+  "bhl_alpha_family_wise": 0.01,
+  "bhl_n_tests": 9,
+  "bhl_survivors": [
+    "raw_phi_m/linearity_westin",
+    "raw_phi_m/planarity_westin",
+    "raw_phi_m/symmetry_score"
+  ],
+  "survivors_by_embedding": {
+    "raw_phi_m": [
+      "linearity_westin",
+      "planarity_westin",
+      "symmetry_score"
+    ],
+    "whitened_phi_m": [],
+    "alphabet_freq_pca5": []
+  },
+  "survivors_by_descriptor": {
+    "linearity_westin": [
+      "raw_phi_m"
+    ],
+    "planarity_westin": [
+      "raw_phi_m"
+    ],
+    "symmetry_score": [
+      "raw_phi_m"
+    ]
+  },
+  "n_embeddings_with_ge2_desc_survivors": 1,
+  "alphabet_has_ge2_survivors": false,
+  "heatmap_png": "C:\\Users\\mtj_2\\OneDrive\\Desktop\\Quran\\results\\experiments\\exp164_quran_shape_embedding_sensitivity\\sensitivity_heatmap.png",
+  "heatmap_status": "ok"
+}

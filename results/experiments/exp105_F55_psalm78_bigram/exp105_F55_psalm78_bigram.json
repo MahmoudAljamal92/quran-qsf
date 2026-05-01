@@ -1,0 +1,172 @@
+{
+  "experiment": "exp105_F55_psalm78_bigram",
+  "hypothesis_id": "H60",
+  "hypothesis": "F55 analytic-bound bigram-shift detector (frozen tau = 2.0, no calibration) generalises off-shelf to Hebrew Tanakh Psalm 78 with per-variant recall = 1.000 and per-(canon, peer)-pair FPR = 0.000.",
+  "verdict": "PASS_universal_perfect_recall_zero_fpr",
+  "verdict_reason": "variant recall = 1.000000 >= 1.0 AND peer FPR = 0.000000 <= 0.0. F55 detector generalises off-shelf to Hebrew Tanakh Psalm 78.",
+  "started_at_utc": "2026-04-28T22:24:04.385097+00:00",
+  "completed_at_utc": "2026-04-28T22:24:06.010261+00:00",
+  "wall_time_s": 1.625164270401001,
+  "prereg_hash": "c4aad4f49c4fba7bc7cb4271bab211cc95e80e0f25dd38c6da561aa9f3ff55ca",
+  "prereg_expected_hash": "c4aad4f49c4fba7bc7cb4271bab211cc95e80e0f25dd38c6da561aa9f3ff55ca",
+  "prereg_document": "experiments/exp105_F55_psalm78_bigram/PREREG.md",
+  "amendment_chain": [
+    "exp95j_bigram_shift_universal (F55 PASS_universal_perfect_recall_zero_fpr on Quran V1)",
+    "exp105_F55_psalm78_bigram (this run; F55 -> Hebrew Psalm 78)"
+  ],
+  "frozen_constants": {
+    "SEED": 42,
+    "TAU_HIGH": 2.0,
+    "AUDIT_TOL": 1e-09,
+    "RECALL_FLOOR": 1.0,
+    "FPR_CEIL": 0.0,
+    "PARTIAL_FPR_BAND_HI": 0.05,
+    "LENGTH_MATCH_FRAC": 0.3,
+    "TARGET_BOOK": "תהלים",
+    "TARGET_CHAPTER": "עח",
+    "TARGET_MIN_LETTERS": 1000,
+    "TARGET_MIN_VERSES": 10,
+    "PEER_BOOKS": [
+      "בראשית",
+      "שמות",
+      "יהושע",
+      "שופטים",
+      "שמואל א",
+      "שמואל ב",
+      "מלכים א",
+      "מלכים ב"
+    ],
+    "TARGET_N_PEERS": 200,
+    "PEER_AUDIT_FLOOR": 100
+  },
+  "audit_report": {
+    "ok": true,
+    "checks": {
+      "n_chapters_total": 929,
+      "target_book": "תהלים",
+      "target_chapter": "עח",
+      "target_n_verses": 52,
+      "target_n_letters_22": 2384,
+      "target_n_chars_with_spaces": 2435,
+      "peer_pool_size": 114,
+      "peer_length_window": [
+        1668,
+        3099
+      ],
+      "max_variant_delta": 2.0,
+      "n_variants_total": 50064,
+      "n_variants_fired": 50064,
+      "n_variants_zero_delta": 0,
+      "n_variants_above_tau": 0,
+      "variant_recall": 1.0,
+      "min_peer_delta": 680.5,
+      "n_peer_pairs_total": 114,
+      "n_peer_pairs_fired": 0,
+      "peer_fpr": 0.0,
+      "five_closest_peers": [
+        {
+          "book": "יהושע",
+          "chapter": "ט",
+          "delta": 680.5
+        },
+        {
+          "book": "בראשית",
+          "chapter": "לז",
+          "delta": 692.5
+        },
+        {
+          "book": "שופטים",
+          "chapter": "ח",
+          "delta": 693.5
+        },
+        {
+          "book": "שמואל ב",
+          "chapter": "כא",
+          "delta": 705.5
+        },
+        {
+          "book": "שופטים",
+          "chapter": "ג",
+          "delta": 706.5
+        }
+      ],
+      "sentinel_determinism": "OK"
+    },
+    "warnings": [],
+    "errors": []
+  },
+  "pre_stage_diagnostic_receipt": "results/auxiliary/_psalm78_bigram_sizing.json",
+  "psalm_78": {
+    "book": "תהלים",
+    "chapter": "עח",
+    "n_verses": 52,
+    "n_letters_22": 2384
+  },
+  "peers_n": 114,
+  "peer_length_window": [
+    1668,
+    3099
+  ],
+  "peer_records_top10_closest": [
+    {
+      "book": "יהושע",
+      "chapter": "ט",
+      "n_letters_22": 1792,
+      "delta": 680.5
+    },
+    {
+      "book": "בראשית",
+      "chapter": "לז",
+      "n_letters_22": 2053,
+      "delta": 692.5
+    },
+    {
+      "book": "שופטים",
+      "chapter": "ח",
+      "n_letters_22": 2148,
+      "delta": 693.5
+    },
+    {
+      "book": "שמואל ב",
+      "chapter": "כא",
+      "n_letters_22": 1724,
+      "delta": 705.5
+    },
+    {
+      "book": "שופטים",
+      "chapter": "ג",
+      "n_letters_22": 1965,
+      "delta": 706.5
+    },
+    {
+      "book": "שופטים",
+      "chapter": "יט",
+      "n_letters_22": 2173,
+      "delta": 716.5
+    },
+    {
+      "book": "שמואל ב",
+      "chapter": "כג",
+      "n_letters_22": 1845,
+      "delta": 725.5
+    },
+    {
+      "book": "שמואל ב",
+      "chapter": "יז",
+      "n_letters_22": 2067,
+      "delta": 733.0
+    },
+    {
+      "book": "שמות",
+      "chapter": "יד",
+      "n_letters_22": 1935,
+      "delta": 733.0
+    },
+    {
+      "book": "שמואל א",
+      "chapter": "י",
+      "n_letters_22": 1820,
+      "delta": 735.5
+    }
+  ]
+}

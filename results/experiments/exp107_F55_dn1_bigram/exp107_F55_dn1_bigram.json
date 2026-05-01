@@ -1,0 +1,169 @@
+{
+  "experiment": "exp107_F55_dn1_bigram",
+  "hypothesis_id": "H62",
+  "hypothesis": "F55 analytic-bound bigram-shift detector (frozen tau = 2.0, no calibration) generalises off-shelf to Pali Digha Nikaya 1 (Brahmajala Sutta) with per-variant recall = 1.000 and per-(canon, peer)-pair FPR = 0.000 against the full DN+MN peer pool of all 185 other suttas.",
+  "verdict": "PASS_universal_perfect_recall_zero_fpr",
+  "verdict_reason": "variant recall = 1.000000 >= 1.0 AND peer FPR = 0.000000 <= 0.0. F55 detector generalises off-shelf to Pali Digha Nikaya 1.",
+  "started_at_utc": "2026-04-28T23:03:14.207048+00:00",
+  "completed_at_utc": "2026-04-28T23:03:25.408182+00:00",
+  "wall_time_s": 11.20113468170166,
+  "prereg_hash": "2bbb70ec86ebcd67f8779f0075293490de068554e4790081f65e046ee0a915fa",
+  "prereg_expected_hash": "2bbb70ec86ebcd67f8779f0075293490de068554e4790081f65e046ee0a915fa",
+  "prereg_document": "experiments/exp107_F55_dn1_bigram/PREREG.md",
+  "amendment_chain": [
+    "exp95j_bigram_shift_universal (F55 PASS_universal_perfect_recall_zero_fpr on Quran V1)",
+    "exp105_F55_psalm78_bigram (F59 PASS_universal_perfect_recall_zero_fpr on Hebrew Psalm 78)",
+    "exp106_F55_mark1_bigram (F60 PASS_universal_perfect_recall_zero_fpr on Greek NT Mark 1)",
+    "exp107_F55_dn1_bigram (this run; F55 -> Pali DN 1)"
+  ],
+  "frozen_constants": {
+    "SEED": 42,
+    "TAU_HIGH": 2.0,
+    "AUDIT_TOL": 1e-09,
+    "RECALL_FLOOR": 1.0,
+    "FPR_CEIL": 0.0,
+    "PARTIAL_FPR_BAND_HI": 0.05,
+    "TARGET_SUTTA_ID": "dn1",
+    "TARGET_COLLECTION": "dn",
+    "TARGET_MIN_LETTERS": 1000,
+    "TARGET_MIN_SEGMENTS": 10,
+    "ALPHABET_COVERAGE_FLOOR": 25,
+    "PEER_AUDIT_FLOOR": 100,
+    "PEER_POOL_STRATEGY": "all_other_dn_mn_suttas_no_length_matching",
+    "PALI_ALPHABET_31": "aāiīuūeokgṅcjñṭḍṇtdnpbmyrlḷvshṁ",
+    "N_SUBSTITUTIONS_PER_POS": 30,
+    "calibration_source": "frozen_analytic_theorem_no_data_calibration"
+  },
+  "audit_report": {
+    "ok": true,
+    "checks": {
+      "normaliser_sentinel": "OK",
+      "n_suttas_total": 186,
+      "n_dn": 34,
+      "n_mn": 152,
+      "target_sutta_id": "dn1",
+      "target_collection": "dn",
+      "target_n_segments": 662,
+      "target_n_letters": 60542,
+      "target_n_distinct_chars": 31,
+      "alphabet_coverage_ok": true,
+      "peer_pool_size": 185,
+      "peer_pool_strategy": "all_other_dn_mn_suttas_no_length_matching",
+      "max_variant_delta": 2.0,
+      "n_variants_total": 1816260,
+      "n_variants_fired": 1816260,
+      "n_variants_zero_delta": 0,
+      "n_variants_above_tau": 0,
+      "variant_recall": 1.0,
+      "min_peer_delta": 9867.0,
+      "n_peer_pairs_total": 185,
+      "n_peer_pairs_fired": 0,
+      "peer_fpr": 0.0,
+      "five_closest_peers": [
+        {
+          "collection": "dn",
+          "sutta_id": "dn2",
+          "n_letters": 55486,
+          "delta": 9867.0
+        },
+        {
+          "collection": "dn",
+          "sutta_id": "dn33",
+          "n_letters": 67849,
+          "delta": 11466.5
+        },
+        {
+          "collection": "dn",
+          "sutta_id": "dn34",
+          "n_letters": 46204,
+          "delta": 12298.0
+        },
+        {
+          "collection": "dn",
+          "sutta_id": "dn23",
+          "n_letters": 46158,
+          "delta": 12860.0
+        },
+        {
+          "collection": "dn",
+          "sutta_id": "dn24",
+          "n_letters": 40902,
+          "delta": 13426.0
+        }
+      ],
+      "sentinel_determinism": "OK"
+    },
+    "warnings": [],
+    "errors": []
+  },
+  "pre_stage_diagnostic_receipt": "results/auxiliary/_dn1_bigram_sizing.json",
+  "dn1": {
+    "collection": "dn",
+    "sutta_id": "dn1",
+    "n_segments": 662,
+    "n_letters": 60542
+  },
+  "peers_n": 185,
+  "peer_records_top10_closest": [
+    {
+      "collection": "dn",
+      "sutta_id": "dn2",
+      "n_letters": 55486,
+      "delta": 9867.0
+    },
+    {
+      "collection": "dn",
+      "sutta_id": "dn33",
+      "n_letters": 67849,
+      "delta": 11466.5
+    },
+    {
+      "collection": "dn",
+      "sutta_id": "dn34",
+      "n_letters": 46204,
+      "delta": 12298.0
+    },
+    {
+      "collection": "dn",
+      "sutta_id": "dn23",
+      "n_letters": 46158,
+      "delta": 12860.0
+    },
+    {
+      "collection": "dn",
+      "sutta_id": "dn24",
+      "n_letters": 40902,
+      "delta": 13426.0
+    },
+    {
+      "collection": "dn",
+      "sutta_id": "dn14",
+      "n_letters": 66357,
+      "delta": 13461.5
+    },
+    {
+      "collection": "mn",
+      "sutta_id": "mn85",
+      "n_letters": 36561,
+      "delta": 15328.5
+    },
+    {
+      "collection": "dn",
+      "sutta_id": "dn19",
+      "n_letters": 34794,
+      "delta": 15636.0
+    },
+    {
+      "collection": "mn",
+      "sutta_id": "mn77",
+      "n_letters": 32914,
+      "delta": 16055.0
+    },
+    {
+      "collection": "mn",
+      "sutta_id": "mn12",
+      "n_letters": 32778,
+      "delta": 16126.0
+    }
+  ]
+}

@@ -1,0 +1,403 @@
+{
+  "experiment": "exp159_paradigm_battery",
+  "schema_version": 1,
+  "hypothesis": "Five buried-finding promotions: A1 RQA chaos signature, A2 PC4+PC5 null subspace concentration, B1 VL_CV floor analytic match to 1/sqrt(26), B2 verse-length 1/f noise.",
+  "verdict": "BATTERY_FAIL_0_OF_4",
+  "components": {
+    "A1": "PARTIAL_ONE_NULL_ONLY",
+    "A2": "PARTIAL_FRACTION_OK_PERM_INDETERMINATE",
+    "B1": "FAIL_NO_ANALYTIC_MATCH_WITHIN_1PCT",
+    "B2": "FAIL_QURAN_NOT_PINK"
+  },
+  "completed_at_utc": "2026-04-30T20:38:19Z",
+  "wall_time_s": 184.30423617362976,
+  "frozen_constants": {
+    "RQA_M": 3,
+    "RQA_TAU": 1,
+    "RQA_REC_RATE": 0.05,
+    "RQA_LMIN": 2,
+    "RQA_NMAX": 1500,
+    "RQA_N_NULL": 80,
+    "RQA_N_IAAFT": 40,
+    "A2_BOTTOM_K": 2,
+    "A2_PASS_FRAC": 0.5,
+    "A2_PASS_VAR": 0.05,
+    "A2_N_PERM": 10000,
+    "B1_QURAN_PCT": 5,
+    "B1_PASS_REL_TOL": 0.01,
+    "B2_BAND_LO": 0.8,
+    "B2_BAND_HI": 1.2,
+    "SEED": 42
+  },
+  "results": {
+    "A1_rqa_chaos": {
+      "per_corpus": {
+        "quran": {
+          "N": 1498,
+          "RR": 0.06314453562220124,
+          "DET": 0.7522210138274883,
+          "LAM": 0.5346887755822658,
+          "L_mean": 3.3937424329318806,
+          "L_max": 43.0,
+          "ENTR": 1.5851361030012276,
+          "ar1_null": {
+            "n": 80,
+            "DET_mean": 0.6177229923109762,
+            "DET_std": 0.004682741648109079,
+            "z_DET": 28.72206746037832
+          },
+          "iaaft_null": {
+            "n": 40,
+            "DET_mean": 0.7243546305538665,
+            "DET_std": 0.03684458648272202,
+            "z_DET": 0.7563223239508878
+          }
+        },
+        "poetry_jahili": {
+          "N": 1498,
+          "RR": 0.7505451490430795,
+          "DET": 0.9945053835121104,
+          "LAM": 0.9986180279032406,
+          "L_mean": 10.35019354200418,
+          "L_max": 90.0,
+          "ENTR": 3.1104511889318136,
+          "ar1_null": {
+            "n": 50,
+            "DET_mean": 0.6010204162797923,
+            "DET_std": 0.004851670540174817,
+            "z_DET": 81.10298586312085
+          },
+          "iaaft_null": {
+            "n": 30,
+            "DET_mean": 0.9926953209097592,
+            "DET_std": 0.0022736215964885903,
+            "z_DET": 0.7961142721139935
+          }
+        },
+        "poetry_islami": {
+          "N": 1498,
+          "RR": 0.7368943494465566,
+          "DET": 0.9938989040780882,
+          "LAM": 0.9983709432432268,
+          "L_mean": 9.866801235146403,
+          "L_max": 133.0,
+          "ENTR": 2.9637515285184057,
+          "ar1_null": {
+            "n": 50,
+            "DET_mean": 0.6005449584878704,
+            "DET_std": 0.004807840753277775,
+            "z_DET": 81.81509450412774
+          },
+          "iaaft_null": {
+            "n": 30,
+            "DET_mean": 0.9936243388865702,
+            "DET_std": 0.002461583226979165,
+            "z_DET": 0.111540080590723
+          }
+        },
+        "poetry_abbasi": {
+          "N": 1498,
+          "RR": 0.6899406289213942,
+          "DET": 0.9904394789024791,
+          "LAM": 0.9976977706767598,
+          "L_mean": 8.04867851590403,
+          "L_max": 89.0,
+          "ENTR": 2.800891031305927,
+          "ar1_null": {
+            "n": 50,
+            "DET_mean": 0.6009845198740662,
+            "DET_std": 0.004885273372201513,
+            "z_DET": 79.720197695489
+          },
+          "iaaft_null": {
+            "n": 30,
+            "DET_mean": 0.9958701266448817,
+            "DET_std": 0.0023825356927351057,
+            "z_DET": -2.279356300500317
+          }
+        },
+        "ksucca": {
+          "N": 1498,
+          "RR": 0.052203204807478774,
+          "DET": 0.7266328395947586,
+          "LAM": 0.6012676609775682,
+          "L_mean": 3.1844863731656186,
+          "L_max": 34.0,
+          "ENTR": 1.4747678501056005,
+          "ar1_null": {
+            "n": 50,
+            "DET_mean": 0.6033612727701287,
+            "DET_std": 0.004787642128740725,
+            "z_DET": 25.747865757262325
+          },
+          "iaaft_null": {
+            "n": 30,
+            "DET_mean": 0.6534757063810288,
+            "DET_std": 0.012370413283125641,
+            "z_DET": 5.913879475112013
+          }
+        },
+        "arabic_bible": {
+          "N": 1498,
+          "RR": 0.07864683528160014,
+          "DET": 0.6879443883741764,
+          "LAM": 0.3096855402968826,
+          "L_mean": 2.80181969333087,
+          "L_max": 13.0,
+          "ENTR": 1.2378154178129392,
+          "ar1_null": {
+            "n": 50,
+            "DET_mean": 0.6051592357494362,
+            "DET_std": 0.005543389843817815,
+            "z_DET": 14.934030432130822
+          },
+          "iaaft_null": {
+            "n": 30,
+            "DET_mean": 0.6715308503115224,
+            "DET_std": 0.03404640276403613,
+            "z_DET": 0.4820931649199643
+          }
+        },
+        "hindawi": {
+          "N": 1498,
+          "RR": 0.08802473661163003,
+          "DET": 0.6849581551804494,
+          "LAM": 0.4978824292285558,
+          "L_mean": 2.77896986886998,
+          "L_max": 15.0,
+          "ENTR": 1.2190758857171393,
+          "ar1_null": {
+            "n": 50,
+            "DET_mean": 0.5993906113167635,
+            "DET_std": 0.004441964863536726,
+            "z_DET": 19.263444554929773
+          },
+          "iaaft_null": {
+            "n": 30,
+            "DET_mean": 0.688788551424117,
+            "DET_std": 0.015174798256265016,
+            "z_DET": -0.25241826474273815
+          }
+        },
+        "hadith_bukhari": {
+          "N": 1498,
+          "RR": 0.05316106177642334,
+          "DET": 0.6380123139899676,
+          "LAM": 0.4148170516885601,
+          "L_mean": 2.6672745125543553,
+          "L_max": 13.0,
+          "ENTR": 1.1214439516299586,
+          "ar1_null": {
+            "n": 50,
+            "DET_mean": 0.6010821893326244,
+            "DET_std": 0.005286128349478371,
+            "z_DET": 6.986233064315865
+          },
+          "iaaft_null": {
+            "n": 30,
+            "DET_mean": 0.6233124156024968,
+            "DET_std": 0.011316024705622735,
+            "z_DET": 1.299033783495245
+          }
+        },
+        "iliad_greek": {
+          "N": 1498,
+          "RR": 0.20486812521348885,
+          "DET": 0.8374290950724612,
+          "LAM": 0.5139067254656979,
+          "L_mean": 3.475177945586588,
+          "L_max": 29.0,
+          "ENTR": 1.6694787699693525,
+          "ar1_null": {
+            "n": 50,
+            "DET_mean": 0.6013514130553103,
+            "DET_std": 0.004870155339763096,
+            "z_DET": 48.474363864671865
+          },
+          "iaaft_null": {
+            "n": 30,
+            "DET_mean": 0.8313502066032743,
+            "DET_std": 0.01144045771748147,
+            "z_DET": 0.5313501102231369
+          }
+        }
+      },
+      "verdicts": {
+        "ar1_z_quran": 28.72206746037832,
+        "iaaft_z_quran": 0.7563223239508878,
+        "ar1_z_pass": true,
+        "iaaft_z_pass": false,
+        "quran_DET_rank1_pass": false
+      },
+      "component_verdict": "PARTIAL_ONE_NULL_ONLY"
+    },
+    "A2_pc4_pc5_subspace": {
+      "eigvals": [
+        0.2743866793683146,
+        0.05936872189555246,
+        0.024597709098589483,
+        0.0044601872951787165,
+        0.0015828208920877476
+      ],
+      "var_explained": [
+        0.7529901264051847,
+        0.16292358472926874,
+        0.06750266494738484,
+        0.012239941832887853,
+        0.004343682085273822
+      ],
+      "cum_var_explained": [
+        0.7529901264051847,
+        0.9159137111344534,
+        0.9834163760818383,
+        0.9956563179147262,
+        1.0
+      ],
+      "quran_centroid_proj_sq_per_pc": [
+        11.50978352813746,
+        16.64752667077853,
+        0.1641525244848123,
+        30.93543225445404,
+        2.3601291043130517
+      ],
+      "T2_total": 61.617024082167895,
+      "bottom_k": 2,
+      "bottom_T2": 33.29556135876709,
+      "bottom_var_frac": 0.016583623918161674,
+      "fraction_T2_in_bottom_k": 0.5403630223096558,
+      "perm_null": {
+        "n_perm": 10000,
+        "perm_frac_mean": 0.3961282799452358,
+        "perm_frac_std": 0.262394889197529,
+        "perm_frac_max": 0.9974094544449044,
+        "p_perm": 0.3084691530846915
+      },
+      "verdicts": {
+        "fraction_pass": true,
+        "variance_pass": true,
+        "perm_pass": false
+      },
+      "component_verdict": "PARTIAL_FRACTION_OK_PERM_INDETERMINATE"
+    },
+    "B1_vlcv_floor_inv_sqrt_26": {
+      "observed_quran_VL_CV_p5": 0.3039669625429911,
+      "n_quran_units": 68,
+      "candidates": {
+        "1/sqrt(26)": {
+          "value": 0.19611613513818404,
+          "rel_err": 0.5499334734942386
+        },
+        "1/sqrt(28)": {
+          "value": 0.1889822365046136,
+          "rel_err": 0.6084419793368802
+        },
+        "1/sqrt(25)": {
+          "value": 0.2,
+          "rel_err": 0.5198348127149555
+        },
+        "sqrt((26-1)/26^2)": {
+          "value": 0.19230769230769232,
+          "rel_err": 0.5806282052235536
+        },
+        "discrete_uniform_CV_N26": {
+          "value": 0.5555555555555556,
+          "rel_err": 0.452859467422616
+        }
+      },
+      "best_match": "discrete_uniform_CV_N26",
+      "best_rel_err": 0.452859467422616,
+      "tolerance": 0.01,
+      "component_verdict": "FAIL_NO_ANALYTIC_MATCH_WITHIN_1PCT",
+      "analytic_derivation_note": "Candidate 1/sqrt(26): for a verse-LENGTH process whose mean per unit is bounded above by the consonantal-phoneme cardinality N=26 (28 abjad letters minus hamza diacritic minus alif vowel-carrier), a Poisson(lambda=N) length distribution has asymptotic CV = 1/sqrt(lambda) = 1/sqrt(26). The Quran's 5th-percentile (most-rhythmically-locked) units approach this floor; controls do not because their length distributions are not phoneme-cardinality-locked. The 1/sqrt(26) match is necessary, not sufficient: a falsifying control corpus would also have to show p5(VL_CV) ~ 0.196."
+    },
+    "B2_one_over_f": {
+      "per_corpus": {
+        "quran": {
+          "alpha": 0.2548704760353762,
+          "R2": 0.07895205856989555,
+          "n_points": 623,
+          "f_min": 0.0006414368184733803,
+          "f_max": 0.4996792815907633,
+          "N": 6236,
+          "in_pink_band": false
+        },
+        "poetry_jahili": {
+          "alpha": -0.10842639032267119,
+          "R2": 0.021157845811217074,
+          "n_points": 256,
+          "f_min": 0.0015625,
+          "f_max": 0.5,
+          "N": 2561,
+          "in_pink_band": false
+        },
+        "poetry_islami": {
+          "alpha": -0.13476865117576448,
+          "R2": 0.03061865662700629,
+          "n_points": 1028,
+          "f_min": 0.000388651379712398,
+          "f_max": 0.4998056743101438,
+          "N": 10295,
+          "in_pink_band": false
+        },
+        "poetry_abbasi": {
+          "alpha": -0.12710409282228094,
+          "R2": 0.027827251948403086,
+          "n_points": 7648,
+          "f_min": 5.229031583350764e-05,
+          "f_max": 0.5,
+          "N": 76499,
+          "in_pink_band": false
+        },
+        "ksucca": {
+          "alpha": 0.056324132897277016,
+          "R2": 0.005257907668241265,
+          "n_points": 195,
+          "f_min": 0.002036659877800407,
+          "f_max": 0.4989816700610997,
+          "N": 1967,
+          "in_pink_band": false
+        },
+        "arabic_bible": {
+          "alpha": -0.042115497044864926,
+          "R2": 0.0033806425446961702,
+          "n_points": 3107,
+          "f_min": 0.0001287001287001287,
+          "f_max": 0.49999999999999994,
+          "N": 31083,
+          "in_pink_band": false
+        },
+        "hindawi": {
+          "alpha": -0.14718029332274382,
+          "R2": 0.04135429629451889,
+          "n_points": 178,
+          "f_min": 0.002232142857142857,
+          "f_max": 0.5,
+          "N": 1793,
+          "in_pink_band": false
+        },
+        "hadith_bukhari": {
+          "alpha": 0.08271023081906786,
+          "R2": 0.010271090014502904,
+          "n_points": 726,
+          "f_min": 0.000550357732526142,
+          "f_max": 0.4997248211337369,
+          "N": 7271,
+          "in_pink_band": false
+        },
+        "iliad_greek": {
+          "alpha": -0.037643389657419216,
+          "R2": 0.002754955265165772,
+          "n_points": 1568,
+          "f_min": 0.0002550369803621525,
+          "f_max": 0.4998724815098189,
+          "N": 15687,
+          "in_pink_band": false
+        }
+      },
+      "quran_alpha": 0.2548704760353762,
+      "quran_in_pink_band": false,
+      "n_ctrl_in_pink_band": 0,
+      "component_verdict": "FAIL_QURAN_NOT_PINK"
+    }
+  }
+}

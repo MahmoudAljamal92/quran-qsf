@@ -1,0 +1,108 @@
+{
+  "audit_summary": "Apples-to-apples coverage audit of recent (exp109..119) experiments.",
+  "verdict_table": [
+    {
+      "experiment": "exp109_phi_universal_xtrad",
+      "n_quran": "all_114",
+      "n_peer": "all_chapters_per_corpus",
+      "comparison_style": "chapter-vs-chapter",
+      "flag": "PASS",
+      "verdict": "PASS_quran_rhyme_extremum_cross_tradition",
+      "note": "Universal 5-D features, median per corpus"
+    },
+    {
+      "experiment": "exp110_phi_master_xtrad",
+      "n_quran": "all_114",
+      "n_peer": "all_chapters_per_corpus",
+      "comparison_style": "chapter-vs-chapter",
+      "flag": "PASS",
+      "verdict": "FAIL_quran_not_argmax",
+      "note": "3-term Φ_master cross-tradition (FN12 NULL pre-reg)"
+    },
+    {
+      "experiment": "exp111_F63_rigveda_falsification",
+      "n_quran": "all_114",
+      "n_peer": "rigveda_all_suktas",
+      "comparison_style": "chapter-vs-chapter",
+      "flag": "PASS",
+      "verdict": "PASS_quran_rhyme_extremum_xtrad_with_rigveda",
+      "note": "Rigveda added; F63 perm-null"
+    },
+    {
+      "experiment": "exp112_F55_daodejing_bigram",
+      "n_quran": "all_114",
+      "n_peer": "daodejing_all_chapters",
+      "comparison_style": "F55 same-corpus FPR",
+      "flag": "PASS",
+      "verdict": "PASS_universal_perfect_recall_zero_fpr",
+      "note": "Dao De Jing F55 control"
+    },
+    {
+      "experiment": "exp113_joint_extremality_3way",
+      "n_quran": "all_114",
+      "n_peer": "5_canons_chapter_aggregated",
+      "comparison_style": "Borda + 3-axis multivariate",
+      "flag": "PASS",
+      "verdict": "PASS_quran_jointly_extremal_2way_F55_F63",
+      "note": "Quran:Q:100, Tanakh:Psalm78, NT:Mark1, Pali:DN1, Avestan:Y28"
+    },
+    {
+      "experiment": "exp114_alphabet_independent_pmax",
+      "n_quran": "all_114",
+      "n_peer": "12_corpora_aggregated",
+      "comparison_style": "alphabet-normalized R_HEL",
+      "flag": "WARN",
+      "verdict": "FAIL_audit_perm_p_floor_at_1_over_N",
+      "note": "Per-corpus aggregate p_max not per-chapter; FN13 perm-p saturated"
+    },
+    {
+      "experiment": "exp115_C_Omega_single_constant",
+      "n_quran": "all_114",
+      "n_peer": "12_corpora_aggregated",
+      "comparison_style": "C_Ω single number per corpus",
+      "flag": "PASS",
+      "verdict": "PASS_quran_unique_C_Omega_max",
+      "note": "All 12 corpora at corpus level"
+    },
+    {
+      "experiment": "exp116_RG_scaling_collapse",
+      "n_quran": "all_114",
+      "n_peer": "all_arabic_peers",
+      "comparison_style": "scale-by-scale slope",
+      "flag": "PASS",
+      "verdict": "PASS_quran_distinctive_scaling_only",
+      "note": "RG slopes per corpus across L=1,2,4,8,16"
+    },
+    {
+      "experiment": "exp117_verse_reorder_detector",
+      "n_quran": "all_114",
+      "n_peer": "F68_internal",
+      "comparison_style": "Quran-only sequence test",
+      "flag": "WARN",
+      "verdict": "PARTIAL_PASS_form4_combined_close_to_recall_floor",
+      "note": "Self-test only; no peer corpus comparison by design"
+    },
+    {
+      "experiment": "exp118_multi_letter_F55_theorem",
+      "n_quran": "all_114",
+      "n_peer": "6_arabic_peers_4719_chapters",
+      "comparison_style": "k-letter recall + peer FPR",
+      "flag": "PASS",
+      "verdict": "PASS_F55_multi_k_universal",
+      "note": "114k variants per k × 5 k values; full Arabic peer pool"
+    },
+    {
+      "experiment": "exp119_universal_F55_scope",
+      "n_quran": "all_114",
+      "n_peer": "5_traditions_full_chapter_pool",
+      "comparison_style": "alphabet-independent recall + within-corpus FPR",
+      "flag": "PASS",
+      "verdict": "PASS_F55_universal_across_5_traditions",
+      "note": "Quran 114, Tanakh 921, NT 260, Pali 186, Rigveda 1011"
+    }
+  ],
+  "n_pass": 9,
+  "n_warn": 2,
+  "n_fail": 0,
+  "missing_receipts": []
+}

@@ -1,0 +1,27 @@
+{
+  "experiment": "expP10_hadith_N1_prereg",
+  "prereg_sha256": "04692dfaca2880a02b709a90ecb8f426d34873404519aa70770be7bcf0507f73",
+  "n_quran": 114,
+  "n_ctrl": 4719,
+  "n_hadith": 95,
+  "el_quran_mean": 0.7062633038455213,
+  "el_quran_std": 0.22171478151839846,
+  "el_hadith_mean": 0.1570079320199233,
+  "el_hadith_std": 0.11133322439485514,
+  "el_ctrl_mean": 0.1076827432185091,
+  "el_ctrl_std": 0.10519639508431845,
+  "boundary_w": 7.2131143241057565,
+  "boundary_b": -2.442623116917159,
+  "boundary_el_threshold": 0.3386364068505156,
+  "auc_train_quran_vs_arabic_ctrl": 0.9813473342181476,
+  "auc_holdout_quran_vs_hadith": 0.9718374884579873,
+  "auc_holdout_quran_vs_hadith_ci": {
+    "median": 0.9723453370267775,
+    "ci_lo": 0.9471260387811635,
+    "ci_hi": 0.9914704524469067,
+    "n_valid": 500
+  },
+  "mw_p_quran_gt_hadith": 4.047385290511882e-32,
+  "verdict": "PASS_STRONG",
+  "wall_time_s": 8.050833463668823
+}

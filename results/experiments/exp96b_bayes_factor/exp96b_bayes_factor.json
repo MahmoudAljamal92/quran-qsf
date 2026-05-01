@@ -1,0 +1,105 @@
+{
+  "experiment": "exp96b_bayes_factor",
+  "schema_version": "1.0",
+  "hypothesis": "H50",
+  "verdict": "PASS_robust_oos_locked",
+  "prereg_hash_expected": "39d6d977d964e1d4c1319edbc62fba9826ea41f0937206d98d4ff25a26af150a",
+  "prereg_hash_actual": "39d6d977d964e1d4c1319edbc62fba9826ea41f0937206d98d4ff25a26af150a",
+  "frozen_constants": {
+    "MIN_VERSES": 2,
+    "ARABIC_CTRL": [
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "N_BOOT": 500,
+    "RNG_SEED": 96100,
+    "PHI_MASTER_HEADLINE": 1862.31,
+    "LOCO_MIN_FLOOR": 1500.0,
+    "BOOT_P05_FLOOR": 1500.0
+  },
+  "source_receipts": {
+    "exp96a_phi_master": "ab816b3e81bd1bfc7be0bb349ee4e3e49b7db56f288ac7c792ecc861d847db3e"
+  },
+  "n_quran_units": 114,
+  "n_ctrl_units": 4719,
+  "T_other_sum_nats_from_exp96a": 19.586188052893526,
+  "headline_full_pool": {
+    "T2": 3685.451465159369,
+    "T1_nats": 1842.7257325796845,
+    "phi_master_nats": 1862.311920632578,
+    "log10_bayes_factor": 808.7917907133752
+  },
+  "loco": {
+    "poetry_jahili": {
+      "n_held_out": 133,
+      "n_remaining": 4586,
+      "T2": 3666.5226149068417,
+      "T1_nats": 1833.2613074534208,
+      "phi_master_nats": 1852.8474955063143,
+      "log10_bayes_factor": 804.6814431066524
+    },
+    "poetry_islami": {
+      "n_held_out": 465,
+      "n_remaining": 4254,
+      "T2": 3633.638124777361,
+      "T1_nats": 1816.8190623886805,
+      "phi_master_nats": 1836.405250441574,
+      "log10_bayes_factor": 797.5406668049347
+    },
+    "poetry_abbasi": {
+      "n_held_out": 2823,
+      "n_remaining": 1896,
+      "T2": 3229.802379826512,
+      "T1_nats": 1614.901189913256,
+      "phi_master_nats": 1634.4873779661496,
+      "log10_bayes_factor": 709.8488489912133
+    },
+    "ksucca": {
+      "n_held_out": 41,
+      "n_remaining": 4678,
+      "T2": 3768.718449418334,
+      "T1_nats": 1884.359224709167,
+      "phi_master_nats": 1903.9454127620604,
+      "log10_bayes_factor": 826.8729866075719
+    },
+    "arabic_bible": {
+      "n_held_out": 1183,
+      "n_remaining": 3536,
+      "T2": 3942.7622252984456,
+      "T1_nats": 1971.3811126492228,
+      "phi_master_nats": 1990.9673007021163,
+      "log10_bayes_factor": 864.6661123447414
+    },
+    "hindawi": {
+      "n_held_out": 74,
+      "n_remaining": 4645,
+      "T2": 3640.1840589132403,
+      "T1_nats": 1820.0920294566201,
+      "phi_master_nats": 1839.6782175095136,
+      "log10_bayes_factor": 798.9620983419919
+    }
+  },
+  "loco_summary": {
+    "phi_master_min_nats": 1634.4873779661496,
+    "phi_master_median_nats": 1846.262856507914,
+    "phi_master_max_nats": 1990.9673007021163,
+    "n_splits": 6
+  },
+  "bootstrap": {
+    "n_boot": 500,
+    "n_valid": 500,
+    "n_failed": 0,
+    "phi_master_p05_nats": 1759.7194921104053,
+    "phi_master_p50_nats": 1870.7710622440472,
+    "phi_master_p95_nats": 1975.0270085408729,
+    "phi_master_log10_BF_p05": 764.2364651211418,
+    "phi_master_log10_BF_p50": 812.4655492368745,
+    "phi_master_log10_BF_p95": 857.7433314191876
+  },
+  "audit_failures": [],
+  "wall_time_s": 11.39553689956665
+}

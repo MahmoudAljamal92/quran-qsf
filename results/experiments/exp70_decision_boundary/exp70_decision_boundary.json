@@ -1,0 +1,127 @@
+{
+  "experiment": "exp70_decision_boundary",
+  "hypothesis": "H12 — (T, EL) decision boundary as maximum-margin hyperplane",
+  "schema_version": 1,
+  "data": {
+    "n_quran_bandA": 68,
+    "n_ctrl_bandA": 2509,
+    "features": [
+      "T",
+      "EL"
+    ],
+    "T_idx": 4,
+    "EL_idx": 0
+  },
+  "svm": {
+    "C": 1.0,
+    "kernel": "linear",
+    "equation_raw": {
+      "w_T": 0.53287672,
+      "w_EL": 4.17895492,
+      "b": -1.52208663,
+      "form": "w_T*T + w_EL*EL + b = 0"
+    },
+    "equation_normalised": {
+      "w_hat_T": 0.12649014,
+      "w_hat_EL": 0.99196786,
+      "d": 0.3613011,
+      "form": "w_hat_T*T + w_hat_EL*EL = d"
+    },
+    "polar": {
+      "theta_deg": 82.7332,
+      "d": 0.361301
+    },
+    "margin": 0.474744,
+    "w_norm": 4.212793,
+    "n_support_vectors": {
+      "quran": 34,
+      "ctrl": 34
+    },
+    "accuracy": 0.9915,
+    "auc": 0.9975,
+    "quran_correct": 53,
+    "quran_total": 68
+  },
+  "bootstrap": {
+    "n_boot": 10000,
+    "theta": {
+      "median": 82.654,
+      "ci_lo": 78.4457,
+      "ci_hi": 86.815
+    },
+    "d": {
+      "median": 0.3506,
+      "ci_lo": 0.2524,
+      "ci_hi": 0.486
+    },
+    "margin": {
+      "median": 0.4685,
+      "ci_lo": 0.4148,
+      "ci_hi": 0.5665
+    }
+  },
+  "logistic_regression": {
+    "w_T": 2.24101974,
+    "w_EL": 5.61666586,
+    "b": -0.93763595,
+    "theta_deg": 68.2483,
+    "accuracy": 0.9895,
+    "auc": 0.9948
+  },
+  "per_corpus": {
+    "poetry_jahili": {
+      "n": 65,
+      "mean_dist": -0.5893,
+      "min_dist": -0.7638,
+      "n_quran_side": 0,
+      "pct_quran_side": 0.0
+    },
+    "poetry_islami": {
+      "n": 211,
+      "mean_dist": -0.579,
+      "min_dist": -0.7846,
+      "n_quran_side": 0,
+      "pct_quran_side": 0.0
+    },
+    "poetry_abbasi": {
+      "n": 1167,
+      "mean_dist": -0.5935,
+      "min_dist": -0.8134,
+      "n_quran_side": 0,
+      "pct_quran_side": 0.0
+    },
+    "ksucca": {
+      "n": 19,
+      "mean_dist": -0.4746,
+      "min_dist": -0.6516,
+      "n_quran_side": 0,
+      "pct_quran_side": 0.0
+    },
+    "arabic_bible": {
+      "n": 977,
+      "mean_dist": -0.5125,
+      "min_dist": -0.7723,
+      "n_quran_side": 7,
+      "pct_quran_side": 0.7
+    },
+    "hindawi": {
+      "n": 70,
+      "mean_dist": -0.6266,
+      "min_dist": -0.7942,
+      "n_quran_side": 0,
+      "pct_quran_side": 0.0
+    }
+  },
+  "quran_side": {
+    "mean_dist": 0.2794,
+    "min_dist": -0.3652,
+    "n_correct": 53
+  },
+  "feature_stats": {
+    "quran_T_mean": -0.4824,
+    "quran_EL_mean": 0.7074,
+    "ctrl_T_mean": -2.4449,
+    "ctrl_EL_mean": 0.1108
+  },
+  "runtime_seconds": 63.0
+}

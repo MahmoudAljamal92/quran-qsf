@@ -1,0 +1,55 @@
+{
+  "experiment": "expP9_v79_batch_diagnostics",
+  "schema_version": 1,
+  "prereg_document": "experiments/expP9_v79_batch_diagnostics/PREREG.md",
+  "prereg_hash": "b7978038e65ee5718141f9440a4b53d0dddf60e4e972e260e4be45c43ebecc0f",
+  "frozen_constants": {
+    "seed": 42,
+    "min_verses": 2,
+    "n_boot_auc": 500,
+    "n_boot_renyi2": 10000,
+    "n_sim_bag": 5000,
+    "corruption_levels": [
+      0.01,
+      0.05,
+      0.1,
+      0.2,
+      0.5
+    ],
+    "el_boundary": 0.314,
+    "arabic_ctrl": [
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "non_arabic": [
+      "hebrew_tanakh",
+      "greek_nt",
+      "iliad_greek",
+      "pali_dn",
+      "pali_mn",
+      "rigveda",
+      "avestan_yasna"
+    ],
+    "band_a": [
+      15,
+      100
+    ]
+  },
+  "payload_tag": "expC1plus_v2_per_surah",
+  "n_band_a_surahs": 68,
+  "mean_sum_p2": 0.5410606734830035,
+  "median_sum_p2_observed": 0.4564197530864198,
+  "median_bootstrap_ci_95": [
+    0.3655357142857143,
+    0.6571745562130178
+  ],
+  "half_in_median_ci_95": true,
+  "sqrt_mean_sum_p2": 0.7355682656851119,
+  "one_over_sqrt_2": 0.7071067811865475,
+  "gap_to_one_over_sqrt_2": 0.02846148449856445,
+  "verdict": "PASS_at_half"
+}

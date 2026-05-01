@@ -1,0 +1,85 @@
+{
+  "exp": "exp18_R10_verse_internal_order",
+  "schema_version": 3,
+  "seed": 42,
+  "fast_mode": true,
+  "runtime_seconds": 50.47,
+  "n_perm": 200,
+  "min_words_for_headline": 5,
+  "null_baseline_alpha": 0.05,
+  "per_corpus": {
+    "quran": {
+      "sig_rate": 0.025,
+      "sig_rate_calibrated": 0.0,
+      "n_verses": 80,
+      "short_verses_sig_rate": 0.0,
+      "short_verses_sig_rate_calibrated": 0.0,
+      "n_short_verses": 80
+    },
+    "poetry_jahili": {
+      "sig_rate": 0.0125,
+      "sig_rate_calibrated": 0.0,
+      "n_verses": 80,
+      "short_verses_sig_rate": 0.0,
+      "short_verses_sig_rate_calibrated": 0.0,
+      "n_short_verses": 37
+    },
+    "poetry_islami": {
+      "sig_rate": 0.0125,
+      "sig_rate_calibrated": 0.0,
+      "n_verses": 80,
+      "short_verses_sig_rate": 0.0,
+      "short_verses_sig_rate_calibrated": 0.0,
+      "n_short_verses": 80
+    },
+    "poetry_abbasi": {
+      "sig_rate": 0.0,
+      "sig_rate_calibrated": 0.0,
+      "n_verses": 80,
+      "short_verses_sig_rate": 0.0,
+      "short_verses_sig_rate_calibrated": 0.0,
+      "n_short_verses": 80
+    },
+    "ksucca": {
+      "sig_rate": 0.0,
+      "sig_rate_calibrated": 0.0,
+      "n_verses": 80,
+      "short_verses_sig_rate": 0.0,
+      "short_verses_sig_rate_calibrated": 0.0,
+      "n_short_verses": 26
+    },
+    "arabic_bible": {
+      "sig_rate": 0.0,
+      "sig_rate_calibrated": 0.0,
+      "n_verses": 80,
+      "short_verses_sig_rate": 0.0,
+      "short_verses_sig_rate_calibrated": 0.0,
+      "n_short_verses": 80
+    },
+    "hadith_bukhari": {
+      "sig_rate": 0.0,
+      "sig_rate_calibrated": 0.0,
+      "n_verses": 80,
+      "short_verses_sig_rate": 0.0,
+      "short_verses_sig_rate_calibrated": 0.0,
+      "n_short_verses": 0
+    },
+    "hindawi": {
+      "sig_rate": 0.0375,
+      "sig_rate_calibrated": 0.0,
+      "n_verses": 80,
+      "short_verses_sig_rate": 0.0,
+      "short_verses_sig_rate_calibrated": 0.0,
+      "n_short_verses": 80
+    },
+    "iliad_greek": {
+      "sig_rate": 0.0,
+      "sig_rate_calibrated": 0.0,
+      "n_verses": 0,
+      "short_verses_sig_rate": 0.0,
+      "short_verses_sig_rate_calibrated": 0.0,
+      "n_short_verses": 0
+    }
+  },
+  "verdict_expected": "Quran sig_rate_calibrated above all Arabic controls"
+}

@@ -1,0 +1,92 @@
+{
+  "experiment": "expParadigm2_info_theoretic_derivation",
+  "task_id": "Paradigm-Stage 2 (Day-1 MVP)",
+  "title": "Information-theoretic re-formulation of (EL, T, Φ_M) as known info-theoretic objects + numerical equivalence checks + research scaffold for the full multi-year derivation.",
+  "scope": "DAY-1 MVP. NOT a full proof. Provides: (i) axioms for what the derivation should establish, (ii) info-theoretic re-formulations with closed-form connections, (iii) numerical equivalence checks on Quran data, (iv) named open problems with effort estimates.",
+  "axioms": [
+    "AXIOM A1: EL ≥ collision_probability_iid(terminal_letter marginal) ; equality iff verse-end-letters are mutually independent. The 'rhyme-information rate' = log2(EL) - log2(EL_iid) = H_2(p_iid) - H_2(p_actual) > 0 quantifies sajʿ-induced concentration.",
+    "AXIOM A2: T is a Shannon-entropy gap H(deep_transitions) - H(surface_rhymes). It is BY CONSTRUCTION an info-theoretic object; the open problem is OPTIMALITY of THIS particular pairing.",
+    "AXIOM A3: Φ_M = 2 n_eff KL_Gaussian under equal-covariance Gaussian approximation. Exact, no approximation in the relationship; the approximation is in assuming Quran and ctrl-pool are Gaussian."
+  ],
+  "reformulation_1_EL_to_Renyi2": {
+    "axiom": "AXIOM A1 (Rhyme-information): the canonical-text rhyme rate EL is bounded below by the iid collision probability of the marginal terminal-letter distribution; the gap (EL - sum p_L^2) quantifies the rhyme-induced concentration of probability mass in the joint adjacent-pair distribution.",
+    "claim": "EL ↔ exp(-H_2 ln 2)  where H_2 is the Rényi-2 entropy of the terminal-letter distribution; specifically EL_iid = 2^{-H_2}.",
+    "n_distinct_terminal_letters": 28,
+    "marginal_collision_prob_iid_sum_p2": 0.29455614958520543,
+    "H_2_terminal_letters_bits": 1.7633854217596243,
+    "EL_pool_observed_within_surah": 0.7306435805292388,
+    "n_match": 4473,
+    "n_pairs": 6122,
+    "rhyme_excess_EL_minus_sum_p2": 0.4360874309440334,
+    "H_2_via_EL_pool_bits": 0.452760286522393,
+    "H_2_via_iid_baseline_bits": 1.7633854217596254,
+    "delta_H2_rhyme_vs_iid_bits": 1.3106251352372325,
+    "interpretation": "The 'rhyme-information rate' = H2_iid - H2_via_EL_pool > 0 captures how much extra Rényi-2 concentration the canonical rhyme structure produces beyond the iid baseline. The Quran's sajʿ would manifest as a positive rhyme_excess and a positive delta_H2_rhyme_vs_iid_bits."
+  },
+  "reformulation_2_T_to_entropy_gap": {
+    "axiom": "AXIOM A2 (Tension as entropy gap): a stylometrically distinctive text exhibits a positive entropy gap between deep-structural transitions (root-to-root) and surface constraints (end-letter rhyme). Specifically, T = H_cond(root_transition) - H(end_letter) > 0 means the root graph carries strictly more uncertainty than the rhyme lattice — the text is morphologically richer than its surface rhymes suggest.",
+    "claim": "T is, by direct construction in src/features.py:t_tension, the difference of two Shannon entropies in bits. Its information-theoretic re-formulation is therefore TRIVIAL (it already IS a bits-difference). What requires DERIVATION (Paradigm-Stage 2 OPEN problem #2) is showing that this particular gap is OPTIMAL among the family of {H(deep) - H(surface)} differences for distinguishing the Quran from secular Arabic.",
+    "Band_A_T_summary": {
+      "n_band_a": 68,
+      "T_mean": -0.4824027504870459,
+      "T_median": -0.7073794239919595,
+      "T_sd": 1.0511702346066072,
+      "T_pct_pos": 0.39705882352941174,
+      "H_cond_mean": 0.8671010277271483,
+      "EL_mean": 0.7074338713106891
+    },
+    "interpretation": "Quran T_mean ≈ 0 with pct_pos ≈ 39.7 % vs secular-Arabic max pct_pos ≈ 0.10 % (the 400× ratio in S6 of the same .md). T's information-theoretic content is its sign-frequency: at the per-surah level, the FRACTION of surahs with T > 0 is the discriminating quantity, not the mean magnitude."
+  },
+  "reformulation_3_PhiM_to_Gaussian_KL": {
+    "axiom": "AXIOM A3 (Discrimination information): the Hotelling T² statistic Φ_M IS, up to a fixed scaling 2 n_effective, the Kullback discrimination information KL(N(μ_Q, Σ_pool) || N(μ_C, Σ_pool)) under the equal-covariance Gaussian approximation.",
+    "claim": "T² = 2 n_eff × KL  where n_eff = n_q n_c / (n_q + n_c). This is exact (no approximation) once the Gaussian assumption is granted.",
+    "n_quran": 68,
+    "n_ctrl": 2509,
+    "n_effective": 66.20566550252231,
+    "kl_quran_to_ctrl_nats": 26.86582354775293,
+    "kl_quran_to_ctrl_bits": 38.759190401741094,
+    "hotelling_T2_direct": 3557.3394545046353,
+    "hotelling_T2_via_KL": 3557.3394545046353,
+    "abs_delta_T2_check": 0.0,
+    "interpretation": "Under Φ_M = 3557.34 with n_q = 68, n_c = 2509, n_eff = 66.21. Gaussian-KL = T² / (2 n_eff) = 3557.34 / 132.42 ≈ 26.86 nats = 38.74 bits. Each Band-A Quran surah carries ~38.74 bits of Quran-vs-secular-Arabic discrimination information under the Gaussian approximation.",
+    "asymptotic_consistency_check": "T² / (2 n_eff) should be a Quran-INTRINSIC quantity (per-unit discrimination) that doesn't grow with n. As n grows, Φ_M grows linearly (T² is n_eff × KL); but KL is intrinsic. This is what makes KL the CORRECT 'distinctiveness scalar' of the Quran rather than T² itself."
+  },
+  "open_problems": [
+    {
+      "id": "P2_OP1",
+      "name": "Optimality of Renyi-2 entropy as the rhyme-extremum statistic",
+      "statement": "Show that among Rényi-α entropies α ∈ [0, ∞), Rényi-2 is the UNIQUE choice that (a) reduces to the iid collision probability and (b) admits the rhyme-information rate as a pure entropy gap. Sketch: Rényi-2 is the only α with a quadratic-form representation (sum p²) directly interpretable as a pair-collision probability.",
+      "estimated_effort": "weeks (closed-form, classical info theory)"
+    },
+    {
+      "id": "P2_OP2",
+      "name": "Optimality of (root-transition, end-letter) as the deep/surface pairing",
+      "statement": "Show that among all pairs (X, Y) of features computable in O(n) on a verse list, T = H(X | X_prev) - H(Y) is MAXIMISED for the Quran-vs-secular-Arabic discrimination by the specific choice X = primary root, Y = terminal letter. This requires either a proof or a numerical search over the family of feature pairs.",
+      "estimated_effort": "months (numerical search + local optimisation)"
+    },
+    {
+      "id": "P2_OP3",
+      "name": "Information-geometric optimality of Φ_M = 2 n_eff KL",
+      "statement": "Show that the equal-covariance Gaussian KL is the Cramér-Rao-optimal asymptotic discrimination statistic for the Quran-vs-secular-Arabic problem, given the 5-D feature manifold and the assumption that the two populations differ in mean but not covariance. This is essentially the Wald / Anderson result for two-sample Hotelling T² under Gaussian assumptions; the work is verifying that the Gaussian assumption is valid (or characterising the correction terms when it isn't).",
+      "estimated_effort": "weeks (well-established result; needs adaptation to QSF setting)"
+    },
+    {
+      "id": "P2_OP4",
+      "name": "Joint-statistic optimality (the central derivation)",
+      "statement": "Show that the triple (EL, T, Φ_M) is information-geometrically MINIMAL-COMPLETE for the Quran-vs-secular-Arabic discrimination problem: every additional stylometric statistic computable in poly(n) time is either (a) redundant with the triple at >= 99% AUC or (b) only marginally informative (Cohen's d < 0.5). This is the central P2 derivation: it transforms (EL, T, Φ_M) from 'three statistics that happened to work' to 'three statistics that are the unique info-geometric minimal sufficient set'.",
+      "estimated_effort": "1-2 years (CORE problem; requires axiomatic foundation)"
+    },
+    {
+      "id": "P2_OP5",
+      "name": "Cross-language invariance of the derivation",
+      "statement": "If P2_OP4 is closed for the Arabic-Quran case, show that the SAME axiomatic framework reduces to a different minimal-sufficient triple for Hebrew Tanakh, Greek NT, etc. — and that the triples ARE language-specific in a predictable way (e.g., for Hebrew the analogue of EL is based on niqqud-end-letter pairs rather than terminal-letter). Closes the cross-language story.",
+      "estimated_effort": "1-2 years (parallel to P2_OP4 across N language families)"
+    }
+  ],
+  "summary_bit_budget": {
+    "EL_rhyme_information_rate_bits": 1.3106251352372325,
+    "T_band_a_pct_positive": 0.39705882352941174,
+    "PhiM_per_unit_KL_bits": 38.759190401741094,
+    "interpretation": "Per-Band-A-Quran-surah, the discrimination-information budget against the secular-Arabic pool is (Φ_M-derived) ≈ 38.7 bits per surah under the Gaussian approximation. Across n_q = 68 Band-A surahs, total accumulated discrimination is ~ n_eff × bits ≈ 2563 bits. This is the 'information weight of the Quran's stylometric anomaly' under the Gaussian model."
+  }
+}

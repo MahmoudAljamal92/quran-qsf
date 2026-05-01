@@ -1,0 +1,30 @@
+{
+  "experiment": "exp22_TxEL_classifier",
+  "seed": 42,
+  "features": [
+    "T",
+    "EL"
+  ],
+  "n_total": 2577,
+  "n_quran": 68,
+  "n_ctrl": 2509,
+  "protocol": "nested-CV byte-exact parity with _build.py Cell 71: outer StratifiedKFold(5, SEED), inner StratifiedKFold(3, SEED+1), StandardScaler fit inside each inner-train fold, LogisticRegression C tuned over {0.01, 0.1, 1.0, 10.0}, best-C refit on full outer-train with a fresh StandardScaler.",
+  "auc_fold": [
+    0.9971542401821287,
+    0.9998577120091064,
+    0.9954376960364985,
+    0.9978547349065278,
+    0.9993870671161508
+  ],
+  "best_C_per_fold": [
+    1.0,
+    0.01,
+    0.01,
+    0.1,
+    0.1
+  ],
+  "auc_mean": 0.9979382900500825,
+  "auc_std": 0.0017788916297918399,
+  "baseline_5D_nested_AUC_locked": 0.998,
+  "note": "Two-feature (T, EL) classifier vs 5-D baseline D09 = 0.998 using the IDENTICAL nested-CV protocol (Cell 71). Fair comparison."
+}

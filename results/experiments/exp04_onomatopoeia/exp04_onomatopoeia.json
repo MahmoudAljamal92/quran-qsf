@@ -1,0 +1,204 @@
+{
+  "experiment": "exp04_onomatopoeia",
+  "description": "Directional onomatopoeia index. POS = {ب, ر}, NEG = {ك, أ, ت} locked pre-registration from exp03 Q4. Tests whether classical named-onomatopoeia sūrahs rank high on this axis and whether the Quran as a whole is elevated vs. Arabic controls.",
+  "preregistration": {
+    "pos_letters": [
+      "ب",
+      "ر"
+    ],
+    "neg_letters": [
+      "أ",
+      "ت",
+      "ك"
+    ],
+    "ref_corpora": [
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "named_onomatopoeia_surahs": {
+      "100": "al-ʿĀdiyāt (galloping horses) [IN-SAMPLE, EXCLUDED from t-test]",
+      "101": "al-Qāriʿa (crashing impact)",
+      "99": "al-Zalzala (earthquake rumble)",
+      "77": "al-Mursalāt (sending winds)",
+      "79": "al-Nāziʿāt (plucking souls)",
+      "81": "al-Takwīr (spinning collapse)",
+      "82": "al-Infiṭār (splitting)",
+      "84": "al-Inshiqāq (rending)"
+    },
+    "held_out_named_onomatopoeia_surahs": {
+      "101": "al-Qāriʿa (crashing impact)",
+      "99": "al-Zalzala (earthquake rumble)",
+      "77": "al-Mursalāt (sending winds)",
+      "79": "al-Nāziʿāt (plucking souls)",
+      "81": "al-Takwīr (spinning collapse)",
+      "82": "al-Infiṭār (splitting)",
+      "84": "al-Inshiqāq (rending)"
+    },
+    "note": "POS/NEG letter sets were derived from exp03 Q4 on sūra 100; therefore the Q100 result is in-sample and excluded from the primary held-out t-test. See audit_note in named_vs_rest_t_test."
+  },
+  "reference_letter_frequencies": {
+    "ا": 0.14737,
+    "ل": 0.10649,
+    "ي": 0.07013,
+    "م": 0.06592,
+    "ن": 0.06056,
+    "و": 0.06055,
+    "ر": 0.0455,
+    "ب": 0.04401,
+    "ه": 0.03907,
+    "ت": 0.03537,
+    "ع": 0.03416,
+    "ف": 0.02899,
+    "د": 0.0284,
+    "ك": 0.02655,
+    "س": 0.02271,
+    "ق": 0.02242,
+    "ح": 0.01889,
+    "أ": 0.01795,
+    "ج": 0.01479,
+    "ى": 0.01165
+  },
+  "O_index_by_corpus": {
+    "poetry_jahili": {
+      "mean": -0.02151708428440493,
+      "std": 0.641746872608398,
+      "n": 133
+    },
+    "poetry_islami": {
+      "mean": -0.11538697715376335,
+      "std": 0.49887436511261735,
+      "n": 465
+    },
+    "poetry_abbasi": {
+      "mean": -0.09855945415025849,
+      "std": 0.6033892038609295,
+      "n": 2823
+    },
+    "ksucca": {
+      "mean": 0.31109643874161164,
+      "std": 0.23493293863067508,
+      "n": 41
+    },
+    "arabic_bible": {
+      "mean": 0.7623283932642403,
+      "std": 0.6086405051805059,
+      "n": 1183
+    },
+    "hindawi": {
+      "mean": -0.29865766483350614,
+      "std": 0.2795581960893634,
+      "n": 74
+    },
+    "quran": {
+      "mean": -0.09472687370025054,
+      "std": 0.7929155326264811,
+      "n": 114
+    }
+  },
+  "quran_vs_ctrl_summary": {
+    "quran_mean": -0.09472687370025054,
+    "quran_std": 0.7929155326264811,
+    "n_quran": 114,
+    "ctrl_mean": 0.11819002338839106,
+    "ctrl_std": 0.6995526516158502,
+    "n_ctrl": 4719,
+    "mean_diff": -0.2129168970886416
+  },
+  "named_surah_rankings": {
+    "100": {
+      "name": "al-ʿĀdiyāt (galloping horses) [IN-SAMPLE, EXCLUDED from t-test]",
+      "found": true,
+      "label": "Q:100",
+      "O_index": 1.272480169395312,
+      "z_vs_ctrl": 1.6500404127419186,
+      "rank_in_quran": 6,
+      "p_tail_vs_ctrl": 0.05423728813559322
+    },
+    "101": {
+      "name": "al-Qāriʿa (crashing impact)",
+      "found": true,
+      "label": "Q:101",
+      "O_index": -0.297716208800011,
+      "z_vs_ctrl": -0.5945317071241569,
+      "rank_in_quran": 59,
+      "p_tail_vs_ctrl": 0.7510593220338984
+    },
+    "99": {
+      "name": "al-Zalzala (earthquake rumble)",
+      "found": true,
+      "label": "Q:099",
+      "O_index": 0.2939549830985672,
+      "z_vs_ctrl": 0.25125336785471164,
+      "rank_in_quran": 12,
+      "p_tail_vs_ctrl": 0.31716101694915255
+    },
+    "77": {
+      "name": "al-Mursalāt (sending winds)",
+      "found": true,
+      "label": "Q:077",
+      "O_index": -0.4651037306837845,
+      "z_vs_ctrl": -0.8338096535333889,
+      "rank_in_quran": 91,
+      "p_tail_vs_ctrl": 0.8519067796610169
+    },
+    "79": {
+      "name": "al-Nāziʿāt (plucking souls)",
+      "found": true,
+      "label": "Q:079",
+      "O_index": -0.284774555455884,
+      "z_vs_ctrl": -0.5760318082041344,
+      "rank_in_quran": 56,
+      "p_tail_vs_ctrl": 0.7408898305084746
+    },
+    "81": {
+      "name": "al-Takwīr (spinning collapse)",
+      "found": true,
+      "label": "Q:081",
+      "O_index": -0.12182811542971542,
+      "z_vs_ctrl": -0.3431023215532162,
+      "rank_in_quran": 31,
+      "p_tail_vs_ctrl": 0.610593220338983
+    },
+    "82": {
+      "name": "al-Infiṭār (splitting)",
+      "found": true,
+      "label": "Q:082",
+      "O_index": -0.20863116725447473,
+      "z_vs_ctrl": -0.4671859793368851,
+      "rank_in_quran": 42,
+      "p_tail_vs_ctrl": 0.6809322033898305
+    },
+    "84": {
+      "name": "al-Inshiqāq (rending)",
+      "found": true,
+      "label": "Q:084",
+      "O_index": -0.044343957838111236,
+      "z_vs_ctrl": -0.2323398829967635,
+      "rank_in_quran": 25,
+      "p_tail_vs_ctrl": 0.5434322033898306
+    }
+  },
+  "named_vs_rest_t_test": {
+    "in_sample_includes_Q100": {
+      "t": 0.574327182601545,
+      "p_one_sided": 0.28960104879141935,
+      "n_named": 8,
+      "n_rest": 106,
+      "mean_named": 0.01800467712898729,
+      "mean_rest": -0.10323491527226847
+    },
+    "held_out_Q100_excluded": {
+      "t": -0.4808500521064898,
+      "p_one_sided": 0.681728498003011,
+      "n_named": 7,
+      "n_rest": 106,
+      "mean_named": -0.16120610748048766,
+      "mean_rest": -0.10323491527226847
+    },
+    "audit_note": "Primary test is held_out_Q100_excluded (Q100 was used to derive POS/NEG letter sets). The in-sample result is biased and reported only for cross-reference."
+  }
+}

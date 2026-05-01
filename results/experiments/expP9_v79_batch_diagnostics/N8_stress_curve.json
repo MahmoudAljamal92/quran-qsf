@@ -1,0 +1,90 @@
+{
+  "experiment": "expP9_v79_batch_diagnostics",
+  "schema_version": 1,
+  "prereg_document": "experiments/expP9_v79_batch_diagnostics/PREREG.md",
+  "prereg_hash": "b7978038e65ee5718141f9440a4b53d0dddf60e4e972e260e4be45c43ebecc0f",
+  "frozen_constants": {
+    "seed": 42,
+    "min_verses": 2,
+    "n_boot_auc": 500,
+    "n_boot_renyi2": 10000,
+    "n_sim_bag": 5000,
+    "corruption_levels": [
+      0.01,
+      0.05,
+      0.1,
+      0.2,
+      0.5
+    ],
+    "el_boundary": 0.314,
+    "arabic_ctrl": [
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "non_arabic": [
+      "hebrew_tanakh",
+      "greek_nt",
+      "iliad_greek",
+      "pali_dn",
+      "pali_mn",
+      "rigveda",
+      "avestan_yasna"
+    ],
+    "band_a": [
+      15,
+      100
+    ]
+  },
+  "payload_tag": "N8_stress_curve",
+  "stress_curve": [
+    {
+      "f": 0.0,
+      "auc": 0.9971045412983846,
+      "n_q": 68,
+      "n_c": 2509,
+      "median_el_q": 0.7271518777002326
+    },
+    {
+      "f": 0.01,
+      "auc": 0.9936346798583922,
+      "n_q": 68,
+      "n_c": 2509,
+      "median_el_q": 0.6283446712018141
+    },
+    {
+      "f": 0.05,
+      "auc": 0.9933972991348791,
+      "n_q": 68,
+      "n_c": 2509,
+      "median_el_q": 0.617233560090703
+    },
+    {
+      "f": 0.1,
+      "auc": 0.9921341992356927,
+      "n_q": 68,
+      "n_c": 2509,
+      "median_el_q": 0.5555555555555556
+    },
+    {
+      "f": 0.2,
+      "auc": 0.9850362225400324,
+      "n_q": 68,
+      "n_c": 2509,
+      "median_el_q": 0.510657596371882
+    },
+    {
+      "f": 0.5,
+      "auc": 0.9545547792652334,
+      "n_q": 68,
+      "n_c": 2509,
+      "median_el_q": 0.3427197802197802
+    }
+  ],
+  "f_max_at_AUC_95": 0.5,
+  "n_band_a_quran": 68,
+  "n_band_a_ctrl": 2509
+}

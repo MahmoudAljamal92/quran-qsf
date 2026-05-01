@@ -1,0 +1,27 @@
+{
+  "exp": "exp12_R4_char_lm",
+  "schema_version": 3,
+  "seed": 42,
+  "fast_mode": true,
+  "runtime_seconds": 75.61,
+  "n_train_units": 4254,
+  "n_train_dropped_contaminated": 0,
+  "n_quran_surahs": 20,
+  "n_swap_trials": 100,
+  "canon_lp_mean_per_char": -1.9181950416660185,
+  "swap_lp_mean_per_char": -1.922137915400095,
+  "separation_cohens_d": 0.06994245945182785,
+  "AUC_canon_vs_swap": 0.529,
+  "AUC_ci95": [
+    0.3899375,
+    0.6702250000000001
+  ],
+  "control_training_corpora": [
+    "poetry_abbasi",
+    "poetry_jahili",
+    "ksucca",
+    "hindawi",
+    "arabic_bible"
+  ],
+  "verdict_expected": "AUC > 0.90 with AUC_ci95 lower bound > 0.80"
+}

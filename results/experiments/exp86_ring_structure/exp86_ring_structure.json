@@ -1,0 +1,146 @@
+{
+  "experiment": "exp86_ring_structure",
+  "hypothesis": "H20 — Does the Quran exhibit statistically significant ring composition?",
+  "schema_version": 1,
+  "method": "char-3gram cosine, palindromic vs random within-unit similarity",
+  "n_perm": 1000,
+  "per_corpus": {
+    "quran": {
+      "n_units": 103,
+      "ring_score_mean": -0.006321,
+      "ring_score_std": 0.019733,
+      "n_significant_005": 4,
+      "frac_significant": 0.0388,
+      "top10_surahs": [
+        {
+          "label": "Q:095",
+          "n_verses": 8,
+          "palindromic_sim": 0.120784,
+          "random_sim": 0.057907,
+          "ring_score": 0.062877,
+          "p_perm": 0.04
+        },
+        {
+          "label": "Q:064",
+          "n_verses": 18,
+          "palindromic_sim": 0.245023,
+          "random_sim": 0.187864,
+          "ring_score": 0.057159,
+          "p_perm": 0.006
+        },
+        {
+          "label": "Q:059",
+          "n_verses": 24,
+          "palindromic_sim": 0.290411,
+          "random_sim": 0.237423,
+          "ring_score": 0.052988,
+          "p_perm": 0.027
+        },
+        {
+          "label": "Q:009",
+          "n_verses": 129,
+          "palindromic_sim": 0.243072,
+          "random_sim": 0.219225,
+          "ring_score": 0.023847,
+          "p_perm": 0.006
+        },
+        {
+          "label": "Q:048",
+          "n_verses": 29,
+          "palindromic_sim": 0.221084,
+          "random_sim": 0.200976,
+          "ring_score": 0.020108,
+          "p_perm": 0.1009
+        },
+        {
+          "label": "Q:089",
+          "n_verses": 30,
+          "palindromic_sim": 0.058659,
+          "random_sim": 0.042514,
+          "ring_score": 0.016145,
+          "p_perm": 0.1499
+        },
+        {
+          "label": "Q:096",
+          "n_verses": 19,
+          "palindromic_sim": 0.075318,
+          "random_sim": 0.059728,
+          "ring_score": 0.01559,
+          "p_perm": 0.2737
+        },
+        {
+          "label": "Q:073",
+          "n_verses": 20,
+          "palindromic_sim": 0.081928,
+          "random_sim": 0.066573,
+          "ring_score": 0.015356,
+          "p_perm": 0.1608
+        },
+        {
+          "label": "Q:045",
+          "n_verses": 37,
+          "palindromic_sim": 0.152374,
+          "random_sim": 0.138409,
+          "ring_score": 0.013965,
+          "p_perm": 0.2178
+        },
+        {
+          "label": "Q:076",
+          "n_verses": 31,
+          "palindromic_sim": 0.085234,
+          "random_sim": 0.072069,
+          "ring_score": 0.013164,
+          "p_perm": 0.2078
+        }
+      ]
+    },
+    "poetry_jahili": {
+      "n_units": 107,
+      "ring_score_mean": 0.000218,
+      "ring_score_std": 0.019042,
+      "n_significant_005": 4,
+      "frac_significant": 0.0374
+    },
+    "poetry_islami": {
+      "n_units": 375,
+      "ring_score_mean": -0.002751,
+      "ring_score_std": 0.018282,
+      "n_significant_005": 18,
+      "frac_significant": 0.048
+    },
+    "poetry_abbasi": {
+      "n_units": 2260,
+      "ring_score_mean": -0.001945,
+      "ring_score_std": 0.01918,
+      "n_significant_005": 92,
+      "frac_significant": 0.0407
+    },
+    "ksucca": {
+      "n_units": 37,
+      "ring_score_mean": -0.011245,
+      "ring_score_std": 0.02188,
+      "n_significant_005": 0,
+      "frac_significant": 0.0
+    },
+    "arabic_bible": {
+      "n_units": 1162,
+      "ring_score_mean": -0.005306,
+      "ring_score_std": 0.023842,
+      "n_significant_005": 38,
+      "frac_significant": 0.0327
+    },
+    "hindawi": {
+      "n_units": 74,
+      "ring_score_mean": 0.001679,
+      "ring_score_std": 0.014459,
+      "n_significant_005": 4,
+      "frac_significant": 0.0541
+    }
+  },
+  "quran_vs_ctrl": {
+    "d_ring_score": -0.167,
+    "p_greater": 0.9621632364976941
+  },
+  "verdict": "NULL",
+  "runtime_seconds": 182.62
+}

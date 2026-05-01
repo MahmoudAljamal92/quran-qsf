@@ -1,0 +1,147 @@
+{
+  "experiment": "expParadigm2_OP2_T_alt_band_robustness",
+  "task_id": "P2_OP2 follow-up — Band-B / Band-C robustness for T_alt",
+  "title": "Tests whether the T_alt refinement (T² + 8.7 %, log10 p − 27.55, +1.33σ on Band-A) holds at Band-B (5-14 verses) and Band-C (>100 verses).",
+  "bands_tested": {
+    "Band_A_15_100": [
+      15,
+      100
+    ],
+    "Band_B_5_14": [
+      5,
+      14
+    ],
+    "Band_C_101_inf": [
+      101,
+      1000000000
+    ]
+  },
+  "per_band": {
+    "Band_A_15_100": {
+      "lo": 15,
+      "hi": 100,
+      "n_quran": 68,
+      "n_ctrl": 2509,
+      "alignment_check": {
+        "max_abs_delta_first4_Q": 0.0,
+        "max_abs_delta_first4_C": 0.0
+      },
+      "hotelling_T2_canonical": {
+        "T2": 3557.3394545046353,
+        "F": 710.3626980606927,
+        "df1": 5,
+        "df2": 2571,
+        "n_quran": 68,
+        "n_ctrl": 2509,
+        "p_F_tail": 0.0,
+        "scipy_log10_p_F_tail": -Infinity,
+        "highprec_log10_p_F_tail": -480.2531098456136
+      },
+      "hotelling_T2_alt": {
+        "T2": 3867.7881019895403,
+        "F": 772.3559774924356,
+        "df1": 5,
+        "df2": 2571,
+        "n_quran": 68,
+        "n_ctrl": 2509,
+        "p_F_tail": 0.0,
+        "scipy_log10_p_F_tail": -Infinity,
+        "highprec_log10_p_F_tail": -507.8017727318584
+      },
+      "T2_ratio_alt_over_canon": 1.0872698969146128,
+      "delta_log10_p_alt_minus_canon": -27.548662886244813,
+      "sigma_canon": 47.02815436724137,
+      "sigma_alt": 48.358180116466905,
+      "delta_sigma": 1.330025749225534,
+      "T_alt_pct_pos_quran": 0.5147058823529411,
+      "T_alt_pct_pos_ctrl": 0.0,
+      "verdict": "REFINEMENT_HOLDS_AT_Band_A_15_100"
+    },
+    "Band_B_5_14": {
+      "lo": 5,
+      "hi": 14,
+      "n_quran": 23,
+      "n_ctrl": 2068,
+      "alignment_check": {
+        "max_abs_delta_first4_Q": 0.0,
+        "max_abs_delta_first4_C": 0.0
+      },
+      "hotelling_T2_canonical": {
+        "T2": 442.0149105325506,
+        "F": 88.23370880424777,
+        "df1": 5,
+        "df2": 2085,
+        "n_quran": 23,
+        "n_ctrl": 2068,
+        "p_F_tail": 2.352415398980513e-84,
+        "scipy_log10_p_F_tail": -83.62848598635622,
+        "highprec_log10_p_F_tail": null
+      },
+      "hotelling_T2_alt": {
+        "T2": 459.01932048115646,
+        "F": 91.62807881313654,
+        "df1": 5,
+        "df2": 2085,
+        "n_quran": 23,
+        "n_ctrl": 2068,
+        "p_F_tail": 2.291027848792446e-87,
+        "scipy_log10_p_F_tail": -86.63996963167338,
+        "highprec_log10_p_F_tail": null
+      },
+      "T2_ratio_alt_over_canon": 1.0384702179573955,
+      "delta_log10_p_alt_minus_canon": -3.0114836453171563,
+      "sigma_canon": 19.624561405638868,
+      "sigma_alt": 19.974779224379326,
+      "delta_sigma": 0.35021781874045743,
+      "T_alt_pct_pos_quran": 0.30434782608695654,
+      "T_alt_pct_pos_ctrl": 0.0009671179883945841,
+      "verdict": "REFINEMENT_HOLDS_AT_Band_B_5_14"
+    },
+    "Band_C_101_inf": {
+      "lo": 101,
+      "hi": 1000000000,
+      "n_quran": 18,
+      "n_ctrl": 142,
+      "alignment_check": {
+        "max_abs_delta_first4_Q": 0.0,
+        "max_abs_delta_first4_C": 0.0
+      },
+      "hotelling_T2_canonical": {
+        "T2": 1908.494436141359,
+        "F": 372.0356242604675,
+        "df1": 5,
+        "df2": 154,
+        "n_quran": 18,
+        "n_ctrl": 142,
+        "p_F_tail": 4.886750838242776e-84,
+        "scipy_log10_p_F_tail": -83.31097980386826,
+        "highprec_log10_p_F_tail": null
+      },
+      "hotelling_T2_alt": {
+        "T2": 1825.3555786252064,
+        "F": 355.82880899782504,
+        "df1": 5,
+        "df2": 154,
+        "n_quran": 18,
+        "n_ctrl": 142,
+        "p_F_tail": 1.1480973423898018e-82,
+        "scipy_log10_p_F_tail": -81.94002128835744,
+        "highprec_log10_p_F_tail": null
+      },
+      "T2_ratio_alt_over_canon": 0.9564374640335631,
+      "delta_log10_p_alt_minus_canon": 1.3709585155108215,
+      "sigma_canon": 19.587272407311595,
+      "sigma_alt": 19.425440614729265,
+      "delta_sigma": -0.16183179258232983,
+      "T_alt_pct_pos_quran": 0.9444444444444444,
+      "T_alt_pct_pos_ctrl": 0.007042253521126761,
+      "verdict": "REFINEMENT_FAILS_AT_Band_C_101_inf"
+    }
+  },
+  "n_bands_holds": 2,
+  "n_bands_neutral": 0,
+  "n_bands_fails": 1,
+  "n_eligible": 3,
+  "global_verdict": "T_ALT_REFINEMENT_HOLDS_AT_BAND_A_BUT_FAILS_ELSEWHERE",
+  "runtime_seconds": 2.3
+}

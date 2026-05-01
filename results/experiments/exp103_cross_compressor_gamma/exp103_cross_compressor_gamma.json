@@ -1,0 +1,136 @@
+{
+  "experiment": "exp103_cross_compressor_gamma",
+  "hypothesis": "H35 — Quran-indicator gamma is universal across compressor families (falsifier for Theorem 1 of docs/PREREG_GAMMA_KOLMOGOROV.md).",
+  "schema_version": 1,
+  "prereg_document": "experiments/exp103_cross_compressor_gamma/PREREG.md",
+  "prereg_hash": "d5b3d82788516813d33f66a26164b8d5b433375d8ea8e13d827eb23b2145a93f",
+  "frozen_constants": {
+    "seed": 42,
+    "n_pert_per_unit": 20,
+    "ctrl_n_units": 200,
+    "band_a": [
+      15,
+      100
+    ],
+    "gzip_level": 9,
+    "bzip2_level": 9,
+    "zstd_level": 22,
+    "brotli_quality": 11,
+    "gamma_locked_gzip_exp41": 0.0716,
+    "gamma_reproduction_tol": 0.01,
+    "cv_gamma_pass": 0.1,
+    "cv_gamma_partial": 0.2,
+    "min_compressors": 2
+  },
+  "compressors_tested": [
+    "gzip",
+    "bzip2",
+    "zstd",
+    "brotli"
+  ],
+  "n_quran_units_bandA": 68,
+  "n_ctrl_units": 200,
+  "n_perturbations": 5360,
+  "per_compressor": {
+    "gzip": {
+      "alpha": -2.6697040783445507,
+      "beta_length": -0.07189173608678083,
+      "gamma": 0.07161122826827443,
+      "gamma_se": 0.003007780881872102,
+      "gamma_CI95_lo": 0.06571597773980511,
+      "gamma_CI95_hi": 0.07750647879674374,
+      "gamma_t": 23.808658635964928,
+      "gamma_p_two_sided": 0.0,
+      "ci_excludes_zero": true,
+      "n_points": 5360,
+      "length_slope_se": 0.0018645904872520332,
+      "sigma2_resid": 0.008984017752656658,
+      "q_median_ncd": 0.04254686105325796,
+      "ctrl_median_ncd": 0.041379310344827586,
+      "raw_cohens_d_confounded": 0.5213771781262314,
+      "runtime_seconds": 5.86
+    },
+    "bzip2": {
+      "alpha": -1.8418892232391664,
+      "beta_length": 0.06808610856820714,
+      "gamma": -0.04826546290639335,
+      "gamma_se": 0.002524239474518687,
+      "gamma_CI95_lo": -0.05321297227644998,
+      "gamma_CI95_hi": -0.043317953536336724,
+      "gamma_t": -19.120793963336794,
+      "gamma_p_two_sided": 0.0,
+      "ci_excludes_zero": true,
+      "n_points": 5360,
+      "length_slope_se": 0.0015648323786153228,
+      "sigma2_resid": 0.006327604415360129,
+      "q_median_ncd": 0.2585169510013526,
+      "ctrl_median_ncd": 0.2579749745599819,
+      "raw_cohens_d_confounded": -0.33749030000219765,
+      "runtime_seconds": 10.68
+    },
+    "zstd": {
+      "alpha": 1.1702904799273812,
+      "beta_length": -0.771360035028736,
+      "gamma": -0.02942270542275141,
+      "gamma_se": 0.010130270377727919,
+      "gamma_CI95_lo": -0.04927803536309813,
+      "gamma_CI95_hi": -0.009567375482404692,
+      "gamma_t": -2.904434366079627,
+      "gamma_p_two_sided": 0.0036942400002137887,
+      "ci_excludes_zero": true,
+      "n_points": 5353,
+      "length_slope_se": 0.006281973598716495,
+      "sigma2_resid": 0.10154505927566138,
+      "q_median_ncd": 0.010727056019070322,
+      "ctrl_median_ncd": 0.013019094423474695,
+      "raw_cohens_d_confounded": -0.1399079002736551,
+      "runtime_seconds": 22.88
+    },
+    "brotli": {
+      "alpha": 0.23254902707435504,
+      "beta_length": -0.627492937134182,
+      "gamma": 0.08709551765399627,
+      "gamma_se": 0.011467781194785247,
+      "gamma_CI95_lo": 0.06461866651221719,
+      "gamma_CI95_hi": 0.10957236879577535,
+      "gamma_t": 7.594801136736136,
+      "gamma_p_two_sided": 3.6193270602780103e-14,
+      "ci_excludes_zero": true,
+      "n_points": 5301,
+      "length_slope_se": 0.007121914640963343,
+      "sigma2_resid": 0.1302615912206233,
+      "q_median_ncd": 0.01263537906137184,
+      "ctrl_median_ncd": 0.014866204162537165,
+      "raw_cohens_d_confounded": 0.05721649941529887,
+      "runtime_seconds": 94.42
+    }
+  },
+  "gzip_reproduction": {
+    "measured": 0.07161122826827443,
+    "locked": 0.0716,
+    "tolerance": 0.01,
+    "within_tol": true
+  },
+  "cross_compressor": {
+    "gammas": {
+      "gzip": 0.07161122826827443,
+      "bzip2": -0.04826546290639335,
+      "zstd": -0.02942270542275141,
+      "brotli": 0.08709551765399627
+    },
+    "mean": 0.020254644398281486,
+    "sd_population_ddof0": 0.05972446156029282,
+    "sd_sample_ddof1": 0.06896386791808103,
+    "cv": 2.948679837862775,
+    "any_ci_includes_zero": false,
+    "ci_excludes_zero_per_compressor": {
+      "gzip": true,
+      "bzip2": true,
+      "zstd": true,
+      "brotli": true
+    }
+  },
+  "verdict": "FAIL_not_universal",
+  "programme_decision": "ABORT the Kolmogorov-derivation programme. gamma = +0.0716 survives as a gzip-specific reproducible empirical scalar only; re-frame in paper as 'compressor-calibrated edit-detection parameter' rather than information-theoretic constant candidate.",
+  "runtime_seconds": 139.93
+}

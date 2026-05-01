@@ -1,0 +1,160 @@
+{
+  "experiment": "exp110_phi_master_xtrad",
+  "hypothesis_id": "H65",
+  "verdict": "FAIL_quran_not_argmax",
+  "started_at_utc": "2026-04-29T05:46:24.122254+00:00",
+  "finished_at_utc": "2026-04-29T05:46:50.418874+00:00",
+  "wall_seconds": 26.2966206073761,
+  "prereg_path": "experiments\\exp110_phi_master_xtrad\\PREREG.md",
+  "prereg_sha256": "295511f814cd54d1530d0cee51ee8d8b613352c2de865ed0a426aab030d14dab",
+  "n_total_units": 2731,
+  "n_units_per_corpus": {
+    "quran": 114,
+    "arabic_bible": 1183,
+    "hebrew_tanakh": 921,
+    "greek_nt": 260,
+    "pali": 186,
+    "avestan_yasna": 67
+  },
+  "phi_3_per_corpus": {
+    "quran": {
+      "mi_el": 0.08380571733512687,
+      "mi_vl_cv": 0.02533775861229397,
+      "mi_p_max": 0.08380571733512687,
+      "phi_3_nats": 0.19294919328254773,
+      "n_units": 114
+    },
+    "arabic_bible": {
+      "mi_el": 0.025050704287782756,
+      "mi_vl_cv": 0.03098286553261349,
+      "mi_p_max": 0.025050704287782756,
+      "phi_3_nats": 0.081084274108179,
+      "n_units": 1183
+    },
+    "hebrew_tanakh": {
+      "mi_el": 0.05335478735440691,
+      "mi_vl_cv": 0.11103990646171234,
+      "mi_p_max": 0.05335478735440691,
+      "phi_3_nats": 0.21774948117052617,
+      "n_units": 921
+    },
+    "greek_nt": {
+      "mi_el": 0.03578543118292453,
+      "mi_vl_cv": 0.005827993285640756,
+      "mi_p_max": 0.03578543118292453,
+      "phi_3_nats": 0.07739885565148982,
+      "n_units": 260
+    },
+    "pali": {
+      "mi_el": 0.07517874517541069,
+      "mi_vl_cv": 0.13279611579416042,
+      "mi_p_max": 0.07517874517541069,
+      "phi_3_nats": 0.2831536061449818,
+      "n_units": 186
+    },
+    "avestan_yasna": {
+      "mi_el": 0.0083088411047867,
+      "mi_vl_cv": 0.036942457179969926,
+      "mi_p_max": 0.0083088411047867,
+      "phi_3_nats": 0.05356013938954332,
+      "n_units": 67
+    }
+  },
+  "quran_rank_of_6": 3,
+  "quran_phi_3": 0.19294919328254773,
+  "next_highest_corpus": "pali",
+  "next_highest_phi_3": 0.2831536061449818,
+  "ratio_quran_to_next": 0.6814294047300703,
+  "phi_margin_threshold": 1.5,
+  "is_argmax": false,
+  "margin_met": false,
+  "permutation": {
+    "n_perms": 10000,
+    "seed": 42,
+    "perm_p_argmax": 0.1933,
+    "perm_p_argmax_with_margin": 0.0534,
+    "alpha_bonf": 0.001
+  },
+  "discretisation": {
+    "n_bins": 5,
+    "EL_edges": [
+      0.09523809523809523,
+      0.2761904761904762,
+      0.45714285714285713,
+      0.638095238095238,
+      0.819047619047619,
+      1.0
+    ],
+    "VL_CV_edges": [
+      0.06536406457297465,
+      0.3862339243271378,
+      0.7071037840813009,
+      1.027973643835464,
+      1.3488435035896273,
+      1.6697133633437906
+    ],
+    "p_max_edges": [
+      0.09523809523809523,
+      0.2761904761904762,
+      0.45714285714285713,
+      0.638095238095238,
+      0.819047619047619,
+      1.0
+    ]
+  },
+  "audit_report": {
+    "ok": true,
+    "a1_loader_determinism": {
+      "ok": true,
+      "details": {
+        "quran": {
+          "exp110_n": 114,
+          "f63_r1_n": 114,
+          "match": true
+        },
+        "arabic_bible": {
+          "exp110_n": 1183,
+          "f63_r1_n": 1183,
+          "match": true
+        },
+        "hebrew_tanakh": {
+          "exp110_n": 921,
+          "f63_r1_n": 921,
+          "match": true
+        },
+        "greek_nt": {
+          "exp110_n": 260,
+          "f63_r1_n": 260,
+          "match": true
+        },
+        "pali": {
+          "exp110_n": 186,
+          "f63_r1_n": 186,
+          "match": true
+        },
+        "avestan_yasna": {
+          "exp110_n": 67,
+          "f63_r1_n": 67,
+          "match": true
+        }
+      }
+    },
+    "a2_feature_parity_vs_f63_r1": {
+      "ok": true,
+      "details": {
+        "exp110_quran_p_max": 0.7272727272727273,
+        "f63_r1_quran_p_max": 0.7272727272727273,
+        "delta_p_max": 0.0,
+        "exp110_quran_h_el": 0.9685208240372034,
+        "f63_r1_quran_h_el": 0.9685208240372034,
+        "delta_h_el": 0.0
+      }
+    },
+    "a3_discretisation_determinism": {
+      "ok": true,
+      "note": "bin edges captured in receipt"
+    }
+  },
+  "calibration_source": "none — discrete plug-in MI; no calibration required",
+  "honest_note": "Pre-registered FAIL_quran_not_argmax. The 3-term portable Phi_3 is dominated by MI(VL_CV) where Quran is mid-pack (Pali's bimodal sutta-length distribution dominates). The per-feature breakdown RECONFIRMS F63: Quran is rank 1 on MI(EL) and MI(p_max) — its cross-tradition distinctiveness is on the rhyme axis specifically, NOT on aggregated universal features."
+}

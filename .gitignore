@@ -1,0 +1,111 @@
+# --- Python -----------------------------------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+build/
+dist/
+.eggs/
+*.egg
+
+# --- Virtual envs -----------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+
+# --- Notebook ephemera ------------------------------------------------
+.ipynb_checkpoints/
+notebooks/**/.ipynb_checkpoints/
+
+# --- IDE / OS ---------------------------------------------------------
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# --- Local secrets (NEVER commit) -------------------------------------
+.env
+.env.*
+*.api_key
+*.api_token
+secrets.json
+# exp103 LLM judge config may carry an API token:
+experiments/exp103_semantic_coherence_floor/JUDGE.json
+
+# --- Heavy / regenerable artifacts ------------------------------------
+# Pickles regenerable from raw + code (verified bit-reproducible in patch I).
+results/checkpoints/*.pkl
+results/checkpoints/*.pickle
+
+# Generated plots (regenerable).
+results/figures/*.png
+results/figures/*.pdf
+results/figures/*.svg
+
+# Audit-receipt JSONs are regenerable from any clean checkout via
+# `python scripts/integrity_audit.py`. Keep only the latest one for
+# convenience; the historical ones live in git only if the user
+# explicitly commits them.
+results/integrity/integrity_audit_*.json
+results/integrity/integrity_audit_*.md
+!results/integrity/integrity_audit_LATEST.json
+!results/integrity/integrity_audit_LATEST.md
+
+# --- Corpora distribution policy --------------------------------------
+# Public-domain texts are committed (Quran, Tanakh, Iliad).
+# Heavy / licensed corpora are NOT committed; loaders + SHA-256 in
+# corpus_lock.json suffice for reproduction.
+data/corpora/wiki/
+data/corpora/ar/poetry_raw.csv
+data/corpora/ar/hindawi.txt
+data/corpora/ar/hadith.json
+data/corpora/ar/tashkeela.txt
+data/corpora/ar/ksucca.txt
+data/corpora/ar/maqamat/
+data/corpora/ar/riwayat/
+
+# Imitations are user-supplied, never auto-redistributed.
+data/corpora/imitations/*/text.txt
+data/corpora/imitations/*/verses.json
+# but keep the SOURCE.json provenance metadata
+!data/corpora/imitations/*/SOURCE.json
+
+# Cross-tradition (heavy) corpora -- per-tradition decision; keep small
+# canonical texts (e.g. tanakh_wlc.txt is small) and exclude large dumps.
+data/corpora/sa/sanskrit_raw_*.txt
+data/corpora/pi/pali_raw_*.txt
+data/corpora/ae/avestan_raw_*.txt
+
+# --- Misc -------------------------------------------------------------
+*.log
+*.tmp
+*.lock.tmp
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- HTTP server / dashboard preview ----------------------------------
+docs/_local_server.log
+
+# --- Historical archive (local-only, NOT shipped to GitHub) -----------
+# The archive/ folder holds 500+ MB of historic CSVs, old checkpoints,
+# and pre-rebuild pipeline outputs. These are NOT needed to reproduce
+# any locked scalar; they are retained locally for audit-trail only.
+# The master protocol says "do not modify anything inside archive/" --
+# that is preserved on the author's machine. It is not needed on GitHub.
+archive/
+
+# Pre-rebuild checkpoint snapshots (70+ MB of stale pickles; regenerable
+# from raw data + code via src/clean_pipeline).
+results/checkpoints.pre_rebuild_*/
+
+# Large regenerable intermediate CSVs (produced by the listed experiments
+# on first run; excluded because GitHub's HTTP push times out above ~500 MB).
+results/experiments/exp52_acoustic_bridge_full/full_per_letter.csv
+results/experiments/exp95e_full_114_consensus_universal/short/missed_variants.csv

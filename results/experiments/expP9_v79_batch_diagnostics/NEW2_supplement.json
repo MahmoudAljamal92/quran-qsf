@@ -1,0 +1,183 @@
+{
+  "experiment": "expP9_v79_batch_diagnostics",
+  "schema_version": 1,
+  "supplement_to": "expP9_v79_batch_diagnostics main run (2026-04-26)",
+  "frozen_constants": {
+    "seed": 42,
+    "min_verses": 2,
+    "all_ctrl": [
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi",
+      "hebrew_tanakh",
+      "greek_nt",
+      "iliad_greek",
+      "pali_dn",
+      "pali_mn",
+      "rigveda",
+      "avestan_yasna",
+      "hadith_bukhari"
+    ]
+  },
+  "payload_tag": "NEW2_supplement",
+  "per_corpus": [
+    {
+      "corpus": "quran",
+      "n_verse_finals": 6236,
+      "alphabet_size": 28,
+      "dominant_final": "ن",
+      "p_max": 0.50096215522771,
+      "p_max_squared": 0.25096308097039227,
+      "sum_p2": 0.29455614958520543,
+      "renyi2_bits": 1.7633854217596254,
+      "is_arabic": true
+    },
+    {
+      "corpus": "poetry_jahili",
+      "n_verse_finals": 2561,
+      "alphabet_size": 34,
+      "dominant_final": "ا",
+      "p_max": 0.1850839515814135,
+      "p_max_squared": 0.034256069132991014,
+      "sum_p2": 0.07776561924192231,
+      "renyi2_bits": 3.6847237198079785,
+      "is_arabic": true
+    },
+    {
+      "corpus": "poetry_islami",
+      "n_verse_finals": 10295,
+      "alphabet_size": 34,
+      "dominant_final": "ا",
+      "p_max": 0.20621661000485672,
+      "p_max_squared": 0.04252529024189517,
+      "sum_p2": 0.08486275560616971,
+      "renyi2_bits": 3.5587246641650467,
+      "is_arabic": true
+    },
+    {
+      "corpus": "poetry_abbasi",
+      "n_verse_finals": 76499,
+      "alphabet_size": 36,
+      "dominant_final": "ا",
+      "p_max": 0.1756362828272265,
+      "p_max_squared": 0.030848103845365495,
+      "sum_p2": 0.07665173234882272,
+      "renyi2_bits": 3.70553779224405,
+      "is_arabic": true
+    },
+    {
+      "corpus": "ksucca",
+      "n_verse_finals": 1967,
+      "alphabet_size": 30,
+      "dominant_final": "ا",
+      "p_max": 0.11845449923741738,
+      "p_max_squared": 0.014031468389587316,
+      "sum_p2": 0.07391636635910936,
+      "renyi2_bits": 3.7579623524544963,
+      "is_arabic": true
+    },
+    {
+      "corpus": "arabic_bible",
+      "n_verse_finals": 31083,
+      "alphabet_size": 35,
+      "dominant_final": "ا",
+      "p_max": 0.1468005018820577,
+      "p_max_squared": 0.021550387352824028,
+      "sum_p2": 0.0781468356195124,
+      "renyi2_bits": 3.677668734060536,
+      "is_arabic": true
+    },
+    {
+      "corpus": "hindawi",
+      "n_verse_finals": 1793,
+      "alphabet_size": 32,
+      "dominant_final": "ا",
+      "p_max": 0.12325711098717233,
+      "p_max_squared": 0.015192315408904119,
+      "sum_p2": 0.06928879085767324,
+      "renyi2_bits": 3.851234209447342,
+      "is_arabic": true
+    },
+    {
+      "corpus": "hebrew_tanakh",
+      "n": 0,
+      "skipped": true
+    },
+    {
+      "corpus": "greek_nt",
+      "n": 0,
+      "skipped": true
+    },
+    {
+      "corpus": "iliad_greek",
+      "n_verse_finals": 15687,
+      "alphabet_size": 11,
+      "dominant_final": "ν",
+      "p_max": 0.2739848282016957,
+      "p_max_squared": 0.07506768608471269,
+      "sum_p2": 0.16775414780592887,
+      "renyi2_bits": 2.5755796566582396,
+      "is_arabic": false
+    },
+    {
+      "corpus": "pali_dn",
+      "n_verse_finals": 14498,
+      "alphabet_size": 15,
+      "dominant_final": ".",
+      "p_max": 0.6027727962477583,
+      "p_max_squared": 0.36333504389634147,
+      "sum_p2": 0.39355055580515796,
+      "renyi2_bits": 1.345379117542294,
+      "is_arabic": false
+    },
+    {
+      "corpus": "pali_mn",
+      "n_verse_finals": 24243,
+      "alphabet_size": 13,
+      "dominant_final": ".",
+      "p_max": 0.5625541393391907,
+      "p_max_squared": 0.31646715968765765,
+      "sum_p2": 0.352265434122867,
+      "renyi2_bits": 1.5052651768699314,
+      "is_arabic": false
+    },
+    {
+      "corpus": "rigveda",
+      "n_verse_finals": 18079,
+      "alphabet_size": 22,
+      "dominant_final": "॥",
+      "p_max": 0.5774655677858289,
+      "p_max_squared": 0.33346648197820977,
+      "sum_p2": 0.5095340927100626,
+      "renyi2_bits": 0.9727494151533597,
+      "is_arabic": false
+    },
+    {
+      "corpus": "avestan_yasna",
+      "n_verse_finals": 4167,
+      "alphabet_size": 3,
+      "dominant_final": ",",
+      "p_max": 0.6011519078473722,
+      "p_max_squared": 0.36138361630853544,
+      "sum_p2": 0.44185648733414495,
+      "renyi2_bits": 1.1783502289612893,
+      "is_arabic": false
+    },
+    {
+      "corpus": "hadith_bukhari",
+      "n_verse_finals": 7271,
+      "alphabet_size": 34,
+      "dominant_final": "ه",
+      "p_max": 0.16160088020904964,
+      "p_max_squared": 0.02611484448433961,
+      "sum_p2": 0.09421596555051713,
+      "renyi2_bits": 3.407884634513532,
+      "is_arabic": true
+    }
+  ],
+  "quran_rank_by_p_max": 1,
+  "n_corpora_arabic_incl_hadith": 8
+}

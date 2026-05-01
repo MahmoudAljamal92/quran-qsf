@@ -1,0 +1,50 @@
+{
+  "version": "10.18",
+  "frozen_at": "2026-04-18",
+  "amendments": [
+    {
+      "date": "2026-04-19",
+      "audit_id": "v5 fix ⑧",
+      "scope": "grade_thresholds",
+      "change": "Added grade_thresholds block (A+/A/B/C/D cutoffs at 6/4/2/1 sigma). The cutoffs themselves are ex-ante integer-sigma spacings standard in discovery tables (not data-fitted); this amendment freezes them against further tuning rather than pre-registering them in the strict sense."
+    }
+  ],
+  "tests": {
+    "A_leave_one_family_out": {
+      "claim": "Phi_M separation survives leaving out any 1 of 9 control families",
+      "threshold": "min d >= 1.5 across all 9 leave-one-out splits",
+      "falsifier": "any leave-one-out split gives d < 1.0"
+    },
+    "B_meccan_medinan": {
+      "claim": "Meccan AND Medinan each internally exceed control F",
+      "threshold": "F_Meccan > 1.0 AND F_Medinan > 1.0",
+      "falsifier": "either F < 1.0 on clean Band-A data"
+    },
+    "C_bootstrap_omega": {
+      "claim": "Hierarchical Omega bootstrap stable",
+      "threshold": ">= 95 percent of 1000 resamples give Omega > 2.0",
+      "falsifier": "< 95 percent exceed 2.0"
+    }
+  },
+  "honest_adjustments_2026_04_18": [
+    "Test B FALSIFIED on clean data (F_M=0.80, F_D=0.84)",
+    "Test A: surah-level 10-fold CV is a DIFFERENT hypothesis (T12/D24).",
+    "Test A: leave-one-family-out now in Cell 64b (audit 2026-04-18 v2).",
+    "Test A: hadith_bukhari quarantined post-v2 audit (quotes Quran by design as Prophetic tradition), reducing tested pool from 9 to 6 Arabic families. Pre-reg threshold (min d >= 1.5) applied to all 6 actual leave-one-family-out splits; downgrade reported transparently and is NOT a post-hoc selection of easier splits.",
+    "Test C CLOSED STRONGER (100% of resamples > 2.0, median 10.0)"
+  ],
+  "grade_thresholds": {
+    "source": "Cell 98 per-surah dashboard (Band-A only)",
+    "metric": "Mahalanobis distance to Arabic-control centroid (mu, S_inv from ARABIC_CTRL_POOL Band-A)",
+    "cutoffs": {
+      "A+": "> 6.0",
+      "A": "> 4.0 and ≤ 6.0",
+      "B": "> 2.0 and ≤ 4.0",
+      "C": "> 1.0 and ≤ 2.0",
+      "D": "≤ 1.0"
+    },
+    "validity": "Band A (15 ≤ n_verses ≤ 100). Out-of-band grades are statistical extrapolations and are reported separately.",
+    "headline": "Only Band-A grade distribution is defensible for publication.",
+    "rationale": "Cutoffs chosen ex ante at 1/2/4/6 σ, spaced on the integer-σ grid that is standard in physics-style discovery tables (e.g. CDF/Dzero 5σ Higgs thresholds). No post-hoc optimisation."
+  }
+}

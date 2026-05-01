@@ -1,0 +1,89 @@
+{
+  "experiment": "exp87_unified_probe",
+  "hypothesis": "H21 -- Unified Two-Scale Law: I_total = macro_z + alpha * micro_z >= C",
+  "schema_version": 1,
+  "strategy_A_100pct": {
+    "alpha": 0.0,
+    "threshold_C": -4.65243181165675,
+    "quran_pass": "114/114",
+    "note": "100% coverage: maximises min(I_total); alpha=0 means micro hurts worst-case surah"
+  },
+  "strategy_B_95pct": {
+    "alpha": 0.0,
+    "threshold_C": -1.674128819766881,
+    "quran_pass": "108/114",
+    "failing_surahs": [
+      73,
+      74,
+      103,
+      106,
+      108,
+      112
+    ],
+    "note": "95% coverage: maximises 5th percentile; allows dropping worst 5%"
+  },
+  "alpha": 0.0,
+  "threshold_C": -1.674128819766881,
+  "quran_n": 114,
+  "quran_macro_z_range": [
+    -4.6524,
+    1.1648
+  ],
+  "quran_micro_z_range": [
+    -4.6905,
+    1.8378
+  ],
+  "quran_i_total_range": [
+    -4.6524,
+    1.1648
+  ],
+  "hard_failure_rescue": {
+    "73": {
+      "macro_z": -4.6524,
+      "micro_z": -0.0656,
+      "i_total": -4.6524,
+      "rescued": false
+    },
+    "74": {
+      "macro_z": -3.8119,
+      "micro_z": 0.3544,
+      "i_total": -3.8119,
+      "rescued": false
+    },
+    "106": {
+      "macro_z": -3.5249,
+      "micro_z": -0.5568,
+      "i_total": -3.5249,
+      "rescued": false
+    }
+  },
+  "control_results": {
+    "tashkeela_fiqh": {
+      "status": "OK",
+      "n_pseudo_surahs": 114,
+      "n_nan_imputations": 0,
+      "ctrl_micro_z_mean": 4.3483,
+      "ctrl_micro_z_std": 0.2374,
+      "mw_p_quran_greater": 1.0,
+      "conservative_i_total_mean": 0.0,
+      "n_excluded": 0,
+      "pct_excluded": 0.0,
+      "verdict": "WEAK"
+    },
+    "poetry_vocal": {
+      "status": "OK",
+      "n_pseudo_surahs": 114,
+      "n_nan_imputations": 24,
+      "ctrl_micro_z_mean": 3.1396,
+      "ctrl_micro_z_std": 0.9808,
+      "mw_p_quran_greater": 1.0,
+      "conservative_i_total_mean": 0.0,
+      "n_excluded": 0,
+      "pct_excluded": 0.0,
+      "verdict": "WEAK"
+    }
+  },
+  "falsifier_triggered": true,
+  "verdict": "FALSIFIER_TRIGGERED",
+  "runtime_seconds": 6.16
+}

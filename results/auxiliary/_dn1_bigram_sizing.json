@@ -1,0 +1,78 @@
+{
+  "schema": "dn1_bigram_sizing_v1",
+  "filed_as": "exploratory_diagnostic",
+  "purpose": "Sanity check before exp107_F55_dn1_bigram PREREG draft",
+  "target_sutta_id": "dn1",
+  "target_collection": "dn",
+  "target_n_segments": 662,
+  "target_n_letters_skeleton": 60542,
+  "target_n_distinct_letters": 31,
+  "tau_high": 2.0,
+  "safety_margin_x": 5.0,
+  "alphabet_size": 31,
+  "alphabet_string": "aāiīuūeokgṅcjñṭḍṇtdnpbmyrlḷvshṁ",
+  "peer_pool_strategy": "all_other_dn_mn_suttas_no_length_matching_matches_exp95j_arabic_and_exp106_greek_protocol",
+  "n_peers": 185,
+  "n_dn": 34,
+  "n_mn": 152,
+  "normaliser_sentinel": {
+    "raw": "Evaṁ me sutaṁ",
+    "normalised": "evaṁmesutaṁ",
+    "expected": "evaṁmesutaṁ",
+    "ok": true
+  },
+  "variant_audit": {
+    "n_sampled": 1000,
+    "min": 1.0,
+    "mean": 1.997,
+    "max": 2.0,
+    "n_zero": 0,
+    "n_above_tau": 0,
+    "theorem_ok": true
+  },
+  "peer_audit": {
+    "n_peers": 185,
+    "min": 9867.0,
+    "p5": 16055.0,
+    "median": 24582.0,
+    "mean": 23614.7,
+    "max": 29870.0,
+    "min_over_tau_ratio": 4933.5,
+    "fpr_floor_ok": true,
+    "five_closest": [
+      {
+        "collection": "dn",
+        "sutta_id": "dn2",
+        "delta": 9867.0,
+        "n_letters": 55486
+      },
+      {
+        "collection": "dn",
+        "sutta_id": "dn33",
+        "delta": 11466.5,
+        "n_letters": 67849
+      },
+      {
+        "collection": "dn",
+        "sutta_id": "dn34",
+        "delta": 12298.0,
+        "n_letters": 46204
+      },
+      {
+        "collection": "dn",
+        "sutta_id": "dn23",
+        "delta": 12860.0,
+        "n_letters": 46158
+      },
+      {
+        "collection": "dn",
+        "sutta_id": "dn24",
+        "delta": 13426.0,
+        "n_letters": 40902
+      }
+    ]
+  },
+  "verdict": "PROCEED_TO_PREREG",
+  "message": "Variant theorem holds (max = 2.00 <= 2.0); peer min = 9867.00 >= 5.0x safety margin of tau = 2.0. Cross-tradition F55 on Pali DN 1 is safe to PREREG and run.",
+  "wall_time_s": 2.0765929222106934
+}

@@ -1,0 +1,116 @@
+{
+  "experiment": "expA2_diacritic_capacity_universal",
+  "task_id": "A2 (= H3)",
+  "title": "Diacritic-channel capacity ratio R = H(diacritic|base) / log2(|diacritic alphabet|) across Arabic / Hebrew / Greek.",
+  "pre_reg": {
+    "band_lo": 0.55,
+    "band_hi": 0.75,
+    "max_spread": 0.1,
+    "method_source": "src/extended_tests2.py:test_harakat_channel_capacity (T23 algorithm; same pair-extraction loop; same H(d|c) = sum_c p(c) H(d|c=c) formula)."
+  },
+  "results": {
+    "quran_arabic": {
+      "n_pairs": 320543,
+      "n_distinct_base_letters": 36,
+      "n_distinct_diacritic_strings": 60,
+      "n_distinct_primitive_diacritics": 25,
+      "H_diacritic_marginal_bits": 3.0423991453827495,
+      "H_base_letter_marginal_bits": 4.518092289948211,
+      "H_diacritic_given_base_bits": 2.1746961451132134,
+      "H_max_combinations_bits": 5.906890595608519,
+      "H_max_primitives_bits": 4.643856189774724,
+      "ratio_R_combinations": 0.368162590776608,
+      "ratio_R_primitives": 0.4682953253164175,
+      "redundancy_combinations": 0.631837409223392,
+      "redundancy_primitives": 0.5317046746835825,
+      "base_letter_alphabet": "Arabic rasm (U+0621-U+064A)",
+      "diacritic_alphabet": "Arabic harakat (U+064B-U+065F + Quranic annotations)",
+      "locked_T23_baseline": {
+        "approx_R": 0.655,
+        "approx_H_diacritic_given_base_bits": 1.96,
+        "abs_drift_R_combinations": 0.286837409223392,
+        "abs_drift_R_primitives": 0.18670467468358254,
+        "abs_drift_H_dc": 0.21469614511321344,
+        "note": "The locked T23 used log2(8) = 3.0 as the H_max denominator (8 = pre-defined harakat slot count). This experiment reports TWO denominators: combinations (log2(|distinct strings|)) and primitives (log2(|distinct chars|)). The primitives convention is closer to the locked T23 8-slot convention. Both are reported so the comparison is transparent. The absolute 1.96-bit H(d|c) value should match closely; the precise R depends on which denominator is used."
+      }
+    },
+    "tanakh_hebrew": {
+      "n_pairs": 1261611,
+      "n_distinct_base_letters": 27,
+      "n_distinct_diacritic_strings": 111,
+      "n_distinct_primitive_diacritics": 15,
+      "H_diacritic_marginal_bits": 3.5893427808593126,
+      "H_base_letter_marginal_bits": 4.275006562069211,
+      "H_diacritic_given_base_bits": 2.714310295752838,
+      "H_max_combinations_bits": 6.794415866350106,
+      "H_max_primitives_bits": 3.9068905956085187,
+      "ratio_R_combinations": 0.3994913395271666,
+      "ratio_R_primitives": 0.6947495020218425,
+      "redundancy_combinations": 0.6005086604728334,
+      "redundancy_primitives": 0.3052504979781575,
+      "base_letter_alphabet": "Hebrew consonants (U+05D0-U+05EA)",
+      "diacritic_alphabet": "Hebrew niqqud (U+05B0-U+05BC,U+05BF,U+05C1-U+05C2,U+05C7)"
+    },
+    "nt_greek": {
+      "n_pairs": 362642,
+      "n_distinct_base_letters": 7,
+      "n_distinct_diacritic_strings": 24,
+      "n_distinct_primitive_diacritics": 8,
+      "H_diacritic_marginal_bits": 2.3659915097959194,
+      "H_base_letter_marginal_bits": 2.6850557696934834,
+      "H_diacritic_given_base_bits": 2.0878358897973084,
+      "H_max_combinations_bits": 4.584962500721156,
+      "H_max_primitives_bits": 3.0,
+      "ratio_R_combinations": 0.45536596852622424,
+      "ratio_R_primitives": 0.6959452965991028,
+      "redundancy_combinations": 0.5446340314737758,
+      "redundancy_primitives": 0.30405470340089724,
+      "base_letter_alphabet": "Greek vowels α/ε/η/ι/ο/υ/ω (case-folded)",
+      "diacritic_alphabet": "Greek combining marks (Unicode Mn category, NFD)"
+    }
+  },
+  "universal_band_verdict_combinations": {
+    "denominator_convention": "combinations",
+    "R_arabic": 0.368162590776608,
+    "R_hebrew": 0.3994913395271666,
+    "R_greek": 0.45536596852622424,
+    "in_band": {
+      "arabic": false,
+      "hebrew": false,
+      "greek": false
+    },
+    "R_min": 0.368162590776608,
+    "R_max": 0.45536596852622424,
+    "spread": 0.08720337774961623,
+    "verdict": "NARROW_AGREEMENT_OUTSIDE_PREREG_BAND_combinations"
+  },
+  "universal_band_verdict_primitives": {
+    "denominator_convention": "primitives",
+    "R_arabic": 0.4682953253164175,
+    "R_hebrew": 0.6947495020218425,
+    "R_greek": 0.6959452965991028,
+    "in_band": {
+      "arabic": false,
+      "hebrew": true,
+      "greek": true
+    },
+    "R_min": 0.4682953253164175,
+    "R_max": 0.6959452965991028,
+    "spread": 0.22764997128268527,
+    "verdict": "PARTIAL_2_OF_3_IN_BAND_primitives"
+  },
+  "headline_verdict": {
+    "R_arabic": 0.368162590776608,
+    "R_hebrew": 0.3994913395271666,
+    "R_greek": 0.45536596852622424,
+    "R_min": 0.368162590776608,
+    "R_max": 0.45536596852622424,
+    "spread_max_minus_min": 0.08720337774961623,
+    "verdict": "NARROW_AGREEMENT_OUTSIDE_PREREG_BAND_combinations"
+  },
+  "interpretation": [
+    "If `verdict = ABRAHAMIC_ORTHOGRAPHY_UNIVERSAL_PASS`, the three scriptures share a common diacritic-channel capacity ratio in [0.55, 0.75] with spread <= 0.10. This would be a genuine new constant in computational linguistics: the diacritic system encodes about R*100 % of its theoretical maximum, regardless of script family.",
+    "If `PARTIAL_2_OF_3_IN_BAND`, two scriptures agree but one is an outlier — investigate whether the outlier's diacritic system is genuinely structured differently (e.g. Greek polytonic accents are PROSODIC; Arabic harakat and Hebrew niqqud are PHONOLOGICAL).",
+    "If `NULL_NO_UNIVERSAL`, the diacritic-capacity ratio is language-specific. Report each value separately."
+  ]
+}

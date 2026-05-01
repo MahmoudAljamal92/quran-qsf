@@ -1,0 +1,65 @@
+{
+  "audit": "f63_robustness",
+  "R1_real_verse_only": {
+    "corpora_used": [
+      "quran",
+      "arabic_bible",
+      "hebrew_tanakh",
+      "greek_nt",
+      "pali",
+      "avestan_yasna"
+    ],
+    "medians": {
+      "quran": {
+        "p_max": 0.7272727272727273,
+        "H_EL": 0.9685208240372034
+      },
+      "arabic_bible": {
+        "p_max": 0.2727272727272727,
+        "H_EL": 2.918295834054489
+      },
+      "hebrew_tanakh": {
+        "p_max": 0.2413793103448276,
+        "H_EL": 3.053090083530327
+      },
+      "greek_nt": {
+        "p_max": 0.3333333333333333,
+        "H_EL": 2.433671200186647
+      },
+      "pali": {
+        "p_max": 0.4808201058201058,
+        "H_EL": 2.089938976016876
+      },
+      "avestan_yasna": {
+        "p_max": 0.375,
+        "H_EL": 2.1180782093497093
+      }
+    },
+    "quran_p_max_ratio_to_next_highest": 1.5125672127047642,
+    "quran_h_el_ratio_to_next_lowest": 0.46342062383231175,
+    "next_highest_corpus": "pali",
+    "next_lowest_corpus": "pali",
+    "verdict_pass": true
+  },
+  "R2_quran_rechunked_7word": {
+    "quran_natural_p_max": 0.7272727272727273,
+    "quran_chunked_p_max": 0.24476987447698745,
+    "quran_chunked_h_el": 3.1216938719203133,
+    "poetry_islami_p_max": 0.2857142857142857,
+    "poetry_islami_h_el": 2.688721875540867,
+    "ratio_quran_chunked_to_poetry": 0.8566945606694562
+  },
+  "R3_quran_vs_arabic_bible": {
+    "quran": {
+      "p_max": 0.7272727272727273,
+      "H_EL": 0.9685208240372034
+    },
+    "arabic_bible": {
+      "p_max": 0.2727272727272727,
+      "H_EL": 2.918295834054489
+    },
+    "p_max_ratio": 2.666666666666667,
+    "h_el_ratio": 0.3318789043712556,
+    "verdict_pass": true
+  }
+}

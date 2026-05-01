@@ -1,0 +1,165 @@
+{
+  "experiment": "expP9_v79_batch_diagnostics",
+  "schema_version": 1,
+  "prereg_document": "experiments/expP9_v79_batch_diagnostics/PREREG.md",
+  "prereg_hash": "b7978038e65ee5718141f9440a4b53d0dddf60e4e972e260e4be45c43ebecc0f",
+  "frozen_constants": {
+    "seed": 42,
+    "min_verses": 2,
+    "n_boot_auc": 500,
+    "n_boot_renyi2": 10000,
+    "n_sim_bag": 5000,
+    "corruption_levels": [
+      0.01,
+      0.05,
+      0.1,
+      0.2,
+      0.5
+    ],
+    "el_boundary": 0.314,
+    "arabic_ctrl": [
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "non_arabic": [
+      "hebrew_tanakh",
+      "greek_nt",
+      "iliad_greek",
+      "pali_dn",
+      "pali_mn",
+      "rigveda",
+      "avestan_yasna"
+    ],
+    "band_a": [
+      15,
+      100
+    ]
+  },
+  "payload_tag": "NEW2_dominant_final_forensics",
+  "per_corpus": [
+    {
+      "corpus": "quran",
+      "n_verse_finals": 6236,
+      "alphabet_size": 28,
+      "dominant_final": "ن",
+      "p_max": 0.50096215522771,
+      "p_max_sq_lower_bound_pair_collision": 0.25096308097039227,
+      "sum_p2": 0.29455614958520543,
+      "renyi2_bits": 1.7633854217596254,
+      "is_arabic": true
+    },
+    {
+      "corpus": "poetry_jahili",
+      "n_verse_finals": 2561,
+      "alphabet_size": 34,
+      "dominant_final": "ا",
+      "p_max": 0.1850839515814135,
+      "p_max_sq_lower_bound_pair_collision": 0.034256069132991014,
+      "sum_p2": 0.07776561924192231,
+      "renyi2_bits": 3.6847237198079785,
+      "is_arabic": true
+    },
+    {
+      "corpus": "poetry_islami",
+      "n_verse_finals": 10295,
+      "alphabet_size": 34,
+      "dominant_final": "ا",
+      "p_max": 0.20621661000485672,
+      "p_max_sq_lower_bound_pair_collision": 0.04252529024189517,
+      "sum_p2": 0.08486275560616971,
+      "renyi2_bits": 3.5587246641650467,
+      "is_arabic": true
+    },
+    {
+      "corpus": "poetry_abbasi",
+      "n_verse_finals": 76499,
+      "alphabet_size": 36,
+      "dominant_final": "ا",
+      "p_max": 0.1756362828272265,
+      "p_max_sq_lower_bound_pair_collision": 0.030848103845365495,
+      "sum_p2": 0.07665173234882272,
+      "renyi2_bits": 3.70553779224405,
+      "is_arabic": true
+    },
+    {
+      "corpus": "ksucca",
+      "n_verse_finals": 1967,
+      "alphabet_size": 30,
+      "dominant_final": "ا",
+      "p_max": 0.11845449923741738,
+      "p_max_sq_lower_bound_pair_collision": 0.014031468389587316,
+      "sum_p2": 0.07391636635910936,
+      "renyi2_bits": 3.7579623524544963,
+      "is_arabic": true
+    },
+    {
+      "corpus": "arabic_bible",
+      "n_verse_finals": 31083,
+      "alphabet_size": 35,
+      "dominant_final": "ا",
+      "p_max": 0.1468005018820577,
+      "p_max_sq_lower_bound_pair_collision": 0.021550387352824028,
+      "sum_p2": 0.0781468356195124,
+      "renyi2_bits": 3.677668734060536,
+      "is_arabic": true
+    },
+    {
+      "corpus": "hindawi",
+      "n_verse_finals": 1793,
+      "alphabet_size": 32,
+      "dominant_final": "ا",
+      "p_max": 0.12325711098717233,
+      "p_max_sq_lower_bound_pair_collision": 0.015192315408904119,
+      "sum_p2": 0.06928879085767324,
+      "renyi2_bits": 3.851234209447342,
+      "is_arabic": true
+    },
+    {
+      "corpus": "hebrew_tanakh",
+      "n": 0,
+      "skipped": true
+    },
+    {
+      "corpus": "greek_nt",
+      "n": 0,
+      "skipped": true
+    },
+    {
+      "corpus": "iliad_greek",
+      "n_verse_finals": 15687,
+      "alphabet_size": 11,
+      "dominant_final": "ν",
+      "p_max": 0.2739848282016957,
+      "p_max_sq_lower_bound_pair_collision": 0.07506768608471269,
+      "sum_p2": 0.16775414780592887,
+      "renyi2_bits": 2.5755796566582396,
+      "is_arabic": false
+    },
+    {
+      "corpus": "pali_dn",
+      "n": 0,
+      "skipped": true
+    },
+    {
+      "corpus": "pali_mn",
+      "n": 0,
+      "skipped": true
+    },
+    {
+      "corpus": "rigveda",
+      "n": 0,
+      "skipped": true
+    },
+    {
+      "corpus": "avestan_yasna",
+      "n": 0,
+      "skipped": true
+    }
+  ],
+  "quran_arabic_rank_by_p_max": 1,
+  "n_arabic_corpora": 7
+}

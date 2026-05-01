@@ -1,0 +1,74 @@
+{
+  "experiment_id": "expE15_anti_variance",
+  "task": "E15",
+  "tier": 4,
+  "title": "Anti-Variance Manifold formalization + empirical fit",
+  "generated_utc": "2026-04-23T20:12:43+00:00",
+  "seed": 42,
+  "n_quran_units_bandA": 68,
+  "n_control_units_bandA": 2509,
+  "feature_order": [
+    "EL",
+    "VL_CV",
+    "CN",
+    "H_cond",
+    "T"
+  ],
+  "control_mu": [
+    0.11080323011588314,
+    0.20034806488234075,
+    0.027711546452416184,
+    0.8251763392447035,
+    -2.4449410750637703
+  ],
+  "control_sd": [
+    0.07879020411836625,
+    0.1672287105620057,
+    0.04000742551261237,
+    0.3329074007846299,
+    0.4666849569625667
+  ],
+  "Sigma_ctrl_eigenvalues_ascending": [
+    0.2863429084232079,
+    0.7825782092157638,
+    0.9263244020916033,
+    1.0276809064874408,
+    1.9770735737819753
+  ],
+  "anti_basis_2_smallest": [
+    [
+      -0.401478459477124,
+      -0.03071228514867086,
+      0.004030762168433252,
+      -0.5612857875643703,
+      0.7230586558166692
+    ],
+    [
+      0.255817717489559,
+      -0.8917230154512484,
+      0.19995894621879562,
+      0.19069128268068847,
+      0.25107889929188965
+    ]
+  ],
+  "anti_lambdas": [
+    0.2863429084232079,
+    0.7825782092157638
+  ],
+  "quran_anti_distance_mean": 2.9095861391659397,
+  "quran_anti_distance_max": 5.576853381836996,
+  "control_anti_distance_mean": 1.245764870916125,
+  "control_anti_distance_max": 7.4819508959982794,
+  "quran_percentile_vs_ctrl": 98.5253088880032,
+  "permutation_p": 9.999000099990002e-05,
+  "permutation_n": 10000,
+  "verdict": "ANTI_VARIANCE_LAW",
+  "pre_registered_criteria": {
+    "null": "Quran anti-distance percentile < 95",
+    "ANTI_VARIANCE_LAW": "percentile >= 95 AND perm p <= 0.01",
+    "WEAK_ANTI_VARIANCE": "percentile >= 75 but < 95",
+    "NULL_NO_ANTI_VARIANCE": "below that threshold",
+    "side_effects": "no mutation of any pinned artefact; outputs under expE15 only"
+  },
+  "hyperplane_formula_text": "anti_distance(x) = || diag(1/sqrt(λ_anti)) · Aᵀ · (x - μ)/σ ||_2,  A = 2 smallest-eigval eigenvectors of Σ_ctrl (features in order ['EL', 'VL_CV', 'CN', 'H_cond', 'T'])"
+}

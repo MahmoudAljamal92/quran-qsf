@@ -1,0 +1,940 @@
+{
+  "experiment": "exp61_vl_cv_floor_sensitivity",
+  "hypothesis": "H30 — VL_CV_FLOOR=0.1962 provenance, sensitivity & leak audit",
+  "schema_version": 1,
+  "data": {
+    "n_quran_bandA": 68,
+    "n_ctrl_bandA": 2509,
+    "feat_cols": [
+      "EL",
+      "VL_CV",
+      "CN",
+      "H_cond",
+      "T"
+    ],
+    "IDX_VL_CV": 1,
+    "arabic_ctrl_pool": [
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "band_A": [
+      15,
+      100
+    ],
+    "ridge_lambda": 1e-06,
+    "quran_vlcv_stats": {
+      "min": 0.26826052939404754,
+      "max": 1.5792413455649166,
+      "mean": 0.4823916757649948,
+      "median": 0.44092163029838055,
+      "p1": 0.2801583480955076,
+      "p5": 0.3039669625429911,
+      "p10": 0.337441662683867
+    },
+    "ctrl_vlcv_stats": {
+      "min": 0.0,
+      "max": 1.5812496250040857,
+      "mean": 0.2003480648823408,
+      "median": 0.1518772462995864,
+      "p25": 0.059023849223691034,
+      "p50": 0.1518772462995864,
+      "p57": 0.20024489350744384,
+      "p75": 0.33910846993022925
+    }
+  },
+  "T1_provenance": {
+    "target": 0.1962,
+    "tolerance_formula_strict": 0.0005,
+    "tolerance_percentile_strict": 0.002,
+    "percentile_matches": [],
+    "formula_matches": [],
+    "best_overall": {
+      "kind": "formula_principled",
+      "formula": "1/(phi*pi)",
+      "value": 0.1967263286166804,
+      "delta": 0.0005263286166803938
+    },
+    "best_overall_within_strict": false,
+    "any_strict_match": false,
+    "top_10_candidates": [
+      {
+        "kind": "formula_principled",
+        "formula": "1/(phi*pi)",
+        "value": 0.1967263286166804,
+        "delta": 0.0005263286166803938
+      },
+      {
+        "kind": "formula_principled",
+        "formula": "(phi-1)/pi",
+        "value": 0.19672632861672665,
+        "delta": 0.0005263286167266346
+      },
+      {
+        "kind": "ctrl_pool_percentile",
+        "value": 0.19364916731037082,
+        "pct": 56,
+        "delta": 0.00255083268962919
+      },
+      {
+        "kind": "arabic_family_percentile",
+        "value": 0.19364916731037082,
+        "pct": 55,
+        "delta": 0.00255083268962919
+      },
+      {
+        "kind": "ctrl_pool_percentile",
+        "value": 0.20024489350744384,
+        "pct": 57,
+        "delta": 0.004044893507443831
+      },
+      {
+        "kind": "ctrl_mean",
+        "value": 0.2003480648823408,
+        "delta": 0.004148064882340791
+      },
+      {
+        "kind": "formula_principled",
+        "formula": "sqrt(1/28)",
+        "value": 0.1889822365046136,
+        "delta": 0.0072177634953864145
+      },
+      {
+        "kind": "formula_principled",
+        "formula": "1/sqrt(28)",
+        "value": 0.1889822365046136,
+        "delta": 0.0072177634953864145
+      },
+      {
+        "kind": "arabic_family_percentile",
+        "value": 0.2059322335531027,
+        "pct": 56,
+        "delta": 0.009732233553102682
+      },
+      {
+        "kind": "ctrl_pool_percentile",
+        "value": 0.1856450912250085,
+        "pct": 55,
+        "delta": 0.010554908774991517
+      }
+    ]
+  },
+  "T2_exclusion_profile": {
+    "floors": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.1962,
+      0.22,
+      0.25,
+      0.27,
+      0.3,
+      0.35
+    ],
+    "per_floor": [
+      {
+        "floor": 0.0,
+        "quran_pct_excluded": 0.0,
+        "quran_n_excluded": 0,
+        "quran_n_retained": 68,
+        "per_corpus": {
+          "poetry_jahili": {
+            "n_total": 65,
+            "n_excluded": 0,
+            "pct_excluded": 0.0
+          },
+          "poetry_islami": {
+            "n_total": 211,
+            "n_excluded": 0,
+            "pct_excluded": 0.0
+          },
+          "poetry_abbasi": {
+            "n_total": 1167,
+            "n_excluded": 0,
+            "pct_excluded": 0.0
+          },
+          "ksucca": {
+            "n_total": 19,
+            "n_excluded": 0,
+            "pct_excluded": 0.0
+          },
+          "arabic_bible": {
+            "n_total": 977,
+            "n_excluded": 0,
+            "pct_excluded": 0.0
+          },
+          "hindawi": {
+            "n_total": 70,
+            "n_excluded": 0,
+            "pct_excluded": 0.0
+          }
+        },
+        "ctrl_total_pct_excluded": 0.0,
+        "ctrl_total_n_excluded": 0,
+        "ctrl_total_n_retained": 2509
+      },
+      {
+        "floor": 0.05,
+        "quran_pct_excluded": 0.0,
+        "quran_n_excluded": 0,
+        "quran_n_retained": 68,
+        "per_corpus": {
+          "poetry_jahili": {
+            "n_total": 65,
+            "n_excluded": 27,
+            "pct_excluded": 41.53846153846154
+          },
+          "poetry_islami": {
+            "n_total": 211,
+            "n_excluded": 68,
+            "pct_excluded": 32.22748815165877
+          },
+          "poetry_abbasi": {
+            "n_total": 1167,
+            "n_excluded": 453,
+            "pct_excluded": 38.81748071979435
+          },
+          "ksucca": {
+            "n_total": 19,
+            "n_excluded": 0,
+            "pct_excluded": 0.0
+          },
+          "arabic_bible": {
+            "n_total": 977,
+            "n_excluded": 0,
+            "pct_excluded": 0.0
+          },
+          "hindawi": {
+            "n_total": 70,
+            "n_excluded": 0,
+            "pct_excluded": 0.0
+          }
+        },
+        "ctrl_total_pct_excluded": 21.84137106416899,
+        "ctrl_total_n_excluded": 548,
+        "ctrl_total_n_retained": 1961
+      },
+      {
+        "floor": 0.1,
+        "quran_pct_excluded": 0.0,
+        "quran_n_excluded": 0,
+        "quran_n_retained": 68,
+        "per_corpus": {
+          "poetry_jahili": {
+            "n_total": 65,
+            "n_excluded": 40,
+            "pct_excluded": 61.53846153846154
+          },
+          "poetry_islami": {
+            "n_total": 211,
+            "n_excluded": 124,
+            "pct_excluded": 58.767772511848335
+          },
+          "poetry_abbasi": {
+            "n_total": 1167,
+            "n_excluded": 769,
+            "pct_excluded": 65.89545844044558
+          },
+          "ksucca": {
+            "n_total": 19,
+            "n_excluded": 0,
+            "pct_excluded": 0.0
+          },
+          "arabic_bible": {
+            "n_total": 977,
+            "n_excluded": 0,
+            "pct_excluded": 0.0
+          },
+          "hindawi": {
+            "n_total": 70,
+            "n_excluded": 0,
+            "pct_excluded": 0.0
+          }
+        },
+        "ctrl_total_pct_excluded": 37.18612993224392,
+        "ctrl_total_n_excluded": 933,
+        "ctrl_total_n_retained": 1576
+      },
+      {
+        "floor": 0.15,
+        "quran_pct_excluded": 0.0,
+        "quran_n_excluded": 0,
+        "quran_n_retained": 68,
+        "per_corpus": {
+          "poetry_jahili": {
+            "n_total": 65,
+            "n_excluded": 53,
+            "pct_excluded": 81.53846153846153
+          },
+          "poetry_islami": {
+            "n_total": 211,
+            "n_excluded": 172,
+            "pct_excluded": 81.51658767772511
+          },
+          "poetry_abbasi": {
+            "n_total": 1167,
+            "n_excluded": 1013,
+            "pct_excluded": 86.8037703513282
+          },
+          "ksucca": {
+            "n_total": 19,
+            "n_excluded": 0,
+            "pct_excluded": 0.0
+          },
+          "arabic_bible": {
+            "n_total": 977,
+            "n_excluded": 8,
+            "pct_excluded": 0.8188331627430911
+          },
+          "hindawi": {
+            "n_total": 70,
+            "n_excluded": 0,
+            "pct_excluded": 0.0
+          }
+        },
+        "ctrl_total_pct_excluded": 49.66121960940614,
+        "ctrl_total_n_excluded": 1246,
+        "ctrl_total_n_retained": 1263
+      },
+      {
+        "floor": 0.1962,
+        "quran_pct_excluded": 0.0,
+        "quran_n_excluded": 0,
+        "quran_n_retained": 68,
+        "per_corpus": {
+          "poetry_jahili": {
+            "n_total": 65,
+            "n_excluded": 61,
+            "pct_excluded": 93.84615384615384
+          },
+          "poetry_islami": {
+            "n_total": 211,
+            "n_excluded": 205,
+            "pct_excluded": 97.1563981042654
+          },
+          "poetry_abbasi": {
+            "n_total": 1167,
+            "n_excluded": 1126,
+            "pct_excluded": 96.48671808054841
+          },
+          "ksucca": {
+            "n_total": 19,
+            "n_excluded": 0,
+            "pct_excluded": 0.0
+          },
+          "arabic_bible": {
+            "n_total": 977,
+            "n_excluded": 35,
+            "pct_excluded": 3.5823950870010237
+          },
+          "hindawi": {
+            "n_total": 70,
+            "n_excluded": 0,
+            "pct_excluded": 0.0
+          }
+        },
+        "ctrl_total_pct_excluded": 56.87524910322838,
+        "ctrl_total_n_excluded": 1427,
+        "ctrl_total_n_retained": 1082
+      },
+      {
+        "floor": 0.22,
+        "quran_pct_excluded": 0.0,
+        "quran_n_excluded": 0,
+        "quran_n_retained": 68,
+        "per_corpus": {
+          "poetry_jahili": {
+            "n_total": 65,
+            "n_excluded": 63,
+            "pct_excluded": 96.92307692307692
+          },
+          "poetry_islami": {
+            "n_total": 211,
+            "n_excluded": 210,
+            "pct_excluded": 99.52606635071089
+          },
+          "poetry_abbasi": {
+            "n_total": 1167,
+            "n_excluded": 1152,
+            "pct_excluded": 98.7146529562982
+          },
+          "ksucca": {
+            "n_total": 19,
+            "n_excluded": 0,
+            "pct_excluded": 0.0
+          },
+          "arabic_bible": {
+            "n_total": 977,
+            "n_excluded": 52,
+            "pct_excluded": 5.322415557830093
+          },
+          "hindawi": {
+            "n_total": 70,
+            "n_excluded": 1,
+            "pct_excluded": 1.4285714285714286
+          }
+        },
+        "ctrl_total_pct_excluded": 58.90793144679155,
+        "ctrl_total_n_excluded": 1478,
+        "ctrl_total_n_retained": 1031
+      },
+      {
+        "floor": 0.25,
+        "quran_pct_excluded": 0.0,
+        "quran_n_excluded": 0,
+        "quran_n_retained": 68,
+        "per_corpus": {
+          "poetry_jahili": {
+            "n_total": 65,
+            "n_excluded": 65,
+            "pct_excluded": 100.0
+          },
+          "poetry_islami": {
+            "n_total": 211,
+            "n_excluded": 211,
+            "pct_excluded": 100.0
+          },
+          "poetry_abbasi": {
+            "n_total": 1167,
+            "n_excluded": 1167,
+            "pct_excluded": 100.0
+          },
+          "ksucca": {
+            "n_total": 19,
+            "n_excluded": 0,
+            "pct_excluded": 0.0
+          },
+          "arabic_bible": {
+            "n_total": 977,
+            "n_excluded": 86,
+            "pct_excluded": 8.802456499488228
+          },
+          "hindawi": {
+            "n_total": 70,
+            "n_excluded": 2,
+            "pct_excluded": 2.857142857142857
+          }
+        },
+        "ctrl_total_pct_excluded": 61.02032682343563,
+        "ctrl_total_n_excluded": 1531,
+        "ctrl_total_n_retained": 978
+      },
+      {
+        "floor": 0.27,
+        "quran_pct_excluded": 1.4705882352941175,
+        "quran_n_excluded": 1,
+        "quran_n_retained": 67,
+        "per_corpus": {
+          "poetry_jahili": {
+            "n_total": 65,
+            "n_excluded": 65,
+            "pct_excluded": 100.0
+          },
+          "poetry_islami": {
+            "n_total": 211,
+            "n_excluded": 211,
+            "pct_excluded": 100.0
+          },
+          "poetry_abbasi": {
+            "n_total": 1167,
+            "n_excluded": 1167,
+            "pct_excluded": 100.0
+          },
+          "ksucca": {
+            "n_total": 19,
+            "n_excluded": 0,
+            "pct_excluded": 0.0
+          },
+          "arabic_bible": {
+            "n_total": 977,
+            "n_excluded": 127,
+            "pct_excluded": 12.99897645854657
+          },
+          "hindawi": {
+            "n_total": 70,
+            "n_excluded": 7,
+            "pct_excluded": 10.0
+          }
+        },
+        "ctrl_total_pct_excluded": 62.85372658429653,
+        "ctrl_total_n_excluded": 1577,
+        "ctrl_total_n_retained": 932
+      },
+      {
+        "floor": 0.3,
+        "quran_pct_excluded": 5.88235294117647,
+        "quran_n_excluded": 4,
+        "quran_n_retained": 64,
+        "per_corpus": {
+          "poetry_jahili": {
+            "n_total": 65,
+            "n_excluded": 65,
+            "pct_excluded": 100.0
+          },
+          "poetry_islami": {
+            "n_total": 211,
+            "n_excluded": 211,
+            "pct_excluded": 100.0
+          },
+          "poetry_abbasi": {
+            "n_total": 1167,
+            "n_excluded": 1167,
+            "pct_excluded": 100.0
+          },
+          "ksucca": {
+            "n_total": 19,
+            "n_excluded": 0,
+            "pct_excluded": 0.0
+          },
+          "arabic_bible": {
+            "n_total": 977,
+            "n_excluded": 209,
+            "pct_excluded": 21.392016376663257
+          },
+          "hindawi": {
+            "n_total": 70,
+            "n_excluded": 13,
+            "pct_excluded": 18.571428571428573
+          }
+        },
+        "ctrl_total_pct_excluded": 66.36110003985651,
+        "ctrl_total_n_excluded": 1665,
+        "ctrl_total_n_retained": 844
+      },
+      {
+        "floor": 0.35,
+        "quran_pct_excluded": 11.76470588235294,
+        "quran_n_excluded": 8,
+        "quran_n_retained": 60,
+        "per_corpus": {
+          "poetry_jahili": {
+            "n_total": 65,
+            "n_excluded": 65,
+            "pct_excluded": 100.0
+          },
+          "poetry_islami": {
+            "n_total": 211,
+            "n_excluded": 211,
+            "pct_excluded": 100.0
+          },
+          "poetry_abbasi": {
+            "n_total": 1167,
+            "n_excluded": 1167,
+            "pct_excluded": 100.0
+          },
+          "ksucca": {
+            "n_total": 19,
+            "n_excluded": 0,
+            "pct_excluded": 0.0
+          },
+          "arabic_bible": {
+            "n_total": 977,
+            "n_excluded": 485,
+            "pct_excluded": 49.6417604912999
+          },
+          "hindawi": {
+            "n_total": 70,
+            "n_excluded": 29,
+            "pct_excluded": 41.42857142857143
+          }
+        },
+        "ctrl_total_pct_excluded": 77.99920286966919,
+        "ctrl_total_n_excluded": 1957,
+        "ctrl_total_n_retained": 552
+      }
+    ]
+  },
+  "T3_T4_auc_sensitivity_and_leak": {
+    "baseline_AUC": 0.9947483178205518,
+    "tau_star_quran_p5_at_floor_0": 4.090981480011191,
+    "baseline_Q_COV_at_tau_star": 0.9411764705882353,
+    "baseline_sep_at_tau_star": 0.9776803507373456,
+    "per_floor": [
+      {
+        "floor": 0.0,
+        "n_quran_retained": 68,
+        "n_ctrl_retained": 2509,
+        "n_quran_excluded": 0,
+        "n_ctrl_excluded": 0,
+        "pct_ctrl_rescued_by_floor": 0.0,
+        "pure_filter": {
+          "AUC": 0.9947483178205518,
+          "delta_AUC_vs_baseline": 0.0,
+          "Q_COV_at_tau_star_retained_denom": 0.9411764705882353,
+          "sep_at_tau_star_retained_denom": 0.9776803507373456,
+          "note": "AUC & rates computed on retained rows only (different denominator from baseline -- NOT directly comparable, but useful to check stability of the ranking on survivors)."
+        },
+        "legacy_mode": {
+          "AUC_with_excluded_pinned": 0.9947483178205518,
+          "Q_COV_at_tau_star_full_denom": 0.9411764705882353,
+          "sep_at_tau_star_full_denom": 0.9776803507373456,
+          "note": "AUC with excluded ctrls pinned to -inf and excluded Qurans pinned to +inf. Q_COV/sep use full-class denominators, matching the legacy pipeline's own reporting formula."
+        },
+        "inflation_vs_baseline": {
+          "auc_inflation": 0.0,
+          "sep_inflation": 0.0,
+          "qcov_inflation": 0.0,
+          "interpretation": "At floor=0.0000: the legacy logic awards 0.00% of the ctrl pool free 'correct classification' by VL_CV alone, regardless of Mahalanobis distance."
+        }
+      },
+      {
+        "floor": 0.05,
+        "n_quran_retained": 68,
+        "n_ctrl_retained": 1961,
+        "n_quran_excluded": 0,
+        "n_ctrl_excluded": 548,
+        "pct_ctrl_rescued_by_floor": 0.0,
+        "pure_filter": {
+          "AUC": 0.993393226745058,
+          "delta_AUC_vs_baseline": -0.0013550910754938084,
+          "Q_COV_at_tau_star_retained_denom": 0.9411764705882353,
+          "sep_at_tau_star_retained_denom": 0.971443141254462,
+          "note": "AUC & rates computed on retained rows only (different denominator from baseline -- NOT directly comparable, but useful to check stability of the ranking on survivors)."
+        },
+        "legacy_mode": {
+          "AUC_with_excluded_pinned": 0.9948362366070382,
+          "Q_COV_at_tau_star_full_denom": 0.9411764705882353,
+          "sep_at_tau_star_full_denom": 0.9776803507373456,
+          "note": "AUC with excluded ctrls pinned to -inf and excluded Qurans pinned to +inf. Q_COV/sep use full-class denominators, matching the legacy pipeline's own reporting formula."
+        },
+        "inflation_vs_baseline": {
+          "auc_inflation": 8.791878648639617e-05,
+          "sep_inflation": 0.0,
+          "qcov_inflation": 0.0,
+          "interpretation": "At floor=0.0500: the legacy logic awards 0.00% of the ctrl pool free 'correct classification' by VL_CV alone, regardless of Mahalanobis distance."
+        }
+      },
+      {
+        "floor": 0.1,
+        "n_quran_retained": 68,
+        "n_ctrl_retained": 1576,
+        "n_quran_excluded": 0,
+        "n_ctrl_excluded": 933,
+        "pct_ctrl_rescued_by_floor": 0.07971303308090873,
+        "pure_filter": {
+          "AUC": 0.9920498656315317,
+          "delta_AUC_vs_baseline": -0.002698452189020095,
+          "Q_COV_at_tau_star_retained_denom": 0.9411764705882353,
+          "sep_at_tau_star_retained_denom": 0.9657360406091371,
+          "note": "AUC & rates computed on retained rows only (different denominator from baseline -- NOT directly comparable, but useful to check stability of the ranking on survivors)."
+        },
+        "legacy_mode": {
+          "AUC_with_excluded_pinned": 0.9950062129275784,
+          "Q_COV_at_tau_star_full_denom": 0.9411764705882353,
+          "sep_at_tau_star_full_denom": 0.9784774810681547,
+          "note": "AUC with excluded ctrls pinned to -inf and excluded Qurans pinned to +inf. Q_COV/sep use full-class denominators, matching the legacy pipeline's own reporting formula."
+        },
+        "inflation_vs_baseline": {
+          "auc_inflation": 0.00025789510702656226,
+          "sep_inflation": 0.0007971303308090816,
+          "qcov_inflation": 0.0,
+          "interpretation": "At floor=0.1000: the legacy logic awards 0.08% of the ctrl pool free 'correct classification' by VL_CV alone, regardless of Mahalanobis distance."
+        }
+      },
+      {
+        "floor": 0.15,
+        "n_quran_retained": 68,
+        "n_ctrl_retained": 1263,
+        "n_quran_excluded": 0,
+        "n_ctrl_excluded": 1246,
+        "pct_ctrl_rescued_by_floor": 0.23913909924272617,
+        "pure_filter": {
+          "AUC": 0.9914303013366867,
+          "delta_AUC_vs_baseline": -0.003318016483865094,
+          "Q_COV_at_tau_star_retained_denom": 0.9411764705882353,
+          "sep_at_tau_star_retained_denom": 0.9604117181314331,
+          "note": "AUC & rates computed on retained rows only (different denominator from baseline -- NOT directly comparable, but useful to check stability of the ranking on survivors)."
+        },
+        "legacy_mode": {
+          "AUC_with_excluded_pinned": 0.9956861182097391,
+          "Q_COV_at_tau_star_full_denom": 0.9411764705882353,
+          "sep_at_tau_star_full_denom": 0.9800717417297728,
+          "note": "AUC with excluded ctrls pinned to -inf and excluded Qurans pinned to +inf. Q_COV/sep use full-class denominators, matching the legacy pipeline's own reporting formula."
+        },
+        "inflation_vs_baseline": {
+          "auc_inflation": 0.0009378003891872266,
+          "sep_inflation": 0.0023913909924272447,
+          "qcov_inflation": 0.0,
+          "interpretation": "At floor=0.1500: the legacy logic awards 0.24% of the ctrl pool free 'correct classification' by VL_CV alone, regardless of Mahalanobis distance."
+        }
+      },
+      {
+        "floor": 0.1962,
+        "n_quran_retained": 68,
+        "n_ctrl_retained": 1082,
+        "n_quran_excluded": 0,
+        "n_ctrl_excluded": 1427,
+        "pct_ctrl_rescued_by_floor": 0.35870864886408926,
+        "pure_filter": {
+          "AUC": 0.9904044797216484,
+          "delta_AUC_vs_baseline": -0.004343838098903485,
+          "Q_COV_at_tau_star_retained_denom": 0.9411764705882353,
+          "sep_at_tau_star_retained_denom": 0.9565619223659889,
+          "note": "AUC & rates computed on retained rows only (different denominator from baseline -- NOT directly comparable, but useful to check stability of the ranking on survivors)."
+        },
+        "legacy_mode": {
+          "AUC_with_excluded_pinned": 0.9958619557827116,
+          "Q_COV_at_tau_star_full_denom": 0.9411764705882353,
+          "sep_at_tau_star_full_denom": 0.9812674372259864,
+          "note": "AUC with excluded ctrls pinned to -inf and excluded Qurans pinned to +inf. Q_COV/sep use full-class denominators, matching the legacy pipeline's own reporting formula."
+        },
+        "inflation_vs_baseline": {
+          "auc_inflation": 0.001113637962159797,
+          "sep_inflation": 0.0035870864886408116,
+          "qcov_inflation": 0.0,
+          "interpretation": "At floor=0.1962: the legacy logic awards 0.36% of the ctrl pool free 'correct classification' by VL_CV alone, regardless of Mahalanobis distance."
+        }
+      },
+      {
+        "floor": 0.22,
+        "n_quran_retained": 68,
+        "n_ctrl_retained": 1031,
+        "n_quran_excluded": 0,
+        "n_ctrl_excluded": 1478,
+        "pct_ctrl_rescued_by_floor": 0.3985651654045437,
+        "pure_filter": {
+          "AUC": 0.9900154048040166,
+          "delta_AUC_vs_baseline": -0.004732913016535223,
+          "Q_COV_at_tau_star_retained_denom": 0.9411764705882353,
+          "sep_at_tau_star_retained_denom": 0.9553831231813773,
+          "note": "AUC & rates computed on retained rows only (different denominator from baseline -- NOT directly comparable, but useful to check stability of the ranking on survivors)."
+        },
+        "legacy_mode": {
+          "AUC_with_excluded_pinned": 0.9958971232973062,
+          "Q_COV_at_tau_star_full_denom": 0.9411764705882353,
+          "sep_at_tau_star_full_denom": 0.981666002391391,
+          "note": "AUC with excluded ctrls pinned to -inf and excluded Qurans pinned to +inf. Q_COV/sep use full-class denominators, matching the legacy pipeline's own reporting formula."
+        },
+        "inflation_vs_baseline": {
+          "auc_inflation": 0.0011488054767543332,
+          "sep_inflation": 0.003985651654045408,
+          "qcov_inflation": 0.0,
+          "interpretation": "At floor=0.2200: the legacy logic awards 0.40% of the ctrl pool free 'correct classification' by VL_CV alone, regardless of Mahalanobis distance."
+        }
+      },
+      {
+        "floor": 0.25,
+        "n_quran_retained": 68,
+        "n_ctrl_retained": 978,
+        "n_quran_excluded": 0,
+        "n_ctrl_excluded": 1531,
+        "pct_ctrl_rescued_by_floor": 0.3985651654045437,
+        "pure_filter": {
+          "AUC": 0.9895946108504752,
+          "delta_AUC_vs_baseline": -0.005153706970076666,
+          "Q_COV_at_tau_star_retained_denom": 0.9411764705882353,
+          "sep_at_tau_star_retained_denom": 0.9529652351738241,
+          "note": "AUC & rates computed on retained rows only (different denominator from baseline -- NOT directly comparable, but useful to check stability of the ranking on survivors)."
+        },
+        "legacy_mode": {
+          "AUC_with_excluded_pinned": 0.9959440133167655,
+          "Q_COV_at_tau_star_full_denom": 0.9411764705882353,
+          "sep_at_tau_star_full_denom": 0.981666002391391,
+          "note": "AUC with excluded ctrls pinned to -inf and excluded Qurans pinned to +inf. Q_COV/sep use full-class denominators, matching the legacy pipeline's own reporting formula."
+        },
+        "inflation_vs_baseline": {
+          "auc_inflation": 0.0011956954962136779,
+          "sep_inflation": 0.003985651654045408,
+          "qcov_inflation": 0.0,
+          "interpretation": "At floor=0.2500: the legacy logic awards 0.40% of the ctrl pool free 'correct classification' by VL_CV alone, regardless of Mahalanobis distance."
+        }
+      },
+      {
+        "floor": 0.27,
+        "n_quran_retained": 67,
+        "n_ctrl_retained": 932,
+        "n_quran_excluded": 1,
+        "n_ctrl_excluded": 1577,
+        "pct_ctrl_rescued_by_floor": 0.5579912315663611,
+        "pure_filter": {
+          "AUC": 0.989286400614951,
+          "delta_AUC_vs_baseline": -0.0054619172056008525,
+          "Q_COV_at_tau_star_retained_denom": 0.9402985074626866,
+          "sep_at_tau_star_retained_denom": 0.9549356223175965,
+          "note": "AUC & rates computed on retained rows only (different denominator from baseline -- NOT directly comparable, but useful to check stability of the ranking on survivors)."
+        },
+        "legacy_mode": {
+          "AUC_with_excluded_pinned": 0.9960788221227111,
+          "Q_COV_at_tau_star_full_denom": 0.9411764705882353,
+          "sep_at_tau_star_full_denom": 0.9832602630530092,
+          "note": "AUC with excluded ctrls pinned to -inf and excluded Qurans pinned to +inf. Q_COV/sep use full-class denominators, matching the legacy pipeline's own reporting formula."
+        },
+        "inflation_vs_baseline": {
+          "auc_inflation": 0.0013305043021593077,
+          "sep_inflation": 0.005579912315663571,
+          "qcov_inflation": 0.0,
+          "interpretation": "At floor=0.2700: the legacy logic awards 0.56% of the ctrl pool free 'correct classification' by VL_CV alone, regardless of Mahalanobis distance."
+        }
+      },
+      {
+        "floor": 0.3,
+        "n_quran_retained": 64,
+        "n_ctrl_retained": 844,
+        "n_quran_excluded": 4,
+        "n_ctrl_excluded": 1665,
+        "pct_ctrl_rescued_by_floor": 0.6775607811877242,
+        "pure_filter": {
+          "AUC": 0.9885589454976303,
+          "delta_AUC_vs_baseline": -0.006189372322921494,
+          "Q_COV_at_tau_star_retained_denom": 0.9375,
+          "sep_at_tau_star_retained_denom": 0.9537914691943128,
+          "note": "AUC & rates computed on retained rows only (different denominator from baseline -- NOT directly comparable, but useful to check stability of the ranking on survivors)."
+        },
+        "legacy_mode": {
+          "AUC_with_excluded_pinned": 0.9963777459967645,
+          "Q_COV_at_tau_star_full_denom": 0.9411764705882353,
+          "sep_at_tau_star_full_denom": 0.9844559585492227,
+          "note": "AUC with excluded ctrls pinned to -inf and excluded Qurans pinned to +inf. Q_COV/sep use full-class denominators, matching the legacy pipeline's own reporting formula."
+        },
+        "inflation_vs_baseline": {
+          "auc_inflation": 0.0016294281762126994,
+          "sep_inflation": 0.006775607811877138,
+          "qcov_inflation": 0.0,
+          "interpretation": "At floor=0.3000: the legacy logic awards 0.68% of the ctrl pool free 'correct classification' by VL_CV alone, regardless of Mahalanobis distance."
+        }
+      },
+      {
+        "floor": 0.35,
+        "n_quran_retained": 60,
+        "n_ctrl_retained": 552,
+        "n_quran_excluded": 8,
+        "n_ctrl_excluded": 1957,
+        "pct_ctrl_rescued_by_floor": 0.876843363889996,
+        "pure_filter": {
+          "AUC": 0.9855374396135266,
+          "delta_AUC_vs_baseline": -0.009210878207025264,
+          "Q_COV_at_tau_star_retained_denom": 0.9333333333333333,
+          "sep_at_tau_star_retained_denom": 0.9384057971014492,
+          "note": "AUC & rates computed on retained rows only (different denominator from baseline -- NOT directly comparable, but useful to check stability of the ranking on survivors)."
+        },
+        "legacy_mode": {
+          "AUC_with_excluded_pinned": 0.997192460084871,
+          "Q_COV_at_tau_star_full_denom": 0.9411764705882353,
+          "sep_at_tau_star_full_denom": 0.9864487843762455,
+          "note": "AUC with excluded ctrls pinned to -inf and excluded Qurans pinned to +inf. Q_COV/sep use full-class denominators, matching the legacy pipeline's own reporting formula."
+        },
+        "inflation_vs_baseline": {
+          "auc_inflation": 0.0024441422643191046,
+          "sep_inflation": 0.008768433638899897,
+          "qcov_inflation": 0.0,
+          "interpretation": "At floor=0.3500: the legacy logic awards 0.88% of the ctrl pool free 'correct classification' by VL_CV alone, regardless of Mahalanobis distance."
+        }
+      }
+    ],
+    "filter_auc_range_no_quran_excluded": {
+      "min": 0.9895946108504752,
+      "max": 0.9947483178205518,
+      "range": 0.005153706970076666
+    }
+  },
+  "T5_bootstrap_CI": {
+    "n_bootstrap": 1000,
+    "seed": 42,
+    "per_floor": {
+      "floor_0.0000": {
+        "pure_AUC_mean": 0.9948252995099992,
+        "pure_AUC_std": 0.0015220709232518818,
+        "pure_AUC_ci95": [
+          0.9915126134152346,
+          0.9974041978289921
+        ],
+        "legacy_AUC_mean": 0.9948252995099992,
+        "legacy_AUC_std": 0.0015220709232518818,
+        "legacy_AUC_ci95": [
+          0.9915126134152346,
+          0.9974041978289921
+        ],
+        "inflation_mean": 0.0
+      },
+      "floor_0.1962": {
+        "pure_AUC_mean": 0.990515322133105,
+        "pure_AUC_std": 0.002693440463130036,
+        "pure_AUC_ci95": [
+          0.9849119312021807,
+          0.9953477671724081
+        ],
+        "legacy_AUC_mean": 0.9959053173282068,
+        "legacy_AUC_std": 0.0011700719014717546,
+        "legacy_AUC_ci95": [
+          0.9935055857735681,
+          0.9979602841535179
+        ],
+        "inflation_mean": 0.005389995195101749
+      },
+      "floor_0.2500": {
+        "pure_AUC_mean": 0.9897155173162185,
+        "pure_AUC_std": 0.0028919065539426037,
+        "pure_AUC_ci95": [
+          0.9837465357709636,
+          0.9948719377704521
+        ],
+        "legacy_AUC_mean": 0.9959840984221509,
+        "legacy_AUC_std": 0.0011406605371503667,
+        "legacy_AUC_ci95": [
+          0.9935524757930274,
+          0.9979840222258692
+        ],
+        "inflation_mean": 0.006268581105932314
+      }
+    }
+  },
+  "verdict": {
+    "headline_verdict": "FLOOR_ROBUST_ARBITRARY_CONSTANT_MINOR_LEAK",
+    "flags": {
+      "FILTER_STABLE": true,
+      "LEGACY_LEAK_MAJOR": false,
+      "LEGACY_LEAK_MINOR": true,
+      "FLOOR_FRAGILE": false,
+      "FLOOR_PROVENANCE_FOUND_PRINCIPLED": false
+    },
+    "auc_variation_range_all_floors": 0.009210878207025264,
+    "auc_variation_range_f_with_no_quran_excluded": 0.005153706970076666,
+    "leak_audit_at_0p1962": {
+      "auc_inflation_vs_baseline": 0.001113637962159797,
+      "sep_inflation_vs_baseline": 0.0035870864886408116,
+      "pct_ctrl_rescued_by_floor": 0.35870864886408926,
+      "explanation": "auc_inflation = AUC(legacy pinning) - AUC(baseline, no floor).  sep_inflation = sep(legacy) - sep(baseline) at tau* = Quran p5. Both are evaluated on the full class denominators so they are apples-to-apples against the honest baseline."
+    },
+    "provenance_summary": {
+      "best_candidate": {
+        "kind": "formula_principled",
+        "formula": "1/(phi*pi)",
+        "value": 0.1967263286166804,
+        "delta": 0.0005263286166803938
+      },
+      "within_own_tol": false,
+      "n_formula_matches": 0,
+      "n_percentile_matches": 0,
+      "any_strict_match": false
+    },
+    "prereg_thresholds": {
+      "FILTER_STABLE": "max |AUC(filter,f) - AUC(filter,0)| < 0.010 across f in [0.00, 0.1962, 0.22, 0.25] (floors that preserve all 68 Quran units). 0.010 chosen because filter removes easy ctrl rows; range up to ~0.005 is expected from selection alone.",
+      "LEGACY_LEAK_MAJOR": "auc_inflation > 0.01 OR sep_inflation > 0.05 at f=0.1962",
+      "LEGACY_LEAK_MINOR": "0.0005 <= auc_inflation <= 0.01 OR 0.001 <= sep_inflation <= 0.05 at f=0.1962",
+      "FLOOR_FRAGILE": "max |AUC(filter,f) - AUC(filter,0)| > 0.02 anywhere in the full sweep, including floors that exclude some Quran units",
+      "FLOOR_PROVENANCE_FOUND_PRINCIPLED": "|0.1962 - best_principled_candidate| < 0.002; arbitrary curve-fits excluded"
+    }
+  },
+  "parameters": {
+    "legacy_floor": 0.1962,
+    "floors_tested": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.1962,
+      0.22,
+      0.25,
+      0.27,
+      0.3,
+      0.35
+    ],
+    "n_bootstrap": 1000,
+    "seed": 42
+  },
+  "runtime_seconds": 11.46
+}

@@ -1,0 +1,149 @@
+{
+  "experiment": "exp53_ar1_6d_gate",
+  "schema_version": 1,
+  "prereg_hash": "ebb691d32d6f3d6bb8504221081c077f69e9db0c1cb935f0b7cfbc29402a4116",
+  "prereg": {
+    "extra_metric": "phi1_ar1_vlen",
+    "ridge_lambda": 1e-06,
+    "gate_formula": "T2_6D >= 5D_T2 * 6/5",
+    "gate_threshold": 4268.807345405562,
+    "five_d_T2_baseline": 3557.339454504635,
+    "band_A": [
+      15,
+      100
+    ],
+    "control_pool": [
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "permutation_n": 10000,
+    "permutation_seed": 42,
+    "decision_rule": {
+      "PROMOTE_6TH_CHANNEL": "T2_6D >= gate AND perm_p <= 0.01 AND per_dim_gain >= 1.0",
+      "GATE_PASS_UNCERTAIN": "T2_6D >= gate AND perm_p > 0.01",
+      "SIGNIFICANT_BUT_REDUNDANT": "T2_6D >= T2_5D AND perm_p <= 0.05 AND gate FAILED",
+      "REJECT_6TH_CHANNEL": "otherwise"
+    },
+    "source_exp": "exp44_F6_spectrum (AR(1) lag-1 Cohen's d = +0.79)"
+  },
+  "row_counts": {
+    "n_quran_bandA": 68,
+    "n_ctrl_bandA": 2509,
+    "n_quran_dropped_nan_6th": 0,
+    "n_ctrl_dropped_nan_6th": 0,
+    "ctrl_per_corpus_nan": {
+      "poetry_jahili": 0,
+      "poetry_islami": 0,
+      "poetry_abbasi": 0,
+      "ksucca": 0,
+      "arabic_bible": 0,
+      "hindawi": 0
+    }
+  },
+  "row_alignment_check": {
+    "quran_5d_matches_phase06": true,
+    "ctrl_5d_matches_phase06": true
+  },
+  "five_d_sanity": {
+    "T2": 3557.3394545046353,
+    "F": 710.3626980606927,
+    "df1": 5,
+    "df2": 2571,
+    "p_F_tail": 0.0,
+    "scipy_log10_p_F_tail": -Infinity,
+    "highprec_log10_p_F_tail": -480.2531098456136,
+    "highprec_dps": 80,
+    "locked_T2": 3557.339454504635,
+    "abs_delta_vs_locked": 4.547473508864641e-13
+  },
+  "six_d_hotelling": {
+    "T2": 3591.535259736596,
+    "F": 597.4269008105534,
+    "df1": 6,
+    "df2": 2570,
+    "p_F_tail": 0.0,
+    "scipy_log10_p_F_tail": -Infinity,
+    "highprec_log10_p_F_tail": -481.9054700564071,
+    "highprec_dps": 80,
+    "n_quran": 68,
+    "n_ctrl": 2509,
+    "p_dim": 6
+  },
+  "permutation_test": {
+    "p_value": 9.999000099990002e-05,
+    "observed_T2": 3591.535259736596,
+    "n_perm": 10000,
+    "n_perm_ge_observed": 0,
+    "null_mean_T2": 6.014782570221182,
+    "null_std_T2": 3.659430082775813,
+    "null_p95_T2": 12.97827157283078,
+    "null_p99_T2": 18.224134606431203
+  },
+  "phi1_ar1_diagnostic": {
+    "quran_mean": 0.14999009993544202,
+    "quran_median": 0.15990671091280328,
+    "quran_std": 0.2130320689391764,
+    "ctrl_mean": -0.03402228332281848,
+    "ctrl_median": -0.029279952195996425,
+    "ctrl_std": 0.15210499749506365,
+    "cohen_d": 1.1949164091319222,
+    "mw_p_greater": 3.329287778320325e-14,
+    "n_quran": 68,
+    "n_ctrl": 2509
+  },
+  "gate_verdict": {
+    "verdict": "SIGNIFICANT_BUT_REDUNDANT",
+    "gate_threshold": 4268.807345405562,
+    "observed_T2_6D": 3591.535259736596,
+    "observed_gate_ratio_6D_over_5D": 1.0096127472987317,
+    "marginal_delta_T2_6D_minus_5D": 34.19580523196055,
+    "per_dim_T2_5D": 711.467890900927,
+    "per_dim_T2_6D": 598.5892099560994,
+    "per_dim_gain_ratio": 0.8413439560822764,
+    "permutation_p_value": 9.999000099990002e-05
+  },
+  "centroids": {
+    "mu_QURAN_bandA_6D": [
+      0.7074338713106889,
+      0.4823916757649949,
+      0.08596828788694996,
+      0.8671010277271484,
+      -0.482402750487046,
+      0.14999009993544202
+    ],
+    "mu_CTRL_POOL_bandA_6D": [
+      0.11080323011588314,
+      0.20034806488234075,
+      0.027711546452416184,
+      0.8251763392447035,
+      -2.4449410750637703,
+      -0.03402228332281847
+    ],
+    "mu_CTRL_POOL_5D_locked": [
+      0.11080323011588314,
+      0.20034806488234075,
+      0.027711546452416184,
+      0.8251763392447035,
+      -2.4449410750637703
+    ],
+    "feature_cols_6D": [
+      "EL",
+      "VL_CV",
+      "CN",
+      "H_cond",
+      "T",
+      "phi1_ar1_vlen"
+    ]
+  },
+  "reference": {
+    "prereg_doc": "experiments/exp53_ar1_6d_gate/PREREG.md",
+    "input_checkpoint": "phase_06_phi_m.pkl",
+    "source_experiment": "exp44_F6_spectrum",
+    "template_experiment": "exp49_6d_hotelling"
+  },
+  "runtime_seconds": 5.63
+}

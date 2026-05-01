@@ -1,0 +1,135 @@
+{
+  "experiment": "exp75_fractal_dimension",
+  "hypothesis": "H14 — Does the Quran's verse-length time series have a distinct fractal dimension?",
+  "schema_version": 1,
+  "per_corpus": {
+    "quran": {
+      "n_verses": 6236,
+      "n_units": 114,
+      "hfd_global": 0.9624,
+      "hurst_rs": 0.8968,
+      "d_from_hurst": 1.1032,
+      "per_unit_hfd": {
+        "n": 95,
+        "mean": 0.9653,
+        "std": 0.0898,
+        "median": 0.9772
+      }
+    },
+    "poetry_jahili": {
+      "n_verses": 2561,
+      "n_units": 133,
+      "hfd_global": 1.0154,
+      "hurst_rs": 0.5647,
+      "d_from_hurst": 1.4353,
+      "per_unit_hfd": {
+        "n": 71,
+        "mean": 0.8031,
+        "std": 0.1791,
+        "median": 0.8751
+      },
+      "vs_quran": {
+        "cohen_d": 1.1447,
+        "mann_whitney_p": 6.189159705050685e-14
+      }
+    },
+    "poetry_islami": {
+      "n_verses": 10295,
+      "n_units": 465,
+      "hfd_global": 1.0155,
+      "hurst_rs": 0.6322,
+      "d_from_hurst": 1.3678,
+      "per_unit_hfd": {
+        "n": 248,
+        "mean": 0.8129,
+        "std": 0.1812,
+        "median": 0.8752
+      },
+      "vs_quran": {
+        "cohen_d": 1.0658,
+        "mann_whitney_p": 1.3795078503897065e-19
+      }
+    },
+    "poetry_abbasi": {
+      "n_verses": 76499,
+      "n_units": 2823,
+      "hfd_global": 1.0151,
+      "hurst_rs": 0.7158,
+      "d_from_hurst": 1.2842,
+      "per_unit_hfd": {
+        "n": 1537,
+        "mean": 0.8527,
+        "std": 0.1642,
+        "median": 0.9238
+      },
+      "vs_quran": {
+        "cohen_d": 0.8504,
+        "mann_whitney_p": 3.2557646723493807e-18
+      }
+    },
+    "ksucca": {
+      "n_verses": 1967,
+      "n_units": 41,
+      "hfd_global": 0.9279,
+      "hurst_rs": 0.8042,
+      "d_from_hurst": 1.1958,
+      "per_unit_hfd": {
+        "n": 33,
+        "mean": 0.8965,
+        "std": 0.2033,
+        "median": 0.9476
+      },
+      "vs_quran": {
+        "cohen_d": 0.4378,
+        "mann_whitney_p": 0.09233656665915252
+      }
+    },
+    "arabic_bible": {
+      "n_verses": 31083,
+      "n_units": 1183,
+      "hfd_global": 0.981,
+      "hurst_rs": 0.9214,
+      "d_from_hurst": 1.0786,
+      "per_unit_hfd": {
+        "n": 1118,
+        "mean": 0.9985,
+        "std": 0.1008,
+        "median": 1.0056
+      },
+      "vs_quran": {
+        "cohen_d": -0.3482,
+        "mann_whitney_p": 1.5451974935474528e-06
+      }
+    },
+    "hindawi": {
+      "n_verses": 1793,
+      "n_units": 74,
+      "hfd_global": 0.9866,
+      "hurst_rs": 0.6278,
+      "d_from_hurst": 1.3722,
+      "per_unit_hfd": {
+        "n": 73,
+        "mean": 0.9864,
+        "std": 0.0693,
+        "median": 0.9977
+      },
+      "vs_quran": {
+        "cohen_d": -0.2635,
+        "mann_whitney_p": 0.012679336553354568
+      }
+    }
+  },
+  "overall_comparison": {
+    "quran_hfd_global": 0.9624,
+    "quran_per_unit_mean": 0.9653,
+    "quran_per_unit_ci": [
+      0.9475,
+      0.9837
+    ],
+    "ctrl_per_unit_mean": 0.9049,
+    "cohen_d": 0.458,
+    "mann_whitney_p": 0.0002417527073413985
+  },
+  "verdict": "SUGGESTIVE",
+  "runtime_seconds": 22.42
+}

@@ -1,0 +1,103 @@
+{
+  "experiment": "exp79_ar1_decorrelation",
+  "hypothesis": "H6 — Is phi_1 * k* a conserved quantity across corpora?",
+  "schema_version": 1,
+  "per_corpus": {
+    "quran": {
+      "n_units": 86,
+      "phi1_mean": 0.1669,
+      "phi1_std": 0.3531,
+      "phi1_median": 0.1327,
+      "kstar_mean": 4.43,
+      "kstar_median": 4.0,
+      "product_mean": 0.7641,
+      "product_std": 1.4396
+    },
+    "poetry_jahili": {
+      "n_units": 65,
+      "phi1_mean": 0.0,
+      "phi1_std": 0.0,
+      "phi1_median": 0.0,
+      "kstar_mean": 1.0,
+      "kstar_median": 1.0,
+      "product_mean": 0.0,
+      "product_std": 0.0,
+      "vs_quran_d_phi1": 0.6682,
+      "vs_quran_d_kstar": 1.5259
+    },
+    "poetry_islami": {
+      "n_units": 219,
+      "phi1_mean": 0.0,
+      "phi1_std": 0.0,
+      "phi1_median": 0.0,
+      "kstar_mean": 1.0,
+      "kstar_median": 1.0,
+      "product_mean": 0.0,
+      "product_std": 0.0,
+      "vs_quran_d_phi1": 0.6682,
+      "vs_quran_d_kstar": 1.5259
+    },
+    "poetry_abbasi": {
+      "n_units": 1293,
+      "phi1_mean": 0.0,
+      "phi1_std": 0.0,
+      "phi1_median": 0.0,
+      "kstar_mean": 1.0,
+      "kstar_median": 1.0,
+      "product_mean": 0.0,
+      "product_std": 0.0,
+      "vs_quran_d_phi1": 0.6682,
+      "vs_quran_d_kstar": 1.5259
+    },
+    "ksucca": {
+      "n_units": 26,
+      "phi1_mean": 0.1316,
+      "phi1_std": 0.2617,
+      "phi1_median": 0.0705,
+      "kstar_mean": 3.96,
+      "kstar_median": 3.0,
+      "product_mean": 0.6908,
+      "product_std": 1.7725,
+      "vs_quran_d_phi1": 0.1135,
+      "vs_quran_d_kstar": 0.1374
+    },
+    "arabic_bible": {
+      "n_units": 978,
+      "phi1_mean": -0.0351,
+      "phi1_std": 0.2327,
+      "phi1_median": -0.0426,
+      "kstar_mean": 4.75,
+      "kstar_median": 4.0,
+      "product_mean": -0.2124,
+      "product_std": 1.8244,
+      "vs_quran_d_phi1": 0.6753,
+      "vs_quran_d_kstar": -0.0903
+    },
+    "hindawi": {
+      "n_units": 70,
+      "phi1_mean": -0.1162,
+      "phi1_std": 0.1796,
+      "phi1_median": -0.0963,
+      "kstar_mean": 4.6,
+      "kstar_median": 3.0,
+      "product_mean": -0.6216,
+      "product_std": 1.0041,
+      "vs_quran_d_phi1": 1.0105,
+      "vs_quran_d_kstar": -0.052
+    }
+  },
+  "conservation_test": {
+    "cross_corpus_product_mean": 0.0887,
+    "cross_corpus_product_std": 0.4895,
+    "cross_corpus_product_cv": 5.5183
+  },
+  "quran_vs_ctrl": {
+    "d_phi1": 0.6699,
+    "p_phi1": 8.187118971946896e-23,
+    "d_kstar": 0.6136,
+    "p_kstar": 6.5965757167845295e-21,
+    "d_product": 0.6556
+  },
+  "verdict": "NULL",
+  "runtime_seconds": 0.58
+}

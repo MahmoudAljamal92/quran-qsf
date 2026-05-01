@@ -1,0 +1,55 @@
+{
+  "experiment_id": "expE12_bayesian_fusion",
+  "task": "E12",
+  "tier": 3,
+  "title": "Bayesian channel fusion — calibrated P(edit | evidence) on Adiyat 864",
+  "generated_utc": "2026-04-23T19:54:35+00:00",
+  "seed": 42,
+  "window_N": 5,
+  "n_variants": 864,
+  "channels": [
+    "NCD",
+    "LEN_DIFF",
+    "UNI_L1",
+    "BI_L1",
+    "TRI_L1",
+    "WLEN_DIFF",
+    "SPEC",
+    "ENT_DIFF",
+    "VLCV_DIFF"
+  ],
+  "residual_corr_max_abs": 0.8581789758067537,
+  "copula_correction_used": true,
+  "models": {
+    "L2_logistic_baseline": {
+      "name": "L2_logistic (baseline)",
+      "auc_mean": 1.0,
+      "brier_mean": 0.12500000000385414,
+      "ll_mean": 0.3465735907876809,
+      "ece": 0.2500000000038542
+    },
+    "KDE_NaiveBayes": {
+      "name": "KDE_NaiveBayes",
+      "auc_mean": 1.0,
+      "brier_mean": 9.999999575771036e-19,
+      "ll_mean": 9.999999722180688e-10,
+      "ece": 0.0
+    },
+    "KDE_Copula_NB": {
+      "name": "KDE+Copula_NB",
+      "auc_mean": 1.0,
+      "brier_mean": 9.999999575771036e-19,
+      "ll_mean": 9.999999722180688e-10,
+      "ece": 0.0
+    }
+  },
+  "delta_brier_vote_vs_bayes": 0.12500000000385414,
+  "ece_best_bayes": 0.0,
+  "verdict": "BAYES_CALIBRATED",
+  "pre_registered_criteria": {
+    "null": "Bayesian Brier >= logistic-vote Brier (no gain)",
+    "BAYES_CALIBRATED": "Bayesian Brier <= logistic-vote Brier − 0.01 AND ECE <= 0.10",
+    "NULL_NO_CALIBRATION_GAIN": "below threshold",
+    "side_effects": "no mutation of any pinned artefact; outputs under expE12 folder only"
+  }
+}

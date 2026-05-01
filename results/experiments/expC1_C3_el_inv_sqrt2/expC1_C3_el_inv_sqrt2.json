@@ -1,0 +1,71 @@
+{
+  "experiment": "expC1_C3_el_inv_sqrt2",
+  "task_id": "C1+C3",
+  "title": "EL_q vs 1/sqrt(2): jackknife + bootstrap CIs (C1) and exact corpus-level adjacent-pair match fraction (C3)",
+  "constants": {
+    "1_over_sqrt_2": 0.7071067811865475,
+    "1_over_2": 0.5
+  },
+  "band_A_summary": {
+    "n_surahs": 68,
+    "mean_EL": 0.7074338713106891,
+    "sd_EL_unbiased": 0.19743092261238773,
+    "se_classical": 0.02394201610864767,
+    "abs_gap_to_1_over_sqrt_2": 0.00032709012414167127,
+    "rel_gap_to_1_over_sqrt_2_pct": 0.046257528967945084
+  },
+  "C1_jackknife_band_A": {
+    "n": 68,
+    "se_jackknife": 0.02394201610864769,
+    "ci_95_low": 0.6605083820204618,
+    "ci_95_high": 0.7543593606009165,
+    "ci_contains_1_over_sqrt_2": true,
+    "verdict": "C1_NOT_REJECTED_jackknife_CI_contains_1_over_sqrt2"
+  },
+  "C1_bootstrap_band_A": {
+    "n_bootstrap": 100000,
+    "seed": 42,
+    "ci_95_low": 0.6601001598012964,
+    "ci_95_high": 0.75339138676741,
+    "ci_contains_1_over_sqrt_2": true,
+    "p_boot_mean_lt_mu0": 0.49361,
+    "p_boot_mean_gt_mu0": 0.50639,
+    "p_boot_two_sided_extremity": 0.98968,
+    "verdict": "C1_NOT_REJECTED_bootstrap_CI_contains_1_over_sqrt2"
+  },
+  "C1_one_sample_t_test_band_A": {
+    "H0_mu": 0.7071067811865475,
+    "t_classical_se": 0.013661761927539965,
+    "p_two_sided_classical_se": 0.9891404301866591,
+    "t_jackknife_se": 0.013661761927539953,
+    "p_two_sided_jackknife_se": 0.9891404301866591,
+    "df": 67
+  },
+  "all_114_surahs_summary": {
+    "n_surahs": 114,
+    "el_unweighted_per_surah_mean": 0.7062633038455213,
+    "abs_gap_to_1_over_sqrt_2": 0.0008434773410261887
+  },
+  "C3_corpus_pooled": {
+    "definition": "EL_pool = sum_s (n_match_s) / sum_s (n_pairs_s)  over all 114 surahs ; cross-surah pairs NOT counted (matches paper definition extended canon-wide).",
+    "n_match": 4473,
+    "n_pairs": 6122,
+    "EL_pool": 0.7306435805292388,
+    "EL_pool_squared": 0.5338400417685863,
+    "abs_gap_C3_a_pool_to_half": 0.23064358052923883,
+    "abs_gap_C3_b_pool_sq_to_half": 0.03384004176858635
+  },
+  "C3_corpus_flat_including_cross_surah": {
+    "definition": "EL_flat = matches over all consecutive verse pairs in the canonical mushaf order; INCLUDES the 113 cross-surah boundary pairs (so denominator = 6,236 - 1 = 6,235).",
+    "n_match": 4492,
+    "n_pairs": 6235,
+    "EL_flat": 0.7204490777866881,
+    "EL_flat_squared": 0.5190468736836894,
+    "abs_gap_C3_b_flat_sq_to_half": 0.019046873683689403
+  },
+  "interpretation": [
+    "C1: H0 mu = 1/sqrt(2) is RETAINED (not rejected) at alpha = 0.05 iff the jackknife and bootstrap 95 % CIs contain 1/sqrt(2). The 0.04 % numerical coincidence is well inside the sampling envelope of EL_q across the 68 Band-A surahs (per-surah sd ~ 0.20).",
+    "C3: The C3 entry's pair-level claim 'fraction == 0.5' is INCORRECT as written (verbatim corpus-pooled adjacent-pair match rate is EL_pool itself, ~ 0.71, not 0.5). The intended claim is the C1-derived corollary EL_q^2 == 0.5, tested as gap_C3_b_pool_sq.",
+    "If gap_C3_b_pool_sq is < 0.01, C1 + C3 jointly survive: pool_sq is consistent with 0.5 at the corpus level."
+  ]
+}

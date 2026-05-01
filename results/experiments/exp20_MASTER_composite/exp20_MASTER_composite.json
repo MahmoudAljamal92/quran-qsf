@@ -1,0 +1,194 @@
+{
+  "exp": "exp20_MASTER_composite",
+  "schema_version": 3,
+  "TDL": {
+    "statement": "Under the (optimistic) independence assumption, the probability that at least one of the 6 edit-detection channels (R1, R2, R4, R7, R9, R11) fires on a random single-letter edit is bounded above by P_detect_upper. A correlation-pessimistic lower bound is P_detect_lower = max(edit_detection_rate_k). Corpus-authenticity channels (R3, R5, R6, R8, R10) are reported separately as ``structural_signature_score`` and DO NOT enter the P_detect composite (audit-round-2 F-ULT2-MASTER-R3). All rates are null-calibrated so an uninformative channel contributes r=0 (F-ULT2-M1).",
+    "N_edit_detection_channels": 5,
+    "N_corpus_authenticity_channels": 5,
+    "N_channels": 10,
+    "expected_fired": 0.0,
+    "P_detect_upper": 0.0,
+    "P_detect_lower": 0.0,
+    "P_detect": 0.0,
+    "P_detect_is_upper_bound": true,
+    "structural_signature_score": 0.0,
+    "edit_detection_rates": {
+      "R1_nine_channel": 0.0,
+      "R2_sliding_window": 0.0,
+      "R4_char_lm": 0.0,
+      "R7_noise_curve": 0.0,
+      "R9_VIS": 0.0
+    },
+    "corpus_authenticity_rates": {
+      "R3_cross_scripture": 0.0,
+      "R5_adversarial": 0.0,
+      "R6_word_graph": 0.0,
+      "R8_null_ladder": 0.0,
+      "R10_verse_internal": 0.0
+    },
+    "raw_rates_for_reference": {
+      "R1_nine_channel": 0.011,
+      "R2_sliding_window": 0.0,
+      "R4_char_lm": 0.5,
+      "R7_noise_curve": 0.0,
+      "R9_VIS": 0.0,
+      "R3_cross_scripture": 0.5,
+      "R5_adversarial": 0.5,
+      "R6_word_graph": 0.0,
+      "R8_null_ladder": 0.05,
+      "R10_verse_internal": 0.05
+    },
+    "channel_rates": {
+      "R1_nine_channel": 0.0,
+      "R2_sliding_window": 0.0,
+      "R4_char_lm": 0.0,
+      "R7_noise_curve": 0.0,
+      "R9_VIS": 0.0,
+      "R3_cross_scripture": 0.0,
+      "R5_adversarial": 0.0,
+      "R6_word_graph": 0.0,
+      "R8_null_ladder": 0.0,
+      "R10_verse_internal": 0.0
+    },
+    "per_channel_notes": {
+      "R1_nine_channel": "fraction of single-letter canonical variants with >=3 of 9 channels firing, calibrated above 0.011 null baseline (Bin(9, 0.0456).sf(2))",
+      "R2_sliding_window": "tanh(log_amp CI lower bound); 0 if CI includes 0",
+      "R4_char_lm": "2*AUC - 1 (Gini); 0 at AUC=0.5 (random baseline)",
+      "R7_noise_curve": "fraction of (corpus, rate) log-ratio CIs excluding zero, calibrated above the alpha=0.05 type-I baseline",
+      "R9_VIS": "tanh(VIS_log); 0 if VIS_log <= 0",
+      "R11_symbolic": "skipped (features missing) - excluded from composite",
+      "R3_cross_scripture": "max(0, 1 - p/0.05); 0 if p >= 0.05",
+      "R5_adversarial": "1 - mean(fraction of forgeries below real), calibrated above 0.5 null",
+      "R6_word_graph": "fraction of controls whose Q < Quran's Q, calibrated above 0.5 null",
+      "R8_null_ladder": "mean of per-null-rung sig_rates (Quran); calibrated above 0.05 type-I baseline",
+      "R10_verse_internal": "sig_rate_calibrated = (sig_rate - 0.05) / 0.95 on verses with >= 5 words"
+    },
+    "benjamini_hochberg_p_values": {
+      "R3_cross_scripture": {
+        "p": 0.5,
+        "reject_BH_0.05": false
+      }
+    }
+  },
+  "coverage": {
+    "expected_edit_detection": [
+      "R1_nine_channel",
+      "R2_sliding_window",
+      "R4_char_lm",
+      "R7_noise_curve",
+      "R9_VIS",
+      "R11_symbolic"
+    ],
+    "expected_corpus_authenticity": [
+      "R3_cross_scripture",
+      "R5_adversarial",
+      "R6_word_graph",
+      "R8_null_ladder",
+      "R10_verse_internal"
+    ],
+    "present_edit_detection": [
+      "R1_nine_channel",
+      "R2_sliding_window",
+      "R4_char_lm",
+      "R7_noise_curve",
+      "R9_VIS"
+    ],
+    "present_corpus_authenticity": [
+      "R10_verse_internal",
+      "R3_cross_scripture",
+      "R5_adversarial",
+      "R6_word_graph",
+      "R8_null_ladder"
+    ],
+    "missing_edit_detection": [
+      "R11_symbolic"
+    ],
+    "missing_corpus_authenticity": [],
+    "expected_channels": [
+      "R1_nine_channel",
+      "R2_sliding_window",
+      "R4_char_lm",
+      "R7_noise_curve",
+      "R9_VIS",
+      "R11_symbolic",
+      "R3_cross_scripture",
+      "R5_adversarial",
+      "R6_word_graph",
+      "R8_null_ladder",
+      "R10_verse_internal"
+    ],
+    "present_channels": [
+      "R10_verse_internal",
+      "R1_nine_channel",
+      "R2_sliding_window",
+      "R3_cross_scripture",
+      "R4_char_lm",
+      "R5_adversarial",
+      "R6_word_graph",
+      "R7_noise_curve",
+      "R8_null_ladder",
+      "R9_VIS"
+    ],
+    "missing_channels": [
+      "R11_symbolic"
+    ],
+    "coverage_ok": false,
+    "position_scale_matrix": {
+      "letter_swap": [
+        "R1",
+        "R2",
+        "R4",
+        "R7",
+        "R9_L1"
+      ],
+      "word_order": [
+        "R9_L2",
+        "R10"
+      ],
+      "verse_order": [
+        "R3",
+        "R5",
+        "R6",
+        "R8",
+        "R9_L3"
+      ],
+      "verse_block": [
+        "R8",
+        "R9_L4"
+      ],
+      "adversarial": [
+        "R5"
+      ],
+      "symbolic_closure": [
+        "R11"
+      ]
+    }
+  },
+  "r_results_summary": {
+    "R1": {
+      "headline_single_letter_rate": 0.011
+    },
+    "R2": {
+      "log_amp_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "R3": {},
+    "R4": {
+      "AUC_canon_vs_swap": 0.5
+    },
+    "R5": {},
+    "R6": {},
+    "R7": {},
+    "R8": {},
+    "R9": {
+      "VIS_log": 0.0
+    },
+    "R10": {},
+    "R11": {
+      "features_available": false
+    }
+  },
+  "runtime_seconds": 0.26
+}

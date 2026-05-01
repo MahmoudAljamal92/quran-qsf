@@ -1,0 +1,160 @@
+{
+  "experiment": "exp35_R3_cross_scripture_redo",
+  "schema_version": 1,
+  "seed": 42,
+  "n_perm": 5000,
+  "metric": "Euclidean path cost over within-scripture z-scored 5-D features_lang_agnostic (EL, VL_CV, CN, H_cond_initials, T_lang)",
+  "per_scripture": {
+    "quran": {
+      "n_units": 114,
+      "alphabet": "arabic",
+      "canonical_path_cost": 240.48129353162417,
+      "perm_mean": 319.84254551103527,
+      "perm_std": 8.897036745471231,
+      "z_path": -8.919964506138243,
+      "pct_perms_below_canon": 0.0,
+      "p_one_sided": 0.0001999600079984003,
+      "n_perm": 5000,
+      "runtime_seconds": 0.79,
+      "feature_means_before_zscore": [
+        0.7062633038455213,
+        0.4646185566096261,
+        0.08711735551761604,
+        2.748010262745095,
+        1.5922850051452384
+      ],
+      "feature_stds_before_zscore": [
+        0.2207402063322697,
+        0.18560435504201786,
+        0.09446743382033045,
+        0.9316891098823873,
+        1.1750010286964943
+      ]
+    },
+    "hebrew_tanakh": {
+      "n_units": 921,
+      "alphabet": "hebrew",
+      "canonical_path_cost": 2321.6077130932435,
+      "perm_mean": 2649.0742539368503,
+      "perm_std": 21.422866550970298,
+      "z_path": -15.285841419236908,
+      "pct_perms_below_canon": 0.0,
+      "p_one_sided": 0.0001999600079984003,
+      "n_perm": 5000,
+      "runtime_seconds": 4.04,
+      "feature_means_before_zscore": [
+        0.12633495680622103,
+        0.17989432659862198,
+        0.270055470504741,
+        2.8844714152679733,
+        -0.1266560963112586
+      ],
+      "feature_stds_before_zscore": [
+        0.0819201854183289,
+        0.05017226045589586,
+        0.14014330632010757,
+        0.34890231906673796,
+        0.3041362561507994
+      ]
+    },
+    "greek_nt": {
+      "n_units": 260,
+      "alphabet": "greek",
+      "canonical_path_cost": 624.4757605477771,
+      "perm_mean": 764.5385937541222,
+      "perm_std": 11.611233601950154,
+      "z_path": -12.062700485400704,
+      "pct_perms_below_canon": 0.0,
+      "p_one_sided": 0.0001999600079984003,
+      "n_perm": 5000,
+      "runtime_seconds": 1.09,
+      "feature_means_before_zscore": [
+        0.20687527195476213,
+        0.35413204364749773,
+        0.4185115850677418,
+        3.098475643508594,
+        0.7188882378436965
+      ],
+      "feature_stds_before_zscore": [
+        0.09248289095392488,
+        0.05109865341579758,
+        0.20305374073670296,
+        0.1710489715337902,
+        0.22931707297549989
+      ]
+    },
+    "iliad_greek": {
+      "n_units": 24,
+      "alphabet": "greek",
+      "canonical_path_cost": 72.07867074734214,
+      "perm_mean": 70.78935808987563,
+      "perm_std": 3.8376570694217964,
+      "z_path": 0.3359634886972237,
+      "pct_perms_below_canon": 0.6274,
+      "p_one_sided": 0.6274,
+      "n_perm": 5000,
+      "runtime_seconds": 1.04,
+      "feature_means_before_zscore": [
+        0.1715703954913096,
+        0.18512309973726881,
+        0.21238881406957424,
+        4.033317120229429,
+        1.1610547976776702
+      ],
+      "feature_stds_before_zscore": [
+        0.0192585941486927,
+        0.005804951317893523,
+        0.02315607655796175,
+        0.07145778259465664,
+        0.0976733906858726
+      ]
+    }
+  },
+  "BH_pooling": {
+    "raw": [
+      0.0001999600079984003,
+      0.0001999600079984003,
+      0.0001999600079984003,
+      0.6274
+    ],
+    "bh_adjusted": [
+      0.0002666133439978671,
+      0.0002666133439978671,
+      0.0002666133439978671,
+      0.6274
+    ],
+    "min_bh": 0.0002666133439978671,
+    "n_tests": 4,
+    "per_scripture": {
+      "quran": 0.0002666133439978671,
+      "hebrew_tanakh": 0.0002666133439978671,
+      "greek_nt": 0.0002666133439978671,
+      "iliad_greek": 0.6274
+    }
+  },
+  "verdict_per_scripture_BH_alpha_0.05": {
+    "quran": "passes_BH",
+    "hebrew_tanakh": "passes_BH",
+    "greek_nt": "passes_BH",
+    "iliad_greek": "fails_BH"
+  },
+  "quran_z_path": -8.919964506138243,
+  "largest_abs_z_scripture": "hebrew_tanakh",
+  "largest_abs_z_value": 15.285841419236908,
+  "interpretation": "Each scripture's canonical chapter/surah/book ordering is compared to 5000 uniform random permutations of that same scripture's unit sequence on its own 5-D language-agnostic feature space (z-scored within scripture). A negative z means the canonical order is shorter than random -- consistent with the historical 'path-minimality' claim. Honesty note: this supersedes the v10.3c numbers quoted in the pre-v7.2 PAPER.md §4.16 (z_Quran=-8.74, z_NT=-4.97, z_Tanakh=-5.02) which were not reproducible from the current repo because the generating script and the exact corpus-file paths were deleted during the v3->v5->v7 cleanup. The NEW numbers reported here are the authoritative v7.2 R3 measurements; they should replace the pre-v7.2 numbers verbatim.",
+  "supersedes": {
+    "location": "docs/PAPER.md §4.16 (pre-v7.2) + docs/QSF_COMPLETE_REFERENCE.md §16.2",
+    "old_claim": "z_Quran=-8.74, z_GreekNT=-4.97, z_Tanakh=-5.02, BH-pooled p=0.002, N_PERM=5000",
+    "reason_unreproducible": "Original script (qsf_breakthrough_tests.py) and original corpus paths (data/corpora/he/tanakh.txt, data/corpora/el/greek_nt.txt) are absent from current repo."
+  },
+  "provenance": {
+    "corpora_loaded": [
+      "quran",
+      "hebrew_tanakh",
+      "greek_nt",
+      "iliad_greek"
+    ],
+    "quran_stops": "ARABIC_CONN (14 items, paper §2.2)",
+    "nonquran_stops": "derive_stopwords(verses, top_n=20)"
+  }
+}

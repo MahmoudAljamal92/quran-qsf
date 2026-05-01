@@ -1,0 +1,50 @@
+{
+  "exp": "exp14_R6_word_graph_modularity",
+  "schema_version": 3,
+  "seed": 42,
+  "fast_mode": true,
+  "runtime_seconds": 6.78,
+  "modularity_per_corpus": {
+    "quran": 0.42215880655390536,
+    "poetry_jahili": 0.4539180258538298,
+    "poetry_islami": 0.48048516814749453,
+    "poetry_abbasi": 0.3919196006940911,
+    "ksucca": 0.4444486904382992,
+    "arabic_bible": 0.4221552989891192,
+    "hadith_bukhari": 0.4141716692439721,
+    "hindawi": 0.41117666445641005
+  },
+  "n_communities_per_corpus": {
+    "quran": 844,
+    "poetry_jahili": 3354,
+    "poetry_islami": 2699,
+    "poetry_abbasi": 491,
+    "ksucca": 574,
+    "arabic_bible": 433,
+    "hadith_bukhari": 510,
+    "hindawi": 2197
+  },
+  "edge_truncated_fast_mode": {
+    "quran": true,
+    "poetry_jahili": false,
+    "poetry_islami": true,
+    "poetry_abbasi": true,
+    "ksucca": true,
+    "arabic_bible": true,
+    "hadith_bukhari": true,
+    "hindawi": true
+  },
+  "edge_counts_used": {
+    "quran": 14400,
+    "poetry_jahili": 14400,
+    "poetry_islami": 14400,
+    "poetry_abbasi": 14400,
+    "ksucca": 14400,
+    "arabic_bible": 14400,
+    "hadith_bukhari": 14400,
+    "hindawi": 14400
+  },
+  "equal_cap_fast": 14400,
+  "quran_rank": 4,
+  "verdict_expected": "quran rank 1 (informative; not an assertion)"
+}

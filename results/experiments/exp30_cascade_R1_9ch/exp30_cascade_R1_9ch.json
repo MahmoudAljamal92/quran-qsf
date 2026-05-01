@@ -1,0 +1,325 @@
+{
+  "experiment": "exp30_cascade_R1_9ch",
+  "schema_version": 1,
+  "hypothesis": "Does R1's 9-channel surah-level fingerprint retain non-zero detection on INTERNAL single-letter substitutions (non-initial non-terminal letter in non-boundary word of non-terminal verse)? exp29 showed the 5-D Phi_M is byte-exact blind; R1 includes letter-bigram (C), gzip (E), and 34x34 spectral (A) channels that SHOULD have non-zero sensitivity.",
+  "config": {
+    "seed": 42,
+    "alpha_null_threshold": 0.05,
+    "band_a": [
+      15,
+      100
+    ],
+    "n_pert_quran_per_surah": 10,
+    "n_pert_ctrl_per_unit": 5,
+    "ctrl_n_units_sampled": 200,
+    "perturbation": "internal-letter: non-initial non-terminal letter in non-boundary word of non-terminal verse, replaced by a random distinct Arabic consonant from the 28-letter set"
+  },
+  "n_quran_units": 68,
+  "n_quran_perturbations": 680,
+  "n_ctrl_units": 200,
+  "n_ctrl_perturbations": 1000,
+  "r1_control_training_corpora": [
+    "poetry_abbasi",
+    "poetry_jahili",
+    "ksucca",
+    "hindawi",
+    "arabic_bible"
+  ],
+  "channels": [
+    "A_spectral",
+    "B_root_bigram",
+    "C_bigram_dist",
+    "D_wazn",
+    "E_ncd",
+    "F_coupling",
+    "G_root_trigram",
+    "H_local_spec",
+    "I_root_field"
+  ],
+  "per_channel_ctrl_q95_threshold": {
+    "A_spectral": 0.0021277015999073313,
+    "B_root_bigram": 0.032368810964184445,
+    "C_bigram_dist": 2.0,
+    "D_wazn": 0.002772821885221527,
+    "E_ncd": 0.01257980785183055,
+    "F_coupling": 0.0018949473175024032,
+    "G_root_trigram": 0.01793820835759359,
+    "H_local_spec": 0.0019524435816977144,
+    "I_root_field": 6.002400960378693e-05
+  },
+  "per_channel_p_detect_ctrl_null": {
+    "A_spectral": 0.058823529411764705,
+    "B_root_bigram": 0.060294117647058824,
+    "C_bigram_dist": 0.0029411764705882353,
+    "D_wazn": 0.054411764705882354,
+    "E_ncd": 0.11323529411764706,
+    "F_coupling": 0.0661764705882353,
+    "G_root_trigram": 0.075,
+    "H_local_spec": 0.054411764705882354,
+    "I_root_field": 0.03529411764705882
+  },
+  "per_channel_mannwhitney": {
+    "A_spectral": {
+      "p_one_sided_greater": 0.9992454168582838,
+      "quran_median": 0.00016919455068692413,
+      "ctrl_median": 0.0002218567519643444,
+      "quran_mean": 0.0005554270667178559,
+      "ctrl_mean": 0.0005279378769204009
+    },
+    "B_root_bigram": {
+      "p_one_sided_greater": 1.0,
+      "quran_median": 0.003415093035780359,
+      "ctrl_median": 0.009464690851021196,
+      "quran_mean": 0.008581203410050139,
+      "ctrl_mean": 0.012043262905782965
+    },
+    "C_bigram_dist": {
+      "p_one_sided_greater": 0.577275061452542,
+      "quran_median": 2.0,
+      "ctrl_median": 2.0,
+      "quran_mean": 2.0004605780116758,
+      "ctrl_mean": 2.0008989794855663
+    },
+    "D_wazn": {
+      "p_one_sided_greater": 0.6756704624566534,
+      "quran_median": 0.0,
+      "ctrl_median": 0.0,
+      "quran_mean": 0.0004693993412214131,
+      "ctrl_mean": 0.0003243255324591311
+    },
+    "E_ncd": {
+      "p_one_sided_greater": 0.9999996224820651,
+      "quran_median": 0.004466787877130868,
+      "ctrl_median": 0.005560173730942912,
+      "quran_mean": 0.005955515169655033,
+      "ctrl_mean": 0.006115403245778161
+    },
+    "F_coupling": {
+      "p_one_sided_greater": 0.8167185658913124,
+      "quran_median": 0.00016505828617784102,
+      "ctrl_median": 0.0002255254649736957,
+      "quran_mean": 0.0006482424163959949,
+      "ctrl_mean": 0.00048758340175194815
+    },
+    "G_root_trigram": {
+      "p_one_sided_greater": 0.9119356884155856,
+      "quran_median": 0.002507219153525364,
+      "ctrl_median": 0.002698923219913163,
+      "quran_mean": 0.005566804229940977,
+      "ctrl_mean": 0.005088444800804063
+    },
+    "H_local_spec": {
+      "p_one_sided_greater": 0.9962881650432848,
+      "quran_median": 0.00015888855520379552,
+      "ctrl_median": 0.00019789833843686377,
+      "quran_mean": 0.0005457061473391042,
+      "ctrl_mean": 0.00048121673378256544
+    },
+    "I_root_field": {
+      "p_one_sided_greater": 0.9319689057581985,
+      "quran_median": 0.0,
+      "ctrl_median": 0.0,
+      "quran_mean": 0.00014646158920471724,
+      "ctrl_mean": 0.0002323429015898928
+    }
+  },
+  "per_channel_stats": {
+    "A_spectral": {
+      "n_quran": 680,
+      "n_ctrl": 1000,
+      "quran_max": 0.023831976804473687,
+      "ctrl_max": 0.006482198360586056
+    },
+    "B_root_bigram": {
+      "n_quran": 680,
+      "n_ctrl": 1000,
+      "quran_max": 0.10996728067886252,
+      "ctrl_max": 0.07982674786901
+    },
+    "C_bigram_dist": {
+      "n_quran": 680,
+      "n_ctrl": 1000,
+      "quran_max": 2.449489742783178,
+      "ctrl_max": 2.449489742783178
+    },
+    "D_wazn": {
+      "n_quran": 680,
+      "n_ctrl": 1000,
+      "quran_max": 0.015384615384615441,
+      "ctrl_max": 0.010000000000000009
+    },
+    "E_ncd": {
+      "n_quran": 680,
+      "n_ctrl": 1000,
+      "quran_max": 0.03137973137973138,
+      "ctrl_max": 0.022395791177660863
+    },
+    "F_coupling": {
+      "n_quran": 680,
+      "n_ctrl": 1000,
+      "quran_max": 0.01908369408369409,
+      "ctrl_max": 0.006153664674425907
+    },
+    "G_root_trigram": {
+      "n_quran": 680,
+      "n_ctrl": 1000,
+      "quran_max": 0.06110676537332593,
+      "ctrl_max": 0.033826017338128844
+    },
+    "H_local_spec": {
+      "n_quran": 680,
+      "n_ctrl": 1000,
+      "quran_max": 0.017894252483881656,
+      "ctrl_max": 0.006143906227658813
+    },
+    "I_root_field": {
+      "n_quran": 680,
+      "n_ctrl": 1000,
+      "quran_max": 0.013513513513513514,
+      "ctrl_max": 0.009999999999999995
+    }
+  },
+  "per_channel_ctrl_mu_sd_for_z_fire_rate": {
+    "A_spectral": {
+      "mu": 0.0005279378769204009,
+      "sd": 0.0008204328525785539
+    },
+    "B_root_bigram": {
+      "mu": 0.012043262905782965,
+      "sd": 0.010613549196491137
+    },
+    "C_bigram_dist": {
+      "mu": 2.0008989794855663,
+      "sd": 0.020091728924865968
+    },
+    "D_wazn": {
+      "mu": 0.0003243255324591311,
+      "sd": 0.0012484234861269885
+    },
+    "E_ncd": {
+      "mu": 0.006115403245778161,
+      "sd": 0.0033541428805141035
+    },
+    "F_coupling": {
+      "mu": 0.00048758340175194815,
+      "sd": 0.000708912044527547
+    },
+    "G_root_trigram": {
+      "mu": 0.005088444800804063,
+      "sd": 0.006166450961898168
+    },
+    "H_local_spec": {
+      "mu": 0.00048121673378256544,
+      "sd": 0.0007419150281361102
+    },
+    "I_root_field": {
+      "mu": 0.0002323429015898928,
+      "sd": 0.001139597607593167
+    }
+  },
+  "p_composite_ctrl_null": 0.4173633769993875,
+  "best_single_channel_p_ctrl": 0.11323529411764706,
+  "gain_composite_over_best_single": 0.3041280828817405,
+  "fire_rate_quran_ge_3_channels_abs_z_gt_2": 0.05588235294117647,
+  "fire_rate_ctrl_ge_3_channels_abs_z_gt_2": 0.024,
+  "adiyat_variants": [
+    {
+      "variant": "A_ayn_to_ghayn",
+      "description": "internal letter substitution ع -> غ in verse 1",
+      "deltas": {
+        "A_spectral": 0.0006,
+        "B_root_bigram": 0.0,
+        "C_bigram_dist": 2.0,
+        "D_wazn": 0.0,
+        "E_ncd": 0.02,
+        "F_coupling": 0.0,
+        "G_root_trigram": 0.0088,
+        "H_local_spec": 0.0003,
+        "I_root_field": 0.0
+      },
+      "z_vs_ctrl_null": {
+        "A_spectral": 0.12,
+        "B_root_bigram": -1.135,
+        "C_bigram_dist": -0.045,
+        "D_wazn": -0.26,
+        "E_ncd": 4.14,
+        "F_coupling": -0.688,
+        "G_root_trigram": 0.596,
+        "H_local_spec": -0.197,
+        "I_root_field": -0.204
+      },
+      "n_channels_fired_abs_z_gt_2": 1,
+      "fired_channels": [
+        "E_ncd"
+      ]
+    },
+    {
+      "variant": "B_dad_to_sad",
+      "description": "terminal letter substitution ض -> ص in last word of verse 1",
+      "deltas": {
+        "A_spectral": 0.0011,
+        "B_root_bigram": 0.0,
+        "C_bigram_dist": 2.0,
+        "D_wazn": 0.0,
+        "E_ncd": 0.025,
+        "F_coupling": 0.0,
+        "G_root_trigram": 0.0404,
+        "H_local_spec": 0.001,
+        "I_root_field": 0.0
+      },
+      "z_vs_ctrl_null": {
+        "A_spectral": 0.686,
+        "B_root_bigram": -1.135,
+        "C_bigram_dist": -0.045,
+        "D_wazn": -0.26,
+        "E_ncd": 5.63,
+        "F_coupling": -0.688,
+        "G_root_trigram": 5.724,
+        "H_local_spec": 0.725,
+        "I_root_field": -0.204
+      },
+      "n_channels_fired_abs_z_gt_2": 2,
+      "fired_channels": [
+        "E_ncd",
+        "G_root_trigram"
+      ]
+    },
+    {
+      "variant": "C_both",
+      "description": "variant A + variant B simultaneously",
+      "deltas": {
+        "A_spectral": 0.0006,
+        "B_root_bigram": 0.0,
+        "C_bigram_dist": 2.8284,
+        "D_wazn": 0.0,
+        "E_ncd": 0.035,
+        "F_coupling": 0.0,
+        "G_root_trigram": 0.0316,
+        "H_local_spec": 0.0013,
+        "I_root_field": 0.0
+      },
+      "z_vs_ctrl_null": {
+        "A_spectral": 0.033,
+        "B_root_bigram": -1.135,
+        "C_bigram_dist": 41.188,
+        "D_wazn": -0.26,
+        "E_ncd": 8.612,
+        "F_coupling": -0.688,
+        "G_root_trigram": 4.303,
+        "H_local_spec": 1.145,
+        "I_root_field": -0.204
+      },
+      "n_channels_fired_abs_z_gt_2": 3,
+      "fired_channels": [
+        "C_bigram_dist",
+        "E_ncd",
+        "G_root_trigram"
+      ]
+    }
+  ],
+  "feedback_r1_reference": {
+    "exp09_calibrated_rate_any_position_swaps": 0.494,
+    "feedback_estimate_for_internal_swaps": 0.5
+  },
+  "runtime_seconds": 100.5
+}

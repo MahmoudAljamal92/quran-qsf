@@ -1,0 +1,151 @@
+{
+  "experiment": "exp78_inverse_phi_cascade",
+  "hypothesis": "H22 — Is the Quran's H-cascade ratio closest to 1/φ?",
+  "schema_version": 1,
+  "inv_phi": 0.6180339887498948,
+  "per_corpus": {
+    "quran": {
+      "H_letter": 4.0345,
+      "H_word": 11.0502,
+      "H_verse": 4.8302,
+      "r1_letter_norm": 0.8392,
+      "r2_word_letter": 2.7389,
+      "r3_verse_word": 0.4371,
+      "mean_ratio": 1.338425,
+      "deviation_from_inv_phi": 0.720391,
+      "n_letters": 332837,
+      "n_words": 78248,
+      "n_verses": 6236,
+      "vocab_size": 14868
+    },
+    "poetry_jahili": {
+      "H_letter": 4.1805,
+      "H_word": 12.1032,
+      "H_verse": 0.4116,
+      "r1_letter_norm": 0.8696,
+      "r2_word_letter": 2.8952,
+      "r3_verse_word": 0.034,
+      "mean_ratio": 1.266262,
+      "deviation_from_inv_phi": 0.648228,
+      "n_letters": 73857,
+      "n_words": 17502,
+      "n_verses": 2561,
+      "vocab_size": 9827
+    },
+    "poetry_islami": {
+      "H_letter": 4.1673,
+      "H_word": 12.9074,
+      "H_verse": 0.3377,
+      "r1_letter_norm": 0.8669,
+      "r2_word_letter": 3.0973,
+      "r3_verse_word": 0.0262,
+      "mean_ratio": 1.330106,
+      "deviation_from_inv_phi": 0.712072,
+      "n_letters": 295474,
+      "n_words": 70614,
+      "n_verses": 10295,
+      "vocab_size": 28156
+    },
+    "poetry_abbasi": {
+      "H_letter": 4.1876,
+      "H_word": 13.7036,
+      "H_verse": 0.289,
+      "r1_letter_norm": 0.8711,
+      "r2_word_letter": 3.2724,
+      "r3_verse_word": 0.0211,
+      "mean_ratio": 1.388191,
+      "deviation_from_inv_phi": 0.770157,
+      "n_letters": 2163651,
+      "n_words": 526821,
+      "n_verses": 76499,
+      "vocab_size": 112746
+    },
+    "ksucca": {
+      "H_letter": 4.156,
+      "H_word": 11.1015,
+      "H_verse": 7.0873,
+      "r1_letter_norm": 0.8645,
+      "r2_word_letter": 2.6712,
+      "r3_verse_word": 0.6384,
+      "mean_ratio": 1.391379,
+      "deviation_from_inv_phi": 0.773345,
+      "n_letters": 518861,
+      "n_words": 131831,
+      "n_verses": 1967,
+      "vocab_size": 22530
+    },
+    "arabic_bible": {
+      "H_letter": 4.132,
+      "H_word": 12.5097,
+      "H_verse": 4.5347,
+      "r1_letter_norm": 0.8595,
+      "r2_word_letter": 3.0275,
+      "r3_verse_word": 0.3625,
+      "mean_ratio": 1.416509,
+      "deviation_from_inv_phi": 0.798475,
+      "n_letters": 1868072,
+      "n_words": 434942,
+      "n_verses": 31083,
+      "vocab_size": 66582
+    },
+    "hindawi": {
+      "H_letter": 4.1946,
+      "H_word": 11.8395,
+      "H_verse": 3.6639,
+      "r1_letter_norm": 0.8725,
+      "r2_word_letter": 2.8225,
+      "r3_verse_word": 0.3095,
+      "mean_ratio": 1.334845,
+      "deviation_from_inv_phi": 0.716811,
+      "n_letters": 89848,
+      "n_words": 20762,
+      "n_verses": 1793,
+      "vocab_size": 9885
+    }
+  },
+  "ranking": [
+    [
+      "poetry_jahili",
+      0.648228
+    ],
+    [
+      "poetry_islami",
+      0.712072
+    ],
+    [
+      "hindawi",
+      0.716811
+    ],
+    [
+      "quran",
+      0.720391
+    ],
+    [
+      "poetry_abbasi",
+      0.770157
+    ],
+    [
+      "ksucca",
+      0.773345
+    ],
+    [
+      "arabic_bible",
+      0.798475
+    ]
+  ],
+  "quran_rank": 4,
+  "bootstrap": {
+    "n_boot": 10000,
+    "ci": [
+      0.697928,
+      0.714936
+    ],
+    "ci_excludes_next": false
+  },
+  "permutation_test": {
+    "n_perm": 10000,
+    "p_value": 0.8015198480151985
+  },
+  "verdict": "NULL",
+  "runtime_seconds": 5957.68
+}

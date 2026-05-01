@@ -1,0 +1,180 @@
+{
+  "experiment": "exp95l_msfc_el_fragility",
+  "schema_version": "1.0",
+  "hypothesis": "H45",
+  "verdict": "PASS_quran_strict_max",
+  "prereg_hash_expected": "49cea95bade2dea3dd79c1cf29f5d9c98545d7d50b2cebf2ff44dc6f6debf965",
+  "prereg_hash_actual": "49cea95bade2dea3dd79c1cf29f5d9c98545d7d50b2cebf2ff44dc6f6debf965",
+  "frozen_constants": {
+    "EPS_TOP1": 1.5,
+    "MIN_VERSES_PER_CORPUS": 100,
+    "ARABIC_POOL": [
+      "quran",
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "PMAX_QURAN_TARGET": 0.501,
+    "PMAX_QURAN_TOL": 0.02,
+    "EMPIRICAL_N_SAMPLES": 10000,
+    "EMPIRICAL_TOL": 0.01,
+    "RNG_SEED": 95000
+  },
+  "per_corpus": {
+    "quran": {
+      "n_units": 114,
+      "n_verses_total": 6236,
+      "n_verses_valid": 6236,
+      "n_alphabet_letters_observed": 25,
+      "p_max": 0.50096215522771,
+      "p_max_letter": "ن",
+      "p_max_count": 3124,
+      "EL_fragility": 0.5008934298543022,
+      "EL_fragility_empirical": 0.5231,
+      "EL_fragility_analytical_minus_empirical": -0.022206570145697824
+    },
+    "poetry_jahili": {
+      "n_units": 133,
+      "n_verses_total": 2561,
+      "n_verses_valid": 2561,
+      "n_alphabet_letters_observed": 28,
+      "p_max": 0.20304568527918782,
+      "p_max_letter": "ا",
+      "p_max_count": 520,
+      "EL_fragility": 0.22425670775924583,
+      "EL_fragility_empirical": 0.2277,
+      "EL_fragility_analytical_minus_empirical": -0.003443292240754181
+    },
+    "poetry_islami": {
+      "n_units": 465,
+      "n_verses_total": 10295,
+      "n_verses_valid": 10295,
+      "n_alphabet_letters_observed": 28,
+      "p_max": 0.22574065080135988,
+      "p_max_letter": "ا",
+      "p_max_count": 2324,
+      "EL_fragility": 0.24533060431554846,
+      "EL_fragility_empirical": 0.2573,
+      "EL_fragility_analytical_minus_empirical": -0.011969395684451517
+    },
+    "poetry_abbasi": {
+      "n_units": 2823,
+      "n_verses_total": 76499,
+      "n_verses_valid": 76499,
+      "n_alphabet_letters_observed": 28,
+      "p_max": 0.1921985908312527,
+      "p_max_letter": "ا",
+      "p_max_count": 14703,
+      "EL_fragility": 0.21418440577187753,
+      "EL_fragility_empirical": 0.222,
+      "EL_fragility_analytical_minus_empirical": -0.007815594228122474
+    },
+    "ksucca": {
+      "n_units": 41,
+      "n_verses_total": 1967,
+      "n_verses_valid": 1967,
+      "n_alphabet_letters_observed": 28,
+      "p_max": 0.21047280122013218,
+      "p_max_letter": "ه",
+      "p_max_count": 414,
+      "EL_fragility": 0.23115331541869416,
+      "EL_fragility_empirical": 0.2449,
+      "EL_fragility_analytical_minus_empirical": -0.013746684581305846
+    },
+    "arabic_bible": {
+      "n_units": 1183,
+      "n_verses_total": 31083,
+      "n_verses_valid": 31083,
+      "n_alphabet_letters_observed": 28,
+      "p_max": 0.20483865778721488,
+      "p_max_letter": "ه",
+      "p_max_count": 6367,
+      "EL_fragility": 0.22592161080241382,
+      "EL_fragility_empirical": 0.2431,
+      "EL_fragility_analytical_minus_empirical": -0.017178389197586186
+    },
+    "hindawi": {
+      "n_units": 74,
+      "n_verses_total": 1793,
+      "n_verses_valid": 1793,
+      "n_alphabet_letters_observed": 28,
+      "p_max": 0.1656441717791411,
+      "p_max_letter": "ه",
+      "p_max_count": 297,
+      "EL_fragility": 0.18952673093777386,
+      "EL_fragility_empirical": 0.1875,
+      "EL_fragility_analytical_minus_empirical": 0.002026730937773863
+    }
+  },
+  "ranking": [
+    {
+      "rank": 1,
+      "corpus": "quran",
+      "EL_fragility": 0.5008934298543022
+    },
+    {
+      "rank": 2,
+      "corpus": "poetry_islami",
+      "EL_fragility": 0.24533060431554846
+    },
+    {
+      "rank": 3,
+      "corpus": "ksucca",
+      "EL_fragility": 0.23115331541869416
+    },
+    {
+      "rank": 4,
+      "corpus": "arabic_bible",
+      "EL_fragility": 0.22592161080241382
+    },
+    {
+      "rank": 5,
+      "corpus": "poetry_jahili",
+      "EL_fragility": 0.22425670775924583
+    },
+    {
+      "rank": 6,
+      "corpus": "poetry_abbasi",
+      "EL_fragility": 0.21418440577187753
+    },
+    {
+      "rank": 7,
+      "corpus": "hindawi",
+      "EL_fragility": 0.18952673093777386
+    }
+  ],
+  "quran_rank": 1,
+  "quran_EL_fragility": 0.5008934298543022,
+  "next_corpus": "poetry_islami",
+  "next_EL_fragility": 0.24533060431554846,
+  "margin_ratio_quran_over_next": 2.0417078874107544,
+  "audit": {
+    "pmax_quran_value": 0.50096215522771,
+    "pmax_quran_target": 0.501,
+    "pmax_quran_tol": 0.02,
+    "pmax_quran_drift_violated": false,
+    "empirical_analytical_disagreements": [
+      {
+        "corpus": "quran",
+        "diff": -0.022206570145697824
+      },
+      {
+        "corpus": "poetry_islami",
+        "diff": -0.011969395684451517
+      },
+      {
+        "corpus": "ksucca",
+        "diff": -0.013746684581305846
+      },
+      {
+        "corpus": "arabic_bible",
+        "diff": -0.017178389197586186
+      }
+    ]
+  },
+  "wall_time_s": 3.57,
+  "ts_utc": "2026-04-27T06:51:11Z"
+}

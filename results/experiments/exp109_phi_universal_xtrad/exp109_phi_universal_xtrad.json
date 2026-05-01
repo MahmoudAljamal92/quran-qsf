@@ -1,0 +1,190 @@
+{
+  "experiment": "exp109_phi_universal_xtrad",
+  "hypothesis_id": "H64",
+  "hypothesis": "Cross-tradition Quran-distinctiveness via universal 5-D structural feature space: Quran is rhyme-extremum across 11 corpora spanning 5 language families and 5 religious traditions.",
+  "verdict": "PASS_quran_rhyme_extremum_cross_tradition",
+  "verdict_reason": "Quran is the rhyme extremum across 11 cross-tradition corpora: H_EL = 0.9685 (lowest, 0.463x next-lowest); p_max = 0.7273 (highest, 1.513x next-highest); perm_p(H_EL) = 0.000000, perm_p(p_max) = 0.000000; both < Bonferroni alpha 0.0005.",
+  "started_at_utc": "2026-04-28T23:55:23.907880+00:00",
+  "completed_at_utc": "2026-04-28T23:55:55.478134+00:00",
+  "wall_time_s": 31.5702543258667,
+  "prereg_hash": "d25d5dcad64932b147b5e4fee161092842d5338a4622f74dc9a711f788a481ef",
+  "prereg_expected_hash": "d25d5dcad64932b147b5e4fee161092842d5338a4622f74dc9a711f788a481ef",
+  "prereg_document": "experiments/exp109_phi_universal_xtrad/PREREG.md",
+  "frozen_constants": {
+    "SEED": 42,
+    "N_PERMUTATIONS": 10000,
+    "PERM_ALPHA": 0.001,
+    "PERM_BONFERRONI_K": 2,
+    "PERM_ALPHA_BONF": 0.0005,
+    "H_EL_MARGIN": 0.5,
+    "P_MAX_MARGIN": 1.4,
+    "EXPECTED_CORPORA": [
+      "quran",
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "hindawi",
+      "ksucca",
+      "arabic_bible",
+      "hebrew_tanakh",
+      "greek_nt",
+      "pali",
+      "avestan_yasna"
+    ],
+    "FEATURE_NAMES": [
+      "VL_CV",
+      "p_max",
+      "H_EL",
+      "bigram_distinct_ratio",
+      "gzip_efficiency"
+    ],
+    "calibration_source": "frozen_thresholds_no_data_calibration"
+  },
+  "audit_report": {
+    "ok": true,
+    "checks": {
+      "n_units_per_corpus_loaded": {
+        "quran": 114,
+        "poetry_jahili": 120,
+        "poetry_islami": 423,
+        "poetry_abbasi": 2575,
+        "hindawi": 72,
+        "ksucca": 42,
+        "arabic_bible": 1183,
+        "hebrew_tanakh": 921,
+        "greek_nt": 260,
+        "pali": 186,
+        "avestan_yasna": 67
+      },
+      "corpus_sha256": {
+        "quran": "7e3780f9f31e94f6e5dc82c4a39d90b2650b6acf6c41c03fda117d941dac8b82",
+        "poetry_jahili": "b9efd90223be949073013a4b072f2b49a4b5af11ddc9dcd8779eae011417d3bf",
+        "poetry_islami": "0ae79ce5a19ec8e85b4ebf1f12709a0b98a5776773285a84fe5baeaaf553056c",
+        "poetry_abbasi": "0d54b8c3bec8a96ea13fb45a08b727b3f6d19ac0b374ab1f272726cd1f67b55b",
+        "hindawi": "48f3ee5207c26f8855fc18f5e6e6450cb2d6f227e4a3caf85f983202584a5beb",
+        "ksucca": "bd1fdc6c818056eed2fdd7cc28d229af47e1925e4c4c0178465241cfdbe45ba0",
+        "arabic_bible": "53ff5610ae3104e59c496c0320b02d66c143c8292a8b94c727c7be0678bce8cb",
+        "hebrew_tanakh": "e612c27c90e0c817c516b36fd88c41cf2a35ee5b56b8612fab2dd4ae49988125",
+        "greek_nt": "41268ee79d5865a3d8e656bdb00a59bdc8d5472e60dfd394771a23250df78013",
+        "pali": "df3b66650fbc950555ede580ccd30180d2250b8490f38425a2e5d2632f62456f",
+        "avestan_yasna": "3d80dfd9a6feaa55631af746b6dcea2b7e21857933e1a145b81b11758cba3182"
+      },
+      "quarantine_ok": true,
+      "medians": {
+        "quran": {
+          "VL_CV": 0.4458599267397876,
+          "p_max": 0.7272727272727273,
+          "H_EL": 0.9685208240372034,
+          "bigram_distinct_ratio": 0.2370250378991638,
+          "gzip_efficiency": 0.3616735757342784,
+          "n_units": 114
+        },
+        "poetry_jahili": {
+          "VL_CV": 0.10475656017578483,
+          "p_max": 0.264391447368421,
+          "H_EL": 2.779539763336115,
+          "bigram_distinct_ratio": 0.4598757876603654,
+          "gzip_efficiency": 0.4600684383365069,
+          "n_units": 120
+        },
+        "poetry_islami": {
+          "VL_CV": 0.10475656017578483,
+          "p_max": 0.2857142857142857,
+          "H_EL": 2.688721875540867,
+          "bigram_distinct_ratio": 0.4745308310991957,
+          "gzip_efficiency": 0.4605543710021322,
+          "n_units": 423
+        },
+        "poetry_abbasi": {
+          "VL_CV": 0.09318706807596218,
+          "p_max": 0.2857142857142857,
+          "H_EL": 2.7516291673878226,
+          "bigram_distinct_ratio": 0.4834123222748815,
+          "gzip_efficiency": 0.4623015873015873,
+          "n_units": 2575
+        },
+        "hindawi": {
+          "VL_CV": 0.40269180782142755,
+          "p_max": 0.1836734693877551,
+          "H_EL": 3.478902741597457,
+          "bigram_distinct_ratio": 0.18057867175015063,
+          "gzip_efficiency": 0.369732271503725,
+          "n_units": 72
+        },
+        "ksucca": {
+          "VL_CV": 0.9557006632274367,
+          "p_max": 0.28001792114695345,
+          "H_EL": 2.907891879501107,
+          "bigram_distinct_ratio": 0.06810285333753682,
+          "gzip_efficiency": 0.27051422757554233,
+          "n_units": 42
+        },
+        "arabic_bible": {
+          "VL_CV": 0.3472644672608059,
+          "p_max": 0.2727272727272727,
+          "H_EL": 2.918295834054489,
+          "bigram_distinct_ratio": 0.21794871794871795,
+          "gzip_efficiency": 0.3519163763066202,
+          "n_units": 1183
+        },
+        "hebrew_tanakh": {
+          "VL_CV": 0.18498288468188753,
+          "p_max": 0.2413793103448276,
+          "H_EL": 3.053090083530327,
+          "bigram_distinct_ratio": 0.21621621621621623,
+          "gzip_efficiency": 0.3475519287833828,
+          "n_units": 921
+        },
+        "greek_nt": {
+          "VL_CV": 0.35183353097644743,
+          "p_max": 0.3333333333333333,
+          "H_EL": 2.433671200186647,
+          "bigram_distinct_ratio": 0.11842906006989695,
+          "gzip_efficiency": 0.3064422918853299,
+          "n_units": 260
+        },
+        "pali": {
+          "VL_CV": 0.721151423497471,
+          "p_max": 0.4808201058201058,
+          "H_EL": 2.089938976016876,
+          "bigram_distinct_ratio": 0.027269824311977352,
+          "gzip_efficiency": 0.19440524276024063,
+          "n_units": 186
+        },
+        "avestan_yasna": {
+          "VL_CV": 0.7236013706086589,
+          "p_max": 0.375,
+          "H_EL": 2.1180782093497093,
+          "bigram_distinct_ratio": 0.11845102505694761,
+          "gzip_efficiency": 0.42716711349419123,
+          "n_units": 67
+        }
+      },
+      "sizing_parity_ok": true,
+      "quran_h_el": 0.9685208240372034,
+      "quran_p_max": 0.7272727272727273,
+      "next_lowest_h_el": {
+        "corpus": "pali",
+        "value": 2.089938976016876
+      },
+      "next_highest_p_max": {
+        "corpus": "pali",
+        "value": 0.4808201058201058
+      },
+      "h_el_ratio": 0.46342062383231175,
+      "p_max_ratio": 1.5125672127047642,
+      "quran_is_h_el_argmin": true,
+      "quran_is_p_max_argmax": true,
+      "h_el_margin_ok": true,
+      "p_max_margin_ok": true,
+      "perm_p_h_el": 0.0,
+      "perm_p_p_max": 0.0,
+      "perm_alpha_bonferroni": 0.0005,
+      "perm_h_el_ok": true,
+      "perm_p_max_ok": true
+    },
+    "warnings": [],
+    "errors": []
+  },
+  "pre_stage_diagnostic_receipt": "results/auxiliary/_phi_universal_xtrad_sizing.json"
+}

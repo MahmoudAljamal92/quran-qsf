@@ -1,0 +1,321 @@
+{
+  "experiment": "exp64_unified_law_ensemble",
+  "hypothesis": "H29 — Multi-variant unified law ensemble: do 5 independent gate designs consistently exclude control corpora?",
+  "schema_version": 1,
+  "data": {
+    "n_quran": 114,
+    "n_total": 4833,
+    "n_micro_valid_quran": 114,
+    "feat_cols": [
+      "EL",
+      "VL_CV",
+      "CN",
+      "H_cond",
+      "T"
+    ],
+    "tau_lam": 1e-06,
+    "macro_z_ref": {
+      "mu": 8.811942216315382,
+      "std": 2.690404398093876
+    },
+    "micro_z_ref": {
+      "mu": 2.5561996687223716,
+      "std": 0.16387691423048442
+    }
+  },
+  "gate_parameters": {
+    "A1_linear": {
+      "threshold": -2.067749357014608
+    },
+    "A2_twogatOR": {
+      "macro_floor": -1.5675978325731976,
+      "rescue_threshold": 0.30990147333896517
+    },
+    "A3_SVM": {
+      "nu": 0.1,
+      "kernel": "rbf",
+      "gamma": "scale"
+    },
+    "A3_KDE": {
+      "kde_threshold": 0.009790240358638366
+    },
+    "A4_product": {
+      "product_threshold": -1.953397646981153
+    },
+    "q_floor_percentile": 5,
+    "exclusion_threshold": 0.7
+  },
+  "exclusion_matrix": {
+    "quran": {
+      "A1_linear": {
+        "n_pass": 108,
+        "n_excluded": 6,
+        "n_total": 114,
+        "exclusion_pct": 5.3
+      },
+      "A2_twogatOR": {
+        "n_pass": 111,
+        "n_excluded": 3,
+        "n_total": 114,
+        "exclusion_pct": 2.6
+      },
+      "A3_SVM": {
+        "n_pass": 98,
+        "n_excluded": 16,
+        "n_total": 114,
+        "exclusion_pct": 14.0
+      },
+      "A3_KDE": {
+        "n_pass": 108,
+        "n_excluded": 6,
+        "n_total": 114,
+        "exclusion_pct": 5.3
+      },
+      "A4_product": {
+        "n_pass": 108,
+        "n_excluded": 6,
+        "n_total": 114,
+        "exclusion_pct": 5.3
+      }
+    },
+    "poetry_jahili": {
+      "A1_linear": {
+        "n_pass": 99,
+        "n_excluded": 34,
+        "n_total": 133,
+        "exclusion_pct": 25.6
+      },
+      "A2_twogatOR": {
+        "n_pass": 87,
+        "n_excluded": 46,
+        "n_total": 133,
+        "exclusion_pct": 34.6
+      },
+      "A3_SVM": {
+        "n_pass": 43,
+        "n_excluded": 90,
+        "n_total": 133,
+        "exclusion_pct": 67.7
+      },
+      "A3_KDE": {
+        "n_pass": 85,
+        "n_excluded": 48,
+        "n_total": 133,
+        "exclusion_pct": 36.1
+      },
+      "A4_product": {
+        "n_pass": 93,
+        "n_excluded": 40,
+        "n_total": 133,
+        "exclusion_pct": 30.1
+      }
+    },
+    "poetry_islami": {
+      "A1_linear": {
+        "n_pass": 321,
+        "n_excluded": 144,
+        "n_total": 465,
+        "exclusion_pct": 31.0
+      },
+      "A2_twogatOR": {
+        "n_pass": 284,
+        "n_excluded": 181,
+        "n_total": 465,
+        "exclusion_pct": 38.9
+      },
+      "A3_SVM": {
+        "n_pass": 163,
+        "n_excluded": 302,
+        "n_total": 465,
+        "exclusion_pct": 64.9
+      },
+      "A3_KDE": {
+        "n_pass": 315,
+        "n_excluded": 150,
+        "n_total": 465,
+        "exclusion_pct": 32.3
+      },
+      "A4_product": {
+        "n_pass": 368,
+        "n_excluded": 97,
+        "n_total": 465,
+        "exclusion_pct": 20.9
+      }
+    },
+    "poetry_abbasi": {
+      "A1_linear": {
+        "n_pass": 1897,
+        "n_excluded": 926,
+        "n_total": 2823,
+        "exclusion_pct": 32.8
+      },
+      "A2_twogatOR": {
+        "n_pass": 1653,
+        "n_excluded": 1170,
+        "n_total": 2823,
+        "exclusion_pct": 41.4
+      },
+      "A3_SVM": {
+        "n_pass": 980,
+        "n_excluded": 1843,
+        "n_total": 2823,
+        "exclusion_pct": 65.3
+      },
+      "A3_KDE": {
+        "n_pass": 1896,
+        "n_excluded": 927,
+        "n_total": 2823,
+        "exclusion_pct": 32.8
+      },
+      "A4_product": {
+        "n_pass": 2249,
+        "n_excluded": 574,
+        "n_total": 2823,
+        "exclusion_pct": 20.3
+      }
+    },
+    "ksucca": {
+      "A1_linear": {
+        "n_pass": 15,
+        "n_excluded": 26,
+        "n_total": 41,
+        "exclusion_pct": 63.4
+      },
+      "A2_twogatOR": {
+        "n_pass": 27,
+        "n_excluded": 14,
+        "n_total": 41,
+        "exclusion_pct": 34.1
+      },
+      "A3_SVM": {
+        "n_pass": 19,
+        "n_excluded": 22,
+        "n_total": 41,
+        "exclusion_pct": 53.7
+      },
+      "A3_KDE": {
+        "n_pass": 31,
+        "n_excluded": 10,
+        "n_total": 41,
+        "exclusion_pct": 24.4
+      },
+      "A4_product": {
+        "n_pass": 41,
+        "n_excluded": 0,
+        "n_total": 41,
+        "exclusion_pct": 0.0
+      }
+    },
+    "arabic_bible": {
+      "A1_linear": {
+        "n_pass": 398,
+        "n_excluded": 785,
+        "n_total": 1183,
+        "exclusion_pct": 66.4
+      },
+      "A2_twogatOR": {
+        "n_pass": 428,
+        "n_excluded": 755,
+        "n_total": 1183,
+        "exclusion_pct": 63.8
+      },
+      "A3_SVM": {
+        "n_pass": 99,
+        "n_excluded": 1084,
+        "n_total": 1183,
+        "exclusion_pct": 91.6
+      },
+      "A3_KDE": {
+        "n_pass": 473,
+        "n_excluded": 710,
+        "n_total": 1183,
+        "exclusion_pct": 60.0
+      },
+      "A4_product": {
+        "n_pass": 1009,
+        "n_excluded": 174,
+        "n_total": 1183,
+        "exclusion_pct": 14.7
+      }
+    },
+    "hindawi": {
+      "A1_linear": {
+        "n_pass": 42,
+        "n_excluded": 32,
+        "n_total": 74,
+        "exclusion_pct": 43.2
+      },
+      "A2_twogatOR": {
+        "n_pass": 44,
+        "n_excluded": 30,
+        "n_total": 74,
+        "exclusion_pct": 40.5
+      },
+      "A3_SVM": {
+        "n_pass": 3,
+        "n_excluded": 71,
+        "n_total": 74,
+        "exclusion_pct": 95.9
+      },
+      "A3_KDE": {
+        "n_pass": 30,
+        "n_excluded": 44,
+        "n_total": 74,
+        "exclusion_pct": 59.5
+      },
+      "A4_product": {
+        "n_pass": 44,
+        "n_excluded": 30,
+        "n_total": 74,
+        "exclusion_pct": 40.5
+      }
+    }
+  },
+  "quran_coverage": {
+    "A1_linear": {
+      "n_pass": 108,
+      "n_total": 114,
+      "pct": 94.7
+    },
+    "A2_twogatOR": {
+      "n_pass": 111,
+      "n_total": 114,
+      "pct": 97.4
+    },
+    "A3_SVM": {
+      "n_pass": 98,
+      "n_total": 114,
+      "pct": 86.0
+    },
+    "A3_KDE": {
+      "n_pass": 108,
+      "n_total": 114,
+      "pct": 94.7
+    },
+    "A4_product": {
+      "n_pass": 108,
+      "n_total": 114,
+      "pct": 94.7
+    }
+  },
+  "consensus": {
+    "quran": 0,
+    "poetry_jahili": 0,
+    "poetry_islami": 0,
+    "poetry_abbasi": 0,
+    "ksucca": 0,
+    "arabic_bible": 1,
+    "hindawi": 1
+  },
+  "verdict": {
+    "verdict": "WEAK",
+    "min_consensus": 0,
+    "mean_consensus": 0.33,
+    "prereg_thresholds": {
+      "STRONG": "consensus >= 3 of 5 for ALL controls",
+      "MODERATE": "consensus >= 2 of 5 for ALL controls",
+      "WEAK": "consensus <= 1 for any control"
+    }
+  },
+  "runtime_seconds": 55.96
+}

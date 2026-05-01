@@ -1,0 +1,153 @@
+{
+  "experiment": "exp111_F63_rigveda_falsification",
+  "hypothesis_id": "H66",
+  "verdict": "PASS_quran_rhyme_extremum_xtrad_with_rigveda",
+  "started_at_utc": "2026-04-29T05:51:16.015069+00:00",
+  "finished_at_utc": "2026-04-29T05:51:40.666724+00:00",
+  "wall_seconds": 24.651655435562134,
+  "prereg_path": "experiments\\exp111_F63_rigveda_falsification\\PREREG.md",
+  "prereg_sha256": "e6bb99c626e8bd2cae4d472c60bf3adff772aa7496f6d4e0034294eea36e1a2b",
+  "scope": "F63 R1 6-corpus pool + Rigveda Saṃhitā (1003 sūktas, 10 mandalas; DharmicData edition, Devanāgarī skeleton, 33 consonants + 14 vowels)",
+  "corpora": [
+    "quran",
+    "arabic_bible",
+    "hebrew_tanakh",
+    "greek_nt",
+    "pali",
+    "avestan_yasna",
+    "rigveda"
+  ],
+  "n_units_per_corpus": {
+    "quran": 114,
+    "arabic_bible": 1183,
+    "hebrew_tanakh": 921,
+    "greek_nt": 260,
+    "pali": 186,
+    "avestan_yasna": 67,
+    "rigveda": 1003
+  },
+  "n_total": 3734,
+  "medians": {
+    "quran": {
+      "p_max": 0.7272727272727273,
+      "H_EL": 0.9685208240372034
+    },
+    "arabic_bible": {
+      "p_max": 0.2727272727272727,
+      "H_EL": 2.918295834054489
+    },
+    "hebrew_tanakh": {
+      "p_max": 0.2413793103448276,
+      "H_EL": 3.053090083530327
+    },
+    "greek_nt": {
+      "p_max": 0.3333333333333333,
+      "H_EL": 2.433671200186647
+    },
+    "pali": {
+      "p_max": 0.4808201058201058,
+      "H_EL": 2.089938976016876
+    },
+    "avestan_yasna": {
+      "p_max": 0.375,
+      "H_EL": 2.1180782093497093
+    },
+    "rigveda": {
+      "p_max": 0.3333333333333333,
+      "H_EL": 2.287783719941071
+    }
+  },
+  "quran_p_max": 0.7272727272727273,
+  "quran_h_el": 0.9685208240372034,
+  "next_highest_p_max_corpus": "pali",
+  "next_highest_p_max_value": 0.4808201058201058,
+  "next_lowest_h_el_corpus": "pali",
+  "next_lowest_h_el_value": 2.089938976016876,
+  "ratio_p_max": 1.5125672127047642,
+  "ratio_h_el": 0.46342062383231175,
+  "permutation": {
+    "n_perms": 10000,
+    "seed": 42,
+    "perm_p_h_el": 0.0,
+    "perm_p_p_max": 0.0,
+    "alpha_bonf": 0.0005
+  },
+  "decision_rule": {
+    "h_el_margin": 0.5,
+    "p_max_margin": 1.4,
+    "cond_h_el_extremum": true,
+    "cond_p_max_extremum": true,
+    "cond_perm_p_h_el": true,
+    "cond_perm_p_p_max": true
+  },
+  "audit_report": {
+    "ok": true,
+    "a1_rigveda_manifest_sha256": {
+      "ok": true,
+      "details": {
+        "rigveda_mandala_1.json": {
+          "expected_sha256": "1abdf9cb9d71d1a29ebab6edcf2283cfea586de82fe0fca8bef025e41be81a69",
+          "actual_sha256": "1abdf9cb9d71d1a29ebab6edcf2283cfea586de82fe0fca8bef025e41be81a69",
+          "match": true
+        },
+        "rigveda_mandala_10.json": {
+          "expected_sha256": "80c0d0da0084aa8e051a6043c1ac94783ce421ad2c7ef0c932e3db4d0e19b8a4",
+          "actual_sha256": "80c0d0da0084aa8e051a6043c1ac94783ce421ad2c7ef0c932e3db4d0e19b8a4",
+          "match": true
+        },
+        "rigveda_mandala_2.json": {
+          "expected_sha256": "46fcc571f5bf4486d9ad3088e89f61f9fdb52889742cff903502c138650e7b1a",
+          "actual_sha256": "46fcc571f5bf4486d9ad3088e89f61f9fdb52889742cff903502c138650e7b1a",
+          "match": true
+        },
+        "rigveda_mandala_3.json": {
+          "expected_sha256": "206a7015115acc2b05f15b9d85bc829c91f99a28157187f0672447c365db40ed",
+          "actual_sha256": "206a7015115acc2b05f15b9d85bc829c91f99a28157187f0672447c365db40ed",
+          "match": true
+        },
+        "rigveda_mandala_4.json": {
+          "expected_sha256": "621a3b8b6327f98f83e3aeb0e077e98bf24cf84d75082b2b0c321267ae738c00",
+          "actual_sha256": "621a3b8b6327f98f83e3aeb0e077e98bf24cf84d75082b2b0c321267ae738c00",
+          "match": true
+        },
+        "rigveda_mandala_5.json": {
+          "expected_sha256": "1873f064dae04eb1c9efd9c8551fbf511213e14f680d00601d7883bbdbc7adbe",
+          "actual_sha256": "1873f064dae04eb1c9efd9c8551fbf511213e14f680d00601d7883bbdbc7adbe",
+          "match": true
+        },
+        "rigveda_mandala_6.json": {
+          "expected_sha256": "14dd85524b6d56bfe50b387d8cbfaea9bbc5a15fb0c2a73f57f31afa9423978b",
+          "actual_sha256": "14dd85524b6d56bfe50b387d8cbfaea9bbc5a15fb0c2a73f57f31afa9423978b",
+          "match": true
+        },
+        "rigveda_mandala_7.json": {
+          "expected_sha256": "40d341217ca9468746802f7b4fac266d297bcad4f18b56f16039e47146d9ca9b",
+          "actual_sha256": "40d341217ca9468746802f7b4fac266d297bcad4f18b56f16039e47146d9ca9b",
+          "match": true
+        },
+        "rigveda_mandala_8.json": {
+          "expected_sha256": "7c36ee56c70981172c4db7b30492c23ddd7e51c399143dda9bd189ec3baa63ac",
+          "actual_sha256": "7c36ee56c70981172c4db7b30492c23ddd7e51c399143dda9bd189ec3baa63ac",
+          "match": true
+        },
+        "rigveda_mandala_9.json": {
+          "expected_sha256": "3d0accf414ce95bef87b46cb77c8e712f02e04c8fbc5cf377fe2b2701f48e3e2",
+          "actual_sha256": "3d0accf414ce95bef87b46cb77c8e712f02e04c8fbc5cf377fe2b2701f48e3e2",
+          "match": true
+        }
+      }
+    },
+    "a2_feature_parity_quran_vs_f63_r1": {
+      "ok": true,
+      "details": {
+        "exp111_quran_p_max": 0.7272727272727273,
+        "f63_r1_quran_p_max": 0.7272727272727273,
+        "delta_p_max": 0.0,
+        "exp111_quran_h_el": 0.9685208240372034,
+        "f63_r1_quran_h_el": 0.9685208240372034,
+        "delta_h_el": 0.0
+      }
+    }
+  },
+  "calibration_source": "none — analytic & permutation"
+}

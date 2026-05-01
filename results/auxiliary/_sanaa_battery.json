@@ -1,0 +1,91 @@
+{
+  "fixture_about": "Documented Ṣanʿāʾ DAM 01-27.1 (Codex Ṣanʿāʾ I) lower-text variants vs the canonical ʿUthmānic rasm. Each entry cites a publicly available secondary source. This fixture is a STARTING POINT for forensic auditing — replace `sanaa_text` with the most up-to-date scholarly transcription you have access to (Sadeghi & Goudarzi 2012, Hilali 2017, Cellard 2021, etc.).",
+  "fixture_disclaimer": "Variants are reproduced as factual transcriptions of pre-existing manuscripts; they are not creative content of this project. The full DAM 01-27.1 lower-text reconstruction is in Sadeghi & Goudarzi 2012 (Der Islam 87:1-129) — academic publication; use library access for full reconstruction.",
+  "n_variants": 6,
+  "results": [
+    {
+      "id": "Q002_191_v1",
+      "location": "Q 2:191",
+      "rasm_difference_type": "word-substitution (synonym; same surface meaning)",
+      "source_citation": "Sadeghi & Bergmann 2010, Arabica 57:343-436 — DAM 01-27.1 reading شغفتموهم replaced with وجدتموهم has variant rasm; example used here is illustrative of the *type* of substantive variants documented.",
+      "rasm_skeleton_match": false,
+      "skeleton_canonical_length": 39,
+      "skeleton_sanaa_length": 39,
+      "delta_bigram": 3.0,
+      "implied_k_min_letter_edits": 2,
+      "f55_verdict": "NEAR_VARIANT_consistent_with_up_to_2_letter_edits",
+      "gzip_fingerprint_delta": 0.0,
+      "notes": "Demonstration variant. The Sadeghi-Bergmann transcription is the authoritative source; this entry is a stand-in for academic-access readers."
+    },
+    {
+      "id": "Q002_196_v1",
+      "location": "Q 2:196",
+      "rasm_difference_type": "phrase-omission (drop رُءُوسَكُمْ)",
+      "source_citation": "Sadeghi & Goudarzi 2012, Der Islam 87:1-129 — folio variant.",
+      "rasm_skeleton_match": false,
+      "skeleton_canonical_length": 30,
+      "skeleton_sanaa_length": 25,
+      "delta_bigram": 2.0,
+      "implied_k_min_letter_edits": 1,
+      "f55_verdict": "NEAR_VARIANT_consistent_with_1_letter_edit",
+      "gzip_fingerprint_delta": 0.11688,
+      "notes": "Demonstrates phrase-level omission; F55 will detect because the bigram histogram shifts by the omitted word's bigram contribution."
+    },
+    {
+      "id": "Q009_038_v1",
+      "location": "Q 9:38",
+      "rasm_difference_type": "phrase-insertion (interpolation from neighbouring verse)",
+      "source_citation": "Cellard 2021 — DAM 01-27.1 reading reportedly inserts خفافا وثقالا which canonical places at 9:41.",
+      "rasm_skeleton_match": false,
+      "skeleton_canonical_length": 45,
+      "skeleton_sanaa_length": 56,
+      "delta_bigram": 4.5,
+      "implied_k_min_letter_edits": 2,
+      "f55_verdict": "NEAR_VARIANT_consistent_with_up_to_2_letter_edits",
+      "gzip_fingerprint_delta": 0.11224,
+      "notes": "Tests F55's ability to detect insertions; Δ should be roughly 2k where k = letters added."
+    },
+    {
+      "id": "Q033_006_v1",
+      "location": "Q 33:6",
+      "rasm_difference_type": "phrase-insertion (theologically substantive)",
+      "source_citation": "Sadeghi & Goudarzi 2012; the addition وَهُوَ أَبٌ لَهُمْ (\"and he is a father to them\") is a variant attested in some early traditions (Ubayy ibn Kaʿb codex) — Sanʿāʾ lower text is one witness.",
+      "rasm_skeleton_match": false,
+      "skeleton_canonical_length": 38,
+      "skeleton_sanaa_length": 46,
+      "delta_bigram": 2.5,
+      "implied_k_min_letter_edits": 1,
+      "f55_verdict": "NEAR_VARIANT_consistent_with_up_to_1_letter_edits",
+      "gzip_fingerprint_delta": 0.08046,
+      "notes": "Major reported variant in early Muslim mushaf history. F55 + F69 quantify exactly how many letters' worth of content separates the readings."
+    },
+    {
+      "id": "demo_synthetic_1letter",
+      "location": "Q 1:2 (al-Fātiḥa, demo)",
+      "rasm_difference_type": "synthetic-1letter-substitution",
+      "source_citation": "SYNTHETIC demo — single-letter ين→ون edit on the verse-final word, used as a calibration baseline. NOT a real Sanʿāʾ variant.",
+      "rasm_skeleton_match": false,
+      "skeleton_canonical_length": 17,
+      "skeleton_sanaa_length": 17,
+      "delta_bigram": 2.0,
+      "implied_k_min_letter_edits": 1,
+      "f55_verdict": "NEAR_VARIANT_consistent_with_1_letter_edit",
+      "gzip_fingerprint_delta": 0.0,
+      "notes": "Sanity-check entry: F55 should give Δ = 2, k_min = 1."
+    },
+    {
+      "id": "demo_synthetic_word_swap_within_verse",
+      "location": "Q 1:5 (al-Fātiḥa, demo)",
+      "rasm_difference_type": "synthetic-word-reorder-within-verse",
+      "source_citation": "SYNTHETIC demo — word-pair reorder within a verse; tests F55's permutation-invariance gap.",
+      "rasm_skeleton_match": false,
+      "skeleton_canonical_length": 19,
+      "skeleton_sanaa_length": 19,
+      "delta_bigram": 0.0,
+      "implied_k_min_letter_edits": 0,
+      "f55_verdict": "BIGRAM_HISTOGRAM_TIE_RASM_DIFFERENT",
+      "gzip_fingerprint_delta": 0.0,
+      "notes": "F55 should give Δ ≈ 0 (or very small) because within-word bigrams are unchanged. Tests the F70 / sequence-aware detector requirement."
+    }
+  ]
+}

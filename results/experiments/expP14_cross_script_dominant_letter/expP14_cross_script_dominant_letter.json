@@ -1,0 +1,365 @@
+{
+  "experiment": "expP14_cross_script_dominant_letter",
+  "prereg_sha256": "87896439c43b1320d08bab61af618adb236b93df519677479af9393d837d272d",
+  "table": {
+    "quran": {
+      "n_finals": 6236,
+      "n_distinct": 28,
+      "p_max": 0.50096215522771,
+      "top_letter": "ن",
+      "top_letter_codepoint": "U+0646",
+      "top5": [
+        {
+          "letter": "ن",
+          "codepoint": "U+0646",
+          "count": 3124,
+          "p": 0.50096215522771
+        },
+        {
+          "letter": "ا",
+          "codepoint": "U+0627",
+          "count": 949,
+          "p": 0.1521808851828095
+        },
+        {
+          "letter": "م",
+          "codepoint": "U+0645",
+          "count": 665,
+          "p": 0.10663887107119949
+        },
+        {
+          "letter": "ر",
+          "codepoint": "U+0631",
+          "count": 450,
+          "p": 0.07216164207825529
+        },
+        {
+          "letter": "ى",
+          "codepoint": "U+0649",
+          "count": 241,
+          "p": 0.03864656831302117
+        }
+      ]
+    },
+    "poetry_jahili": {
+      "n_finals": 2561,
+      "n_distinct": 34,
+      "p_max": 0.1850839515814135,
+      "top_letter": "ا",
+      "top_letter_codepoint": "U+0627",
+      "top5": [
+        {
+          "letter": "ا",
+          "codepoint": "U+0627",
+          "count": 474,
+          "p": 0.1850839515814135
+        },
+        {
+          "letter": "ن",
+          "codepoint": "U+0646",
+          "count": 258,
+          "p": 0.10074189769621242
+        },
+        {
+          "letter": "ي",
+          "codepoint": "U+064A",
+          "count": 205,
+          "p": 0.08004685669660289
+        },
+        {
+          "letter": "م",
+          "codepoint": "U+0645",
+          "count": 166,
+          "p": 0.06481843030066381
+        },
+        {
+          "letter": "ل",
+          "codepoint": "U+0644",
+          "count": 154,
+          "p": 0.06013276064037485
+        }
+      ]
+    },
+    "poetry_islami": {
+      "n_finals": 10295,
+      "n_distinct": 34,
+      "p_max": 0.20621661000485672,
+      "top_letter": "ا",
+      "top_letter_codepoint": "U+0627",
+      "top5": [
+        {
+          "letter": "ا",
+          "codepoint": "U+0627",
+          "count": 2123,
+          "p": 0.20621661000485672
+        },
+        {
+          "letter": "ن",
+          "codepoint": "U+0646",
+          "count": 1124,
+          "p": 0.10917921321029626
+        },
+        {
+          "letter": "ي",
+          "codepoint": "U+064A",
+          "count": 673,
+          "p": 0.06537153958232152
+        },
+        {
+          "letter": "ى",
+          "codepoint": "U+0649",
+          "count": 673,
+          "p": 0.06537153958232152
+        },
+        {
+          "letter": "ت",
+          "codepoint": "U+062A",
+          "count": 619,
+          "p": 0.060126274890723655
+        }
+      ]
+    },
+    "poetry_abbasi": {
+      "n_finals": 76499,
+      "n_distinct": 36,
+      "p_max": 0.1756362828272265,
+      "top_letter": "ا",
+      "top_letter_codepoint": "U+0627",
+      "top5": [
+        {
+          "letter": "ا",
+          "codepoint": "U+0627",
+          "count": 13436,
+          "p": 0.1756362828272265
+        },
+        {
+          "letter": "ن",
+          "codepoint": "U+0646",
+          "count": 7878,
+          "p": 0.10298173832337677
+        },
+        {
+          "letter": "ي",
+          "codepoint": "U+064A",
+          "count": 6595,
+          "p": 0.08621027725852626
+        },
+        {
+          "letter": "ه",
+          "codepoint": "U+0647",
+          "count": 5604,
+          "p": 0.07325585955371966
+        },
+        {
+          "letter": "م",
+          "codepoint": "U+0645",
+          "count": 4852,
+          "p": 0.0634256656949764
+        }
+      ]
+    },
+    "ksucca": {
+      "n_finals": 1967,
+      "n_distinct": 30,
+      "p_max": 0.11845449923741738,
+      "top_letter": "ا",
+      "top_letter_codepoint": "U+0627",
+      "top5": [
+        {
+          "letter": "ا",
+          "codepoint": "U+0627",
+          "count": 233,
+          "p": 0.11845449923741738
+        },
+        {
+          "letter": "ه",
+          "codepoint": "U+0647",
+          "count": 211,
+          "p": 0.10726995424504321
+        },
+        {
+          "letter": "م",
+          "codepoint": "U+0645",
+          "count": 211,
+          "p": 0.10726995424504321
+        },
+        {
+          "letter": "ة",
+          "codepoint": "U+0629",
+          "count": 203,
+          "p": 0.10320284697508897
+        },
+        {
+          "letter": "ر",
+          "codepoint": "U+0631",
+          "count": 184,
+          "p": 0.09354346720894764
+        }
+      ]
+    },
+    "arabic_bible": {
+      "n_finals": 31083,
+      "n_distinct": 35,
+      "p_max": 0.1468005018820577,
+      "top_letter": "ا",
+      "top_letter_codepoint": "U+0627",
+      "top5": [
+        {
+          "letter": "ا",
+          "codepoint": "U+0627",
+          "count": 4563,
+          "p": 0.1468005018820577
+        },
+        {
+          "letter": "ه",
+          "codepoint": "U+0647",
+          "count": 3751,
+          "p": 0.12067689733938165
+        },
+        {
+          "letter": "م",
+          "codepoint": "U+0645",
+          "count": 3215,
+          "p": 0.10343274458707331
+        },
+        {
+          "letter": "ة",
+          "codepoint": "U+0629",
+          "count": 2616,
+          "p": 0.08416176044783322
+        },
+        {
+          "letter": "ن",
+          "codepoint": "U+0646",
+          "count": 2341,
+          "p": 0.07531448058424219
+        }
+      ]
+    },
+    "hadith_bukhari": {
+      "n_finals": 7271,
+      "n_distinct": 34,
+      "p_max": 0.16160088020904964,
+      "top_letter": "ه",
+      "top_letter_codepoint": "U+0647",
+      "top5": [
+        {
+          "letter": "ه",
+          "codepoint": "U+0647",
+          "count": 1175,
+          "p": 0.16160088020904964
+        },
+        {
+          "letter": "ا",
+          "codepoint": "U+0627",
+          "count": 1072,
+          "p": 0.14743501581625637
+        },
+        {
+          "letter": "م",
+          "codepoint": "U+0645",
+          "count": 896,
+          "p": 0.12322926695090083
+        },
+        {
+          "letter": "ة",
+          "codepoint": "U+0629",
+          "count": 851,
+          "p": 0.11704029707055426
+        },
+        {
+          "letter": "ر",
+          "codepoint": "U+0631",
+          "count": 541,
+          "p": 0.07440517122816669
+        }
+      ]
+    },
+    "hindawi": {
+      "n_finals": 1793,
+      "n_distinct": 32,
+      "p_max": 0.12325711098717233,
+      "top_letter": "ا",
+      "top_letter_codepoint": "U+0627",
+      "top5": [
+        {
+          "letter": "ا",
+          "codepoint": "U+0627",
+          "count": 221,
+          "p": 0.12325711098717233
+        },
+        {
+          "letter": "ة",
+          "codepoint": "U+0629",
+          "count": 195,
+          "p": 0.10875627440044618
+        },
+        {
+          "letter": "ن",
+          "codepoint": "U+0646",
+          "count": 177,
+          "p": 0.09871723368655884
+        },
+        {
+          "letter": "ت",
+          "codepoint": "U+062A",
+          "count": 155,
+          "p": 0.08644729503625209
+        },
+        {
+          "letter": "ل",
+          "codepoint": "U+0644",
+          "count": 131,
+          "p": 0.07306190741773563
+        }
+      ]
+    },
+    "iliad_greek": {
+      "n_finals": 15687,
+      "n_distinct": 11,
+      "p_max": 0.2739848282016957,
+      "top_letter": "ν",
+      "top_letter_codepoint": "U+03BD",
+      "top5": [
+        {
+          "letter": "ν",
+          "codepoint": "U+03BD",
+          "count": 4298,
+          "p": 0.2739848282016957
+        },
+        {
+          "letter": "ς",
+          "codepoint": "U+03C2",
+          "count": 3450,
+          "p": 0.2199273283610633
+        },
+        {
+          "letter": "ι",
+          "codepoint": "U+03B9",
+          "count": 2423,
+          "p": 0.1544591062663352
+        },
+        {
+          "letter": "α",
+          "codepoint": "U+03B1",
+          "count": 1178,
+          "p": 0.07509402690125581
+        },
+        {
+          "letter": "ο",
+          "codepoint": "U+03BF",
+          "count": 1003,
+          "p": 0.06393829285395551
+        }
+      ]
+    }
+  },
+  "quran_p_max": 0.50096215522771,
+  "next_arabic_p_max": {
+    "corpus": "poetry_islami",
+    "p_max": 0.20621661000485672
+  },
+  "ratio_quran_over_next_arabic": 2.4293007009275907,
+  "verdict": "QURAN_DOMINANCE_PARTIAL",
+  "wall_time_s": 0.3960561752319336
+}

@@ -1,0 +1,179 @@
+{
+  "experiment": "expP11_brown_empirical_corr",
+  "prereg_sha256": "187cc4511713540973b196a8772899f63fd611d8de0787744083d029f0f9405c",
+  "n_controls_for_R": 8,
+  "controls_used": [
+    "poetry_jahili",
+    "poetry_islami",
+    "poetry_abbasi",
+    "ksucca",
+    "arabic_bible",
+    "hadith_bukhari",
+    "hindawi",
+    "iliad_greek"
+  ],
+  "channels": [
+    "EL",
+    "R3_surrogate_H_finals",
+    "J1_surrogate_var_dvl",
+    "Hurst"
+  ],
+  "per_corpus_table": [
+    {
+      "corpus": "quran",
+      "n_units": 114,
+      "n_verses": 6236,
+      "EL": 0.7204490777866881,
+      "R3_surrogate_H_finals": 2.5280439034689732,
+      "J1_surrogate_var_dvl": 93.83047310980194,
+      "Hurst": 0.8109291461224425
+    },
+    {
+      "corpus": "poetry_jahili",
+      "n_units": 133,
+      "n_verses": 2561,
+      "EL": 0.094140625,
+      "R3_surrogate_H_finals": 4.134792895858269,
+      "J1_surrogate_var_dvl": 1.4132806396484376,
+      "Hurst": 0.5789621715558706
+    },
+    {
+      "corpus": "poetry_islami",
+      "n_units": 465,
+      "n_verses": 10295,
+      "EL": 0.0997668544783369,
+      "R3_surrogate_H_finals": 4.0774174526081195,
+      "J1_surrogate_var_dvl": 1.2443170684725113,
+      "Hurst": 0.5794507379030333
+    },
+    {
+      "corpus": "poetry_abbasi",
+      "n_units": 2823,
+      "n_verses": 76499,
+      "EL": 0.09600250986953908,
+      "R3_surrogate_H_finals": 4.133142869685757,
+      "J1_surrogate_var_dvl": 0.9930586377839166,
+      "Hurst": 0.6496373418548371
+    },
+    {
+      "corpus": "ksucca",
+      "n_units": 41,
+      "n_verses": 1967,
+      "EL": 0.19175991861648017,
+      "R3_surrogate_H_finals": 4.119200768302528,
+      "J1_surrogate_var_dvl": 11708.683912628623,
+      "Hurst": 0.6323634030884971
+    },
+    {
+      "corpus": "arabic_bible",
+      "n_units": 1183,
+      "n_verses": 31083,
+      "EL": 0.13448298050318513,
+      "R3_surrogate_H_finals": 4.049625492559338,
+      "J1_surrogate_var_dvl": 54.47821840384424,
+      "Hurst": 0.770924710047964
+    },
+    {
+      "corpus": "hadith_bukhari",
+      "n_units": 95,
+      "n_verses": 7271,
+      "EL": 0.14002751031636865,
+      "R3_surrogate_H_finals": 3.879421909766506,
+      "J1_surrogate_var_dvl": 9532.44743469138,
+      "Hurst": 0.6608494375123661
+    },
+    {
+      "corpus": "hindawi",
+      "n_units": 74,
+      "n_verses": 1793,
+      "EL": 0.06529017857142858,
+      "R3_surrogate_H_finals": 4.194056997599376,
+      "J1_surrogate_var_dvl": 38.75389099121094,
+      "Hurst": 0.5455749248466785
+    },
+    {
+      "corpus": "iliad_greek",
+      "n_units": 24,
+      "n_verses": 15687,
+      "EL": 0.17276552339665943,
+      "R3_surrogate_H_finals": 2.8852386973833877,
+      "J1_surrogate_var_dvl": 3.546729551510617,
+      "Hurst": 0.6368182242084215
+    }
+  ],
+  "p_individual": {
+    "EL_full114": 1.4e-12,
+    "R3_Quran_z": 2.4e-19,
+    "J1_Mushaf": 1e-06,
+    "Hurst_Quran": 0.00022
+  },
+  "R_empirical": [
+    [
+      1.0,
+      -0.5228082968945785,
+      0.6283475334539067,
+      0.4599195133108547
+    ],
+    [
+      -0.5228082968945785,
+      1.0,
+      0.11047439226318244,
+      -0.13151343859685316
+    ],
+    [
+      0.6283475334539067,
+      0.11047439226318244,
+      1.0,
+      0.11994856837435942
+    ],
+    [
+      0.4599195133108547,
+      -0.13151343859685316,
+      0.11994856837435942,
+      1.0
+    ]
+  ],
+  "R_conservative": [
+    [
+      1.0,
+      0.5,
+      0.5,
+      0.5
+    ],
+    [
+      0.5,
+      1.0,
+      0.5,
+      0.5
+    ],
+    [
+      0.5,
+      0.5,
+      1.0,
+      0.5
+    ],
+    [
+      0.5,
+      0.5,
+      0.5,
+      1.0
+    ]
+  ],
+  "brown_empirical": {
+    "chi2_obs": 184.81118095683297,
+    "c": 1.356483654065922,
+    "df_eff": 5.897601475713189,
+    "p_joint": 5.243589488777355e-27
+  },
+  "brown_conservative": {
+    "chi2_obs": 184.81118095683297,
+    "c": 2.359375,
+    "df_eff": 3.390728476821192,
+    "p_joint": 1.4060185193350525e-16
+  },
+  "p_joint_empirical": 5.243589488777355e-27,
+  "p_joint_conservative": 1.4060185193350525e-16,
+  "ratio_emp_over_con": 3.7293886365431394e-11,
+  "verdict": "TIGHTENED_STRONG",
+  "wall_time_s": 5.084603548049927
+}

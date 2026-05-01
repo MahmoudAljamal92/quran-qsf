@@ -1,0 +1,132 @@
+{
+  "experiment": "exp29_cascade_product_code",
+  "schema_version": 2,
+  "hypothesis": "P_composite = 1 - prod_k (1 - p_k) under channel independence.  Empirical per-channel p_k is estimated on Band-A Quran single-letter internal substitutions using TWO null definitions: (a) natural variation across unperturbed windows/surahs (naive), and (b) IDENTICAL perturbation applied to Arabic-ctrl Band-A units (Quran-specificity null). Also reports Mann-Whitney p(Quran |delta| > ctrl |delta|) per channel.",
+  "config": {
+    "seed": 42,
+    "n_pert_per_surah": 20,
+    "alpha_null_threshold": 0.05,
+    "window_L0_verses": 3,
+    "window_L1_verses": 10,
+    "band_a": [
+      15,
+      100
+    ],
+    "ctrl_n_units_sampled": 200,
+    "arabic_cons": "ابتثجحخدذرزسشصضطظعغفقكلمنهوي"
+  },
+  "n_quran_units": 68,
+  "n_perturbations_quran": 1360,
+  "n_perturbations_ctrl": 4000,
+  "n_perturbations_sanity_big": 340,
+  "n_ctrl_vecs_for_Sinv": 2509,
+  "thresholds_natural_95q": {
+    "L0_hchar_3verse": 0.6572561771120164,
+    "L1_phi_m_10verse": 8.766396581301885,
+    "L2_phi_m_surah": 9.106133186734318,
+    "L3_phi_m_drift_from_canon": 5.899366509531918
+  },
+  "thresholds_ctrl_perturbation_95q": {
+    "L0_hchar_3verse": 0.05469158213812574,
+    "L1_phi_m_10verse": 0.0,
+    "L2_phi_m_surah": 0.0,
+    "L3_phi_m_drift_from_canon": 9.288596164639754
+  },
+  "null_sample_sizes": {
+    "L0_hchar_3verse": 2930,
+    "L1_phi_m_10verse": 1986,
+    "L2_phi_m_surah": 2278,
+    "L3_phi_m_drift_from_canon": 68
+  },
+  "per_channel_p_detect_natural_null": {
+    "L0_hchar_3verse": 0.0,
+    "L1_phi_m_10verse": 0.0,
+    "L2_phi_m_surah": 0.0,
+    "L3_phi_m_drift_from_canon": 0.058823529411764705
+  },
+  "per_channel_p_detect_ctrl_null": {
+    "L0_hchar_3verse": 0.13676470588235295,
+    "L1_phi_m_10verse": 0.0,
+    "L2_phi_m_surah": 0.0,
+    "L3_phi_m_drift_from_canon": 0.0
+  },
+  "per_channel_p_any_movement": {
+    "L0_hchar_3verse": 0.9477941176470588,
+    "L1_phi_m_10verse": 0.0,
+    "L2_phi_m_surah": 0.0,
+    "L3_phi_m_drift_from_canon": 1.0
+  },
+  "per_channel_p_detect_sanity_big_vs_natural_null": {
+    "L0_hchar_3verse": 0.0,
+    "L1_phi_m_10verse": 0.0,
+    "L2_phi_m_surah": 0.0,
+    "L3_phi_m_drift_from_canon": 0.05588235294117647
+  },
+  "mannwhitney_quran_delta_vs_ctrl_delta": {
+    "L0_hchar_3verse": {
+      "p_one_sided_greater": 0.004897853859262289,
+      "quran_median": 0.018397649901494617,
+      "ctrl_median": 0.017713640442389877,
+      "quran_mean": 0.02612122382057406,
+      "ctrl_mean": 0.02161601461178905
+    },
+    "L1_phi_m_10verse": {
+      "p_one_sided_greater": 1.0,
+      "quran_median": 0.0,
+      "ctrl_median": 0.0,
+      "quran_mean": 0.0,
+      "ctrl_mean": 0.0
+    },
+    "L2_phi_m_surah": {
+      "p_one_sided_greater": 1.0,
+      "quran_median": 0.0,
+      "ctrl_median": 0.0,
+      "quran_mean": 0.0,
+      "ctrl_mean": 0.0
+    },
+    "L3_phi_m_drift_from_canon": {
+      "p_one_sided_greater": 1.0,
+      "quran_median": 3.3772307148240825,
+      "ctrl_median": 8.190575298982044,
+      "quran_mean": 3.698230926630153,
+      "ctrl_mean": 8.040885828561937
+    }
+  },
+  "p_composite_natural_null": 0.05882352941176472,
+  "p_composite_ctrl_null": 0.1367647058823529,
+  "best_single_channel_ctrl_null": 0.13676470588235295,
+  "gain_over_best_single_ctrl_null": -5.551115123125783e-17,
+  "conditional_pair_detections_ctrl_null": {
+    "P(L1_phi_m_10verse | L0_hchar_3verse)": 0.0,
+    "P(L2_phi_m_surah | L0_hchar_3verse)": 0.0,
+    "P(L3_phi_m_drift_from_canon | L0_hchar_3verse)": 0.0,
+    "P(L2_phi_m_surah | L1_phi_m_10verse)": NaN,
+    "P(L3_phi_m_drift_from_canon | L1_phi_m_10verse)": NaN,
+    "P(L3_phi_m_drift_from_canon | L2_phi_m_surah)": NaN
+  },
+  "feedback_estimates_2026_04_20": {
+    "L0_hchar_3verse_estimate_range": [
+      0.55,
+      0.7
+    ],
+    "L1_phi_m_10verse_estimate": 0.2,
+    "L2_phi_m_surah_estimate": 0.5,
+    "L3_phi_m_drift_from_canon_estimate": 0.03,
+    "p_composite_estimate_range": [
+      0.82,
+      0.9
+    ]
+  },
+  "provenance": {
+    "input_checkpoint": "phase_06_phi_m.pkl",
+    "arabic_ctrl": [
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "hadith_quarantined": true
+  }
+}

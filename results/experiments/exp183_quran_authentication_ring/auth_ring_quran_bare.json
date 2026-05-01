@@ -1,0 +1,97 @@
+{
+  "experiment": "exp183_quran_authentication_ring",
+  "input_file": "data\\corpora\\ar\\quran_bare.txt",
+  "input_format": "pipe_delimited",
+  "n_arabic_letters": 329404,
+  "n_verses": 6236,
+  "n_chapters": 114,
+  "results": [
+    {
+      "test": "T1_F55_bigram_shift",
+      "status": "PASS",
+      "delta_observed": 4,
+      "delta_theorem_bound_k1": 2,
+      "interpretation": "Single-letter edit produces detectable Δ≥2 (F55 forgery-detection baseline)"
+    },
+    {
+      "test": "T2_F67_C_Omega",
+      "status": "PASS",
+      "H_EL": 0.9685208240372032,
+      "C_Omega": 0.7985335304465797,
+      "threshold": 0.7,
+      "quran_reference": 0.7985,
+      "interpretation": "Rhyme channel uses ≥ 70 % of alphabet's Shannon capacity (F67 universal)"
+    },
+    {
+      "test": "T3_F75_F84_invariant",
+      "status": "PASS",
+      "H_EL": 0.9685208240372032,
+      "p_max": 0.7272727272727273,
+      "F75_value": 5.31644412745751,
+      "reference": 5.75,
+      "tolerance": 0.5,
+      "distance_from_reference": 0.43355587254248995,
+      "interpretation": "Universal invariant H_EL + log2(p_max·A) ≈ 5.75 bits"
+    },
+    {
+      "test": "T4_F76_one_bit",
+      "status": "PASS",
+      "H_EL": 0.9685208240372032,
+      "threshold": 1.0,
+      "interpretation": "Verse-final entropy < 1 bit (F76 Arabic-alphabet unique universal)"
+    },
+    {
+      "test": "T5_F79_alphabet_corrected",
+      "status": "PASS",
+      "D_max": 3.8388340980204005,
+      "threshold": 3.5,
+      "reference": 3.84,
+      "interpretation": "Alphabet-corrected gap ≥ 3.5 bits (F79 unique across 6-alphabet / 6-tradition pool)"
+    },
+    {
+      "test": "T6_F82_dual_mode",
+      "status": "PASS",
+      "mean_classical": 0.09534133266487646,
+      "mean_nonclassical": 0.06278455314356868,
+      "diff": 0.03255677952130778,
+      "n_classical_slots": 17,
+      "threshold_diff": 0.0,
+      "interpretation": "F82 dual-mode: classical maqrūnāt pairs show higher letter-frequency distance than non-classical adjacent pairs"
+    },
+    {
+      "test": "T7_F87_fractal_dim",
+      "status": "PASS",
+      "d_info": 1.6375512627170914,
+      "H_bits": 4.051189141328936,
+      "quran_reference": 1.667,
+      "tolerance": 0.05,
+      "distance_from_reference": 0.029448737282908644,
+      "interpretation": "IFS fractal dimension of letter-frequency attractor matches Quran's d_info = 1.667 (F87-linked)"
+    },
+    {
+      "test": "T8_rhyme_presence",
+      "status": "PASS",
+      "p_max": 0.7272727272727273,
+      "threshold": 0.3,
+      "uniform_baseline": 0.03571428571428571,
+      "interpretation": "Max verse-final-letter probability ≥ 0.30 indicates presence of a rhyme channel"
+    }
+  ],
+  "n_pass": 8,
+  "n_fail": 0,
+  "n_skip": 0,
+  "core_pass": 5,
+  "core_total": 5,
+  "composite_score": 1.0,
+  "composite_weights": {
+    "T1_F55_bigram_shift": 2.0,
+    "T2_F67_C_Omega": 1.0,
+    "T3_F75_F84_invariant": 1.0,
+    "T4_F76_one_bit": 1.0,
+    "T5_F79_alphabet_corrected": 1.0,
+    "T6_F82_dual_mode": 2.0,
+    "T7_F87_fractal_dim": 2.0,
+    "T8_rhyme_presence": 1.0
+  },
+  "verdict": "FULL_QURAN_UNIVERSAL_CODE_MATCH"
+}

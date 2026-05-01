@@ -1,0 +1,229 @@
+{
+  "experiment_id": "expE3_verdict_sync",
+  "task": "E3",
+  "tier": 1,
+  "status": "DONE",
+  "final_verdict": "CLEAN",
+  "final_verdict_rationale": "All 4 candidate mismatches reviewed manually and determined to be false positives. RANKED_FINDINGS.md lines 292-293 reference the SCAN-audit hypothesis register H2/H3 (exp53 AR(1) 6-D gate and exp55 length-stratified gamma), not the main HYPOTHESES_AND_TESTS.md H2/H3. PAPER.md line 304 context window overlaps the scale-invariance table (exp28) which contains scale-name tokens H_char_3/H_char_2 and FAILS verdict for L0, not H1/H2 hypothesis verdicts. Real cross-doc verdict drift: 0.",
+  "secondary_finding": "H-ID prefix collision between the main HYPOTHESES_AND_TESTS.md and the SCAN-audit 03_HYPOTHESIS_REGISTER.md. Flagged for future disambiguation (prefix SCAN register IDs with SCAN-H). Not patched in this task - cosmetic documentation risk, no verdict drift.",
+  "generated_utc": "2026-04-23T17:35:03+00:00",
+  "canonical_source": "docs/HYPOTHESES_AND_TESTS.md",
+  "canonical_hypothesis_count": 28,
+  "docs_scanned": [
+    "docs/PAPER.md",
+    "docs/RANKED_FINDINGS.md",
+    "docs/DEEPSCAN_ULTIMATE_FINDINGS.md",
+    "docs/OPPORTUNITY_SCAN_2026-04-22.md"
+  ],
+  "total_references": 4,
+  "status_counts": {
+    "SAME_GROUP": 2,
+    "GROUP_MISMATCH": 2
+  },
+  "per_doc_counts": {
+    "docs/PAPER.md": {
+      "SAME_GROUP": 2
+    },
+    "docs/RANKED_FINDINGS.md": {
+      "GROUP_MISMATCH": 2
+    }
+  },
+  "canon_verdicts": {
+    "H1": {
+      "hypothesis_id": "H1",
+      "verdict_token": "NULL",
+      "verdict_group": "NEGATIVE",
+      "full_verdict_cell": "NULL — EL_q≈0.707≈1/√2 (0.04% off) but CI width 13%; look-elsewhere P=0.955; no narrow matches",
+      "date": "2026-04-21"
+    },
+    "H2": {
+      "hypothesis_id": "H2",
+      "verdict_token": "NULL",
+      "verdict_group": "NEGATIVE",
+      "full_verdict_cell": "NULL — R²=0.11; all Arabic corpora have near-identical H (4.03–4.19) and γ (0.040–0.049); no functional relationship",
+      "date": "2026-04-21"
+    },
+    "H3": {
+      "hypothesis_id": "H3",
+      "verdict_token": "SUGGESTIVE",
+      "verdict_group": "SUGGESTIVE",
+      "full_verdict_cell": "SUGGESTIVE",
+      "date": "body-section"
+    },
+    "H4": {
+      "hypothesis_id": "H4",
+      "verdict_token": "DETERMINATE",
+      "verdict_group": "POSITIVE",
+      "full_verdict_cell": "DETERMINATE — subspace T²=33.3 in PC4+PC5 (1.6% variance), perm p<0.0001; 54% of anomaly in blind spot; EL↔T r=+0.44 broken by Quran",
+      "date": "2026-04-21"
+    },
+    "H5": {
+      "hypothesis_id": "H5",
+      "verdict_token": "SUGGESTIVE_UNIVERSAL",
+      "verdict_group": "SUGGESTIVE",
+      "full_verdict_cell": "SUGGESTIVE_UNIVERSAL — 4/7 strict; holds for Quran+poetry but NOT prose; genre-split law",
+      "date": "2026-04-21"
+    },
+    "H6": {
+      "hypothesis_id": "H6",
+      "verdict_token": "NULL",
+      "verdict_group": "NEGATIVE",
+      "full_verdict_cell": "NULL — no conservation law (φ₁·k CV=5.5); poetry has zero AR(1); Quran d(φ₁)=+0.67, d(k)=+0.61 vs ctrl",
+      "date": "2026-04-21"
+    },
+    "H7": {
+      "hypothesis_id": "H7",
+      "verdict_token": "DISTINCT",
+      "verdict_group": "POSITIVE",
+      "full_verdict_cell": "DISTINCT — α=1.00 (classic Zipf), β=0.78 (lowest); Mahalanobis 2.39σ from ctrl centroid; prose-like α, compressed vocabulary growth",
+      "date": "2026-04-21"
+    },
+    "H8": {
+      "hypothesis_id": "H8",
+      "verdict_token": "BENFORD_DEVIATING",
+      "verdict_group": "SUGGESTIVE",
+      "full_verdict_cell": "BENFORD_DEVIATING — all corpora deviate, but Quran is 2nd-most conforming (KL=0.015); poetry catastrophically non-Benford (KL≈2.6); d(KL)=−1.10",
+      "date": "2026-04-21"
+    },
+    "H9": {
+      "hypothesis_id": "H9",
+      "verdict_token": "SUGGESTIVE",
+      "verdict_group": "SUGGESTIVE",
+      "full_verdict_cell": "SUGGESTIVE — Quran τ=19.0 (global), per-unit τ=31.6 (lowest prose); d=−0.48, p=0.005; faster decorrelation than prose ctrls",
+      "date": "2026-04-21"
+    },
+    "H10": {
+      "hypothesis_id": "H10",
+      "verdict_token": "NULL",
+      "verdict_group": "NEGATIVE",
+      "full_verdict_cell": "NULL — δ=0.249 (z=+0.25); all corpora converge similarly; no Quran-specific tightness constant",
+      "date": "2026-04-21"
+    },
+    "H11": {
+      "hypothesis_id": "H11",
+      "verdict_token": "SUGGESTIVE",
+      "verdict_group": "SUGGESTIVE",
+      "full_verdict_cell": "SUGGESTIVE — CN→VL_CV p=0.009 raw (not BH-sig); canonical≈reverse total TE; no ordering optimization",
+      "date": "2026-04-21"
+    },
+    "H12": {
+      "hypothesis_id": "H12",
+      "verdict_token": "EQUATION_DERIVED",
+      "verdict_group": "POSITIVE",
+      "full_verdict_cell": "EQUATION_DERIVED — 0.53·T + 4.18·EL − 1.52 = 0; θ=82.7°; AUC=0.9975; 0% ctrl leakage (except 0.7% Bible)",
+      "date": "2026-04-21"
+    },
+    "H13": {
+      "hypothesis_id": "H13",
+      "verdict_token": "NULL",
+      "verdict_group": "NEGATIVE",
+      "full_verdict_cell": "NULL — 28.1% surahs prime-length (expected 21.3%); runs test p=0.48; perm p=1.0; no pattern",
+      "date": "2026-04-21"
+    },
+    "H14": {
+      "hypothesis_id": "H14",
+      "verdict_token": "SUGGESTIVE",
+      "verdict_group": "SUGGESTIVE",
+      "full_verdict_cell": "SUGGESTIVE — HFD=0.965; d=+0.46 vs ctrl pool (p<0.001); higher than poetry, lower than Bible",
+      "date": "2026-04-21"
+    },
+    "H15": {
+      "hypothesis_id": "H15",
+      "verdict_token": "SIGNIFICANT",
+      "verdict_group": "POSITIVE",
+      "full_verdict_cell": "SIGNIFICANT",
+      "date": "body-section"
+    },
+    "H16": {
+      "hypothesis_id": "H16",
+      "verdict_token": "PARTIAL",
+      "verdict_group": "SUGGESTIVE",
+      "full_verdict_cell": "PARTIAL — publishable parsimony lemma",
+      "date": "2026-04-21"
+    },
+    "H16_to_Adiyat": {
+      "hypothesis_id": "H16_to_Adiyat",
+      "verdict_token": "ANOMALY_SURVIVES",
+      "verdict_group": "POSITIVE",
+      "full_verdict_cell": "ANOMALY_SURVIVES — Φ_M_2D=9.00 (3.7× ctrl p95), rank drops 33→45 but EL z=+8.7 drives it",
+      "date": "2026-04-21"
+    },
+    "H17": {
+      "hypothesis_id": "H17",
+      "verdict_token": "FAILS",
+      "verdict_group": "NEGATIVE",
+      "full_verdict_cell": "FAILS",
+      "date": "body-section"
+    },
+    "H18": {
+      "hypothesis_id": "H18",
+      "verdict_token": "FAILS",
+      "verdict_group": "NEGATIVE",
+      "full_verdict_cell": "FAILS — d = +0.33 (WRONG direction); Quran has MORE overlap than poetry controls; historical d=−0.475 not replicated",
+      "date": "2026-04-21"
+    },
+    "H19": {
+      "hypothesis_id": "H19",
+      "verdict_token": "PARTIAL",
+      "verdict_group": "SUGGESTIVE",
+      "full_verdict_cell": "PARTIAL — Quran ladder monotone (H_verse=0.58 > H_delta=0.29); H_delta d=−1.5 vs poetry; but Bible gap fails (ratio 0.95 ≠ ≤0.5)",
+      "date": "2026-04-21"
+    },
+    "H20": {
+      "hypothesis_id": "H20",
+      "verdict_token": "NULL",
+      "verdict_group": "NEGATIVE",
+      "full_verdict_cell": "NULL — mean R=−0.006 (negative); d=−0.17 vs ctrl; 4/103 sig surahs; no ring composition signal",
+      "date": "2026-04-21"
+    },
+    "H24": {
+      "hypothesis_id": "H24",
+      "verdict_token": "SIGNIFICANT",
+      "verdict_group": "POSITIVE",
+      "full_verdict_cell": "SIGNIFICANT — ρ=0.677 (p<0.0001 vs perm null), but off-diagonal coupling is null (p=0.70); mechanism is within-feature persistence (H_cond φ=0.72), not cross-feature",
+      "date": "2026-04-21"
+    },
+    "H25": {
+      "hypothesis_id": "H25",
+      "verdict_token": "PARTIAL_BRIDGE",
+      "verdict_group": "SUGGESTIVE",
+      "full_verdict_cell": "PARTIAL_BRIDGE — madd↔Phi_M r=−0.32 (p<0.001) but vanishes after duration control (r=−0.09); acoustic arm null at verse level",
+      "date": "2026-04-21"
+    },
+    "H26": {
+      "hypothesis_id": "H26",
+      "verdict_token": "SKIPPED",
+      "verdict_group": "ADMIN",
+      "full_verdict_cell": "SKIPPED — variant text files not available; requires external upload",
+      "date": "—"
+    },
+    "H27": {
+      "hypothesis_id": "H27",
+      "verdict_token": "BIMODAL_MODERATE",
+      "verdict_group": "SUGGESTIVE",
+      "full_verdict_cell": "BIMODAL_MODERATE — Quran ΔBIC=124 (bimodal), but ALL controls more bimodal; falsifier fails; GMM split ≠ ≤7v cut (48% agreement)",
+      "date": "2026-04-21"
+    },
+    "H28": {
+      "hypothesis_id": "H28",
+      "verdict_token": "REDUNDANT",
+      "verdict_group": "WEAK_OR_REDUNDANT",
+      "full_verdict_cell": "REDUNDANT — Δsep = −4.17 pp (adding features HURTS); VIF low; perm p=0.93",
+      "date": "2026-04-21"
+    },
+    "H29": {
+      "hypothesis_id": "H29",
+      "verdict_token": "WEAK",
+      "verdict_group": "WEAK_OR_REDUNDANT",
+      "full_verdict_cell": "WEAK — micro axis (phi_structural) is non-discriminative (ctrl mean > Quran); only A3-SVM exceeds 70% exclusion for 2/6 controls; consensus 0–1/5",
+      "date": "2026-04-21"
+    },
+    "H30": {
+      "hypothesis_id": "H30",
+      "verdict_token": "ROBUST_ARBITRARY_CONSTANT_MINOR_LEAK",
+      "verdict_group": "WEAK_OR_REDUNDANT",
+      "full_verdict_cell": "ROBUST_ARBITRARY_CONSTANT_MINOR_LEAK — constant is P57 of ctrl pool; legacy auto-outside inflates sep by +0.36 pp",
+      "date": "2026-04-21"
+    }
+  }
+}

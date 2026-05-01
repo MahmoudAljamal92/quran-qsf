@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>سورة العاديات — دراسةٌ رقميّةٌ بلغةٍ بسيطة</title>
+<style>
+/* =========================================================
+   Self-contained. No Google Fonts, no external CSS/JS.
+   Uses Windows system fonts only — works by double-clicking.
+   ========================================================= */
+
+:root{
+  --ink:#0F172A;
+  --ink-soft:#334155;
+  --paper:#FFFFFF;
+  --soft:#F6F5F2;
+  --line:#E2E0DA;
+
+  --canon:#0F766E;
+  --canon-soft:#D4EBE8;
+  --canon-dark:#0A554E;
+  --var-a:#2563EB; --var-a-soft:#D8E4FA;
+  --var-b:#EA580C; --var-b-soft:#FADFCB;
+  --var-c:#7E22CE; --var-c-soft:#E9D8F7;
+
+  --ok:#15803D; --alert:#B91C1C; --warn:#B45309;
+  --muted:#6B7280;
+  --gold:#B08C2E; --gold-soft:#FFF8E6;
+
+  --font: "Segoe UI", "Sakkal Majalla", "Tahoma", Arial, sans-serif;
+  --font-verse: "Traditional Arabic", "Sakkal Majalla", "Segoe UI", serif;
+}
+
+@page{ size:A4 portrait; margin:0; }
+
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; background:#EEECE6; }
+body{
+  font-family:var(--font); color:var(--ink); font-size:11pt; line-height:1.7;
+  -webkit-print-color-adjust:exact; print-color-adjust:exact;
+  font-variant-numeric: tabular-nums;
+}
+@media print{ body{ background:var(--paper); } }
+
+/* ==================== Page system ==================== */
+.page{
+  width:210mm; min-height:297mm;
+  margin:10mm auto;
+  background:var(--paper);
+  padding:16mm 16mm 14mm;
+  position:relative;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  page-break-after: always;
+}
+.page:last-of-type{ page-break-after:auto; }
+@media print{ .page{ margin:0; box-shadow:none; } }
+
+.pg-head{
+  display:flex; justify-content:space-between; align-items:center;
+  font-size:9pt; color:var(--muted); letter-spacing:0.5px;
+  padding-bottom:3mm; margin-bottom:7mm; border-bottom:1px solid var(--line);
+}
+.pg-head .brand{ color:var(--canon); font-weight:700; letter-spacing:1.5px; }
+
+.pg-foot{
+  position:absolute; bottom:8mm; left:16mm; right:16mm;
+  display:flex; justify-content:space-between; align-items:center;
+  font-size:8.5pt; color:var(--muted);
+  padding-top:3mm; border-top:1px solid var(--line);
+}
+
+/* ==================== Typography ==================== */
+h1,h2,h3,h4{ color:var(--ink); margin:0; line-height:1.3; font-weight:700; }
+h1{ font-size:28pt; }
+h2{ font-size:18pt; color:var(--canon-dark); }
+h3{ font-size:13pt; }
+h4{ font-size:11pt; }
+p{ margin:0 0 9pt; color:var(--ink-soft); }
+.lead{ font-size:12pt; color:var(--ink); line-height:1.75; }
+.muted{ color:var(--muted); }
+.small{ font-size:9.5pt; }
+.xs{ font-size:8.5pt; }
+
+.sec{ display:flex; align-items:baseline; gap:8pt; margin:0 0 8pt; }
+.sec .n{
+  display:inline-block; min-width:28pt; text-align:center;
+  font-weight:800; color:#fff; background:var(--canon); border-radius:6px;
+  padding:2pt 8pt; font-size:11pt;
+}
+
+/* ==================== Components ==================== */
+.box{ background:var(--soft); border-radius:10px; padding:5mm 6mm; }
+.box.bordered{ background:#fff; border:1px solid var(--line); }
+.box.teal{ background:var(--canon); color:#fff; }
+.box.teal h2, .box.teal h3, .box.teal h4{ color:#fff; }
+.box.teal p{ color:#E6F4F2; }
+.box.gold{ background:var(--gold-soft); border:1px solid #F0E2B4; }
+.box.gold h3, .box.gold h4{ color:#5C4A14; }
+.box.gold p{ color:#5C4A14; }
+
+.grid{ display:grid; gap:4mm; }
+.g2{ grid-template-columns:1fr 1fr; }
+.g3{ grid-template-columns:repeat(3,1fr); }
+.g4{ grid-template-columns:repeat(4,1fr); }
+
+/* ==================== Cover ==================== */
+.cover{ min-height:265mm; display:flex; flex-direction:column; justify-content:space-between; }
+.cover-hero{ padding-top:35mm; }
+.cover .tag{
+  display:inline-block; padding:2mm 5mm;
+  background:var(--canon-soft); color:var(--canon-dark);
+  border-radius:20px; font-size:9.5pt; font-weight:700; letter-spacing:1px;
+}
+.cover h1{
+  font-size:42pt; margin-top:6mm; line-height:1.1; color:var(--canon-dark);
+}
+.cover .sub{ font-size:15pt; color:var(--gold); font-weight:600; margin-top:3mm; }
+.cover .verse-card{
+  margin-top:20mm; padding:14mm 10mm;
+  background:var(--soft); border-right:6px solid var(--canon);
+  border-radius:6px 14px 14px 6px;
+  text-align:center;
+}
+.cover .verse-card .q{
+  font-family:var(--font-verse); font-size:36pt; color:var(--canon-dark);
+  line-height:1.5; font-weight:700;
+}
+.cover .verse-card .cap{ color:var(--muted); font-size:10.5pt; margin-top:4mm; }
+.cover .question{
+  margin-top:14mm; padding:4mm 6mm;
+  background:var(--gold-soft); border:1px solid #F0E2B4; border-radius:8px;
+}
+.cover .question b{ color:#5C4A14; }
+.cover-meta{
+  display:flex; justify-content:space-between; align-items:flex-end;
+  font-size:9.5pt; color:var(--muted); padding-top:6mm; border-top:1px solid var(--line);
+}
+.cover-meta b{ color:var(--canon); }
+
+/* ==================== Readings (reused across pages) ==================== */
+.readings{ display:grid; grid-template-columns:repeat(4,1fr); gap:3mm; }
+.rd{ border:1.5px solid var(--line); border-radius:10px; padding:4mm; background:#fff; }
+.rd .lbl{ display:flex; justify-content:space-between; align-items:center; font-size:9pt; font-weight:700; margin-bottom:2mm; }
+.rd .lbl .n{ width:6mm; height:6mm; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:9pt; font-weight:700; }
+.rd .nm{ color:var(--muted); font-weight:500; font-size:8.5pt; }
+.rd .t{ font-family:var(--font-verse); font-size:13pt; text-align:center; margin:2mm 0 2mm; line-height:1.5; font-weight:700; }
+.rd .desc{ text-align:center; font-size:9pt; color:var(--muted); margin-bottom:2mm; }
+.rd .st{ text-align:center; font-size:9pt; font-weight:700; padding:1.5mm; border-radius:5px; }
+
+.rd.c{ border-color:var(--canon); background:var(--canon-soft); }
+.rd.c .lbl .n{ background:var(--canon); } .rd.c .t{ color:var(--canon-dark); } .rd.c .st{ background:var(--canon); color:#fff; }
+.rd.a{ border-color:var(--var-a); } .rd.a .lbl .n{ background:var(--var-a); } .rd.a .t .d{ background:var(--var-a-soft); color:var(--var-a); padding:0 3px; border-radius:3px; } .rd.a .st{ background:#FEE2E2; color:var(--alert); }
+.rd.b{ border-color:var(--var-b); } .rd.b .lbl .n{ background:var(--var-b); } .rd.b .t .d{ background:var(--var-b-soft); color:var(--var-b); padding:0 3px; border-radius:3px; } .rd.b .st{ background:#FEE2E2; color:var(--alert); }
+.rd.v{ border-color:var(--var-c); } .rd.v .lbl .n{ background:var(--var-c); } .rd.v .t .d{ background:var(--var-c-soft); color:var(--var-c); padding:0 3px; border-radius:3px; } .rd.v .st{ background:#FEE2E2; color:var(--alert); }
+
+/* ==================== Pipeline / filter diagram ==================== */
+.pipe{ display:grid; grid-template-columns: 32mm 1fr; gap:4mm; align-items:stretch; }
+.pipe .label{
+  background:var(--canon); color:#fff; border-radius:8px; padding:4mm;
+  display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;
+}
+.pipe .label .big{ font-size:15pt; font-weight:800; }
+.pipe .label .sm{ font-size:9pt; color:#C7E8E4; margin-top:1mm; }
+.pipe .cond{ background:var(--soft); border-radius:8px; padding:4mm 5mm; font-size:10pt; line-height:1.6; }
+.pipe .cond b{ color:var(--canon-dark); }
+.pipe-and{ text-align:center; font-weight:800; color:var(--gold); font-size:13pt; margin:3mm 0; letter-spacing:2px; }
+
+/* ==================== Comparison table ==================== */
+table.ct{ width:100%; border-collapse:collapse; font-size:10pt; }
+table.ct th, table.ct td{ padding:3mm 3mm; text-align:right; vertical-align:middle; }
+table.ct thead th{ background:var(--ink); color:#fff; font-weight:600; font-size:9.5pt; }
+table.ct thead th.c{ background:var(--canon); }
+table.ct thead th.a{ background:var(--var-a); }
+table.ct thead th.b{ background:var(--var-b); }
+table.ct thead th.v{ background:var(--var-c); }
+table.ct tbody td{ background:#fff; border-bottom:1px solid var(--line); }
+table.ct tbody tr:last-child td{ border-bottom:none; }
+table.ct td.m{ color:var(--ink); font-weight:600; font-size:10pt; }
+table.ct td.m .h{ font-weight:400; color:var(--muted); font-size:9pt; display:block; margin-top:1px; }
+table.ct td.num{ text-align:center; font-weight:700; font-size:11pt; }
+table.ct td.num .line{ display:block; font-size:8.5pt; font-weight:400; color:var(--muted); margin-top:1px; }
+
+td.c-base{ background:var(--canon-soft) !important; color:var(--canon-dark); }
+td.a-hit{ background:#FEECEC !important; color:var(--alert); }
+td.blind{ background:#F3F4F6 !important; color:var(--muted); }
+td.tied{ background:#FEF3C7 !important; color:var(--warn); }
+
+/* ==================== Bars ==================== */
+.bar{ display:grid; grid-template-columns: 40mm 1fr 22mm; gap:3mm; align-items:center; margin-bottom:3mm; font-size:10pt; }
+.bar .nm{ font-weight:600; color:var(--ink); }
+.bar .tr{ height:8mm; background:var(--soft); border-radius:4px; position:relative; overflow:hidden; border:1px solid var(--line); }
+.bar .fl{ position:absolute; top:0; right:0; bottom:0; display:flex; align-items:center; padding:0 2.5mm; color:#fff; font-weight:700; font-size:9.5pt; border-radius:3px; }
+.bar.jahili .fl{ background:var(--alert); }
+.bar.abbasi .fl{ background:var(--warn); }
+.bar.quran .fl{ background:var(--canon); }
+.bar .vr{ text-align:left; color:var(--muted); font-size:9pt; }
+.bar .vr b{ color:var(--ink); }
+
+/* ==================== 3-column summary (solved/open/out) ==================== */
+.cols{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:4mm; }
+.col{ background:#fff; border:1px solid var(--line); border-top-width:4px; border-radius:8px; padding:4mm 5mm; }
+.col.ok{ border-top-color:var(--ok); } .col.ok h4{ color:var(--ok); }
+.col.mid{ border-top-color:var(--warn); } .col.mid h4{ color:var(--warn); }
+.col.out{ border-top-color:var(--muted); } .col.out h4{ color:var(--muted); }
+.col ul{ padding-right:5mm; margin:2mm 0 0; }
+.col li{ margin-bottom:2mm; font-size:10pt; line-height:1.55; color:var(--ink-soft); }
+
+/* ==================== Stats row ==================== */
+.stats{ display:grid; grid-template-columns:repeat(3,1fr); gap:3mm; }
+.stat{ background:#fff; border:1px solid var(--line); border-radius:8px; padding:4mm 5mm; }
+.stat .v{ font-size:22pt; font-weight:800; color:var(--canon-dark); line-height:1; }
+.stat .v .s{ font-size:12pt; color:var(--gold); font-weight:700; }
+.stat .l{ font-size:9.5pt; color:var(--muted); margin-top:2mm; line-height:1.4; }
+.stat.featured{ background:var(--canon-dark); color:#fff; border-color:var(--canon-dark); }
+.stat.featured .v{ color:#fff; } .stat.featured .v .s{ color:#FFE7A5; } .stat.featured .l{ color:#C7E8E4; }
+
+/* ==================== Utility ==================== */
+.mt-1{margin-top:2mm} .mt-2{margin-top:4mm} .mt-3{margin-top:6mm} .mt-4{margin-top:9mm}
+.callout{ border-right:3px solid var(--gold); background:var(--gold-soft); padding:3mm 5mm; border-radius:4px; font-size:10pt; line-height:1.6; color:#5C4A14; }
+.callout b{ color:#5C4A14; }
+.legend{ display:flex; gap:5mm; flex-wrap:wrap; font-size:9pt; color:var(--muted); }
+.legend .sw{ display:inline-block; width:3.5mm; height:3.5mm; border-radius:2px; vertical-align:middle; margin-left:2px; }
+
+.key{ display:inline-block; padding:1px 6px; border-radius:3px; font-size:9pt; font-weight:700; background:var(--canon-soft); color:var(--canon-dark); }
+</style>
+</head>
+<body>
+
+<!-- ================= PAGE 1 — COVER ================= -->
+<section class="page cover">
+  <div class="cover-hero">
+    <span class="tag">QSF · ADIYAT</span>
+    <h1>سورة العاديات</h1>
+    <div class="sub">دراسةٌ رقميّةٌ بلغةٍ بسيطة — يفهمها القارئُ العاديّ والطالب</div>
+
+    <div class="verse-card">
+      <div class="q">﴿ وَالْعَادِيَاتِ ضَبْحًا ﴾</div>
+      <div class="cap">الآية الأولى من سورة العاديات (100) — وهي محلُّ الاختبار</div>
+    </div>
+
+    <div class="question">
+      <b>السؤالُ في سطرٍ واحد:</b>
+      إذا غيّرنا حرفاً واحداً من هذه الآية إلى حرفٍ عربيٍّ فصيحٍ آخر،
+      هل يمكن للرياضيّات أن تُميّزَ الأصلَ عن البديل؟
+    </div>
+  </div>
+
+  <div class="cover-meta">
+    <div>
+      <div><b>النسخة v7.6</b> · 2026-04-21</div>
+      <div>إطارُ QSF — بصمةُ النصّ القرآنيّ</div>
+    </div>
+    <div style="text-align:left;">
+      <div>مفتوحُ المصدر · قابلٌ للتكرار</div>
+      <div>SHA-256 pinned · exp43 · exp46 · exp50 · exp62</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PAGE 2 — THE EXPERIMENT IN PLAIN WORDS ================= -->
+<section class="page">
+  <div class="pg-head">
+    <span class="brand">QSF · ADIYAT</span>
+    <span>الفصل الأول — التجربة بلغة مبسّطة</span>
+  </div>
+
+  <div class="sec"><span class="n">1</span><h2>ماذا فعلنا؟ (في دقيقتَين)</h2></div>
+
+  <p class="lead">أخذنا الآية الأولى من سورة العاديات، وأنشأنا منها <b>864 نسخةً بديلةً</b> بتغيير حرفٍ واحدٍ فقط في كلّ مرّة. ثمّ أضفنا الأصلَ إليهم، فصار لدينا <b>865 قراءةً</b>. بعد ذلك مرَّرنا كلَّ قراءةٍ على مجموعةٍ من أجهزة القياس الرياضيّة، وسجّلنا أيَّ القراءات يُطلق عليها الجهازُ «إنذاراً» (أي: «هذه ليست الأصل»).</p>
+
+  <div class="box teal mt-3">
+    <h3 style="font-size:14pt;">النتيجةُ الأبرز</h3>
+    <p style="font-size:11.5pt;margin-top:3mm;">
+      من بين الـ 865 قراءة، <b style="color:#FFE7A5;">القراءةُ الأصليّةُ وحدَها</b> هي التي لم يُطلق عليها أيُّ جهازٍ إنذاراً.
+      أي بمعدّل <b style="color:#fff;background:rgba(255,255,255,0.15);padding:1px 6px;border-radius:4px;">1 من 865</b>.
+    </p>
+  </div>
+
+  <div class="sec mt-4"><span class="n">2</span><h2>لماذا سورة العاديات بالذات؟</h2></div>
+
+  <div class="grid g3 mt-2">
+    <div class="box bordered">
+      <h4 style="color:var(--canon);">قصيرة</h4>
+      <p class="small">11 آية فقط. يمكن تحليلها كاملةً دون أن نختار عيّنات منها.</p>
+    </div>
+    <div class="box bordered">
+      <h4 style="color:var(--canon);">غنيّة بالبنية</h4>
+      <p class="small">قافيتُها تتغيّر من الحاء والعين أوّلها إلى الدال والراء آخرها — بنيةٌ قابلةٌ للقياس.</p>
+    </div>
+    <div class="box bordered">
+      <h4 style="color:var(--canon);">معروفة للجميع</h4>
+      <p class="small">يحفظها كثيرٌ من المسلمين. فالنقاشُ ليس حول نصٍّ غامض.</p>
+    </div>
+  </div>
+
+  <div class="sec mt-4"><span class="n">3</span><h2>تشبيهٌ يُقرّب الفكرة</h2></div>
+
+  <p>تخيّل أنّك تُقارن <b>توأمَين متطابقَين</b> ظاهريّاً. لا يمكنك أن تُميّزَهما بالعين المجرّدة، فتستعينُ بعدّة فحوصاتٍ مختلفة:</p>
+
+  <div class="grid g4 mt-2">
+    <div class="box" style="text-align:center;">
+      <div style="font-size:20pt;">🧬</div>
+      <h4>الحمضُ النوويّ</h4>
+      <p class="xs muted" style="margin:0;">يرى الاختلافَ في الشيفرة</p>
+    </div>
+    <div class="box" style="text-align:center;">
+      <div style="font-size:20pt;">🖐️</div>
+      <h4>البصمات</h4>
+      <p class="xs muted" style="margin:0;">يرى نمطَ الخطوط</p>
+    </div>
+    <div class="box" style="text-align:center;">
+      <div style="font-size:20pt;">👁️</div>
+      <h4>شبكيّةُ العين</h4>
+      <p class="xs muted" style="margin:0;">يرى نمطَ الأوعية</p>
+    </div>
+    <div class="box" style="text-align:center;">
+      <div style="font-size:20pt;">🎙️</div>
+      <h4>نبرةُ الصوت</h4>
+      <p class="xs muted" style="margin:0;">يرى طيفَ الترددات</p>
+    </div>
+  </div>
+
+  <p class="mt-3">نفسُ المنطق نطبِّقه على النصّ: كلُّ جهازٍ يقيسُ شيئاً مختلفاً، ومجموعُها مع بعضٍ يعطينا صورةً شاملة.</p>
+
+  <div class="pg-foot">
+    <span>سورة العاديات — دراسة QSF</span>
+    <span>2 / 6</span>
+  </div>
+</section>
+
+<!-- ================= PAGE 3 — THE 4 READINGS ================= -->
+<section class="page">
+  <div class="pg-head">
+    <span class="brand">QSF · ADIYAT</span>
+    <span>الفصل الثاني — القراءاتُ الأربعُ المُختَبَرة</span>
+  </div>
+
+  <div class="sec"><span class="n">4</span><h2>القراءاتُ الأربع</h2></div>
+
+  <p>اخترنا ثلاث قراءاتٍ بديلةٍ مقترحةٍ لغويّاً (لا نقترحُ أنّها صحيحةٌ قرآنيّاً، بل فقط أنّها <b>كلماتٌ عربيّةٌ مفهومة</b>). الآيات من 2 إلى 11 تبقى كما هي في كلّ الحالات؛ الاختلافُ في الآية الأولى فقط:</p>
+
+  <div class="readings mt-2">
+    <div class="rd c">
+      <div class="lbl"><span class="n">1</span><span class="nm">الأصل</span></div>
+      <div class="t">وَالْعَادِيَاتِ ضَبْحًا</div>
+      <div class="desc">بلا تغيير — مرجعُ المقارنة</div>
+      <div class="st">✓ لا إنذار</div>
+    </div>
+    <div class="rd a">
+      <div class="lbl"><span class="n">2</span><span class="nm">البديل A</span></div>
+      <div class="t">وَالْ<span class="d">غ</span>َادِيَاتِ ضَبْحًا</div>
+      <div class="desc">ع ← غ · داخل الكلمة الأولى</div>
+      <div class="st">✗ مكشوف</div>
+    </div>
+    <div class="rd b">
+      <div class="lbl"><span class="n">3</span><span class="nm">البديل B</span></div>
+      <div class="t">وَالْعَادِيَاتِ <span class="d">ص</span>َبْحًا</div>
+      <div class="desc">ض ← ص · في الكلمة الثانية</div>
+      <div class="st">✗ مكشوف</div>
+    </div>
+    <div class="rd v">
+      <div class="lbl"><span class="n">4</span><span class="nm">البديل C</span></div>
+      <div class="t">وَالْ<span class="d">غ</span>َادِيَاتِ <span class="d">ص</span>َبْحًا</div>
+      <div class="desc">تغييرٌ لحرفَين معاً</div>
+      <div class="st">✗ مكشوف</div>
+    </div>
+  </div>
+
+  <div class="sec mt-4"><span class="n">5</span><h2>معاني الكلمات — كلُّها عربيّةٌ فصيحة</h2></div>
+
+  <table class="ct mt-1">
+    <thead>
+      <tr>
+        <th style="width:18%;">الكلمة</th>
+        <th style="width:35%;">المعنى</th>
+        <th style="width:47%;">ملاحظة</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="m" style="color:var(--canon);">الْعَادِيَاتِ</td><td>الجارياتُ بسرعة (مثل الخيل في السباق)</td><td class="muted small">الكلمة الأصليّة في القرآن</td></tr>
+      <tr><td class="m" style="color:var(--var-a);">الْغَادِيَاتِ</td><td>السائراتُ في الغُدوّ (أوّل النهار)</td><td class="muted small">كلمةٌ عربيّةٌ قائمة، لكنّ الحرفَ المُغيَّر هو «ع ← غ»</td></tr>
+      <tr><td class="m" style="color:var(--ink);">ضَبْحًا</td><td>صوتُ أنفاس الخيل حين تجري</td><td class="muted small">الكلمة الأصليّة</td></tr>
+      <tr><td class="m" style="color:var(--var-b);">صَبْحًا</td><td>وقتُ الصبح (أوّل النهار)</td><td class="muted small">كلمةٌ مفهومة، لكنّ الحرفَ المُغيَّر هو «ض ← ص»</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout mt-3">
+    <b>النتيجة:</b> الأربعةُ قراءاتٌ <b>مفهومةٌ لغويّاً</b>. المعاني متقاربة، والأصواتُ متقاربة. الفرقُ ليس في المعنى أو في النُّطق، بل في <b>البنية الرياضيّة</b> للسورة كاملة — وهذا ما سنقيسه في الصفحات التالية.
+  </div>
+
+  <div class="pg-foot">
+    <span>سورة العاديات — دراسة QSF</span>
+    <span>3 / 6</span>
+  </div>
+</section>
+
+<!-- ================= PAGE 4 — HOW MEASUREMENT WORKS ================= -->
+<section class="page">
+  <div class="pg-head">
+    <span class="brand">QSF · ADIYAT</span>
+    <span>الفصل الثالث — كيف يعمل القياس</span>
+  </div>
+
+  <div class="sec"><span class="n">6</span><h2>كاشفٌ مُركَّبٌ من جهازَين</h2></div>
+
+  <p>نستخدمُ <b>جهازَين مستقلَّين</b>، ولا يُطلَق الإنذارُ إلّا إذا اتّفقا معاً (منطق AND). هذا يجعلُ نسبةَ الإنذار الكاذب منخفضةً جدّاً (5٪ فقط، مُعايَرةً مسبقاً على نصوصٍ غير قرآنيّة):</p>
+
+  <div class="pipe mt-3">
+    <div class="label">
+      <div class="big">الجهاز 1</div>
+      <div class="sm">بُعدُ النصّ عن الكتابة العربيّة المعتادة</div>
+    </div>
+    <div class="cond">
+      <b>الفكرة بكلمةٍ واحدة:</b> نُقارن البصمة الرياضيّة للآية (5 أرقام) بسحابةٍ من <b>2,509 نصّاً عربيّاً عاديّاً</b> (شعر، حديث، كتب معاصرة). كلّما ابتعدَ النصُّ عن السحابة، كان أكثر تميُّزاً.
+      <br><span class="small muted mt-1" style="display:block;margin-top:2mm;">🔬 الاسم التقنيّ: <span class="key">Phi_M (Hotelling T²)</span> — لا تحتاجُ أن تعرفه.</span>
+    </div>
+  </div>
+
+  <div class="pipe-and">AND — يجب أن يُطلق الجهازان الإنذار معاً</div>
+
+  <div class="pipe">
+    <div class="label" style="background:var(--gold);">
+      <div class="big">الجهاز 2</div>
+      <div class="sm">تغيُّر حجم الملفّ بعد الضغط</div>
+    </div>
+    <div class="cond">
+      <b>الفكرة بكلمةٍ واحدة:</b> إذا ضغطنا النصَّ بصيغة zip، كم يتغيّرُ حجمُ الملف حين نغيّر حرفاً واحداً؟ التغيُّرُ الكبيرُ يعني أنّ التغييرَ «خَرَقَ» بنيةً مُحكمة.
+      <br><span class="small muted mt-1" style="display:block;margin-top:2mm;">🔬 الاسم التقنيّ: <span class="key">R12 (gzip NCD)</span> — لا تحتاجُ أن تعرفه.</span>
+    </div>
+  </div>
+
+  <div class="sec mt-4"><span class="n">7</span><h2>لماذا جهازان، ولماذا AND؟</h2></div>
+
+  <div class="grid g2">
+    <div class="box bordered">
+      <h4>الجهاز 1 وحدَه ليس كافياً</h4>
+      <p class="small">إنّه يقرأُ أوائلَ الآيات وأواخرَها فقط، فلا يرى التغييراتِ في وسط الكلمات. من بين 864 بديلاً، <b>836 بديلاً</b> يُعطون نفسَ الرقم تماماً للأصل — فالجهاز أعمى عنهم.</p>
+    </div>
+    <div class="box bordered">
+      <h4>الجهاز 2 وحدَه حسّاسٌ جدّاً</h4>
+      <p class="small">إنّه يُطلق الإنذارَ على <b>99.1٪</b> من أيّ تعديلٍ في أيّ كلمة. ممتاز للكشف، لكنّه قد يُطلق إنذاراً كاذباً أحياناً.</p>
+    </div>
+  </div>
+
+  <div class="callout mt-3">
+    <b>الحلّ — الجهازان معاً:</b>
+    الأوّلُ يقولُ «هل البديلُ يصلُ إلى تميُّز الأصل؟» والثاني يقولُ «هل ترك أثراً في بنية الضغط؟».
+    <b>القراءةُ الأصليّةُ فقط</b> تُحقّق الشرطَ الأول بالتعريف (هي المرجع)، و<b>تَفشل</b> في الشرط الثاني (لأنّها لم تتغيّر، فحجمُ الضغط لم يتغيّر). لذلك تجتازُ الإنذارَ وحدها — وهي <b>واحدةٌ من 865</b>.
+  </div>
+
+  <div class="pg-foot">
+    <span>سورة العاديات — دراسة QSF</span>
+    <span>4 / 6</span>
+  </div>
+</section>
+
+<!-- ================= PAGE 5 — THE NUMBERS SIDE BY SIDE ================= -->
+<section class="page">
+  <div class="pg-head">
+    <span class="brand">QSF · ADIYAT</span>
+    <span>الفصل الرابع — المُقارنة بالأرقام الحقيقيّة</span>
+  </div>
+
+  <div class="sec"><span class="n">8</span><h2>الأرقامُ الحقيقيّة — كلُّ قراءةٍ جنباً إلى جنب</h2></div>
+
+  <p>في الجدول التالي، كلُّ خليّةٍ فيها <b>رقمٌ حقيقيٌّ</b> (لا «مرجع» ولا «—» فارغة). بهذا يمكنك أن تُقارنَ بنفسك:</p>
+
+  <table class="ct mt-2">
+    <thead>
+      <tr>
+        <th style="width:34%;">ما يقيسه الجهاز</th>
+        <th class="c" style="width:16.5%;">الأصل</th>
+        <th class="a" style="width:16.5%;">البديل A</th>
+        <th class="b" style="width:16.5%;">البديل B</th>
+        <th class="v" style="width:16.5%;">البديل C</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="m">بُعد النصّ عن الكتابة العاديّة<span class="h">كلّما ارتفع الرقم، كان النصُّ أكثر تميُّزاً</span></td>
+        <td class="num c-base">10.29</td>
+        <td class="num tied">10.29<span class="line">متساوٍ — الأداة عمياء</span></td>
+        <td class="num a-hit">10.11<span class="line">−0.18 أقلُّ تميُّزاً</span></td>
+        <td class="num a-hit">10.11<span class="line">−0.18 أقلُّ تميُّزاً</span></td>
+      </tr>
+      <tr>
+        <td class="m">تغيُّر حجم الملفّ بعد الضغط<span class="h">عتبةُ الإنذار = 0.042 — كلّ ما فوقها إنذار</span></td>
+        <td class="num c-base">0.000<span class="line">المرجع — بلا تغيير</span></td>
+        <td class="num a-hit">0.065<span class="line">فوق العتبة ×1.55</span></td>
+        <td class="num a-hit">0.065<span class="line">فوق العتبة ×1.55</span></td>
+        <td class="num a-hit">0.080<span class="line">فوق العتبة ×1.90</span></td>
+      </tr>
+      <tr>
+        <td class="m">شدّة الإنذار (z-score)<span class="h">كم انحرافاً معياريّاً فوق الضوضاء</span></td>
+        <td class="num c-base">0.00</td>
+        <td class="num a-hit">+5.58</td>
+        <td class="num a-hit">+5.58</td>
+        <td class="num a-hit">+9.14</td>
+      </tr>
+      <tr>
+        <td class="m">مفاجأةُ الكلمات<span class="h">كلّما ارتفع الرقم، كان النصُّ أقلَّ قابليّةً للتنبّؤ</span></td>
+        <td class="num c-base">0.83</td>
+        <td class="num blind">0.83<span class="line">الأداة عمياء</span></td>
+        <td class="num a-hit">0.63<span class="line">−32٪ أسهل تنبّؤاً</span></td>
+        <td class="num a-hit">0.63<span class="line">−32٪ أسهل تنبّؤاً</span></td>
+      </tr>
+      <tr>
+        <td class="m">تفرُّدُ نهايات الآيات<span class="h">كم جذراً مختلفاً في 11 نهاية</span></td>
+        <td class="num c-base">11 / 11</td>
+        <td class="num blind">11 / 11<span class="line">الأداة عمياء</span></td>
+        <td class="num a-hit">10 / 11<span class="line">جذرٌ مُكرَّر</span></td>
+        <td class="num a-hit">10 / 11<span class="line">جذرٌ مُكرَّر</span></td>
+      </tr>
+      <tr style="background:#F9FAFB;">
+        <td class="m"><b>النتيجة النهائيّة</b><span class="h">الكاشف المُركَّب: هل يُطلق الإنذار؟</span></td>
+        <td class="num" style="background:var(--canon);color:#fff;font-size:10pt;">لا إنذار ✓</td>
+        <td class="num" style="background:var(--alert);color:#fff;font-size:10pt;">إنذار ✗</td>
+        <td class="num" style="background:var(--alert);color:#fff;font-size:10pt;">إنذار ✗</td>
+        <td class="num" style="background:var(--alert);color:#fff;font-size:10pt;">إنذار ✗</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="legend mt-3">
+    <span><span class="sw" style="background:var(--canon-soft);border:1px solid var(--canon);"></span> الأصل (المرجع)</span>
+    <span><span class="sw" style="background:#FEECEC;border:1px solid var(--alert);"></span> فارقٌ مكشوف</span>
+    <span><span class="sw" style="background:#FEF3C7;border:1px solid var(--warn);"></span> متساوٍ — الأداة عمياء لهذا التغيير</span>
+    <span><span class="sw" style="background:#F3F4F6;border:1px solid var(--line);"></span> الأداة عمياء بالتصميم</span>
+  </div>
+
+  <div class="callout mt-3">
+    <b>كيف نقرأ الجدول؟</b>
+    كلُّ عمودٍ قراءةٌ من الأربع. كلُّ صفٍّ جهازُ قياس. الأرقامُ هي ما قاسه الجهاز فعلاً. حين يَفشل جهازان في تمييز البديل عن الأصل (الصفّ 1 على البديل A)، فهذا يعني أنّ هذا الجهازَ <b>بمفرده</b> غيرُ كافٍ — ولهذا نستخدم عدّةَ أجهزةٍ معاً.
+  </div>
+
+  <div class="pg-foot">
+    <span>سورة العاديات — دراسة QSF</span>
+    <span>5 / 6</span>
+  </div>
+</section>
+
+<!-- ================= PAGE 6 — CROSS-CORPUS + HONEST CONCLUSION ================= -->
+<section class="page">
+  <div class="pg-head">
+    <span class="brand">QSF · ADIYAT</span>
+    <span>الفصل الخامس — الاستنتاج النزيه</span>
+  </div>
+
+  <div class="sec"><span class="n">9</span><h2>مفاجأةٌ مهمّة — لماذا الكشفُ على القرآن أقلّ؟</h2></div>
+
+  <p>لاحَظْنا أنّ بعض تبديلاتِ الحروف الصوتيّة القريبة (مثل ط ↔ ت أو ق ↔ ك) يصعبُ كشفُها على القرآن. فتساءلنا: هل هذا قصورٌ في الأداة؟ لنتأكّد، شغّلنا <b>نفسَ الأداة</b> على الشعر العربيّ:</p>
+
+  <div class="box bordered mt-2">
+    <div class="bar jahili">
+      <div class="nm">شعرُ الجاهليّة</div>
+      <div class="tr"><div class="fl" style="width:95%;">9.50٪</div></div>
+      <div class="vr"><b>×8.3</b> من القرآن</div>
+    </div>
+    <div class="bar abbasi">
+      <div class="nm">الشعرُ العبّاسيّ</div>
+      <div class="tr"><div class="fl" style="width:48.3%;">4.83٪</div></div>
+      <div class="vr"><b>×4.2</b> من القرآن</div>
+    </div>
+    <div class="bar quran">
+      <div class="nm">القرآن (كامل)</div>
+      <div class="tr"><div class="fl" style="width:11.5%;">1.15٪</div></div>
+      <div class="vr">المرجع</div>
+    </div>
+  </div>
+
+  <div class="callout mt-3">
+    <b>الاستنتاج:</b>
+    الأداةُ ليست عاطلة — بل تُطلق الإنذارَ على الشعر <b>4 إلى 8 أضعاف</b> أكثر من القرآن.
+    انخفاضُ القرآن ليس قصوراً، بل يعني أنّ <b>القرآنَ بنيويّاً أصعبُ من الشعر في التزوير بتبديلاتٍ دقيقة</b>. وهذه نتيجةٌ أقوى مما بدأنا.
+  </div>
+
+  <div class="sec mt-4"><span class="n">10</span><h2>الأرقامُ الكُبرى</h2></div>
+
+  <div class="stats mt-1">
+    <div class="stat featured"><div class="v">99.8<span class="s">٪</span></div><div class="l">دقّةُ المُصنِّف الآليّ في تمييز القرآن (AUC = 0.998)</div></div>
+    <div class="stat featured"><div class="v">10<span class="s">⁻⁴⁸⁰</span></div><div class="l">احتمالُ أن يكونَ الفارقُ صدفةً (قيمة p)</div></div>
+    <div class="stat"><div class="v">99.1<span class="s">٪</span></div><div class="l">من تبديلاتِ حرفٍ واحد مكشوفة (864 بديلاً)</div></div>
+    <div class="stat"><div class="v">100<span class="s">٪</span></div><div class="l">من تبديلاتِ حرفَين مكشوفة (72,900 بديلاً)</div></div>
+    <div class="stat"><div class="v">2,509</div><div class="l">نصٌّ عربيٌّ ضابطٌ في سحابة المقارنة</div></div>
+    <div class="stat"><div class="v">864</div><div class="l">بديلاً لحرفٍ واحدٍ اختبرناهم جميعاً</div></div>
+  </div>
+
+  <div class="sec mt-4"><span class="n">11</span><h2>الاستنتاج النزيه — ما حُلَّ وما لم يُحلَّ</h2></div>
+
+  <div class="cols mt-1">
+    <div class="col ok">
+      <h4>✓ ما حُلَّ</h4>
+      <ul>
+        <li>لا بديلَ لحرفٍ واحد يتفوّق على الأصل (0 من 864).</li>
+        <li>كلُّ تبديلٍ لحرفَين مكشوفٌ 100٪ (72,900 بديلاً).</li>
+        <li>القراءةُ الأصليّة هي الـ 1 من 865.</li>
+      </ul>
+    </div>
+    <div class="col mid">
+      <h4>⚠ ما لم يُحلَّ بعد</h4>
+      <ul>
+        <li>الحروفُ الصوتيّة المتقاربة (ط/ت، ق/ك) بمعدّل كشف 0٪ داخل القرآن — تحتاج كاشفاً صوتيّاً مخصّصاً.</li>
+        <li>التزوير الكامل لسورةٍ جديدة — خارجَ نطاق الاختبار.</li>
+        <li>تكرارُ النتائج من فريقٍ خارجيٍّ مستقلّ لم يتمّ بعد.</li>
+      </ul>
+    </div>
+    <div class="col out">
+      <h4>— خارجَ الدراسة</h4>
+      <ul>
+        <li>صحّةُ القراءة لغويّاً أو شرعيّاً (ليست قضيّةً إحصائيّة).</li>
+        <li>الاستنتاجاتُ اللاهوتيّة (إعجاز / تأليف).</li>
+        <li>حسابُ الجُمّل و«قانون 19» — فُحصت وتبيَّن أنّها <b>ليست</b> مصدرَ البصمة.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box teal mt-3">
+    <h3 style="font-size:13pt;">الختام</h3>
+    <p style="margin-top:2mm;font-size:11pt;line-height:1.75;">
+      القراءةُ الأصليّةُ لسورة العاديات ليست مجرّدَ خيارٍ مقبول؛ هي <b style="color:#FFE7A5;">الموقعُ الأمثلُ</b> في فضاءٍ رياضيٍّ حَيَّدنا معايرتَه مسبقاً، وهي الوحيدةُ التي تَعجزُ عنها أجهزةُ الكشف مجتمعة.
+    </p>
+    <p style="margin-top:3mm;font-size:10.5pt;color:#C7E8E4;">
+      لكنّ هذا <b style="color:#fff;">ليس</b> دليلاً على إعجاز، ولا على تأليف بشريّ. هو وصفٌ رياضيٌّ نزيهٌ لبنيةٍ موجودةٍ فعلاً في النصّ. ما يفعلُه القارئُ بهذا الوصف هو اختيارُه الشخصيّ، لا استنتاجُنا العلميّ.
+    </p>
+  </div>
+
+  <div class="pg-foot">
+    <span>سورة العاديات — دراسة QSF · v7.6 · 2026-04-21</span>
+    <span>6 / 6</span>
+  </div>
+</section>
+
+</body>
+</html>

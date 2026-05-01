@@ -1,0 +1,152 @@
+{
+  "deposit_name": "QSF v7.3 Results-Lock Deposit (post-hoc code-state lock)",
+  "built_at": "2026-04-20T16:34:15",
+  "n_files": 26,
+  "total_bytes": 752091,
+  "zip_file": "qsf_v73_deposit.zip",
+  "zip_sha256": "794fbe4b32bc79e29742032788d94c33f39d247711922b26240a2a5601295f0f",
+  "overall_sha256": "2f90a87a0fa0ac42057dbd6785e591355b075a14ab0bfd52cc49d396ca7f0205",
+  "overall_sha256_purpose": "One-line fingerprint of the deposit. Computed as SHA-256(sorted '<rel_path>|<sha256>' entries, newline-joined). Quote this in any external reference.",
+  "files": [
+    {
+      "rel_path": "arxiv_submission/preregistration_v73_addendum.md",
+      "sha256": "caf956f442ebce463063366287cf964cf66e1eebb42671294a9f4c4cbb9ba362",
+      "size_bytes": 9775
+    },
+    {
+      "rel_path": "results/integrity/preregistration.json",
+      "sha256": "d9cf2b3c72a689add0d13cc4a0c1aa38114ef1ee703b596d5e989fccb685c08a",
+      "size_bytes": 2633
+    },
+    {
+      "rel_path": "experiments/_lib.py",
+      "sha256": "cc310a84e333eae0638d2a45eda8dccf88617ff0ad46f2cc24e16dff2d961220",
+      "size_bytes": 10725
+    },
+    {
+      "rel_path": "experiments/_ultimate2_helpers.py",
+      "sha256": "44fc406ae42f285cd59279517af9a354e6f98c188ff7a24162af025516632fc6",
+      "size_bytes": 28530
+    },
+    {
+      "rel_path": "experiments/exp37_lpep/run.py",
+      "sha256": "7b37a37b7d8b4d4df83b06e58e1c5ceb5c1ee3b998cbe1d857a1256fb1b3f916",
+      "size_bytes": 22031
+    },
+    {
+      "rel_path": "experiments/exp38_ccas_normalised/run.py",
+      "sha256": "18bf2cf71c36011ecc525c923c98b93b099c1749ce0cf7f5fcaaece17705e0fc",
+      "size_bytes": 17493
+    },
+    {
+      "rel_path": "experiments/exp41_gzip_formalised/run.py",
+      "sha256": "b96f5de991b7dcc90289cbaf74d5b39964d65dfd8efbeff1becef6102fca4585",
+      "size_bytes": 20133
+    },
+    {
+      "rel_path": "experiments/exp41_gzip_formalised/length_audit.py",
+      "sha256": "87c62f03d885beb8699211b7be1efa1f7fc8c8855449890dbc4ee1c563599da9",
+      "size_bytes": 11864
+    },
+    {
+      "rel_path": "experiments/exp43_adiyat_864_compound/run.py",
+      "sha256": "90d2c46d8bafd5f762e75c30b8ae30dc6df3bd6c8f40a3742b71939ef05e0ba5",
+      "size_bytes": 16886
+    },
+    {
+      "rel_path": "experiments/exp44_F6_spectrum/run.py",
+      "sha256": "5d6c9e4c08076f507bfaea2768513095a140e2be2b3debf04a51e69048b319a7",
+      "size_bytes": 11139
+    },
+    {
+      "rel_path": "src/features.py",
+      "sha256": "c4866836e070319ebdca6481598ed033798b8d5d3e7ea33f2ed4c65a12114d74",
+      "size_bytes": 10606
+    },
+    {
+      "rel_path": "src/roots.py",
+      "sha256": "722ea2e2d28f6f1315e3c8552c0cb09270e16ce1e06230292ed83fcedcb5b478",
+      "size_bytes": 8195
+    },
+    {
+      "rel_path": "src/raw_loader.py",
+      "sha256": "635941921caa9f1f4c3d1d61f9eb59d2501046b030776652638b7c628956e4f8",
+      "size_bytes": 19762
+    },
+    {
+      "rel_path": "results/experiments/exp37_lpep/exp37_lpep.json",
+      "sha256": "57f733c9e3a647732741500858ad6f353328ae42e3037a00c835b3c303cd1f8b",
+      "size_bytes": 486812
+    },
+    {
+      "rel_path": "results/experiments/exp38_ccas_normalised/exp38_ccas_normalised.json",
+      "sha256": "483ee15044551ded8939686dad72ab4c412c47708fa28c6c7294090fa0222727",
+      "size_bytes": 2199
+    },
+    {
+      "rel_path": "results/experiments/exp41_gzip_formalised/exp41_gzip_formalised.json",
+      "sha256": "e47e057c2bffc67e90fbcc76165295da70adce103c3f8184053d6b11c5c14b4d",
+      "size_bytes": 3378
+    },
+    {
+      "rel_path": "results/experiments/exp41_gzip_formalised/length_audit.json",
+      "sha256": "735816c74afd92a63c83f499ad4c5b975e21181b6aa097fe9f0088758bccdb3e",
+      "size_bytes": 4321
+    },
+    {
+      "rel_path": "results/experiments/exp43_adiyat_864_compound/exp43_adiyat_864_compound.json",
+      "sha256": "22fc9e9ef4c10dd41e5a0eb0c0045574ae0de2e3543957ed8e18ed1c58ac2839",
+      "size_bytes": 3654
+    },
+    {
+      "rel_path": "results/experiments/exp44_F6_spectrum/exp44_F6_spectrum.json",
+      "sha256": "7062dff4a8b3c22128add5f61000a404d3439ad690f2a3ff256d866bd83bec73",
+      "size_bytes": 23041
+    },
+    {
+      "rel_path": "results/integrity/results_lock.json",
+      "sha256": "a72389e9becf9694ec3aee1d631050619025aec22341d1080ca0276dbab8122d",
+      "size_bytes": 10994
+    },
+    {
+      "rel_path": "results/integrity/corpus_lock.json",
+      "sha256": "41a05a3f26da3b86d6e5bd575f77855e73deec1980b869bf37fc77d6de00dfc5",
+      "size_bytes": 3402
+    },
+    {
+      "rel_path": "results/integrity/code_lock.json",
+      "sha256": "3833480aa869860b73f213f9ea5cf174204425d41a56eea04b82308724ce3636",
+      "size_bytes": 1246
+    },
+    {
+      "rel_path": "results/checkpoints/_manifest.json",
+      "sha256": "f9bdd0cc8cded92d51b4af0214bda834acb96d7eda5923a9d7c0b39565df6a5d",
+      "size_bytes": 9655
+    },
+    {
+      "rel_path": "tools/qsf_score.py",
+      "sha256": "1da8e3c2c51527536d18277425521a6aa7e021082eec8aaf3475d3c4849c9711",
+      "size_bytes": 5126
+    },
+    {
+      "rel_path": "tools/qsf_score_app.py",
+      "sha256": "0303ac876e33b697f56e2538f62ad1cd2318fa94e78d55483d3d7e90f9c48d35",
+      "size_bytes": 5658
+    },
+    {
+      "rel_path": "tools/README.md",
+      "sha256": "4fd716e41a9c35da418aa1fb3e2d0a1c087b44359c73c22b780cfc8cb165cda8",
+      "size_bytes": 2833
+    }
+  ],
+  "missing_files": [],
+  "osf_upload_instructions": [
+    "1. Create an OSF project at osf.io (Public visibility).",
+    "2. In that project's Storage tab, upload the two files below:",
+    "     - qsf_v73_deposit.zip",
+    "     - osf_deposit_manifest.json",
+    "3. Tag the OSF project with: QSF, stylometry, Arabic, Quran, post-hoc-lock",
+    "4. Record the generated OSF DOI; quote alongside the 'overall_sha256' in any publication.",
+    "5. Do NOT modify the files after upload. If a post-upload change is needed, version it as a new OSF storage entry."
+  ]
+}

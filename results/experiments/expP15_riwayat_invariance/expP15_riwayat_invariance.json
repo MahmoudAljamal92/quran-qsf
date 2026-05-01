@@ -1,0 +1,121 @@
+{
+  "experiment": "expP15_riwayat_invariance",
+  "prereg_sha256": "16f4f0ff0d9a3e6137628ab3801855a172eda02bac9cf351219d2dc03186da87",
+  "download_log": {
+    "warsh": {
+      "status": "cached",
+      "url": null,
+      "size": 1426727,
+      "sha256": "b5a8ad018e68a2c641a1acc08fa1c1bb9b0828ed136fbbbe19a89b6ca2828b7f",
+      "sha256_expected": "b5a8ad018e68a2c641a1acc08fa1c1bb9b0828ed136fbbbe19a89b6ca2828b7f",
+      "sha256_match": true
+    },
+    "qalun": {
+      "status": "cached",
+      "url": null,
+      "size": 1421320,
+      "sha256": "183c0a6c82ef14e2950ac0200baaedfb0c41c7522fd004f34aa95369b0413a84",
+      "sha256_expected": "183c0a6c82ef14e2950ac0200baaedfb0c41c7522fd004f34aa95369b0413a84",
+      "sha256_match": true
+    },
+    "duri": {
+      "status": "cached",
+      "url": null,
+      "size": 1423528,
+      "sha256": "4cae9123aa739310f38a8c9399d737755242a353476675989fe5f77e179e07c8",
+      "sha256_expected": "4cae9123aa739310f38a8c9399d737755242a353476675989fe5f77e179e07c8",
+      "sha256_match": true
+    },
+    "shuba": {
+      "status": "cached",
+      "url": null,
+      "size": 1375806,
+      "sha256": "c64677fcbdfb239cb854f1d514020a8970833805c56951c40696bb9e1d82b8a5",
+      "sha256_expected": "c64677fcbdfb239cb854f1d514020a8970833805c56951c40696bb9e1d82b8a5",
+      "sha256_match": true
+    },
+    "sousi": {
+      "status": "cached",
+      "url": null,
+      "size": 1414939,
+      "sha256": "045ded25e270ca5f333a588ffc79db43fbe514551185765b32dfc708567e5985",
+      "sha256_expected": "045ded25e270ca5f333a588ffc79db43fbe514551185765b32dfc708567e5985",
+      "sha256_match": true
+    }
+  },
+  "hafs_baseline": {
+    "T2": 3685.451465159369,
+    "EL_mean": 0.7062633038455213,
+    "n_q": 114,
+    "n_c": 4719
+  },
+  "rows": {
+    "warsh": {
+      "status": "OK",
+      "n_surahs": 114,
+      "T2": 3297.0013544769326,
+      "rel_T2_drift": -0.10540095680398243,
+      "EL_mean": 0.682633756289409,
+      "rel_EL_drift": -0.033457136208906946,
+      "auc_el": 0.9726674176434942,
+      "cond_T2": false,
+      "cond_EL": false,
+      "cond_AUC": true,
+      "n_conditions_met": 1
+    },
+    "qalun": {
+      "status": "OK",
+      "n_surahs": 114,
+      "T2": 3450.309691286726,
+      "rel_T2_drift": -0.06380270533897127,
+      "EL_mean": 0.6940698155289693,
+      "rel_EL_drift": -0.017264790978321908,
+      "auc_el": 0.9729982935724563,
+      "cond_T2": false,
+      "cond_EL": true,
+      "cond_AUC": true,
+      "n_conditions_met": 2
+    },
+    "duri": {
+      "status": "OK",
+      "n_surahs": 114,
+      "T2": 3628.2119927786825,
+      "rel_T2_drift": -0.015531196902687009,
+      "EL_mean": 0.6969490290277325,
+      "rel_EL_drift": -0.013188105295962076,
+      "auc_el": 0.9805889219764818,
+      "cond_T2": true,
+      "cond_EL": true,
+      "cond_AUC": true,
+      "n_conditions_met": 3
+    },
+    "shuba": {
+      "status": "OK",
+      "n_surahs": 115,
+      "T2": 3809.239414546427,
+      "rel_T2_drift": 0.033588272849960014,
+      "EL_mean": 0.703250953022822,
+      "rel_EL_drift": -0.004265195156391873,
+      "auc_el": 0.9814238462459806,
+      "cond_T2": true,
+      "cond_EL": true,
+      "cond_AUC": true,
+      "n_conditions_met": 3
+    },
+    "sousi": {
+      "status": "OK",
+      "n_surahs": 114,
+      "T2": 3642.5392457999133,
+      "rel_T2_drift": -0.011643680500239645,
+      "EL_mean": 0.6969718725949838,
+      "rel_EL_drift": -0.01315576103125659,
+      "auc_el": 0.9805907808300153,
+      "cond_T2": true,
+      "cond_EL": true,
+      "cond_AUC": true,
+      "n_conditions_met": 3
+    }
+  },
+  "verdict": "RIWAYAT_DEPENDENT",
+  "wall_time_s": 60.63423132896423
+}

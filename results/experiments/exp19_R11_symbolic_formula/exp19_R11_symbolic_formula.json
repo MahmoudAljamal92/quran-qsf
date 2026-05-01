@@ -1,0 +1,20 @@
+{
+  "exp": "exp19_R11_symbolic_formula",
+  "schema_version": 3,
+  "seed": 42,
+  "fast_mode": true,
+  "runtime_seconds": 0.53,
+  "features_available": false,
+  "feat_cols": [
+    "EL",
+    "VL_CV",
+    "CN",
+    "H_cond",
+    "T"
+  ],
+  "phi_sym_quran_mean": null,
+  "phi_sym_ctrl_mean": null,
+  "AUC_quran_vs_ctrl": null,
+  "message": "required features missing: H_nano_ln=False, RST=False, VL_CV=True. R11 cannot be evaluated.",
+  "verdict_expected": "AUC > 0.90 when H_nano_ln, RST, VL_CV all available; otherwise null-return and skip"
+}

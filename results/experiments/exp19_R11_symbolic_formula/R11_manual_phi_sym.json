@@ -1,0 +1,76 @@
+{
+  "exp": "R11_manual_phi_sym",
+  "formula": "Phi_sym = H_nano_ln + RST - VL_CV",
+  "source_of_definitions": "archive/scripts_pipeline/scripts/path_acd_tests.py:113-166",
+  "note": "Computed independently from CORPORA; does NOT modify phase_06. Pre-registered target was AUC > 0.90.",
+  "AUC_quran_vs_all_controls": 0.10292713503742738,
+  "n_quran_units": 114,
+  "n_control_units_pooled": 4814,
+  "AUC_per_control": {
+    "poetry_jahili": 0.023677615090357474,
+    "poetry_islami": 0.013242784380305603,
+    "poetry_abbasi": 0.022167533605533495,
+    "ksucca": 0.8883183568677792,
+    "arabic_bible": 0.2489433643279797,
+    "hadith_bukhari": 0.8267774699907664,
+    "hindawi": 0.19108582266477003,
+    "iliad_greek": null
+  },
+  "per_corpus": {
+    "quran": {
+      "n_units": 114,
+      "n_valid": 114,
+      "phi_sym_mean": 1.5882003253164172,
+      "phi_sym_std": 0.19464159283494664
+    },
+    "poetry_jahili": {
+      "n_units": 133,
+      "n_valid": 133,
+      "phi_sym_mean": 1.9675563239059302,
+      "phi_sym_std": 0.11680980754082679
+    },
+    "poetry_islami": {
+      "n_units": 465,
+      "n_valid": 465,
+      "phi_sym_mean": 1.9737474280348029,
+      "phi_sym_std": 0.10198151861072241
+    },
+    "poetry_abbasi": {
+      "n_units": 2823,
+      "n_valid": 2823,
+      "phi_sym_mean": 1.9742868183235591,
+      "phi_sym_std": 0.11616844532298663
+    },
+    "ksucca": {
+      "n_units": 41,
+      "n_valid": 41,
+      "phi_sym_mean": 1.113421438580727,
+      "phi_sym_std": 0.4160456295219408
+    },
+    "arabic_bible": {
+      "n_units": 1183,
+      "n_valid": 1183,
+      "phi_sym_mean": 1.709334623067505,
+      "phi_sym_std": 0.09498597652950035
+    },
+    "hadith_bukhari": {
+      "n_units": 95,
+      "n_valid": 95,
+      "phi_sym_mean": 1.3405539517353346,
+      "phi_sym_std": 0.296867960625115
+    },
+    "hindawi": {
+      "n_units": 74,
+      "n_valid": 74,
+      "phi_sym_mean": 1.7351134533449384,
+      "phi_sym_std": 0.08621683007182478
+    },
+    "iliad_greek": {
+      "n_units": 24,
+      "n_valid": 0,
+      "phi_sym_mean": null,
+      "phi_sym_std": null
+    }
+  },
+  "runtime_seconds": 16.16
+}

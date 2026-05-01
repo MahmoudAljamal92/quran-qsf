@@ -1,0 +1,324 @@
+{
+  "experiment": "exp156_F75_beta_first_principles_derivation",
+  "hypothesis_id": "H101_F75_Beta_FirstPrinciples_MaxEnt",
+  "hypothesis": "F75's V3.20 modal beta = 1.50 (LOO regression) has FIRST-PRINCIPLES MAXENT support: the per-corpus (mu_c, beta_c) determined by joint (p_max(c), H_EL(c)) under the MAXENT stretched-exp form `p_k ∝ exp(-mu·k^beta)/Z(mu, beta, A=28)` clusters at beta_mean ≈ 1.5 across 11 oral canons in 5 unrelated language families. The stretched-exp form is the maximum-entropy distribution under a fractional-moment constraint (analytic theorem); the value beta = 1.5 emerges as the empirical mean of per-corpus MAXENT-derived beta. This is a structural-empirical first-principles result, NOT a deductive cognitive-theory derivation.",
+  "verdict": "PASS_F75_beta_first_principles_strong",
+  "verdict_reason": "5/5 PREREG criteria PASS. A1 feasibility: 11/11; PASS. A2 mean beta in [1.3, 1.7]: 1.5787; PASS. A3 median beta in [1.3, 1.7]: 1.4734; PASS. A4 |mean beta - 1.50| <= 0.20: 0.0787; PASS. A5 Quran rank-1 highest beta: rank = 1; PASS.",
+  "prereg_hash": "f063c25de6bab3935886eeabd8b3a58bc8f622f368545bdd6f634bb76bfd1f24",
+  "input_exp155_sha256": "d941ac0e08fb643dd136fe6d05e2ec5e0883ff617182df90dcdeef06f528c466",
+  "input_exp154_sha256": "672ffc1e47f8444f3385e3941a93b73cc7565d9cd168ecc01024f96314778474",
+  "explore_script_sha256": "2fab2b02d4db7ee337175bacaf58eb99c0abe8b420c43997f6b19023088a16fb",
+  "frozen_constants": {
+    "SEED": 42,
+    "A_ALPHABET": 28,
+    "MEAN_BETA_LO": 1.3,
+    "MEAN_BETA_HI": 1.7,
+    "MEDIAN_BETA_LO": 1.3,
+    "MEDIAN_BETA_HI": 1.7,
+    "DISTANCE_FROM_V320_TOL": 0.2,
+    "V320_MODAL_BETA": 1.5,
+    "BETA_BISECTION_LO": 0.1,
+    "BETA_BISECTION_HI": 10.0,
+    "BETA_BISECTION_TOL": 1e-07,
+    "BETA_BISECTION_ITERS": 200,
+    "EXPECTED_CORPORA": [
+      "quran",
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "hindawi",
+      "ksucca",
+      "arabic_bible",
+      "hebrew_tanakh",
+      "greek_nt",
+      "pali",
+      "avestan_yasna"
+    ]
+  },
+  "results": {
+    "p_max_per_corpus": {
+      "quran": 0.7272727272727273,
+      "poetry_jahili": 0.264391447368421,
+      "poetry_islami": 0.2857142857142857,
+      "poetry_abbasi": 0.2857142857142857,
+      "hindawi": 0.1836734693877551,
+      "ksucca": 0.28001792114695345,
+      "arabic_bible": 0.2727272727272727,
+      "hebrew_tanakh": 0.2413793103448276,
+      "greek_nt": 0.3333333333333333,
+      "pali": 0.4808201058201058,
+      "avestan_yasna": 0.375
+    },
+    "H_EL_per_corpus": {
+      "quran": 0.9685208240372034,
+      "poetry_jahili": 2.779539763336115,
+      "poetry_islami": 2.688721875540867,
+      "poetry_abbasi": 2.7516291673878226,
+      "hindawi": 3.478902741597457,
+      "ksucca": 2.907891879501107,
+      "arabic_bible": 2.918295834054489,
+      "hebrew_tanakh": 3.053090083530327,
+      "greek_nt": 2.433671200186647,
+      "pali": 2.089938976016876,
+      "avestan_yasna": 2.1180782093497093
+    },
+    "gap_empirical": {
+      "quran": 0.5090892053999063,
+      "poetry_jahili": 0.860287177220477,
+      "poetry_islami": 0.8813669534832638,
+      "poetry_abbasi": 0.9442742453302184,
+      "hindawi": 1.0341178989245616,
+      "ksucca": 1.0714829472213694,
+      "arabic_bible": 1.0438267161383479,
+      "hebrew_tanakh": 1.0024640104603595,
+      "greek_nt": 0.8487086994654911,
+      "pali": 1.0335081057153985,
+      "avestan_yasna": 0.7030407100708658
+    },
+    "per_corpus_MAXENT_fit": {
+      "quran": {
+        "feasible": true,
+        "p_max_input": 0.7272727272727273,
+        "H_EL_input": 0.9685208240372034,
+        "beta": 2.5283749461174008,
+        "lambda": 0.22558033935199112,
+        "p_max_recovered": 0.7272727272727272,
+        "H_EL_recovered": 0.9685209168732009,
+        "constraint_p_max_drift": 1.1102230246251565e-16,
+        "constraint_H_drift": 9.28359974450288e-08,
+        "status": "ok (iters=21)"
+      },
+      "poetry_jahili": {
+        "feasible": true,
+        "p_max_input": 0.264391447368421,
+        "H_EL_input": 2.779539763336115,
+        "beta": 1.6902963295578957,
+        "lambda": 0.07950122458676204,
+        "p_max_recovered": 0.2643914473684211,
+        "H_EL_recovered": 2.7795397100703454,
+        "constraint_p_max_drift": 5.551115123125783e-17,
+        "constraint_H_drift": 5.326576957287443e-08,
+        "status": "ok (iters=24)"
+      },
+      "poetry_islami": {
+        "feasible": true,
+        "p_max_input": 0.2857142857142857,
+        "H_EL_input": 2.688721875540867,
+        "beta": 1.6228956758975985,
+        "lambda": 0.1018118930254848,
+        "p_max_recovered": 0.2857142857142858,
+        "H_EL_recovered": 2.6887216796393076,
+        "constraint_p_max_drift": 1.1102230246251565e-16,
+        "constraint_H_drift": 1.959015594188429e-07,
+        "status": "ok (iters=22)"
+      },
+      "poetry_abbasi": {
+        "feasible": true,
+        "p_max_input": 0.2857142857142857,
+        "H_EL_input": 2.7516291673878226,
+        "beta": 1.4734288141131398,
+        "lambda": 0.13282340559535005,
+        "p_max_recovered": 0.28571428571428575,
+        "H_EL_recovered": 2.7516292151367088,
+        "constraint_p_max_drift": 5.551115123125783e-17,
+        "constraint_H_drift": 4.774888617831152e-08,
+        "status": "ok (iters=24)"
+      },
+      "hindawi": {
+        "feasible": true,
+        "p_max_input": 0.1836734693877551,
+        "H_EL_input": 3.478902741597457,
+        "beta": 1.3660195931792254,
+        "lambda": 0.08650342016713744,
+        "p_max_recovered": 0.18367346938775514,
+        "H_EL_recovered": 3.4789028138443245,
+        "constraint_p_max_drift": 2.7755575615628914e-17,
+        "constraint_H_drift": 7.22468675995458e-08,
+        "status": "ok (iters=24)"
+      },
+      "ksucca": {
+        "feasible": true,
+        "p_max_input": 0.28001792114695345,
+        "H_EL_input": 2.907891879501107,
+        "beta": 1.2273886278271675,
+        "lambda": 0.20532265160304874,
+        "p_max_recovered": 0.2800179211469535,
+        "H_EL_recovered": 2.90789185821072,
+        "constraint_p_max_drift": 5.551115123125783e-17,
+        "constraint_H_drift": 2.129038678688744e-08,
+        "status": "ok (iters=24)"
+      },
+      "arabic_bible": {
+        "feasible": true,
+        "p_max_input": 0.2727272727272727,
+        "H_EL_input": 2.918295834054489,
+        "beta": 1.2841938450932502,
+        "lambda": 0.17717123970017262,
+        "p_max_recovered": 0.2727272727272728,
+        "H_EL_recovered": 2.918295765457813,
+        "constraint_p_max_drift": 1.1102230246251565e-16,
+        "constraint_H_drift": 6.8596675895094e-08,
+        "status": "ok (iters=24)"
+      },
+      "hebrew_tanakh": {
+        "feasible": true,
+        "p_max_input": 0.2413793103448276,
+        "H_EL_input": 3.053090083530327,
+        "beta": 1.3883429884910583,
+        "lambda": 0.12154180284724722,
+        "p_max_recovered": 0.24137931034482762,
+        "H_EL_recovered": 3.053090671972101,
+        "constraint_p_max_drift": 2.7755575615628914e-17,
+        "constraint_H_drift": 5.884417739743242e-07,
+        "status": "ok (iters=21)"
+      },
+      "greek_nt": {
+        "feasible": true,
+        "p_max_input": 0.3333333333333333,
+        "H_EL_input": 2.433671200186647,
+        "beta": 1.6721926391124726,
+        "lambda": 0.12117906756448274,
+        "p_max_recovered": 0.33333333333333337,
+        "H_EL_recovered": 2.4336713230438973,
+        "constraint_p_max_drift": 5.551115123125783e-17,
+        "constraint_H_drift": 1.2285725015104276e-07,
+        "status": "ok (iters=22)"
+      },
+      "pali": {
+        "feasible": true,
+        "p_max_input": 0.4808201058201058,
+        "H_EL_input": 2.089938976016876,
+        "beta": 0.9734485179185868,
+        "lambda": 0.688065219374626,
+        "p_max_recovered": 0.48082010582010587,
+        "H_EL_recovered": 2.089938844866133,
+        "constraint_p_max_drift": 5.551115123125783e-17,
+        "constraint_H_drift": 1.311507427104175e-07,
+        "status": "ok (iters=23)"
+      },
+      "avestan_yasna": {
+        "feasible": true,
+        "p_max_input": 0.375,
+        "H_EL_input": 2.1180782093497093,
+        "beta": 2.13859423995018,
+        "lambda": 0.07495124834614039,
+        "p_max_recovered": 0.375,
+        "H_EL_recovered": 2.11807827951563,
+        "constraint_p_max_drift": 0.0,
+        "constraint_H_drift": 7.016592062925042e-08,
+        "status": "ok (iters=22)"
+      }
+    },
+    "beta_distribution": {
+      "n": 11,
+      "mean": 1.5786523833870887,
+      "median": 1.4734288141131398,
+      "std": 0.43675457551015173,
+      "cv": 0.27666291838933527,
+      "min": 0.9734485179185868,
+      "max": 2.5283749461174008,
+      "min_corpus": "pali",
+      "max_corpus": "quran",
+      "sorted_corpora_by_beta": [
+        [
+          "pali",
+          0.9734485179185868
+        ],
+        [
+          "ksucca",
+          1.2273886278271675
+        ],
+        [
+          "arabic_bible",
+          1.2841938450932502
+        ],
+        [
+          "hindawi",
+          1.3660195931792254
+        ],
+        [
+          "hebrew_tanakh",
+          1.3883429884910583
+        ],
+        [
+          "poetry_abbasi",
+          1.4734288141131398
+        ],
+        [
+          "poetry_islami",
+          1.6228956758975985
+        ],
+        [
+          "greek_nt",
+          1.6721926391124726
+        ],
+        [
+          "poetry_jahili",
+          1.6902963295578957
+        ],
+        [
+          "avestan_yasna",
+          2.13859423995018
+        ],
+        [
+          "quran",
+          2.5283749461174008
+        ]
+      ],
+      "tight_weibull_1p5_band_count": 6,
+      "moderate_stretched_exp_band_count": 8,
+      "biologically_plausible_band_count": 10
+    },
+    "criteria": {
+      "A1_feasibility_all_corpora": {
+        "verdict": "PASS",
+        "n_feasible": 11,
+        "n_required": 11,
+        "infeasible_corpora": []
+      },
+      "A2_mean_beta_in_band": {
+        "verdict": "PASS",
+        "observed": 1.5786523833870887,
+        "lower": 1.3,
+        "upper": 1.7
+      },
+      "A3_median_beta_in_band": {
+        "verdict": "PASS",
+        "observed": 1.4734288141131398,
+        "lower": 1.3,
+        "upper": 1.7
+      },
+      "A4_distance_from_V320_modal": {
+        "verdict": "PASS",
+        "observed_distance": 0.07865238338708869,
+        "tolerance": 0.2,
+        "V320_modal_beta": 1.5
+      },
+      "A5_quran_rank1_highest_beta": {
+        "verdict": "PASS",
+        "observed_quran_rank": 1,
+        "observed_quran_beta": 2.5283749461174008,
+        "interpretation": "Quran's expected rank-1 super-Gaussian beta is consistent with its 73% nun-rāwī concentration producing a sharply-cut-off rhyme tail — the cognitive-channel diagnostic for 'extremely concentrated rhyme'."
+      }
+    },
+    "cognitive_channel_interpretation": "Per-corpus MAXENT-derived beta partitions the 11-corpus pool into three cognitive-channel signatures: super-Gaussian (beta > 2; sharply concentrated rhyme; Quran 2.53), Weibull (beta ≈ 1.5; moderate concentration; majority of corpora), and near-pure-exponential (beta ≈ 1.0; gradual decay; Pāli 0.97). The mean beta = 1.5 ± 0.5 across 11 corpora provides first-principles MAXENT backing for the V3.20 LOO modal beta = 1.50."
+  },
+  "audit_report": {
+    "ok": true,
+    "checks": {
+      "exp155_input_sha256_locked": "d941ac0e08fb643dd136fe6d05e2ec5e0883ff617182df90dcdeef06f528c466",
+      "exp154_input_sha256_locked": "672ffc1e47f8444f3385e3941a93b73cc7565d9cd168ecc01024f96314778474",
+      "all_corpora_present": true,
+      "p_max_H_EL_byte_drift_exp154_vs_exp155": 0.0,
+      "no_brown_stouffer_used": true,
+      "T_squared_invariant": true,
+      "no_locked_finding_status_changed": true,
+      "F75_PASS_status_unaffected": true,
+      "exp154_PARTIAL_verdict_unaffected": true,
+      "exp155_STRONG_verdict_unaffected": true,
+      "FN27_not_retracted": true,
+      "first_principles_claim_scope": "MAXENT stretched-exp form is an analytic theorem (max entropy under fractional-moment constraint). Per-corpus (mu, beta) is uniquely determined by joint (p_max, H_EL). Empirical mean beta ≈ 1.5 is the structural-empirical observation, NOT a deductive cognitive-theory derivation; deeper cognitive grounding (Miller 1956, Tsallis q-exponential, DDM, etc.) remains future work."
+    }
+  },
+  "wall_time_s": 0.7522106170654297
+}

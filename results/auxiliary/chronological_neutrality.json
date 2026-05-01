@@ -1,0 +1,52 @@
+{
+  "schema": "chronological_neutrality_v1",
+  "chronology_source": "Nöldeke-Schwally (locked verse-by-verse standard)",
+  "n_surahs_total_chronology": 112,
+  "n_surahs_band_a_with_rank": 67,
+  "feat_cols": [
+    "EL",
+    "VL_CV",
+    "CN",
+    "H_cond",
+    "T"
+  ],
+  "regression_per_feature": {
+    "EL": {
+      "slope": -0.002113068828274044,
+      "intercept": 0.8265369935532192,
+      "r_squared": 0.10149218837426253,
+      "t_stat": -2.709642890981126,
+      "p_two_sided": 0.006735568509575706
+    },
+    "VL_CV": {
+      "slope": -0.0014477986027863292,
+      "intercept": 0.5641658736928019,
+      "r_squared": 0.03801515595618275,
+      "t_stat": -1.6026952569078112,
+      "p_two_sided": 0.10900195121671162
+    },
+    "CN": {
+      "slope": -0.0004300851343198734,
+      "intercept": 0.10920676215843703,
+      "r_squared": 0.04954611073087192,
+      "t_stat": -1.840754779123163,
+      "p_two_sided": 0.06565750238135985
+    },
+    "H_cond": {
+      "slope": 0.0008744561549770647,
+      "intercept": 0.8176883399986136,
+      "r_squared": 0.004872216806558454,
+      "t_stat": 0.5641317659514368,
+      "p_two_sided": 0.572664460844313
+    },
+    "T": {
+      "slope": 0.0008243027912802443,
+      "intercept": -0.538582590565344,
+      "r_squared": 0.0005478792965562011,
+      "t_stat": 0.18876354556377772,
+      "p_two_sided": 0.8502781445649337
+    }
+  },
+  "verdict": "FAIL_chronologically_dependent",
+  "worst_r_squared": 0.10149218837426253
+}

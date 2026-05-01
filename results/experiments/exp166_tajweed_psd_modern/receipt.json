@@ -1,0 +1,67 @@
+{
+  "experiment": "exp166_tajweed_psd_modern",
+  "frozen_at": "2026-05-01",
+  "verdict": "AMBIGUOUS",
+  "audit": {
+    "audit_W_geq_70000": true,
+    "audit_W": 82414,
+    "audit_mean_duration": 7.6951488824714245,
+    "audit_std_duration": 3.309737691321194
+  },
+  "T1_primary": {
+    "beta_obs": 0.1583044562812632,
+    "R2": 0.5866160321380397,
+    "ci_95": [
+      0.1331661992743142,
+      0.2180870070940075
+    ],
+    "nperseg": 2048,
+    "noverlap": 1024,
+    "inertial_band": [
+      0.001,
+      0.1
+    ]
+  },
+  "T2_shuffle_null": {
+    "n_perm": 5000,
+    "null_mean_beta": -1.7876418042331566e-05,
+    "null_std_beta": 0.012979555056814366,
+    "p_shuffle": 0.0001999600079984003,
+    "alpha_bonferroni": 0.0125
+  },
+  "T3_window_robustness": {
+    "nperseg_1024": {
+      "beta": 0.15424446662734734,
+      "R2": 0.6725925452768375
+    },
+    "nperseg_2048": {
+      "beta": 0.1583044562812632,
+      "R2": 0.5866160321380397
+    },
+    "nperseg_4096": {
+      "beta": 0.15521852688652057,
+      "R2": 0.4002075931209106
+    }
+  },
+  "T3_max_deviation": 0.004059989653915852,
+  "T3_pass": true,
+  "T4_riwayat_betas": {
+    "hafs": 0.1583044562812632,
+    "warsh": 0.0623909074245828,
+    "qalun": 0.06403810968316459,
+    "duri": 0.07328191659496337,
+    "shuba": 0.0863426443047405,
+    "sousi": 0.07961769414882208
+  },
+  "T4_cv_beta": 0.3757239261161333,
+  "T4_pass": false,
+  "interpretation": {
+    "pink_noise_band": [
+      0.8,
+      1.2
+    ],
+    "in_pink_band": false,
+    "shuffle_significant": true,
+    "operating_principle": "Quran-as-reference: β_obs is the locked Quran rhythm constant."
+  }
+}

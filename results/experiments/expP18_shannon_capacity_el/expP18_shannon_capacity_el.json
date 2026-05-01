@@ -1,0 +1,112 @@
+{
+  "experiment": "expP18_shannon_capacity_el",
+  "prereg_sha256": "c096be6f5168fc4bb921c0220f5973769d00887fb8aa964f2dde61981b670a76",
+  "alphabet_size_K": 28,
+  "table": {
+    "quran": {
+      "n_finals": 6236,
+      "n_distinct_letters": 28,
+      "p_max": 0.50096215522771,
+      "top_letter": "ن",
+      "EL_iid_floor": 0.29455614958520543,
+      "H2_renyi": 1.7633854217596254,
+      "EL_actual": 0.7204490777866881,
+      "EL_actual_minus_floor": 0.42589292820148267,
+      "EL_max_under_pmax_uniform_off": 0.2601867391376135
+    },
+    "poetry_jahili": {
+      "n_finals": 2561,
+      "n_distinct_letters": 34,
+      "p_max": 0.1850839515814135,
+      "top_letter": "ا",
+      "EL_iid_floor": 0.07776561924192231,
+      "H2_renyi": 3.6847237198079785,
+      "EL_actual": 0.094140625,
+      "EL_actual_minus_floor": 0.016375005758077696,
+      "EL_max_under_pmax_uniform_off": 0.05885192713188597
+    },
+    "poetry_islami": {
+      "n_finals": 10295,
+      "n_distinct_letters": 34,
+      "p_max": 0.20621661000485672,
+      "top_letter": "ا",
+      "EL_iid_floor": 0.08486275560616971,
+      "H2_renyi": 3.5587246641650467,
+      "EL_actual": 0.0997668544783369,
+      "EL_actual_minus_floor": 0.01490409887216719,
+      "EL_max_under_pmax_uniform_off": 0.06586203358382783
+    },
+    "poetry_abbasi": {
+      "n_finals": 76499,
+      "n_distinct_letters": 36,
+      "p_max": 0.1756362828272265,
+      "top_letter": "ا",
+      "EL_iid_floor": 0.07665173234882272,
+      "H2_renyi": 3.70553779224405,
+      "EL_actual": 0.09600250986953908,
+      "EL_actual_minus_floor": 0.01935077752071636,
+      "EL_max_under_pmax_uniform_off": 0.0560175682228067
+    },
+    "ksucca": {
+      "n_finals": 1967,
+      "n_distinct_letters": 30,
+      "p_max": 0.11845449923741738,
+      "top_letter": "ا",
+      "EL_iid_floor": 0.07391636635910936,
+      "H2_renyi": 3.7579623524544963,
+      "EL_actual": 0.19175991861648017,
+      "EL_actual_minus_floor": 0.11784355225737081,
+      "EL_max_under_pmax_uniform_off": 0.0428137820901337
+    },
+    "arabic_bible": {
+      "n_finals": 31083,
+      "n_distinct_letters": 35,
+      "p_max": 0.1468005018820577,
+      "top_letter": "ا",
+      "EL_iid_floor": 0.0781468356195124,
+      "H2_renyi": 3.677668734060536,
+      "EL_actual": 0.13448298050318513,
+      "EL_actual_minus_floor": 0.05633614488367274,
+      "EL_max_under_pmax_uniform_off": 0.04851147563388731
+    },
+    "hadith_bukhari": {
+      "n_finals": 7271,
+      "n_distinct_letters": 34,
+      "p_max": 0.16160088020904964,
+      "top_letter": "ه",
+      "EL_iid_floor": 0.09421596555051713,
+      "H2_renyi": 3.407884634513532,
+      "EL_actual": 0.14002751031636865,
+      "EL_actual_minus_floor": 0.04581154476585152,
+      "EL_max_under_pmax_uniform_off": 0.052148662412718885
+    },
+    "hindawi": {
+      "n_finals": 1793,
+      "n_distinct_letters": 32,
+      "p_max": 0.12325711098717233,
+      "top_letter": "ا",
+      "EL_iid_floor": 0.06928879085767324,
+      "H2_renyi": 3.851234209447342,
+      "EL_actual": 0.06529017857142858,
+      "EL_actual_minus_floor": -0.0039986122862446655,
+      "EL_max_under_pmax_uniform_off": 0.043661874424998914
+    },
+    "iliad_greek": {
+      "n_finals": 15687,
+      "n_distinct_letters": 11,
+      "p_max": 0.2739848282016957,
+      "top_letter": "ν",
+      "EL_iid_floor": 0.16775414780592887,
+      "H2_renyi": 2.5755796566582396,
+      "EL_actual": 0.17276552339665943,
+      "EL_actual_minus_floor": 0.00501137559073056,
+      "EL_max_under_pmax_uniform_off": 0.09458983533216904
+    }
+  },
+  "theorem_min_pmax_for_EL_iid_geq_050": 0.704821214114114,
+  "min_pmax_for_quran_EL": 0.8482904224976745,
+  "quran_observed_pmax": 0.50096215522771,
+  "quran_observed_EL": 0.7204490777866881,
+  "quran_saturates_iid_bound": false,
+  "wall_time_s": 3.6771318912506104
+}

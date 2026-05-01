@@ -1,0 +1,35 @@
+{
+  "experiment_id": "expE4_sha_manifest",
+  "task": "E4",
+  "tier": 1,
+  "title": "SHA-256 manifest regeneration for run-of-record artifacts",
+  "source_plan": "docs/EXECUTION_PLAN_AND_PRIORITIES.md",
+  "status": "DONE",
+  "verdict": "CLEAN",
+  "files_hashed_total": 49,
+  "bytes_hashed_total": 75394211,
+  "per_scope_counts": {
+    "results_root_headlines": 3,
+    "results_checkpoints": 22,
+    "results_integrity": 8,
+    "notebooks_ultimate": 10,
+    "archive_audits": 6
+  },
+  "diff_summary": {
+    "status": "CLEAN",
+    "matches": 21,
+    "hash_drift": 0,
+    "only_in_prior": 0,
+    "only_in_new": 0
+  },
+  "outputs": [
+    "results/experiments/expE4_sha_manifest/MANIFEST_v8.json",
+    "results/experiments/expE4_sha_manifest/MANIFEST_v8.md",
+    "results/integrity/MANIFEST_v8.json (net-new, no mutation of existing locks)"
+  ],
+  "self_check": {
+    "no_pinned_artifact_mutated": true,
+    "no_results_lock_json_changed": true,
+    "no_checkpoints_pkl_changed": true
+  }
+}

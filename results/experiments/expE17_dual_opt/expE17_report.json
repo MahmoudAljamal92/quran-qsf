@@ -1,0 +1,54 @@
+{
+  "experiment_id": "expE17_dual_opt",
+  "task": "E17",
+  "tier": 4,
+  "title": "Canonical-order dual-optimization: Mushaf vs Nuzul vs random perms",
+  "generated_utc": "2026-04-23T20:15:06+00:00",
+  "seed": 42,
+  "n_permutations": 10000,
+  "feature_order": [
+    "EL",
+    "VL_CV",
+    "CN",
+    "H_cond",
+    "T"
+  ],
+  "objectives": {
+    "J1": "sum of squared Mahalanobis transitions between adjacent surahs (lower = smoother)",
+    "J2": "Shannon entropy (bits) of 5-bit sign-direction sequence over adjacent transitions (lower = more rhythmic)"
+  },
+  "mushaf": {
+    "J1": 824.4497667468286,
+    "J2": 4.73812896741938,
+    "perm_quantile_J1": 0.0,
+    "perm_quantile_J2": 0.8399
+  },
+  "nuzul": {
+    "J1": 842.1557554413065,
+    "J2": 4.797536432217584,
+    "perm_quantile_J1": 0.0,
+    "perm_quantile_J2": 0.9431
+  },
+  "random_perm_summary": {
+    "J1_mean": 1130.1439988370485,
+    "J1_sd": 45.33946401220166,
+    "J2_mean": 4.636219529205588,
+    "J2_sd": 0.1030916639956071,
+    "J1_q05": 1052.2847307589711,
+    "J1_q95": 1202.1940883084364,
+    "J2_q05": 4.465074679992221,
+    "J2_q95": 4.803360507270103
+  },
+  "mushaf_strictly_pareto_beats_nuzul": true,
+  "mushaf_pareto_beats_frac_of_perms": 0.1601,
+  "verdict": "MUSHAF_ONE_AXIS_DOMINANT",
+  "nuzul_source": "Egyptian Standard Edition (Azhar) chronological ordering, 114-unique validated list",
+  "caveat": "Historical chronology is uncertain; the Egyptian standard is the most widely-cited reconstruction, used here as best available.",
+  "pre_registered_criteria": {
+    "null": "Mushaf not Pareto-better than Nuzul + >=95% of random perms",
+    "MUSHAF_PARETO_DOMINANT": "Mushaf Pareto-beats Nuzul AND J1-quantile <= 0.05 AND J2-quantile <= 0.05",
+    "MUSHAF_ONE_AXIS_DOMINANT": "Mushaf quantile <= 0.05 on exactly one of J1, J2",
+    "NULL_NO_DUAL_OPT": "neither axis at <= 0.05",
+    "side_effects": "no mutation of any pinned artefact; outputs under expE17 only"
+  }
+}

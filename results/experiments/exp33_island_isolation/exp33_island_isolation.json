@@ -1,0 +1,177 @@
+{
+  "experiment": "exp33_island_isolation",
+  "schema_version": 1,
+  "hypothesis": "In the 5-D stylometric space under the locked Mahalanobis metric, do the Quran points form a topologically discrete ISLAND separated by a positive gap from all control points?",
+  "config": {
+    "seed": 42,
+    "band_a": [
+      15,
+      100
+    ],
+    "n_permutations": 10000,
+    "arabic_ctrl_corpora": [
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ]
+  },
+  "n_quran_band_a": 68,
+  "n_ctrl_band_a": 2509,
+  "feat_cols": [
+    "EL",
+    "VL_CV",
+    "CN",
+    "H_cond",
+    "T"
+  ],
+  "nnd_within_Q_summary": {
+    "n": 68,
+    "mean": 1.5034951040521032,
+    "median": 1.3936216096587137,
+    "sd": 0.8245146303026709,
+    "min": 0.6254110983448633,
+    "max": 4.558482861187414,
+    "q05": 0.6471354046124744,
+    "q25": 1.0525258406255424,
+    "q75": 1.7818509546883237,
+    "q95": 2.587087190039844
+  },
+  "nnd_cross_Q_to_C_summary": {
+    "n": 68,
+    "mean": 2.982274281756384,
+    "median": 2.95119570267898,
+    "sd": 1.3835012723933924,
+    "min": 0.6233060465392094,
+    "max": 8.836601049237098,
+    "q05": 1.055902271431575,
+    "q25": 2.071163562593515,
+    "q75": 3.6964668046337597,
+    "q95": 4.831363242140518
+  },
+  "nnd_within_C_summary": {
+    "n": 2509,
+    "mean": 0.46482907992102707,
+    "median": 0.4019785984539461,
+    "sd": 0.3444050902383899,
+    "min": 0.0,
+    "max": 9.839136995619674,
+    "q05": 0.18002354324249903,
+    "q25": 0.2885429776822705,
+    "q75": 0.556923189996347,
+    "q95": 0.9179605075967141
+  },
+  "max_within_Q": 4.558482861187414,
+  "min_cross_Q_to_C": 0.6233060465392094,
+  "island_gap_M_units": -3.935176814648205,
+  "is_island_single_linkage": false,
+  "nnr_Q_ratio_withinQ_over_crossQC": 0.5041438050314517,
+  "nnr_C_ratio_withinC_over_crossCQ": 0.12838517632451552,
+  "silhouette_binary_Q_vs_C_mahalanobis": 0.6515338935614314,
+  "permutation_test_gap": {
+    "observed_gap": -3.935176814648205,
+    "null_summary": {
+      "n": 10000,
+      "mean": -5.27126229158004,
+      "median": -4.827436114014552,
+      "sd": 2.3873228662356047,
+      "min": -16.5235586583336,
+      "max": -1.4732079167702425,
+      "q05": -9.40032768111625,
+      "q25": -6.4716948985472325,
+      "q75": -3.5893378697752754,
+      "q95": -2.31752858224516
+    },
+    "p_value_one_sided_greater": 0.3194
+  },
+  "nearest_ctrl_corpus_histogram": {
+    "arabic_bible": 66,
+    "poetry_abbasi": 1,
+    "poetry_islami": 1
+  },
+  "hostile_top10_smallest_margin": [
+    {
+      "label": "Q:046",
+      "nnd_within_Q": 2.4429,
+      "nnd_cross_Q_to_C": 1.1409,
+      "margin": -1.302,
+      "nearest_ctrl_label": "bible:يشوع :23",
+      "nearest_ctrl_corpus": "arabic_bible"
+    },
+    {
+      "label": "Q:022",
+      "nnd_within_Q": 2.2752,
+      "nnd_cross_Q_to_C": 1.0329,
+      "margin": -1.2423,
+      "nearest_ctrl_label": "bible:نحميا :5",
+      "nearest_ctrl_corpus": "arabic_bible"
+    },
+    {
+      "label": "Q:014",
+      "nnd_within_Q": 1.8558,
+      "nnd_cross_Q_to_C": 0.6233,
+      "margin": -1.2325,
+      "nearest_ctrl_label": "bible:أخبار أيام أول :11",
+      "nearest_ctrl_corpus": "arabic_bible"
+    },
+    {
+      "label": "Q:049",
+      "nnd_within_Q": 4.3602,
+      "nnd_cross_Q_to_C": 3.1775,
+      "margin": -1.1827,
+      "nearest_ctrl_label": "poetry_abbasi:141",
+      "nearest_ctrl_corpus": "poetry_abbasi"
+    },
+    {
+      "label": "Q:034",
+      "nnd_within_Q": 1.2946,
+      "nnd_cross_Q_to_C": 1.0207,
+      "margin": -0.2738,
+      "nearest_ctrl_label": "bible:نحميا :7",
+      "nearest_ctrl_corpus": "arabic_bible"
+    },
+    {
+      "label": "Q:042",
+      "nnd_within_Q": 1.127,
+      "nnd_cross_Q_to_C": 0.99,
+      "margin": -0.1369,
+      "nearest_ctrl_label": "bible:حزقيال :36",
+      "nearest_ctrl_corpus": "arabic_bible"
+    },
+    {
+      "label": "Q:059",
+      "nnd_within_Q": 1.7861,
+      "nnd_cross_Q_to_C": 1.6723,
+      "margin": -0.1138,
+      "nearest_ctrl_label": "poetry_islami:2785",
+      "nearest_ctrl_corpus": "poetry_islami"
+    },
+    {
+      "label": "Q:013",
+      "nnd_within_Q": 1.127,
+      "nnd_cross_Q_to_C": 1.0987,
+      "margin": -0.0283,
+      "nearest_ctrl_label": "bible:صفنيا :2",
+      "nearest_ctrl_corpus": "arabic_bible"
+    },
+    {
+      "label": "Q:024",
+      "nnd_within_Q": 2.2329,
+      "nnd_cross_Q_to_C": 2.3262,
+      "margin": 0.0933,
+      "nearest_ctrl_label": "bible:عزرا :2",
+      "nearest_ctrl_corpus": "arabic_bible"
+    },
+    {
+      "label": "Q:040",
+      "nnd_within_Q": 1.2946,
+      "nnd_cross_Q_to_C": 1.4165,
+      "margin": 0.122,
+      "nearest_ctrl_label": "bible:تثنية :27",
+      "nearest_ctrl_corpus": "arabic_bible"
+    }
+  ],
+  "runtime_seconds": 31.5
+}

@@ -1,0 +1,79 @@
+{
+  "experiment": "exp96c_F57_meta",
+  "schema_version": "1.0",
+  "hypothesis": "H51",
+  "verdict": "PASS_F57_meta_finding",
+  "prereg_hash_expected": "ba2b5af4a10f07b66446da29898224deb8b97ec0ce3ff42bfc169e8d0bd063a4",
+  "prereg_hash_actual": "ba2b5af4a10f07b66446da29898224deb8b97ec0ce3ff42bfc169e8d0bd063a4",
+  "frozen_constants": {
+    "N_CLAIMS": 6,
+    "PASS_PROB_NULL": 0.14285714285714285,
+    "H51_PASS_FLOOR": 4,
+    "H51_STRICT_FLOOR": 5,
+    "H51_EXTREMUM": 6
+  },
+  "claims": [
+    {
+      "claim": "C1_memory_optimised_54_17",
+      "pass": true,
+      "status": "CONFIRMED",
+      "verdict_observed": "WEAK_LC2",
+      "n_lambda_at_5pct": 2,
+      "n_lambda_at_10pct": 3
+    },
+    {
+      "claim": "C2_tahaddi_2_23",
+      "pass": true,
+      "status": "CONFIRMED",
+      "recall": 1.0,
+      "fpr": 0.0,
+      "n_pair_total": 548796,
+      "hash_match": true
+    },
+    {
+      "claim": "C3_preservation_15_9",
+      "pass": true,
+      "status": "CONFIRMED",
+      "auc_min": 0.9726674176434942,
+      "auc_by_riwaya": {
+        "warsh": 0.9726674176434942,
+        "qalun": 0.9729982935724563,
+        "duri": 0.9805889219764818,
+        "shuba": 0.9814238462459806,
+        "sousi": 0.9805907808300153
+      },
+      "hash_match": true
+    },
+    {
+      "claim": "C4_precision_11_1",
+      "pass": false,
+      "status": "FAIL",
+      "quran_rank": null,
+      "n_corpora": 7
+    },
+    {
+      "claim": "C5_self_similar_39_23",
+      "pass": false,
+      "status": "FAIL",
+      "quran_rank": 6,
+      "n_corpora": 7
+    },
+    {
+      "claim": "C6_falsehood_41_42",
+      "pass": true,
+      "status": "CONFIRMED",
+      "n_forgeries": 1000000,
+      "n_pass_joint": 0
+    }
+  ],
+  "S_obs": 4,
+  "n_pending": 0,
+  "n_confirmed": 4,
+  "n_failed": 2,
+  "P_null_ge_S_obs": 0.004904419077085228,
+  "P_null_ge_4": 0.004904419077085228,
+  "P_null_ge_5": 0.00031449481083562115,
+  "P_null_eq_6": 8.499859752314083e-06,
+  "audit_failures": [],
+  "wall_time_s": 0.0037720203399658203
+}

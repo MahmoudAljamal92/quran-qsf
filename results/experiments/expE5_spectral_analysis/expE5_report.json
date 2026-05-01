@@ -1,0 +1,767 @@
+{
+  "experiment_id": "expE5_spectral_analysis",
+  "task": "E5",
+  "tier": 2,
+  "title": "Fourier + multitaper spectral analysis on verse-length and end-letter series",
+  "generated_utc": "2026-04-23T18:07:34+00:00",
+  "seed": 42,
+  "n_shuffles": 1000,
+  "n_ar1_surrogates": 200,
+  "multitaper": {
+    "NW": 4,
+    "K": 7,
+    "taper_family": "DPSS"
+  },
+  "inputs": {
+    "source": "results/checkpoints/phase_06_phi_m.pkl state['CORPORA']['quran']",
+    "n_surahs": 114,
+    "n_verses_total": 6236,
+    "n_unique_end_letters": 28
+  },
+  "verdicts": {
+    "verse_length_series": "RHYTHMIC",
+    "end_letter_series": "RHYTHMIC"
+  },
+  "results_verse_length": {
+    "n_points": 6236,
+    "n_freq_bins": 3119,
+    "alpha_observed": 0.39708488440517964,
+    "intercept_observed": -5.8951256442875675,
+    "alpha_shuffle_mean": -0.0003496438675784789,
+    "alpha_shuffle_sd": 0.018056544671069187,
+    "alpha_ar1_mean": 0.6297352590815612,
+    "alpha_ar1_sd": 0.019266792069016467,
+    "alpha_z_vs_shuffle": 22.01055271164595,
+    "bonferroni_threshold": 1.603592046183451e-05,
+    "n_sig_bins": 50,
+    "n_big_peaks": 49,
+    "top_peaks": [
+      {
+        "freq": 0.0004810776138550353,
+        "period": 2078.6666666666665,
+        "psd": 0.0006572654094093114,
+        "shuffle_p95": 6.848610901147944e-06,
+        "ratio": 95.97061636238416,
+        "p_shuffle": 0.0,
+        "passes_bonferroni": true
+      },
+      {
+        "freq": 0.00016035920461834508,
+        "period": 6236.0,
+        "psd": 0.0007110443969627034,
+        "shuffle_p95": 7.460979037857207e-06,
+        "ratio": 95.30175508533733,
+        "p_shuffle": 0.0,
+        "passes_bonferroni": true
+      },
+      {
+        "freq": 0.00032071840923669016,
+        "period": 3118.0,
+        "psd": 0.0006043425684371768,
+        "shuffle_p95": 7.388538574855252e-06,
+        "ratio": 81.79460150534796,
+        "p_shuffle": 0.0,
+        "passes_bonferroni": true
+      },
+      {
+        "freq": 0.0006414368184733803,
+        "period": 1559.0,
+        "psd": 0.0004809467389158114,
+        "shuffle_p95": 7.2997755145545075e-06,
+        "ratio": 65.88514098233372,
+        "p_shuffle": 0.0,
+        "passes_bonferroni": true
+      },
+      {
+        "freq": 0.0008017960230917254,
+        "period": 1247.2,
+        "psd": 0.00020714603896828486,
+        "shuffle_p95": 7.51720378889852e-06,
+        "ratio": 27.556262246634866,
+        "p_shuffle": 0.0,
+        "passes_bonferroni": true
+      },
+      {
+        "freq": 0.0014432328415651058,
+        "period": 692.8888888888889,
+        "psd": 0.0001553053049741112,
+        "shuffle_p95": 7.530802826548987e-06,
+        "ratio": 20.622675769255313,
+        "p_shuffle": 0.0,
+        "passes_bonferroni": true
+      },
+      {
+        "freq": 0.0016035920461834508,
+        "period": 623.6,
+        "psd": 0.00014875512792976347,
+        "shuffle_p95": 7.714722368204449e-06,
+        "ratio": 19.281980715578914,
+        "p_shuffle": 0.0,
+        "passes_bonferroni": true
+      },
+      {
+        "freq": 0.001763951250801796,
+        "period": 566.909090909091,
+        "psd": 0.00014537043720996368,
+        "shuffle_p95": 7.70168371100229e-06,
+        "ratio": 18.87515024828841,
+        "p_shuffle": 0.0,
+        "passes_bonferroni": true
+      },
+      {
+        "freq": 0.0011225144323284155,
+        "period": 890.857142857143,
+        "psd": 0.00013115550503386498,
+        "shuffle_p95": 7.518355680827186e-06,
+        "ratio": 17.444706076932363,
+        "p_shuffle": 0.0,
+        "passes_bonferroni": true
+      },
+      {
+        "freq": 0.0012828736369467607,
+        "period": 779.5,
+        "psd": 0.00013019256460739732,
+        "shuffle_p95": 7.576205391085591e-06,
+        "ratio": 17.184402730235654,
+        "p_shuffle": 0.0,
+        "passes_bonferroni": true
+      }
+    ]
+  },
+  "results_end_letter": {
+    "n_points": 6236,
+    "n_freq_bins": 3119,
+    "alpha_observed": 1.0171746998893387,
+    "intercept_observed": -6.721093813453375,
+    "alpha_shuffle_mean": -7.270597494707648e-05,
+    "alpha_shuffle_sd": 0.018740373525994277,
+    "alpha_ar1_mean": 1.2948861534520233,
+    "alpha_ar1_sd": 0.017661751620750534,
+    "alpha_z_vs_shuffle": 54.28106352593713,
+    "bonferroni_threshold": 1.603592046183451e-05,
+    "n_sig_bins": 128,
+    "n_big_peaks": 126,
+    "top_peaks": [
+      {
+        "freq": 0.0011225144323284155,
+        "period": 890.857142857143,
+        "psd": 0.00048640989999859896,
+        "shuffle_p95": 7.803933003555128e-06,
+        "ratio": 62.32881545459348,
+        "p_shuffle": 0.0,
+        "passes_bonferroni": true
+      },
+      {
+        "freq": 0.0008017960230917254,
+        "period": 1247.2,
+        "psd": 0.00042448203923116666,
+        "shuffle_p95": 7.855370963575076e-06,
+        "ratio": 54.03717293549427,
+        "p_shuffle": 0.0,
+        "passes_bonferroni": true
+      },
+      {
+        "freq": 0.0009621552277100705,
+        "period": 1039.3333333333333,
+        "psd": 0.00041399106983685966,
+        "shuffle_p95": 7.8661925290316e-06,
+        "ratio": 52.62915550426093,
+        "p_shuffle": 0.0,
+        "passes_bonferroni": true
+      },
+      {
+        "freq": 0.0016035920461834508,
+        "period": 623.6,
+        "psd": 0.0003851488677190394,
+        "shuffle_p95": 7.602574953070679e-06,
+        "ratio": 50.66031839166253,
+        "p_shuffle": 0.0,
+        "passes_bonferroni": true
+      },
+      {
+        "freq": 0.001763951250801796,
+        "period": 566.909090909091,
+        "psd": 0.0003770506688736508,
+        "shuffle_p95": 7.488084672883336e-06,
+        "ratio": 50.353419511810216,
+        "p_shuffle": 0.0,
+        "passes_bonferroni": true
+      },
+      {
+        "freq": 0.0014432328415651058,
+        "period": 692.8888888888889,
+        "psd": 0.0003792402536500324,
+        "shuffle_p95": 7.800289118539317e-06,
+        "ratio": 48.61874321410396,
+        "p_shuffle": 0.0,
+        "passes_bonferroni": true
+      },
+      {
+        "freq": 0.0012828736369467607,
+        "period": 779.5,
+        "psd": 0.0003466508555902556,
+        "shuffle_p95": 7.829404013851251e-06,
+        "ratio": 44.275509984793786,
+        "p_shuffle": 0.0,
+        "passes_bonferroni": true
+      },
+      {
+        "freq": 0.0006414368184733803,
+        "period": 1559.0,
+        "psd": 0.0003220430192215299,
+        "shuffle_p95": 7.726899371917232e-06,
+        "ratio": 41.67816917507277,
+        "p_shuffle": 0.0,
+        "passes_bonferroni": true
+      },
+      {
+        "freq": 0.00016035920461834508,
+        "period": 6236.0,
+        "psd": 0.00032130689973920186,
+        "shuffle_p95": 7.863410106935003e-06,
+        "ratio": 40.86101263570504,
+        "p_shuffle": 0.0,
+        "passes_bonferroni": true
+      },
+      {
+        "freq": 0.00032071840923669016,
+        "period": 3118.0,
+        "psd": 0.0002891926594135677,
+        "shuffle_p95": 7.3819113492650374e-06,
+        "ratio": 39.17585104057915,
+        "p_shuffle": 0.0,
+        "passes_bonferroni": true
+      }
+    ]
+  },
+  "per_surah_scan": {
+    "n_surahs_analysed": 57,
+    "min_n_verses": 40,
+    "top_peak_period_median_verses": 16.8,
+    "top_peak_period_mean_verses": 41.24291312774057,
+    "per_surah": [
+      {
+        "surah": 2,
+        "label": "Q:002",
+        "n_verses": 286,
+        "alpha": 0.3107665569654151,
+        "top_peak_freq": 0.0034965034965034965,
+        "top_peak_period": 286.0,
+        "top_peak_psd": 0.018365876137279812
+      },
+      {
+        "surah": 3,
+        "label": "Q:003",
+        "n_verses": 200,
+        "alpha": 0.10416911138986142,
+        "top_peak_freq": 0.13,
+        "top_peak_period": 7.692307692307692,
+        "top_peak_psd": 0.007862375050865
+      },
+      {
+        "surah": 4,
+        "label": "Q:004",
+        "n_verses": 176,
+        "alpha": 0.26072343683945004,
+        "top_peak_freq": 0.07954545454545454,
+        "top_peak_period": 12.571428571428571,
+        "top_peak_psd": 0.025724554028850884
+      },
+      {
+        "surah": 5,
+        "label": "Q:005",
+        "n_verses": 120,
+        "alpha": 0.08600107826513956,
+        "top_peak_freq": 0.31666666666666665,
+        "top_peak_period": 3.1578947368421053,
+        "top_peak_psd": 0.030198809326537252
+      },
+      {
+        "surah": 6,
+        "label": "Q:006",
+        "n_verses": 165,
+        "alpha": 0.13236901758847722,
+        "top_peak_freq": 0.15060240963855423,
+        "top_peak_period": 6.64,
+        "top_peak_psd": 0.012552353149275759
+      },
+      {
+        "surah": 7,
+        "label": "Q:007",
+        "n_verses": 206,
+        "alpha": 0.3252477072859901,
+        "top_peak_freq": 0.0048543689320388345,
+        "top_peak_period": 206.00000000000003,
+        "top_peak_psd": 0.020724515456395833
+      },
+      {
+        "surah": 8,
+        "label": "Q:008",
+        "n_verses": 75,
+        "alpha": -0.004202513676801105,
+        "top_peak_freq": 0.17105263157894735,
+        "top_peak_period": 5.846153846153847,
+        "top_peak_psd": 0.03425156515914337
+      },
+      {
+        "surah": 9,
+        "label": "Q:009",
+        "n_verses": 129,
+        "alpha": 0.09110063884249596,
+        "top_peak_freq": 0.46153846153846156,
+        "top_peak_period": 2.1666666666666665,
+        "top_peak_psd": 0.011069045923035554
+      },
+      {
+        "surah": 10,
+        "label": "Q:010",
+        "n_verses": 109,
+        "alpha": 0.1199178852373641,
+        "top_peak_freq": 0.00909090909090909,
+        "top_peak_period": 110.0,
+        "top_peak_psd": 0.019506482511342873
+      },
+      {
+        "surah": 11,
+        "label": "Q:011",
+        "n_verses": 123,
+        "alpha": 0.11024189700035937,
+        "top_peak_freq": 0.27419354838709675,
+        "top_peak_period": 3.647058823529412,
+        "top_peak_psd": 0.009194792205106469
+      },
+      {
+        "surah": 12,
+        "label": "Q:012",
+        "n_verses": 111,
+        "alpha": 0.1423997955856568,
+        "top_peak_freq": 0.08928571428571427,
+        "top_peak_period": 11.200000000000001,
+        "top_peak_psd": 0.01997140837794182
+      },
+      {
+        "surah": 13,
+        "label": "Q:013",
+        "n_verses": 43,
+        "alpha": 0.20157869038137183,
+        "top_peak_freq": 0.13636363636363635,
+        "top_peak_period": 7.333333333333334,
+        "top_peak_psd": 0.18658146738414766
+      },
+      {
+        "surah": 14,
+        "label": "Q:014",
+        "n_verses": 52,
+        "alpha": 0.7675556375430187,
+        "top_peak_freq": 0.07692307692307693,
+        "top_peak_period": 13.0,
+        "top_peak_psd": 0.09426520945482407
+      },
+      {
+        "surah": 15,
+        "label": "Q:015",
+        "n_verses": 99,
+        "alpha": 0.2903936028240911,
+        "top_peak_freq": 0.33,
+        "top_peak_period": 3.0303030303030303,
+        "top_peak_psd": 0.0022966531935766426
+      },
+      {
+        "surah": 16,
+        "label": "Q:016",
+        "n_verses": 128,
+        "alpha": 0.43924464157895277,
+        "top_peak_freq": 0.0078125,
+        "top_peak_period": 128.0,
+        "top_peak_psd": 0.012189393320633315
+      },
+      {
+        "surah": 17,
+        "label": "Q:017",
+        "n_verses": 111,
+        "alpha": -0.08974208089821956,
+        "top_peak_freq": 0.36607142857142855,
+        "top_peak_period": 2.731707317073171,
+        "top_peak_psd": 0.00666023635555569
+      },
+      {
+        "surah": 18,
+        "label": "Q:018",
+        "n_verses": 110,
+        "alpha": 0.3076788476575225,
+        "top_peak_freq": 0.00909090909090909,
+        "top_peak_period": 110.0,
+        "top_peak_psd": 0.023654559577998096
+      },
+      {
+        "surah": 19,
+        "label": "Q:019",
+        "n_verses": 98,
+        "alpha": 0.20005873176876166,
+        "top_peak_freq": 0.02040816326530612,
+        "top_peak_period": 49.00000000000001,
+        "top_peak_psd": 0.006863277163911169
+      },
+      {
+        "surah": 20,
+        "label": "Q:020",
+        "n_verses": 135,
+        "alpha": 0.3678552072676399,
+        "top_peak_freq": 0.014705882352941176,
+        "top_peak_period": 68.0,
+        "top_peak_psd": 0.01101540839490005
+      },
+      {
+        "surah": 21,
+        "label": "Q:021",
+        "n_verses": 112,
+        "alpha": 0.15314753232625833,
+        "top_peak_freq": 0.008928571428571428,
+        "top_peak_period": 112.0,
+        "top_peak_psd": 0.0048840975305456166
+      },
+      {
+        "surah": 22,
+        "label": "Q:022",
+        "n_verses": 78,
+        "alpha": -0.18810596732397308,
+        "top_peak_freq": 0.1923076923076923,
+        "top_peak_period": 5.2,
+        "top_peak_psd": 0.054411814651262436
+      },
+      {
+        "surah": 23,
+        "label": "Q:023",
+        "n_verses": 118,
+        "alpha": 0.1162520267789203,
+        "top_peak_freq": 0.3305084745762712,
+        "top_peak_period": 3.0256410256410255,
+        "top_peak_psd": 0.006609038443113073
+      },
+      {
+        "surah": 24,
+        "label": "Q:024",
+        "n_verses": 64,
+        "alpha": 0.10072118816208209,
+        "top_peak_freq": 0.015625,
+        "top_peak_period": 64.0,
+        "top_peak_psd": 0.1953984517900597
+      },
+      {
+        "surah": 25,
+        "label": "Q:025",
+        "n_verses": 77,
+        "alpha": 0.2327107257540461,
+        "top_peak_freq": 0.08974358974358974,
+        "top_peak_period": 11.142857142857142,
+        "top_peak_psd": 0.01041159823008359
+      },
+      {
+        "surah": 26,
+        "label": "Q:026",
+        "n_verses": 227,
+        "alpha": 0.10576152215134703,
+        "top_peak_freq": 0.0043859649122807015,
+        "top_peak_period": 228.0,
+        "top_peak_psd": 0.0005443982338187169
+      },
+      {
+        "surah": 27,
+        "label": "Q:027",
+        "n_verses": 93,
+        "alpha": 0.40368409460028404,
+        "top_peak_freq": 0.010638297872340425,
+        "top_peak_period": 94.0,
+        "top_peak_psd": 0.015511537486476674
+      },
+      {
+        "surah": 28,
+        "label": "Q:028",
+        "n_verses": 88,
+        "alpha": 0.16551294008863213,
+        "top_peak_freq": 0.022727272727272728,
+        "top_peak_period": 44.0,
+        "top_peak_psd": 0.017463969517066708
+      },
+      {
+        "surah": 29,
+        "label": "Q:029",
+        "n_verses": 69,
+        "alpha": -0.1371681441057762,
+        "top_peak_freq": 0.44285714285714284,
+        "top_peak_period": 2.2580645161290325,
+        "top_peak_psd": 0.02459495744231546
+      },
+      {
+        "surah": 30,
+        "label": "Q:030",
+        "n_verses": 60,
+        "alpha": 0.3927030988611752,
+        "top_peak_freq": 0.06666666666666667,
+        "top_peak_period": 15.0,
+        "top_peak_psd": 0.04095522588638079
+      },
+      {
+        "surah": 33,
+        "label": "Q:033",
+        "n_verses": 73,
+        "alpha": 0.4645236029500069,
+        "top_peak_freq": 0.05405405405405406,
+        "top_peak_period": 18.5,
+        "top_peak_psd": 0.11635722931217178
+      },
+      {
+        "surah": 34,
+        "label": "Q:034",
+        "n_verses": 54,
+        "alpha": 0.0463558097541329,
+        "top_peak_freq": 0.14814814814814814,
+        "top_peak_period": 6.75,
+        "top_peak_psd": 0.05185548404049943
+      },
+      {
+        "surah": 35,
+        "label": "Q:035",
+        "n_verses": 45,
+        "alpha": 0.5247057506999607,
+        "top_peak_freq": 0.043478260869565216,
+        "top_peak_period": 23.0,
+        "top_peak_psd": 0.1612206557961695
+      },
+      {
+        "surah": 36,
+        "label": "Q:036",
+        "n_verses": 83,
+        "alpha": 0.12659026311967211,
+        "top_peak_freq": 0.05952380952380952,
+        "top_peak_period": 16.8,
+        "top_peak_psd": 0.005462611265315829
+      },
+      {
+        "surah": 37,
+        "label": "Q:037",
+        "n_verses": 182,
+        "alpha": 0.042648413670791877,
+        "top_peak_freq": 0.35714285714285715,
+        "top_peak_period": 2.8,
+        "top_peak_psd": 0.0005464135917258816
+      },
+      {
+        "surah": 38,
+        "label": "Q:038",
+        "n_verses": 88,
+        "alpha": 0.5993624317560662,
+        "top_peak_freq": 0.022727272727272728,
+        "top_peak_period": 44.0,
+        "top_peak_psd": 0.022717605301800246
+      },
+      {
+        "surah": 39,
+        "label": "Q:039",
+        "n_verses": 75,
+        "alpha": 0.41632533192635385,
+        "top_peak_freq": 0.05263157894736842,
+        "top_peak_period": 19.0,
+        "top_peak_psd": 0.0488636371057238
+      },
+      {
+        "surah": 40,
+        "label": "Q:040",
+        "n_verses": 85,
+        "alpha": 0.11750980310727972,
+        "top_peak_freq": 0.13953488372093023,
+        "top_peak_period": 7.166666666666667,
+        "top_peak_psd": 0.021100088750240217
+      },
+      {
+        "surah": 41,
+        "label": "Q:041",
+        "n_verses": 54,
+        "alpha": 0.26106553004255895,
+        "top_peak_freq": 0.3333333333333333,
+        "top_peak_period": 3.0,
+        "top_peak_psd": 0.043893095698706634
+      },
+      {
+        "surah": 42,
+        "label": "Q:042",
+        "n_verses": 53,
+        "alpha": 0.6148500708312387,
+        "top_peak_freq": 0.018518518518518517,
+        "top_peak_period": 54.0,
+        "top_peak_psd": 0.09935869664689585
+      },
+      {
+        "surah": 43,
+        "label": "Q:043",
+        "n_verses": 89,
+        "alpha": 0.25183871548750525,
+        "top_peak_freq": 0.044444444444444446,
+        "top_peak_period": 22.5,
+        "top_peak_psd": 0.005884930192058524
+      },
+      {
+        "surah": 44,
+        "label": "Q:044",
+        "n_verses": 59,
+        "alpha": 0.3897616747290392,
+        "top_peak_freq": 0.1,
+        "top_peak_period": 10.0,
+        "top_peak_psd": 0.004401358815906992
+      },
+      {
+        "surah": 50,
+        "label": "Q:050",
+        "n_verses": 45,
+        "alpha": 0.3827401872598061,
+        "top_peak_freq": 0.13043478260869565,
+        "top_peak_period": 7.666666666666667,
+        "top_peak_psd": 0.01300902971938113
+      },
+      {
+        "surah": 51,
+        "label": "Q:051",
+        "n_verses": 60,
+        "alpha": 0.9396521337447892,
+        "top_peak_freq": 0.016666666666666666,
+        "top_peak_period": 60.0,
+        "top_peak_psd": 0.010440754056191664
+      },
+      {
+        "surah": 52,
+        "label": "Q:052",
+        "n_verses": 49,
+        "alpha": 0.48016566888764983,
+        "top_peak_freq": 0.02,
+        "top_peak_period": 50.0,
+        "top_peak_psd": 0.019597375706277308
+      },
+      {
+        "surah": 53,
+        "label": "Q:053",
+        "n_verses": 62,
+        "alpha": 0.44493281512462735,
+        "top_peak_freq": 0.016129032258064516,
+        "top_peak_period": 62.0,
+        "top_peak_psd": 0.048810378842327126
+      },
+      {
+        "surah": 54,
+        "label": "Q:054",
+        "n_verses": 55,
+        "alpha": -0.2020501292797923,
+        "top_peak_freq": 0.3571428571428571,
+        "top_peak_period": 2.8000000000000003,
+        "top_peak_psd": 0.004381688598556976
+      },
+      {
+        "surah": 55,
+        "label": "Q:055",
+        "n_verses": 78,
+        "alpha": 0.100540439635108,
+        "top_peak_freq": 0.48717948717948717,
+        "top_peak_period": 2.0526315789473686,
+        "top_peak_psd": 0.0038406120422068385
+      },
+      {
+        "surah": 56,
+        "label": "Q:056",
+        "n_verses": 96,
+        "alpha": 0.560251200533622,
+        "top_peak_freq": 0.010416666666666666,
+        "top_peak_period": 96.0,
+        "top_peak_psd": 0.001448000749822246
+      },
+      {
+        "surah": 68,
+        "label": "Q:068",
+        "n_verses": 52,
+        "alpha": 0.17669090519066322,
+        "top_peak_freq": 0.057692307692307696,
+        "top_peak_period": 17.333333333333332,
+        "top_peak_psd": 0.010371602086467877
+      },
+      {
+        "surah": 69,
+        "label": "Q:069",
+        "n_verses": 52,
+        "alpha": 0.3211598229670807,
+        "top_peak_freq": 0.11538461538461539,
+        "top_peak_period": 8.666666666666666,
+        "top_peak_psd": 0.006127892345682915
+      },
+      {
+        "surah": 70,
+        "label": "Q:070",
+        "n_verses": 44,
+        "alpha": 0.3947174713901058,
+        "top_peak_freq": 0.022727272727272728,
+        "top_peak_period": 44.0,
+        "top_peak_psd": 0.01107934953569646
+      },
+      {
+        "surah": 74,
+        "label": "Q:074",
+        "n_verses": 56,
+        "alpha": -0.10041662835306214,
+        "top_peak_freq": 0.2857142857142857,
+        "top_peak_period": 3.5,
+        "top_peak_psd": 0.04249298965660748
+      },
+      {
+        "surah": 75,
+        "label": "Q:075",
+        "n_verses": 40,
+        "alpha": 0.5738716431531994,
+        "top_peak_freq": 0.025,
+        "top_peak_period": 40.0,
+        "top_peak_psd": 0.0035832866427286075
+      },
+      {
+        "surah": 77,
+        "label": "Q:077",
+        "n_verses": 50,
+        "alpha": 0.2178117114118639,
+        "top_peak_freq": 0.04,
+        "top_peak_period": 25.0,
+        "top_peak_psd": 0.0025290916819119408
+      },
+      {
+        "surah": 78,
+        "label": "Q:078",
+        "n_verses": 40,
+        "alpha": 1.1278396389393275,
+        "top_peak_freq": 0.025,
+        "top_peak_period": 40.0,
+        "top_peak_psd": 0.02479556081277543
+      },
+      {
+        "surah": 79,
+        "label": "Q:079",
+        "n_verses": 46,
+        "alpha": 0.5653661644924145,
+        "top_peak_freq": 0.13043478260869565,
+        "top_peak_period": 7.666666666666667,
+        "top_peak_psd": 0.0040526643722561765
+      },
+      {
+        "surah": 80,
+        "label": "Q:080",
+        "n_verses": 42,
+        "alpha": 0.40847011078577944,
+        "top_peak_freq": 0.023809523809523808,
+        "top_peak_period": 42.0,
+        "top_peak_psd": 0.0017592734668958523
+      }
+    ]
+  },
+  "notes": "PSD computed via DPSS (K=7, NW=4) multitaper; shuffle null is 1000 within-series random permutations; AR(1) surrogate is Yule-Walker phi_1-matched. Bonferroni threshold = 0.05 / (n_freq_bins - 1). A 'big peak' additionally requires obs/shuffle_p95 > 1.5.",
+  "pre_registered_criteria": {
+    "null": "shuffled + AR(1) surrogates produce equal or higher power at each frequency bin",
+    "RHYTHMIC": ">=1 frequency bin with log-power exceeds Bonferroni threshold (alpha=0.05 / n_bins) vs shuffle null AND peak height > max AR(1) surrogate",
+    "NULL_NO_RHYTHM": "no bin survives Bonferroni",
+    "side_effects": "no mutation of any pinned artefact; outputs under expE5 folder only",
+    "seed": 42,
+    "note": "patch applied post-hoc during Tier-2 audit to lift criteria from docstring into JSON schema — verdicts unchanged (see _tier2_audit_report.json, A3 passed)."
+  }
+}

@@ -1,0 +1,317 @@
+{
+  "experiment": "expX1_psi_oral",
+  "schema_version": 1,
+  "seed": 42,
+  "formula": "Ψ_oral = H(diac | base) / (2 · I(EL ; CN))",
+  "locked_quran_anchor": {
+    "H_harakat_rasm": 1.964,
+    "I_EL_CN": 1.175,
+    "psi_oral_locked": 0.8357446808510638,
+    "sanity_tolerance": 0.005
+  },
+  "thresholds": {
+    "tight_center": 0.8333333333333334,
+    "tight_half_width": 0.06,
+    "loose_band": [
+      0.65,
+      1.0
+    ],
+    "band_a_min_verses": 15,
+    "band_a_max_verses": 100
+  },
+  "corpus_order": [
+    "quran",
+    "hebrew_tanakh",
+    "greek_nt",
+    "iliad_greek",
+    "pali_dn",
+    "pali_mn",
+    "rigveda",
+    "avestan_yasna"
+  ],
+  "per_corpus": {
+    "quran": {
+      "name": "quran",
+      "alphabet": "arabic",
+      "tradition_class": "oral_liturgical",
+      "n_units_total": 114,
+      "stops_size": 14,
+      "use_band_a_for_I": true,
+      "h_diac_given_base": {
+        "H_diac_given_base": 1.9638539165927966,
+        "H_diac_marginal": 2.869743004239231,
+        "n_pairs": 337269,
+        "vocab_diac": 26,
+        "vocab_base": 87,
+        "diac_set": "explicit_DIAC_from_features.py (T7 anchor)"
+      },
+      "i_el_cn": {
+        "I_EL_CN": 1.1748651293331884,
+        "H_EL": 3.312759802138775,
+        "H_CN": 3.3097185360281802,
+        "n_units": 114,
+        "n_units_used": 68,
+        "EL_mean": 0.7074338713106891,
+        "CN_mean": 0.08596828788694998,
+        "skipped": false
+      },
+      "psi_oral": 0.8357784513135607,
+      "psi_oral_skipped_reason": null,
+      "runtime_seconds": 0.86
+    },
+    "hebrew_tanakh": {
+      "name": "hebrew_tanakh",
+      "alphabet": "hebrew",
+      "tradition_class": "narrative_or_mixed",
+      "n_units_total": 921,
+      "stops_size": 20,
+      "use_band_a_for_I": false,
+      "h_diac_given_base": {
+        "H_diac_given_base": 2.715874097179293,
+        "H_diac_marginal": 3.595975817287975,
+        "n_pairs": 1255941,
+        "vocab_diac": 104,
+        "vocab_base": 29,
+        "diac_set": "unicode_Mn_Mc_after_NFD"
+      },
+      "i_el_cn": {
+        "I_EL_CN": 0.052349958207970046,
+        "H_EL": 3.314540918563035,
+        "H_CN": 3.3089906619371283,
+        "n_units": 921,
+        "n_units_used": 921,
+        "EL_mean": 0.12633495680622045,
+        "CN_mean": 0.2700554705047407,
+        "skipped": false
+      },
+      "psi_oral": 25.939601387932086,
+      "psi_oral_skipped_reason": null,
+      "runtime_seconds": 5.9
+    },
+    "greek_nt": {
+      "name": "greek_nt",
+      "alphabet": "greek",
+      "tradition_class": "narrative_or_mixed",
+      "n_units_total": 260,
+      "stops_size": 20,
+      "use_band_a_for_I": false,
+      "h_diac_given_base": {
+        "H_diac_given_base": 0.8759751223520561,
+        "H_diac_marginal": 1.1765987627475172,
+        "n_pairs": 4449165,
+        "vocab_diac": 25,
+        "vocab_base": 50,
+        "diac_set": "unicode_Mn_Mc_after_NFD"
+      },
+      "i_el_cn": {
+        "I_EL_CN": 0.377134612760487,
+        "H_EL": 3.3154144149077776,
+        "H_CN": 3.3176453232468885,
+        "n_units": 260,
+        "n_units_used": 260,
+        "EL_mean": 0.2068752719547621,
+        "CN_mean": 0.4185115850677416,
+        "skipped": false
+      },
+      "psi_oral": 1.1613560419981603,
+      "psi_oral_skipped_reason": null,
+      "runtime_seconds": 20.96
+    },
+    "iliad_greek": {
+      "name": "iliad_greek",
+      "alphabet": "greek",
+      "tradition_class": "narrative_or_mixed",
+      "n_units_total": 24,
+      "stops_size": 20,
+      "use_band_a_for_I": false,
+      "h_diac_given_base": {
+        "H_diac_given_base": 1.085632046484705,
+        "H_diac_marginal": 1.4785524752493617,
+        "n_pairs": 552084,
+        "vocab_diac": 25,
+        "vocab_base": 48,
+        "diac_set": "unicode_Mn_Mc_after_NFD"
+      },
+      "i_el_cn": {
+        "I_EL_CN": 1.9999999999999991,
+        "H_EL": 3.292481250360578,
+        "H_CN": 3.292481250360578,
+        "n_units": 24,
+        "n_units_used": 24,
+        "EL_mean": 0.1715703954913096,
+        "CN_mean": 0.21238881406957422,
+        "skipped": false
+      },
+      "psi_oral": 0.27140801162117634,
+      "psi_oral_skipped_reason": null,
+      "runtime_seconds": 2.2
+    },
+    "pali_dn": {
+      "name": "pali_dn",
+      "alphabet": "latin_iast",
+      "tradition_class": "oral_liturgical",
+      "n_units_total": 34,
+      "stops_size": 20,
+      "use_band_a_for_I": false,
+      "h_diac_given_base": {
+        "H_diac_given_base": 0.46990823859714437,
+        "H_diac_marginal": 0.8156950443559587,
+        "n_pairs": 1044405,
+        "vocab_diac": 5,
+        "vocab_base": 42,
+        "diac_set": "unicode_Mn_Mc_after_NFD"
+      },
+      "i_el_cn": {
+        "I_EL_CN": 1.5269143110749965,
+        "H_EL": 3.307188576162669,
+        "H_CN": 3.307188576162669,
+        "n_units": 34,
+        "n_units_used": 34,
+        "EL_mean": 0.3749084812117843,
+        "CN_mean": 0.056528862031102224,
+        "skipped": false
+      },
+      "psi_oral": 0.15387511767648374,
+      "psi_oral_skipped_reason": null,
+      "runtime_seconds": 3.35
+    },
+    "pali_mn": {
+      "name": "pali_mn",
+      "alphabet": "latin_iast",
+      "tradition_class": "oral_liturgical",
+      "n_units_total": 152,
+      "stops_size": 20,
+      "use_band_a_for_I": false,
+      "h_diac_given_base": {
+        "H_diac_given_base": 0.4631510250776329,
+        "H_diac_marginal": 0.8097322725636439,
+        "n_pairs": 1763405,
+        "vocab_diac": 5,
+        "vocab_base": 42,
+        "diac_set": "unicode_Mn_Mc_after_NFD"
+      },
+      "i_el_cn": {
+        "I_EL_CN": 0.5276927934349075,
+        "H_EL": 3.321434937963177,
+        "H_CN": 3.321434937963177,
+        "n_units": 152,
+        "n_units_used": 152,
+        "EL_mean": 0.4191149859562957,
+        "CN_mean": 0.09215230492440243,
+        "skipped": false
+      },
+      "psi_oral": 0.43884531951142136,
+      "psi_oral_skipped_reason": null,
+      "runtime_seconds": 6.07
+    },
+    "rigveda": {
+      "name": "rigveda",
+      "alphabet": "devanagari",
+      "tradition_class": "oral_liturgical",
+      "n_units_total": 1024,
+      "stops_size": 20,
+      "use_band_a_for_I": false,
+      "h_diac_given_base": {
+        "H_diac_given_base": 3.7540325494019524,
+        "H_diac_marginal": 4.080793472138494,
+        "n_pairs": 513871,
+        "vocab_diac": 94,
+        "vocab_base": 48,
+        "diac_set": "unicode_Mn_Mc_after_NFD"
+      },
+      "i_el_cn": {
+        "I_EL_CN": 0.1109703030555213,
+        "H_EL": 2.8303376173233055,
+        "H_CN": 2.8404618295553914,
+        "n_units": 1024,
+        "n_units_used": 1024,
+        "EL_mean": 0.13774730498528154,
+        "CN_mean": 0.14095684053513816,
+        "skipped": false
+      },
+      "psi_oral": 16.914581856750058,
+      "psi_oral_skipped_reason": null,
+      "runtime_seconds": 2.9
+    },
+    "avestan_yasna": {
+      "name": "avestan_yasna",
+      "alphabet": "latin_geldner",
+      "tradition_class": "oral_liturgical",
+      "n_units_total": 72,
+      "stops_size": 20,
+      "use_band_a_for_I": false,
+      "h_diac_given_base": {
+        "H_diac_given_base": 0.0,
+        "H_diac_marginal": -0.0,
+        "n_pairs": 135990,
+        "vocab_diac": 1,
+        "vocab_base": 46,
+        "diac_set": "unicode_Mn_Mc_after_NFD"
+      },
+      "i_el_cn": {
+        "I_EL_CN": 1.0164096287657034,
+        "H_EL": 3.316887755181947,
+        "H_CN": 3.1120951387346683,
+        "n_units": 72,
+        "n_units_used": 72,
+        "EL_mean": 0.28642975289931616,
+        "CN_mean": 0.14202556371377148,
+        "skipped": false
+      },
+      "psi_oral": 0.0,
+      "psi_oral_skipped_reason": null,
+      "runtime_seconds": 0.44
+    }
+  },
+  "sanity": {
+    "quran_psi_measured": 0.8357784513135607,
+    "quran_psi_locked": 0.8357446808510638,
+    "drift_abs": 3.377046249686266e-05,
+    "tolerance": 0.005,
+    "PSI_S1_verdict": "PASS"
+  },
+  "predictions": {
+    "PSI_1_loose_band_3_of_5": {
+      "verdict": "FAIL",
+      "n_in_band": 0,
+      "of_n_tested": 5,
+      "band": [
+        0.65,
+        1.0
+      ],
+      "per_corpus_psi": {
+        "hebrew_tanakh": 25.939601387932086,
+        "greek_nt": 1.1613560419981603,
+        "pali_mn": 0.43884531951142136,
+        "rigveda": 16.914581856750058,
+        "avestan_yasna": 0.0
+      }
+    },
+    "PSI_2_tight_band_3_of_5": {
+      "verdict": "FAIL",
+      "n_in_band": 0,
+      "of_n_tested": 5,
+      "band": [
+        0.7733333333333334,
+        0.8933333333333333
+      ],
+      "per_corpus_psi": {
+        "hebrew_tanakh": 25.939601387932086,
+        "greek_nt": 1.1613560419981603,
+        "pali_mn": 0.43884531951142136,
+        "rigveda": 16.914581856750058,
+        "avestan_yasna": 0.0
+      }
+    },
+    "PSI_3_iliad_outside_tight": {
+      "verdict": "PASS",
+      "iliad_psi": 0.27140801162117634,
+      "tight_band": [
+        0.7733333333333334,
+        0.8933333333333333
+      ]
+    }
+  },
+  "verdict": "NO_SUPPORT",
+  "interpretation": "PSI-S1 sanity-check Quran reproduces locked 1.964/(2·1.175)=0.83574. PSI-1 tests whether at least 3 of 5 non-Quran oral-liturgical corpora produce Ψ in [0.65, 1.00] (loose). PSI-2 tightens that to ±0.06 around 5/6 ≈ 0.8333. PSI-3 is the negative control: Iliad (epic narrative, not oral-mnemonic) should sit outside the tight band. Verdict mapping is in PREREG.md §Verdict."
+}

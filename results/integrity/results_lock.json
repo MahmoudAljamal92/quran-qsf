@@ -1,0 +1,413 @@
+{
+  "version": 1,
+  "hash": "a6777be61b9496b760387a69001bc78ed72298c865e59388fbc4561c6fcb6315",
+  "timestamp": "2026-04-27T21:48:21.289556",
+  "entries": [
+    {
+      "id": "D02",
+      "name": "LEGACY Phi_M Cohen d (biased)",
+      "expected": 6.34,
+      "tol": Infinity,
+      "verdict_expected": "DEPRECATED (biased; see Phi_M_hotelling_T2)"
+    },
+    {
+      "id": "S1",
+      "name": "LEGACY multivariate separation d",
+      "expected": 6.34,
+      "tol": Infinity,
+      "verdict_expected": "DEPRECATED (biased; see Phi_M_hotelling_T2)"
+    },
+    {
+      "id": "D27",
+      "name": "LEGACY Abbasi discrimination (now directional)",
+      "expected": 7.0,
+      "tol": Infinity,
+      "verdict_expected": "DEPRECATED (non-directional; see D27_directional)"
+    },
+    {
+      "id": "D28",
+      "name": "LEGACY tight-fairness Cohen d",
+      "expected": 6.34,
+      "tol": Infinity,
+      "verdict_expected": "DEPRECATED (biased; see Phi_M_hotelling_T2)"
+    },
+    {
+      "id": "D03",
+      "name": "Quran EL",
+      "expected": 0.707,
+      "tol": 0.03,
+      "verdict_expected": "PROVED"
+    },
+    {
+      "id": "D04",
+      "name": "Quran CN",
+      "expected": 0.086,
+      "tol": 0.01,
+      "verdict_expected": "PROVED"
+    },
+    {
+      "id": "D01",
+      "name": "Anti-metric VL_CV d (Band A, audit v5)",
+      "expected": 1.4,
+      "tol": Infinity,
+      "verdict_expected": "PENDING_REBLESS_v5 (was WEAKENED, pre-Band-A)"
+    },
+    {
+      "id": "D06",
+      "name": "Turbo gain G_turbo",
+      "expected": 1.644,
+      "tol": 0.05,
+      "verdict_expected": "WEAKENED"
+    },
+    {
+      "id": "S4",
+      "name": "H3/H2 bigram sufficiency",
+      "expected": 0.222,
+      "tol": 0.02,
+      "verdict_expected": "PROVED (partial)"
+    },
+    {
+      "id": "D08",
+      "name": "Markov z-score (Quran) — audit v5",
+      "expected": 44.9,
+      "tol": Infinity,
+      "verdict_expected": "PENDING_REBLESS_v5 (was WEAKENED, pre-hadith-removal)"
+    },
+    {
+      "id": "T7",
+      "name": "I(EL;CN) corpus-level (bits)",
+      "expected": 1.17,
+      "tol": 0.1,
+      "verdict_expected": "PROVED (corpus)"
+    },
+    {
+      "id": "D05",
+      "name": "I(EL;CN) unit-level (bits)",
+      "expected": 0.1,
+      "tol": 0.15,
+      "verdict_expected": "FALSIFIED (unit)"
+    },
+    {
+      "id": "D09",
+      "name": "Classifier AUC Quran vs Arabic ctrl — audit v5",
+      "expected": 0.998,
+      "tol": Infinity,
+      "verdict_expected": "PENDING_REBLESS_v5 (was PROVED STRONGER, pre-hadith-removal)"
+    },
+    {
+      "id": "D23",
+      "name": "Canon-wins rate (Quran)",
+      "expected": 1.0,
+      "tol": 0.05,
+      "verdict_expected": "PROVED"
+    },
+    {
+      "id": "D24",
+      "name": "Phi_M 10-fold CV median d — audit v5",
+      "expected": 6.89,
+      "tol": Infinity,
+      "verdict_expected": "PENDING_REBLESS_v5 (was PROVED STRONGER, pre-hadith-removal)"
+    },
+    {
+      "id": "D26",
+      "name": "Bootstrap Omega > 2.0 fraction",
+      "expected": 1.0,
+      "tol": 0.05,
+      "verdict_expected": "PROVED STRONGER"
+    },
+    {
+      "id": "D07",
+      "name": "Scale-free −log10 Fisher p @ W=10 — audit v5",
+      "expected": 16.0,
+      "tol": Infinity,
+      "verdict_expected": "PENDING_REBLESS_v5 (was 1.1e-16 machine-eps artefact; now chi2.sf)"
+    },
+    {
+      "id": "D11",
+      "name": "Perturbation gap sum — audit v5",
+      "expected": 5.02,
+      "tol": Infinity,
+      "verdict_expected": "PENDING_REBLESS_v5 (was PROVED STRONGER, pre-hadith-removal)"
+    },
+    {
+      "id": "D14",
+      "name": "Verse-internal gap — audit v5",
+      "expected": 5.8,
+      "tol": Infinity,
+      "verdict_expected": "PENDING_REBLESS_v5 (was PROVED STRONGER, pre-hadith-removal)"
+    },
+    {
+      "id": "D17",
+      "name": "Canonical path z-score (Band A, audit v5)",
+      "expected": -3.96,
+      "tol": Infinity,
+      "verdict_expected": "PENDING_REBLESS_v5 (was PROVED, pre-Band-A)"
+    },
+    {
+      "id": "S5",
+      "name": "Shannon-Aljamal path minimality z (Band A, audit v5)",
+      "expected": -3.96,
+      "tol": Infinity,
+      "verdict_expected": "PENDING_REBLESS_v5 (was PROVED, pre-Band-A)"
+    },
+    {
+      "id": "D22",
+      "name": "Root-diversity x EL — audit v5",
+      "expected": 0.632,
+      "tol": Infinity,
+      "verdict_expected": "PENDING_REBLESS_v5 (was PROVED STRONGER, pre-hadith-removal)"
+    },
+    {
+      "id": "E_harakat_capacity",
+      "name": "H(harakat | rasm) bits",
+      "expected": 1.96,
+      "tol": 0.15,
+      "verdict_expected": "PROVED"
+    },
+    {
+      "id": "D20",
+      "name": "Hierarchical Omega (Quran) — audit v5",
+      "expected": 7.89,
+      "tol": Infinity,
+      "verdict_expected": "PENDING_REBLESS_v5 (was WEAKENED, pre-hadith-removal)"
+    },
+    {
+      "id": "D10",
+      "name": "%T>0 Quran",
+      "expected": 39.7,
+      "tol": 3.0,
+      "verdict_expected": "PROVED STRONGER"
+    },
+    {
+      "id": "T28",
+      "name": "H2/H1 Markov-order d — audit v5",
+      "expected": -0.03,
+      "tol": Infinity,
+      "verdict_expected": "PENDING_REBLESS_v5 (was NOT REPRODUCED, pre-hadith-removal)"
+    },
+    {
+      "id": "T29",
+      "name": "phi_frac (golden-ratio claim)",
+      "expected": -0.915,
+      "tol": 0.2,
+      "verdict_expected": "NOT REPRODUCED"
+    },
+    {
+      "id": "D25",
+      "name": "F_Meccan Band A — audit v5",
+      "expected": 0.8,
+      "tol": Infinity,
+      "verdict_expected": "PENDING_REBLESS_v5 (was FALSIFIED, pre-hadith-removal)"
+    },
+    {
+      "id": "D18",
+      "name": "Adjacent diversity percentile",
+      "expected": 10.6,
+      "tol": 5.0,
+      "verdict_expected": "FALSIFIED"
+    },
+    {
+      "id": "D21",
+      "name": "Rhyme-swap P3 Quran vs Bible",
+      "expected": -0.28,
+      "tol": 0.15,
+      "verdict_expected": "NOT REPRODUCED"
+    },
+    {
+      "id": "G1",
+      "name": "Hill alpha min across 5 features",
+      "expected": 2.5,
+      "tol": 1.0,
+      "verdict_expected": "PROVED"
+    },
+    {
+      "id": "G2",
+      "name": "Max normalised 5-ch MI",
+      "expected": 0.3,
+      "tol": 0.05,
+      "verdict_expected": "PROVED"
+    },
+    {
+      "id": "G3",
+      "name": "Hessian PD claim (tautology)",
+      "expected": 0.0,
+      "tol": 0.0,
+      "verdict_expected": "FALSIFIED by math"
+    },
+    {
+      "id": "G5",
+      "name": "gamma(Omega) algebraic claim",
+      "expected": 0.0,
+      "tol": 0.0,
+      "verdict_expected": "FALSIFIED by math"
+    },
+    {
+      "id": "L1",
+      "name": "SCI (Quran)",
+      "expected": 5.3,
+      "tol": 2.0,
+      "verdict_expected": "EXPLORATORY"
+    },
+    {
+      "id": "L2",
+      "name": "Retention scaling alpha",
+      "expected": 1.0,
+      "tol": 5.0,
+      "verdict_expected": "EXPLORATORY"
+    },
+    {
+      "id": "L3",
+      "name": "Free-energy F (Quran)",
+      "expected": 0.0,
+      "tol": 5.0,
+      "verdict_expected": "EXPLORATORY"
+    },
+    {
+      "id": "L4",
+      "name": "Aljamal invariance CV",
+      "expected": 1.7,
+      "tol": 1.0,
+      "verdict_expected": "EXPLORATORY"
+    },
+    {
+      "id": "L5",
+      "name": "OBI inequality slack (kappa=1)",
+      "expected": -74.0,
+      "tol": 15.0,
+      "verdict_expected": "EXPLORATORY"
+    },
+    {
+      "id": "L6",
+      "name": "Empirical gamma slope b",
+      "expected": 0.0,
+      "tol": 0.5,
+      "verdict_expected": "EXPLORATORY"
+    },
+    {
+      "id": "L7",
+      "name": "Psi(Quran) rank",
+      "expected": 1.0,
+      "tol": 1.0,
+      "verdict_expected": "EXPLORATORY"
+    },
+    {
+      "id": "Adiyat_blind",
+      "name": "Adiyat winning variant (7-metric)",
+      "expected": 0.71,
+      "tol": 0.3,
+      "verdict_expected": "PROVED"
+    },
+    {
+      "id": "Supp_A_Hurst",
+      "name": "Quran Hurst H",
+      "expected": 0.7,
+      "tol": 0.15,
+      "verdict_expected": "PROVED"
+    },
+    {
+      "id": "Phi_M_hotelling_T2",
+      "name": "Phi_M Hotelling T² (Band A)",
+      "expected": 0.0,
+      "tol": Infinity,
+      "verdict_expected": "HEADLINE (pending lock refresh)"
+    },
+    {
+      "id": "Phi_M_perm_p_value",
+      "name": "Phi_M permutation p-value",
+      "expected": 0.0,
+      "tol": Infinity,
+      "verdict_expected": "HEADLINE (pending lock refresh)"
+    },
+    {
+      "id": "Phi_M_F_tail_log10_p",
+      "name": "Phi_M Hotelling T² analytic F-tail log10 p (mpmath 80-digit)",
+      "expected": -480.25,
+      "tol": 10.0,
+      "verdict_expected": "PROVED HEADLINE (analytic, replaces perm-floor 1/(B+1))"
+    },
+    {
+      "id": "HSIC_EL_CN_quran",
+      "name": "HSIC(EL,CN) Quran (Band A)",
+      "expected": 0.0,
+      "tol": Infinity,
+      "verdict_expected": "REPORTING (binning-free MI alt)"
+    },
+    {
+      "id": "HSIC_EL_CN_perm_p",
+      "name": "HSIC(EL,CN) permutation p",
+      "expected": 1.0,
+      "tol": Infinity,
+      "verdict_expected": "REPORTING (binning-free MI alt)"
+    },
+    {
+      "id": "HSIC_G2_max_quran",
+      "name": "HSIC 5-ch max pair (Quran)",
+      "expected": 0.0,
+      "tol": Infinity,
+      "verdict_expected": "REPORTING (G2 kernel variant)"
+    },
+    {
+      "id": "HSIC_G2_perm_p",
+      "name": "HSIC 5-ch max perm p",
+      "expected": 1.0,
+      "tol": Infinity,
+      "verdict_expected": "REPORTING (G2 kernel variant)"
+    },
+    {
+      "id": "TDA_H1_max_persistence",
+      "name": "Max H1 persistence (Quran 5D)",
+      "expected": 0.0,
+      "tol": Infinity,
+      "verdict_expected": "APPENDIX (USE_TDA)"
+    },
+    {
+      "id": "TDA_n_loops_long_lived",
+      "name": "# H1 features > 0.25 σ",
+      "expected": 0.0,
+      "tol": Infinity,
+      "verdict_expected": "APPENDIX (USE_TDA)"
+    },
+    {
+      "id": "Supp_A_Hurst_R2",
+      "name": "R/S Hurst log-log R² (Quran)",
+      "expected": 1.0,
+      "tol": Infinity,
+      "verdict_expected": "REPORTING (scaling-regime gate)"
+    },
+    {
+      "id": "Hurst_DFA_quran_R2",
+      "name": "DFA Hurst log-log R² (Quran)",
+      "expected": 1.0,
+      "tol": Infinity,
+      "verdict_expected": "REPORTING (scaling-regime gate)"
+    },
+    {
+      "id": "Supp_C_acoustic_bridge_perm_p",
+      "name": "Supp-C rhyme×conn perm p",
+      "expected": 1.0,
+      "tol": Infinity,
+      "verdict_expected": "REPORTING (chi2 replacement)"
+    },
+    {
+      "id": "TDA_H1_bootstrap_p",
+      "name": "TDA H1 marginal-shuffle perm p",
+      "expected": 1.0,
+      "tol": Infinity,
+      "verdict_expected": "REPORTING (closes caveat c)"
+    },
+    {
+      "id": "L7_sparse_pca_d",
+      "name": "Sparse-PCA PC1 Cohen's d (Q vs ctrl)",
+      "expected": 0.0,
+      "tol": Infinity,
+      "verdict_expected": "REPORTING (Ψ alternative)"
+    },
+    {
+      "id": "L7_sparse_pca_perm_p",
+      "name": "Sparse-PCA PC1 perm p",
+      "expected": 1.0,
+      "tol": Infinity,
+      "verdict_expected": "REPORTING (Ψ alternative)"
+    }
+  ]
+}

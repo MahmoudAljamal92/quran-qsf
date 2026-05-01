@@ -1,0 +1,111 @@
+{
+  "experiment": "expParadigm2_continuation_ACD",
+  "task_id": "Paradigm-Stage 2 — Paths A + C + D continuation",
+  "title": "Edgeworth non-Gaussian correction to T² (Path A) ; F6-lag-k redundancy regression (Path C, P2_OP4 partial) ; non-linear discriminators MMD/Energy vs T² (Path D, new direction).",
+  "PATH_A_edgeworth_correction": {
+    "T2_record": {
+      "T2": 3557.3394545046353,
+      "F": 710.3626980606927,
+      "df1": 5,
+      "df2": 2571,
+      "p_F_tail": 0.0,
+      "n_eff": 66.20566550252231,
+      "p_dim": 5
+    },
+    "pooled_skewness": 20.332489953689457,
+    "pooled_kurtosis": 93.65423208388255,
+    "edgeworth_terms": {
+      "expected_b2_under_mvn": 35.0,
+      "observed_b2_pooled": 93.65423208388255,
+      "excess_b2": 58.65423208388255,
+      "delta": 0.044296988511993686,
+      "correction_factor_var_inflation": 1.0442969885119937,
+      "interpretation": "delta > 0 means the null distribution of T² has heavier tail than chi²(p) under Gaussianity. The F-tail p-value should be inflated by approximately (1 + delta) at first-order Edgeworth approximation."
+    },
+    "verdict": "EDGEWORTH_CORRECTION_NEGLIGIBLE_(<5%)"
+  },
+  "PATH_C_redundancy": {
+    "feature_family": "F6 lag-k Spearman correlations on verse-length series",
+    "per_lag": [
+      {
+        "lag": 1,
+        "n_valid": 68,
+        "R2": 0.10762632147945772,
+        "redundant_at_0p95": false,
+        "redundant_at_0p80": false
+      },
+      {
+        "lag": 2,
+        "n_valid": 68,
+        "R2": 0.13861730531006777,
+        "redundant_at_0p95": false,
+        "redundant_at_0p80": false
+      },
+      {
+        "lag": 3,
+        "n_valid": 68,
+        "R2": 0.12546186361114797,
+        "redundant_at_0p95": false,
+        "redundant_at_0p80": false
+      },
+      {
+        "lag": 4,
+        "n_valid": 68,
+        "R2": 0.08358152323489632,
+        "redundant_at_0p95": false,
+        "redundant_at_0p80": false
+      },
+      {
+        "lag": 5,
+        "n_valid": 68,
+        "R2": 0.09888056850418436,
+        "redundant_at_0p95": false,
+        "redundant_at_0p80": false
+      }
+    ],
+    "mean_R2_across_lags": 0.11083351642795083,
+    "n_lags_redundant_at_0p95": 0,
+    "n_lags_redundant_at_0p80": 0,
+    "interpretation": "If mean_R2 across lags is high (e.g. > 0.5), the F6-family features are 'mostly explained' by the 5-D triple. R² > 0.95 would be 'almost-deterministically redundant'. This is EMPIRICAL evidence for minimal-sufficiency over the F6 family; the formal P2_OP4 claim requires this for ALL feature families, not just F6."
+  },
+  "PATH_D_nonlinear_discriminators": {
+    "n_perm": 2000,
+    "MMD_RBF_squared": {
+      "obs": 0.6593520310722426,
+      "n_perm": 2000,
+      "n_perm_ge_obs": 0,
+      "p_perm": 0.0004997501249375312,
+      "null_mean": -0.00019146175888934584,
+      "null_std": 0.004193717131647641,
+      "obs_z_under_null": 157.2694276049106
+    },
+    "Energy_distance": {
+      "obs": 2.278617011287163,
+      "n_perm": 2000,
+      "n_perm_ge_obs": 0,
+      "p_perm": 0.0004997501249375312,
+      "null_mean": 0.012505430025384996,
+      "null_std": 0.00679280221233746,
+      "obs_z_under_null": 333.60482322684766
+    },
+    "Hotelling_T2_perm": {
+      "obs": 3557.3394545046353,
+      "n_perm": 2000,
+      "n_perm_ge_obs": 0,
+      "p_perm": 0.0004997501249375312,
+      "null_mean": 5.058909335511153,
+      "null_std": 3.3104300910711637,
+      "obs_z_under_null": 1073.0571096336623
+    },
+    "z_sigma_under_perm_null": {
+      "MMD_RBF_squared": 157.2694276049106,
+      "Energy_distance": 333.60482322684766,
+      "Hotelling_T2": 1073.0571096336623
+    },
+    "winner": "Hotelling_T2",
+    "winner_sigma": 1073.0571096336623,
+    "verdict": "T2_AND_NONLINEAR_TIE_AT_PERM_FLOOR",
+    "caveat": "Permutation null floors at 1/(B+1) ≈ 5e-4 for B=2000. T²'s exact F-tail p ≈ 10⁻⁴⁸⁰ is not comparable at this B; the σ-equivalent under the SAME permutation null is the apples-to-apples comparison reported here. Larger B or asymptotic-tail derivations of MMD/energy null would tighten the comparison."
+  },
+  "runtime_seconds": 227.19
+}

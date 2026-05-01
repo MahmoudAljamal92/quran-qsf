@@ -1,0 +1,535 @@
+{
+  "exp": "exp09_R1_variant_forensics_9ch",
+  "schema_version": 3,
+  "seed": 42,
+  "fast_mode": true,
+  "control_training_corpora": [
+    "poetry_abbasi",
+    "poetry_jahili",
+    "ksucca",
+    "hindawi",
+    "arabic_bible"
+  ],
+  "n_surahs_sampled": 20,
+  "n_null_cases": 200,
+  "n_cases_by_edit_type": {
+    "swap": 200,
+    "delete": 200,
+    "insert": 200,
+    "word_delete": 200,
+    "multi_word": 175
+  },
+  "channels_implemented": [
+    "A_spectral",
+    "B_root_bigram",
+    "C_bigram_dist",
+    "D_wazn",
+    "E_ncd",
+    "F_coupling",
+    "G_root_trigram",
+    "H_local_spec",
+    "I_root_field"
+  ],
+  "channel_notes": {
+    "A_spectral": "top-2 SVD ratio of the 34x34 letter-transition matrix",
+    "B_root_bigram": "log-likelihood of root-bigrams under a CONTROL-trained reference (F-1)",
+    "C_bigram_dist": "L2 distance of letter-bigram counts between canonical and tampered text. TAUTOLOGICAL: fires on any edit by construction (F-ULT2-C1). Useful as a sanity check, NOT as an independent authenticity signal; MASTER downweights it.",
+    "D_wazn": "n_distinct C-L shapes / n_words (F-19)",
+    "E_ncd": "gzip normalised-compression-distance vs canonical",
+    "F_coupling": "mean adjacent-verse bigram-Jaccard coupling",
+    "G_root_trigram": "char n-gram LM log-prob per char of the root-stream under a CONTROL-trained LM (F-1)",
+    "H_local_spec": "mean A_spectral over 3-verse rolling windows",
+    "I_root_field": "share of adjacent word-pairs sharing first consonant (crude root proxy)"
+  },
+  "per_channel_null_summary": {
+    "A_spectral": {
+      "mean": -0.00014978096650972495,
+      "std": 0.0008977725361770625,
+      "p95": 0.0019293174278254498,
+      "n": 200
+    },
+    "B_root_bigram": {
+      "mean": -0.0037603990929472265,
+      "std": 0.00875666920773945,
+      "p95": 0.01924624886909496,
+      "n": 200
+    },
+    "C_bigram_dist": {
+      "mean": 1.9970710678118655,
+      "std": 0.0414213562373095,
+      "p95": 2.0,
+      "n": 200
+    },
+    "D_wazn": {
+      "mean": -3.4886700892008404e-05,
+      "std": 0.000400413593461401,
+      "p95": 0.0,
+      "n": 200
+    },
+    "E_ncd": {
+      "mean": 0.003644316019996624,
+      "std": 0.0037298631414029106,
+      "p95": 0.010985789705877696,
+      "n": 200
+    },
+    "F_coupling": {
+      "mean": -0.00031508431853781904,
+      "std": 0.0007420293880431438,
+      "p95": 0.0016714904207978166,
+      "n": 200
+    },
+    "G_root_trigram": {
+      "mean": -0.0017901779059153876,
+      "std": 0.003730632072175105,
+      "p95": 0.008673778311114499,
+      "n": 200
+    },
+    "H_local_spec": {
+      "mean": -8.007382986787603e-05,
+      "std": 0.0006343362779093256,
+      "p95": 0.0013734117229820065,
+      "n": 200
+    },
+    "I_root_field": {
+      "mean": -0.00010701811904221953,
+      "std": 0.0009432172696002999,
+      "p95": 1.7605633802810875e-05,
+      "n": 200
+    }
+  },
+  "per_edit_type_null_summary": {
+    "swap": {
+      "A_spectral": {
+        "mean": -0.00014978096650972495,
+        "std": 0.0008977725361770625,
+        "p95": 0.0019293174278254498,
+        "n": 200
+      },
+      "B_root_bigram": {
+        "mean": -0.0037603990929472265,
+        "std": 0.00875666920773945,
+        "p95": 0.01924624886909496,
+        "n": 200
+      },
+      "C_bigram_dist": {
+        "mean": 1.9970710678118655,
+        "std": 0.0414213562373095,
+        "p95": 2.0,
+        "n": 200
+      },
+      "D_wazn": {
+        "mean": -3.4886700892008404e-05,
+        "std": 0.000400413593461401,
+        "p95": 0.0,
+        "n": 200
+      },
+      "E_ncd": {
+        "mean": 0.003644316019996624,
+        "std": 0.0037298631414029106,
+        "p95": 0.010985789705877696,
+        "n": 200
+      },
+      "F_coupling": {
+        "mean": -0.00031508431853781904,
+        "std": 0.0007420293880431438,
+        "p95": 0.0016714904207978166,
+        "n": 200
+      },
+      "G_root_trigram": {
+        "mean": -0.0017901779059153876,
+        "std": 0.003730632072175105,
+        "p95": 0.008673778311114499,
+        "n": 200
+      },
+      "H_local_spec": {
+        "mean": -8.007382986787603e-05,
+        "std": 0.0006343362779093256,
+        "p95": 0.0013734117229820065,
+        "n": 200
+      },
+      "I_root_field": {
+        "mean": -0.00010701811904221953,
+        "std": 0.0009432172696002999,
+        "p95": 1.7605633802810875e-05,
+        "n": 200
+      }
+    },
+    "delete": {
+      "A_spectral": {
+        "mean": -3.8665136124070854e-05,
+        "std": 0.0010170442572678005,
+        "p95": 0.002369906086560767,
+        "n": 200
+      },
+      "B_root_bigram": {
+        "mean": -0.0031352047203474067,
+        "std": 0.00814589761765134,
+        "p95": 0.02315511215373326,
+        "n": 200
+      },
+      "C_bigram_dist": {
+        "mean": 1.6661662348876782,
+        "std": 0.21002531008093014,
+        "p95": 1.7320508075688772,
+        "n": 200
+      },
+      "D_wazn": {
+        "mean": 0.00041904687190380763,
+        "std": 0.0020098889072987258,
+        "p95": 0.004927133015368284,
+        "n": 200
+      },
+      "E_ncd": {
+        "mean": 0.003695027695163643,
+        "std": 0.003228480660000865,
+        "p95": 0.010263929618768326,
+        "n": 200
+      },
+      "F_coupling": {
+        "mean": -0.00016916297151366521,
+        "std": 0.0006120942426113611,
+        "p95": 0.0013916166331579803,
+        "n": 200
+      },
+      "G_root_trigram": {
+        "mean": -0.001161175433595073,
+        "std": 0.003375977327551531,
+        "p95": 0.006861370156132427,
+        "n": 200
+      },
+      "H_local_spec": {
+        "mean": -7.991771367884093e-05,
+        "std": 0.0012661959472302323,
+        "p95": 0.002473173464253446,
+        "n": 200
+      },
+      "I_root_field": {
+        "mean": -8.189975894056733e-05,
+        "std": 0.0012489199736086321,
+        "p95": 0.0012894266377218386,
+        "n": 200
+      }
+    },
+    "insert": {
+      "A_spectral": {
+        "mean": 2.291387412141799e-05,
+        "std": 0.0005397664234403878,
+        "p95": 0.0008950985468971328,
+        "n": 200
+      },
+      "B_root_bigram": {
+        "mean": -0.003431857667718301,
+        "std": 0.007383087652878613,
+        "p95": 0.01849820880921501,
+        "n": 200
+      },
+      "C_bigram_dist": {
+        "mean": 1.680807251039056,
+        "std": 0.18724928928092954,
+        "p95": 1.7320508075688772,
+        "n": 200
+      },
+      "D_wazn": {
+        "mean": 0.0010344253336065513,
+        "std": 0.002495540882779067,
+        "p95": 0.005780346820809246,
+        "n": 200
+      },
+      "E_ncd": {
+        "mean": 0.003869283036996517,
+        "std": 0.003394317003571302,
+        "p95": 0.010815794561662836,
+        "n": 200
+      },
+      "F_coupling": {
+        "mean": -0.0003163445492498397,
+        "std": 0.00074959139353565,
+        "p95": 0.001939048835333658,
+        "n": 200
+      },
+      "G_root_trigram": {
+        "mean": -0.0022671518853019223,
+        "std": 0.0040336721998721565,
+        "p95": 0.012494334395313394,
+        "n": 200
+      },
+      "H_local_spec": {
+        "mean": 4.783115210321931e-05,
+        "std": 0.0005265635329319387,
+        "p95": 0.0009097338602087032,
+        "n": 200
+      },
+      "I_root_field": {
+        "mean": 1.4186478120003649e-05,
+        "std": 0.0008075659819336549,
+        "p95": 0.0,
+        "n": 200
+      }
+    },
+    "word_delete": {
+      "A_spectral": {
+        "mean": -9.133936091137773e-05,
+        "std": 0.0010900026624454076,
+        "p95": 0.0022399245579663757,
+        "n": 200
+      },
+      "B_root_bigram": {
+        "mean": -0.0018876921264955016,
+        "std": 0.010748561113520507,
+        "p95": 0.02540223573897532,
+        "n": 200
+      },
+      "C_bigram_dist": {
+        "mean": 2.39228649611794,
+        "std": 0.4096392830317472,
+        "p95": 3.1622776601683795,
+        "n": 200
+      },
+      "D_wazn": {
+        "mean": 0.0005120629180491862,
+        "std": 0.0013432492137292985,
+        "p95": 0.003587037128826138,
+        "n": 200
+      },
+      "E_ncd": {
+        "mean": 0.005121970279611033,
+        "std": 0.004287273103304802,
+        "p95": 0.013681267076502726,
+        "n": 200
+      },
+      "F_coupling": {
+        "mean": -0.00045613617461322145,
+        "std": 0.0016826756831955312,
+        "p95": 0.002561417296289446,
+        "n": 200
+      },
+      "G_root_trigram": {
+        "mean": -0.00023613551223177653,
+        "std": 0.0018845838211135626,
+        "p95": 0.004145582098914479,
+        "n": 200
+      },
+      "H_local_spec": {
+        "mean": 0.00021018748584066105,
+        "std": 0.0014964679379259266,
+        "p95": 0.002319804407959497,
+        "n": 200
+      },
+      "I_root_field": {
+        "mean": 5.331958120493516e-06,
+        "std": 0.001894544572447801,
+        "p95": 0.004981055359642105,
+        "n": 200
+      }
+    },
+    "multi_word": {
+      "A_spectral": {
+        "mean": 0.0005473783333787262,
+        "std": 0.002523587959053175,
+        "p95": 0.006148860664286645,
+        "n": 175
+      },
+      "B_root_bigram": {
+        "mean": -0.004226088410143569,
+        "std": 0.013133579012415412,
+        "p95": 0.031525357330959354,
+        "n": 175
+      },
+      "C_bigram_dist": {
+        "mean": 4.396815870193349,
+        "std": 0.61542334570707,
+        "p95": 5.5043872113851675,
+        "n": 175
+      },
+      "D_wazn": {
+        "mean": -0.00044123603262044493,
+        "std": 0.001343611823025139,
+        "p95": 0.004500891265597125,
+        "n": 175
+      },
+      "E_ncd": {
+        "mean": 0.0067331818535342975,
+        "std": 0.005593107667907618,
+        "p95": 0.019061583577712607,
+        "n": 175
+      },
+      "F_coupling": {
+        "mean": -0.00046138454572478146,
+        "std": 0.0018093479517319636,
+        "p95": 0.0031620141985006242,
+        "n": 175
+      },
+      "G_root_trigram": {
+        "mean": -0.0003017245570599934,
+        "std": 0.002966136360507421,
+        "p95": 0.007359268158444474,
+        "n": 175
+      },
+      "H_local_spec": {
+        "mean": 0.0007147968670374391,
+        "std": 0.0021108215057309447,
+        "p95": 0.004389130751136627,
+        "n": 175
+      },
+      "I_root_field": {
+        "mean": 0.0014207643998268573,
+        "std": 0.0039083237727515945,
+        "p95": 0.009244851258581205,
+        "n": 175
+      }
+    }
+  },
+  "canonical_variants": [
+    {
+      "name": "1:4_malik_malik",
+      "kind": "single_letter",
+      "surah": 1,
+      "detected_edit_type": "delete",
+      "null_used": "delete",
+      "found_in_text": true,
+      "deltas": {
+        "A_spectral": -0.0124,
+        "B_root_bigram": 0.0575,
+        "C_bigram_dist": 1.7321,
+        "D_wazn": -0.0345,
+        "E_ncd": 0.0203,
+        "F_coupling": -0.0009,
+        "G_root_trigram": 0.0258,
+        "H_local_spec": -0.0161,
+        "I_root_field": 0.0
+      },
+      "z_scores": {
+        "A_spectral": -12.138,
+        "B_root_bigram": 7.441,
+        "C_bigram_dist": 0.314,
+        "D_wazn": -17.365,
+        "E_ncd": 5.143,
+        "F_coupling": -1.263,
+        "G_root_trigram": 7.974,
+        "H_local_spec": -12.652,
+        "I_root_field": 0.066
+      },
+      "channels_fired_abs_z_gt_2": 6,
+      "confidence": "VERY HIGH"
+    },
+    {
+      "name": "2:259_nunshiz_nunshir",
+      "kind": "single_letter",
+      "surah": 2,
+      "detected_edit_type": "swap",
+      "null_used": "swap",
+      "found_in_text": true,
+      "deltas": {
+        "A_spectral": -0.0,
+        "B_root_bigram": 0.0,
+        "C_bigram_dist": 2.0,
+        "D_wazn": 0.0,
+        "E_ncd": 0.0,
+        "F_coupling": 0.0,
+        "G_root_trigram": 0.0,
+        "H_local_spec": -0.0,
+        "I_root_field": 0.0
+      },
+      "z_scores": {
+        "A_spectral": 0.165,
+        "B_root_bigram": 0.429,
+        "C_bigram_dist": 0.071,
+        "D_wazn": 0.087,
+        "E_ncd": -0.977,
+        "F_coupling": 0.476,
+        "G_root_trigram": 0.48,
+        "H_local_spec": 0.124,
+        "I_root_field": 0.113
+      },
+      "channels_fired_abs_z_gt_2": 0,
+      "confidence": "LOW"
+    },
+    {
+      "name": "3:133_word_deletion",
+      "kind": "word_level",
+      "surah": 3,
+      "detected_edit_type": "delete",
+      "null_used": "delete",
+      "found_in_text": true,
+      "deltas": {
+        "A_spectral": -0.0001,
+        "B_root_bigram": -0.001,
+        "C_bigram_dist": 1.7321,
+        "D_wazn": 0.0,
+        "E_ncd": 0.001,
+        "F_coupling": 0.0,
+        "G_root_trigram": -0.0001,
+        "H_local_spec": 0.0,
+        "I_root_field": 0.0003
+      },
+      "z_scores": {
+        "A_spectral": -0.027,
+        "B_root_bigram": 0.262,
+        "C_bigram_dist": 0.314,
+        "D_wazn": -0.208,
+        "E_ncd": -0.841,
+        "F_coupling": 0.3,
+        "G_root_trigram": 0.319,
+        "H_local_spec": 0.101,
+        "I_root_field": 0.294
+      },
+      "channels_fired_abs_z_gt_2": 0,
+      "confidence": "LOW"
+    },
+    {
+      "name": "92:3_ibn_masud",
+      "kind": "multi_word",
+      "surah": 92,
+      "detected_edit_type": "word_delete",
+      "null_used": "word_delete",
+      "found_in_text": true,
+      "deltas": {
+        "A_spectral": -0.0005,
+        "B_root_bigram": -0.0091,
+        "C_bigram_dist": 3.4641,
+        "D_wazn": 0.0205,
+        "E_ncd": 0.0197,
+        "F_coupling": 0.0039,
+        "G_root_trigram": 0.0015,
+        "H_local_spec": 0.0008,
+        "I_root_field": 0.0154
+      },
+      "z_scores": {
+        "A_spectral": -0.417,
+        "B_root_bigram": -0.673,
+        "C_bigram_dist": 2.616,
+        "D_wazn": 14.91,
+        "E_ncd": 3.394,
+        "F_coupling": 2.612,
+        "G_root_trigram": 0.936,
+        "H_local_spec": 0.363,
+        "I_root_field": 8.107
+      },
+      "channels_fired_abs_z_gt_2": 5,
+      "confidence": "HIGH"
+    }
+  ],
+  "rates_by_kind": {
+    "single_letter": {
+      "n_total": 2,
+      "n_found": 2,
+      "n_fired_ge_3": 1,
+      "rate": 0.5
+    },
+    "multi_word": {
+      "n_total": 1,
+      "n_found": 1,
+      "n_fired_ge_3": 1,
+      "rate": 1.0
+    },
+    "word_level": {
+      "n_total": 1,
+      "n_found": 1,
+      "n_fired_ge_3": 0,
+      "rate": 0.0
+    }
+  },
+  "headline_single_letter_rate": 0.5,
+  "verdict_expected": "At least 3 of 9 channels fire (|z|>2) on every genuine single-letter canonical variant; headline rate >= 0.80.",
+  "runtime_seconds": 112.15
+}

@@ -1,0 +1,84 @@
+{
+  "experiment": "exp83_order_sensitivity",
+  "hypothesis": "H31 — Is OSI = d_NC3/d_NC2 a Quran-specific discriminator?",
+  "schema_version": 1,
+  "n_reps": 10,
+  "per_corpus": {
+    "quran": {
+      "n_used": 95,
+      "d_nc2_raw": 1.909327,
+      "d_nc3_raw": 0.175028,
+      "d_nc2_norm": 0.504397,
+      "d_nc3_norm": 0.046238,
+      "osi": 0.0917,
+      "mean_canon_norm": 3.785367
+    },
+    "poetry_jahili": {
+      "n_used": 81,
+      "d_nc2_raw": 0.33083,
+      "d_nc3_raw": 0.08817,
+      "d_nc2_norm": 0.125559,
+      "d_nc3_norm": 0.033463,
+      "osi": 0.2665,
+      "mean_canon_norm": 2.634856
+    },
+    "poetry_islami": {
+      "n_used": 282,
+      "d_nc2_raw": 0.338039,
+      "d_nc3_raw": 0.08991,
+      "d_nc2_norm": 0.126463,
+      "d_nc3_norm": 0.033636,
+      "osi": 0.266,
+      "mean_canon_norm": 2.67303
+    },
+    "poetry_abbasi": {
+      "n_used": 1760,
+      "d_nc2_raw": 0.319776,
+      "d_nc3_raw": 0.085816,
+      "d_nc2_norm": 0.116589,
+      "d_nc3_norm": 0.031288,
+      "osi": 0.2684,
+      "mean_canon_norm": 2.742767
+    },
+    "ksucca": {
+      "n_used": 33,
+      "d_nc2_raw": 0.417037,
+      "d_nc3_raw": 0.095419,
+      "d_nc2_norm": 0.109321,
+      "d_nc3_norm": 0.025013,
+      "osi": 0.2288,
+      "mean_canon_norm": 3.814796
+    },
+    "arabic_bible": {
+      "n_used": 1118,
+      "d_nc2_raw": 0.352046,
+      "d_nc3_raw": 0.082592,
+      "d_nc2_norm": 0.122633,
+      "d_nc3_norm": 0.02877,
+      "osi": 0.2346,
+      "mean_canon_norm": 2.870738
+    },
+    "hindawi": {
+      "n_used": 73,
+      "d_nc2_raw": 0.295125,
+      "d_nc3_raw": 0.070148,
+      "d_nc2_norm": 0.099099,
+      "d_nc3_norm": 0.023555,
+      "osi": 0.2377,
+      "mean_canon_norm": 2.978075
+    }
+  },
+  "comparison": {
+    "quran_osi": 0.0917,
+    "ctrl_median_osi": 0.25185,
+    "ctrl_mean_osi": 0.25033333333333335,
+    "ratio": 0.3641,
+    "z_osi": -8.5929
+  },
+  "hierarchy_universal": {
+    "holds": 7,
+    "total": 7
+  },
+  "verdict": "NULL",
+  "runtime_seconds": 332.95
+}

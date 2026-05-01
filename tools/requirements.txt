@@ -1,0 +1,7 @@
+# Optional extra dependency for tools/qsf_score_app.py (Streamlit UI).
+# CLI tools/qsf_score.py does NOT require anything in this file.
+# Install: pip install -r tools/requirements.txt
+streamlit>=1.28.0
+# matplotlib is already in ../requirements.txt but pin here too so the
+# Streamlit app is runnable from a fresh venv of just this file.
+matplotlib>=3.7.0

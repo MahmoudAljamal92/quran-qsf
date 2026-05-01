@@ -1,0 +1,147 @@
+{
+  "experiment": "exp125_unified_quran_coordinate_pca",
+  "hypothesis_id": "H79",
+  "hypothesis": "The 5 universal features collapse to a single principal direction PC1 in feature space, with the Quran as the unique extremum on that direction. PC1 is the unified linear formula.",
+  "verdict": "FAIL_no_unification",
+  "verdict_reason": "Quran is not a strict outlier on PC1 (|z|=1.29 < 5.0). No unified single coordinate exists.",
+  "prereg_hash": "046d33b3ea67b0ee23511ab3d594b5ee6d98fec5bc72d11af733739a811fbdd6",
+  "input_sizing_sha256": "0f8dcf0f69106020fac6c596716b4729d78fdece828ebb83aba3aa2b0a79fc22",
+  "frozen_constants": {
+    "EXPECTED_CORPORA": [
+      "quran",
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "hindawi",
+      "ksucca",
+      "arabic_bible",
+      "hebrew_tanakh",
+      "greek_nt",
+      "pali",
+      "avestan_yasna"
+    ],
+    "FEATURE_NAMES": [
+      "VL_CV",
+      "p_max",
+      "H_EL",
+      "bigram_distinct_ratio",
+      "gzip_efficiency"
+    ],
+    "VAR_EXPLAINED_DOMINANCE": 0.6,
+    "VAR_EXPLAINED_STRONG": 0.8,
+    "VAR_EXPLAINED_PARTIAL": 0.4,
+    "Z_QURAN_OUTLIER": 5.0,
+    "Z_NO_COMPETITOR": 2.0
+  },
+  "results": {
+    "feature_means_raw": {
+      "VL_CV": 0.40325329665831405,
+      "p_max": 0.33909492352999704,
+      "H_EL": 2.562570959503511,
+      "bigram_distinct_ratio": 0.23653094069318634,
+      "gzip_efficiency": 0.36475703860759423
+    },
+    "feature_stds_raw": {
+      "VL_CV": 0.27608599189226224,
+      "p_max": 0.14300951212512653,
+      "H_EL": 0.6326968231727462,
+      "bigram_distinct_ratio": 0.15707998216287658,
+      "gzip_efficiency": 0.081724903738888
+    },
+    "eigenvalues": [
+      3.160095804846533,
+      1.8493541238951354,
+      0.36605159862273035,
+      0.10682608794899362,
+      0.017672384686609643
+    ],
+    "var_explained_per_pc": [
+      0.5745628736084603,
+      0.3362462043445699,
+      0.06655483611322367,
+      0.019422925081635196,
+      0.003213160852110843
+    ],
+    "var_explained_pc1": 0.5745628736084603,
+    "var_explained_cumulative": [
+      0.5745628736084603,
+      0.9108090779530302,
+      0.9773639140662539,
+      0.9967868391478891,
+      1.0
+    ],
+    "pc1_loading": {
+      "VL_CV": -0.5007072691201087,
+      "p_max": -0.3729003756932474,
+      "H_EL": 0.332354708548526,
+      "bigram_distinct_ratio": 0.5137508572165841,
+      "gzip_efficiency": 0.48563149081682033
+    },
+    "pc2_loading": {
+      "VL_CV": -0.23590269902690536,
+      "p_max": 0.5909492979486032,
+      "H_EL": -0.6322602618252678,
+      "bigram_distinct_ratio": 0.3287778813181614,
+      "gzip_efficiency": 0.29543342721916144
+    },
+    "pc1_score_per_corpus": {
+      "quran": -1.9435119423510965,
+      "poetry_jahili": 2.146960510003468,
+      "poetry_islami": 2.0944730495101984,
+      "poetry_abbasi": 2.1879310158421603,
+      "hindawi": 0.7341957112308256,
+      "ksucca": -1.7773554660102489,
+      "arabic_bible": 0.32437939822061934,
+      "hebrew_tanakh": 0.7396385346949741,
+      "greek_nt": -0.6922227464411621,
+      "pali": -2.8910543753988027,
+      "avestan_yasna": -0.9234336893009321
+    },
+    "pc2_score_per_corpus": {
+      "quran": 3.1504753389827598,
+      "poetry_jahili": 0.5415625299618082,
+      "poetry_islami": 0.7528593142386295,
+      "poetry_abbasi": 0.7247866628767922,
+      "hindawi": -1.6565842750171724,
+      "ksucca": -1.7544590555331518,
+      "arabic_bible": -0.6671988480328799,
+      "hebrew_tanakh": -0.8121788180750265,
+      "greek_nt": -0.30906230634487736,
+      "pali": -0.2674947329572954,
+      "avestan_yasna": 0.29729418990041623
+    },
+    "quran_pc1_score": -1.9435119423510965,
+    "quran_pc2_score": 3.1504753389827598,
+    "mean_pc1_non_quran": 0.19435119423510988,
+    "std_pc1_non_quran": 1.6566832983825803,
+    "cv_pc1_non_quran": 8.52417349377572,
+    "z_quran_pc1": -1.290447690680169,
+    "abs_z_quran_pc1": 1.290447690680169,
+    "max_other_abs_z_pc1": 1.86239915175471,
+    "z_per_corpus_pc1": {
+      "quran": -1.290447690680169,
+      "poetry_jahili": 1.1786255814099715,
+      "poetry_islami": 1.1469433277501966,
+      "poetry_abbasi": 1.2033560207635232,
+      "hindawi": 0.3258586101053629,
+      "ksucca": -1.1901530378016942,
+      "arabic_bible": 0.07848706153581435,
+      "hebrew_tanakh": 0.32914398364022146,
+      "greek_nt": -0.5351499236708875,
+      "pali": -1.86239915175471,
+      "avestan_yasna": -0.6747124719777976
+    },
+    "unified_formula_string": "alpha(c) = -0.5007 * z_VL_CV - 0.3729 * z_p_max + 0.3324 * z_H_EL + 0.5138 * z_bigram_distinct_ratio + 0.4856 * z_gzip_efficiency"
+  },
+  "audit_report": {
+    "ok": true,
+    "checks": {
+      "A1_input_sha256_match": true,
+      "A2_features_match": true,
+      "A3_corpora_match": true,
+      "A4_deterministic": true,
+      "A5_eigenvalue_sum_check": false
+    }
+  },
+  "wall_time_s": 0.013792
+}

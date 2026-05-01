@@ -1,0 +1,515 @@
+{
+  "experiment_id": "expE10_composite_detector",
+  "task": "E10",
+  "tier": 3,
+  "title": "Optimal-weight composite detector — 9 forensic channels on Adiyat 864",
+  "generated_utc": "2026-04-23T19:52:31+00:00",
+  "seed": 42,
+  "windows_N": [
+    1,
+    2,
+    3,
+    5,
+    8,
+    13
+  ],
+  "window_primary": 5,
+  "n_variants": 864,
+  "channels": [
+    "NCD",
+    "LEN_DIFF",
+    "UNI_L1",
+    "BI_L1",
+    "TRI_L1",
+    "WLEN_DIFF",
+    "SPEC",
+    "ENT_DIFF",
+    "VLCV_DIFF"
+  ],
+  "sweep_per_N": {
+    "N1": {
+      "window_N": 1,
+      "single_aucs": {
+        "NCD": 0.9837962962962963,
+        "LEN_DIFF": 0.5,
+        "UNI_L1": 1.0,
+        "BI_L1": 1.0,
+        "TRI_L1": 1.0,
+        "WLEN_DIFF": 0.5,
+        "SPEC": 1.0,
+        "ENT_DIFF": 0.931712962962963,
+        "VLCV_DIFF": 0.5
+      },
+      "best_single": "UNI_L1",
+      "best_single_auc": 1.0,
+      "models": {
+        "L2_logistic": {
+          "name": "L2_logistic",
+          "auc_mean": 0.9783950617283951,
+          "auc_sd": 0.0432098765432099,
+          "auc_folds": [
+            1.0,
+            1.0,
+            0.9135802469135802,
+            1.0
+          ],
+          "f1_mean": 0.6567796610169491,
+          "brier_mean": 0.13672002667084165,
+          "ap_mean": 0.9891376310673434,
+          "n_splits": 4
+        },
+        "Fisher_LDA": {
+          "name": "Fisher_LDA",
+          "auc_mean": 1.0,
+          "auc_sd": 0.0,
+          "auc_folds": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "f1_mean": 1.0,
+          "brier_mean": 0.0,
+          "ap_mean": 1.0,
+          "n_splits": 4
+        },
+        "GradBoost": {
+          "name": "GradBoost",
+          "auc_mean": 1.0,
+          "auc_sd": 0.0,
+          "auc_folds": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "f1_mean": 1.0,
+          "brier_mean": 1.6466138389689293e-05,
+          "ap_mean": 1.0,
+          "n_splits": 4
+        }
+      },
+      "best_composite": "Fisher_LDA",
+      "best_composite_auc": 1.0,
+      "delta_vs_single": 0.0,
+      "composite_gain": false
+    },
+    "N2": {
+      "window_N": 2,
+      "single_aucs": {
+        "NCD": 0.9976851851851852,
+        "LEN_DIFF": 0.5,
+        "UNI_L1": 1.0,
+        "BI_L1": 1.0,
+        "TRI_L1": 1.0,
+        "WLEN_DIFF": 0.5,
+        "SPEC": 1.0,
+        "ENT_DIFF": 0.9496527777777778,
+        "VLCV_DIFF": 0.5
+      },
+      "best_single": "UNI_L1",
+      "best_single_auc": 1.0,
+      "models": {
+        "L2_logistic": {
+          "name": "L2_logistic",
+          "auc_mean": 0.9969135802469136,
+          "auc_sd": 0.006172839506172867,
+          "auc_folds": [
+            1.0,
+            1.0,
+            0.9876543209876543,
+            1.0
+          ],
+          "f1_mean": 0.9984472049689441,
+          "brier_mean": 0.126884775929595,
+          "ap_mean": 0.9984567901234568,
+          "n_splits": 4
+        },
+        "Fisher_LDA": {
+          "name": "Fisher_LDA",
+          "auc_mean": 1.0,
+          "auc_sd": 0.0,
+          "auc_folds": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "f1_mean": 1.0,
+          "brier_mean": 0.0,
+          "ap_mean": 1.0,
+          "n_splits": 4
+        },
+        "GradBoost": {
+          "name": "GradBoost",
+          "auc_mean": 1.0,
+          "auc_sd": 0.0,
+          "auc_folds": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "f1_mean": 1.0,
+          "brier_mean": 2.36007204070068e-06,
+          "ap_mean": 1.0,
+          "n_splits": 4
+        }
+      },
+      "best_composite": "Fisher_LDA",
+      "best_composite_auc": 1.0,
+      "delta_vs_single": 0.0,
+      "composite_gain": false
+    },
+    "N3": {
+      "window_N": 3,
+      "single_aucs": {
+        "NCD": 0.9872685185185185,
+        "LEN_DIFF": 0.5,
+        "UNI_L1": 1.0,
+        "BI_L1": 1.0,
+        "TRI_L1": 1.0,
+        "WLEN_DIFF": 0.5,
+        "SPEC": 1.0,
+        "ENT_DIFF": 0.9571759259259259,
+        "VLCV_DIFF": 0.5
+      },
+      "best_single": "UNI_L1",
+      "best_single_auc": 1.0,
+      "models": {
+        "L2_logistic": {
+          "name": "L2_logistic",
+          "auc_mean": 0.9830246913580247,
+          "auc_sd": 0.0339506172839506,
+          "auc_folds": [
+            1.0,
+            1.0,
+            0.9320987654320988,
+            1.0
+          ],
+          "f1_mean": 0.9912140575079872,
+          "brier_mean": 0.13376893840484938,
+          "ap_mean": 0.9915123456790124,
+          "n_splits": 4
+        },
+        "Fisher_LDA": {
+          "name": "Fisher_LDA",
+          "auc_mean": 1.0,
+          "auc_sd": 0.0,
+          "auc_folds": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "f1_mean": 1.0,
+          "brier_mean": 0.0,
+          "ap_mean": 1.0,
+          "n_splits": 4
+        },
+        "GradBoost": {
+          "name": "GradBoost",
+          "auc_mean": 1.0,
+          "auc_sd": 0.0,
+          "auc_folds": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "f1_mean": 1.0,
+          "brier_mean": 1.2939621802442143e-05,
+          "ap_mean": 1.0,
+          "n_splits": 4
+        }
+      },
+      "best_composite": "Fisher_LDA",
+      "best_composite_auc": 1.0,
+      "delta_vs_single": 0.0,
+      "composite_gain": false
+    },
+    "N5": {
+      "window_N": 5,
+      "single_aucs": {
+        "NCD": 1.0,
+        "LEN_DIFF": 0.5,
+        "UNI_L1": 1.0,
+        "BI_L1": 1.0,
+        "TRI_L1": 1.0,
+        "WLEN_DIFF": 0.5,
+        "SPEC": 1.0,
+        "ENT_DIFF": 0.974537037037037,
+        "VLCV_DIFF": 0.5
+      },
+      "best_single": "NCD",
+      "best_single_auc": 1.0,
+      "models": {
+        "L2_logistic": {
+          "name": "L2_logistic",
+          "auc_mean": 1.0,
+          "auc_sd": 0.0,
+          "auc_folds": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "f1_mean": 0.6666666666666666,
+          "brier_mean": 0.12500000000385414,
+          "ap_mean": 1.0,
+          "n_splits": 4
+        },
+        "Fisher_LDA": {
+          "name": "Fisher_LDA",
+          "auc_mean": 1.0,
+          "auc_sd": 0.0,
+          "auc_folds": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "f1_mean": 1.0,
+          "brier_mean": 0.0,
+          "ap_mean": 1.0,
+          "n_splits": 4
+        },
+        "GradBoost": {
+          "name": "GradBoost",
+          "auc_mean": 1.0,
+          "auc_sd": 0.0,
+          "auc_folds": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "f1_mean": 1.0,
+          "brier_mean": 9.060982535910113e-09,
+          "ap_mean": 1.0,
+          "n_splits": 4
+        }
+      },
+      "best_composite": "L2_logistic",
+      "best_composite_auc": 1.0,
+      "delta_vs_single": 0.0,
+      "composite_gain": false
+    },
+    "N8": {
+      "window_N": 8,
+      "single_aucs": {
+        "NCD": 1.0,
+        "LEN_DIFF": 0.5,
+        "UNI_L1": 1.0,
+        "BI_L1": 1.0,
+        "TRI_L1": 1.0,
+        "WLEN_DIFF": 0.5,
+        "SPEC": 1.0,
+        "ENT_DIFF": 0.9803240740740741,
+        "VLCV_DIFF": 0.5
+      },
+      "best_single": "NCD",
+      "best_single_auc": 1.0,
+      "models": {
+        "L2_logistic": {
+          "name": "L2_logistic",
+          "auc_mean": 1.0,
+          "auc_sd": 0.0,
+          "auc_folds": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "f1_mean": 0.6666666666666666,
+          "brier_mean": 0.12500000000042752,
+          "ap_mean": 1.0,
+          "n_splits": 4
+        },
+        "Fisher_LDA": {
+          "name": "Fisher_LDA",
+          "auc_mean": 1.0,
+          "auc_sd": 0.0,
+          "auc_folds": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "f1_mean": 1.0,
+          "brier_mean": 0.0,
+          "ap_mean": 1.0,
+          "n_splits": 4
+        },
+        "GradBoost": {
+          "name": "GradBoost",
+          "auc_mean": 1.0,
+          "auc_sd": 0.0,
+          "auc_folds": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "f1_mean": 1.0,
+          "brier_mean": 9.060982535910113e-09,
+          "ap_mean": 1.0,
+          "n_splits": 4
+        }
+      },
+      "best_composite": "L2_logistic",
+      "best_composite_auc": 1.0,
+      "delta_vs_single": 0.0,
+      "composite_gain": false
+    },
+    "N13": {
+      "window_N": 13,
+      "single_aucs": {
+        "NCD": 0.5000000000000001,
+        "LEN_DIFF": 0.5,
+        "UNI_L1": 0.49999999999999994,
+        "BI_L1": 0.5,
+        "TRI_L1": 0.5,
+        "WLEN_DIFF": 0.5,
+        "SPEC": 0.5,
+        "ENT_DIFF": 0.5,
+        "VLCV_DIFF": 0.5
+      },
+      "best_single": "NCD",
+      "best_single_auc": 0.5000000000000001,
+      "models": {
+        "L2_logistic": {
+          "name": "L2_logistic",
+          "auc_mean": 0.5,
+          "auc_sd": 0.0,
+          "auc_folds": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "f1_mean": 0.6666666666666666,
+          "brier_mean": 0.25,
+          "ap_mean": 0.5,
+          "n_splits": 4
+        },
+        "Fisher_LDA": {
+          "name": "Fisher_LDA",
+          "auc_mean": 0.5,
+          "auc_sd": 0.0,
+          "auc_folds": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "f1_mean": 0.6666666666666666,
+          "brier_mean": 0.25,
+          "ap_mean": 0.5,
+          "n_splits": 4
+        },
+        "GradBoost": {
+          "name": "GradBoost",
+          "auc_mean": 0.5,
+          "auc_sd": 0.0,
+          "auc_folds": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "f1_mean": 0.6666666666666666,
+          "brier_mean": 0.25,
+          "ap_mean": 0.5,
+          "n_splits": 4
+        }
+      },
+      "best_composite": "L2_logistic",
+      "best_composite_auc": 0.5,
+      "delta_vs_single": -1.1102230246251565e-16,
+      "composite_gain": false
+    }
+  },
+  "best_gain": {
+    "N": 1,
+    "delta": 0.0
+  },
+  "verdict": "NULL_NO_GAIN",
+  "feature_importance_primary_N": [
+    {
+      "channel": "TRI_L1",
+      "l2_coef": 2.2952584767475514e-26,
+      "l2_coef_abs_norm": 2.2952584767475512e-17,
+      "gb_importance": 0.30229702932404495,
+      "single_auc_primary": 1.0
+    },
+    {
+      "channel": "SPEC",
+      "l2_coef": 3.1371744586154094e-26,
+      "l2_coef_abs_norm": 3.1371744586154095e-17,
+      "gb_importance": 0.23206760792862732,
+      "single_auc_primary": 1.0
+    },
+    {
+      "channel": "NCD",
+      "l2_coef": 3.0858335027887676e-11,
+      "l2_coef_abs_norm": 0.030858335027887675,
+      "gb_importance": 0.23178933729827927,
+      "single_auc_primary": 1.0
+    },
+    {
+      "channel": "BI_L1",
+      "l2_coef": 1.5370137932947953e-26,
+      "l2_coef_abs_norm": 1.5370137932947952e-17,
+      "gb_importance": 0.20370611398136462,
+      "single_auc_primary": 1.0
+    },
+    {
+      "channel": "UNI_L1",
+      "l2_coef": 7.736486768234007e-27,
+      "l2_coef_abs_norm": 7.736486768234007e-18,
+      "gb_importance": 0.030139911467683397,
+      "single_auc_primary": 1.0
+    },
+    {
+      "channel": "ENT_DIFF",
+      "l2_coef": 1.5201409798014705e-26,
+      "l2_coef_abs_norm": 1.5201409798014702e-17,
+      "gb_importance": 4.3792502529415445e-16,
+      "single_auc_primary": 0.974537037037037
+    },
+    {
+      "channel": "LEN_DIFF",
+      "l2_coef": 0.0,
+      "l2_coef_abs_norm": 0.0,
+      "gb_importance": 0.0,
+      "single_auc_primary": 0.5
+    },
+    {
+      "channel": "WLEN_DIFF",
+      "l2_coef": 0.0,
+      "l2_coef_abs_norm": 0.0,
+      "gb_importance": 0.0,
+      "single_auc_primary": 0.5
+    },
+    {
+      "channel": "VLCV_DIFF",
+      "l2_coef": 0.0,
+      "l2_coef_abs_norm": 0.0,
+      "gb_importance": 0.0,
+      "single_auc_primary": 0.5
+    }
+  ],
+  "youden_threshold": {
+    "threshold": 1.0,
+    "sensitivity": 1.0,
+    "specificity": 1.0,
+    "f1": 1.0
+  },
+  "pre_registered_criteria": {
+    "null": "Composite AUC <= best-single AUC + 0.01 at every tested N",
+    "COMPOSITE_GAIN": "At any tested N, composite AUC >= best-single AUC + 0.01",
+    "NULL_NO_GAIN": "At every N, composite AUC < best-single AUC + 0.01 (single channels saturate)",
+    "side_effects": "no mutation of any pinned artefact; outputs under expE10 folder only"
+  }
+}

@@ -1,0 +1,6975 @@
+{
+  "experiment": "exp94_adiyat_864",
+  "hypothesis": "H30b — Unified Stack Law on canonical Adiyat-864",
+  "schema_version": 1,
+  "prereg_document": "experiments/exp94_adiyat_864/PREREG.md",
+  "adiyat_label": "Q:100",
+  "canonical_verse1_len": 37,
+  "canonical_L_TEL": 1.000709,
+  "n_variants": 864,
+  "n_null_ctrl_edits": 4000,
+  "frozen_constants": {
+    "seed": 42,
+    "n_pert_per_unit": 20,
+    "ctrl_n_units": 200,
+    "gzip_level": 9,
+    "fpr_target": 0.05,
+    "w_T": 0.5329,
+    "w_EL": 4.179,
+    "b_TEL": -1.5221,
+    "expected_n_variants": 864,
+    "recall_gate": 0.99,
+    "sanity_r12_min_recall": 0.98
+  },
+  "null_stats": {
+    "mu": {
+      "dL": 0.0,
+      "NCD": 0.04177948678278864,
+      "dPhi": 0.0
+    },
+    "sd": {
+      "dL": 1.0,
+      "NCD": 0.004228506946808813,
+      "dPhi": 1.0
+    },
+    "NCD_p95_threshold": 0.049608,
+    "logit_p95_threshold": 0.698309,
+    "fisher_x2_p95_threshold": 5.972064,
+    "naive_p95_threshold": 1.85145
+  },
+  "stage2_logistic_coefs_from_exp93": {
+    "w_dL": 0.0,
+    "w_NCD": 0.47741284151792485,
+    "w_dPhi": 0.0,
+    "b": -0.044647550121979566
+  },
+  "recalls_at_5pct_fpr": {
+    "R12_only_baseline": 0.990741,
+    "unified_logistic_stack": 0.990741,
+    "unified_fisher_chi2_6": 0.990741,
+    "naive_z_sum_reviewer_baseline": 0.990741
+  },
+  "adiyat_864_per_variant": [
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.045226,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.055276,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.055276,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.045226,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.045226,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.045226,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.045226,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.045226,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.045226,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.045226,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.055276,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.055276,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.055276,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.055276,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.055276,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.055,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.055276,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.055276,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.055276,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.055276,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.050251,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.055276,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.069652,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.080402,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.069652,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.080402,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.069652,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.069652,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.069652,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.069652,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.069652,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.069652,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.069652,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.069652,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.069652,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.069652,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.069652,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.069652,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.080402,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.069652,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.069652,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.069652,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.07,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.080402,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.080402,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.085427,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.080402,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.075377,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ص",
+      "dL": 0.10658,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.282843
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.070352,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.055276,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ح",
+      "dL": 0.0,
+      "NCD_edit": 0.055276,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.055276,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.055276,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.055276,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.055276,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.055,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.055,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ا",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ب",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ت",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ث",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ج",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "خ",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "د",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ذ",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ر",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ز",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "س",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ش",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ص",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ض",
+      "dL": 0.0,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ط",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ظ",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ع",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "غ",
+      "dL": 0.0,
+      "NCD_edit": 0.06,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ف",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ق",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ك",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ل",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "م",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ن",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ه",
+      "dL": 0.0,
+      "NCD_edit": 0.065327,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "و",
+      "dL": 0.0,
+      "NCD_edit": 0.060302,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ي",
+      "dL": 0.0,
+      "NCD_edit": 0.065,
+      "dPhi": 0.0
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ب",
+      "dL": -0.592771,
+      "NCD_edit": 0.06,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ت",
+      "dL": -0.592771,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ث",
+      "dL": -0.592771,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ج",
+      "dL": -0.592771,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ح",
+      "dL": -0.592771,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "خ",
+      "dL": -0.592771,
+      "NCD_edit": 0.059406,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "د",
+      "dL": -0.43556,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.105348
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ذ",
+      "dL": -0.592771,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ر",
+      "dL": -0.43556,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.105348
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ز",
+      "dL": -0.592771,
+      "NCD_edit": 0.059406,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "س",
+      "dL": -0.592771,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ش",
+      "dL": -0.592771,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ص",
+      "dL": -0.592771,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ض",
+      "dL": -0.592771,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ط",
+      "dL": -0.592771,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ظ",
+      "dL": -0.592771,
+      "NCD_edit": 0.059406,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ع",
+      "dL": -0.592771,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "غ",
+      "dL": -0.592771,
+      "NCD_edit": 0.059406,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ف",
+      "dL": -0.592771,
+      "NCD_edit": 0.064356,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ق",
+      "dL": -0.592771,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ك",
+      "dL": -0.592771,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ل",
+      "dL": -0.592771,
+      "NCD_edit": 0.059701,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "م",
+      "dL": -0.592771,
+      "NCD_edit": 0.06,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ن",
+      "dL": -0.592771,
+      "NCD_edit": 0.064356,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ه",
+      "dL": -0.592771,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "و",
+      "dL": -0.592771,
+      "NCD_edit": 0.064677,
+      "dPhi": 0.343048
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ي",
+      "dL": -0.592771,
+      "NCD_edit": 0.06,
+      "dPhi": 0.343048
+    }
+  ],
+  "prereg_gates": {
+    "sanity_R12_replication": true,
+    "n_variants_match": true,
+    "logistic_passes_99": true,
+    "fisher_passes_99": true,
+    "best_unified_above_R12_minus_0_005": true
+  },
+  "verdict": "PASS_unified_99",
+  "runtime_seconds": 35.89
+}

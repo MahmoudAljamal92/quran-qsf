@@ -1,0 +1,19 @@
+{
+  "files": {
+    "src/__init__.py": "c9db35e8886f5f37c7e300e845de25624becca4b2d01362779e94bcdf13a6f8b",
+    "src/clean_pipeline.py": "754d1c6d09ed8140fe2e909281d6562dc44ef3b3cdb3570713a8ea4e18adf4fb",
+    "src/extended_tests.py": "bccbda9580b6e8719005987ef967a909df55245f3e216873ad952c3dbd0a9865",
+    "src/extended_tests2.py": "849c549e7949fa1f85880d6ae40a184fec7c7e7ca8579d9b513942ac352ef5f3",
+    "src/extended_tests3.py": "c2c9e07192559120dd6b76955422d959a8f7fc0586995df1a2d6d07e0b9b012d",
+    "src/extended_tests4.py": "c8358c93028f89fcba7ad8ada6127a97b0d23342c5edfc9945499b4ec0b11ae5",
+    "src/features.py": "1959f36216be6e32796e1778c62fd6639e87c13bf340f30c8af0428d7e03e9c0",
+    "src/raw_loader.py": "08810a214724c0315138dffb4fe23d7d6ace1851a94cb7c629587409a35af030",
+    "src/roots.py": "430c345a809a649be23b9502daaad89cd00950e096e3084653304558a4388d98",
+    "src/verify_corpora.py": "de6136d4b69d07b48a2b92c3097395a55cf9663f33fe1767ad4c1d855193ec00",
+    "notebooks/ultimate/_build.py": "1b0b80a40f8e00687f25ef45173b2bc0b1185715449e0dd0c9d8a7e446aa790f",
+    "src/cache/cameltools_root_cache.pkl.gz": "626854c2daab19005c8b1dea33746880eab7eaabfa5393c906b312f2076f9f42"
+  },
+  "timestamp": "2026-04-27T21:48:21.013591",
+  "git_head": null,
+  "combined": "dae2bcc716e52648060037d54714301e0fff25c03e343008297c77d2f5dc7f88"
+}

@@ -1,0 +1,2 @@
+PLACEHOLDER — replace this with `git rev-parse HEAD` output after pushing to GitHub.
+See README_OpenTimestamps.txt for instructions.

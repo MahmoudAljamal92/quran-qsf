@@ -1,0 +1,65 @@
+{
+  "experiment_id": "expE2_retractions_registry",
+  "task": "E2",
+  "tier": 1,
+  "title": "Retractions registry consolidation (26 retractions -> single canonical file)",
+  "source_plan": "docs/EXECUTION_PLAN_AND_PRIORITIES.md",
+  "execution_date_utc": "2026-04-23T17:20:00Z",
+  "status": "DONE",
+  "verdict": "PASS",
+  "summary": "Consolidated every retraction, falsification, deprecation, and honest non-reproduction from RANKED_FINDINGS.md S5, PAPER.md S5, CHANGELOG.md (v7.6 + v7.7), and ULTIMATE_SCORECARD.md into a single 46-entry canonical registry at docs/RETRACTIONS_REGISTRY.md. The original 'NO single canonical file' gap is closed.",
+  "inputs": {
+    "ranked_findings": "docs/RANKED_FINDINGS.md (section 5, 26 retractions)",
+    "paper_section_5": "docs/PAPER.md (section 5 'Honest non-reproductions', ~22 entries including overlaps)",
+    "changelog": "CHANGELOG.md (v7.6 + v7.7 entries; 4 new paper-grade retractions in v7.7)",
+    "scorecard": "results/ULTIMATE_SCORECARD.md (DEPRECATED / FALSIFIED / NOT REPRODUCED verdict rows)",
+    "paper_appendix_a": "docs/PAPER.md Appendix A item 16 (v7.6 VL_CV_FLOOR methodological-leak disclosure)"
+  },
+  "outputs": {
+    "registry_file": "docs/RETRACTIONS_REGISTRY.md",
+    "registry_entry_count": 46,
+    "project_map_patch": "PROJECT_MAP.md - added docs-level integrity-artefact row + updated Q&A row from stale '25-item list' to new 46-entry registry",
+    "report_file": "results/experiments/expE2_retractions_registry/expE2_report.json"
+  },
+  "category_breakdown": {
+    "A_named_laws_failed_under_stricter_null": 26,
+    "B_v77_sprint_retractions": 4,
+    "C_exploratory_downgrades_external_review": 5,
+    "D_scope_or_mechanism_disclosures": 5,
+    "E_deprecated_legacy_locked_scalars": 4,
+    "F_historical_v2_preserved_for_audit_trail": 1,
+    "G_methodological_leak_disclosure": 1,
+    "total": 46
+  },
+  "reconciliation_notes": {
+    "ranked_finding_5_vs_changelog_v77": "RANKED_FINDINGS S5 had the canonical 26-item list. CHANGELOG v7.7 added 5 new entries, of which 1 (golden-ratio phi-fraction) was already retraction #1 in RANKED S5. Net new: 4 (R27-R30: adjacent-verse anti-repetition, ring composition, small-world topology, prime-number signature).",
+    "paper_section_5_additions": "PAPER S5 adds 5 EXPLORATORY downgrades (R31-R35: L1/L3/L4/L6/L7) from the 2026-04-20 external review, and 4 scope/mechanism disclosures (R36-R40: E1, R5 G4, char-root GAP, Adiyat epsilon->ghayn, Phi_sym) - these did NOT appear in RANKED S5.",
+    "ultimate_scorecard_deprecations": "ULTIMATE_SCORECARD lists DEPRECATED verdicts on D02, D06, D27, D28, S1 (all variants of biased multivariate separation d) and FALSIFIED on D05 unit-level I(EL;CN). Consolidated as R41-R44 in registry.",
+    "historical_v2_retraction": "D18 adjacent-diversity 100% is explicitly mentioned in PAPER S5 as a preserved v2 retraction (R45)."
+  },
+  "methodological_leak_disclosure": {
+    "entry": "R46",
+    "description": "VL_CV_FLOOR = 0.1962 in archived build_pipeline_p1.py (pre-5-D). Inflated control separation by +0.36 pp under legacy OR-rule. Active 5-D pipeline (src/clean_pipeline.py) does NOT use this floor; locked scalars in results_lock.json are unaffected.",
+    "reference": "exp61_vl_cv_floor_sensitivity; PAPER Appendix A item 16"
+  },
+  "deliverables_vs_plan": {
+    "planned": [
+      "docs/RETRACTIONS_REGISTRY.md with summary table + per-entry details",
+      "1-line pointer in PROJECT_MAP.md under integrity locks"
+    ],
+    "delivered": [
+      "docs/RETRACTIONS_REGISTRY.md: 46 entries in summary table, 7 category-grouped detail sections, usage notes, scoreboard",
+      "PROJECT_MAP.md: added docs-level integrity-artefact row under section 4 + updated Q&A row in section 5 to point to the new registry"
+    ]
+  },
+  "self_check": {
+    "no_pinned_artifacts_mutated": true,
+    "no_results_lock_changes": true,
+    "no_code_lock_changes": true,
+    "new_files_under_docs": ["docs/RETRACTIONS_REGISTRY.md"],
+    "new_files_under_results_experiments": ["results/experiments/expE2_retractions_registry/expE2_report.json"],
+    "edited_files": ["PROJECT_MAP.md"],
+    "runtime_seconds_wallclock": "manual (no compute)"
+  },
+  "notes": "Re-opening protocol for any entry in this registry requires fresh data, pre-registered null hypothesis, PR to the registry, and verdict logged as a new row with [REOPENED] prefix. Never silently overwrite. Retraction IDs are stable; do not renumber."
+}

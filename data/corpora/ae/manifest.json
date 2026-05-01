@@ -1,0 +1,15 @@
+{
+    "corpus":  "yasna_avestan",
+    "source":  "https://www.avesta.org/yasna/yasna_jamaspa.htm",
+    "edition":  "Jamasp-Asa transliteration of all 72 Yasna chapters; encoded character-reversed (RTL display convention)",
+    "license":  "avesta.org public domain",
+    "fetched_at":  "2026-04-25",
+    "files":  [
+                  {
+                      "filename":  "yasna_jamaspa.html",
+                      "size_bytes":  225742,
+                      "sha256":  "65955082b7360b3b521562f527fdbb5a0d70ce55a4d738d64abc61e4317862ba"
+                  }
+              ],
+    "notes":  "Each line in the HTML is character-reversed; loader reverses each \u003cBR\u003e-separated line to produce canonical LTR Avestan transliteration. Verse numbers at the start of each line are stripped from the verse text but retained as labels."
+}

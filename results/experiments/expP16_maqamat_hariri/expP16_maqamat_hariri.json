@@ -1,0 +1,50 @@
+{
+  "experiment": "expP16_maqamat_hariri",
+  "prereg_sha256": "9acc34f0a6632bd580af7157da40a5235e607613870169788f9041b7048f1abb",
+  "download_log": {
+    "attempts": [
+      {
+        "kind": "text",
+        "url": "https://archive.org/download/maqamateharirialmaqlatalbeeriya/54_djvu.txt",
+        "got_bytes": 0,
+        "status": "FAILED"
+      },
+      {
+        "kind": "text",
+        "url": "https://archive.org/download/maqamatalhariri/%D9%85%D9%82%D8%A7%D9%85%D8%A7%D8%AA%20%D8%A8%D8%AF%D9%8A%D8%B9%20%D8%A7%D9%84%D8%B2%D9%85%D8%A7%D9%86%20%D8%A7%D9%84%D9%87%D9%85%D8%B0%D8%A7%D9%86%D9%8A_djvu.txt",
+        "got_bytes": 0,
+        "status": "FAILED"
+      },
+      {
+        "kind": "text",
+        "url": "https://archive.org/download/sharaha-maqamat-al-hareeri-4_202011/Sharaha%20Maqamat%20Al%20Hareeri%201_djvu.txt",
+        "got_bytes": 876197,
+        "arabic_chars": 342361,
+        "status": "OK",
+        "sha256": "8585ec07247ef3133105be4c00eddcd799f51d3c23ed1b6d7149463c59ed7e20"
+      }
+    ],
+    "final": {
+      "status": "downloaded",
+      "url": "https://archive.org/download/sharaha-maqamat-al-hareeri-4_202011/Sharaha%20Maqamat%20Al%20Hareeri%201_djvu.txt",
+      "kind": "text",
+      "size": 853872,
+      "sha256": "8585ec07247ef3133105be4c00eddcd799f51d3c23ed1b6d7149463c59ed7e20"
+    }
+  },
+  "n_units": 117,
+  "n_verses_total": 5846,
+  "el_quran_mean": 0.7062633038455213,
+  "el_maqamat_mean": 0.10129271081652033,
+  "el_maqamat_std": 0.042183945970153805,
+  "p_noon_maqamat": 0.06619911050290797,
+  "p_max_maqamat": 0.14693807731782416,
+  "top_letter_maqamat": "ه",
+  "auc_quran_vs_maqamat": 0.9902159244264508,
+  "mw_p_quran_gt_maqamat": 2.385530725149317e-38,
+  "cond_EL_lt_040": true,
+  "cond_noon_lt_020": true,
+  "cond_AUC_geq_095": true,
+  "verdict": "QURAN_DISTINCT_FROM_SAJ",
+  "wall_time_s": 16.198636531829834
+}

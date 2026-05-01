@@ -1,0 +1,97 @@
+{
+  "experiment": "exp89_lc3_ablation",
+  "hypothesis": "H-LC3-ABL — Pre-registered 1-vs-2 feature ablation of LC3-70-U (T, EL) sufficiency",
+  "schema_version": 1,
+  "prereg_document": "experiments/exp89_lc3_ablation/PREREG.md",
+  "prereg_thresholds": {
+    "single_feature_max_auc": 0.95,
+    "joint_feature_min_auc": 0.99,
+    "sanity_exp70_auc_expected": 0.9975,
+    "sanity_exp70_tol": 0.001
+  },
+  "data": {
+    "n_quran_bandA": 68,
+    "n_ctrl_bandA": 2509,
+    "feat_cols": [
+      "EL",
+      "VL_CV",
+      "CN",
+      "H_cond",
+      "T"
+    ],
+    "t_idx": 4,
+    "el_idx": 0
+  },
+  "T_only": {
+    "auc": 0.967687,
+    "accuracy": 0.984866,
+    "w": [
+      1.162642
+    ],
+    "b": 0.59597294,
+    "n_support": {
+      "quran": 47,
+      "ctrl": 47
+    }
+  },
+  "EL_only": {
+    "auc": 0.997105,
+    "accuracy": 0.991851,
+    "w": [
+      4.74103603
+    ],
+    "b": -2.62549812,
+    "n_support": {
+      "quran": 37,
+      "ctrl": 37
+    }
+  },
+  "TEL_joint": {
+    "auc": 0.997503,
+    "accuracy": 0.991463,
+    "w": [
+      0.53287672,
+      4.17895492
+    ],
+    "b": -1.52208663,
+    "n_support": {
+      "quran": 34,
+      "ctrl": 34
+    }
+  },
+  "bootstrap": {
+    "n_boot": 1000,
+    "T_only_ci": {
+      "median": 0.968613,
+      "ci_lo": 0.947036,
+      "ci_hi": 0.985666,
+      "n_valid": 1000
+    },
+    "EL_only_ci": {
+      "median": 0.9972,
+      "ci_lo": 0.994628,
+      "ci_hi": 0.999045,
+      "n_valid": 1000
+    },
+    "TEL_joint_ci": {
+      "median": 0.997679,
+      "ci_lo": 0.995358,
+      "ci_hi": 0.999139,
+      "n_valid": 1000
+    },
+    "n_fit_failures": 0
+  },
+  "sanity_check": {
+    "exp70_auc_expected": 0.9975,
+    "exp70_auc_observed": 0.997503,
+    "abs_diff": 3e-06,
+    "within_tolerance": true
+  },
+  "prereg_test": {
+    "T_only_under_threshold": false,
+    "EL_only_under_threshold": false,
+    "TEL_over_threshold": true
+  },
+  "verdict": "FAIL_T_dominates",
+  "runtime_seconds": 33.28
+}

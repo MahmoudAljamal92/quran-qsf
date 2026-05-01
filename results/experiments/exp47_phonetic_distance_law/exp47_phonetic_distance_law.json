@@ -1,0 +1,240 @@
+{
+  "experiment": "exp47_phonetic_distance_law",
+  "hypothesis": "detection_rate(pair) = f(phonetic_distance(pair)), monotonic, r >= 0.85 qualifies as publishable empirical law.",
+  "pre_registered_thresholds": {
+    "LAW_CONFIRMED": "|r| >= 0.85",
+    "SUGGESTIVE": "0.70 <= |r| < 0.85",
+    "FAILS": "|r| < 0.70"
+  },
+  "data_source": "exp46_emphatic_substitution (FAST mode, 20 surahs)",
+  "n_pairs": 7,
+  "pairs": [
+    {
+      "class_id": "E1_sad_sin",
+      "pair": "ص ↔ س",
+      "detection_rate": 0.3333,
+      "n_edits": 39,
+      "n_detected": 13
+    },
+    {
+      "class_id": "E2_dad_dal",
+      "pair": "ض ↔ د",
+      "detection_rate": 0.1667,
+      "n_edits": 48,
+      "n_detected": 8
+    },
+    {
+      "class_id": "E3_tta_ta",
+      "pair": "ط ↔ ت",
+      "detection_rate": 0.1042,
+      "n_edits": 48,
+      "n_detected": 5
+    },
+    {
+      "class_id": "E4_dha_dhal",
+      "pair": "ظ ↔ ذ",
+      "detection_rate": 0.1,
+      "n_edits": 20,
+      "n_detected": 2
+    },
+    {
+      "class_id": "E5_qaf_kaf",
+      "pair": "ق ↔ ك",
+      "detection_rate": 0.1642,
+      "n_edits": 67,
+      "n_detected": 11
+    },
+    {
+      "class_id": "E6_hha_ha",
+      "pair": "ح ↔ ه",
+      "detection_rate": 0.3458,
+      "n_edits": 107,
+      "n_detected": 37
+    },
+    {
+      "class_id": "E7_ayn_alef",
+      "pair": "ع ↔ ا",
+      "detection_rate": 0.4126,
+      "n_edits": 269,
+      "n_detected": 111
+    }
+  ],
+  "phonetic_features_used": [
+    "place (continuous 1-8)",
+    "manner (continuous 0-5)",
+    "voice (binary)",
+    "emphatic (binary)",
+    "sibilant (binary)"
+  ],
+  "metric_results": {
+    "M1_hamming": {
+      "values": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        3.0
+      ],
+      "n_unique_values": 3,
+      "pearson_r": 0.6198,
+      "pearson_p": 0.137633,
+      "spearman_rho": 0.5345,
+      "spearman_p": 0.216437,
+      "concordance": 0.6667,
+      "R2": 0.3842,
+      "slope": 0.088241,
+      "intercept": 0.131553,
+      "is_circular": false,
+      "verdict": "FAILS"
+    },
+    "M2_weighted_euclid": {
+      "values": [
+        0.707107,
+        0.707107,
+        0.707107,
+        0.707107,
+        1.0,
+        1.0,
+        1.541104
+      ],
+      "n_unique_values": 3,
+      "pearson_r": 0.6848,
+      "pearson_p": 0.089582,
+      "spearman_rho": 0.6574,
+      "spearman_p": 0.10858,
+      "concordance": 0.7381,
+      "R2": 0.469,
+      "slope": 0.282351,
+      "intercept": -0.024521,
+      "is_circular": false,
+      "verdict": "FAILS"
+    },
+    "M3_ipa_geometric": {
+      "values": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.5
+      ],
+      "n_unique_values": 2,
+      "pearson_r": 0.6203,
+      "pearson_p": 0.137204,
+      "spearman_rho": 0.6124,
+      "spearman_p": 0.143811,
+      "concordance": 0.6429,
+      "R2": 0.3848,
+      "slope": 0.420467,
+      "intercept": -0.2181,
+      "is_circular": false,
+      "verdict": "FAILS"
+    },
+    "M4_n_edits": {
+      "values": [
+        39.0,
+        48.0,
+        48.0,
+        20.0,
+        67.0,
+        107.0,
+        269.0
+      ],
+      "n_unique_values": 6,
+      "pearson_r": 0.7317,
+      "pearson_p": 0.061571,
+      "spearman_rho": 0.7207,
+      "spearman_p": 0.067635,
+      "concordance": 0.7857,
+      "R2": 0.5355,
+      "slope": 0.001098,
+      "intercept": 0.13862,
+      "is_circular": false,
+      "verdict": "SUGGESTIVE"
+    },
+    "M5_log_n_edits": {
+      "values": [
+        3.663562,
+        3.871201,
+        3.871201,
+        2.995732,
+        4.204693,
+        4.672829,
+        5.594711
+      ],
+      "n_unique_values": 6,
+      "pearson_r": 0.7471,
+      "pearson_p": 0.053609,
+      "spearman_rho": 0.7207,
+      "spearman_p": 0.067635,
+      "concordance": 0.7857,
+      "R2": 0.5582,
+      "slope": 0.116003,
+      "intercept": -0.246093,
+      "is_circular": false,
+      "verdict": "SUGGESTIVE"
+    },
+    "M6_phon_x_logfreq": {
+      "values": [
+        2.590529,
+        2.737352,
+        2.737352,
+        2.118303,
+        4.204693,
+        4.672829,
+        8.622029
+      ],
+      "n_unique_values": 6,
+      "pearson_r": 0.7189,
+      "pearson_p": 0.068666,
+      "spearman_rho": 0.7207,
+      "spearman_p": 0.067635,
+      "concordance": 0.7857,
+      "R2": 0.5169,
+      "slope": 0.040805,
+      "intercept": 0.071027,
+      "is_circular": false,
+      "verdict": "SUGGESTIVE"
+    },
+    "M7_max_z_median_CIRCULAR": {
+      "values": [
+        3.05,
+        2.894,
+        0.713,
+        0.682,
+        0.798,
+        3.075,
+        2.525
+      ],
+      "n_unique_values": 7,
+      "pearson_r": 0.7644,
+      "pearson_p": 0.045359,
+      "spearman_rho": 0.7857,
+      "spearman_p": 0.036238,
+      "concordance": 0.8571,
+      "R2": 0.5843,
+      "slope": 0.083955,
+      "intercept": 0.067644,
+      "is_circular": true,
+      "verdict": "CIRCULAR — r=0.764 (not valid as independent predictor)"
+    }
+  },
+  "best_non_circular_metric": "M5_log_n_edits",
+  "best_pearson_r": 0.7471,
+  "overall_verdict": "SUGGESTIVE",
+  "confound_analysis": {
+    "surah_length_effect": "exp46 tested 20 surahs. Detection ranges from 0% to 93% per surah. Long surahs show 0% detection; short surahs show >50%. Per-class detection rates are confounded by letter-frequency × surah-length interaction. A controlled analysis holding surah length constant is needed to isolate the phonetic-distance effect.",
+    "n_edits_confound": "n_edits ranges from 20 (dha/dhal) to 269 (ayn/alef). Pairs with more edits have more short-surah contributions where detection is intrinsically easier. The frequency predictor (M4/M5) captures part of this confound."
+  },
+  "honest_assessment": "With standard articulatory phonetic features, the 7 emphatic pairs yield only 2-3 distinct distance values (most pairs differ by a single [+/- emphatic] or [+/- place] feature). This degeneracy limits the discriminative power of any purely phonetic distance metric. The COMBINED predictor (phonetic × log_freq) may capture more variance. A better approach for future work: compute the actual bigram-transition KL divergence between letter pairs from the corpus, which would give a statistical (not purely articulatory) distance.",
+  "future_work": [
+    "Full-mode exp46 (all 114 surahs) to reduce sampling noise",
+    "Surah-length-controlled analysis (per-class rate within length bins)",
+    "Bigram-transition KL divergence as an alternative distance metric",
+    "Cross-corpus replication (emphatic detection in control corpora)",
+    "Additional consonant pairs beyond the 7 emphatic classes"
+  ]
+}

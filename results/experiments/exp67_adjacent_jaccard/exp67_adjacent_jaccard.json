@@ -1,0 +1,83 @@
+{
+  "experiment": "exp67_adjacent_jaccard",
+  "hypothesis": "H18 — Adjacent-verse Jaccard anti-repetition: is it an independent 6th channel?",
+  "schema_version": 1,
+  "T1_jaccard": {
+    "quran_banda_mean": 0.03591,
+    "quran_banda_std": 0.01922,
+    "quran_banda_n": 68,
+    "ctrl_banda_mean": 0.028198,
+    "ctrl_banda_std": 0.026844,
+    "ctrl_banda_n": 2509
+  },
+  "T2_phase1": {
+    "cohen_d": 0.330349,
+    "mw_p_less": 0.9999968018560774,
+    "d_threshold": -0.3,
+    "mw_threshold": 1e-05,
+    "pass": false
+  },
+  "T3_hotelling": {
+    "T2_5D": 0.0,
+    "T2_6D": 0.0,
+    "gate_threshold": 4268.8073,
+    "per_dim_gain": 0.0,
+    "F_6D": 0.0,
+    "df": [
+      0,
+      0
+    ],
+    "pass": false
+  },
+  "T4_root_jaccard": {
+    "quran_sample_mean": null,
+    "n_sample": 0
+  },
+  "T5_per_corpus": {
+    "poetry_jahili": {
+      "n": 133,
+      "mean": 0.0174,
+      "std": 0.0167,
+      "cohen_d_vs_quran": 1.0263
+    },
+    "poetry_islami": {
+      "n": 465,
+      "mean": 0.0147,
+      "std": 0.0153,
+      "cohen_d_vs_quran": 1.218
+    },
+    "poetry_abbasi": {
+      "n": 2823,
+      "mean": 0.018,
+      "std": 0.0165,
+      "cohen_d_vs_quran": 0.9985
+    },
+    "ksucca": {
+      "n": 41,
+      "mean": 0.0973,
+      "std": 0.0358,
+      "cohen_d_vs_quran": -2.1389
+    },
+    "arabic_bible": {
+      "n": 1183,
+      "mean": 0.0438,
+      "std": 0.0316,
+      "cohen_d_vs_quran": -0.3028
+    },
+    "hindawi": {
+      "n": 74,
+      "mean": 0.0171,
+      "std": 0.0065,
+      "cohen_d_vs_quran": 1.3114
+    }
+  },
+  "verdict": {
+    "verdict": "FAILS",
+    "prereg": {
+      "ACCEPT_AS_6TH_CHANNEL": "Phase-1 pass AND Hotelling gate pass",
+      "SIGNIFICANT_BUT_REDUNDANT": "Phase-1 pass AND Hotelling gate fail",
+      "FAILS": "Phase-1 fail"
+    }
+  },
+  "runtime_seconds": 1.94
+}

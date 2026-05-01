@@ -1,0 +1,53 @@
+[
+  {
+    "doc": "docs/PAPER.md",
+    "hypothesis_id": "H1",
+    "line": 304,
+    "canon_verdict": "NULL",
+    "canon_group": "NEGATIVE",
+    "found_verdicts_nearby": [
+      "FAILS"
+    ],
+    "match_status": "SAME_GROUP",
+    "context": "H_char_2 test (`exp27_hchar_bigram`, mirrors T11 protocol at the character layer) and (ii) assembling all four scales plus the locked root-Markov-order ratio (T28 H2/H1) into a single 5-row verdict table (`exp28_scale_invariant_law`, `results/experiments/exp28_scale_invariant_law/exp28_scale_invariant_law.json`). The law requires the Quran to be extremal in the predicted direction at every scale. "
+  },
+  {
+    "doc": "docs/PAPER.md",
+    "hypothesis_id": "H2",
+    "line": 304,
+    "canon_verdict": "NULL",
+    "canon_group": "NEGATIVE",
+    "found_verdicts_nearby": [
+      "FAILS"
+    ],
+    "match_status": "SAME_GROUP",
+    "context": "_3/H_char_2 test (`exp27_hchar_bigram`, mirrors T11 protocol at the character layer) and (ii) assembling all four scales plus the locked root-Markov-order ratio (T28 H2/H1) into a single 5-row verdict table (`exp28_scale_invariant_law`, `results/experiments/exp28_scale_invariant_law/exp28_scale_invariant_law.json`). The law requires the Quran to be extremal in the predicted direction at every scal"
+  },
+  {
+    "doc": "docs/RANKED_FINDINGS.md",
+    "hypothesis_id": "H2",
+    "line": 292,
+    "canon_verdict": "NULL",
+    "canon_group": "NEGATIVE",
+    "found_verdicts_nearby": [
+      "LAW_CONFIRMED",
+      "LENGTH_DRIVEN",
+      "SIGNIFICANT_BUT_REDUNDANT"
+    ],
+    "match_status": "GROUP_MISMATCH",
+    "context": "FULL exp46 (114 surahs) | < 5 s | r ≥ 0.85 on ≥ 1 non-circular metric | **EXECUTED 2026-04-21** | **LAW_CONFIRMED** (M1_hamming r = +0.929) | | `exp53_ar1_6d_gate` | H2: AR(1) φ₁ as 6th Φ_M channel, Hotelling T² gate | ~ 6 s | T²_6D ≥ 4 268.81 AND perm p ≤ 0.01 AND per-dim gain ≥ 1.0 | **EXECUTED 2026-04-21** | **SIGNIFICANT_BUT_REDUNDANT** (T²_6D = 3 591.5, gain 0.84) | | `exp55_gamma_length_stra"
+  },
+  {
+    "doc": "docs/RANKED_FINDINGS.md",
+    "hypothesis_id": "H3",
+    "line": 293,
+    "canon_verdict": "SUGGESTIVE",
+    "canon_group": "SUGGESTIVE",
+    "found_verdicts_nearby": [
+      "LENGTH_DRIVEN",
+      "SIGNIFICANT_BUT_REDUNDANT"
+    ],
+    "match_status": "GROUP_MISMATCH",
+    "context": "AND perm p ≤ 0.01 AND per-dim gain ≥ 1.0 | **EXECUTED 2026-04-21** | **SIGNIFICANT_BUT_REDUNDANT** (T²_6D = 3 591.5, gain 0.84) | | `exp55_gamma_length_stratified` | H3: length-stratified gzip NCD Cohen's d | < 1 s | ≥ 7/10 deciles d > 0.30 AND sign-test p ≤ 0.05 AND γ > 0 | **EXECUTED 2026-04-21** | **LENGTH_DRIVEN** (5/10 d > 0.30, sign-test p = 0.109) | | `exp56_adjacent_jaccard` | Gem #2 (row "
+  }
+]

@@ -1,0 +1,101 @@
+{
+  "experiment": "exp66_extended_mahalanobis",
+  "hypothesis": "H28 — Do phi_structural and TE_net improve 5-D → 7-D Mahalanobis separation?",
+  "schema_version": 1,
+  "data": {
+    "n_quran": 114,
+    "n_ctrl": 4719,
+    "feat_cols_5d": [
+      "EL",
+      "VL_CV",
+      "CN",
+      "H_cond",
+      "T"
+    ],
+    "feat_cols_7d": [
+      "EL",
+      "VL_CV",
+      "CN",
+      "H_cond",
+      "T",
+      "phi_structural",
+      "TE_net"
+    ],
+    "imputation": {
+      "phi_structural": {
+        "median": 2.558618681014056,
+        "q_nan": 0,
+        "c_nan": 0
+      },
+      "TE_net": {
+        "median": 0.00545530712092912,
+        "q_nan": 13,
+        "c_nan": 970
+      }
+    }
+  },
+  "T2_baseline_5d": {
+    "d": 5,
+    "n_quran": 114,
+    "n_ctrl": 4719,
+    "tau": 2.348990605121196,
+    "q_coverage": 0.7982,
+    "ctrl_separation": 0.9703,
+    "q_dist_mean": 2.003633112200688,
+    "c_dist_mean": 3.459533518507407
+  },
+  "T3_extended_7d": {
+    "d": 7,
+    "n_quran": 114,
+    "n_ctrl": 4719,
+    "tau": 2.84913062414685,
+    "q_coverage": 0.7982,
+    "ctrl_separation": 0.9286,
+    "q_dist_mean": 2.4302207303435623,
+    "c_dist_mean": 3.79272392571386
+  },
+  "T4_delta_sep": -0.0417,
+  "T5_ablation": {
+    "phi_structural_only_6d": {
+      "separation": 0.9525,
+      "delta_vs_5d": -0.0178
+    },
+    "TE_net_only_6d": {
+      "separation": 0.9627,
+      "delta_vs_5d": -0.0076
+    }
+  },
+  "T6_vif": {
+    "EL": 1.632,
+    "VL_CV": 1.186,
+    "CN": 1.02,
+    "H_cond": 1.085,
+    "T": 1.793,
+    "phi_structural": 1.183,
+    "TE_net": 1.011
+  },
+  "T7_permutation": {
+    "observed_delta_sep": -0.0417,
+    "null_mean": 0.01135,
+    "null_std": 0.037246,
+    "p_value": 0.926,
+    "n_permutations": 1000
+  },
+  "verdict": {
+    "verdict": "REDUNDANT",
+    "delta_sep": -0.0417,
+    "delta_phi": -0.0178,
+    "delta_te": -0.0076,
+    "p_perm": 0.926,
+    "falsifier": "FAIL",
+    "falsifier_reasons": [
+      "Δsep=-0.0417 ≤ 0"
+    ],
+    "prereg_thresholds": {
+      "PROMOTED": "Δsep ≥ 0.01 AND per-feat Δ ≥ 0 AND p ≤ 0.01",
+      "MARGINAL": "Δsep ≥ 0.01 OR p ≤ 0.05",
+      "REDUNDANT": "Δsep < 0.01 AND p > 0.05"
+    }
+  },
+  "runtime_seconds": 68.82
+}

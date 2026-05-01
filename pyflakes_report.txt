@@ -1,0 +1,312 @@
+﻿C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\ultimate2_pipeline.py:100:1: 'pathlib.Path' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\ultimate2_pipeline.py:101:1: 'typing.Callable' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\ultimate2_pipeline.py:114:1: 'experiments._ultimate2_helpers.bigram_jaccard_distance_greek' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\ultimate2_pipeline.py:114:1: 'experiments._ultimate2_helpers.letters_only_strict' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\ultimate2_pipeline.py:114:1: 'experiments._ultimate2_helpers.mahalanobis2' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\ultimate2_pipeline.py:114:1: 'experiments._ultimate2_helpers.normalize_rasm_strict' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\ultimate2_pipeline.py:114:1: 'experiments._ultimate2_helpers.percentile_rank' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\ultimate2_pipeline.py:114:1: 'experiments._ultimate2_helpers.unit_label' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_audit_check.py:32:7: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_audit_check.py:66:7: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_audit_check.py:67:7: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_audit_check.py:68:7: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_smoke_ultimate2_audit.py:29:1: 'numpy as np' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_smoke_ultimate2_audit.py:31:1: 'experiments._ultimate2_helpers.ARABIC_CONSONANTS' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_smoke_ultimate2_audit.py:31:1: 'experiments._ultimate2_helpers.bigram_jaccard_distance_greek' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_smoke_ultimate2_audit.py:31:1: 'experiments._ultimate2_helpers.letter_bigram_set' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_smoke_ultimate2_audit.py:31:1: 'experiments._ultimate2_helpers.letters_only' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_smoke_ultimate2_audit.py:31:1: 'experiments._ultimate2_helpers.normalize_rasm_strict' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_smoke_ultimate2_audit.py:31:1: 'experiments._ultimate2_helpers.percentile_rank' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_smoke_ultimate2_audit.py:45:1: 'experiments.exp09_R1_variant_forensics_9ch.run.main as run_R1' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_smoke_ultimate2_audit.py:45:1: 'experiments.exp09_R1_variant_forensics_9ch.run.channel_A_spectral' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_smoke_ultimate2_audit.py:45:1: 'experiments.exp09_R1_variant_forensics_9ch.run.channel_C_bigram_dist' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_smoke_ultimate2_audit.py:45:1: 'experiments.exp09_R1_variant_forensics_9ch.run.channel_D_wazn' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_smoke_ultimate2_audit.py:52:1: 'experiments.ultimate2_pipeline.run_R2' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_smoke_ultimate2_audit.py:52:1: 'experiments.ultimate2_pipeline.run_R3' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_smoke_ultimate2_audit.py:52:1: 'experiments.ultimate2_pipeline.run_R4' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_smoke_ultimate2_audit.py:52:1: 'experiments.ultimate2_pipeline.run_R5' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_smoke_ultimate2_audit.py:52:1: 'experiments.ultimate2_pipeline.run_R6' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_smoke_ultimate2_audit.py:52:1: 'experiments.ultimate2_pipeline.run_R7' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_smoke_ultimate2_audit.py:52:1: 'experiments.ultimate2_pipeline.run_R8' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_smoke_ultimate2_audit.py:52:1: 'experiments.ultimate2_pipeline.run_R9' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_smoke_ultimate2_audit.py:52:1: 'experiments.ultimate2_pipeline.run_R10' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_smoke_ultimate2_audit.py:52:1: 'experiments.ultimate2_pipeline.run_R11' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_ultimate2_helpers.py:449:5: local variable 'idx' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\_ultimate2_helpers.py:647:5: local variable 'idx_pool' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp03_adiyat\run.py:193:5: local variable 'phi_oath' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp03_adiyat\run.py:300:5: local variable 'ctrl_plo' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp05_subclass_atlas\run.py:161:5: local variable 'mu_ctrl' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp05_subclass_atlas\run.py:162:5: local variable 'S_inv_ctrl' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp09_R1_variant_forensics_9ch\run.py:81:1: 'typing.Callable' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp09_R1_variant_forensics_9ch\run.py:98:1: 'experiments._ultimate2_helpers.bigram_jaccard_distance' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp09_R1_variant_forensics_9ch\run.py:98:1: 'experiments._ultimate2_helpers.normalize_rasm_strict' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp101_self_similarity\run.py:33:1: 'src.features.ARABIC_CONN' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp104b_F53_psalm119\run.py:191:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp104c_F53_psalm78\run.py:183:10: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp104c_F53_psalm78\run.py:205:10: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp104d_F53_mark1\run.py:208:13: local variable '_header' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp104d_F53_mark1\run.py:503:10: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp104d_F53_mark1\run.py:525:10: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp104_el_all_bands\run.py:326:5: local variable 'all_auc' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp104_F53_tanakh_pilot\run.py:225:9: `nonlocal cur_book` is unused: name is never assigned in scope
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp104_F53_tanakh_pilot\run.py:225:9: `nonlocal cur_chap` is unused: name is never assigned in scope
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp104_F53_tanakh_pilot\run.py:494:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp104_F53_tanakh_pilot\run.py:516:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp105_F55_psalm78_bigram\run.py:451:10: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp105_F55_psalm78_bigram\run.py:467:5: local variable 'n_letters_redo' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp106_F55_mark1_bigram\run.py:461:10: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp107_F55_dn1_bigram\run.py:577:10: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp108_F55_y28_bigram\run.py:612:10: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp109_phi_universal_xtrad\run.py:45:1: 'scripts._phi_universal_xtrad_sizing.NORMALISERS' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp109_phi_universal_xtrad\run.py:168:10: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp109_phi_universal_xtrad\run.py:320:5: local variable 'obs_quran_h_el_extreme' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp109_phi_universal_xtrad\run.py:321:5: local variable 'obs_quran_p_max_extreme' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp110_phi_master_xtrad\run.py:109:15: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp110_phi_master_xtrad\run.py:142:15: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp110_phi_master_xtrad\run.py:158:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp111_F63_rigveda_falsification\run.py:111:15: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp112_F55_daodejing_bigram\run.py:187:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp112_F55_daodejing_bigram\run.py:198:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp113_joint_extremality_3way\plot.py:51:5: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp113_joint_extremality_3way\run.py:343:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp114_alphabet_independent_pmax\run.py:254:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp114_alphabet_independent_pmax\run.py:260:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp114_alphabet_independent_pmax\run.py:263:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp114_alphabet_independent_pmax\run.py:266:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp114_alphabet_independent_pmax\run.py:273:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp115_C_Omega_single_constant\run.py:155:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp115_C_Omega_single_constant\run.py:156:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp115_C_Omega_single_constant\run.py:157:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp115_C_Omega_single_constant\run.py:163:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp116_RG_scaling_collapse\run.py:13:1: 'gzip' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp116_RG_scaling_collapse\run.py:19:1: 'unicodedata' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp116_RG_scaling_collapse\run.py:292:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp117_verse_reorder_detector\run.py:17:1: 'collections.Counter' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp117_verse_reorder_detector\run.py:323:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp117_verse_reorder_detector\run.py:326:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp117_verse_reorder_detector\run.py:329:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp117_verse_reorder_detector\run.py:330:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp117_verse_reorder_detector\run.py:332:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp117_verse_reorder_detector\run.py:334:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp117_verse_reorder_detector\run.py:338:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp117_verse_reorder_detector\run.py:345:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp117_verse_reorder_detector\run.py:347:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp117_verse_reorder_detector\run.py:351:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp117_verse_reorder_detector\run.py:358:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp118_multi_letter_F55_theorem\run.py:238:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp119_universal_F55_scope\run.py:360:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp125b_unified_quran_coordinate_lda\run.py:20:1: 'math' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp125b_unified_quran_coordinate_lda\run.py:377:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp125b_unified_quran_coordinate_lda\run.py:380:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp125c_RG_scaling_alpha_unification\run.py:16:1: 'gzip' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp125c_RG_scaling_alpha_unification\run.py:479:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp125c_RG_scaling_alpha_unification\run.py:482:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp125_unified_quran_coordinate_pca\run.py:16:1: 'math' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp125_unified_quran_coordinate_pca\run.py:147:5: local variable 'non_quran_pc2' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp125_unified_quran_coordinate_pca\run.py:295:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp135_F79_bootstrap_stability\run.py:103:5: 'scripts._phi_universal_xtrad_sizing._normalise_arabic' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp135_F79_bootstrap_stability\run.py:103:5: 'scripts._phi_universal_xtrad_sizing._normalise_hebrew' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp135_F79_bootstrap_stability\run.py:103:5: 'scripts._phi_universal_xtrad_sizing._normalise_greek' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp135_F79_bootstrap_stability\run.py:103:5: 'scripts._phi_universal_xtrad_sizing._normalise_pali' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp135_F79_bootstrap_stability\run.py:103:5: 'scripts._phi_universal_xtrad_sizing._normalise_avestan' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp137b_The_Quran_Constant_per_unit\run.py:250:9: local variable 'n_units' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp137_The_Quran_Constant\run.py:609:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp137_The_Quran_Constant\run.py:614:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp141_QFootprint_Dual_Pool\run.py:273:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp143_QFootprint_Sharpshooter_Audit\run.py:18:1: 'itertools.combinations' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp151_QFootprint_Quran_Internal\run.py:365:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp154_F75_stretched_exp_derivation\run.py:458:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp156_F75_beta_first_principles_derivation\run.py:418:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp157_beta_from_cognitive_channel\run.py:43:1: 'scipy.optimize.minimize_scalar' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp158_F_universal_chinese_extension\run.py:506:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp160_cross_scripture_ncd\run.py:323:5: local variable 'pq01_qab' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp160_cross_scripture_ncd\_summary.py:14:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp161_arabic_char_lm_R4_scaffold\run.py:56:1: 'collections.defaultdict' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp163_quran_geometric_shape\run.py:706:5: 'mpl_toolkits.mplot3d.Axes3D' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp163_quran_geometric_shape\_probe.py:4:1: 'numpy as np' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp165_quran_intrinsic_geometry\run.py:428:5: local variable 'n' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp166_tajweed_psd_modern\run.py:13:1: 'os' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp166_tajweed_psd_modern\run.py:222:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp166_tajweed_psd_modern\run.py:228:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp167_tajweed_psd_v2\run.py:274:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp167_tajweed_psd_v2\run.py:279:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp168_sonority_sequencing\run.py:216:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp168_sonority_sequencing\run.py:236:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp168_sonority_sequencing\run.py:240:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp169_phoneme_class_markov\run.py:207:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp169_phoneme_class_markov\run.py:223:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp169_phoneme_class_markov\run.py:228:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp170_periodicity_hunt\run.py:291:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp170_periodicity_hunt\run.py:330:15: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp170_periodicity_hunt\run.py:343:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp170_periodicity_hunt\run.py:353:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp170_periodicity_hunt\run.py:357:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp171_surah_constants\run.py:313:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp171_surah_constants\run.py:329:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp171_surah_constants\run.py:344:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp171_surah_constants\run.py:348:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp172_saj_rhyme\run.py:202:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp172_saj_rhyme\run.py:224:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp172_saj_rhyme\run.py:228:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp173_rhyme_memory\run.py:143:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp173_rhyme_memory\run.py:214:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp173_rhyme_memory\run.py:218:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp174_muqattaat_enrichment\run.py:416:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp174_muqattaat_enrichment\run.py:511:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp174_muqattaat_enrichment\run.py:541:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp174_muqattaat_enrichment\run.py:547:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp175_surah_invariant_atlas\run.py:373:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp175_surah_invariant_atlas\run.py:377:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp175_surah_invariant_atlas\run_fast_null.py:289:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp175_surah_invariant_atlas\run_fast_null.py:292:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp175_surah_invariant_atlas\run_fast_null.py:293:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp175_surah_invariant_atlas\run_fast_null.py:294:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp175_surah_invariant_atlas\run_fast_null.py:295:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\avenue_A_bayesian_inversion.py:113:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\avenue_A_bayesian_inversion.py:168:9: import 'comb' from line 141 shadowed by loop variable
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\avenue_C_multiscale.py:65:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\avenue_C_multiscale.py:90:5: local variable 'p_max_vals' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\avenue_C_multiscale.py:105:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\avenue_C_multiscale.py:127:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\avenue_C_multiscale.py:128:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\avenue_C_multiscale.py:184:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\avenue_C_multiscale.py:185:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\avenue_C_multiscale.py:237:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\avenue_C_multiscale.py:242:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\avenue_D_extremality.py:84:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\avenue_D_extremality.py:157:15: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\avenue_D_extremality.py:159:15: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\avenue_E_ceiling.py:93:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\avenue_E_ceiling.py:132:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\avenue_E_ceiling.py:199:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\avenue_E_ceiling.py:209:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\avenue_E_ceiling.py:218:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\avenue_E_ceiling.py:220:5: local variable 'pareto_pts' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\avenue_E_ceiling.py:273:19: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\avenue_E_ceiling.py:275:19: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\block_decomposition.py:103:5: local variable 'block_names' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\maqrunat_on_rhyme.py:122:5: local variable 'all_pw' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\maqrunat_on_rhyme.py:139:5: local variable 'p_sign' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\multi_observable.py:213:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\run.py:8:1: 'os' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\run.py:165:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\run.py:261:23: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\tsp_global_minimum.py:211:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\tsp_global_minimum.py:219:5: local variable 'orderings' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp176_mushaf_tour\tsp_global_minimum.py:232:13: local variable 'best_concat' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp177_quran_multifractal_fingerprint\run.py:155:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp177_quran_multifractal_fingerprint\run.py:213:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp177_quran_multifractal_fingerprint\run.py:298:9: 'mpl_toolkits.mplot3d.Axes3D' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp178_quran_portrait\run.py:262:5: redefinition of unused 'plt' from line 214
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp179_F85_escalation_10M\run.py:83:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp180_F86_lagrangian_KKT\run.py:126:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp180_F86_lagrangian_KKT\run.py:189:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp180_F86_lagrangian_KKT\run.py:198:15: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp180_F86_lagrangian_KKT\run.py:199:15: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp180_F86_lagrangian_KKT\run.py:230:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp180_F86_lagrangian_KKT\run.py:238:15: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp181_F83_max_feature\run.py:30:1: 're' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp181_F83_max_feature\run.py:407:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp182_quran_ifs_fractal\run.py:165:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp182_quran_ifs_fractal\run.py:166:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp183_quran_authentication_ring\run.py:204:5: local variable 'd_sim' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp183_quran_authentication_ring\run.py:455:5: local variable 'total_eval' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp25_farasa_sensitivity\run.py:54:9: 'farasa' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp30_cascade_R1_9ch\run.py:38:1: 'math' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp30_cascade_R1_9ch\run.py:43:1: 'typing.Callable' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp31_subset_centroid_stationarity\run.py:261:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp32_canonical_path_near_optimality\run.py:240:24: local variable 'nn_best_order' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp32_canonical_path_near_optimality\run.py:289:5: local variable 'all_2opt' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp33_island_isolation\run.py:40:1: 'random' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp41_gzip_formalised\length_audit.py:175:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp41_gzip_formalised\length_audit.py:187:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp41_gzip_formalised\length_audit.py:198:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp41_gzip_formalised\length_audit.py:206:9: local variable 'n_mask' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp41_gzip_formalised\length_audit.py:268:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp46_emphatic_substitution\run.py:58:1: 'gzip' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp46_emphatic_substitution\run.py:60:1: 'math' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp46_emphatic_substitution\run.py:64:1: 'collections.defaultdict' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp46_emphatic_substitution\run.py:74:1: 'experiments._lib.load_phase' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp46_emphatic_substitution\run.py:80:1: 'experiments._ultimate2_helpers.ARABIC_CONSONANTS' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp46_emphatic_substitution\run.py:80:1: 'experiments._ultimate2_helpers.letters_only' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp50_emphatic_cross_corpus\run.py:65:1: 'typing.Iterable' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp50_emphatic_cross_corpus\run.py:92:1: 'experiments.exp46_emphatic_substitution.run._EMPHATIC_MAP' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp52_acoustic_bridge_full\run.py:30:1: 'dataclasses.field' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp52_acoustic_bridge_full\run.py:544:5: local variable 'total_verses_target' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp52_acoustic_bridge_full\_audio.py:279:9: 'torch' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp52_acoustic_bridge_full\_audit.py:28:1: 'experiments.exp52_acoustic_bridge_full._text.count_ghunnah' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp52_acoustic_bridge_full\_audit.py:28:1: 'experiments.exp52_acoustic_bridge_full._text.count_words' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp52_acoustic_bridge_full\_audit.py:28:1: 'experiments.exp52_acoustic_bridge_full._text.text_features' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp52_acoustic_bridge_full\_audit.py:28:1: 'experiments.exp52_acoustic_bridge_full._text.PLAIN_ALIF' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp52_acoustic_bridge_full\_audit.py:28:1: 'experiments.exp52_acoustic_bridge_full._text.ALIF' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp52_acoustic_bridge_full\_audit.py:28:1: 'experiments.exp52_acoustic_bridge_full._text.WAW' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp52_acoustic_bridge_full\_audit.py:28:1: 'experiments.exp52_acoustic_bridge_full._text.YA' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp52_acoustic_bridge_full\_audit.py:28:1: 'experiments.exp52_acoustic_bridge_full._text.FATHA' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp52_acoustic_bridge_full\_audit.py:28:1: 'experiments.exp52_acoustic_bridge_full._text.DAMMA' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp52_acoustic_bridge_full\_audit.py:28:1: 'experiments.exp52_acoustic_bridge_full._text.KASRA' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp52_acoustic_bridge_full\_audit.py:28:1: 'experiments.exp52_acoustic_bridge_full._text.BASMALAH' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp52_acoustic_bridge_full\_chunker_smoke.py:25:1: 'os' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp52_acoustic_bridge_full\_chunker_smoke.py:39:1: 'experiments.exp52_acoustic_bridge_full._text.build_alignment_target' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp52_acoustic_bridge_full\_chunker_smoke.py:76:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp52_acoustic_bridge_full\_chunker_smoke.py:90:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp55_gamma_length_stratified\run.py:324:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp60_lc3_parsimony_theorem\run.py:208:5: local variable 'rng' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp61_vl_cv_floor_sensitivity\run.py:336:16: local variable 'n_c_total' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp65_dual_state_bic\run.py:213:5: local variable 'mu_ctrl' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp68_hurst_ladder\run.py:262:13: local variable 'n' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp69_madd_bridge\run.py:261:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp69_madd_bridge\run.py:262:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp69_madd_bridge\run.py:263:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp70_decision_boundary\run.py:36:1: 'scipy.stats' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp73_prime_structure\run.py:187:5: local variable 'total' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp73_prime_structure\run.py:188:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp74_eigenvalue_spectrum\run.py:182:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp74_eigenvalue_spectrum\subspace_test.py:78:5: local variable 'Z_C' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp74_eigenvalue_spectrum\subspace_test.py:159:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp76_zipf\run.py:39:1: 'scipy.optimize.minimize_scalar' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp78_inverse_phi_cascade\run.py:52:1: 'scipy.stats as sp_stats' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp79_ar1_decorrelation\run.py:30:1: 'math' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp83_order_sensitivity\run.py:39:1: 'math' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp83_order_sensitivity\run.py:46:1: 'scipy.stats as sp_stats' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp85_scale_hierarchy\run.py:36:1: 'math' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp86_ring_structure\run.py:36:1: 'math' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp86_ring_structure\run.py:39:1: 'collections.Counter' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp86_ring_structure\run.py:44:1: 'scipy.spatial.distance.cosine as cosine_dist' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp86_ring_structure\run.py:261:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp86_ring_structure\run.py:268:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp87_unified_probe\run.py:32:1: 'scipy.stats.spearmanr' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp87_unified_probe\run.py:129:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp87_unified_probe\run.py:242:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp88_lc3_70_u\run.py:198:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp93_unified_stack\run.py:606:9: local variable 'auc2' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp94_adiyat_864\run.py:31:1: 'math' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp95c_multi_compressor_adiyat\run.py:434:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp95c_multi_compressor_adiyat\run.py:438:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp95d_multi_compressor_robust\run.py:493:19: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp95d_multi_compressor_robust\_inspect_misses.py:7:1: 'sys' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp95d_multi_compressor_robust\_inspect_misses.py:34:15: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp95e_full_114_consensus_universal\run.py:643:5: local variable 'exp94' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp95e_full_114_consensus_universal\_audit.py:15:1: 'json' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp95j_bigram_shift_universal\run.py:29:1: 'numpy as np' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp95o_joint_extremum_likelihood\run.py:32:1: 'gzip as gz' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp95_phonetic_modulation\run.py:505:15: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp96c_F57_meta\run.py:291:11: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp96_hurst_ladder\run.py:537:15: f-string is missing placeholders
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp99_adversarial_complexity\run.py:33:1: 'src.features.DIAC' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\exp99_adversarial_complexity\run.py:92:5: `global _ROOT_CACHE` is unused: name is never assigned in scope
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\expA6_structural_coherence_score\run.py:167:5: local variable 'corpora' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\expA7_dna_reconstruction\run.py:61:1: 'math' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\expC1plus_renyi2_closed_form\run.py:149:5: local variable 'obs' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\expP14_cross_script_dominant_letter\run.py:22:1: 'numpy as np' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\expP17_markov_saj_adversarial\run.py:156:5: local variable 'rng' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\expP18_shannon_capacity_el\run.py:22:1: 'numpy as np' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\expP4_cross_tradition_profile\run.py:29:1: 'collections.Counter' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\expP4_cross_tradition_profile\run.py:48:1: 'experiments.expA2_diacritic_capacity_universal.run.greek_pairs' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\expP4_diacritic_capacity_cross_tradition\run.py:35:1: 'math' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\expP9_v79_batch_diagnostics\run.py:36:1: 'src.features.features_5d' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\expP9_v79_batch_diagnostics\run.py:271:9: local variable 'nv' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\expP9_v79_batch_diagnostics\run.py:421:5: local variable 'keys' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\expP9_v79_batch_diagnostics\run_N7_noon_forensics.py:26:1: 'numpy as np' imported but unused
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\expP9_v79_batch_diagnostics\run_N7_noon_forensics.py:69:5: local variable 'prc0' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\expParadigm2_OP2_T_alt_validation\run.py:210:5: local variable 't_col' is assigned to but never used
+C:\Users\mtj_2\OneDrive\Desktop\Quran\experiments\expX3_prose_extremum_brown\run.py:167:5: local variable 'rho_proxy' is assigned to but never used

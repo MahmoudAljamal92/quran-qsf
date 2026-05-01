@@ -1,0 +1,191 @@
+{
+  "experiment": "expB14b_hamza_aware_9ch",
+  "task_id": "B14b",
+  "title": "Hamza-aware parallel of the 9-channel forensic detector. Differential test: does keeping أ إ آ ٱ distinct from ا throughout all 7 (of 9) channels produce different feature deltas for E7a (ع↔ا), E7b (ع↔أ), E7c (ع↔آ) sub-classes where the legacy detector produces byte-identical results?",
+  "design_notes": [
+    "Standalone parallel detector — does NOT modify the protected files _ultimate2_helpers.py or exp09/run.py.",
+    "Uses normalize_rasm_hamza_preserving (already in helpers, added under B14 work 2026-04-24).",
+    "Extended alphabet: 28 consonants + 5 extras + 4 hamza-bearing alef variants {أ,إ,آ,ٱ} + space = 38 chars.",
+    "Channels B (root-bigram LL) and G (root-trigram LM) excluded from this MVP because they require control-trained references on the hamza-preserving alphabet — re-training is a production-grade follow-up."
+  ],
+  "alphabet_legacy_size": 34,
+  "alphabet_hamza_size": 38,
+  "hamza_alef_variants": "أإآٱ",
+  "target_verse": {
+    "surah": 1,
+    "verse_idx": 6,
+    "text": "صراط الذين أنعمت عليهم غير المغضوب عليهم ولا الضالين"
+  },
+  "edits": {
+    "E7a_ayn_to_bare_alef": "صراط الذين أنامت عليهم غير المغضوب عليهم ولا الضالين",
+    "E7b_ayn_to_hamza_alef": "صراط الذين أنأمت عليهم غير المغضوب عليهم ولا الضالين",
+    "E7c_ayn_to_madda_alef": "صراط الذين أنآمت عليهم غير المغضوب عليهم ولا الضالين"
+  },
+  "canonical_features_legacy": {
+    "A_spectral": 0.8893207516461746,
+    "C_bigram_dist": 18.303005217723125,
+    "D_wazn": 0.7586206896551724,
+    "E_ncd": 0.4825174825174825,
+    "F_coupling": 0.09860798754091438,
+    "H_local_spec": 0.80796982982548,
+    "I_root_field": 0.07142857142857142
+  },
+  "canonical_features_hamza": {
+    "A_spectral": 0.8816479948027153,
+    "C_bigram_dist": 18.027756377319946,
+    "D_wazn": 0.7931034482758621,
+    "E_ncd": 0.47019867549668876,
+    "F_coupling": 0.09386544011544012,
+    "H_local_spec": 0.8262965879763534,
+    "I_root_field": 0.07142857142857142
+  },
+  "edit_results": [
+    {
+      "edit_name": "E7a_ayn_to_bare_alef",
+      "feats_legacy": {
+        "A_spectral": 0.8829255634549193,
+        "C_bigram_dist": 18.681541692269406,
+        "D_wazn": 0.7931034482758621,
+        "E_ncd": 0.4965034965034965,
+        "F_coupling": 0.09942099567099567,
+        "H_local_spec": 0.8064809536232479,
+        "I_root_field": 0.07142857142857142
+      },
+      "feats_hamza": {
+        "A_spectral": 0.8769602538003358,
+        "C_bigram_dist": 18.35755975068582,
+        "D_wazn": 0.7586206896551724,
+        "E_ncd": 0.48344370860927155,
+        "F_coupling": 0.09860798754091438,
+        "H_local_spec": 0.8238444527759862,
+        "I_root_field": 0.07142857142857142
+      },
+      "delta_vs_canon_legacy": {
+        "A_spectral": -0.0063951881912552855,
+        "C_bigram_dist": 0.37853647454628003,
+        "D_wazn": 0.034482758620689724,
+        "E_ncd": 0.013986013986014012,
+        "F_coupling": 0.0008130081300812969,
+        "H_local_spec": -0.0014888762022321478,
+        "I_root_field": 0.0
+      },
+      "delta_vs_canon_hamza": {
+        "A_spectral": -0.004687741002379453,
+        "C_bigram_dist": 0.3298033733658734,
+        "D_wazn": -0.034482758620689724,
+        "E_ncd": 0.013245033112582794,
+        "F_coupling": 0.004742547425474253,
+        "H_local_spec": -0.0024521352003672447,
+        "I_root_field": 0.0
+      }
+    },
+    {
+      "edit_name": "E7b_ayn_to_hamza_alef",
+      "feats_legacy": {
+        "A_spectral": 0.8829255634549193,
+        "C_bigram_dist": 18.681541692269406,
+        "D_wazn": 0.7931034482758621,
+        "E_ncd": 0.4965034965034965,
+        "F_coupling": 0.09942099567099567,
+        "H_local_spec": 0.8064809536232479,
+        "I_root_field": 0.07142857142857142
+      },
+      "feats_hamza": {
+        "A_spectral": 0.8822431076959436,
+        "C_bigram_dist": 18.083141320025124,
+        "D_wazn": 0.7931034482758621,
+        "E_ncd": 0.48344370860927155,
+        "F_coupling": 0.09454294689050786,
+        "H_local_spec": 0.8269616000379078,
+        "I_root_field": 0.07142857142857142
+      },
+      "delta_vs_canon_legacy": {
+        "A_spectral": -0.0063951881912552855,
+        "C_bigram_dist": 0.37853647454628003,
+        "D_wazn": 0.034482758620689724,
+        "E_ncd": 0.013986013986014012,
+        "F_coupling": 0.0008130081300812969,
+        "H_local_spec": -0.0014888762022321478,
+        "I_root_field": 0.0
+      },
+      "delta_vs_canon_hamza": {
+        "A_spectral": 0.0005951128932283334,
+        "C_bigram_dist": 0.05538494270517802,
+        "D_wazn": 0.0,
+        "E_ncd": 0.013245033112582794,
+        "F_coupling": 0.0006775067750677405,
+        "H_local_spec": 0.0006650120615543376,
+        "I_root_field": 0.0
+      }
+    },
+    {
+      "edit_name": "E7c_ayn_to_madda_alef",
+      "feats_legacy": {
+        "A_spectral": 0.8829255634549193,
+        "C_bigram_dist": 18.681541692269406,
+        "D_wazn": 0.7931034482758621,
+        "E_ncd": 0.4965034965034965,
+        "F_coupling": 0.09942099567099567,
+        "H_local_spec": 0.8064809536232479,
+        "I_root_field": 0.07142857142857142
+      },
+      "feats_hamza": {
+        "A_spectral": 0.8820614728015604,
+        "C_bigram_dist": 18.083141320025124,
+        "D_wazn": 0.7931034482758621,
+        "E_ncd": 0.5,
+        "F_coupling": 0.09386544011544012,
+        "H_local_spec": 0.8275147929360698,
+        "I_root_field": 0.07142857142857142
+      },
+      "delta_vs_canon_legacy": {
+        "A_spectral": -0.0063951881912552855,
+        "C_bigram_dist": 0.37853647454628003,
+        "D_wazn": 0.034482758620689724,
+        "E_ncd": 0.013986013986014012,
+        "F_coupling": 0.0008130081300812969,
+        "H_local_spec": -0.0014888762022321478,
+        "I_root_field": 0.0
+      },
+      "delta_vs_canon_hamza": {
+        "A_spectral": 0.00041347799884516867,
+        "C_bigram_dist": 0.05538494270517802,
+        "D_wazn": 0.0,
+        "E_ncd": 0.029801324503311244,
+        "F_coupling": 0.0,
+        "H_local_spec": 0.0012182049597163624,
+        "I_root_field": 0.0
+      }
+    }
+  ],
+  "architectural_blindness": {
+    "legacy_identical_across_3_subclasses_per_channel": {
+      "A_spectral": true,
+      "C_bigram_dist": true,
+      "D_wazn": true,
+      "E_ncd": true,
+      "F_coupling": true,
+      "H_local_spec": true,
+      "I_root_field": true
+    },
+    "hamza_identical_across_3_subclasses_per_channel": {
+      "A_spectral": false,
+      "C_bigram_dist": false,
+      "D_wazn": false,
+      "E_ncd": false,
+      "F_coupling": false,
+      "H_local_spec": false,
+      "I_root_field": true
+    },
+    "n_channels_blind_legacy": 7,
+    "n_channels_blind_hamza": 1,
+    "n_channels_fixed_legacy": 0,
+    "n_channels_fixed_hamza": 6
+  },
+  "verdict": "B14b_HAMZA_AWARE_DETECTOR_DIFFERENTIATES",
+  "interpretation": [
+    "B14 found that under the legacy detector, E7a / E7b / E7c produce byte-identical statistics — the detector cannot distinguish bare-alef from hamza-bearing-alef substitutions.",
+    "Under the hamza-preserving parallel detector, channels that differ across the 3 sub-classes (n_channels_fixed_hamza > 0) represent the architectural fix: those channels can now tell ع↔ا apart from ع↔أ apart from ع↔آ.",
+    "Production-grade B14b would (i) re-train channels B/G on the hamza-preserving alphabet, (ii) re-run exp46/exp50 with the new detector to see if any of the 16 audited no-E7 detections gain hamza-sensitivity, (iii) verify that the headline H1_STRUCTURAL_ARABIC_BLINDNESS / H2_QURAN_SPECIFIC_IMMUNITY verdict from B16 doesn't shift under the new detector. Estimated additional effort: 1-2 weeks engineering + re-runs."
+  ]
+}

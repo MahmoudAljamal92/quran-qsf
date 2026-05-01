@@ -1,0 +1,263 @@
+{
+  "experiment": "expC1plus_renyi2_closed_form",
+  "schema_version": 1,
+  "prereg_document": "experiments/expC1plus_renyi2_closed_form/PREREG.md",
+  "prereg_hash": "321b00e26a85db37c6dd7ba087900696c486bca895b5bc6e7f5f8a56398a9c56",
+  "frozen_constants": {
+    "seed": 42,
+    "n_bootstrap": 100000,
+    "renyi2_identity_band": [
+      0.495,
+      0.505
+    ],
+    "renyi2_near_half_band": [
+      0.48,
+      0.52
+    ]
+  },
+  "closed_form_quantities": {
+    "claim": "Σp̂² (the iid pair-collision probability of the verse-final-letter PMF) ≈ 1/2  ⟺  Rényi-2 entropy ≈ 1 bit",
+    "analytic_reference_sum_p2": 0.5,
+    "analytic_reference_renyi2_bits": 1.0,
+    "analytic_reference_one_over_sqrt2": 0.7071067811865475
+  },
+  "quran_corpus_level": {
+    "summary": {
+      "n": 6236,
+      "alphabet_size": 28,
+      "alphabet": [
+        "ء",
+        "ا",
+        "ب",
+        "ة",
+        "ت",
+        "ث",
+        "ج",
+        "ح",
+        "د",
+        "ذ",
+        "ر",
+        "ز",
+        "س",
+        "ش",
+        "ص",
+        "ض",
+        "ط",
+        "ظ",
+        "ع",
+        "ف",
+        "ق",
+        "ك",
+        "ل",
+        "م",
+        "ن",
+        "ه",
+        "ى",
+        "ي"
+      ],
+      "pmf": {
+        "ء": 0.001763951250801796,
+        "ا": 0.1521808851828095,
+        "ب": 0.025978191148171906,
+        "ة": 0.0195638229634381,
+        "ت": 0.005452212957023733,
+        "ث": 0.00032071840923669016,
+        "ج": 0.0014432328415651058,
+        "ح": 0.00016035920461834508,
+        "د": 0.03175112251443233,
+        "ذ": 0.00032071840923669016,
+        "ر": 0.07216164207825529,
+        "ز": 0.001603592046183451,
+        "س": 0.001763951250801796,
+        "ش": 0.00032071840923669016,
+        "ص": 0.001603592046183451,
+        "ض": 0.00016035920461834508,
+        "ط": 0.001924310455420141,
+        "ظ": 0.002084669660038486,
+        "ع": 0.002084669660038486,
+        "ف": 0.0004810776138550353,
+        "ق": 0.0065747273893521484,
+        "ك": 0.0012828736369467607,
+        "ل": 0.010744066709429121,
+        "م": 0.10663887107119949,
+        "ن": 0.50096215522771,
+        "ه": 0.00785760102629891,
+        "ى": 0.03864656831302117,
+        "ي": 0.004169339320076972
+      },
+      "sum_p2": 0.29455614958520554,
+      "renyi2_bits": 1.763385421759625,
+      "shannon_bits": 2.5280439034689737,
+      "h_max_uniform_alphabet_bits": 4.807354922057604
+    },
+    "bootstrap_sum_p2_vs_half": {
+      "n": 6236,
+      "n_boot": 100000,
+      "median": 0.29462696890039464,
+      "ci_lo": 0.28441354561093046,
+      "ci_hi": 0.3051421714467218,
+      "p_left_lt_half": 1.0,
+      "p_right_gt_half": 0.0,
+      "p_two_sided_extremity_vs_half": 0.0
+    },
+    "in_renyi2_strict_band": false,
+    "in_renyi2_near_half_band": false
+  },
+  "quran_band_a_per_surah_summary": {
+    "n_band_a_surahs": 68,
+    "mean_sum_p2_per_surah": 0.5410606734830035,
+    "median_sum_p2_per_surah": 0.4564197530864198,
+    "mean_el_observed_per_surah": 0.7074338713106891,
+    "mean_clustering_residual": 0.1663731978276857,
+    "sqrt_mean_sum_p2": 0.7355682656851119,
+    "one_over_sqrt_2": 0.7071067811865475
+  },
+  "cross_corpus": {
+    "poetry_jahili": {
+      "summary": {
+        "n": 2561,
+        "alphabet_size": 34,
+        "sum_p2": 0.07776561924192232,
+        "renyi2_bits": 3.6847237198079785,
+        "shannon_bits": 4.1347928958582685,
+        "h_max_uniform_alphabet_bits": 5.087462841250339
+      },
+      "in_renyi2_strict_band": false
+    },
+    "poetry_islami": {
+      "summary": {
+        "n": 10295,
+        "alphabet_size": 34,
+        "sum_p2": 0.08486275560616972,
+        "renyi2_bits": 3.5587246641650463,
+        "shannon_bits": 4.077417452608119,
+        "h_max_uniform_alphabet_bits": 5.087462841250339
+      },
+      "in_renyi2_strict_band": false
+    },
+    "poetry_abbasi": {
+      "summary": {
+        "n": 76499,
+        "alphabet_size": 36,
+        "sum_p2": 0.0766517323488227,
+        "renyi2_bits": 3.7055377922440504,
+        "shannon_bits": 4.133142869685758,
+        "h_max_uniform_alphabet_bits": 5.169925001442312
+      },
+      "in_renyi2_strict_band": false
+    },
+    "ksucca": {
+      "summary": {
+        "n": 1967,
+        "alphabet_size": 30,
+        "sum_p2": 0.07391636635910935,
+        "renyi2_bits": 3.7579623524544967,
+        "shannon_bits": 4.1192007683025285,
+        "h_max_uniform_alphabet_bits": 4.906890595608519
+      },
+      "in_renyi2_strict_band": false
+    },
+    "arabic_bible": {
+      "summary": {
+        "n": 31083,
+        "alphabet_size": 35,
+        "sum_p2": 0.07814683561951238,
+        "renyi2_bits": 3.677668734060536,
+        "shannon_bits": 4.049625492559339,
+        "h_max_uniform_alphabet_bits": 5.129283016944966
+      },
+      "in_renyi2_strict_band": false
+    },
+    "hindawi": {
+      "summary": {
+        "n": 1793,
+        "alphabet_size": 32,
+        "sum_p2": 0.06928879085767325,
+        "renyi2_bits": 3.851234209447342,
+        "shannon_bits": 4.194056997599378,
+        "h_max_uniform_alphabet_bits": 5.0
+      },
+      "in_renyi2_strict_band": false
+    },
+    "hebrew_tanakh": {
+      "summary": {
+        "n": 28377,
+        "alphabet_size": 27,
+        "sum_p2": 0.09566450419281239,
+        "renyi2_bits": 3.385872470124626,
+        "shannon_bits": 3.7601898648932295,
+        "h_max_uniform_alphabet_bits": 4.754887502163468
+      },
+      "in_renyi2_strict_band": false
+    },
+    "greek_nt": {
+      "summary": {
+        "n": 7941,
+        "alphabet_size": 17,
+        "sum_p2": 0.18939218671970992,
+        "renyi2_bits": 2.4005512805184375,
+        "shannon_bits": 2.685127252583802,
+        "h_max_uniform_alphabet_bits": 4.087462841250339
+      },
+      "in_renyi2_strict_band": false
+    },
+    "iliad_greek": {
+      "summary": {
+        "n": 15687,
+        "alphabet_size": 11,
+        "sum_p2": 0.16775414780592884,
+        "renyi2_bits": 2.57557965665824,
+        "shannon_bits": 2.885238697383387,
+        "h_max_uniform_alphabet_bits": 3.4594316186372973
+      },
+      "in_renyi2_strict_band": false
+    },
+    "pali_dn": {
+      "summary": {
+        "n": 14498,
+        "alphabet_size": 9,
+        "sum_p2": 0.27793528244775667,
+        "renyi2_bits": 1.8471791060437013,
+        "shannon_bits": 2.334957963304494,
+        "h_max_uniform_alphabet_bits": 3.169925001442312
+      },
+      "in_renyi2_strict_band": false
+    },
+    "pali_mn": {
+      "summary": {
+        "n": 24243,
+        "alphabet_size": 9,
+        "sum_p2": 0.31172607797452573,
+        "renyi2_bits": 1.6816492437713992,
+        "shannon_bits": 2.202453779473212,
+        "h_max_uniform_alphabet_bits": 3.169925001442312
+      },
+      "in_renyi2_strict_band": false
+    },
+    "rigveda": {
+      "summary": {
+        "n": 18079,
+        "alphabet_size": 35,
+        "sum_p2": 0.1019634769062324,
+        "renyi2_bits": 3.293875620358759,
+        "shannon_bits": 3.788951426332357,
+        "h_max_uniform_alphabet_bits": 5.129283016944966
+      },
+      "in_renyi2_strict_band": false
+    },
+    "avestan_yasna": {
+      "summary": {
+        "n": 4163,
+        "alphabet_size": 22,
+        "sum_p2": 0.11646086172935233,
+        "renyi2_bits": 3.102082896022911,
+        "shannon_bits": 3.372254257823371,
+        "h_max_uniform_alphabet_bits": 4.459431618637297
+      },
+      "in_renyi2_strict_band": false
+    }
+  },
+  "verdict": "FAIL_NOT_HALF",
+  "interpretation": "PASS_RENYI2_IDENTITY_AND_DISTINCT means the Quran's verse-final-letter PMF satisfies the closed-form identity Σp̂² ≈ 1/2 (equivalently, its Rényi-2 entropy is 1 bit) AND no Arabic-control corpus does. This converts the C1 numerical coincidence (EL_q ≈ 1/√2) to an information-theoretic statement about the corpus PMF, with a pre-registered band [0.495, 0.505] for the strict identity. PARTIAL_NEAR_HALF preserves the qualitative match within ±2 % but loses the tight identity. FAIL_NOT_HALF would falsify the closed-form framing entirely.",
+  "runtime_seconds": 25.64
+}

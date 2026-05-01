@@ -1,0 +1,8 @@
+rank,corpus,n_units,K_canon_used,phim_fragility,min_unit,max_unit
+1,quran,109,3,0.0,0.0,0.0
+2,poetry_jahili,133,3,0.0,0.0,0.0
+3,poetry_islami,465,3,0.0,0.0,0.0
+4,poetry_abbasi,2823,3,0.0,0.0,0.0
+5,ksucca,41,3,0.0,0.0,0.0
+6,arabic_bible,1183,3,0.0,0.0,0.0
+7,hindawi,74,3,0.0,0.0,0.0

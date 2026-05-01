@@ -1,0 +1,59 @@
+{
+    "corpus":  "rigveda_samhita",
+    "source":  "https://github.com/bhavykhatri/DharmicData",
+    "edition":  "Rigveda Mandala JSON, verse-separated by double-newline",
+    "license":  "see source repo (DharmicData) - educational/research use",
+    "fetched_at":  "2026-04-25",
+    "files":  [
+                  {
+                      "filename":  "rigveda_mandala_1.json",
+                      "size_bytes":  727939,
+                      "sha256":  "1abdf9cb9d71d1a29ebab6edcf2283cfea586de82fe0fca8bef025e41be81a69"
+                  },
+                  {
+                      "filename":  "rigveda_mandala_10.json",
+                      "size_bytes":  658005,
+                      "sha256":  "80c0d0da0084aa8e051a6043c1ac94783ce421ad2c7ef0c932e3db4d0e19b8a4"
+                  },
+                  {
+                      "filename":  "rigveda_mandala_2.json",
+                      "size_bytes":  171780,
+                      "sha256":  "46fcc571f5bf4486d9ad3088e89f61f9fdb52889742cff903502c138650e7b1a"
+                  },
+                  {
+                      "filename":  "rigveda_mandala_3.json",
+                      "size_bytes":  225209,
+                      "sha256":  "206a7015115acc2b05f15b9d85bc829c91f99a28157187f0672447c365db40ed"
+                  },
+                  {
+                      "filename":  "rigveda_mandala_4.json",
+                      "size_bytes":  210114,
+                      "sha256":  "621a3b8b6327f98f83e3aeb0e077e98bf24cf84d75082b2b0c321267ae738c00"
+                  },
+                  {
+                      "filename":  "rigveda_mandala_5.json",
+                      "size_bytes":  257616,
+                      "sha256":  "1873f064dae04eb1c9efd9c8551fbf511213e14f680d00601d7883bbdbc7adbe"
+                  },
+                  {
+                      "filename":  "rigveda_mandala_6.json",
+                      "size_bytes":  273784,
+                      "sha256":  "14dd85524b6d56bfe50b387d8cbfaea9bbc5a15fb0c2a73f57f31afa9423978b"
+                  },
+                  {
+                      "filename":  "rigveda_mandala_7.json",
+                      "size_bytes":  314119,
+                      "sha256":  "40d341217ca9468746802f7b4fac266d297bcad4f18b56f16039e47146d9ca9b"
+                  },
+                  {
+                      "filename":  "rigveda_mandala_8.json",
+                      "size_bytes":  470561,
+                      "sha256":  "7c36ee56c70981172c4db7b30492c23ddd7e51c399143dda9bd189ec3baa63ac"
+                  },
+                  {
+                      "filename":  "rigveda_mandala_9.json",
+                      "size_bytes":  322645,
+                      "sha256":  "3d0accf414ce95bef87b46cb77c8e712f02e04c8fbc5cf377fe2b2701f48e3e2"
+                  }
+              ]
+}

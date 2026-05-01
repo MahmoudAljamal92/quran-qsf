@@ -1,0 +1,262 @@
+{
+  "experiment": "exp130_F75_stability_under_resampling",
+  "hypothesis_id": "H86",
+  "hypothesis": "F75 G(c) := median_u(H_EL_u) + log₂(median_u(p_max_u)·A) is (Q1) exact-invariant under unit-order permutation AND (Q2) stable under bootstrap resampling at universal mean 5.75 ± 0.20, CV ≤ 4%, with Quran preserved as rank-1 outlier in ≥ 95% of bootstraps. PASS upgrades F75 to robust frequency-distribution law.",
+  "verdict": "PARTIAL_F75_stable_but_outlier_diluted",
+  "verdict_reason": "Universal regularity stable but Quran rank-1 freq only 85.0% (<95%). Quran rank distribution: {2: 24, 1: 170, 4: 3, 3: 2, 6: 1}.",
+  "prereg_hash": "7c87f4773a5de55bf83acad74cc5ed9320fa2be7e6da872e61758058fbb4311a",
+  "frozen_constants": {
+    "EXPECTED_CORPORA": [
+      "quran",
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "hindawi",
+      "ksucca",
+      "arabic_bible",
+      "hebrew_tanakh",
+      "greek_nt",
+      "pali",
+      "avestan_yasna"
+    ],
+    "A_FIXED": 28,
+    "N_PERM": 50,
+    "N_BOOTSTRAP": 200,
+    "SEED": 42,
+    "Q1_TOLERANCE": 1e-12,
+    "Q2_UNIVERSAL_MEAN_TARGET": 5.75,
+    "Q2_UNIVERSAL_MEAN_TOLERANCE": 0.2,
+    "Q2_UNIVERSAL_CV_FLOOR": 0.04,
+    "PER_CORPUS_CV_FLOOR": 0.05,
+    "PER_CORPUS_MEAN_DRIFT_FLOOR": 0.05,
+    "PER_CORPUS_PASS_COUNT_FLOOR": 9
+  },
+  "results": {
+    "per_corpus_original": {
+      "quran": {
+        "n_units": 114,
+        "G": 5.31644412745751,
+        "p_max_median": 0.7272727272727273,
+        "H_EL_median": 0.9685208240372034
+      },
+      "poetry_jahili": {
+        "n_units": 120,
+        "G": 5.667642099278081,
+        "p_max_median": 0.264391447368421,
+        "H_EL_median": 2.779539763336115
+      },
+      "poetry_islami": {
+        "n_units": 423,
+        "G": 5.6887218755408675,
+        "p_max_median": 0.2857142857142857,
+        "H_EL_median": 2.688721875540867
+      },
+      "poetry_abbasi": {
+        "n_units": 2575,
+        "G": 5.751629167387822,
+        "p_max_median": 0.2857142857142857,
+        "H_EL_median": 2.7516291673878226
+      },
+      "hindawi": {
+        "n_units": 72,
+        "G": 5.841472820982165,
+        "p_max_median": 0.1836734693877551,
+        "H_EL_median": 3.478902741597457
+      },
+      "ksucca": {
+        "n_units": 42,
+        "G": 5.878837869278973,
+        "p_max_median": 0.28001792114695345,
+        "H_EL_median": 2.907891879501107
+      },
+      "arabic_bible": {
+        "n_units": 1183,
+        "G": 5.851181638195952,
+        "p_max_median": 0.2727272727272727,
+        "H_EL_median": 2.918295834054489
+      },
+      "hebrew_tanakh": {
+        "n_units": 921,
+        "G": 5.809818932517963,
+        "p_max_median": 0.2413793103448276,
+        "H_EL_median": 3.053090083530327
+      },
+      "greek_nt": {
+        "n_units": 260,
+        "G": 5.656063621523095,
+        "p_max_median": 0.3333333333333333,
+        "H_EL_median": 2.433671200186647
+      },
+      "pali": {
+        "n_units": 186,
+        "G": 5.840863027773002,
+        "p_max_median": 0.4808201058201058,
+        "H_EL_median": 2.089938976016876
+      },
+      "avestan_yasna": {
+        "n_units": 67,
+        "G": 5.5103956321284695,
+        "p_max_median": 0.375,
+        "H_EL_median": 2.1180782093497093
+      }
+    },
+    "q1_sanity": {
+      "max_deviation": 0.0,
+      "n_perms_total": 550,
+      "pass": true,
+      "per_corpus_max_deviation": {
+        "quran": 0.0,
+        "poetry_jahili": 0.0,
+        "poetry_islami": 0.0,
+        "poetry_abbasi": 0.0,
+        "hindawi": 0.0,
+        "ksucca": 0.0,
+        "arabic_bible": 0.0,
+        "hebrew_tanakh": 0.0,
+        "greek_nt": 0.0,
+        "pali": 0.0,
+        "avestan_yasna": 0.0
+      }
+    },
+    "q2_per_corpus_bootstrap": {
+      "quran": {
+        "G_mean": 5.360187034798617,
+        "G_std": 0.10676868769622319,
+        "G_cv": 0.019918836227742657,
+        "G_min": 5.203595547237893,
+        "G_max": 5.7152566276670935
+      },
+      "poetry_jahili": {
+        "G_mean": 5.683341758424911,
+        "G_std": 0.06951967754865362,
+        "G_cv": 0.012232183194965985,
+        "G_min": 5.476727070652215,
+        "G_max": 5.840555462045104
+      },
+      "poetry_islami": {
+        "G_mean": 5.68012925847429,
+        "G_std": 0.03365781268334894,
+        "G_cv": 0.0059255364009778875,
+        "G_min": 5.584962500721156,
+        "G_max": 5.764529684278563
+      },
+      "poetry_abbasi": {
+        "G_mean": 5.750000118151815,
+        "G_std": 0.011155114850671936,
+        "G_cv": 0.0019400199341660972,
+        "G_min": 5.7127924016914395,
+        "G_max": 5.789898095464287
+      },
+      "hindawi": {
+        "G_mean": 5.819442415602773,
+        "G_std": 0.04463107675341553,
+        "G_cv": 0.007669304645708515,
+        "G_min": 5.664320072287378,
+        "G_max": 5.935184703519065
+      },
+      "ksucca": {
+        "G_mean": 5.869450783189884,
+        "G_std": 0.12870714312593265,
+        "G_cv": 0.02192831116235783,
+        "G_min": 5.6338288479146215,
+        "G_max": 6.206220264341629
+      },
+      "arabic_bible": {
+        "G_mean": 5.837733120412322,
+        "G_std": 0.016979628785734977,
+        "G_cv": 0.0029085996970919592,
+        "G_min": 5.798255861018912,
+        "G_max": 5.882141201309962
+      },
+      "hebrew_tanakh": {
+        "G_mean": 5.814493317964473,
+        "G_std": 0.02069958968823925,
+        "G_cv": 0.0035599988780253213,
+        "G_min": 5.772858703351735,
+        "G_max": 5.877953041147684
+      },
+      "greek_nt": {
+        "G_mean": 5.671870969712749,
+        "G_std": 0.023063160068755632,
+        "G_cv": 0.004066234967599,
+        "G_min": 5.6147098441152075,
+        "G_max": 5.731889980662245
+      },
+      "pali": {
+        "G_mean": 5.86030610506849,
+        "G_std": 0.030566681598766604,
+        "G_cv": 0.0052158848105784,
+        "G_min": 5.796310670727813,
+        "G_max": 5.961827186058345
+      },
+      "avestan_yasna": {
+        "G_mean": 5.494951660918787,
+        "G_std": 0.07616347908030809,
+        "G_cv": 0.01386062767794633,
+        "G_min": 5.269851398307669,
+        "G_max": 5.663121098274009
+      }
+    },
+    "q2_universal_mean": 5.712900594792646,
+    "q2_universal_std": 0.16636187342810163,
+    "q2_universal_cv": 0.029120386512543523,
+    "q2_universal_mean_pass": true,
+    "q2_universal_cv_pass": true,
+    "per_corpus_pass": {
+      "quran": true,
+      "poetry_jahili": true,
+      "poetry_islami": true,
+      "poetry_abbasi": true,
+      "hindawi": true,
+      "ksucca": true,
+      "arabic_bible": true,
+      "hebrew_tanakh": true,
+      "greek_nt": true,
+      "pali": true,
+      "avestan_yasna": true
+    },
+    "n_per_corpus_pass": 11,
+    "quran_rank_distribution": {
+      "2": 24,
+      "1": 170,
+      "4": 3,
+      "3": 2,
+      "6": 1
+    },
+    "quran_rank_1_freq": 0.85
+  },
+  "__amendment_diagnostic_v0": {
+    "note": "Pre-execution diagnostic v0 (deleted from disk, preserved here) used corpus-pooled G instead of per-unit median G. Quran pooled G = 6.28 vs F75-locked G = 5.32 (difference 0.96 bits) because pooling diluted the per-surah rāwī concentration that F75 captures via medians. v0 verdict FAIL_F75_universal_breaks_under_resampling was an implementation error, not an F75 falsification. v1 (this receipt) uses correct per-unit median formulation matching exp122 / F75 exactly.",
+    "v0_quran_pooled_G": 6.28,
+    "v0_universal_mean": 6.0805,
+    "v0_universal_cv_pct": 4.428,
+    "v0_quran_rank_1_freq_pct": 0.0,
+    "v1_correction": "use median_u(H_EL_u) + log₂(median_u(p_max_u)·A) per F75"
+  },
+  "audit_report": {
+    "ok": true,
+    "checks": {
+      "A1_n_units_per_corpus": {
+        "quran": 114,
+        "poetry_jahili": 120,
+        "poetry_islami": 423,
+        "poetry_abbasi": 2575,
+        "hindawi": 72,
+        "ksucca": 42,
+        "arabic_bible": 1183,
+        "hebrew_tanakh": 921,
+        "greek_nt": 260,
+        "pali": 186,
+        "avestan_yasna": 67
+      },
+      "A2_q1_max_deviation": 0.0,
+      "A2_q1_pass": true,
+      "A3_seed": 42,
+      "A4_quran_g_locked_match": true,
+      "A4_quran_g_value": 5.31644412745751,
+      "A4_quran_g_locked": 5.32,
+      "A5_deterministic": true
+    }
+  },
+  "wall_time_s": 12.4021
+}

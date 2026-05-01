@@ -1,0 +1,102 @@
+{
+  "experiment": "exp112_F55_daodejing_bigram",
+  "hypothesis_id": "H67",
+  "verdict": "PASS_universal_perfect_recall_zero_fpr",
+  "started_at_utc": "2026-04-29T06:17:07.366830+00:00",
+  "finished_at_utc": "2026-04-29T06:17:10.990906+00:00",
+  "wall_seconds": 3.6240761280059814,
+  "prereg_path": "experiments\\exp112_F55_daodejing_bigram\\PREREG.md",
+  "prereg_sha256": "4c81ba4766d07da5159349c17e8c544622f8ae8ff00e707f7e2f9a3c64f338b2",
+  "tau": 2.0,
+  "scope": "F55 universal symbolic forgery detector on Classical Chinese Daodejing Chapter 1 (Wang Bi recension; CJK Unified Ideograph skeleton; first logographic / character-based writing system tested)",
+  "corpus": {
+    "name": "daodejing_wangbi",
+    "source": "Project Gutenberg eBook #7337",
+    "license": "PUBLIC DOMAIN",
+    "sha256": "a05c5cb00650263e61d107dbeb7f8b887752bcc82fd42fd286b928d2a4d527bd",
+    "n_chapters": 81,
+    "total_skeleton_chars": 5299,
+    "distinct_corpus_chars": 805
+  },
+  "target": {
+    "chapter": 1,
+    "skeleton_chars": 59,
+    "skeleton_first_30": "道可道非常道名可名非常名無名天地之始有名萬物之母故常無欲以觀"
+  },
+  "recall": {
+    "n_variants": 47436,
+    "n_passing": 47436,
+    "recall": 1.0,
+    "max_variant_delta": 2.0
+  },
+  "peer_fpr": {
+    "n_peers": 80,
+    "n_failing": 0,
+    "fpr": 0.0,
+    "min_peer_delta": 38.0,
+    "min_peer_chapter": 40,
+    "5_closest_peers": [
+      {
+        "chapter": 40,
+        "delta": 38.0,
+        "skeleton_len": 21
+      },
+      {
+        "chapter": 6,
+        "delta": 39.0,
+        "skeleton_len": 25
+      },
+      {
+        "chapter": 18,
+        "delta": 41.5,
+        "skeleton_len": 26
+      },
+      {
+        "chapter": 71,
+        "delta": 41.5,
+        "skeleton_len": 26
+      },
+      {
+        "chapter": 47,
+        "delta": 46.5,
+        "skeleton_len": 36
+      }
+    ],
+    "safety_margin_over_tau": 19.0,
+    "length_normalised_per_char_margin": 0.6440677966101694
+  },
+  "audit_report": {
+    "ok": true,
+    "a0_corpus_sha256": {
+      "ok": true,
+      "expected": "a05c5cb00650263e",
+      "actual": "a05c5cb00650263e"
+    },
+    "a1_theorem_max_delta_le_2": {
+      "ok": true,
+      "observed_max": 2.0
+    },
+    "a2_peer_pool_size": {
+      "ok": true,
+      "actual": 80,
+      "floor": 50
+    },
+    "a3_target_chapter_floor": {
+      "ok": true,
+      "actual": 59,
+      "floor": 30
+    },
+    "a4_determinism_rescore": {
+      "ok": true,
+      "n_rescored": 10
+    },
+    "a5_skeleton_sentinel": {
+      "ok": true,
+      "expected_prefix": "道可道非常道",
+      "actual_prefix": "道可道非常道"
+    }
+  },
+  "calibration_source": "none — analytic theorem-bound τ = 2.0; no empirical calibration",
+  "language_family": "Sino-Tibetan / Sinitic",
+  "writing_system": "logographic (CJK Unified Ideographs)"
+}

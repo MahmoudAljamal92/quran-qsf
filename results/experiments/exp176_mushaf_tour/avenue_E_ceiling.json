@@ -1,0 +1,16 @@
+{
+  "L_mushaf": 7.59286042486681,
+  "diff_mushaf": 0.03494866861451734,
+  "D1_MST_lower_bound": 4.481468435375465,
+  "D1_2opt_upper_bound": 5.435848547292942,
+  "D1_efficiency_vs_2opt_pct": 71.59157739144526,
+  "D1_above_2opt_pct": 39.68123575937492,
+  "D2_ceiling_within_tour_distances": 0.09602653534252761,
+  "D2_ceiling_across_all_pairs": 0.1848948653275849,
+  "D2_mushaf_to_within_tour_ratio": 0.3639480325917736,
+  "D2_mushaf_to_global_ratio": 0.1890191409728849,
+  "D3_pareto_front_size": 2,
+  "D3_is_mushaf_on_pareto": true,
+  "D3_n_strictly_dominate": 0,
+  "D3_p_empirical_pareto": 9.99990000099999e-06
+}

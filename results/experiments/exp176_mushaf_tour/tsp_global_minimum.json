@@ -1,0 +1,18 @@
+{
+  "L_Mushaf": 7.59286042486681,
+  "L_Nuzul": 7.7084537174244865,
+  "null_mean": 8.163682726553997,
+  "null_std": 0.11023993270328024,
+  "L_unconstrained_2opt": 5.473687118691559,
+  "L_length_tertile_desc": 5.781120843130484,
+  "L_MD_segregated": 5.606226403066524,
+  "L_combined_tertile_MD": 5.923526356684199,
+  "combined_best_cell_order": [
+    1,
+    4,
+    5,
+    3,
+    2,
+    0
+  ]
+}

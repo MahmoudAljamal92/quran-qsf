@@ -1,0 +1,31 @@
+{
+  "experiment": "exp179_F85_escalation_10M",
+  "finding_id": "F89",
+  "seed": 20260502,
+  "B": 10000000,
+  "L_mushaf": 7.59286042486681,
+  "diff_mushaf": 0.03494866861451734,
+  "L_null_mean_sample": 8.160681557151799,
+  "L_null_std_sample": 0.10845108924613318,
+  "diff_null_mean_sample": 1.1045409971877456e-05,
+  "diff_null_std_sample": 0.008449975021822856,
+  "z_L": -5.235734709831274,
+  "z_diff": 4.134642187026087,
+  "n_beat_L": 5,
+  "n_beat_diff": 265,
+  "n_beat_both": 0,
+  "p_L": 5.99999940000006e-07,
+  "p_diff": 2.6599997340000266e-05,
+  "p_joint": 9.9999990000001e-08,
+  "expected_joint_under_independence": 0.0001325,
+  "wall_time_s": 53.47925662994385,
+  "comparison_to_F85_at_100k": {
+    "F85_B": 100000,
+    "F85_n_beat_both": 0,
+    "F85_p_joint": "≤ 1e-5",
+    "F89_B": 10000000,
+    "F89_p_joint": "≤ 1.00e-07",
+    "escalation_gain": "100x more permutations"
+  },
+  "verdict": "PASS_F89_joint_escalation_10M"
+}

@@ -1,0 +1,355 @@
+{
+  "experiment_id": "expE11_local_window",
+  "task": "E11",
+  "tier": 3,
+  "title": "Local-window amplification scan on canonical Adiyat 864 enumeration",
+  "generated_utc": "2026-04-23T19:44:51+00:00",
+  "seed": 42,
+  "adiyat_label": "Q:100",
+  "n_adiyat_verses": 11,
+  "n_variants": 864,
+  "v_edit": 0,
+  "v_far": 10,
+  "windows_N": [
+    1,
+    2,
+    3,
+    5,
+    8,
+    13
+  ],
+  "channels": [
+    "NCD",
+    "LEN_DIFF",
+    "UNI_L1",
+    "BI_L1",
+    "TRI_L1",
+    "WLEN_DIFF",
+    "SPEC",
+    "ENT_DIFF",
+    "VLCV_DIFF"
+  ],
+  "results_per_window": {
+    "N1": {
+      "window_N": 1,
+      "auc_mean": 0.9838083075682214,
+      "auc_sd": 0.009488882905952786,
+      "auc_folds": [
+        0.976878612716763,
+        0.9942196531791907,
+        0.976878612716763,
+        0.976878612716763,
+        0.9941860465116279
+      ],
+      "f1_mean": 0.6594184539257031,
+      "f1_folds": [
+        0.6563106796116505,
+        0.6640926640926641,
+        0.6563106796116505,
+        0.6575875486381323,
+        0.6627906976744186
+      ],
+      "mean_coefs": {
+        "NCD": 1.3557914629374813e-13,
+        "LEN_DIFF": 0.0,
+        "UNI_L1": 2.3688219580501547e-27,
+        "BI_L1": 3.343119447872459e-27,
+        "TRI_L1": 4.207742356930868e-27,
+        "WLEN_DIFF": 0.0,
+        "SPEC": 6.961349134246593e-27,
+        "ENT_DIFF": 3.2933590009130465e-27,
+        "VLCV_DIFF": 0.0
+      },
+      "channel_aucs": {
+        "NCD": 0.9837962962962963,
+        "LEN_DIFF": 0.5,
+        "UNI_L1": 1.0,
+        "BI_L1": 1.0,
+        "TRI_L1": 1.0,
+        "WLEN_DIFF": 0.5,
+        "SPEC": 1.0,
+        "ENT_DIFF": 0.931712962962963,
+        "VLCV_DIFF": 0.5
+      },
+      "class_aucs": {
+        "guttural": 1.0,
+        "labial": 0.9135802469135802,
+        "emphatic": 1.0,
+        "other": 1.0
+      },
+      "n_signal": 864,
+      "n_null": 864,
+      "runtime_s": 2.1023952960968018
+    },
+    "N2": {
+      "window_N": 2,
+      "auc_mean": 0.9976811399381639,
+      "auc_sd": 0.003175252139669287,
+      "auc_folds": [
+        1.0,
+        1.0,
+        1.0,
+        0.9942196531791907,
+        0.9941860465116279
+      ],
+      "f1_mean": 0.9988371994760638,
+      "f1_folds": [
+        1.0,
+        1.0,
+        1.0,
+        0.9971014492753624,
+        0.9970845481049563
+      ],
+      "mean_coefs": {
+        "NCD": 1.2053590434429973e-13,
+        "LEN_DIFF": 0.0,
+        "UNI_L1": 4.384929232380617e-27,
+        "BI_L1": 5.741350877906216e-27,
+        "TRI_L1": 6.353015923538855e-27,
+        "WLEN_DIFF": 0.0,
+        "SPEC": 8.753134863542199e-27,
+        "ENT_DIFF": 5.366450412375187e-27,
+        "VLCV_DIFF": 0.0
+      },
+      "channel_aucs": {
+        "NCD": 0.9976851851851852,
+        "LEN_DIFF": 0.5,
+        "UNI_L1": 1.0,
+        "BI_L1": 1.0,
+        "TRI_L1": 1.0,
+        "WLEN_DIFF": 0.5,
+        "SPEC": 1.0,
+        "ENT_DIFF": 0.9496527777777778,
+        "VLCV_DIFF": 0.5
+      },
+      "class_aucs": {
+        "guttural": 1.0,
+        "labial": 0.9876543209876543,
+        "emphatic": 1.0,
+        "other": 1.0
+      },
+      "n_signal": 864,
+      "n_null": 864,
+      "runtime_s": 2.401927947998047
+    },
+    "N3": {
+      "window_N": 3,
+      "auc_mean": 0.9872765156607072,
+      "auc_sd": 0.007528928668293062,
+      "auc_folds": [
+        0.9884393063583815,
+        0.9942196531791907,
+        0.976878612716763,
+        0.9826589595375722,
+        0.9941860465116279
+      ],
+      "f1_mean": 0.9935859563548135,
+      "f1_folds": [
+        0.9941860465116279,
+        0.9971014492753624,
+        0.9883040935672515,
+        0.9912536443148688,
+        0.9970845481049563
+      ],
+      "mean_coefs": {
+        "NCD": 1.0465415748206115e-13,
+        "LEN_DIFF": 0.0,
+        "UNI_L1": 3.283259379268912e-27,
+        "BI_L1": 3.85435052997577e-27,
+        "TRI_L1": 4.309585911340033e-27,
+        "WLEN_DIFF": 0.0,
+        "SPEC": 1.1465163253301363e-26,
+        "ENT_DIFF": 4.1751067729513924e-27,
+        "VLCV_DIFF": 0.0
+      },
+      "channel_aucs": {
+        "NCD": 0.9872685185185185,
+        "LEN_DIFF": 0.5,
+        "UNI_L1": 1.0,
+        "BI_L1": 1.0,
+        "TRI_L1": 1.0,
+        "WLEN_DIFF": 0.5,
+        "SPEC": 1.0,
+        "ENT_DIFF": 0.9571759259259259,
+        "VLCV_DIFF": 0.5
+      },
+      "class_aucs": {
+        "guttural": 1.0,
+        "labial": 0.9320987654320988,
+        "emphatic": 1.0,
+        "other": 1.0
+      },
+      "n_signal": 864,
+      "n_null": 864,
+      "runtime_s": 2.7304553985595703
+    },
+    "N5": {
+      "window_N": 5,
+      "auc_mean": 1.0,
+      "auc_sd": 0.0,
+      "auc_folds": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "f1_mean": 0.6666661687938283,
+      "f1_folds": [
+        0.6666666666666666,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.667953667953668,
+        0.6653771760154739
+      ],
+      "mean_coefs": {
+        "NCD": 3.0858322360858516e-11,
+        "LEN_DIFF": 0.0,
+        "UNI_L1": 7.736545519387133e-27,
+        "BI_L1": 1.537024150162179e-26,
+        "TRI_L1": 2.2952787846826254e-26,
+        "WLEN_DIFF": 0.0,
+        "SPEC": 3.137195247486316e-26,
+        "ENT_DIFF": 1.52014703563543e-26,
+        "VLCV_DIFF": 0.0
+      },
+      "channel_aucs": {
+        "NCD": 1.0,
+        "LEN_DIFF": 0.5,
+        "UNI_L1": 1.0,
+        "BI_L1": 1.0,
+        "TRI_L1": 1.0,
+        "WLEN_DIFF": 0.5,
+        "SPEC": 1.0,
+        "ENT_DIFF": 0.974537037037037,
+        "VLCV_DIFF": 0.5
+      },
+      "class_aucs": {
+        "guttural": 1.0,
+        "labial": 1.0,
+        "emphatic": 1.0,
+        "other": 1.0
+      },
+      "n_signal": 864,
+      "n_null": 864,
+      "runtime_s": 3.396892786026001
+    },
+    "N8": {
+      "window_N": 8,
+      "auc_mean": 1.0,
+      "auc_sd": 0.0,
+      "auc_folds": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "f1_mean": 0.6666661687938283,
+      "f1_folds": [
+        0.6666666666666666,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.667953667953668,
+        0.6653771760154739
+      ],
+      "mean_coefs": {
+        "NCD": 3.4222421850103893e-12,
+        "LEN_DIFF": 0.0,
+        "UNI_L1": 1.1018288954882284e-28,
+        "BI_L1": 2.1807394803197724e-28,
+        "TRI_L1": 3.2440434610470372e-28,
+        "WLEN_DIFF": 0.0,
+        "SPEC": 6.102792027902864e-28,
+        "ENT_DIFF": 2.2041113910039957e-28,
+        "VLCV_DIFF": 0.0
+      },
+      "channel_aucs": {
+        "NCD": 1.0,
+        "LEN_DIFF": 0.5,
+        "UNI_L1": 1.0,
+        "BI_L1": 1.0,
+        "TRI_L1": 1.0,
+        "WLEN_DIFF": 0.5,
+        "SPEC": 1.0,
+        "ENT_DIFF": 0.9803240740740741,
+        "VLCV_DIFF": 0.5
+      },
+      "class_aucs": {
+        "guttural": 1.0,
+        "labial": 1.0,
+        "emphatic": 1.0,
+        "other": 1.0
+      },
+      "n_signal": 864,
+      "n_null": 864,
+      "runtime_s": 4.427933692932129
+    },
+    "N13": {
+      "window_N": 13,
+      "auc_mean": 0.4326574637494784,
+      "auc_sd": 0.02506013430538981,
+      "auc_folds": [
+        0.4463897891676969,
+        0.39979618430285,
+        0.46145878579304356,
+        0.41426939104718374,
+        0.44137316843661784
+      ],
+      "f1_mean": 0.4531067458460346,
+      "f1_folds": [
+        0.4971751412429379,
+        0.45054945054945056,
+        0.47126436781609193,
+        0.42011834319526625,
+        0.4264264264264264
+      ],
+      "mean_coefs": {
+        "NCD": 0.0004913551000378796,
+        "LEN_DIFF": 0.0,
+        "UNI_L1": 0.0031866103893394906,
+        "BI_L1": 0.0003964440835184631,
+        "TRI_L1": -0.0008681013557254487,
+        "WLEN_DIFF": 0.0,
+        "SPEC": -0.00042208974748515846,
+        "ENT_DIFF": 0.0003806114774908536,
+        "VLCV_DIFF": 0.0
+      },
+      "channel_aucs": {
+        "NCD": 0.5000000000000001,
+        "LEN_DIFF": 0.5,
+        "UNI_L1": 0.49999999999999994,
+        "BI_L1": 0.5,
+        "TRI_L1": 0.5,
+        "WLEN_DIFF": 0.5,
+        "SPEC": 0.5,
+        "ENT_DIFF": 0.5,
+        "VLCV_DIFF": 0.5
+      },
+      "class_aucs": {
+        "guttural": 0.5,
+        "labial": 0.5,
+        "emphatic": 0.5,
+        "other": 0.5
+      },
+      "n_signal": 864,
+      "n_null": 864,
+      "runtime_s": 5.1997058391571045
+    }
+  },
+  "baseline_N": 13,
+  "auc_baseline_large_N": 0.4326574637494784,
+  "best_N": 5,
+  "best_AUC": 1.0,
+  "delta_vs_baseline": 0.5673425362505216,
+  "verdict": "LOCAL_AMPLIFICATION",
+  "pre_registered_criteria": {
+    "null": "AUC(N=small) == AUC(N=large) within CI; no amplification",
+    "baseline_N": 13,
+    "LOCAL_AMPLIFICATION": "best-window AUC >= baseline + 0.10",
+    "MODEST_AMPLIFICATION": "best-window AUC >= baseline + 0.03",
+    "NULL_NO_AMPLIFICATION": "best-window AUC < baseline + 0.03",
+    "design": "DESIGN v2: within-variant null = window centered on V_FAR (last verse). As N grows, signal and null windows overlap → AUC → 0.5.",
+    "side_effects": "no mutation of any pinned artefact; outputs under expE11 folder only"
+  }
+}

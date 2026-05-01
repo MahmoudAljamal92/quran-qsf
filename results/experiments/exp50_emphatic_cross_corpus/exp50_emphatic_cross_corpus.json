@@ -1,0 +1,1854 @@
+{
+  "experiment": "exp50_emphatic_cross_corpus",
+  "schema_version": 1,
+  "fast_mode": false,
+  "seed": 42,
+  "prereg": {
+    "targets": [
+      "poetry_abbasi",
+      "poetry_jahili"
+    ],
+    "reference_pool_full": [
+      "poetry_abbasi",
+      "poetry_jahili",
+      "poetry_islami",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "reference_builder": "leave-target-out (5 controls per test)",
+    "null_builder": "random_single_letter_swap within target corpus",
+    "detector": "exp09 9-channel, |z|>2 fire rule, >=3 of 9 detect",
+    "h1_structural_max_rate": 0.02,
+    "h2_quran_specific_min_rate": 0.05,
+    "inconclusive_band": [
+      0.02,
+      0.05
+    ],
+    "quran_baseline_source": "exp46_emphatic_substitution (full mode)",
+    "quran_baseline_rate": 0.011471,
+    "quran_baseline_edits": 10461,
+    "quran_baseline_detected": 120,
+    "sample_budget": {
+      "n_null_units": 40,
+      "n_null_per_unit": 20,
+      "n_test_units": 60,
+      "max_edits_per_unit": 100
+    }
+  },
+  "per_target": {
+    "poetry_abbasi": {
+      "n_units_tested": 60,
+      "total_edits": 5607,
+      "total_detected": 149,
+      "overall_detection_rate": 0.026574,
+      "overall_detection_rate_without_E7": 0.004497,
+      "sensitivity_no_e7": {
+        "class_excluded": [
+          "E7_ayn_alef"
+        ],
+        "edits_excluded": 2494,
+        "detected_excluded": 135,
+        "remaining_edits": 3113,
+        "remaining_detected": 14
+      },
+      "per_class_summary": {
+        "E1_sad_sin": {
+          "pair": "ص <-> س",
+          "n_edits": 407,
+          "n_detected_3of9": 0,
+          "detection_rate": 0.0,
+          "max_z_mean": 1.013,
+          "max_z_median": 0.752,
+          "max_z_p95": 2.187,
+          "example_variants": [
+            {
+              "unit_label": "poetry_abbasi:720",
+              "verse_idx": 16,
+              "pos": 28,
+              "orig": "س",
+              "partner": "ص",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.092,
+                "B_root_bigram": 0.363,
+                "C_bigram_dist": 0.094,
+                "D_wazn": -0.033,
+                "E_ncd": -0.938,
+                "F_coupling": 0.331,
+                "G_root_trigram": 0.949,
+                "H_local_spec": 0.116,
+                "I_root_field": 0.084
+              }
+            },
+            {
+              "unit_label": "poetry_abbasi:720",
+              "verse_idx": 16,
+              "pos": 3,
+              "orig": "س",
+              "partner": "ص",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.136,
+                "B_root_bigram": 0.19,
+                "C_bigram_dist": 0.094,
+                "D_wazn": -0.033,
+                "E_ncd": -0.588,
+                "F_coupling": 0.331,
+                "G_root_trigram": 0.277,
+                "H_local_spec": 0.083,
+                "I_root_field": 0.084
+              }
+            },
+            {
+              "unit_label": "poetry_abbasi:720",
+              "verse_idx": 19,
+              "pos": 21,
+              "orig": "ص",
+              "partner": "س",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": -0.022,
+                "B_root_bigram": 0.363,
+                "C_bigram_dist": 0.094,
+                "D_wazn": -0.033,
+                "E_ncd": -0.329,
+                "F_coupling": 0.331,
+                "G_root_trigram": 0.569,
+                "H_local_spec": -0.021,
+                "I_root_field": 0.084
+              }
+            }
+          ]
+        },
+        "E2_dad_dal": {
+          "pair": "ض <-> د",
+          "n_edits": 490,
+          "n_detected_3of9": 0,
+          "detection_rate": 0.0,
+          "max_z_mean": 1.052,
+          "max_z_median": 0.752,
+          "max_z_p95": 2.809,
+          "example_variants": [
+            {
+              "unit_label": "poetry_abbasi:720",
+              "verse_idx": 9,
+              "pos": 25,
+              "orig": "ض",
+              "partner": "د",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.007,
+                "B_root_bigram": -0.166,
+                "C_bigram_dist": 0.094,
+                "D_wazn": -0.033,
+                "E_ncd": -0.329,
+                "F_coupling": 0.217,
+                "G_root_trigram": 0.736,
+                "H_local_spec": 0.034,
+                "I_root_field": 0.084
+              }
+            },
+            {
+              "unit_label": "poetry_abbasi:720",
+              "verse_idx": 27,
+              "pos": 12,
+              "orig": "د",
+              "partner": "ض",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.095,
+                "B_root_bigram": -0.522,
+                "C_bigram_dist": 0.094,
+                "D_wazn": -0.033,
+                "E_ncd": -0.451,
+                "F_coupling": 0.331,
+                "G_root_trigram": 0.278,
+                "H_local_spec": 0.278,
+                "I_root_field": 0.084
+              }
+            },
+            {
+              "unit_label": "poetry_abbasi:720",
+              "verse_idx": 27,
+              "pos": 27,
+              "orig": "ض",
+              "partner": "د",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": -0.038,
+                "B_root_bigram": 0.363,
+                "C_bigram_dist": 0.094,
+                "D_wazn": -0.033,
+                "E_ncd": -0.329,
+                "F_coupling": 0.412,
+                "G_root_trigram": 0.569,
+                "H_local_spec": -0.305,
+                "I_root_field": 0.084
+              }
+            }
+          ]
+        },
+        "E3_tta_ta": {
+          "pair": "ط <-> ت",
+          "n_edits": 559,
+          "n_detected_3of9": 2,
+          "detection_rate": 0.0036,
+          "max_z_mean": 1.131,
+          "max_z_median": 0.746,
+          "max_z_p95": 3.027,
+          "example_variants": [
+            {
+              "unit_label": "poetry_abbasi:720",
+              "verse_idx": 0,
+              "pos": 18,
+              "orig": "ت",
+              "partner": "ط",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": -0.01,
+                "B_root_bigram": 0.11,
+                "C_bigram_dist": 0.094,
+                "D_wazn": -0.033,
+                "E_ncd": -0.329,
+                "F_coupling": 0.059,
+                "G_root_trigram": 0.313,
+                "H_local_spec": -0.104,
+                "I_root_field": 0.084
+              }
+            },
+            {
+              "unit_label": "poetry_abbasi:720",
+              "verse_idx": 13,
+              "pos": 4,
+              "orig": "ط",
+              "partner": "ت",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.057,
+                "B_root_bigram": 0.363,
+                "C_bigram_dist": 0.094,
+                "D_wazn": -0.033,
+                "E_ncd": -0.573,
+                "F_coupling": 0.331,
+                "G_root_trigram": 0.443,
+                "H_local_spec": 0.069,
+                "I_root_field": 0.084
+              }
+            },
+            {
+              "unit_label": "poetry_abbasi:720",
+              "verse_idx": 28,
+              "pos": 22,
+              "orig": "ت",
+              "partner": "ط",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.093,
+                "B_root_bigram": 0.363,
+                "C_bigram_dist": 0.094,
+                "D_wazn": -0.033,
+                "E_ncd": -0.451,
+                "F_coupling": 0.331,
+                "G_root_trigram": 0.4,
+                "H_local_spec": 0.075,
+                "I_root_field": 0.084
+              }
+            }
+          ]
+        },
+        "E4_dha_dhal": {
+          "pair": "ظ <-> ذ",
+          "n_edits": 129,
+          "n_detected_3of9": 0,
+          "detection_rate": 0.0,
+          "max_z_mean": 1.037,
+          "max_z_median": 0.782,
+          "max_z_p95": 3.082,
+          "example_variants": [
+            {
+              "unit_label": "poetry_abbasi:720",
+              "verse_idx": 8,
+              "pos": 5,
+              "orig": "ذ",
+              "partner": "ظ",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.047,
+                "B_root_bigram": 0.363,
+                "C_bigram_dist": 0.094,
+                "D_wazn": -0.033,
+                "E_ncd": -0.817,
+                "F_coupling": 0.331,
+                "G_root_trigram": 0.19,
+                "H_local_spec": 0.059,
+                "I_root_field": 0.084
+              }
+            },
+            {
+              "unit_label": "poetry_abbasi:720",
+              "verse_idx": 0,
+              "pos": 10,
+              "orig": "ذ",
+              "partner": "ظ",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.051,
+                "B_root_bigram": 0.363,
+                "C_bigram_dist": 0.094,
+                "D_wazn": -0.033,
+                "E_ncd": -0.695,
+                "F_coupling": 0.331,
+                "G_root_trigram": -0.197,
+                "H_local_spec": 0.059,
+                "I_root_field": 0.084
+              }
+            },
+            {
+              "unit_label": "poetry_abbasi:720",
+              "verse_idx": 11,
+              "pos": 13,
+              "orig": "ذ",
+              "partner": "ظ",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.059,
+                "B_root_bigram": 0.363,
+                "C_bigram_dist": 0.094,
+                "D_wazn": -0.033,
+                "E_ncd": -0.451,
+                "F_coupling": 0.331,
+                "G_root_trigram": 0.955,
+                "H_local_spec": 0.021,
+                "I_root_field": 0.084
+              }
+            }
+          ]
+        },
+        "E5_qaf_kaf": {
+          "pair": "ق <-> ك",
+          "n_edits": 629,
+          "n_detected_3of9": 7,
+          "detection_rate": 0.0111,
+          "max_z_mean": 1.184,
+          "max_z_median": 0.785,
+          "max_z_p95": 3.234,
+          "example_variants": [
+            {
+              "unit_label": "poetry_abbasi:720",
+              "verse_idx": 21,
+              "pos": 13,
+              "orig": "ك",
+              "partner": "ق",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.05,
+                "B_root_bigram": 0.363,
+                "C_bigram_dist": 0.094,
+                "D_wazn": -0.033,
+                "E_ncd": -0.7,
+                "F_coupling": -0.227,
+                "G_root_trigram": 0.598,
+                "H_local_spec": 0.062,
+                "I_root_field": 0.084
+              }
+            },
+            {
+              "unit_label": "poetry_abbasi:720",
+              "verse_idx": 12,
+              "pos": 33,
+              "orig": "ك",
+              "partner": "ق",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.066,
+                "B_root_bigram": 0.363,
+                "C_bigram_dist": 0.094,
+                "D_wazn": -0.033,
+                "E_ncd": -0.938,
+                "F_coupling": 0.331,
+                "G_root_trigram": 0.388,
+                "H_local_spec": 0.065,
+                "I_root_field": 0.084
+              }
+            },
+            {
+              "unit_label": "poetry_abbasi:720",
+              "verse_idx": 23,
+              "pos": 1,
+              "orig": "ق",
+              "partner": "ك",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.033,
+                "B_root_bigram": 0.363,
+                "C_bigram_dist": 0.094,
+                "D_wazn": -0.033,
+                "E_ncd": -0.451,
+                "F_coupling": -0.116,
+                "G_root_trigram": 0.289,
+                "H_local_spec": 0.046,
+                "I_root_field": 0.084
+              }
+            }
+          ]
+        },
+        "E6_hha_ha": {
+          "pair": "ح <-> ه",
+          "n_edits": 899,
+          "n_detected_3of9": 5,
+          "detection_rate": 0.0056,
+          "max_z_mean": 1.186,
+          "max_z_median": 0.782,
+          "max_z_p95": 2.929,
+          "example_variants": [
+            {
+              "unit_label": "poetry_abbasi:720",
+              "verse_idx": 20,
+              "pos": 5,
+              "orig": "ح",
+              "partner": "ه",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.111,
+                "B_root_bigram": 0.363,
+                "C_bigram_dist": 0.094,
+                "D_wazn": -0.033,
+                "E_ncd": -0.213,
+                "F_coupling": 0.331,
+                "G_root_trigram": 0.569,
+                "H_local_spec": 0.179,
+                "I_root_field": 0.084
+              }
+            },
+            {
+              "unit_label": "poetry_abbasi:720",
+              "verse_idx": 24,
+              "pos": 38,
+              "orig": "ه",
+              "partner": "ح",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.347,
+                "B_root_bigram": 0.363,
+                "C_bigram_dist": 0.094,
+                "D_wazn": -0.033,
+                "E_ncd": -0.578,
+                "F_coupling": 0.19,
+                "G_root_trigram": 0.569,
+                "H_local_spec": 0.188,
+                "I_root_field": 0.084
+              }
+            },
+            {
+              "unit_label": "poetry_abbasi:720",
+              "verse_idx": 23,
+              "pos": 4,
+              "orig": "ه",
+              "partner": "ح",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.258,
+                "B_root_bigram": 0.363,
+                "C_bigram_dist": 0.094,
+                "D_wazn": -0.033,
+                "E_ncd": -0.329,
+                "F_coupling": 0.331,
+                "G_root_trigram": 0.569,
+                "H_local_spec": 0.068,
+                "I_root_field": 0.084
+              }
+            }
+          ]
+        },
+        "E7_ayn_alef": {
+          "pair": "ع <-> ا",
+          "n_edits": 2494,
+          "n_detected_3of9": 135,
+          "detection_rate": 0.0541,
+          "max_z_mean": 2.128,
+          "max_z_median": 1.14,
+          "max_z_p95": 6.697,
+          "example_variants": [
+            {
+              "unit_label": "poetry_abbasi:720",
+              "verse_idx": 8,
+              "pos": 33,
+              "orig": "ا",
+              "partner": "ع",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.057,
+                "B_root_bigram": 0.363,
+                "C_bigram_dist": 0.094,
+                "D_wazn": -0.033,
+                "E_ncd": -0.329,
+                "F_coupling": 0.331,
+                "G_root_trigram": 0.101,
+                "H_local_spec": 0.227,
+                "I_root_field": 0.084
+              }
+            },
+            {
+              "unit_label": "poetry_abbasi:720",
+              "verse_idx": 8,
+              "pos": 11,
+              "orig": "ا",
+              "partner": "ع",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": -0.037,
+                "B_root_bigram": 0.363,
+                "C_bigram_dist": 0.094,
+                "D_wazn": 1.326,
+                "E_ncd": -0.817,
+                "F_coupling": 0.042,
+                "G_root_trigram": 0.139,
+                "H_local_spec": -0.087,
+                "I_root_field": 0.084
+              }
+            },
+            {
+              "unit_label": "poetry_abbasi:720",
+              "verse_idx": 13,
+              "pos": 16,
+              "orig": "ا",
+              "partner": "ع",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": -0.039,
+                "B_root_bigram": 0.057,
+                "C_bigram_dist": 0.094,
+                "D_wazn": -0.033,
+                "E_ncd": -0.451,
+                "F_coupling": 0.331,
+                "G_root_trigram": 0.146,
+                "H_local_spec": 0.203,
+                "I_root_field": 0.084
+              }
+            }
+          ]
+        }
+      },
+      "per_unit_results": [
+        {
+          "unit_label": "poetry_abbasi:720",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:7667",
+          "n_emphatic_edits": 60,
+          "n_detected": 8,
+          "detection_rate": 0.1333
+        },
+        {
+          "unit_label": "poetry_abbasi:8408",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:2750",
+          "n_emphatic_edits": 98,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:8554",
+          "n_emphatic_edits": 94,
+          "n_detected": 6,
+          "detection_rate": 0.0638
+        },
+        {
+          "unit_label": "poetry_abbasi:9406",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:5579",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:7627",
+          "n_emphatic_edits": 85,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:6295",
+          "n_emphatic_edits": 100,
+          "n_detected": 5,
+          "detection_rate": 0.05
+        },
+        {
+          "unit_label": "poetry_abbasi:633",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:4891",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:8664",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:9119",
+          "n_emphatic_edits": 63,
+          "n_detected": 12,
+          "detection_rate": 0.1905
+        },
+        {
+          "unit_label": "poetry_abbasi:5087",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:7116",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:4674",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:5534",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:5476",
+          "n_emphatic_edits": 69,
+          "n_detected": 6,
+          "detection_rate": 0.087
+        },
+        {
+          "unit_label": "poetry_abbasi:2113",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:4457",
+          "n_emphatic_edits": 78,
+          "n_detected": 11,
+          "detection_rate": 0.141
+        },
+        {
+          "unit_label": "poetry_abbasi:5063",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:3159",
+          "n_emphatic_edits": 100,
+          "n_detected": 1,
+          "detection_rate": 0.01
+        },
+        {
+          "unit_label": "poetry_abbasi:7390",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:6045",
+          "n_emphatic_edits": 97,
+          "n_detected": 12,
+          "detection_rate": 0.1237
+        },
+        {
+          "unit_label": "poetry_abbasi:3551",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:3430",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:4462",
+          "n_emphatic_edits": 100,
+          "n_detected": 9,
+          "detection_rate": 0.09
+        },
+        {
+          "unit_label": "poetry_abbasi:2089",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:5985",
+          "n_emphatic_edits": 100,
+          "n_detected": 9,
+          "detection_rate": 0.09
+        },
+        {
+          "unit_label": "poetry_abbasi:702",
+          "n_emphatic_edits": 100,
+          "n_detected": 2,
+          "detection_rate": 0.02
+        },
+        {
+          "unit_label": "poetry_abbasi:7908",
+          "n_emphatic_edits": 100,
+          "n_detected": 1,
+          "detection_rate": 0.01
+        },
+        {
+          "unit_label": "poetry_abbasi:5499",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:5535",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:7677",
+          "n_emphatic_edits": 100,
+          "n_detected": 1,
+          "detection_rate": 0.01
+        },
+        {
+          "unit_label": "poetry_abbasi:7334",
+          "n_emphatic_edits": 100,
+          "n_detected": 3,
+          "detection_rate": 0.03
+        },
+        {
+          "unit_label": "poetry_abbasi:2022",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:5144",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:3559",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:3661",
+          "n_emphatic_edits": 73,
+          "n_detected": 5,
+          "detection_rate": 0.0685
+        },
+        {
+          "unit_label": "poetry_abbasi:3241",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:4794",
+          "n_emphatic_edits": 77,
+          "n_detected": 11,
+          "detection_rate": 0.1429
+        },
+        {
+          "unit_label": "poetry_abbasi:8678",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:1277",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:5851",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:5041",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:1611",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:7358",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:3187",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:667",
+          "n_emphatic_edits": 100,
+          "n_detected": 2,
+          "detection_rate": 0.02
+        },
+        {
+          "unit_label": "poetry_abbasi:3964",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:5066",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:9313",
+          "n_emphatic_edits": 76,
+          "n_detected": 11,
+          "detection_rate": 0.1447
+        },
+        {
+          "unit_label": "poetry_abbasi:8463",
+          "n_emphatic_edits": 100,
+          "n_detected": 1,
+          "detection_rate": 0.01
+        },
+        {
+          "unit_label": "poetry_abbasi:8455",
+          "n_emphatic_edits": 74,
+          "n_detected": 6,
+          "detection_rate": 0.0811
+        },
+        {
+          "unit_label": "poetry_abbasi:563",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:1011",
+          "n_emphatic_edits": 44,
+          "n_detected": 6,
+          "detection_rate": 0.1364
+        },
+        {
+          "unit_label": "poetry_abbasi:3177",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_abbasi:8220",
+          "n_emphatic_edits": 51,
+          "n_detected": 12,
+          "detection_rate": 0.2353
+        },
+        {
+          "unit_label": "poetry_abbasi:9123",
+          "n_emphatic_edits": 68,
+          "n_detected": 8,
+          "detection_rate": 0.1176
+        },
+        {
+          "unit_label": "poetry_abbasi:7737",
+          "n_emphatic_edits": 100,
+          "n_detected": 1,
+          "detection_rate": 0.01
+        }
+      ],
+      "reference_pool": [
+        "poetry_jahili",
+        "poetry_islami",
+        "ksucca",
+        "arabic_bible",
+        "hindawi"
+      ],
+      "null_distribution_sizes": {
+        "A_spectral": 800,
+        "B_root_bigram": 800,
+        "C_bigram_dist": 800,
+        "D_wazn": 800,
+        "E_ncd": 800,
+        "F_coupling": 800,
+        "G_root_trigram": 800,
+        "H_local_spec": 800,
+        "I_root_field": 800
+      },
+      "verdict_vs_prereg": "INCONCLUSIVE",
+      "verdict_vs_prereg_without_E7": "H1_STRUCTURAL_ARABIC_BLINDNESS"
+    },
+    "poetry_jahili": {
+      "n_units_tested": 60,
+      "total_edits": 5500,
+      "total_detected": 237,
+      "overall_detection_rate": 0.043091,
+      "overall_detection_rate_without_E7": 0.018723,
+      "sensitivity_no_e7": {
+        "class_excluded": [
+          "E7_ayn_alef"
+        ],
+        "edits_excluded": 2509,
+        "detected_excluded": 181,
+        "remaining_edits": 2991,
+        "remaining_detected": 56
+      },
+      "per_class_summary": {
+        "E1_sad_sin": {
+          "pair": "ص <-> س",
+          "n_edits": 352,
+          "n_detected_3of9": 2,
+          "detection_rate": 0.0057,
+          "max_z_mean": 1.065,
+          "max_z_median": 0.82,
+          "max_z_p95": 2.45,
+          "example_variants": [
+            {
+              "unit_label": "poetry_jahili:7052",
+              "verse_idx": 1,
+              "pos": 1,
+              "orig": "س",
+              "partner": "ص",
+              "n_channels_fired": 1,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.29,
+                "B_root_bigram": 2.076,
+                "C_bigram_dist": 0.118,
+                "D_wazn": -0.05,
+                "E_ncd": 1.115,
+                "F_coupling": 0.227,
+                "G_root_trigram": 0.873,
+                "H_local_spec": 0.502,
+                "I_root_field": 0.032
+              }
+            },
+            {
+              "unit_label": "poetry_jahili:7052",
+              "verse_idx": 1,
+              "pos": 22,
+              "orig": "س",
+              "partner": "ص",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": -0.372,
+                "B_root_bigram": 0.428,
+                "C_bigram_dist": 0.118,
+                "D_wazn": -0.05,
+                "E_ncd": 1.572,
+                "F_coupling": 0.227,
+                "G_root_trigram": -1.224,
+                "H_local_spec": 0.295,
+                "I_root_field": 0.032
+              }
+            },
+            {
+              "unit_label": "poetry_jahili:7052",
+              "verse_idx": 2,
+              "pos": 25,
+              "orig": "س",
+              "partner": "ص",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.128,
+                "B_root_bigram": -1.276,
+                "C_bigram_dist": 0.118,
+                "D_wazn": -0.05,
+                "E_ncd": -0.714,
+                "F_coupling": -0.801,
+                "G_root_trigram": -1.964,
+                "H_local_spec": 0.291,
+                "I_root_field": 0.032
+              }
+            }
+          ]
+        },
+        "E2_dad_dal": {
+          "pair": "ض <-> د",
+          "n_edits": 520,
+          "n_detected_3of9": 8,
+          "detection_rate": 0.0154,
+          "max_z_mean": 1.199,
+          "max_z_median": 0.82,
+          "max_z_p95": 3.431,
+          "example_variants": [
+            {
+              "unit_label": "poetry_jahili:7052",
+              "verse_idx": 0,
+              "pos": 11,
+              "orig": "ض",
+              "partner": "د",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.425,
+                "B_root_bigram": 1.043,
+                "C_bigram_dist": 0.118,
+                "D_wazn": -0.05,
+                "E_ncd": 1.115,
+                "F_coupling": 0.375,
+                "G_root_trigram": 0.975,
+                "H_local_spec": 0.345,
+                "I_root_field": 0.032
+              }
+            },
+            {
+              "unit_label": "poetry_jahili:7052",
+              "verse_idx": 0,
+              "pos": 21,
+              "orig": "ض",
+              "partner": "د",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.159,
+                "B_root_bigram": 0.428,
+                "C_bigram_dist": 0.118,
+                "D_wazn": -0.05,
+                "E_ncd": 1.115,
+                "F_coupling": 0.375,
+                "G_root_trigram": 0.548,
+                "H_local_spec": 0.52,
+                "I_root_field": 0.032
+              }
+            },
+            {
+              "unit_label": "poetry_jahili:7052",
+              "verse_idx": 2,
+              "pos": 19,
+              "orig": "ض",
+              "partner": "د",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.225,
+                "B_root_bigram": 0.428,
+                "C_bigram_dist": 0.118,
+                "D_wazn": -0.05,
+                "E_ncd": 0.201,
+                "F_coupling": 0.375,
+                "G_root_trigram": 0.363,
+                "H_local_spec": -0.048,
+                "I_root_field": 0.032
+              }
+            }
+          ]
+        },
+        "E3_tta_ta": {
+          "pair": "ط <-> ت",
+          "n_edits": 511,
+          "n_detected_3of9": 11,
+          "detection_rate": 0.0215,
+          "max_z_mean": 1.19,
+          "max_z_median": 0.776,
+          "max_z_p95": 3.569,
+          "example_variants": [
+            {
+              "unit_label": "poetry_jahili:7052",
+              "verse_idx": 1,
+              "pos": 5,
+              "orig": "ت",
+              "partner": "ط",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": -1.651,
+                "B_root_bigram": 0.428,
+                "C_bigram_dist": 0.118,
+                "D_wazn": -0.05,
+                "E_ncd": 1.082,
+                "F_coupling": -0.653,
+                "G_root_trigram": 0.548,
+                "H_local_spec": -0.042,
+                "I_root_field": 0.032
+              }
+            },
+            {
+              "unit_label": "poetry_jahili:7052",
+              "verse_idx": 2,
+              "pos": 26,
+              "orig": "ت",
+              "partner": "ط",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": -1.651,
+                "B_root_bigram": -1.276,
+                "C_bigram_dist": 0.118,
+                "D_wazn": -0.05,
+                "E_ncd": -0.283,
+                "F_coupling": -0.653,
+                "G_root_trigram": -1.051,
+                "H_local_spec": -1.069,
+                "I_root_field": 0.032
+              }
+            },
+            {
+              "unit_label": "poetry_jahili:7052",
+              "verse_idx": 3,
+              "pos": 6,
+              "orig": "ت",
+              "partner": "ط",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.597,
+                "B_root_bigram": -1.327,
+                "C_bigram_dist": 0.118,
+                "D_wazn": -0.05,
+                "E_ncd": -0.714,
+                "F_coupling": 0.375,
+                "G_root_trigram": -1.874,
+                "H_local_spec": 1.37,
+                "I_root_field": 0.032
+              }
+            }
+          ]
+        },
+        "E4_dha_dhal": {
+          "pair": "ظ <-> ذ",
+          "n_edits": 146,
+          "n_detected_3of9": 3,
+          "detection_rate": 0.0205,
+          "max_z_mean": 1.21,
+          "max_z_median": 0.766,
+          "max_z_p95": 3.296,
+          "example_variants": [
+            {
+              "unit_label": "poetry_jahili:7052",
+              "verse_idx": 0,
+              "pos": 30,
+              "orig": "ذ",
+              "partner": "ظ",
+              "n_channels_fired": 2,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.135,
+                "B_root_bigram": -4.393,
+                "C_bigram_dist": 0.118,
+                "D_wazn": -0.05,
+                "E_ncd": 0.658,
+                "F_coupling": 0.375,
+                "G_root_trigram": -2.304,
+                "H_local_spec": 0.102,
+                "I_root_field": 0.032
+              }
+            },
+            {
+              "unit_label": "poetry_jahili:7052",
+              "verse_idx": 2,
+              "pos": 11,
+              "orig": "ذ",
+              "partner": "ظ",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.125,
+                "B_root_bigram": -0.013,
+                "C_bigram_dist": 0.118,
+                "D_wazn": -0.05,
+                "E_ncd": -0.257,
+                "F_coupling": 0.375,
+                "G_root_trigram": -0.289,
+                "H_local_spec": 0.102,
+                "I_root_field": 0.032
+              }
+            },
+            {
+              "unit_label": "poetry_jahili:7052",
+              "verse_idx": 5,
+              "pos": 12,
+              "orig": "ذ",
+              "partner": "ظ",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.13,
+                "B_root_bigram": -1.456,
+                "C_bigram_dist": 0.118,
+                "D_wazn": -0.05,
+                "E_ncd": 0.658,
+                "F_coupling": 0.375,
+                "G_root_trigram": -1.063,
+                "H_local_spec": 0.033,
+                "I_root_field": 0.032
+              }
+            }
+          ]
+        },
+        "E5_qaf_kaf": {
+          "pair": "ق <-> ك",
+          "n_edits": 613,
+          "n_detected_3of9": 15,
+          "detection_rate": 0.0245,
+          "max_z_mean": 1.232,
+          "max_z_median": 0.834,
+          "max_z_p95": 3.524,
+          "example_variants": [
+            {
+              "unit_label": "poetry_jahili:7052",
+              "verse_idx": 1,
+              "pos": 3,
+              "orig": "ك",
+              "partner": "ق",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": -0.196,
+                "B_root_bigram": 0.428,
+                "C_bigram_dist": 0.118,
+                "D_wazn": -0.05,
+                "E_ncd": -0.257,
+                "F_coupling": 0.529,
+                "G_root_trigram": 0.548,
+                "H_local_spec": -0.207,
+                "I_root_field": 0.032
+              }
+            },
+            {
+              "unit_label": "poetry_jahili:7052",
+              "verse_idx": 1,
+              "pos": 14,
+              "orig": "ق",
+              "partner": "ك",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": -0.405,
+                "B_root_bigram": 0.428,
+                "C_bigram_dist": 0.118,
+                "D_wazn": -0.05,
+                "E_ncd": 1.115,
+                "F_coupling": 0.529,
+                "G_root_trigram": 1.805,
+                "H_local_spec": -0.557,
+                "I_root_field": 0.032
+              }
+            },
+            {
+              "unit_label": "poetry_jahili:7052",
+              "verse_idx": 1,
+              "pos": 32,
+              "orig": "ك",
+              "partner": "ق",
+              "n_channels_fired": 1,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.818,
+                "B_root_bigram": -1.373,
+                "C_bigram_dist": 0.118,
+                "D_wazn": -0.05,
+                "E_ncd": 1.115,
+                "F_coupling": 0.375,
+                "G_root_trigram": -1.262,
+                "H_local_spec": 2.331,
+                "I_root_field": 0.032
+              }
+            }
+          ]
+        },
+        "E6_hha_ha": {
+          "pair": "ح <-> ه",
+          "n_edits": 849,
+          "n_detected_3of9": 17,
+          "detection_rate": 0.02,
+          "max_z_mean": 1.214,
+          "max_z_median": 0.789,
+          "max_z_p95": 3.129,
+          "example_variants": [
+            {
+              "unit_label": "poetry_jahili:7052",
+              "verse_idx": 0,
+              "pos": 6,
+              "orig": "ح",
+              "partner": "ه",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": -0.175,
+                "B_root_bigram": -0.914,
+                "C_bigram_dist": 0.118,
+                "D_wazn": -0.05,
+                "E_ncd": 0.658,
+                "F_coupling": 0.375,
+                "G_root_trigram": 0.602,
+                "H_local_spec": -0.196,
+                "I_root_field": 0.032
+              }
+            },
+            {
+              "unit_label": "poetry_jahili:7052",
+              "verse_idx": 0,
+              "pos": 26,
+              "orig": "ه",
+              "partner": "ح",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 1.468,
+                "B_root_bigram": 0.428,
+                "C_bigram_dist": 0.118,
+                "D_wazn": -0.05,
+                "E_ncd": 0.658,
+                "F_coupling": -0.518,
+                "G_root_trigram": 0.548,
+                "H_local_spec": -0.447,
+                "I_root_field": 0.032
+              }
+            },
+            {
+              "unit_label": "poetry_jahili:7052",
+              "verse_idx": 1,
+              "pos": 29,
+              "orig": "ه",
+              "partner": "ح",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 1.498,
+                "B_root_bigram": 0.428,
+                "C_bigram_dist": 0.118,
+                "D_wazn": -0.05,
+                "E_ncd": 1.993,
+                "F_coupling": 0.227,
+                "G_root_trigram": 0.548,
+                "H_local_spec": -0.293,
+                "I_root_field": 0.032
+              }
+            }
+          ]
+        },
+        "E7_ayn_alef": {
+          "pair": "ع <-> ا",
+          "n_edits": 2509,
+          "n_detected_3of9": 181,
+          "detection_rate": 0.0721,
+          "max_z_mean": 2.243,
+          "max_z_median": 1.299,
+          "max_z_p95": 7.603,
+          "example_variants": [
+            {
+              "unit_label": "poetry_jahili:7052",
+              "verse_idx": 0,
+              "pos": 4,
+              "orig": "ا",
+              "partner": "ع",
+              "n_channels_fired": 2,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 1.665,
+                "B_root_bigram": -0.914,
+                "C_bigram_dist": 0.118,
+                "D_wazn": 6.448,
+                "E_ncd": -0.714,
+                "F_coupling": 0.345,
+                "G_root_trigram": -2.718,
+                "H_local_spec": 0.02,
+                "I_root_field": 0.032
+              }
+            },
+            {
+              "unit_label": "poetry_jahili:7052",
+              "verse_idx": 0,
+              "pos": 12,
+              "orig": "ا",
+              "partner": "ع",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 0.321,
+                "B_root_bigram": 1.328,
+                "C_bigram_dist": 0.118,
+                "D_wazn": -0.05,
+                "E_ncd": 1.572,
+                "F_coupling": 0.375,
+                "G_root_trigram": 0.557,
+                "H_local_spec": 0.198,
+                "I_root_field": 0.032
+              }
+            },
+            {
+              "unit_label": "poetry_jahili:7052",
+              "verse_idx": 0,
+              "pos": 15,
+              "orig": "ا",
+              "partner": "ع",
+              "n_channels_fired": 0,
+              "detected": false,
+              "z_scores": {
+                "A_spectral": 1.665,
+                "B_root_bigram": 0.428,
+                "C_bigram_dist": 0.118,
+                "D_wazn": -0.05,
+                "E_ncd": 1.572,
+                "F_coupling": 0.345,
+                "G_root_trigram": -0.652,
+                "H_local_spec": 0.02,
+                "I_root_field": 0.032
+              }
+            }
+          ]
+        }
+      },
+      "per_unit_results": [
+        {
+          "unit_label": "poetry_jahili:7052",
+          "n_emphatic_edits": 79,
+          "n_detected": 4,
+          "detection_rate": 0.0506
+        },
+        {
+          "unit_label": "poetry_jahili:1371",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:1254",
+          "n_emphatic_edits": 60,
+          "n_detected": 9,
+          "detection_rate": 0.15
+        },
+        {
+          "unit_label": "poetry_jahili:7770",
+          "n_emphatic_edits": 83,
+          "n_detected": 10,
+          "detection_rate": 0.1205
+        },
+        {
+          "unit_label": "poetry_jahili:7953",
+          "n_emphatic_edits": 65,
+          "n_detected": 16,
+          "detection_rate": 0.2462
+        },
+        {
+          "unit_label": "poetry_jahili:4012",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:1364",
+          "n_emphatic_edits": 100,
+          "n_detected": 1,
+          "detection_rate": 0.01
+        },
+        {
+          "unit_label": "poetry_jahili:4396",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:415",
+          "n_emphatic_edits": 75,
+          "n_detected": 6,
+          "detection_rate": 0.08
+        },
+        {
+          "unit_label": "poetry_jahili:7500",
+          "n_emphatic_edits": 100,
+          "n_detected": 9,
+          "detection_rate": 0.09
+        },
+        {
+          "unit_label": "poetry_jahili:7958",
+          "n_emphatic_edits": 100,
+          "n_detected": 4,
+          "detection_rate": 0.04
+        },
+        {
+          "unit_label": "poetry_jahili:1248",
+          "n_emphatic_edits": 45,
+          "n_detected": 15,
+          "detection_rate": 0.3333
+        },
+        {
+          "unit_label": "poetry_jahili:418",
+          "n_emphatic_edits": 60,
+          "n_detected": 20,
+          "detection_rate": 0.3333
+        },
+        {
+          "unit_label": "poetry_jahili:1259",
+          "n_emphatic_edits": 100,
+          "n_detected": 1,
+          "detection_rate": 0.01
+        },
+        {
+          "unit_label": "poetry_jahili:7768",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:1350",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:1366",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:1354",
+          "n_emphatic_edits": 100,
+          "n_detected": 2,
+          "detection_rate": 0.02
+        },
+        {
+          "unit_label": "poetry_jahili:1265",
+          "n_emphatic_edits": 59,
+          "n_detected": 20,
+          "detection_rate": 0.339
+        },
+        {
+          "unit_label": "poetry_jahili:406",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:1347",
+          "n_emphatic_edits": 100,
+          "n_detected": 1,
+          "detection_rate": 0.01
+        },
+        {
+          "unit_label": "poetry_jahili:1006",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:1333",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:422",
+          "n_emphatic_edits": 86,
+          "n_detected": 9,
+          "detection_rate": 0.1047
+        },
+        {
+          "unit_label": "poetry_jahili:1462",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:6599",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:413",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:4389",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:7773",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:3467",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:1351",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:421",
+          "n_emphatic_edits": 56,
+          "n_detected": 27,
+          "detection_rate": 0.4821
+        },
+        {
+          "unit_label": "poetry_jahili:8096",
+          "n_emphatic_edits": 100,
+          "n_detected": 14,
+          "detection_rate": 0.14
+        },
+        {
+          "unit_label": "poetry_jahili:1239",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:589",
+          "n_emphatic_edits": 100,
+          "n_detected": 1,
+          "detection_rate": 0.01
+        },
+        {
+          "unit_label": "poetry_jahili:7181",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:1264",
+          "n_emphatic_edits": 100,
+          "n_detected": 1,
+          "detection_rate": 0.01
+        },
+        {
+          "unit_label": "poetry_jahili:420",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:1591",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:7053",
+          "n_emphatic_edits": 100,
+          "n_detected": 5,
+          "detection_rate": 0.05
+        },
+        {
+          "unit_label": "poetry_jahili:424",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:7058",
+          "n_emphatic_edits": 50,
+          "n_detected": 14,
+          "detection_rate": 0.28
+        },
+        {
+          "unit_label": "poetry_jahili:1358",
+          "n_emphatic_edits": 100,
+          "n_detected": 2,
+          "detection_rate": 0.02
+        },
+        {
+          "unit_label": "poetry_jahili:1352",
+          "n_emphatic_edits": 100,
+          "n_detected": 6,
+          "detection_rate": 0.06
+        },
+        {
+          "unit_label": "poetry_jahili:4011",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:1466",
+          "n_emphatic_edits": 100,
+          "n_detected": 2,
+          "detection_rate": 0.02
+        },
+        {
+          "unit_label": "poetry_jahili:4013",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:7951",
+          "n_emphatic_edits": 71,
+          "n_detected": 2,
+          "detection_rate": 0.0282
+        },
+        {
+          "unit_label": "poetry_jahili:1256",
+          "n_emphatic_edits": 57,
+          "n_detected": 13,
+          "detection_rate": 0.2281
+        },
+        {
+          "unit_label": "poetry_jahili:4404",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:427",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:1357",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:1250",
+          "n_emphatic_edits": 54,
+          "n_detected": 23,
+          "detection_rate": 0.4259
+        },
+        {
+          "unit_label": "poetry_jahili:1339",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:7772",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:1682",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:8090",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:1684",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:6117",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        },
+        {
+          "unit_label": "poetry_jahili:1353",
+          "n_emphatic_edits": 100,
+          "n_detected": 0,
+          "detection_rate": 0.0
+        }
+      ],
+      "reference_pool": [
+        "poetry_abbasi",
+        "poetry_islami",
+        "ksucca",
+        "arabic_bible",
+        "hindawi"
+      ],
+      "null_distribution_sizes": {
+        "A_spectral": 800,
+        "B_root_bigram": 800,
+        "C_bigram_dist": 800,
+        "D_wazn": 800,
+        "E_ncd": 800,
+        "F_coupling": 800,
+        "G_root_trigram": 800,
+        "H_local_spec": 800,
+        "I_root_field": 800
+      },
+      "verdict_vs_prereg": "INCONCLUSIVE",
+      "verdict_vs_prereg_without_E7": "H1_STRUCTURAL_ARABIC_BLINDNESS"
+    }
+  },
+  "overall_rates_by_target": {
+    "poetry_abbasi": 0.026574,
+    "poetry_jahili": 0.043091
+  },
+  "max_control_rate": 0.043091,
+  "quran_vs_controls_summary": "CTRL_MAX_3.8X_HIGHER_THAN_QURAN",
+  "aggregate_verdict": "INCONCLUSIVE",
+  "audit_2026_04_24_e7_confound": {
+    "note": "E7_ayn_alef is normalisation-confounded (ع ↔ all-alef rather than ع ↔ hamza). Fields below replay the verdict rule on rates that exclude E7. See docs/_SCAN_2026-04-24/AUDIT_MEMO_2026-04-24.md.",
+    "overall_rates_by_target_without_E7": {
+      "poetry_abbasi": 0.004497,
+      "poetry_jahili": 0.018723
+    },
+    "max_control_rate_without_E7": 0.018723,
+    "aggregate_verdict_without_E7": "H1_STRUCTURAL_ARABIC_BLINDNESS",
+    "quran_baseline_rate_exp46_context": "Quran exp46 published rate 1.15% drops to ~0.30% once E7 is excluded (104/120 detections were E7). Interpret the no-E7 aggregate_verdict against the Quran no-E7 rate for an apples-to-apples cross-corpus comparison."
+  },
+  "interpretation": "H1 (structural Arabic blindness) = the emphatic detection rate is an artefact of how phonetically similar the emphatic pairs are, independent of corpus. Controls also score ~1%. H2 (Quran-specific immunity) = controls score noticeably higher (>= 5x Quran); the Quran is genuinely harder to forge with plausible scribal errors. INCONCLUSIVE = controls in the gray band; additional corpora / full-mode runs required.",
+  "runtime_seconds": 504.98
+}

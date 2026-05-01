@@ -1,0 +1,95 @@
+{
+  "experiment_id": "expE14_multiscale_law",
+  "task": "E14",
+  "tier": 4,
+  "title": "Multi-scale Fisher combination law (letter → root → verse → surah → corpus)",
+  "generated_utc": "2026-04-23T20:09:56+00:00",
+  "seed": 42,
+  "scale_names": [
+    "S1_letter_KL",
+    "S2_bigram_H",
+    "S3_DFA_H",
+    "S4_Mahalanobis",
+    "S5_L_TEL"
+  ],
+  "observed_Q_vec": [
+    0.017827432807340622,
+    0.32747148531251247,
+    0.405390770314491,
+    8.811942216315382,
+    3.6354767771861125
+  ],
+  "p_per_scale": {
+    "S1_letter_KL": 0.8792808219178082,
+    "S2_bigram_H": 0.07577054794520548,
+    "S3_DFA_H": 0.4267979452054795,
+    "S4_Mahalanobis": 0.0012842465753424657,
+    "S5_L_TEL": 0.0008561643835616438
+  },
+  "null_pool_size": 2335,
+  "correlation_matrix_R": [
+    [
+      1.0,
+      0.2749745444572773,
+      0.15438254208765528,
+      0.17087479812771153,
+      0.15141908523566733
+    ],
+    [
+      0.2749745444572773,
+      1.0,
+      0.301799433162585,
+      0.14199075957928162,
+      0.05490581809212062
+    ],
+    [
+      0.15438254208765528,
+      0.301799433162585,
+      1.0,
+      0.01937026027160361,
+      -0.015895438607932293
+    ],
+    [
+      0.1708747981277115,
+      0.1419907595792816,
+      0.01937026027160361,
+      1.0,
+      0.4845863442468484
+    ],
+    [
+      0.15141908523566733,
+      0.05490581809212062,
+      -0.015895438607932293,
+      0.4845863442468484,
+      1.0
+    ]
+  ],
+  "fisher_chi2_uncorrected": 34.561544714976726,
+  "fisher_p_uncorrected": 0.00014830085968517244,
+  "brown_chi2_obs": 34.561544714976726,
+  "brown_df_adjusted": 0.6199970867154665,
+  "brown_p_combined": 1.4132866370088437e-06,
+  "shapley_values": {
+    "S1_letter_KL": -0.1954934016038596,
+    "S2_bigram_H": 0.8478747588634391,
+    "S3_DFA_H": 0.3094362194902874,
+    "S4_Mahalanobis": 2.3304286162794794,
+    "S5_L_TEL": 2.5575235543601407
+  },
+  "shapley_shares": {
+    "S1_letter_KL": -0.03341899083995576,
+    "S2_bigram_H": 0.14494156103183564,
+    "S3_DFA_H": 0.0528971622564078,
+    "S4_Mahalanobis": 0.3983795460187906,
+    "S5_L_TEL": 0.43720072153292167
+  },
+  "max_single_scale_share": 0.43720072153292167,
+  "verdict": "MULTISCALE_LAW",
+  "pre_registered_criteria": {
+    "null": "Evidence on single scale dominates >95% of Shapley",
+    "MULTISCALE_LAW": "p_Brown < 0.01 AND max share < 60%",
+    "SINGLE_SCALE_DOMINANT": "p_Brown < 0.01 BUT max share >= 60%",
+    "NULL_NO_COMBINED_EVIDENCE": "p_Brown >= 0.01",
+    "side_effects": "no mutation of any pinned artefact"
+  }
+}

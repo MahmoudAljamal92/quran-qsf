@@ -1,0 +1,8 @@
+rank,corpus,n_units,n_peer_units,safety_margin,delta_p05,delta_median,delta_max
+1,ksucca,41,4792,427.0,592.0,1968.0,32240.0
+2,hindawi,74,4759,100.0,229.45000000000002,382.5,505.0
+3,arabic_bible,1183,3650,84.0,178.2,491.0,1991.0
+4,quran,114,4719,55.0,66.65,458.0,7661.0
+5,poetry_jahili,133,4700,39.0,69.6,160.0,578.0
+6,poetry_islami,465,4368,11.0,69.0,148.0,981.0
+7,poetry_abbasi,2823,2010,11.0,70.0,151.0,2997.0

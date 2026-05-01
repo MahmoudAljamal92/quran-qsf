@@ -1,0 +1,150 @@
+{
+  "experiment": "exp60_lc3_parsimony_theorem",
+  "hypothesis": "H16 — LC3 Parsimony Theorem: (T, EL) as sufficient statistics",
+  "schema_version": 1,
+  "data": {
+    "n_quran_bandA": 68,
+    "n_ctrl_bandA": 2509,
+    "feat_cols": [
+      "EL",
+      "VL_CV",
+      "CN",
+      "H_cond",
+      "T"
+    ],
+    "TE_indices": [
+      4,
+      0
+    ],
+    "residual_indices": [
+      1,
+      2,
+      3
+    ]
+  },
+  "T1_eigendecomposition": {
+    "eigenvalues": [
+      0.27438667936831457,
+      0.05936872189555246,
+      0.024597709098589483,
+      0.004460187295178756,
+      0.0015828208920877934
+    ],
+    "explained_variance_ratio": [
+      0.7529901264051845,
+      0.1629235847292687,
+      0.06750266494738484,
+      0.012239941832887959,
+      0.0043436820852739465
+    ],
+    "per_eigvec_TE_overlap": [
+      0.7450598574169687,
+      0.248848885830828,
+      0.015305124837518098,
+      0.9903837117401723,
+      0.00040242017451238394
+    ],
+    "weighted_TE_overlap": 0.6147231924744021,
+    "top2_TE_overlap": 0.6567933872353255,
+    "feature_cols": [
+      "EL",
+      "VL_CV",
+      "CN",
+      "H_cond",
+      "T"
+    ],
+    "TE_indices": [
+      4,
+      0
+    ],
+    "note": "per_eigvec_TE_overlap[k] = fraction of eigenvector k's unit norm that lies in the (T, EL) subspace (squared L2). top2_TE_overlap = variance-weighted mean of the first two."
+  },
+  "T2_conditional_MI": {
+    "VL_CV": {
+      "conditional_MI_bits": 0.020905577836485237,
+      "n_bins_per_dim": 8,
+      "note": "I(class; VL_CV | T, EL) with Miller-Madow debias"
+    },
+    "CN": {
+      "conditional_MI_bits": 0.021645567805486276,
+      "n_bins_per_dim": 8,
+      "note": "I(class; CN | T, EL) with Miller-Madow debias"
+    },
+    "H_cond": {
+      "conditional_MI_bits": 0.003598420926515463,
+      "n_bins_per_dim": 8,
+      "note": "I(class; H_cond | T, EL) with Miller-Madow debias"
+    }
+  },
+  "T3_fisher_information": {
+    "fisher_total": 53.738441275769624,
+    "fisher_TE_subspace": 54.20982021650329,
+    "fisher_residual_subspace": 4.758118632947325,
+    "fisher_cross_term": -5.22949757368099,
+    "fisher_TE_fraction": 1.0087717270829404,
+    "fisher_residual_fraction": 0.08854217800122044,
+    "fisher_cross_fraction": -0.09731390508416073,
+    "note": "Fisher discriminant decomposed into (T,EL) and (VL_CV,CN,H_cond) subspaces. Cross-term arises from off-diagonal covariance. If fisher_residual_fraction < 0.05, the residual dims carry <5% of the discriminant information."
+  },
+  "T4_bootstrap_CI": {
+    "VL_CV": {
+      "bootstrap_mean": 0.02188556099810292,
+      "bootstrap_std": 0.004190349626562169,
+      "ci_2_5": 0.014212433883511405,
+      "ci_97_5": 0.03061056623308189,
+      "ci_0_5": 0.012183646760248208,
+      "ci_99_5": 0.03391718460032581,
+      "fraction_below_001": 0.0006,
+      "fraction_below_005": 1.0,
+      "n_bootstrap": 10000
+    },
+    "CN": {
+      "bootstrap_mean": 0.023401204366112652,
+      "bootstrap_std": 0.0047926148445869175,
+      "ci_2_5": 0.014673409424950469,
+      "ci_97_5": 0.033281336350619604,
+      "ci_0_5": 0.012378023241261693,
+      "ci_99_5": 0.03693507822113095,
+      "fraction_below_001": 0.0006,
+      "fraction_below_005": 1.0,
+      "n_bootstrap": 10000
+    },
+    "H_cond": {
+      "bootstrap_mean": 0.00680174899867541,
+      "bootstrap_std": 0.002898403447353451,
+      "ci_2_5": 0.0018992125987385968,
+      "ci_97_5": 0.01313164548784327,
+      "ci_0_5": 0.001077433625942695,
+      "ci_99_5": 0.01571441223426657,
+      "fraction_below_001": 0.8626,
+      "fraction_below_005": 1.0,
+      "n_bootstrap": 10000
+    }
+  },
+  "verdict": {
+    "verdict": "PARTIAL",
+    "max_conditional_MI_bits": 0.021645567805486276,
+    "all_cmi_below_001_bits": false,
+    "all_cmi_below_005_bits": true,
+    "any_cmi_above_010_bits": false,
+    "top2_TE_overlap": 0.6567933872353255,
+    "fisher_residual_fraction": 0.08854217800122044,
+    "theorem_statement": null,
+    "prereg_thresholds": {
+      "THEOREM_SUPPORTED": "all CMI < 0.01 AND overlap >= 0.80 AND fisher_resid < 0.05",
+      "PARTIAL": "all CMI < 0.05 OR overlap >= 0.60",
+      "FAILS": "any CMI > 0.10 OR overlap < 0.50"
+    }
+  },
+  "baseline_reference": {
+    "exp36_AUC_TxEL": "0.9971 ± 0.0006 (25 seed·fold)",
+    "exp36_AUC_5D": "0.998",
+    "note": "This experiment explains WHY the 2-D AUC equals the 5-D AUC"
+  },
+  "parameters": {
+    "n_bins_MI": 8,
+    "n_bootstrap": 10000,
+    "seed": 42
+  },
+  "runtime_seconds": 500.14
+}

@@ -1,0 +1,27 @@
+{
+  "experiment": "exp74_subspace_test",
+  "parent": "exp74_eigenvalue_spectrum",
+  "schema_version": 1,
+  "subspace_test": {
+    "pcs_used": [
+      "PC4",
+      "PC5"
+    ],
+    "variance_fraction_pct": 1.66,
+    "centroid_t2_blindspot": 33.2956,
+    "centroid_t2_full": 61.617,
+    "centroid_t2_normal": 28.3215,
+    "blindspot_fraction_pct": 54.0,
+    "perm_p_value": 0.0,
+    "perm_null_mean": 0.03,
+    "perm_null_p99": 0.16
+  },
+  "correlation_test": {
+    "pc1_pc4_r": -0.0,
+    "pc1_pc4_p": 0.9999999999999847,
+    "el_t_raw_r": 0.438608,
+    "el_t_raw_p": 1.760199958894518e-118
+  },
+  "verdict": "DETERMINATE",
+  "runtime_seconds": 4.72
+}

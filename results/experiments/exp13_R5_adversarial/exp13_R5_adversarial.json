@@ -1,0 +1,34 @@
+{
+  "exp": "exp13_R5_adversarial",
+  "schema_version": 3,
+  "seed": 42,
+  "fast_mode": true,
+  "runtime_seconds": 1857.88,
+  "metric": "bigram_jaccard_path",
+  "real_quran_canonical_path": 56.70004695550523,
+  "n_forgeries_per_strategy": 5,
+  "per_strategy": {
+    "G0_markov_control_source": {
+      "n": 5,
+      "mean": 51.93749970369769,
+      "min": 51.63243659384492,
+      "max": 52.388559253452115,
+      "fraction_below_real": 1.0
+    },
+    "G1_el_preserved_control": {
+      "n": 5,
+      "mean": 51.94509607870776,
+      "min": 51.64463191732598,
+      "max": 52.38920760942465,
+      "fraction_below_real": 1.0
+    }
+  },
+  "control_training_corpora": [
+    "poetry_abbasi",
+    "poetry_jahili",
+    "ksucca",
+    "hindawi",
+    "arabic_bible"
+  ],
+  "verdict_expected": "no strategy below real Quran path length"
+}

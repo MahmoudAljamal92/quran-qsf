@@ -1,0 +1,109 @@
+{
+  "experiment": "expParadigm2_OP2_T_canon_plus_T_alt_6D",
+  "task_id": "P2_OP2 follow-up — 6-D (T_canon + T_alt) joint Hotelling T²",
+  "title": "Tests whether stacking T_canon and T_alt as a 6-D matrix produces strictly stronger discrimination than either 5-D matrix alone (i.e., are they complementary or redundant?).",
+  "band_A_range": [
+    15,
+    100
+  ],
+  "n_quran_band_A": 68,
+  "n_ctrl_band_A": 2509,
+  "matrices": {
+    "5D_canonical": {
+      "shape_Q": [
+        68,
+        5
+      ],
+      "shape_C": [
+        2509,
+        5
+      ]
+    },
+    "5D_alt": {
+      "shape_Q": [
+        68,
+        5
+      ],
+      "shape_C": [
+        2509,
+        5
+      ]
+    },
+    "6D_both": {
+      "shape_Q": [
+        68,
+        6
+      ],
+      "shape_C": [
+        2509,
+        6
+      ]
+    }
+  },
+  "hotelling_T2_5D_canonical": {
+    "T2": 3557.3394545046353,
+    "F": 710.3626980606927,
+    "df1": 5,
+    "df2": 2571,
+    "n_eff": 66.20566550252231,
+    "n_quran": 68,
+    "n_ctrl": 2509,
+    "p_F_tail": 0.0,
+    "scipy_log10_p_F_tail": -Infinity,
+    "highprec_log10_p_F_tail": -480.2531098456136,
+    "p_dim": 5
+  },
+  "hotelling_T2_5D_alt": {
+    "T2": 3867.7881019895403,
+    "F": 772.3559774924356,
+    "df1": 5,
+    "df2": 2571,
+    "n_eff": 66.20566550252231,
+    "n_quran": 68,
+    "n_ctrl": 2509,
+    "p_F_tail": 0.0,
+    "scipy_log10_p_F_tail": -Infinity,
+    "highprec_log10_p_F_tail": -507.8017727318584,
+    "p_dim": 5
+  },
+  "hotelling_T2_6D_both": {
+    "T2": 3867.801963042146,
+    "F": 643.3819446613796,
+    "df1": 6,
+    "df2": 2570,
+    "n_eff": 66.20566550252231,
+    "n_quran": 68,
+    "n_ctrl": 2509,
+    "p_F_tail": 0.0,
+    "scipy_log10_p_F_tail": -Infinity,
+    "highprec_log10_p_F_tail": -506.3373323347897,
+    "p_dim": 6
+  },
+  "T2_ratios": {
+    "T2_6D_over_T2_5D_canon": 1.087273793380717,
+    "T2_6D_over_T2_5D_alt": 1.000003583715612,
+    "T2_5D_alt_over_T2_5D_canon": 1.0872698969146128
+  },
+  "per_dim_gain_B12_style": {
+    "gain_T_alt_over_5D_canon": 1.072216370263862,
+    "gain_T_canon_over_5D_alt": 1.000002986428785,
+    "passes_1_0_gate_alt_over_canon": true,
+    "passes_1_0_gate_canon_over_alt": true
+  },
+  "sigma_equivalent": {
+    "5D_canonical": 47.02815436724137,
+    "5D_alt": 48.358180116466905,
+    "6D_both": 48.28840012799055
+  },
+  "delta_sigma": {
+    "6D_minus_5D_canonical": 1.2602457607491786,
+    "6D_minus_5D_alt": -0.06977998847635547
+  },
+  "verdict": "T_ALT_DOMINATES_T_CANON_REDUNDANT",
+  "interpretation": [
+    "If verdict = COMPLEMENTARY_T_CANON_AND_T_ALT_BOTH_RETAINED, T_canon and T_alt carry orthogonal information. The 6-D model would be the strongest discriminator and BOTH should be retained as project features.",
+    "If verdict = T_ALT_DOMINATES_T_CANON_REDUNDANT, T_alt is a strict replacement: the 6-D adds no info beyond T_alt, so T_canon can be DROPPED from the project.",
+    "If verdict = COLLINEARITY_PENALTY, both features carry the SAME information; adding both reduces T² due to df penalty. Pick whichever is cleaner (T_alt — CamelTools-free)."
+  ],
+  "runtime_seconds": 1.68
+}

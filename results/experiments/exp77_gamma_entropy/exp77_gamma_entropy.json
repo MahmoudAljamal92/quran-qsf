@@ -1,0 +1,100 @@
+{
+  "experiment": "exp77_gamma_entropy",
+  "hypothesis": "H2 — Is gamma (gzip NCD residual) a function of letter entropy?",
+  "schema_version": 1,
+  "per_corpus": {
+    "quran": {
+      "n_units_bandA": 68,
+      "n_perturbations": 680,
+      "H_letters": 4.0345,
+      "H_max": 4.8074,
+      "R_redundancy": 0.1608,
+      "gamma_mean": 0.044396,
+      "gamma_std": 0.0062
+    },
+    "poetry_jahili": {
+      "n_units_bandA": 65,
+      "n_perturbations": 650,
+      "H_letters": 4.1805,
+      "H_max": 4.8074,
+      "R_redundancy": 0.1304,
+      "gamma_mean": 0.04226,
+      "gamma_std": 0.004965
+    },
+    "poetry_islami": {
+      "n_units_bandA": 211,
+      "n_perturbations": 2110,
+      "H_letters": 4.1673,
+      "H_max": 4.8074,
+      "R_redundancy": 0.1331,
+      "gamma_mean": 0.042893,
+      "gamma_std": 0.005547
+    },
+    "poetry_abbasi": {
+      "n_units_bandA": 1167,
+      "n_perturbations": 11670,
+      "H_letters": 4.1876,
+      "H_max": 4.8074,
+      "R_redundancy": 0.1289,
+      "gamma_mean": 0.041695,
+      "gamma_std": 0.005082
+    },
+    "ksucca": {
+      "n_units_bandA": 19,
+      "n_perturbations": 190,
+      "H_letters": 4.156,
+      "H_max": 4.8074,
+      "R_redundancy": 0.1355,
+      "gamma_mean": 0.049166,
+      "gamma_std": 0.004204
+    },
+    "arabic_bible": {
+      "n_units_bandA": 977,
+      "n_perturbations": 9770,
+      "H_letters": 4.132,
+      "H_max": 4.8074,
+      "R_redundancy": 0.1405,
+      "gamma_mean": 0.04254,
+      "gamma_std": 0.003982
+    },
+    "hindawi": {
+      "n_units_bandA": 70,
+      "n_perturbations": 700,
+      "H_letters": 4.1946,
+      "H_max": 4.8074,
+      "R_redundancy": 0.1275,
+      "gamma_mean": 0.039883,
+      "gamma_std": 0.004016
+    }
+  },
+  "fits": {
+    "linear_R": {
+      "slope": 0.086122,
+      "intercept": 0.031491,
+      "R2": 0.1141,
+      "p": 0.45875224028964556
+    },
+    "linear_H": {
+      "slope": -0.017954,
+      "intercept": 0.117776,
+      "R2": 0.1143,
+      "p": 0.458193435062539
+    },
+    "power_R": {
+      "a": 0.076728,
+      "c": 0.2876,
+      "R2": 0.1214
+    }
+  },
+  "residuals": {
+    "quran": -0.000944,
+    "poetry_jahili": -0.000462,
+    "poetry_islami": -6.1e-05,
+    "poetry_abbasi": -0.000898,
+    "ksucca": 0.006005,
+    "arabic_bible": -0.001052,
+    "hindawi": -0.002589
+  },
+  "verdict": "NULL",
+  "runtime_seconds": 76.29
+}

@@ -1,0 +1,691 @@
+{
+  "experiment": "exp143_QFootprint_Sharpshooter_Audit",
+  "hypothesis_id": "H93_Sharpshooter_Audit",
+  "hypothesis": "The Q-Footprint joint Z = 12.149σ (exp138/FN20) survives three sharpshooter tests: LOAO (≥7/8 axes ≥ 8.0, min ≥ 6.0); random K=8 from 20-pool (frac ≥ 12.149 < 0.01); inverse (max non-Quran best-8 < 12.149).",
+  "verdict": "PARTIAL_low_sharpshooter_risk",
+  "verdict_reason": "2/3 PASS",
+  "prereg_hash": "ef756399d5e5d777d312d66df76a7e39e91c86df4133ac7229256716acb2d9e7",
+  "frozen_constants": {
+    "AXIS_POOL_size": 20,
+    "ORIGINAL_8_AXES": [
+      "HEL_pool",
+      "pmax_pool",
+      "HEL_unit_median",
+      "HEL_unit_p25",
+      "VL_CV_unit_median",
+      "bigram_distinct_pool",
+      "gzip_eff_pool",
+      "Delta_unit_median"
+    ],
+    "N_RANDOM_SUBSETS": 10000,
+    "RIDGE": 0.001,
+    "SEED": 42,
+    "QURAN_ACTUAL_Z_LOCKED": 12.149
+  },
+  "results": {
+    "raw_feature_matrix": {
+      "quran": {
+        "HEL_pool": 2.470720215424587,
+        "pmax_pool": 0.50096215522771,
+        "bigram_distinct_pool": 0.0022881795267520365,
+        "gzip_eff_pool": 0.25387982431211215,
+        "Delta_pool": 2.3366347066330166,
+        "HEL_unit_p10": 0.0,
+        "HEL_unit_p25": 0.5182875976098393,
+        "HEL_unit_median": 0.9685208240372032,
+        "HEL_unit_p75": 1.7449698309445216,
+        "HEL_unit_mean": 1.11386422707522,
+        "pmax_unit_p25": 0.5,
+        "pmax_unit_median": 0.7272727272727273,
+        "pmax_unit_p75": 0.9024193548387096,
+        "pmax_unit_mean": 0.7081135997791647,
+        "VL_CV_unit_p25": 0.38053619651254733,
+        "VL_CV_unit_median": 0.4458599267397876,
+        "VL_CV_unit_p75": 0.5130705052783359,
+        "Delta_unit_p25": 4.289067324447764,
+        "Delta_unit_median": 3.8388340980204005,
+        "Delta_unit_p10": 4.807354922057604
+      },
+      "poetry_jahili": {
+        "HEL_pool": 3.814724800590194,
+        "pmax_pool": 0.1999198717948718,
+        "bigram_distinct_pool": 0.010326395075726897,
+        "gzip_eff_pool": 0.3353447151457737,
+        "Delta_pool": 0.9926301214674096,
+        "HEL_unit_p10": 1.921564868804075,
+        "HEL_unit_p25": 2.303682946149334,
+        "HEL_unit_median": 2.779539763336115,
+        "HEL_unit_p75": 3.1924668306699875,
+        "HEL_unit_mean": 2.729601308889257,
+        "pmax_unit_p25": 0.21428571428571427,
+        "pmax_unit_median": 0.264391447368421,
+        "pmax_unit_p75": 0.3409090909090909,
+        "pmax_unit_mean": 0.2964604273063943,
+        "VL_CV_unit_p25": 0.0342495898148475,
+        "VL_CV_unit_median": 0.10475656017578483,
+        "VL_CV_unit_p75": 0.1856450912250085,
+        "Delta_unit_p25": 2.5036719759082695,
+        "Delta_unit_median": 2.0278151587214888,
+        "Delta_unit_p10": 2.8857900532535288
+      },
+      "poetry_islami": {
+        "HEL_pool": 3.7575399257495903,
+        "pmax_pool": 0.22240951908775408,
+        "bigram_distinct_pool": 0.002698361493070957,
+        "gzip_eff_pool": 0.32747558511965597,
+        "Delta_pool": 1.0498149963080134,
+        "HEL_unit_p10": 1.8701001025223918,
+        "HEL_unit_p25": 2.2516291673878226,
+        "HEL_unit_median": 2.688721875540867,
+        "HEL_unit_p75": 3.140392696062035,
+        "HEL_unit_mean": 2.6714517570600695,
+        "pmax_unit_p25": 0.2222222222222222,
+        "pmax_unit_median": 0.2857142857142857,
+        "pmax_unit_p75": 0.375,
+        "pmax_unit_mean": 0.3094724636403742,
+        "VL_CV_unit_p25": 0.04173616403780427,
+        "VL_CV_unit_median": 0.10475656017578483,
+        "VL_CV_unit_p75": 0.1884222879063983,
+        "Delta_unit_p25": 2.555725754669781,
+        "Delta_unit_median": 2.1186330465167367,
+        "Delta_unit_p10": 2.937254819535212
+      },
+      "poetry_abbasi": {
+        "HEL_pool": 3.8225714330036857,
+        "pmax_pool": 0.18958529876825364,
+        "bigram_distinct_pool": 0.00038318410923167704,
+        "gzip_eff_pool": 0.3271734079333804,
+        "Delta_pool": 0.984783489053918,
+        "HEL_unit_p10": 1.9182958340544893,
+        "HEL_unit_p25": 2.2516291673878226,
+        "HEL_unit_median": 2.7516291673878226,
+        "HEL_unit_p75": 3.2289405292557403,
+        "HEL_unit_mean": 2.7277364236843233,
+        "pmax_unit_p25": 0.2222222222222222,
+        "pmax_unit_median": 0.2857142857142857,
+        "pmax_unit_p75": 0.345141065830721,
+        "pmax_unit_mean": 0.29980997919861335,
+        "VL_CV_unit_p25": 0.03857378749251486,
+        "VL_CV_unit_median": 0.09318706807596218,
+        "VL_CV_unit_p75": 0.1808379660358623,
+        "Delta_unit_p25": 2.555725754669781,
+        "Delta_unit_median": 2.055725754669781,
+        "Delta_unit_p10": 2.8890590880031146
+      },
+      "hindawi": {
+        "HEL_pool": 3.883206737347789,
+        "pmax_pool": 0.1464471403812825,
+        "bigram_distinct_pool": 0.004556042166170248,
+        "gzip_eff_pool": 0.3013691932946627,
+        "Delta_pool": 0.9241481847098147,
+        "HEL_unit_p10": 3.262420627119284,
+        "HEL_unit_p25": 3.3610361231493036,
+        "HEL_unit_median": 3.478902741597457,
+        "HEL_unit_p75": 3.6556339519057244,
+        "HEL_unit_mean": 3.4932838893354705,
+        "pmax_unit_p25": 0.16326530612244897,
+        "pmax_unit_median": 0.1836734693877551,
+        "pmax_unit_p75": 0.20833333333333334,
+        "pmax_unit_mean": 0.18617653306825865,
+        "VL_CV_unit_p25": 0.3247953814831396,
+        "VL_CV_unit_median": 0.36281374574211256,
+        "VL_CV_unit_p75": 0.41018768136915507,
+        "Delta_unit_p25": 1.4463187989083002,
+        "Delta_unit_median": 1.3284521804601468,
+        "Delta_unit_p10": 1.5449342949383196
+      },
+      "ksucca": {
+        "HEL_pool": 3.7553346508420575,
+        "pmax_pool": 0.21212121212121213,
+        "bigram_distinct_pool": 0.0015277732799692158,
+        "gzip_eff_pool": 0.2312240667860183,
+        "Delta_pool": 1.0520202712155462,
+        "HEL_unit_p10": 2.019715972342415,
+        "HEL_unit_p25": 2.3164098989408313,
+        "HEL_unit_median": 2.907891879501107,
+        "HEL_unit_p75": 3.252461745300269,
+        "HEL_unit_mean": 2.8287968711061513,
+        "pmax_unit_p25": 0.22294654498044328,
+        "pmax_unit_median": 0.28001792114695345,
+        "pmax_unit_p75": 0.3333333333333333,
+        "pmax_unit_mean": 0.2865002676054172,
+        "VL_CV_unit_p25": 0.6893983097091448,
+        "VL_CV_unit_median": 0.9557006632274367,
+        "VL_CV_unit_p75": 1.1265718081341825,
+        "Delta_unit_p25": 2.4909450231167725,
+        "Delta_unit_median": 1.899463042556497,
+        "Delta_unit_p10": 2.7876389497151886
+      },
+      "arabic_bible": {
+        "HEL_pool": 3.7052353604390245,
+        "pmax_pool": 0.20483865778721488,
+        "bigram_distinct_pool": 0.0004405070725857765,
+        "gzip_eff_pool": 0.25896378543778487,
+        "Delta_pool": 1.1021195616185793,
+        "HEL_unit_p10": 2.310251647189973,
+        "HEL_unit_p25": 2.633779207561428,
+        "HEL_unit_median": 2.918295834054489,
+        "HEL_unit_p75": 3.152344540820753,
+        "HEL_unit_mean": 2.8590432862328363,
+        "pmax_unit_p25": 0.2231800766283525,
+        "pmax_unit_median": 0.2727272727272727,
+        "pmax_unit_p75": 0.3333333333333333,
+        "pmax_unit_mean": 0.285678157838188,
+        "VL_CV_unit_p25": 0.3011640720297351,
+        "VL_CV_unit_median": 0.3471387978822605,
+        "VL_CV_unit_p75": 0.38935008202756805,
+        "Delta_unit_p25": 2.1735757144961756,
+        "Delta_unit_median": 1.8890590880031146,
+        "Delta_unit_p10": 2.497103274867631
+      },
+      "hebrew_tanakh": {
+        "HEL_pool": 3.6684898740231513,
+        "pmax_pool": 0.1494466889162129,
+        "bigram_distinct_pool": 0.00041107632706415985,
+        "gzip_eff_pool": 0.2787092131802658,
+        "Delta_pool": 0.790941744614146,
+        "HEL_unit_p10": 2.4464393446710155,
+        "HEL_unit_p25": 2.7898980954642876,
+        "HEL_unit_median": 3.053090083530327,
+        "HEL_unit_p75": 3.257435606081171,
+        "HEL_unit_mean": 2.978840035333152,
+        "pmax_unit_p25": 0.2,
+        "pmax_unit_median": 0.2413793103448276,
+        "pmax_unit_p75": 0.29411764705882354,
+        "pmax_unit_mean": 0.25782737717200027,
+        "VL_CV_unit_p25": 0.1560196977352884,
+        "VL_CV_unit_median": 0.18498288468188753,
+        "VL_CV_unit_p75": 0.21571027194006215,
+        "Delta_unit_p25": 1.6695335231730097,
+        "Delta_unit_median": 1.4063415351069701,
+        "Delta_unit_p10": 2.0129922739662818
+      },
+      "greek_nt": {
+        "HEL_pool": 2.807380532925843,
+        "pmax_pool": 0.3206145321747891,
+        "bigram_distinct_pool": 0.0007524866060340851,
+        "gzip_eff_pool": 0.22837736354105478,
+        "Delta_pool": 1.7775819677953129,
+        "HEL_unit_p10": 2.0560211789659704,
+        "HEL_unit_p25": 2.2564404856372566,
+        "HEL_unit_median": 2.433671200186647,
+        "HEL_unit_p75": 2.592742489192946,
+        "HEL_unit_mean": 2.4205350597336004,
+        "pmax_unit_p25": 0.3,
+        "pmax_unit_median": 0.3333333333333333,
+        "pmax_unit_p75": 0.4,
+        "pmax_unit_mean": 0.35193310654839605,
+        "VL_CV_unit_p25": 0.3180724710429209,
+        "VL_CV_unit_median": 0.35183353097644743,
+        "VL_CV_unit_p75": 0.38751790894223603,
+        "Delta_unit_p25": 2.3285220150838994,
+        "Delta_unit_median": 2.151291300534509,
+        "Delta_unit_p10": 2.5289413217551857
+      },
+      "pali": {
+        "HEL_pool": 2.3257207515452003,
+        "pmax_pool": 0.4693952463980912,
+        "bigram_distinct_pool": 0.00017762631138702848,
+        "gzip_eff_pool": 0.1639331594487322,
+        "Delta_pool": 2.6284755588416746,
+        "HEL_unit_p10": 1.670213669719569,
+        "HEL_unit_p25": 1.9003561124567057,
+        "HEL_unit_median": 2.0899389760168754,
+        "HEL_unit_p75": 2.2823685237320106,
+        "HEL_unit_mean": 2.0795656563402205,
+        "pmax_unit_p25": 0.41848733433641816,
+        "pmax_unit_median": 0.4808201058201058,
+        "pmax_unit_p75": 0.5580051527419948,
+        "pmax_unit_mean": 0.4891573716867731,
+        "VL_CV_unit_p25": 0.6499115308559711,
+        "VL_CV_unit_median": 0.721151423497471,
+        "VL_CV_unit_p75": 0.8389998635783025,
+        "Delta_unit_p25": 3.0538401979301693,
+        "Delta_unit_median": 2.8642573343699995,
+        "Delta_unit_p10": 3.283982640667306
+      },
+      "avestan_yasna": {
+        "HEL_pool": 2.6953395037429346,
+        "pmax_pool": 0.24967148488830487,
+        "bigram_distinct_pool": 0.0025271264967207524,
+        "gzip_eff_pool": 0.2543355306261616,
+        "Delta_pool": 2.005100214398158,
+        "HEL_unit_p10": 0.8918616960827683,
+        "HEL_unit_p25": 1.7177376486136673,
+        "HEL_unit_median": 2.1180782093497093,
+        "HEL_unit_p75": 2.3682734124061353,
+        "HEL_unit_mean": 1.9441727829005846,
+        "pmax_unit_p25": 0.3,
+        "pmax_unit_median": 0.375,
+        "pmax_unit_p75": 0.5,
+        "pmax_unit_mean": 0.43152124230921424,
+        "VL_CV_unit_p25": 0.5592639836972813,
+        "VL_CV_unit_median": 0.7236013706086589,
+        "VL_CV_unit_p75": 0.8945853685995404,
+        "Delta_unit_p25": 2.9827020695274253,
+        "Delta_unit_median": 2.5823615087913834,
+        "Delta_unit_p10": 3.8085780220583243
+      },
+      "rigveda": {
+        "HEL_pool": 3.7117277703381943,
+        "pmax_pool": 0.19081202860221375,
+        "bigram_distinct_pool": 0.0026669111822981086,
+        "gzip_eff_pool": 0.2178820434173125,
+        "Delta_pool": 1.8428610813394433,
+        "HEL_unit_p10": 1.281520437100888,
+        "HEL_unit_p25": 1.9056390622295665,
+        "HEL_unit_median": 2.287783719941071,
+        "HEL_unit_p75": 2.657697417844033,
+        "HEL_unit_mean": 2.165147082896368,
+        "pmax_unit_p25": 0.25,
+        "pmax_unit_median": 0.3333333333333333,
+        "pmax_unit_p75": 0.42857142857142855,
+        "pmax_unit_mean": 0.37914043829992333,
+        "VL_CV_unit_p25": 0.1831567962248351,
+        "VL_CV_unit_median": 0.2412930134485878,
+        "VL_CV_unit_p75": 0.3409361976510127,
+        "Delta_unit_p25": 3.6489497894480714,
+        "Delta_unit_median": 3.2668051317365667,
+        "Delta_unit_p10": 4.27306841457675
+      }
+    },
+    "sub_A_LOAO": {
+      "Z_full_sanity": 2.6618142076554396,
+      "K_eff_full": 1.7461787565159672,
+      "per_axis_drop": {
+        "HEL_pool": {
+          "Z_brown_drop_this_axis": 2.7519821698275932,
+          "K_eff": 1.8023036576377636,
+          "quran_rank_of_12": 1,
+          "drop_from_full": -0.09016796217215362
+        },
+        "pmax_pool": {
+          "Z_brown_drop_this_axis": 2.517046054751451,
+          "K_eff": 1.7842812965339787,
+          "quran_rank_of_12": 1,
+          "drop_from_full": 0.1447681529039886
+        },
+        "HEL_unit_median": {
+          "Z_brown_drop_this_axis": 2.321164367401938,
+          "K_eff": 1.8176208780838872,
+          "quran_rank_of_12": 1,
+          "drop_from_full": 0.3406498402535014
+        },
+        "HEL_unit_p25": {
+          "Z_brown_drop_this_axis": 2.291665474204391,
+          "K_eff": 1.7366831914146044,
+          "quran_rank_of_12": 1,
+          "drop_from_full": 0.3701487334510487
+        },
+        "VL_CV_unit_median": {
+          "Z_brown_drop_this_axis": 2.88732182091675,
+          "K_eff": 1.617134736050581,
+          "quran_rank_of_12": 1,
+          "drop_from_full": -0.22550761326131052
+        },
+        "bigram_distinct_pool": {
+          "Z_brown_drop_this_axis": 2.841771813454034,
+          "K_eff": 1.531350057414203,
+          "quran_rank_of_12": 1,
+          "drop_from_full": -0.17995760579859432
+        },
+        "gzip_eff_pool": {
+          "Z_brown_drop_this_axis": 3.0352395648076493,
+          "K_eff": 1.7872299822236275,
+          "quran_rank_of_12": 1,
+          "drop_from_full": -0.3734253571522097
+        },
+        "Delta_unit_median": {
+          "Z_brown_drop_this_axis": 2.4740054229209383,
+          "K_eff": 1.7271078896154264,
+          "quran_rank_of_12": 1,
+          "drop_from_full": 0.18780878473450136
+        }
+      },
+      "min_LOAO_Z_brown": 2.291665474204391,
+      "n_LOAO_Z_brown_geq_8": 0,
+      "dominant_axis": "HEL_unit_p25",
+      "dominant_axis_drop": 0.3701487334510487
+    },
+    "sub_B_random_K8_null": {
+      "N": 10000,
+      "quran_Z_distribution": {
+        "min": 1.4039356192926429,
+        "p25": 2.8737451086969394,
+        "median": 3.189837700356581,
+        "p75": 3.500477679188009,
+        "p95": 3.8717060156001226,
+        "p99": 4.094245642665438,
+        "max": 4.396780098339907,
+        "mean": 3.1681803192027713,
+        "std": 0.4605840677235745
+      },
+      "fraction_quran_Z_geq_actual_12p149": 0.0,
+      "quran_rank1_frequency": 0.992
+    },
+    "sub_C_inverse_test": {
+      "per_corpus_best_8": {
+        "quran": {
+          "best_8_axes": [
+            "pmax_unit_p75",
+            "pmax_unit_median",
+            "pmax_unit_mean",
+            "HEL_unit_median",
+            "HEL_unit_p25",
+            "pmax_unit_p25",
+            "HEL_unit_mean",
+            "HEL_unit_p10"
+          ],
+          "best_signs": [
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            1,
+            -1,
+            -1
+          ],
+          "best_joint_Z_brown": 4.430224241688723,
+          "K_eff": 1.1029760200139211
+        },
+        "poetry_jahili": {
+          "best_8_axes": [
+            "bigram_distinct_pool",
+            "gzip_eff_pool",
+            "VL_CV_unit_p25",
+            "VL_CV_unit_median",
+            "VL_CV_unit_p75",
+            "HEL_pool",
+            "Delta_pool",
+            "HEL_unit_p75"
+          ],
+          "best_signs": [
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            1,
+            -1,
+            1
+          ],
+          "best_joint_Z_brown": 2.2376248139408035,
+          "K_eff": 1.784505701535573
+        },
+        "poetry_islami": {
+          "best_8_axes": [
+            "gzip_eff_pool",
+            "VL_CV_unit_p25",
+            "VL_CV_unit_median",
+            "VL_CV_unit_p75",
+            "Delta_pool",
+            "HEL_pool",
+            "pmax_unit_p25",
+            "HEL_unit_p75"
+          ],
+          "best_signs": [
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            1,
+            -1,
+            1
+          ],
+          "best_joint_Z_brown": 1.082300687396882,
+          "K_eff": 1.4796455958141155
+        },
+        "poetry_abbasi": {
+          "best_8_axes": [
+            "gzip_eff_pool",
+            "VL_CV_unit_p25",
+            "VL_CV_unit_median",
+            "VL_CV_unit_p75",
+            "HEL_pool",
+            "Delta_pool",
+            "bigram_distinct_pool",
+            "HEL_unit_p75"
+          ],
+          "best_signs": [
+            1,
+            -1,
+            -1,
+            -1,
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "best_joint_Z_brown": 1.47104777727674,
+          "K_eff": 2.235128688881791
+        },
+        "hindawi": {
+          "best_8_axes": [
+            "HEL_unit_p10",
+            "HEL_unit_p25",
+            "HEL_unit_mean",
+            "Delta_unit_p10",
+            "Delta_unit_p25",
+            "HEL_unit_median",
+            "HEL_unit_p75",
+            "Delta_unit_median"
+          ],
+          "best_signs": [
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            1,
+            1,
+            -1
+          ],
+          "best_joint_Z_brown": 1.938200349105408,
+          "K_eff": 1.0736779546418713
+        },
+        "ksucca": {
+          "best_8_axes": [
+            "VL_CV_unit_p75",
+            "VL_CV_unit_median",
+            "VL_CV_unit_p25",
+            "HEL_unit_p75",
+            "gzip_eff_pool",
+            "Delta_pool",
+            "HEL_pool",
+            "HEL_unit_median"
+          ],
+          "best_signs": [
+            1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            1,
+            1
+          ],
+          "best_joint_Z_brown": 4.003062507527971,
+          "K_eff": 8.426567323367326
+        },
+        "arabic_bible": {
+          "best_8_axes": [
+            "bigram_distinct_pool",
+            "HEL_unit_p25",
+            "HEL_unit_p10",
+            "Delta_unit_p25",
+            "HEL_unit_median",
+            "HEL_unit_mean",
+            "Delta_unit_p10",
+            "Delta_pool"
+          ],
+          "best_signs": [
+            -1,
+            1,
+            1,
+            -1,
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "best_joint_Z_brown": 0.7847089911857053,
+          "K_eff": 1.4695917281472042
+        },
+        "hebrew_tanakh": {
+          "best_8_axes": [
+            "Delta_unit_p25",
+            "Delta_unit_median",
+            "Delta_unit_p10",
+            "Delta_pool",
+            "pmax_pool",
+            "HEL_unit_p25",
+            "VL_CV_unit_p75",
+            "HEL_unit_median"
+          ],
+          "best_signs": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            1,
+            -1,
+            1
+          ],
+          "best_joint_Z_brown": 1.2988127364619952,
+          "K_eff": 1.3900568862982543
+        },
+        "greek_nt": {
+          "best_8_axes": [
+            "HEL_pool",
+            "gzip_eff_pool",
+            "bigram_distinct_pool",
+            "pmax_pool",
+            "Delta_unit_p10",
+            "HEL_unit_p75",
+            "Delta_pool",
+            "Delta_unit_p25"
+          ],
+          "best_signs": [
+            -1,
+            -1,
+            -1,
+            1,
+            -1,
+            -1,
+            1,
+            -1
+          ],
+          "best_joint_Z_brown": 1.3212636908660782,
+          "K_eff": 4.372942690009724
+        },
+        "pali": {
+          "best_8_axes": [
+            "gzip_eff_pool",
+            "Delta_pool",
+            "pmax_pool",
+            "HEL_pool",
+            "pmax_unit_p25",
+            "VL_CV_unit_p25",
+            "VL_CV_unit_median",
+            "VL_CV_unit_p75"
+          ],
+          "best_signs": [
+            -1,
+            1,
+            1,
+            -1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "best_joint_Z_brown": 2.5254035359181106,
+          "K_eff": 1.6625910374254658
+        },
+        "avestan_yasna": {
+          "best_8_axes": [
+            "VL_CV_unit_p75",
+            "VL_CV_unit_median",
+            "HEL_pool",
+            "HEL_unit_p10",
+            "VL_CV_unit_p25",
+            "HEL_unit_p75",
+            "HEL_unit_mean",
+            "Delta_pool"
+          ],
+          "best_signs": [
+            1,
+            1,
+            -1,
+            -1,
+            1,
+            -1,
+            -1,
+            1
+          ],
+          "best_joint_Z_brown": 1.5277200245452913,
+          "K_eff": 1.6410986930676632
+        },
+        "rigveda": {
+          "best_8_axes": [
+            "Delta_unit_p10",
+            "Delta_unit_median",
+            "Delta_unit_p25",
+            "gzip_eff_pool",
+            "HEL_unit_p10",
+            "Delta_pool",
+            "HEL_pool",
+            "HEL_unit_mean"
+          ],
+          "best_signs": [
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            1,
+            1,
+            -1
+          ],
+          "best_joint_Z_brown": 1.5045169941575574,
+          "K_eff": 2.226514173243694
+        }
+      },
+      "quran_inverse_Z": 4.430224241688723,
+      "max_non_quran_inverse_Z": 4.003062507527971,
+      "runner_up_corpus": "ksucca",
+      "gap_quran_minus_max_non_quran": 0.42716173416075254
+    },
+    "criteria_pass": {
+      "A1_LOAO_robust": false,
+      "A2_random_K8_frac_lt_001": true,
+      "A3_inverse_quran_dominates": true,
+      "A4_random_K8_quran_rank1_geq_99pct": true,
+      "A5_dominant_axis_per_unit_HEL": true,
+      "n_pass_of_3_core": 2
+    }
+  },
+  "audit_report": {
+    "feature_matrix_20axis_sha256": "6432453a1541d0f01d2276b06746bb7d13694f3354c6aa06bc5f751cc5249357",
+    "n_units_per_corpus": {
+      "quran": 114,
+      "poetry_jahili": 120,
+      "poetry_islami": 423,
+      "poetry_abbasi": 2575,
+      "hindawi": 72,
+      "ksucca": 42,
+      "arabic_bible": 1183,
+      "hebrew_tanakh": 921,
+      "greek_nt": 260,
+      "pali": 186,
+      "avestan_yasna": 67,
+      "rigveda": 1003
+    },
+    "Z_full_sanity_check_vs_exp138": 2.6618142076554396,
+    "Z_full_diff_from_exp138_locked": -9.48718579234456
+  },
+  "wall_time_s": 38.809168577194214
+}

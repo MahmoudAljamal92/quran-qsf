@@ -1,0 +1,76 @@
+{
+  "experiment": "exp182_quran_ifs_fractal",
+  "seed": 20260503,
+  "n_iterations": 6000000,
+  "image_size": 2048,
+  "contraction_ratio": 0.18,
+  "shannon_entropy_bits": 4.124067193801977,
+  "shannon_entropy_nats": 2.8585855478236057,
+  "entropy_ceiling_bits": 4.807354922057604,
+  "redundancy": 0.14213382189039026,
+  "d_info_information_dimension": 1.667009661890338,
+  "d_sim_similarity_dimension": 1.9432047846480598,
+  "letter_freqs": {
+    "ا": 0.14211584992566248,
+    "ب": 0.03758336653418716,
+    "ت": 0.03407541290525286,
+    "ث": 0.0045800982745273335,
+    "ج": 0.010744120209764615,
+    "ح": 0.014135465961836834,
+    "خ": 0.008088051903461634,
+    "د": 0.01940549417446482,
+    "ذ": 0.015975279130105238,
+    "ر": 0.04090021280937527,
+    "ز": 0.00517933319729081,
+    "س": 0.0198362954973164,
+    "ش": 0.00687986473486284,
+    "ص": 0.006711431134950944,
+    "ض": 0.005461135566374176,
+    "ط": 0.004123384090150845,
+    "ظ": 0.0027629588600932217,
+    "ع": 0.03046380783021893,
+    "غ": 0.003954950490238949,
+    "ف": 0.02833247496979532,
+    "ق": 0.022783883495774582,
+    "ك": 0.03400091342836875,
+    "ل": 0.12515588205761077,
+    "م": 0.08768588429259508,
+    "ن": 0.08869324678437585,
+    "ه": 0.04846352926695754,
+    "و": 0.08037197912719005,
+    "ي": 0.07153569334719671
+  },
+  "top5_letters": [
+    {
+      "letter": "ا",
+      "freq": 0.14211584992566248,
+      "angle_deg": 0.0
+    },
+    {
+      "letter": "ل",
+      "freq": 0.12515588205761077,
+      "angle_deg": 282.85714285714283
+    },
+    {
+      "letter": "ن",
+      "freq": 0.08869324678437585,
+      "angle_deg": 308.57142857142856
+    },
+    {
+      "letter": "م",
+      "freq": 0.08768588429259508,
+      "angle_deg": 295.7142857142857
+    },
+    {
+      "letter": "و",
+      "freq": 0.08037197912719005,
+      "angle_deg": 334.2857142857143
+    }
+  ],
+  "interpretation": "A genuine self-similar fractal in the complex plane, rendered by the chaos game with 28 affine contractions, each weighted by the Quran's empirical frequency of the corresponding Arabic letter. The attractor's information dimension equals the Quran's letter-frequency Shannon entropy (in nats) divided by log(1/c). It is self-similar: every lobe contains a miniature copy of the full fractal. This is the IFS realisation of the Quran's letter-frequency distribution as a geometric object.",
+  "output_images": [
+    "quran_fractal_log_density.png",
+    "quran_fractal_letter_colored.png",
+    "quran_fractal_zoom_selfsim.png"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "experiment_id": "expE8_ncd_matrix",
+  "task": "E8",
+  "tier": 2,
+  "title": "114x114 gzip-NCD block-pair distance matrix",
+  "generated_utc": "2026-04-23T18:53:56+00:00",
+  "seed": 42,
+  "n_perm": 1000,
+  "compression": {
+    "alg": "gzip",
+    "level": 9
+  },
+  "n_surahs": 114,
+  "total_input_bytes": 743808,
+  "C_individual_stats": {
+    "min": 103.0,
+    "max": 15037.0,
+    "median": 1173.0,
+    "mean": 2044.798245614035
+  },
+  "NCD_off_diag_stats": {
+    "min": 0.4148148148148148,
+    "max": 0.9961428476424818,
+    "mean": 0.9143201634309029,
+    "median": 0.928217002977175,
+    "sd": 0.06885459492681736
+  },
+  "mantel_order": {
+    "r": 0.5900682900406309,
+    "null_mean": -0.0006718641153370532,
+    "null_sd": 0.02174794372136761,
+    "p_two_sided": 0.000999000999000999
+  },
+  "mantel_era": {
+    "r": 0.08959685898048786,
+    "null_mean": 0.0005045596344508102,
+    "null_sd": 0.030462377821830564,
+    "p_two_sided": 0.011988011988011988
+  },
+  "era_block": {
+    "mean_within": 0.9095532217066876,
+    "mean_between": 0.9223039989681787,
+    "obs_diff": 0.012750777261491097,
+    "null_mean": -1.0737799631541644e-05,
+    "null_sd": 0.004288292210062576,
+    "p_two_sided": 0.006993006993006993
+  },
+  "silhouette_era": {
+    "sil_obs": 0.012526838758228858,
+    "null_mean": -0.0001659722697714943,
+    "null_sd": 0.003157015529888423,
+    "p_one_sided": 0.004995004995004995
+  },
+  "hier_cluster_silhouette": 0.07431106047879268,
+  "verdict": "STRUCTURED_NCD",
+  "pre_registered_criteria": {
+    "STRUCTURED_NCD": ">=2 of 4 nulls rejected at alpha=0.01",
+    "PARTIAL_STRUCTURE": "exactly 1 of 4 nulls rejected",
+    "NULL_NO_STRUCTURE": "no nulls rejected"
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "experiment": "exp90_cross_language_el",
+  "hypothesis": "H-EL-CONV — cross-language EL convergence across scriptures",
+  "schema_version": 1,
+  "prereg_document": "experiments/exp90_cross_language_el/PREREG.md",
+  "prereg_constants": {
+    "BAND_LO": 15,
+    "BAND_HI": 100,
+    "EL_THRESHOLD": 0.3642,
+    "COHEN_D_CUT": 0.5,
+    "CROSSING_CUT": 0.25
+  },
+  "per_corpus": {
+    "quran": {
+      "n": 68,
+      "mean": 0.707434,
+      "std": 0.197431,
+      "median": 0.727152,
+      "ci_lo": 0.32229,
+      "ci_hi": 1.0,
+      "min": 0.235294,
+      "max": 1.0,
+      "frac_over_threshold": 0.926471
+    },
+    "poetry_jahili": {
+      "n": 65,
+      "mean": 0.099925,
+      "std": 0.070223,
+      "median": 0.088235,
+      "ci_lo": 0.0,
+      "ci_hi": 0.234462,
+      "min": 0.0,
+      "max": 0.290323,
+      "frac_over_threshold": 0.0
+    },
+    "poetry_islami": {
+      "n": 211,
+      "mean": 0.10067,
+      "std": 0.066749,
+      "median": 0.095238,
+      "ci_lo": 0.0,
+      "ci_hi": 0.2475,
+      "min": 0.0,
+      "max": 0.428571,
+      "frac_over_threshold": 0.004739
+    },
+    "poetry_abbasi": {
+      "n": 1167,
+      "mean": 0.097387,
+      "std": 0.063458,
+      "median": 0.086957,
+      "ci_lo": 0.0,
+      "ci_hi": 0.25,
+      "min": 0.0,
+      "max": 0.4,
+      "frac_over_threshold": 0.005141
+    },
+    "ksucca": {
+      "n": 19,
+      "mean": 0.155649,
+      "std": 0.077231,
+      "median": 0.142857,
+      "ci_lo": 0.028125,
+      "ci_hi": 0.285417,
+      "min": 0.0,
+      "max": 0.291667,
+      "frac_over_threshold": 0.0
+    },
+    "arabic_bible": {
+      "n": 977,
+      "mean": 0.131979,
+      "std": 0.093097,
+      "median": 0.122449,
+      "ci_lo": 0.0,
+      "ci_hi": 0.347157,
+      "min": 0.0,
+      "max": 1.0,
+      "frac_over_threshold": 0.016377
+    },
+    "hindawi": {
+      "n": 70,
+      "mean": 0.067394,
+      "std": 0.055007,
+      "median": 0.067816,
+      "ci_lo": 0.0,
+      "ci_hi": 0.182941,
+      "min": 0.0,
+      "max": 0.25,
+      "frac_over_threshold": 0.0
+    },
+    "hebrew_tanakh": {
+      "n": 775,
+      "mean": 0.124691,
+      "std": 0.067921,
+      "median": 0.121951,
+      "ci_lo": 0.0,
+      "ci_hi": 0.272727,
+      "min": 0.0,
+      "max": 0.392857,
+      "frac_over_threshold": 0.002581
+    },
+    "greek_nt": {
+      "n": 241,
+      "mean": 0.205781,
+      "std": 0.089366,
+      "median": 0.2,
+      "ci_lo": 0.058824,
+      "ci_hi": 0.407407,
+      "min": 0.0,
+      "max": 0.6,
+      "frac_over_threshold": 0.062241
+    },
+    "iliad_greek": {
+      "n": 0,
+      "mean": null,
+      "std": null,
+      "median": null,
+      "ci_lo": null,
+      "ci_hi": null,
+      "min": null,
+      "max": null,
+      "frac_over_threshold": null
+    }
+  },
+  "effect_sizes": {
+    "d_greek_nt_vs_iliad": NaN,
+    "d_tanakh_vs_arab_secular": 0.4166,
+    "d_tanakh_vs_iliad": NaN,
+    "d_quran_vs_arab_secular": 8.128,
+    "d_arabic_bible_vs_arab_secular": 0.4506
+  },
+  "crossing_rates": {
+    "greek_nt_frac_over_0_364": 0.06224066390041494,
+    "tanakh_frac_over_0_364": 0.0025806451612903226,
+    "iliad_frac_over_0_364": null,
+    "arabic_poetry_frac_over_0_364": 0.004851004851004851
+  },
+  "pooled_means": {
+    "arabic_scripture_n": 1045,
+    "arabic_scripture_mean_EL": 0.169425,
+    "arabic_secular_n": 1532,
+    "arabic_secular_mean_EL": 0.097299,
+    "crosslang_scripture_n": 1016,
+    "crosslang_scripture_mean_EL": 0.143926
+  },
+  "prereg_tests": {
+    "iliad_higher_than_arabic_secular": false,
+    "greek_nt_scripture_convergence_passes": false,
+    "tanakh_scripture_convergence_passes": false
+  },
+  "verdict": "FAIL_no_convergence",
+  "runtime_seconds": 15.06
+}

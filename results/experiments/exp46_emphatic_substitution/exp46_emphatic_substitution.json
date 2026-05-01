@@ -1,0 +1,1943 @@
+{
+  "experiment": "exp46_emphatic_substitution",
+  "schema_version": 1,
+  "fast_mode": false,
+  "seed": 42,
+  "emphatic_classes": {
+    "E1_sad_sin": [
+      "ص",
+      "س"
+    ],
+    "E2_dad_dal": [
+      "ض",
+      "د"
+    ],
+    "E3_tta_ta": [
+      "ط",
+      "ت"
+    ],
+    "E4_dha_dhal": [
+      "ظ",
+      "ذ"
+    ],
+    "E5_qaf_kaf": [
+      "ق",
+      "ك"
+    ],
+    "E6_hha_ha": [
+      "ح",
+      "ه"
+    ],
+    "E7_ayn_alef": [
+      "ع",
+      "ا"
+    ]
+  },
+  "n_surahs_tested": 114,
+  "total_emphatic_edits": 10461,
+  "total_detected_3of9": 120,
+  "overall_detection_rate": 0.011471,
+  "overall_detection_rate_without_E7": 0.002956,
+  "audit_2026_04_24_e7_confound": {
+    "class_excluded": [
+      "E7_ayn_alef"
+    ],
+    "excluded_edits": 5048,
+    "excluded_detected": 104,
+    "remaining_edits": 5413,
+    "remaining_detected": 16,
+    "note": "E7_ayn_alef is a known normalisation-confounded class: normalize_rasm() folds أ إ آ ٱ → ا, so E7 tests ع ↔ all-alef positions rather than ع ↔ hamza. Cite overall_detection_rate_without_E7 for the phonologically-valid claim. See docs/_SCAN_2026-04-24/AUDIT_MEMO_2026-04-24.md."
+  },
+  "audit_2026_04_24_b13_noe7_contexts": {
+    "note": "Full per-edit context (±4-char window, firing channels, full 9-channel z-scores) for every detected non-E7 emphatic swap. Diagnostic-only — not used by any published summary statistic.",
+    "n_detected_total": 16,
+    "edits": [
+      {
+        "class": "E6_hha_ha",
+        "pair": "ح↔ه",
+        "surah": "Q:103",
+        "verse_idx": 0,
+        "pos": 12,
+        "orig": "ح",
+        "partner": "ه",
+        "context_left_4": " الر",
+        "context_right_4": "من ا",
+        "n_channels_fired": 3,
+        "z_scores": {
+          "A_spectral": 0.153,
+          "B_root_bigram": -4.837,
+          "C_bigram_dist": 0.037,
+          "D_wazn": 0.004,
+          "E_ncd": 2.572,
+          "F_coupling": 0.121,
+          "G_root_trigram": -2.495,
+          "H_local_spec": 0.07,
+          "I_root_field": 0.075
+        }
+      },
+      {
+        "class": "E4_dha_dhal",
+        "pair": "ذ↔ظ",
+        "surah": "Q:103",
+        "verse_idx": 2,
+        "pos": 6,
+        "orig": "ذ",
+        "partner": "ظ",
+        "context_left_4": "ا ال",
+        "context_right_4": "ين ا",
+        "n_channels_fired": 3,
+        "z_scores": {
+          "A_spectral": 0.105,
+          "B_root_bigram": -3.128,
+          "C_bigram_dist": 0.037,
+          "D_wazn": 0.004,
+          "E_ncd": 2.063,
+          "F_coupling": 0.278,
+          "G_root_trigram": -6.413,
+          "H_local_spec": 0.021,
+          "I_root_field": 0.075
+        }
+      },
+      {
+        "class": "E6_hha_ha",
+        "pair": "ح↔ه",
+        "surah": "Q:106",
+        "verse_idx": 0,
+        "pos": 12,
+        "orig": "ح",
+        "partner": "ه",
+        "context_left_4": " الر",
+        "context_right_4": "من ا",
+        "n_channels_fired": 3,
+        "z_scores": {
+          "A_spectral": -0.014,
+          "B_root_bigram": -4.058,
+          "C_bigram_dist": 0.037,
+          "D_wazn": 0.004,
+          "E_ncd": 3.479,
+          "F_coupling": 1.548,
+          "G_root_trigram": -2.133,
+          "H_local_spec": -0.028,
+          "I_root_field": 0.075
+        }
+      },
+      {
+        "class": "E4_dha_dhal",
+        "pair": "ذ↔ظ",
+        "surah": "Q:106",
+        "verse_idx": 2,
+        "pos": 13,
+        "orig": "ذ",
+        "partner": "ظ",
+        "context_left_4": "رب ه",
+        "context_right_4": "ا ال",
+        "n_channels_fired": 3,
+        "z_scores": {
+          "A_spectral": 0.344,
+          "B_root_bigram": -4.382,
+          "C_bigram_dist": 0.037,
+          "D_wazn": 0.004,
+          "E_ncd": 2.171,
+          "F_coupling": 0.278,
+          "G_root_trigram": -5.718,
+          "H_local_spec": 0.224,
+          "I_root_field": 0.075
+        }
+      },
+      {
+        "class": "E6_hha_ha",
+        "pair": "ح↔ه",
+        "surah": "Q:108",
+        "verse_idx": 0,
+        "pos": 12,
+        "orig": "ح",
+        "partner": "ه",
+        "context_left_4": " الر",
+        "context_right_4": "من ا",
+        "n_channels_fired": 3,
+        "z_scores": {
+          "A_spectral": 0.007,
+          "B_root_bigram": -6.434,
+          "C_bigram_dist": 0.037,
+          "D_wazn": 0.004,
+          "E_ncd": 2.38,
+          "F_coupling": 0.034,
+          "G_root_trigram": -3.425,
+          "H_local_spec": -0.078,
+          "I_root_field": 0.075
+        }
+      },
+      {
+        "class": "E6_hha_ha",
+        "pair": "ح↔ه",
+        "surah": "Q:108",
+        "verse_idx": 1,
+        "pos": 12,
+        "orig": "ح",
+        "partner": "ه",
+        "context_left_4": " وان",
+        "context_right_4": "ر",
+        "n_channels_fired": 3,
+        "z_scores": {
+          "A_spectral": -0.184,
+          "B_root_bigram": 4.448,
+          "C_bigram_dist": 0.037,
+          "D_wazn": 0.004,
+          "E_ncd": 3.088,
+          "F_coupling": 0.278,
+          "G_root_trigram": 4.091,
+          "H_local_spec": -0.272,
+          "I_root_field": 0.075
+        }
+      },
+      {
+        "class": "E6_hha_ha",
+        "pair": "ح↔ه",
+        "surah": "Q:111",
+        "verse_idx": 3,
+        "pos": 8,
+        "orig": "ح",
+        "partner": "ه",
+        "context_left_4": "اته ",
+        "context_right_4": "ماله",
+        "n_channels_fired": 3,
+        "z_scores": {
+          "A_spectral": -2.558,
+          "B_root_bigram": 0.945,
+          "C_bigram_dist": 0.037,
+          "D_wazn": 0.004,
+          "E_ncd": 1.039,
+          "F_coupling": 0.278,
+          "G_root_trigram": 0.095,
+          "H_local_spec": -3.038,
+          "I_root_field": -4.006
+        }
+      },
+      {
+        "class": "E6_hha_ha",
+        "pair": "ح↔ه",
+        "surah": "Q:112",
+        "verse_idx": 0,
+        "pos": 12,
+        "orig": "ح",
+        "partner": "ه",
+        "context_left_4": " الر",
+        "context_right_4": "من ا",
+        "n_channels_fired": 3,
+        "z_scores": {
+          "A_spectral": 0.537,
+          "B_root_bigram": -4.549,
+          "C_bigram_dist": 0.037,
+          "D_wazn": 0.004,
+          "E_ncd": 3.226,
+          "F_coupling": -0.053,
+          "G_root_trigram": -2.455,
+          "H_local_spec": 0.07,
+          "I_root_field": 0.075
+        }
+      },
+      {
+        "class": "E2_dad_dal",
+        "pair": "د↔ض",
+        "surah": "Q:112",
+        "verse_idx": 2,
+        "pos": 5,
+        "orig": "د",
+        "partner": "ض",
+        "context_left_4": "م يل",
+        "context_right_4": " ولم",
+        "n_channels_fired": 3,
+        "z_scores": {
+          "A_spectral": -2.312,
+          "B_root_bigram": 0.354,
+          "C_bigram_dist": 0.037,
+          "D_wazn": 0.004,
+          "E_ncd": 3.154,
+          "F_coupling": -0.123,
+          "G_root_trigram": -1.818,
+          "H_local_spec": -4.004,
+          "I_root_field": 0.075
+        }
+      },
+      {
+        "class": "E2_dad_dal",
+        "pair": "د↔ض",
+        "surah": "Q:112",
+        "verse_idx": 2,
+        "pos": 14,
+        "orig": "د",
+        "partner": "ض",
+        "context_left_4": " يول",
+        "context_right_4": "",
+        "n_channels_fired": 3,
+        "z_scores": {
+          "A_spectral": -2.312,
+          "B_root_bigram": 0.354,
+          "C_bigram_dist": 0.037,
+          "D_wazn": 0.004,
+          "E_ncd": 3.226,
+          "F_coupling": -0.123,
+          "G_root_trigram": 0.404,
+          "H_local_spec": -3.91,
+          "I_root_field": 0.075
+        }
+      },
+      {
+        "class": "E1_sad_sin",
+        "pair": "س↔ص",
+        "surah": "Q:114",
+        "verse_idx": 1,
+        "pos": 8,
+        "orig": "س",
+        "partner": "ص",
+        "context_left_4": "النا",
+        "context_right_4": "",
+        "n_channels_fired": 3,
+        "z_scores": {
+          "A_spectral": -2.298,
+          "B_root_bigram": 0.664,
+          "C_bigram_dist": 0.037,
+          "D_wazn": 0.004,
+          "E_ncd": 3.486,
+          "F_coupling": -4.724,
+          "G_root_trigram": -0.805,
+          "H_local_spec": 0.644,
+          "I_root_field": 0.075
+        }
+      },
+      {
+        "class": "E1_sad_sin",
+        "pair": "س↔ص",
+        "surah": "Q:114",
+        "verse_idx": 2,
+        "pos": 8,
+        "orig": "س",
+        "partner": "ص",
+        "context_left_4": "النا",
+        "context_right_4": "",
+        "n_channels_fired": 3,
+        "z_scores": {
+          "A_spectral": -2.298,
+          "B_root_bigram": -1.017,
+          "C_bigram_dist": 0.037,
+          "D_wazn": 0.004,
+          "E_ncd": 0.749,
+          "F_coupling": -5.476,
+          "G_root_trigram": -0.793,
+          "H_local_spec": 2.133,
+          "I_root_field": 0.075
+        }
+      },
+      {
+        "class": "E1_sad_sin",
+        "pair": "س↔ص",
+        "surah": "Q:114",
+        "verse_idx": 3,
+        "pos": 12,
+        "orig": "س",
+        "partner": "ص",
+        "context_left_4": "وسوا",
+        "context_right_4": " الخ",
+        "n_channels_fired": 3,
+        "z_scores": {
+          "A_spectral": -2.298,
+          "B_root_bigram": 0.354,
+          "C_bigram_dist": 0.037,
+          "D_wazn": 0.004,
+          "E_ncd": 2.424,
+          "F_coupling": -0.244,
+          "G_root_trigram": 0.404,
+          "H_local_spec": 3.696,
+          "I_root_field": 0.075
+        }
+      },
+      {
+        "class": "E1_sad_sin",
+        "pair": "س↔ص",
+        "surah": "Q:114",
+        "verse_idx": 3,
+        "pos": 19,
+        "orig": "س",
+        "partner": "ص",
+        "context_left_4": "لخنا",
+        "context_right_4": "",
+        "n_channels_fired": 3,
+        "z_scores": {
+          "A_spectral": -2.298,
+          "B_root_bigram": 0.354,
+          "C_bigram_dist": 0.037,
+          "D_wazn": 0.004,
+          "E_ncd": 2.896,
+          "F_coupling": -0.244,
+          "G_root_trigram": 0.404,
+          "H_local_spec": 3.683,
+          "I_root_field": 0.075
+        }
+      },
+      {
+        "class": "E2_dad_dal",
+        "pair": "د↔ض",
+        "surah": "Q:114",
+        "verse_idx": 4,
+        "pos": 15,
+        "orig": "د",
+        "partner": "ض",
+        "context_left_4": "في ص",
+        "context_right_4": "ور ا",
+        "n_channels_fired": 3,
+        "z_scores": {
+          "A_spectral": 0.105,
+          "B_root_bigram": -3.06,
+          "C_bigram_dist": 0.037,
+          "D_wazn": 0.004,
+          "E_ncd": 2.896,
+          "F_coupling": 0.278,
+          "G_root_trigram": -3.38,
+          "H_local_spec": 0.021,
+          "I_root_field": 0.075
+        }
+      },
+      {
+        "class": "E1_sad_sin",
+        "pair": "س↔ص",
+        "surah": "Q:114",
+        "verse_idx": 4,
+        "pos": 23,
+        "orig": "س",
+        "partner": "ص",
+        "context_left_4": "النا",
+        "context_right_4": "",
+        "n_channels_fired": 3,
+        "z_scores": {
+          "A_spectral": -2.298,
+          "B_root_bigram": -1.995,
+          "C_bigram_dist": 0.037,
+          "D_wazn": 0.004,
+          "E_ncd": 1.793,
+          "F_coupling": -2.371,
+          "G_root_trigram": -0.793,
+          "H_local_spec": 2.321,
+          "I_root_field": 0.075
+        }
+      }
+    ]
+  },
+  "audit_2026_04_24_b14_e7_breakdown": {
+    "note": "3-way E7 sub-class breakdown under normalize_rasm_hamza_preserving (keeps ا أ إ آ distinct at the TEXT level). Tests ع against each alef variant separately at every ayn position. Null distributions and root-bigram refs are rebuilt under the hamza-preserving normaliser. EMPIRICAL FINDING (2026-04-24 fast smoke + full): the three sub-classes produce BYTE-IDENTICAL detection rates / max_z_mean, differing only in the 'pair' label. Root cause: every one of the 9 channels internally re-normalises via normalize_rasm() or letters_only() before computing features (see experiments/exp09_R1_variant_forensics_9ch/run.py:151,188,228,252 and :333). The hamza-preserving alphabet is thus collapsed inside the feature extractor, making the 9-channel detector ARCHITECTURALLY BLIND to hamza status. A genuinely hamza-sensitive detector would require re-architecting all 9 channels with a hamza-preserving alphabet — out of scope for this audit. Conclusion: the E7 confound cannot be cleanly split by swapping normalisers; the reported overall_detection_rate_without_E7 remains the correct audit-level sensitivity figure.",
+    "normalizer": "normalize_rasm_hamza_preserving",
+    "null_sample_size": 450,
+    "runtime_seconds": 1133.16,
+    "subclasses": {
+      "E7a_ayn_bare_alef": {
+        "pair": "ع↔ا",
+        "n_edits": 3069,
+        "n_detected_3of9": 33,
+        "detection_rate": 0.010753,
+        "max_z_mean": 0.777
+      },
+      "E7b_ayn_hamza_alef": {
+        "pair": "ع↔أ",
+        "n_edits": 3069,
+        "n_detected_3of9": 33,
+        "detection_rate": 0.010753,
+        "max_z_mean": 0.777
+      },
+      "E7c_ayn_madda": {
+        "pair": "ع↔آ",
+        "n_edits": 3069,
+        "n_detected_3of9": 33,
+        "detection_rate": 0.010753,
+        "max_z_mean": 0.777
+      }
+    },
+    "architectural_blindness_confirmed": true
+  },
+  "per_class_summary": {
+    "E1_sad_sin": {
+      "pair": "ص ↔ س",
+      "n_edits": 662,
+      "n_detected_3of9": 5,
+      "detection_rate": 0.0076,
+      "max_z_mean": 0.777,
+      "max_z_median": 0.619,
+      "max_z_p95": 2.204,
+      "example_variants": [
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 0,
+          "pos": 1,
+          "orig": "س",
+          "partner": "ص",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.093,
+            "B_root_bigram": -1.475,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": -0.333,
+            "F_coupling": 0.278,
+            "G_root_trigram": -1.08,
+            "H_local_spec": 0.021,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 4,
+          "pos": 17,
+          "orig": "س",
+          "partner": "ص",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.083,
+            "B_root_bigram": 0.354,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": -0.369,
+            "F_coupling": -0.484,
+            "G_root_trigram": -0.386,
+            "H_local_spec": -0.011,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 5,
+          "pos": 8,
+          "orig": "ص",
+          "partner": "س",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.145,
+            "B_root_bigram": -0.45,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": 0.405,
+            "F_coupling": -0.372,
+            "G_root_trigram": 0.337,
+            "H_local_spec": 0.064,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 5,
+          "pos": 16,
+          "orig": "س",
+          "partner": "ص",
+          "n_channels_fired": 1,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.072,
+            "B_root_bigram": -0.45,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": 0.487,
+            "F_coupling": -0.484,
+            "G_root_trigram": -2.075,
+            "H_local_spec": 0.002,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 6,
+          "pos": 0,
+          "orig": "ص",
+          "partner": "س",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.104,
+            "B_root_bigram": 0.354,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": 0.405,
+            "F_coupling": -0.372,
+            "G_root_trigram": -1.112,
+            "H_local_spec": -0.008,
+            "I_root_field": 0.075
+          }
+        }
+      ]
+    },
+    "E2_dad_dal": {
+      "pair": "ض ↔ د",
+      "n_edits": 553,
+      "n_detected_3of9": 3,
+      "detection_rate": 0.0054,
+      "max_z_mean": 0.782,
+      "max_z_median": 0.616,
+      "max_z_p95": 2.002,
+      "example_variants": [
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 1,
+          "pos": 4,
+          "orig": "د",
+          "partner": "ض",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.064,
+            "B_root_bigram": -1.746,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": 0.365,
+            "F_coupling": 0.278,
+            "G_root_trigram": -1.079,
+            "H_local_spec": -0.082,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 3,
+          "pos": 11,
+          "orig": "د",
+          "partner": "ض",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.07,
+            "B_root_bigram": -1.116,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": -0.055,
+            "F_coupling": 0.278,
+            "G_root_trigram": -1.282,
+            "H_local_spec": -0.004,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 4,
+          "pos": 8,
+          "orig": "د",
+          "partner": "ض",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.063,
+            "B_root_bigram": 0.354,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": -0.797,
+            "F_coupling": 0.278,
+            "G_root_trigram": 0.404,
+            "H_local_spec": 0.009,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 5,
+          "pos": 2,
+          "orig": "د",
+          "partner": "ض",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.12,
+            "B_root_bigram": 0.354,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": -0.017,
+            "F_coupling": 0.278,
+            "G_root_trigram": -1.548,
+            "H_local_spec": 0.075,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 6,
+          "pos": 31,
+          "orig": "ض",
+          "partner": "د",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.075,
+            "B_root_bigram": 0.099,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": 0.098,
+            "F_coupling": 0.278,
+            "G_root_trigram": 0.214,
+            "H_local_spec": 0.013,
+            "I_root_field": 0.075
+          }
+        }
+      ]
+    },
+    "E3_tta_ta": {
+      "pair": "ط ↔ ت",
+      "n_edits": 848,
+      "n_detected_3of9": 0,
+      "detection_rate": 0.0,
+      "max_z_mean": 0.667,
+      "max_z_median": 0.607,
+      "max_z_p95": 1.14,
+      "example_variants": [
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 4,
+          "pos": 18,
+          "orig": "ت",
+          "partner": "ط",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.093,
+            "B_root_bigram": 0.354,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": -0.474,
+            "F_coupling": -0.484,
+            "G_root_trigram": -0.945,
+            "H_local_spec": 0.027,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 5,
+          "pos": 11,
+          "orig": "ط",
+          "partner": "ت",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": -0.058,
+            "B_root_bigram": 0.354,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": 0.445,
+            "F_coupling": -0.992,
+            "G_root_trigram": 0.404,
+            "H_local_spec": -0.136,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 5,
+          "pos": 17,
+          "orig": "ت",
+          "partner": "ط",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.102,
+            "B_root_bigram": -0.45,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": 0.059,
+            "F_coupling": -0.484,
+            "G_root_trigram": -1.332,
+            "H_local_spec": 0.045,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 6,
+          "pos": 3,
+          "orig": "ط",
+          "partner": "ت",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": -0.058,
+            "B_root_bigram": 0.354,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": 0.784,
+            "F_coupling": -0.992,
+            "G_root_trigram": 0.404,
+            "H_local_spec": -0.19,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 6,
+          "pos": 15,
+          "orig": "ت",
+          "partner": "ط",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.039,
+            "B_root_bigram": 0.354,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": 0.098,
+            "F_coupling": 0.278,
+            "G_root_trigram": 0.404,
+            "H_local_spec": 0.191,
+            "I_root_field": 0.075
+          }
+        }
+      ]
+    },
+    "E4_dha_dhal": {
+      "pair": "ظ ↔ ذ",
+      "n_edits": 476,
+      "n_detected_3of9": 2,
+      "detection_rate": 0.0042,
+      "max_z_mean": 0.703,
+      "max_z_median": 0.593,
+      "max_z_p95": 1.604,
+      "example_variants": [
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 6,
+          "pos": 7,
+          "orig": "ذ",
+          "partner": "ظ",
+          "n_channels_fired": 1,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.105,
+            "B_root_bigram": -0.195,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": 0.529,
+            "F_coupling": 0.278,
+            "G_root_trigram": -3.782,
+            "H_local_spec": 0.021,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:002",
+          "verse_idx": 58,
+          "pos": 28,
+          "orig": "ذ",
+          "partner": "ظ",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.106,
+            "B_root_bigram": 0.341,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": -0.764,
+            "F_coupling": 0.275,
+            "G_root_trigram": 0.396,
+            "H_local_spec": 0.022,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:002",
+          "verse_idx": 130,
+          "pos": 1,
+          "orig": "ذ",
+          "partner": "ظ",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.106,
+            "B_root_bigram": 0.347,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": -0.764,
+            "F_coupling": 0.278,
+            "G_root_trigram": 0.399,
+            "H_local_spec": 0.02,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:003",
+          "verse_idx": 79,
+          "pos": 17,
+          "orig": "ذ",
+          "partner": "ظ",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.106,
+            "B_root_bigram": 0.354,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": -0.72,
+            "F_coupling": 0.271,
+            "G_root_trigram": 0.404,
+            "H_local_spec": 0.023,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:003",
+          "verse_idx": 87,
+          "pos": 28,
+          "orig": "ذ",
+          "partner": "ظ",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.106,
+            "B_root_bigram": 0.349,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": -0.757,
+            "F_coupling": 0.278,
+            "G_root_trigram": 0.403,
+            "H_local_spec": 0.023,
+            "I_root_field": 0.075
+          }
+        }
+      ]
+    },
+    "E5_qaf_kaf": {
+      "pair": "ق ↔ ك",
+      "n_edits": 1211,
+      "n_detected_3of9": 0,
+      "detection_rate": 0.0,
+      "max_z_mean": 0.668,
+      "max_z_median": 0.617,
+      "max_z_p95": 1.295,
+      "example_variants": [
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 3,
+          "pos": 3,
+          "orig": "ك",
+          "partner": "ق",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.162,
+            "B_root_bigram": 0.354,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": 0.059,
+            "F_coupling": 0.278,
+            "G_root_trigram": 0.404,
+            "H_local_spec": -0.118,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 4,
+          "pos": 3,
+          "orig": "ك",
+          "partner": "ق",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.012,
+            "B_root_bigram": 0.354,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": 0.365,
+            "F_coupling": 0.144,
+            "G_root_trigram": 0.404,
+            "H_local_spec": -1.685,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 4,
+          "pos": 14,
+          "orig": "ك",
+          "partner": "ق",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.012,
+            "B_root_bigram": 0.354,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": -0.055,
+            "F_coupling": 0.144,
+            "G_root_trigram": 0.404,
+            "H_local_spec": -1.685,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 5,
+          "pos": 18,
+          "orig": "ق",
+          "partner": "ك",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.078,
+            "B_root_bigram": 0.354,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": 0.529,
+            "F_coupling": 0.278,
+            "G_root_trigram": 0.404,
+            "H_local_spec": 0.395,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:002",
+          "verse_idx": 216,
+          "pos": 154,
+          "orig": "ق",
+          "partner": "ك",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.104,
+            "B_root_bigram": 0.356,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": -0.764,
+            "F_coupling": 0.281,
+            "G_root_trigram": 0.401,
+            "H_local_spec": 0.02,
+            "I_root_field": 0.075
+          }
+        }
+      ]
+    },
+    "E6_hha_ha": {
+      "pair": "ح ↔ ه",
+      "n_edits": 1663,
+      "n_detected_3of9": 6,
+      "detection_rate": 0.0036,
+      "max_z_mean": 0.756,
+      "max_z_median": 0.585,
+      "max_z_p95": 1.924,
+      "example_variants": [
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 0,
+          "pos": 7,
+          "orig": "ه",
+          "partner": "ح",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.11,
+            "B_root_bigram": 0.354,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": 1.158,
+            "F_coupling": 0.278,
+            "G_root_trigram": 0.404,
+            "H_local_spec": 0.009,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 0,
+          "pos": 12,
+          "orig": "ح",
+          "partner": "ه",
+          "n_channels_fired": 1,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.05,
+            "B_root_bigram": -2.798,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": 1.721,
+            "F_coupling": -0.839,
+            "G_root_trigram": -1.376,
+            "H_local_spec": 0.021,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 0,
+          "pos": 19,
+          "orig": "ح",
+          "partner": "ه",
+          "n_channels_fired": 1,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.052,
+            "B_root_bigram": -1.116,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": 2.093,
+            "F_coupling": 0.137,
+            "G_root_trigram": -0.568,
+            "H_local_spec": 0.02,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 1,
+          "pos": 2,
+          "orig": "ح",
+          "partner": "ه",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.059,
+            "B_root_bigram": -1.746,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": 0.487,
+            "F_coupling": -1.724,
+            "G_root_trigram": -1.064,
+            "H_local_spec": -0.095,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 1,
+          "pos": 8,
+          "orig": "ه",
+          "partner": "ح",
+          "n_channels_fired": 1,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": 0.11,
+            "B_root_bigram": -2.294,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": 0.827,
+            "F_coupling": -0.527,
+            "G_root_trigram": -0.55,
+            "H_local_spec": 0.247,
+            "I_root_field": 0.075
+          }
+        }
+      ]
+    },
+    "E7_ayn_alef": {
+      "pair": "ع ↔ ا",
+      "n_edits": 5048,
+      "n_detected_3of9": 104,
+      "detection_rate": 0.0206,
+      "max_z_mean": 1.243,
+      "max_z_median": 0.659,
+      "max_z_p95": 5.665,
+      "example_variants": [
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 0,
+          "pos": 4,
+          "orig": "ا",
+          "partner": "ع",
+          "n_channels_fired": 2,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": -1.56,
+            "B_root_bigram": -3.157,
+            "C_bigram_dist": 0.037,
+            "D_wazn": -8.558,
+            "E_ncd": 1.991,
+            "F_coupling": 0.137,
+            "G_root_trigram": -1.427,
+            "H_local_spec": -1.085,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 0,
+          "pos": 9,
+          "orig": "ا",
+          "partner": "ع",
+          "n_channels_fired": 3,
+          "detected": true,
+          "z_scores": {
+            "A_spectral": -1.56,
+            "B_root_bigram": -2.798,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 8.565,
+            "E_ncd": 0.784,
+            "F_coupling": 0.137,
+            "G_root_trigram": -1.871,
+            "H_local_spec": -1.085,
+            "I_root_field": -3.714
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 0,
+          "pos": 16,
+          "orig": "ا",
+          "partner": "ع",
+          "n_channels_fired": 1,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": -1.56,
+            "B_root_bigram": -1.116,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": 0.741,
+            "F_coupling": 0.137,
+            "G_root_trigram": -1.539,
+            "H_local_spec": -1.085,
+            "I_root_field": -3.714
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 1,
+          "pos": 0,
+          "orig": "ا",
+          "partner": "ع",
+          "n_channels_fired": 1,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": -1.56,
+            "B_root_bigram": -1.746,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 8.565,
+            "E_ncd": 1.158,
+            "F_coupling": 0.039,
+            "G_root_trigram": -1.442,
+            "H_local_spec": 0.49,
+            "I_root_field": 0.075
+          }
+        },
+        {
+          "surah_label": "Q:001",
+          "verse_idx": 1,
+          "pos": 13,
+          "orig": "ا",
+          "partner": "ع",
+          "n_channels_fired": 0,
+          "detected": false,
+          "z_scores": {
+            "A_spectral": -1.56,
+            "B_root_bigram": -0.618,
+            "C_bigram_dist": 0.037,
+            "D_wazn": 0.004,
+            "E_ncd": 1.158,
+            "F_coupling": 0.039,
+            "G_root_trigram": -0.749,
+            "H_local_spec": -0.696,
+            "I_root_field": 0.075
+          }
+        }
+      ]
+    }
+  },
+  "per_surah_results": [
+    {
+      "label": "Q:001",
+      "n_emphatic_edits": 63,
+      "n_detected": 2,
+      "detection_rate": 0.0317
+    },
+    {
+      "label": "Q:002",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:003",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:004",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:005",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:006",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:007",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:008",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:009",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:010",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:011",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:012",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:013",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:014",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:015",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:016",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:017",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:018",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:019",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:020",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:021",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:022",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:023",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:024",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:025",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:026",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:027",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:028",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:029",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:030",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:031",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:032",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:033",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:034",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:035",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:036",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:037",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:038",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:039",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:040",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:041",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:042",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:043",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:044",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:045",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:046",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:047",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:048",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:049",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:050",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:051",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:052",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:053",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:054",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:055",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:056",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:057",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:058",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:059",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:060",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:061",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:062",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:063",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:064",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:065",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:066",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:067",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:068",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:069",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:070",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:071",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:072",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:073",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:074",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:075",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:076",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:077",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:078",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:079",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:080",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:081",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:082",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:083",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:084",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:085",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:086",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:087",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:088",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:089",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:090",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:091",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:092",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:093",
+      "n_emphatic_edits": 76,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:094",
+      "n_emphatic_edits": 56,
+      "n_detected": 7,
+      "detection_rate": 0.125
+    },
+    {
+      "label": "Q:095",
+      "n_emphatic_edits": 76,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:096",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:097",
+      "n_emphatic_edits": 54,
+      "n_detected": 2,
+      "detection_rate": 0.037
+    },
+    {
+      "label": "Q:098",
+      "n_emphatic_edits": 100,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:099",
+      "n_emphatic_edits": 80,
+      "n_detected": 1,
+      "detection_rate": 0.0125
+    },
+    {
+      "label": "Q:100",
+      "n_emphatic_edits": 80,
+      "n_detected": 1,
+      "detection_rate": 0.0125
+    },
+    {
+      "label": "Q:101",
+      "n_emphatic_edits": 80,
+      "n_detected": 0,
+      "detection_rate": 0.0
+    },
+    {
+      "label": "Q:102",
+      "n_emphatic_edits": 54,
+      "n_detected": 1,
+      "detection_rate": 0.0185
+    },
+    {
+      "label": "Q:103",
+      "n_emphatic_edits": 43,
+      "n_detected": 12,
+      "detection_rate": 0.2791
+    },
+    {
+      "label": "Q:104",
+      "n_emphatic_edits": 75,
+      "n_detected": 1,
+      "detection_rate": 0.0133
+    },
+    {
+      "label": "Q:105",
+      "n_emphatic_edits": 45,
+      "n_detected": 1,
+      "detection_rate": 0.0222
+    },
+    {
+      "label": "Q:106",
+      "n_emphatic_edits": 37,
+      "n_detected": 12,
+      "detection_rate": 0.3243
+    },
+    {
+      "label": "Q:107",
+      "n_emphatic_edits": 54,
+      "n_detected": 7,
+      "detection_rate": 0.1296
+    },
+    {
+      "label": "Q:108",
+      "n_emphatic_edits": 27,
+      "n_detected": 11,
+      "detection_rate": 0.4074
+    },
+    {
+      "label": "Q:109",
+      "n_emphatic_edits": 57,
+      "n_detected": 19,
+      "detection_rate": 0.3333
+    },
+    {
+      "label": "Q:110",
+      "n_emphatic_edits": 45,
+      "n_detected": 8,
+      "detection_rate": 0.1778
+    },
+    {
+      "label": "Q:111",
+      "n_emphatic_edits": 47,
+      "n_detected": 6,
+      "detection_rate": 0.1277
+    },
+    {
+      "label": "Q:112",
+      "n_emphatic_edits": 28,
+      "n_detected": 10,
+      "detection_rate": 0.3571
+    },
+    {
+      "label": "Q:113",
+      "n_emphatic_edits": 40,
+      "n_detected": 6,
+      "detection_rate": 0.15
+    },
+    {
+      "label": "Q:114",
+      "n_emphatic_edits": 44,
+      "n_detected": 13,
+      "detection_rate": 0.2955
+    }
+  ],
+  "surah_level_stats": {
+    "n_surahs_tested": 114,
+    "mean_detection_rate": 0.025,
+    "median_detection_rate": 0.0,
+    "min_detection_rate": 0.0,
+    "max_detection_rate": 0.4074
+  },
+  "null_distribution_sizes": {
+    "A_spectral": 800,
+    "B_root_bigram": 800,
+    "C_bigram_dist": 800,
+    "D_wazn": 800,
+    "E_ncd": 800,
+    "F_coupling": 800,
+    "G_root_trigram": 800,
+    "H_local_spec": 800,
+    "I_root_field": 800
+  },
+  "comparison_vs_R1": {
+    "note": "R1 tested RANDOM single-letter swaps with headline rate measured over canonical variants. Emphatic swaps are the hardest class of single-letter edits because phonetic similarity preserves linguistic features. A LOWER emphatic detection rate vs R1's headline rate quantifies the 'semantic-aware forgery gap'. If the emphatic rate is still high (≥ 0.50), the framework is robust even against the most plausible scribal errors."
+  },
+  "runtime_seconds": 1036.61,
+  "verdict": "Emphatic-class detection: 120/10461 (1.1%).  Per-class breakdown available in per_class_summary."
+}

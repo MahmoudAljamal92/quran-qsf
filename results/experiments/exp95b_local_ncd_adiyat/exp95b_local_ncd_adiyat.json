@@ -1,0 +1,8054 @@
+{
+  "experiment": "exp95b_local_ncd_adiyat",
+  "hypothesis": "H34 — window-local NCD (3-verse window centred on edit) lifts the Adiyat-864 ceiling above 0.999 without violating FPR.",
+  "schema_version": 1,
+  "prereg_document": "experiments/exp95b_local_ncd_adiyat/PREREG.md",
+  "prereg_hash": "e8c2e71693839243ee7c971d61a28df5aecab58762aa4016e869a2fd693e9cd3",
+  "exp94_baseline": {
+    "R12_only_baseline": 0.990741,
+    "NCD_p95_threshold": 0.049608,
+    "null_NCD_mu": 0.04177948678278864,
+    "null_NCD_sd": 0.004228506946808813
+  },
+  "frozen_constants": {
+    "seed": 42,
+    "n_pert_per_unit": 20,
+    "ctrl_n_units": 200,
+    "gzip_level": 9,
+    "fpr_target": 0.05,
+    "band_a": [
+      15,
+      100
+    ],
+    "adiyat_label": "Q:100",
+    "expected_n_variants": 864,
+    "window_l0": 3,
+    "protocol_drift_tol": 0.001
+  },
+  "n_variants": 864,
+  "n_null_ctrl_edits": 4000,
+  "tau_window": 0.09734513274336283,
+  "tau_window_ci95": [
+    0.096,
+    0.09803921568627451
+  ],
+  "tau_doc_sanity": 0.04960835509138381,
+  "ctrl_fpr_at_tau_window": 0.05025,
+  "ctrl_fpr_at_tau_doc": 0.05025,
+  "recalls": {
+    "window_local_primary": 0.3993055555555556,
+    "doc_flat_sanity": 0.9907407407407407,
+    "exp94_R12_baseline": 0.990741,
+    "lift_window_over_flat": -0.5914354444444444
+  },
+  "protocol_drift": {
+    "abs_diff_doc_recall_vs_exp94": 2.592592592831622e-07,
+    "ok": true
+  },
+  "per_position_audit": {
+    "0": {
+      "n": 27,
+      "n_fired_window": 0,
+      "n_fired_doc": 19,
+      "recall_window": 0.0,
+      "recall_doc": 0.7037037037037037
+    },
+    "1": {
+      "n": 27,
+      "n_fired_window": 0,
+      "n_fired_doc": 27,
+      "recall_window": 0.0,
+      "recall_doc": 1.0
+    },
+    "2": {
+      "n": 27,
+      "n_fired_window": 2,
+      "n_fired_doc": 27,
+      "recall_window": 0.07407407407407407,
+      "recall_doc": 1.0
+    },
+    "4": {
+      "n": 27,
+      "n_fired_window": 1,
+      "n_fired_doc": 27,
+      "recall_window": 0.037037037037037035,
+      "recall_doc": 1.0
+    },
+    "5": {
+      "n": 27,
+      "n_fired_window": 4,
+      "n_fired_doc": 27,
+      "recall_window": 0.14814814814814814,
+      "recall_doc": 1.0
+    },
+    "6": {
+      "n": 27,
+      "n_fired_window": 5,
+      "n_fired_doc": 27,
+      "recall_window": 0.18518518518518517,
+      "recall_doc": 1.0
+    },
+    "7": {
+      "n": 27,
+      "n_fired_window": 3,
+      "n_fired_doc": 27,
+      "recall_window": 0.1111111111111111,
+      "recall_doc": 1.0
+    },
+    "9": {
+      "n": 27,
+      "n_fired_window": 3,
+      "n_fired_doc": 27,
+      "recall_window": 0.1111111111111111,
+      "recall_doc": 1.0
+    },
+    "10": {
+      "n": 27,
+      "n_fired_window": 3,
+      "n_fired_doc": 27,
+      "recall_window": 0.1111111111111111,
+      "recall_doc": 1.0
+    },
+    "11": {
+      "n": 27,
+      "n_fired_window": 5,
+      "n_fired_doc": 27,
+      "recall_window": 0.18518518518518517,
+      "recall_doc": 1.0
+    },
+    "12": {
+      "n": 27,
+      "n_fired_window": 17,
+      "n_fired_doc": 27,
+      "recall_window": 0.6296296296296297,
+      "recall_doc": 1.0
+    },
+    "13": {
+      "n": 27,
+      "n_fired_window": 26,
+      "n_fired_doc": 27,
+      "recall_window": 0.9629629629629629,
+      "recall_doc": 1.0
+    },
+    "14": {
+      "n": 27,
+      "n_fired_window": 27,
+      "n_fired_doc": 27,
+      "recall_window": 1.0,
+      "recall_doc": 1.0
+    },
+    "16": {
+      "n": 27,
+      "n_fired_window": 24,
+      "n_fired_doc": 27,
+      "recall_window": 0.8888888888888888,
+      "recall_doc": 1.0
+    },
+    "17": {
+      "n": 27,
+      "n_fired_window": 7,
+      "n_fired_doc": 27,
+      "recall_window": 0.25925925925925924,
+      "recall_doc": 1.0
+    },
+    "18": {
+      "n": 27,
+      "n_fired_window": 10,
+      "n_fired_doc": 27,
+      "recall_window": 0.37037037037037035,
+      "recall_doc": 1.0
+    },
+    "19": {
+      "n": 27,
+      "n_fired_window": 17,
+      "n_fired_doc": 27,
+      "recall_window": 0.6296296296296297,
+      "recall_doc": 1.0
+    },
+    "20": {
+      "n": 27,
+      "n_fired_window": 27,
+      "n_fired_doc": 27,
+      "recall_window": 1.0,
+      "recall_doc": 1.0
+    },
+    "21": {
+      "n": 27,
+      "n_fired_window": 26,
+      "n_fired_doc": 27,
+      "recall_window": 0.9629629629629629,
+      "recall_doc": 1.0
+    },
+    "23": {
+      "n": 27,
+      "n_fired_window": 27,
+      "n_fired_doc": 27,
+      "recall_window": 1.0,
+      "recall_doc": 1.0
+    },
+    "24": {
+      "n": 27,
+      "n_fired_window": 25,
+      "n_fired_doc": 27,
+      "recall_window": 0.9259259259259259,
+      "recall_doc": 1.0
+    },
+    "25": {
+      "n": 27,
+      "n_fired_window": 26,
+      "n_fired_doc": 27,
+      "recall_window": 0.9629629629629629,
+      "recall_doc": 1.0
+    },
+    "26": {
+      "n": 27,
+      "n_fired_window": 11,
+      "n_fired_doc": 27,
+      "recall_window": 0.4074074074074074,
+      "recall_doc": 1.0
+    },
+    "27": {
+      "n": 27,
+      "n_fired_window": 10,
+      "n_fired_doc": 27,
+      "recall_window": 0.37037037037037035,
+      "recall_doc": 1.0
+    },
+    "28": {
+      "n": 27,
+      "n_fired_window": 11,
+      "n_fired_doc": 27,
+      "recall_window": 0.4074074074074074,
+      "recall_doc": 1.0
+    },
+    "29": {
+      "n": 27,
+      "n_fired_window": 9,
+      "n_fired_doc": 27,
+      "recall_window": 0.3333333333333333,
+      "recall_doc": 1.0
+    },
+    "30": {
+      "n": 27,
+      "n_fired_window": 3,
+      "n_fired_doc": 27,
+      "recall_window": 0.1111111111111111,
+      "recall_doc": 1.0
+    },
+    "31": {
+      "n": 27,
+      "n_fired_window": 5,
+      "n_fired_doc": 27,
+      "recall_window": 0.18518518518518517,
+      "recall_doc": 1.0
+    },
+    "33": {
+      "n": 27,
+      "n_fired_window": 4,
+      "n_fired_doc": 27,
+      "recall_window": 0.14814814814814814,
+      "recall_doc": 1.0
+    },
+    "34": {
+      "n": 27,
+      "n_fired_window": 3,
+      "n_fired_doc": 27,
+      "recall_window": 0.1111111111111111,
+      "recall_doc": 1.0
+    },
+    "35": {
+      "n": 27,
+      "n_fired_window": 4,
+      "n_fired_doc": 27,
+      "recall_window": 0.14814814814814814,
+      "recall_doc": 1.0
+    },
+    "36": {
+      "n": 27,
+      "n_fired_window": 0,
+      "n_fired_doc": 27,
+      "recall_window": 0.0,
+      "recall_doc": 1.0
+    }
+  },
+  "per_variant": [
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ا",
+      "ncd_window": 0.054945,
+      "ncd_doc": 0.045226,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": false
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ت",
+      "ncd_window": 0.043956,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ث",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ج",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ح",
+      "ncd_window": 0.054945,
+      "ncd_doc": 0.055276,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "خ",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "د",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.055276,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ذ",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ر",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ز",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "س",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ش",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ص",
+      "ncd_window": 0.043956,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ض",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ط",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ظ",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ع",
+      "ncd_window": 0.054945,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "غ",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ف",
+      "ncd_window": 0.054945,
+      "ncd_doc": 0.045226,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": false
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ق",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.045226,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": false
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ك",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.045226,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": false
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ل",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.045226,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": false
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "م",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.045226,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": false
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ن",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ه",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.045226,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": false
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "و",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.045226,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": false
+    },
+    {
+      "pos": 0,
+      "orig": "ب",
+      "repl": "ي",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.055276,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ا",
+      "ncd_window": 0.054945,
+      "ncd_doc": 0.055276,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ب",
+      "ncd_window": 0.054945,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ت",
+      "ncd_window": 0.054945,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ث",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ج",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ح",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "خ",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.055276,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "د",
+      "ncd_window": 0.054945,
+      "ncd_doc": 0.055276,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ذ",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.055276,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ر",
+      "ncd_window": 0.054945,
+      "ncd_doc": 0.055,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ز",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ش",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.055276,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ص",
+      "ncd_window": 0.054945,
+      "ncd_doc": 0.055276,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ض",
+      "ncd_window": 0.054945,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ط",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.055276,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ظ",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ع",
+      "ncd_window": 0.054945,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "غ",
+      "ncd_window": 0.053763,
+      "ncd_doc": 0.055276,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ف",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ق",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ك",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ل",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "م",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ن",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ه",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "و",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.050251,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 1,
+      "orig": "س",
+      "repl": "ي",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.055276,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ا",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ب",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ت",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ث",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ج",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ح",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "خ",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "د",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ذ",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ر",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ز",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "س",
+      "ncd_window": 0.065934,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ش",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ص",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ض",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ط",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ظ",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ع",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "غ",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ف",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ق",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ك",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ل",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ن",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ه",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "و",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 2,
+      "orig": "م",
+      "repl": "ي",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ب",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ت",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ث",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ج",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ح",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "خ",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "د",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ذ",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ر",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ز",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "س",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ش",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ص",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ض",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ط",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ظ",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ع",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "غ",
+      "ncd_window": 0.075269,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ف",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ق",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ك",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ل",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "م",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ن",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ه",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "و",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 4,
+      "orig": "ا",
+      "repl": "ي",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.060302,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ا",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ب",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ت",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.060302,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ث",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ج",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ح",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.060302,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "خ",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "د",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ذ",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ر",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.060302,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ز",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "س",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ش",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ص",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ض",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ط",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ظ",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ع",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "غ",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ف",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ق",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ك",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "م",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ن",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ه",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "و",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 5,
+      "orig": "ل",
+      "repl": "ي",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ا",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ب",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ت",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ث",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ج",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ح",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "خ",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "د",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ذ",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ر",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ز",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "س",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ش",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ص",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ض",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ط",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ظ",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ع",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "غ",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ف",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ق",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ك",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "م",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.060302,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ن",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ه",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "و",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 6,
+      "orig": "ل",
+      "repl": "ي",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ا",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ب",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ت",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ث",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ج",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ح",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "خ",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "د",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ذ",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ر",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ز",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "س",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ش",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ص",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ض",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.060302,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ط",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ظ",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ع",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "غ",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ف",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ق",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ك",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ل",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "م",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ن",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "و",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 7,
+      "orig": "ه",
+      "repl": "ي",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ب",
+      "ncd_window": 0.075269,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ت",
+      "ncd_window": 0.075269,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ث",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ج",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ح",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "خ",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "د",
+      "ncd_window": 0.075269,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ذ",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ر",
+      "ncd_window": 0.075269,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ز",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "س",
+      "ncd_window": 0.075269,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ش",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ص",
+      "ncd_window": 0.075269,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ض",
+      "ncd_window": 0.075269,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ط",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ظ",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ع",
+      "ncd_window": 0.075269,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "غ",
+      "ncd_window": 0.074468,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ف",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ق",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ك",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ل",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "م",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ن",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ه",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "و",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 9,
+      "orig": "ا",
+      "repl": "ي",
+      "ncd_window": 0.107527,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ا",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ب",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ت",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ث",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ج",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ح",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.07,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "خ",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "د",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ذ",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ر",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ز",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "س",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ش",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.07,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ص",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ض",
+      "ncd_window": 0.107527,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ط",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ظ",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ع",
+      "ncd_window": 0.107527,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "غ",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ف",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ق",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ك",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "م",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ن",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ه",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "و",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 10,
+      "orig": "ل",
+      "repl": "ي",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ا",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ب",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ت",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ث",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ج",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ح",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "خ",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "د",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ذ",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ز",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "س",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ش",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ص",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ض",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ط",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ظ",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ع",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "غ",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ف",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ق",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ك",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ل",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "م",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ن",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ه",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "و",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 11,
+      "orig": "ر",
+      "repl": "ي",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ا",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ب",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ت",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ث",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ج",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "خ",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "د",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ذ",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ر",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ز",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "س",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ش",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ص",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ض",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ط",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ظ",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ع",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.064677,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "غ",
+      "ncd_window": 0.095745,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ف",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.069652,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ق",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ك",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.07,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ل",
+      "ncd_window": 0.119565,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "م",
+      "ncd_window": 0.119565,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ن",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ه",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "و",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 12,
+      "orig": "ح",
+      "repl": "ي",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ا",
+      "ncd_window": 0.120879,
+      "ncd_doc": 0.080402,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ب",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ت",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ث",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ج",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ح",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "خ",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "د",
+      "ncd_window": 0.120879,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ذ",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ر",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ز",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "س",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ش",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.069652,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ص",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ض",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ط",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ظ",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ع",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "غ",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ف",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ق",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ك",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ل",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ن",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ه",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "و",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 13,
+      "orig": "م",
+      "repl": "ي",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ا",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.080402,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ب",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ت",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ث",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ج",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ح",
+      "ncd_window": 0.120879,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "خ",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "د",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ذ",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ر",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ز",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "س",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ش",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ص",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ض",
+      "ncd_window": 0.120879,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ط",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ظ",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ع",
+      "ncd_window": 0.120879,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "غ",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ف",
+      "ncd_window": 0.120879,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ق",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ك",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ل",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "م",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ه",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "و",
+      "ncd_window": 0.120879,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 14,
+      "orig": "ن",
+      "repl": "ي",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ب",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ت",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.064677,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ث",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.064677,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ج",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ح",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "خ",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.064677,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "د",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ذ",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ر",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ز",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.064677,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "س",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ش",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ص",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ض",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.064677,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ط",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ظ",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.064677,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ع",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "غ",
+      "ncd_window": 0.095745,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ف",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.069652,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ق",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.064677,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ك",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.069652,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ل",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "م",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ن",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ه",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "و",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 16,
+      "orig": "ا",
+      "repl": "ي",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.069652,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ا",
+      "ncd_window": 0.107527,
+      "ncd_doc": 0.064677,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ب",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ت",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ث",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.07,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ج",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ح",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.069652,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "خ",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.069652,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "د",
+      "ncd_window": 0.107527,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ذ",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.07,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ر",
+      "ncd_window": 0.107527,
+      "ncd_doc": 0.064677,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ز",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "س",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.069652,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ش",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.069652,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ص",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.069652,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ض",
+      "ncd_window": 0.11828,
+      "ncd_doc": 0.069652,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ط",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ظ",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.069652,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ع",
+      "ncd_window": 0.107527,
+      "ncd_doc": 0.069652,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "غ",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ف",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ق",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ك",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "م",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ن",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ه",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "و",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 17,
+      "orig": "ل",
+      "repl": "ي",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ا",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ب",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ت",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ث",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ج",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ح",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "خ",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "د",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ذ",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ز",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "س",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ش",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ص",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ض",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ط",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ظ",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ع",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "غ",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ف",
+      "ncd_window": 0.107527,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ق",
+      "ncd_window": 0.107527,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ك",
+      "ncd_window": 0.095745,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ل",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "م",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ن",
+      "ncd_window": 0.107527,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ه",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "و",
+      "ncd_window": 0.11828,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 18,
+      "orig": "ر",
+      "repl": "ي",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ا",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ب",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ت",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ث",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ج",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "خ",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "د",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ذ",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ر",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ز",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "س",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ش",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ص",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ض",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ط",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ظ",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ع",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.064677,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "غ",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ف",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.069652,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ق",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ك",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.07,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ل",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "م",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ن",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ه",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "و",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 19,
+      "orig": "ح",
+      "repl": "ي",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ا",
+      "ncd_window": 0.120879,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ب",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ت",
+      "ncd_window": 0.120879,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ث",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ج",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ح",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "خ",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "د",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ذ",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ر",
+      "ncd_window": 0.120879,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ز",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "س",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ش",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ص",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ض",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ط",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ظ",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ع",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "غ",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ف",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ق",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ك",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ل",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "م",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ن",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "ه",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 20,
+      "orig": "ي",
+      "repl": "و",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ا",
+      "ncd_window": 0.120879,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ب",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ت",
+      "ncd_window": 0.120879,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ث",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ج",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ح",
+      "ncd_window": 0.120879,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "خ",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "د",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ذ",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ر",
+      "ncd_window": 0.119565,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ز",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "س",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ش",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ص",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ض",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ط",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ظ",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ع",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "غ",
+      "ncd_window": 0.107527,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ف",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ق",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ك",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ل",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ن",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ه",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "و",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 21,
+      "orig": "م",
+      "repl": "ي",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ا",
+      "ncd_window": 0.120879,
+      "ncd_doc": 0.080402,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ب",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ت",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ث",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ج",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ح",
+      "ncd_window": 0.131868,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "خ",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "د",
+      "ncd_window": 0.119565,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ذ",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ر",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ز",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "س",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ش",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ص",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ض",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ط",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ظ",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ع",
+      "ncd_window": 0.120879,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "غ",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ف",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ق",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ك",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ل",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "م",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ن",
+      "ncd_window": 0.120879,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ه",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 23,
+      "orig": "و",
+      "repl": "ي",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ب",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ت",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ث",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ج",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ح",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "خ",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "د",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ذ",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.064677,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ر",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ز",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "س",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ش",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ص",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ض",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ط",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ظ",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ع",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "غ",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ف",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ق",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.069652,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ك",
+      "ncd_window": 0.107527,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ل",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "م",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ن",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.069652,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ه",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.069652,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "و",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 24,
+      "orig": "ا",
+      "repl": "ي",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ا",
+      "ncd_window": 0.120879,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ب",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ت",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ث",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ج",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ح",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "خ",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "د",
+      "ncd_window": 0.119565,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ذ",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ر",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ز",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "س",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ش",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ص",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ض",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.07,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ط",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ظ",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ع",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "غ",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ف",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ق",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ك",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "م",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ن",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ه",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "و",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 25,
+      "orig": "ل",
+      "repl": "ي",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ا",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ب",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ت",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ث",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ج",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ح",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.075377,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "خ",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "د",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ذ",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ر",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ز",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "س",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ش",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ص",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ض",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ط",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ظ",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "غ",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ف",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ق",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.080402,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ك",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ل",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.080402,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "م",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.085427,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ن",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ه",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "و",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 26,
+      "orig": "ع",
+      "repl": "ي",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.080402,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ب",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ت",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ث",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ج",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ح",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "خ",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "د",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ذ",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ر",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ز",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "س",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ش",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ص",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ض",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ط",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ظ",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ع",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "غ",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ف",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ق",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ك",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ل",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "م",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ن",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ه",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "و",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 27,
+      "orig": "ا",
+      "repl": "ي",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ا",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ب",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ت",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ث",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ج",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ح",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "خ",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ذ",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ر",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ز",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "س",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ش",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ص",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ض",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ط",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ظ",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ع",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "غ",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ف",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ق",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ك",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ل",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.075377,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "م",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ن",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ه",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "و",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 28,
+      "orig": "د",
+      "repl": "ي",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ا",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ب",
+      "ncd_window": 0.120879,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ت",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ث",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ج",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ح",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "خ",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "د",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ذ",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ر",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ز",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "س",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ش",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ص",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ض",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ط",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ظ",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ع",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "غ",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ف",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ق",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ك",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ل",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "م",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ن",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "ه",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 29,
+      "orig": "ي",
+      "repl": "و",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ب",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ت",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ث",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ج",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ح",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "خ",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "د",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ذ",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ر",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ز",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "س",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ش",
+      "ncd_window": 0.085106,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ص",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ض",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ط",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ظ",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ع",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "غ",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ف",
+      "ncd_window": 0.107527,
+      "ncd_doc": 0.064677,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ق",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.064677,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ك",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ل",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "م",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ن",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ه",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "و",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 30,
+      "orig": "ا",
+      "repl": "ي",
+      "ncd_window": 0.107527,
+      "ncd_doc": 0.059701,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ا",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ب",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ث",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ج",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ح",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "خ",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "د",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ذ",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ر",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ز",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "س",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ش",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ص",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ض",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ط",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ظ",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ع",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "غ",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ف",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ق",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ك",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ل",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "م",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.06,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ن",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ه",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "و",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 31,
+      "orig": "ت",
+      "repl": "ي",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.06,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ا",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ب",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ت",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ث",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ج",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ح",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "خ",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "د",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ذ",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ر",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ز",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "س",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ش",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ص",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ط",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ظ",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ع",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "غ",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ف",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ق",
+      "ncd_window": 0.10989,
+      "ncd_doc": 0.070352,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ك",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.070352,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ل",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "م",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.060302,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ن",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ه",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "و",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 33,
+      "orig": "ض",
+      "repl": "ي",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ا",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.055276,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ت",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ث",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ج",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ح",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.055276,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "خ",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "د",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.055276,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ذ",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.055276,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ر",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.055276,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ز",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "س",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.055276,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ش",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ص",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.055,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ض",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ط",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ظ",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ع",
+      "ncd_window": 0.076923,
+      "ncd_doc": 0.055,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "غ",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ف",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.060302,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ق",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.06,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ك",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ل",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "م",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.06,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ن",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ه",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "و",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 34,
+      "orig": "ب",
+      "repl": "ي",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ا",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ب",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ت",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ث",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ج",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "خ",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "د",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ذ",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ر",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ز",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "س",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ش",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ص",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ض",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ط",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ظ",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ع",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "غ",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ف",
+      "ncd_window": 0.107527,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ق",
+      "ncd_window": 0.108696,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ك",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ل",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "م",
+      "ncd_window": 0.098901,
+      "ncd_doc": 0.065327,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ن",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ه",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.065327,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "و",
+      "ncd_window": 0.087912,
+      "ncd_doc": 0.060302,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 35,
+      "orig": "ح",
+      "repl": "ي",
+      "ncd_window": 0.097826,
+      "ncd_doc": 0.065,
+      "fires_window_local": true,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ب",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ت",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ث",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ج",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ح",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "خ",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059406,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "د",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ذ",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ر",
+      "ncd_window": 0.076087,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ز",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059406,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "س",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ش",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ص",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ض",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ط",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ظ",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059406,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ع",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "غ",
+      "ncd_window": 0.085106,
+      "ncd_doc": 0.059406,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ف",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.064356,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ق",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ك",
+      "ncd_window": 0.085106,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ل",
+      "ncd_window": 0.096774,
+      "ncd_doc": 0.059701,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "م",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ن",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.064356,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ه",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "و",
+      "ncd_window": 0.086022,
+      "ncd_doc": 0.064677,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    },
+    {
+      "pos": 36,
+      "orig": "ا",
+      "repl": "ي",
+      "ncd_window": 0.086957,
+      "ncd_doc": 0.06,
+      "fires_window_local": false,
+      "fires_doc_flat_sanity": true
+    }
+  ],
+  "verdict": "FAIL_window_overfpr",
+  "runtime_seconds": 14.11
+}

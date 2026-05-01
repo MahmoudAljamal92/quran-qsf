@@ -1,0 +1,158 @@
+{
+  "purpose": "Audit the d=+0.534 gzip NCD result for length confound",
+  "band": {
+    "lo": 15,
+    "hi": 100
+  },
+  "n_quran_units": 68,
+  "n_ctrl_units": 200,
+  "letter_count_dist": {
+    "quran_median": 1558.5,
+    "quran_iqr_lo": 848.75,
+    "quran_iqr_hi": 3410.75,
+    "ctrl_median": 1258.5,
+    "ctrl_iqr_lo": 779.75,
+    "ctrl_iqr_hi": 1782.75
+  },
+  "spearman_ncd_vs_nletters": {
+    "quran": {
+      "rho": -0.523172066803167,
+      "p": 2.0420087831202902e-96
+    },
+    "ctrl": {
+      "rho": -0.4414217487634218,
+      "p": 1.9952643860271002e-190
+    },
+    "pooled": {
+      "rho": -0.41713153926103946,
+      "p": 1.0188491383281175e-224
+    }
+  },
+  "decile_stratified": [
+    {
+      "decile": 1,
+      "n_letters_lo": 272.0,
+      "n_letters_hi": 483.0,
+      "n_q": 200,
+      "n_ctrl": 360,
+      "q_median_ncd": 0.052857666719052857,
+      "ctrl_median_ncd": 0.04668498168498168,
+      "cohen_d": 1.379194643240184,
+      "mw_p_greater": 3.137469687254252e-36
+    },
+    {
+      "decile": 2,
+      "n_letters_lo": 483.0,
+      "n_letters_hi": 672.0,
+      "n_q": 60,
+      "n_ctrl": 500,
+      "q_median_ncd": 0.047817254495159056,
+      "ctrl_median_ncd": 0.04597701149425287,
+      "cohen_d": 0.2924534704924599,
+      "mw_p_greater": 0.011331088590993226
+    },
+    {
+      "decile": 3,
+      "n_letters_lo": 672.0,
+      "n_letters_hi": 886.0,
+      "n_q": 120,
+      "n_ctrl": 440,
+      "q_median_ncd": 0.04560810810810811,
+      "ctrl_median_ncd": 0.04263848962784554,
+      "cohen_d": 1.046345937860204,
+      "mw_p_greater": 5.331230000722971e-20
+    },
+    {
+      "decile": 4,
+      "n_letters_lo": 886.0,
+      "n_letters_hi": 1124.0,
+      "n_q": 100,
+      "n_ctrl": 460,
+      "q_median_ncd": 0.04276116439930621,
+      "ctrl_median_ncd": 0.04094292803970223,
+      "cohen_d": 0.4963742913760375,
+      "mw_p_greater": 3.698280803935519e-06
+    },
+    {
+      "decile": 5,
+      "n_letters_lo": 1124.0,
+      "n_letters_hi": 1350.5,
+      "n_q": 80,
+      "n_ctrl": 460,
+      "q_median_ncd": 0.040694799104679935,
+      "ctrl_median_ncd": 0.040625,
+      "cohen_d": 0.2589523930926125,
+      "mw_p_greater": 0.10333238560841734
+    },
+    {
+      "decile": 6,
+      "n_letters_lo": 1350.5,
+      "n_letters_hi": 1526.0,
+      "n_q": 100,
+      "n_ctrl": 440,
+      "q_median_ncd": 0.03871096648482121,
+      "ctrl_median_ncd": 0.039909305260525246,
+      "cohen_d": -0.5517580902148584,
+      "mw_p_greater": 0.9999984395907736
+    },
+    {
+      "decile": 7,
+      "n_letters_lo": 1526.0,
+      "n_letters_hi": 1781.0,
+      "n_q": 120,
+      "n_ctrl": 440,
+      "q_median_ncd": 0.04270068671560502,
+      "ctrl_median_ncd": 0.04049586776859504,
+      "cohen_d": 1.1326868384356694,
+      "mw_p_greater": 1.1504331379088677e-14
+    },
+    {
+      "decile": 8,
+      "n_letters_lo": 1781.0,
+      "n_letters_hi": 2200.0,
+      "n_q": 80,
+      "n_ctrl": 480,
+      "q_median_ncd": 0.04258555133079848,
+      "ctrl_median_ncd": 0.03790613718411552,
+      "cohen_d": 2.0065800849935664,
+      "mw_p_greater": 6.574022456753616e-36
+    },
+    {
+      "decile": 9,
+      "n_letters_lo": 2200.0,
+      "n_letters_hi": 3087.0,
+      "n_q": 140,
+      "n_ctrl": 420,
+      "q_median_ncd": 0.04124962466219598,
+      "ctrl_median_ncd": 0.04027129403315301,
+      "cohen_d": 0.28511006443096887,
+      "mw_p_greater": 0.00017240003134378606
+    },
+    {
+      "decile": 10,
+      "n_letters_lo": 3087.0,
+      "n_letters_hi": 14561.0,
+      "n_q": 400,
+      "n_ctrl": 140,
+      "q_median_ncd": 0.041339159253184786,
+      "ctrl_median_ncd": 0.043934426229508196,
+      "cohen_d": -1.502238055429277,
+      "mw_p_greater": 1.0
+    }
+  ],
+  "log_linear_regression": {
+    "formula": "log NCD = alpha + beta*log(n_letters) + gamma*I(Quran)",
+    "beta_length_slope": -0.07189173608678083,
+    "beta_length_se": 0.0018645904872520332,
+    "gamma_quran_effect": 0.07161122826827443,
+    "gamma_se": 0.003007780881872102,
+    "gamma_ci95": [
+      0.06571475381757211,
+      0.07750770271897675
+    ],
+    "gamma_p_two_sided": 0.0,
+    "n_obs": 5360,
+    "dof": 5357
+  },
+  "verdict": "GENUINE_STRUCTURAL_SIGNAL_AFTER_LENGTH_CONTROL"
+}

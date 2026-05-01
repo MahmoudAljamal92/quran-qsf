@@ -1,0 +1,70 @@
+{
+  "experiment": "exp01_ftail",
+  "description": "Analytic F-tail p-value for the Phi_M Hotelling T^2 claim. Replaces the permutation floor (1/(B+1)=0.00498) with a closed-form p. Sandbox: read-only, no changes to main pipeline.",
+  "inputs": {
+    "checkpoint": "phase_06_phi_m.pkl",
+    "n_QURAN_band_A": 68,
+    "n_CTRL_POOL_band_A": 2509,
+    "n_features": 5,
+    "ridge_lambda": 1e-06
+  },
+  "centroids": {
+    "feature_cols": [
+      "EL",
+      "VL_CV",
+      "CN",
+      "H_cond",
+      "T"
+    ],
+    "mu_QURAN_band_A": [
+      0.7074338713106889,
+      0.4823916757649949,
+      0.08596828788694996,
+      0.8671010277271484,
+      -0.482402750487046
+    ],
+    "mu_CTRL_POOL_band_A": [
+      0.11080323011588314,
+      0.20034806488234075,
+      0.027711546452416184,
+      0.8251763392447035,
+      -2.4449410750637703
+    ],
+    "note": "mu_CTRL_POOL is what phase_06_phi_m stores under key 'mu'. Previous chats mislabelled this as 'mu_Q'. The TRUE Quran Band-A centroid (mu_QURAN_band_A) is computed here directly from X_QURAN as a sanity artefact."
+  },
+  "two_sample_hotelling_T2_pooled_cov": {
+    "T2": 3557.3394545046367,
+    "F": 710.3626980606929,
+    "df1": 5,
+    "df2": 2571,
+    "p_F_tail": 0.0,
+    "scipy_log10_p_F_tail": -Infinity,
+    "highprec_log10_p_F_tail": -480.2531098456137,
+    "highprec_dps": 80,
+    "n1": 68,
+    "n2": 2509,
+    "p_dim": 5
+  },
+  "one_sample_sum_of_maha_sq_against_fixed_mu_ctrl": {
+    "sum_maha_sq": 5239.06886774083,
+    "n": 68,
+    "p_dim": 5,
+    "mean_maha_sq": 77.04513040795338,
+    "max_maha_sq": 178.45796148201237,
+    "median_maha_sq": 77.11422838680583,
+    "p_chi2_sum_null": 0.0,
+    "log10_p_chi2_sum_null": -Infinity,
+    "chi2_df": 340
+  },
+  "multivariate_cohens_d_pooled": 7.330187384747124,
+  "locked_baseline": {
+    "Phi_M_hotelling_T2": 3557.339454504635,
+    "Phi_M_perm_p_value": 0.004975124378109453,
+    "legacy_Cohen_d_biased": 6.663319682559802
+  },
+  "interpretation": [
+    "two_sample T^2 is the classical two-sample test and reproduces the locked Phi_M_hotelling_T2 = 3557.34 to numerical precision; its F-tail p (mpmath log10 p ~ -480) is the value to cite in a paper for 'Quran centroid differs from Arabic-control centroid'.",
+    "one_sample sum_of_maha_sq is a different statistic (~5239 here) computed by scoring X_Q against (mu_ctrl, S_inv) WITHOUT pooling; it does NOT match the locked 3557.34 (F13 fix 2026-04-29: prior comment had the two statistics swapped). Reported here for comparison; its chi^2-sum null is informative but not a primary p-value.",
+    "multivariate_cohens_d_pooled should match the locked 6.66."
+  ]
+}

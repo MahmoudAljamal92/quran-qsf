@@ -1,0 +1,159 @@
+{
+  "experiment": "exp96a_phi_master",
+  "schema_version": "1.0",
+  "hypothesis": "H49",
+  "verdict": "PASS_phi_master_locked",
+  "prereg_hash_expected": "ab816b3e81bd1bfc7be0bb349ee4e3e49b7db56f288ac7c792ecc861d847db3e",
+  "prereg_hash_actual": "ab816b3e81bd1bfc7be0bb349ee4e3e49b7db56f288ac7c792ecc861d847db3e",
+  "frozen_constants": {
+    "T2_QURAN_FULL_EXPECTED": 3685.451465159369,
+    "T2_QURAN_FULL_TOL": 5.0,
+    "PMAX_QURAN_FULL_EXPECTED": 0.50096215522771,
+    "EL_AUC_FULL_EXPECTED": 0.9813473342181476,
+    "EL_FRAG_QURAN_FULL_EXPECTED": 0.5008934298543022,
+    "EL_FRAG_POOL_MEDIAN_EXPECTED": 0.22508915928082981,
+    "F55_N_PEER_PAIRS_EXPECTED": 548796,
+    "F49_AUC_MIN_THRESHOLD": 0.95,
+    "PHI_MASTER_HEADLINE_TARGET": 1860.0,
+    "PHI_MASTER_HEADLINE_TOL": 5.0,
+    "QURAN_TO_NEXT_MIN_RATIO": 50.0,
+    "ARABIC_POOL": [
+      "quran",
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ]
+  },
+  "source_receipt_hashes": {
+    "expP7": "dd6a8d36774553c9d6b61f63efd9720e3f517e43f3fddc2f2c2809a2ca0b5b26",
+    "exp95l": "49cea95bade2dea3dd79c1cf29f5d9c98545d7d50b2cebf2ff44dc6f6debf965",
+    "exp104": "676630ba1aebaac72ab8612385bf4998fe48a757150b3ddadfb6e3ebeb104312",
+    "exp95j": "a65b795b37110de80e3382bd916603888fc4f073e55d987e19dd1fcb229082cd",
+    "expP15": "16f4f0ff0d9a3e6137628ab3801855a172eda02bac9cf351219d2dc03186da87"
+  },
+  "audit_actuals": {
+    "T2_quran_full": 3685.451465159369,
+    "pmax_quran": 0.50096215522771,
+    "EL_AUC_full": 0.9813473342181476,
+    "F55_recall": 1.0,
+    "F55_fpr": 0.0,
+    "F55_n_pair": 548796,
+    "F49_min_auc": 0.9726674176434942
+  },
+  "f55_fpr_upper_clopper_pearson_95": 5.458720721551735e-06,
+  "el_frag_pool_median_actual": 0.22508915928082984,
+  "auc_by_riwaya": {
+    "warsh": 0.9726674176434942,
+    "qalun": 0.9729982935724563,
+    "duri": 0.9805889219764818,
+    "shuba": 0.9814238462459806,
+    "sousi": 0.9805907808300153
+  },
+  "per_corpus": {
+    "quran": {
+      "T1_gate1_half_T2": 1842.7257325796845,
+      "T2_pmax_log_ratio": 2.6409797909571133,
+      "T3_el_auc_log_ratio": 0.6743183598626826,
+      "T4_el_frag_log_ratio": 0.7998967764130367,
+      "T5_f55_clopper_pearson_log": 12.118296095742112,
+      "T6_riwayat_sum_log_ratio": 3.3526970299185805,
+      "phi_master_total_nats": 1862.311920632578,
+      "p_max": 0.50096215522771,
+      "EL_fragility": 0.5008934298543022,
+      "T2_full": 3685.451465159369,
+      "n_units": 114,
+      "n_verses": 6236
+    },
+    "poetry_jahili": {
+      "T1_gate1_half_T2": 0.0,
+      "T2_pmax_log_ratio": 1.7378802355511518,
+      "T3_el_auc_log_ratio": 0.0,
+      "T4_el_frag_log_ratio": -0.0037051747217083796,
+      "T5_f55_clopper_pearson_log": 0.0,
+      "T6_riwayat_sum_log_ratio": 0.0,
+      "phi_master_total_nats": 1.7341750608294435,
+      "p_max": 0.20304568527918782,
+      "EL_fragility": 0.22425670775924583,
+      "n_units": 133,
+      "n_verses": 2561
+    },
+    "poetry_islami": {
+      "T1_gate1_half_T2": 0.0,
+      "T2_pmax_log_ratio": 1.843836008685116,
+      "T3_el_auc_log_ratio": 0.0,
+      "T4_el_frag_log_ratio": 0.08611011910195972,
+      "T5_f55_clopper_pearson_log": 0.0,
+      "T6_riwayat_sum_log_ratio": 0.0,
+      "phi_master_total_nats": 1.9299461277870757,
+      "p_max": 0.22574065080135988,
+      "EL_fragility": 0.24533060431554846,
+      "n_units": 465,
+      "n_verses": 10295
+    },
+    "poetry_abbasi": {
+      "T1_gate1_half_T2": 0.0,
+      "T2_pmax_log_ratio": 1.6829783959190967,
+      "T3_el_auc_log_ratio": 0.0,
+      "T4_el_frag_log_ratio": -0.04965923400514592,
+      "T5_f55_clopper_pearson_log": 0.0,
+      "T6_riwayat_sum_log_ratio": 0.0,
+      "phi_master_total_nats": 1.6333191619139509,
+      "p_max": 0.1921985908312527,
+      "EL_fragility": 0.21418440577187753,
+      "n_units": 2823,
+      "n_verses": 76499
+    },
+    "ksucca": {
+      "T1_gate1_half_T2": 0.0,
+      "T2_pmax_log_ratio": 1.7738056656114594,
+      "T3_el_auc_log_ratio": 0.0,
+      "T4_el_frag_log_ratio": 0.026584606296378523,
+      "T5_f55_clopper_pearson_log": 0.0,
+      "T6_riwayat_sum_log_ratio": 0.0,
+      "phi_master_total_nats": 1.800390271907838,
+      "p_max": 0.21047280122013218,
+      "EL_fragility": 0.23115331541869416,
+      "n_units": 41,
+      "n_verses": 1967
+    },
+    "arabic_bible": {
+      "T1_gate1_half_T2": 0.0,
+      "T2_pmax_log_ratio": 1.7466718652723678,
+      "T3_el_auc_log_ratio": 0.0,
+      "T4_el_frag_log_ratio": 0.003691497064509756,
+      "T5_f55_clopper_pearson_log": 0.0,
+      "T6_riwayat_sum_log_ratio": 0.0,
+      "phi_master_total_nats": 1.7503633623368775,
+      "p_max": 0.20483865778721488,
+      "EL_fragility": 0.22592161080241382,
+      "n_units": 1183,
+      "n_verses": 31083
+    },
+    "hindawi": {
+      "T1_gate1_half_T2": 0.0,
+      "T2_pmax_log_ratio": 1.5342911753727706,
+      "T3_el_auc_log_ratio": 0.0,
+      "T4_el_frag_log_ratio": -0.17196651225109089,
+      "T5_f55_clopper_pearson_log": 0.0,
+      "T6_riwayat_sum_log_ratio": 0.0,
+      "phi_master_total_nats": 1.3623246631216797,
+      "p_max": 0.1656441717791411,
+      "EL_fragility": 0.18952673093777386,
+      "n_units": 74,
+      "n_verses": 1793
+    }
+  },
+  "headline": {
+    "phi_master_quran_nats": 1862.311920632578,
+    "phi_master_quran_log10_bayes_factor": 808.7917907133752,
+    "quran_rank": 1,
+    "n_corpora": 7,
+    "next_ranked_corpus": "poetry_islami",
+    "phi_master_next_nats": 1.9299461277870757,
+    "ratio_quran_to_next": 964.9553911476022
+  },
+  "wall_time_s": 0.01887035369873047
+}

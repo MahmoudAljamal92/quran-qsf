@@ -1,0 +1,134 @@
+{
+  "classical_pairs": [
+    {
+      "a": 2,
+      "b": 3,
+      "d": 0.015578827778048417,
+      "percentile": 0.8849557522123894,
+      "note": "al-Zahrāwān (Sahih Muslim); Farahi/Islahi nazm pair"
+    },
+    {
+      "a": 8,
+      "b": 9,
+      "d": 0.023047822557034105,
+      "percentile": 3.5398230088495577,
+      "note": "single surah in some codices; no basmala between them; Ibn ʿAbbās"
+    },
+    {
+      "a": 55,
+      "b": 56,
+      "d": 0.10782210330250115,
+      "percentile": 84.070796460177,
+      "note": "Rahmān-Wāqiʿa paradise-judgment pair; Farahi"
+    },
+    {
+      "a": 67,
+      "b": 68,
+      "d": 0.050151448329275455,
+      "percentile": 44.24778761061947,
+      "note": "Mulk-Qalam consecutive disclosure pair; Islahi"
+    },
+    {
+      "a": 73,
+      "b": 74,
+      "d": 0.04820965140896466,
+      "percentile": 42.47787610619469,
+      "note": "Muzzammil-Muddaththir both ya-ayyuha-form address pair"
+    },
+    {
+      "a": 75,
+      "b": 76,
+      "d": 0.07774596012965813,
+      "percentile": 68.14159292035397,
+      "note": "Qiyāma-Insān eschatological continuation; Drāz"
+    },
+    {
+      "a": 77,
+      "b": 78,
+      "d": 0.11504349794238042,
+      "percentile": 85.84070796460178,
+      "note": "Mursalāt-Nabaʾ eschatological continuation; Drāz"
+    },
+    {
+      "a": 81,
+      "b": 82,
+      "d": 0.0792736069714732,
+      "percentile": 70.79646017699115,
+      "note": "Takwīr-Infiṭār 'when X happens' cosmic-disruption pair"
+    },
+    {
+      "a": 83,
+      "b": 84,
+      "d": 0.05788458254133349,
+      "percentile": 54.86725663716814,
+      "note": "Muṭaffifīn-Inshiqāq judgment-day pair"
+    },
+    {
+      "a": 87,
+      "b": 88,
+      "d": 0.06977084341771363,
+      "percentile": 61.94690265486725,
+      "note": "Aʿlā-Ghāshiya paired khuṭba-recitation; Sahih Muslim"
+    },
+    {
+      "a": 91,
+      "b": 92,
+      "d": 0.146123382001884,
+      "percentile": 92.03539823008849,
+      "note": "Shams-Layl cosmic-oath pair; Farahi"
+    },
+    {
+      "a": 93,
+      "b": 94,
+      "d": 0.1389348508938962,
+      "percentile": 89.38053097345133,
+      "note": "Ḍuḥā-Sharḥ consolation pair; classical"
+    },
+    {
+      "a": 99,
+      "b": 100,
+      "d": 0.09089394825909534,
+      "percentile": 77.87610619469027,
+      "note": "Zalzala-ʿĀdiyāt eschatological-horses pair; Islahi"
+    },
+    {
+      "a": 103,
+      "b": 104,
+      "d": 0.18966802158312956,
+      "percentile": 98.23008849557522,
+      "note": "ʿAṣr-Humaza paired denunciation; Drāz"
+    },
+    {
+      "a": 105,
+      "b": 106,
+      "d": 0.11267227557845733,
+      "percentile": 84.95575221238938,
+      "note": "Fīl-Quraysh historically linked (ʿIkrima/Ubayy codex fused)"
+    },
+    {
+      "a": 111,
+      "b": 112,
+      "d": 0.177191479481999,
+      "percentile": 97.34513274336283,
+      "note": "Masad-Ikhlās polemic vs affirmation pair; classical"
+    },
+    {
+      "a": 113,
+      "b": 114,
+      "d": 0.14702180757207714,
+      "percentile": 92.92035398230088,
+      "note": "al-Muʿawwidhatān (the two refuges) — universal pairing"
+    }
+  ],
+  "n_pairs": 17,
+  "mean_classical_distance": 0.09688435939699536,
+  "mean_all_consecutive_distance": 0.0671934550873169,
+  "ratio_classical_to_all": 1.4418719690942452,
+  "mean_percentile": 67.62103071317021,
+  "p_N1_random_pair_null": 0.9972001399930004,
+  "p_N2_random_consecutive_null": 0.9991000449977501,
+  "p_N3_sign_test": 1.0,
+  "bottom_decile_count": 2,
+  "bottom_quintile_count": 2,
+  "bottom_quartile_count": 2
+}

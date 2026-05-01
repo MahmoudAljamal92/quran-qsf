@@ -1,0 +1,204 @@
+{
+  "experiment": "exp95_phonetic_modulation",
+  "hypothesis": "H33 — phonetic-distance-modulated R12 closes the Adiyat-864 ceiling without violating per-stratum FPR.",
+  "schema_version": 1,
+  "prereg_document": "experiments/exp95_phonetic_modulation/PREREG.md",
+  "prereg_hash": "65a228b3bd6858339751a2be3954c3688906e398720e8d98eb899a76ecd97b09",
+  "exp54_inputs": {
+    "slope": 0.007265,
+    "intercept": -0.002388,
+    "pearson_r": 0.929,
+    "prereg_hash": "7e2b71653a351992e8c2f350ff344a42788fcbfbe5dcd33502fee9c3b050b566"
+  },
+  "exp94_baseline": {
+    "R12_only_baseline": 0.990741,
+    "null_NCD_mu": 0.04177948678278864,
+    "null_NCD_sd": 0.004228506946808813,
+    "NCD_p95_threshold": 0.049608
+  },
+  "frozen_constants": {
+    "seed": 42,
+    "n_pert_per_unit": 20,
+    "ctrl_n_units": 200,
+    "gzip_level": 9,
+    "fpr_target": 0.05,
+    "band_a": [
+      15,
+      100
+    ],
+    "adiyat_label": "Q:100",
+    "expected_n_variants": 864,
+    "vlcv_floor": 0.1962,
+    "sparse_stratum_min_n": 30
+  },
+  "canonical_q100_vlcv": 0.3872983346207417,
+  "vlcv_sanity_ok": true,
+  "n_variants": 864,
+  "n_null_ctrl_edits": 4000,
+  "tau_by_d": {
+    "0": 0.049315068493150684,
+    "1": 0.049315068493150684,
+    "2": 0.04967497062775695,
+    "3": 0.04949263649425286,
+    "4": 0.05050425508399646,
+    "5": 0.049167425531781266
+  },
+  "tau_ci95_by_d": {
+    "0": [
+      NaN,
+      NaN
+    ],
+    "1": [
+      0.04835115434821965,
+      0.05011137063222949
+    ],
+    "2": [
+      0.049150845136829734,
+      0.05054945054945055
+    ],
+    "3": [
+      0.04918032786885246,
+      0.050110927827936975
+    ],
+    "4": [
+      0.04925083729948881,
+      0.05161290322580645
+    ],
+    "5": [
+      0.04710907628859544,
+      0.05080213903743316
+    ]
+  },
+  "tau_source_by_d": {
+    "0": "adjacent (pooled from d=1, this-n=3)",
+    "1": "stratified (n=587)",
+    "2": "stratified (n=1473)",
+    "3": "stratified (n=1438)",
+    "4": "stratified (n=356)",
+    "5": "stratified (n=143)"
+  },
+  "ctrl_n_by_d": {
+    "0": 3,
+    "1": 587,
+    "2": 1473,
+    "3": 1438,
+    "4": 356,
+    "5": 143
+  },
+  "ctrl_fpr_by_d": {
+    "0": 0.0,
+    "1": 0.05281090289608177,
+    "2": 0.05023761031907671,
+    "3": 0.05006954102920723,
+    "4": 0.05056179775280899,
+    "5": 0.055944055944055944
+  },
+  "overfpr_strata": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "recalls": {
+    "R12_flat_exp94_reproduction": 0.9907407407407407,
+    "R12_modulated_primary": 0.9849537037037037,
+    "R12_modulated_AND_vlcv_floor": 0.9849537037037037,
+    "R12_only_baseline_from_exp94": 0.990741,
+    "delta_vs_baseline": -0.005787296296296263
+  },
+  "stratum_audit": {
+    "0": {
+      "n_variants": 0,
+      "n_fired_modulated": 0,
+      "n_fired_flat_exp94": 0,
+      "recall_modulated": null,
+      "recall_flat_exp94": null,
+      "tau": 0.049315068493150684,
+      "tau_ci95": [
+        NaN,
+        NaN
+      ],
+      "tau_source": "adjacent (pooled from d=1, this-n=3)",
+      "ctrl_n": 3,
+      "ctrl_fpr_at_tau": 0.0
+    },
+    "1": {
+      "n_variants": 129,
+      "n_fired_modulated": 127,
+      "n_fired_flat_exp94": 127,
+      "recall_modulated": 0.9844961240310077,
+      "recall_flat_exp94": 0.9844961240310077,
+      "tau": 0.049315068493150684,
+      "tau_ci95": [
+        0.04835115434821965,
+        0.05011137063222949
+      ],
+      "tau_source": "stratified (n=587)",
+      "ctrl_n": 587,
+      "ctrl_fpr_at_tau": 0.05281090289608177
+    },
+    "2": {
+      "n_variants": 315,
+      "n_fired_modulated": 310,
+      "n_fired_flat_exp94": 310,
+      "recall_modulated": 0.9841269841269841,
+      "recall_flat_exp94": 0.9841269841269841,
+      "tau": 0.04967497062775695,
+      "tau_ci95": [
+        0.049150845136829734,
+        0.05054945054945055
+      ],
+      "tau_source": "stratified (n=1473)",
+      "ctrl_n": 1473,
+      "ctrl_fpr_at_tau": 0.05023761031907671
+    },
+    "3": {
+      "n_variants": 335,
+      "n_fired_modulated": 334,
+      "n_fired_flat_exp94": 334,
+      "recall_modulated": 0.9970149253731343,
+      "recall_flat_exp94": 0.9970149253731343,
+      "tau": 0.04949263649425286,
+      "tau_ci95": [
+        0.04918032786885246,
+        0.050110927827936975
+      ],
+      "tau_source": "stratified (n=1438)",
+      "ctrl_n": 1438,
+      "ctrl_fpr_at_tau": 0.05006954102920723
+    },
+    "4": {
+      "n_variants": 76,
+      "n_fired_modulated": 71,
+      "n_fired_flat_exp94": 76,
+      "recall_modulated": 0.9342105263157895,
+      "recall_flat_exp94": 1.0,
+      "tau": 0.05050425508399646,
+      "tau_ci95": [
+        0.04925083729948881,
+        0.05161290322580645
+      ],
+      "tau_source": "stratified (n=356)",
+      "ctrl_n": 356,
+      "ctrl_fpr_at_tau": 0.05056179775280899
+    },
+    "5": {
+      "n_variants": 9,
+      "n_fired_modulated": 9,
+      "n_fired_flat_exp94": 9,
+      "recall_modulated": 1.0,
+      "recall_flat_exp94": 1.0,
+      "tau": 0.049167425531781266,
+      "tau_ci95": [
+        0.04710907628859544,
+        0.05080213903743316
+      ],
+      "tau_source": "stratified (n=143)",
+      "ctrl_n": 143,
+      "ctrl_fpr_at_tau": 0.055944055944055944
+    }
+  },
+  "verdict": "FAIL_ctrl_stratum_overfpr",
+  "runtime_seconds": 8.81
+}

@@ -1,0 +1,282 @@
+{
+  "experiment": "expP4_cross_tradition_profile",
+  "schema_version": 1,
+  "title": "Multi-axis profile vector synthesis of the four prior cross-tradition experiments. 8 corpora x 3 axes (R3 path-minimality, A2 diacritic capacity, unit-level Hurst z-vs-permutation-null).",
+  "axes": {
+    "axis_1_R3": "negated R3 z_path (more positive = more path-minimal)",
+    "axis_2_A2": "A2 R_primitives (more positive = more diacritic-saturated)",
+    "axis_3_Hurst": "Hurst z vs empirical permutation null (more positive = more long-range memory)"
+  },
+  "n_corpora": 8,
+  "canonical_order": [
+    "quran",
+    "hebrew_tanakh",
+    "greek_nt",
+    "iliad_greek",
+    "pali_dn",
+    "pali_mn",
+    "rigveda",
+    "avestan_yasna"
+  ],
+  "tradition_class": {
+    "quran": "oral_liturgical",
+    "hebrew_tanakh": "narrative_or_mixed",
+    "greek_nt": "narrative_or_mixed",
+    "iliad_greek": "narrative_or_mixed",
+    "pali_dn": "oral_liturgical",
+    "pali_mn": "oral_liturgical",
+    "rigveda": "oral_liturgical",
+    "avestan_yasna": "oral_liturgical"
+  },
+  "profile_per_corpus": {
+    "quran": {
+      "tradition_class": "oral_liturgical",
+      "raw_R3_z_path": -8.919964506138243,
+      "raw_A2_R_primitives": 0.4682953253164175,
+      "raw_Hurst_z": 3.7037620902192434,
+      "raw_Hurst_H_canon": 0.9139449853727155,
+      "profile_R3_standardised": 0.1646419032113993,
+      "profile_A2_standardised": 0.21769473025042624,
+      "profile_Hurst_standardised": -0.36549665106450285,
+      "profile_norm": 0.45616417418649235,
+      "isolation_index": 1.753645889074514,
+      "pc1_score": -0.2881602130489673
+    },
+    "hebrew_tanakh": {
+      "tradition_class": "narrative_or_mixed",
+      "raw_R3_z_path": -15.285841419236908,
+      "raw_A2_R_primitives": 0.6947495020218425,
+      "raw_Hurst_z": 6.501322839979177,
+      "raw_Hurst_H_canon": 0.7729436339519103,
+      "profile_R3_standardised": 1.1191916510785809,
+      "profile_A2_standardised": 0.9138376786308641,
+      "profile_Hurst_standardised": 0.06622506068447889,
+      "profile_norm": 1.4464007098284035,
+      "isolation_index": 2.1246572569819544,
+      "pc1_score": -1.4330107711562634
+    },
+    "greek_nt": {
+      "tradition_class": "narrative_or_mixed",
+      "raw_R3_z_path": -12.062700485400704,
+      "raw_A2_R_primitives": 0.6959452965991028,
+      "raw_Hurst_z": 3.7578245667112453,
+      "raw_Hurst_H_canon": 0.792565121571139,
+      "profile_R3_standardised": 0.6358885009025047,
+      "profile_A2_standardised": 0.9175136716056113,
+      "profile_Hurst_standardised": -0.3571536883980017,
+      "profile_norm": 1.172068376972752,
+      "isolation_index": 1.9721668159952042,
+      "pc1_score": -1.1141317009605236
+    },
+    "iliad_greek": {
+      "tradition_class": "narrative_or_mixed",
+      "raw_R3_z_path": 0.3359634886972237,
+      "raw_A2_R_primitives": 0.0,
+      "raw_Hurst_z": NaN,
+      "raw_Hurst_H_canon": NaN,
+      "profile_R3_standardised": -1.2232648776387387,
+      "profile_A2_standardised": -1.2218922679731195,
+      "profile_Hurst_standardised": 0.0,
+      "profile_norm": 1.7289874711509658,
+      "isolation_index": 2.4004354549540805,
+      "pc1_score": 1.7268101197899237
+    },
+    "pali_dn": {
+      "tradition_class": "oral_liturgical",
+      "raw_R3_z_path": -0.26388180017624346,
+      "raw_A2_R_primitives": 0.20285191166425856,
+      "raw_Hurst_z": 20.450922219472446,
+      "raw_Hurst_H_canon": 0.7200930036953261,
+      "profile_R3_standardised": -1.1333193482058153,
+      "profile_A2_standardised": -0.5983050596247467,
+      "profile_Hurst_standardised": 2.2189378919765828,
+      "profile_norm": 2.5624338153091304,
+      "isolation_index": 3.246358020702839,
+      "pc1_score": 1.3354584753501344
+    },
+    "pali_mn": {
+      "tradition_class": "oral_liturgical",
+      "raw_R3_z_path": -3.4649325543092067,
+      "raw_A2_R_primitives": 0.19979657027918454,
+      "raw_Hurst_z": 1.0222413578132883,
+      "raw_Hurst_H_canon": 0.6732392139238199,
+      "profile_R3_standardised": -0.6533285736464716,
+      "profile_A2_standardised": -0.607697486786207,
+      "profile_Hurst_standardised": -0.779310978701186,
+      "profile_norm": 1.1846771974311845,
+      "isolation_index": 1.9989669010626103,
+      "pc1_score": 0.8516719462653453
+    },
+    "rigveda": {
+      "tradition_class": "oral_liturgical",
+      "raw_R3_z_path": -18.934295084339738,
+      "raw_A2_R_primitives": 0.918198043592642,
+      "raw_Hurst_z": 7.873684025240843,
+      "raw_Hurst_H_canon": 0.7861412157677876,
+      "profile_R3_standardised": 1.6662695436722956,
+      "profile_A2_standardised": 1.6007410018702926,
+      "profile_Hurst_standardised": 0.27800888703744375,
+      "profile_norm": 2.3272547966456933,
+      "isolation_index": 2.822262953581081,
+      "pc1_score": -2.293477027074863
+    },
+    "avestan_yasna": {
+      "tradition_class": "oral_liturgical",
+      "raw_R3_z_path": -3.9801100562503526,
+      "raw_A2_R_primitives": 0.0,
+      "raw_Hurst_z": -0.8044703292402636,
+      "raw_Hurst_H_canon": 0.4944946823635221,
+      "profile_R3_standardised": -0.5760787993737556,
+      "profile_A2_standardised": -1.2218922679731195,
+      "profile_Hurst_standardised": -1.061210521534815,
+      "profile_norm": 1.7178635768408956,
+      "isolation_index": 2.3463348378177176,
+      "pc1_score": 1.2148391708352129
+    }
+  },
+  "column_stats": {
+    "profile_R3": {
+      "mean": 7.821970302144272,
+      "std": 6.668983913433948,
+      "n_valid": 8,
+      "n_imputed": 0
+    },
+    "profile_A2": {
+      "mean": 0.3974795811841809,
+      "std": 0.32529838481057083,
+      "n_valid": 8,
+      "n_imputed": 0
+    },
+    "profile_Hurst": {
+      "mean": 6.072183824313711,
+      "std": 6.480009398708523,
+      "n_valid": 7,
+      "n_imputed": 1
+    }
+  },
+  "pairwise_distance_matrix": [
+    [
+      0.0,
+      1.2578409526361352,
+      0.8437354511581158,
+      2.03280194798299,
+      3.0049727077830264,
+      1.2335275881443193,
+      2.140514409576737,
+      1.7621281662402728
+    ],
+    [
+      1.2578409526361352,
+      0.0,
+      0.6425301651044216,
+      3.1706199318767476,
+      3.4633154630737915,
+      2.4843164855871525,
+      0.9033176546192673,
+      2.9506601459761646
+    ],
+    [
+      0.8437354511581158,
+      0.6425301651044216,
+      0.0,
+      2.8567582705546455,
+      3.473334229493632,
+      2.0412169215317757,
+      1.389933874453657,
+      2.557658799670182
+    ],
+    [
+      2.03280194798299,
+      3.1706199318767476,
+      2.8567582705546455,
+      0.0,
+      2.3066505095332857,
+      1.144285026280518,
+      4.048945132900668,
+      1.242987365549708
+    ],
+    [
+      3.0049727077830264,
+      3.4633154630737915,
+      3.473334229493632,
+      2.3066505095332857,
+      0.0,
+      3.036441280820457,
+      4.054714163331146,
+      3.3850777908845338
+    ],
+    [
+      1.2335275881443193,
+      2.4843164855871525,
+      2.0412169215317757,
+      1.144285026280518,
+      3.036441280820457,
+      0.0,
+      3.3727824244284905,
+      0.6801985806455595
+    ],
+    [
+      2.140514409576737,
+      0.9033176546192673,
+      1.389933874453657,
+      4.048945132900668,
+      4.054714163331146,
+      3.3727824244284905,
+      0.0,
+      3.845633015757603
+    ],
+    [
+      1.7621281662402728,
+      2.9506601459761646,
+      2.557658799670182,
+      1.242987365549708,
+      3.3850777908845338,
+      0.6801985806455595,
+      3.845633015757603,
+      0.0
+    ]
+  ],
+  "cluster_analysis": {
+    "mean_within_oral_liturgical": 2.6515990127612143,
+    "mean_within_narrative_or_mixed": 2.223302789178605,
+    "mean_between_classes": 2.1427333306964695,
+    "diff_between_minus_within_oral": -0.5088656820647448
+  },
+  "PCA": {
+    "variance_explained_per_component": [
+      0.6784514932036529,
+      0.3125227602127836,
+      0.009025746583563515
+    ],
+    "pc1_loadings_per_axis": {
+      "profile_R3": -0.708991970285051,
+      "profile_A2": -0.7034377469612086,
+      "profile_Hurst": 0.05005718950820118
+    },
+    "pc1_dominant_axis": "profile_R3"
+  },
+  "pre_registered_outcomes": {
+    "PRED_PRO_1_oral_cluster_tighter": "FAIL",
+    "PRED_PRO_1_mean_oral_oral": 2.6515990127612143,
+    "PRED_PRO_1_mean_oral_narr": 2.1427333306964695,
+    "PRED_PRO_2_iliad_most_isolated": "FAIL",
+    "PRED_PRO_2_actual_most_isolated_corpus": "pali_dn",
+    "PRED_PRO_3_rigveda_longest_norm": "FAIL",
+    "PRED_PRO_3_actual_longest_norm_corpus": "pali_dn",
+    "PRED_PRO_4_R3_dominates_PC1": "PASS",
+    "PRED_PRO_4_actual_dominant_axis": "profile_R3",
+    "overall_verdict": "NO_SUPPORT"
+  },
+  "interpretation": [
+    "If PRED-PRO-1 PASSES, the 4 oral-liturgical corpora form a coherent cluster in the 3-D profile space, distinct from the narrative_or_mixed class. This is the multi-axis version of the LC2 hypothesis.",
+    "If PRED-PRO-2 PASSES, the Iliad is uniquely isolated -- consistent with it being the only NON-religious-text corpus in our sample.",
+    "If PRED-PRO-3 PASSES, the Rigveda's whole-corpus extremity (documented in expP4_rigveda_deepdive) generalises beyond any single axis -- it is the corner of the design space.",
+    "If PRED-PRO-4 PASSES, R3 path-minimality is the single best summary axis of the cross-tradition design space, consistent with R3 being the cleanest discriminator between oral-liturgical and narrative-or-mixed corpora."
+  ],
+  "extends": {
+    "experiment_R3": "expP4_cross_tradition_R3",
+    "experiment_A2": "expP4_diacritic_capacity_cross_tradition",
+    "experiment_Hurst": "expP4_quran_hurst_forensics",
+    "relationship": "synthesises the three prior experiments into a unified profile space; gap-fills Iliad A2, Pali_DN A2, and verse-level Hurst for n<10 corpora."
+  }
+}

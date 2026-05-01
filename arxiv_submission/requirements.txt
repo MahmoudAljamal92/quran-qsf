@@ -1,0 +1,26 @@
+# QSF Project — Python Dependencies
+# Install: pip install -r requirements.txt
+# Tested with Python 3.11.9 on Windows 10/11
+# All CPU scripts run with these dependencies only.
+
+# === CPU SCRIPTS (all local analysis) ===
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+scikit-learn>=1.2.0
+matplotlib>=3.7.0
+
+# DFA Hurst exponent (used by legacy pipeline scripts)
+nolds>=0.5.2
+
+# === TESTED VERSIONS (for exact reproducibility) ===
+# numpy==2.4.4
+# pandas==3.0.1
+# scipy==1.16.2
+# scikit-learn==1.8.0
+
+# === GPU SCRIPTS (Colab only — uncomment if needed) ===
+# sentence-transformers>=2.2.0
+# torch>=2.0.0
+# transformers>=4.30.0
+# camel-tools>=1.5.0  # For morphological validation (optional)

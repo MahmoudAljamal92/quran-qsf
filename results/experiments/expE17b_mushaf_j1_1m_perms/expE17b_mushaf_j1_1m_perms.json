@@ -1,0 +1,60 @@
+{
+  "experiment": "expE17b_mushaf_j1_1m_perms",
+  "task_id": "A10",
+  "title": "Mushaf J1 smoothness — 10^6 random-perm null",
+  "objective": "Bound the p-value of S1 (Mushaf J1 extremum) below 1/(N+1) with N = 10^6, replacing the N = 10^4 floor of expE17_dual_opt.",
+  "seed": 42,
+  "n_permutations": 1000000,
+  "batch_size": 50000,
+  "feature_order": [
+    "EL",
+    "VL_CV",
+    "CN",
+    "H_cond",
+    "T"
+  ],
+  "ridge_lambda": 1e-06,
+  "scalars": {
+    "J1_mushaf": 824.4497667468278,
+    "J1_nuzul": 842.1557554413059,
+    "J2_mushaf": 4.73812896741938,
+    "J2_nuzul": 4.797536432217584
+  },
+  "perm_J1_summary": {
+    "n": 1000000,
+    "min": 878.4090654295245,
+    "max": 1327.5445281912453,
+    "mean": 1129.95813590765,
+    "sd": 45.3728663762154
+  },
+  "mushaf_quantiles": {
+    "n_perms_le_mushaf": 0,
+    "n_perms_lt_mushaf": 0,
+    "q_le_mushaf": 0.0,
+    "q_lt_mushaf": 0.0,
+    "p_perm_le_mushaf": 9.99999000001e-07,
+    "p_perm_floor_inverse_n_plus_1": 9.99999000001e-07
+  },
+  "nuzul_quantiles": {
+    "n_perms_le_nuzul": 0,
+    "n_perms_lt_nuzul": 0,
+    "q_le_nuzul": 0.0,
+    "q_lt_nuzul": 0.0,
+    "p_perm_le_nuzul": 9.99999000001e-07
+  },
+  "verdict": "MUSHAF_J1_GLOBAL_EXTREMUM_AT_1M",
+  "verdict_taxonomy": {
+    "MUSHAF_J1_GLOBAL_EXTREMUM_AT_1M": "n_perms_le_mushaf == 0  (Mushaf < every one of N perms)",
+    "MUSHAF_J1_DOMINANT_NOT_EXTREMUM": "q_le_mushaf ≤ 0.05 but n_perms_le_mushaf > 0",
+    "NULL_J1": "q_le_mushaf > 0.05"
+  },
+  "comparison_to_expE17_n_10000": {
+    "expE17_q_J1_mushaf_le": 0.0,
+    "expE17_q_J1_nuzul_le": 0.4046,
+    "expE17_p_floor": 9.999000099990002e-05,
+    "this_run_p_floor": 9.99999000001e-07,
+    "p_floor_tightening_ratio": 0.010000989999010002
+  },
+  "runtime_seconds": 12.80111026763916,
+  "side_effects": "no mutation of any pinned artefact; outputs under expE17b only"
+}

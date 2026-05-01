@@ -1,0 +1,459 @@
+{
+  "experiment": "exp08_tension_noncircular",
+  "description": "4×4 circularity matrix for Approach C. Tests whether the P(T>0) ~ RD·EL relationship survives when one or both sides lose their shared algebraic terms (H_EL / RD).",
+  "classification_rule_preregistered": "LAW HOLDS iff every non-circular cell has R² ≥ 0.5; TAUTOLOGY iff all non-circular R² < 0.3 AND circular R² > 0.7; otherwise AMBIGUOUS or LAW FAILS.",
+  "corpora_used": [
+    "quran",
+    "poetry_jahili",
+    "poetry_islami",
+    "poetry_abbasi",
+    "ksucca",
+    "arabic_bible",
+    "hindawi"
+  ],
+  "n_corpora": 7,
+  "dependents": {
+    "T0": "H_cond − H_EL (original, has EL)",
+    "T1": "H_cond (no EL)",
+    "T2": "H_cond − H_word_initial (replaces H_EL)",
+    "T3": "H_cond / H_EL (ratio form, has EL)"
+  },
+  "predictors": {
+    "P0": "RD · EL (original, has EL)",
+    "P1": "RD (no EL)",
+    "P2": "EL (no RD)",
+    "P3": "RD · H_cond (no EL)"
+  },
+  "shared_terms": {
+    "T0": [
+      "H_EL",
+      "H_cond"
+    ],
+    "T1": [
+      "H_cond"
+    ],
+    "T2": [
+      "H_cond",
+      "H_word_init"
+    ],
+    "T3": [
+      "H_EL",
+      "H_cond"
+    ],
+    "P0": [
+      "H_EL",
+      "RD"
+    ],
+    "P1": [
+      "RD"
+    ],
+    "P2": [
+      "H_EL"
+    ],
+    "P3": [
+      "H_cond",
+      "RD"
+    ]
+  },
+  "per_corpus_stats": {
+    "quran": {
+      "n_units": 114,
+      "n_verses": 6236,
+      "EL": 0.7062633038455213,
+      "RD_corpus": 0.11016677357280308,
+      "RD_unit_mean": 0.6168430613594641,
+      "H_cond": 0.8632501781636918,
+      "H_EL": 1.155725257599856,
+      "H_word_init": 2.685317639961098,
+      "P_T0_pos": 0.4473684210526316,
+      "P_T1_pos": 0.9122807017543859,
+      "P_T2_pos": 0.0,
+      "P_T3_pos": 0.9122807017543859,
+      "P0_RD_EL": 0.43565361846992073,
+      "P1_RD": 0.6168430613594641,
+      "P2_EL": 0.7062633038455213,
+      "P3_RD_Hcond": 0.5324898826175944,
+      "P0_alt_RDcorpus_EL": 0.07780674947752936
+    },
+    "poetry_jahili": {
+      "n_units": 133,
+      "n_verses": 2561,
+      "EL": 0.09969128256888485,
+      "RD_corpus": 0.27918781725888325,
+      "RD_unit_mean": 0.7029005678575524,
+      "H_cond": 0.486316845569451,
+      "H_EL": 2.7852333039546204,
+      "H_word_init": 2.969533341939192,
+      "P_T0_pos": 0.0,
+      "P_T1_pos": 0.7894736842105263,
+      "P_T2_pos": 0.0,
+      "P_T3_pos": 0.7894736842105263,
+      "P0_RD_EL": 0.07007305912811687,
+      "P1_RD": 0.7029005678575524,
+      "P2_EL": 0.09969128256888485,
+      "P3_RD_Hcond": 0.3418323869094607,
+      "P0_alt_RDcorpus_EL": 0.027832591580145515
+    },
+    "poetry_islami": {
+      "n_units": 465,
+      "n_verses": 10295,
+      "EL": 0.10063771006299879,
+      "RD_corpus": 0.12782904322486643,
+      "RD_unit_mean": 0.7176620846455041,
+      "H_cond": 0.49028624795581566,
+      "H_EL": 2.731940351675601,
+      "H_word_init": 3.0255629655577505,
+      "P_T0_pos": 0.0,
+      "P_T1_pos": 0.7526881720430108,
+      "P_T2_pos": 0.0,
+      "P_T3_pos": 0.7526881720430108,
+      "P0_RD_EL": 0.07222386879776153,
+      "P1_RD": 0.7176620846455041,
+      "P2_EL": 0.10063771006299879,
+      "P3_RD_Hcond": 0.3518598507809932,
+      "P0_alt_RDcorpus_EL": 0.012864422189694647
+    },
+    "poetry_abbasi": {
+      "n_units": 2823,
+      "n_verses": 76499,
+      "EL": 0.09901059322055408,
+      "RD_corpus": 0.02929450058170695,
+      "RD_unit_mean": 0.7323005470435863,
+      "H_cond": 0.48870089268047756,
+      "H_EL": 2.7939870800084985,
+      "H_word_init": 3.0304972210524723,
+      "P_T0_pos": 0.0,
+      "P_T1_pos": 0.7268862911795961,
+      "P_T2_pos": 0.0,
+      "P_T3_pos": 0.7268862911795961,
+      "P0_RD_EL": 0.07250551157852175,
+      "P1_RD": 0.7323005470435863,
+      "P2_EL": 0.09901059322055408,
+      "P3_RD_Hcond": 0.35787593105060267,
+      "P0_alt_RDcorpus_EL": 0.0029004658806946718
+    },
+    "ksucca": {
+      "n_units": 41,
+      "n_verses": 1967,
+      "EL": 0.1442839924642683,
+      "RD_corpus": 0.16725978647686832,
+      "RD_unit_mean": 0.4126659775940331,
+      "H_cond": 1.056972542427039,
+      "H_EL": 3.0689121039482496,
+      "H_word_init": 2.2372994736827723,
+      "P_T0_pos": 0.0,
+      "P_T1_pos": 0.9024390243902439,
+      "P_T2_pos": 0.04878048780487805,
+      "P_T3_pos": 0.9024390243902439,
+      "P0_RD_EL": 0.059541094801437384,
+      "P1_RD": 0.4126659775940331,
+      "P2_EL": 0.1442839924642683,
+      "P3_RD_Hcond": 0.43617660751070475,
+      "P0_alt_RDcorpus_EL": 0.02413290977160359
+    },
+    "arabic_bible": {
+      "n_units": 1183,
+      "n_verses": 31083,
+      "EL": 0.13343039470568116,
+      "RD_corpus": 0.029501656854229,
+      "RD_unit_mean": 0.21183888628330597,
+      "H_cond": 0.9442172266051462,
+      "H_EL": 3.066798735159078,
+      "H_word_init": 2.167192399574788,
+      "P_T0_pos": 0.0008453085376162299,
+      "P_T1_pos": 0.9974640743871513,
+      "P_T2_pos": 0.03296703296703297,
+      "P_T3_pos": 0.9974640743871513,
+      "P0_RD_EL": 0.028265746210793422,
+      "P1_RD": 0.21183888628330597,
+      "P2_EL": 0.13343039470568116,
+      "P3_RD_Hcond": 0.2000219256935461,
+      "P0_alt_RDcorpus_EL": 0.00393641771853134
+    },
+    "hindawi": {
+      "n_units": 74,
+      "n_verses": 1793,
+      "EL": 0.06525248915822204,
+      "RD_corpus": 0.2403792526491913,
+      "RD_unit_mean": 0.6462331319522789,
+      "H_cond": 0.7715174910799832,
+      "H_EL": 3.3910686609395206,
+      "H_word_init": 3.265605200796621,
+      "P_T0_pos": 0.0,
+      "P_T1_pos": 0.9864864864864865,
+      "P_T2_pos": 0.0,
+      "P_T3_pos": 0.9864864864864865,
+      "P0_RD_EL": 0.04216832043639996,
+      "P1_RD": 0.6462331319522789,
+      "P2_EL": 0.06525248915822204,
+      "P3_RD_Hcond": 0.498580164616582,
+      "P0_alt_RDcorpus_EL": 0.015685344577352874
+    }
+  },
+  "matrix_16_cells": {
+    "T0_vs_P0": {
+      "slope": 1.1662300072668244,
+      "intercept": -0.06599265387266261,
+      "R2": 0.9860321019929689,
+      "pearson_r": 0.9929914914000866,
+      "n": 7,
+      "p_one_sided": 3.934190034795744e-06,
+      "dep": "T0",
+      "pred": "P0",
+      "dep_key": "P_T0_pos",
+      "pred_key": "P0_RD_EL",
+      "shared_terms": [
+        "H_EL"
+      ],
+      "is_circular": true
+    },
+    "T0_vs_P1": {
+      "slope": 0.07692992391886555,
+      "intercept": 0.019626094331593097,
+      "R2": 0.007818363341005385,
+      "pearson_r": 0.08842150949291153,
+      "n": 7,
+      "p_one_sided": 0.42523854897137353,
+      "dep": "T0",
+      "pred": "P1",
+      "dep_key": "P_T0_pos",
+      "pred_key": "P1_RD",
+      "shared_terms": [],
+      "is_circular": false
+    },
+    "T0_vs_P2": {
+      "slope": 0.7368801279668391,
+      "intercept": -0.07793150459589966,
+      "R2": 0.9873920474416722,
+      "pearson_r": 0.9936760274061522,
+      "n": 7,
+      "p_one_sided": 3.043868464096972e-06,
+      "dep": "T0",
+      "pred": "P2",
+      "dep_key": "P_T0_pos",
+      "pred_key": "P2_EL",
+      "shared_terms": [
+        "H_EL"
+      ],
+      "is_circular": true
+    },
+    "T0_vs_P3": {
+      "slope": 0.8561200155366315,
+      "intercept": -0.268490975765551,
+      "R2": 0.3210935799248955,
+      "pearson_r": 0.5666511977618112,
+      "n": 7,
+      "p_one_sided": 0.0923558239625885,
+      "dep": "T0",
+      "pred": "P3",
+      "dep_key": "P_T0_pos",
+      "pred_key": "P3_RD_Hcond",
+      "shared_terms": [
+        "H_cond"
+      ],
+      "is_circular": true
+    },
+    "T1_vs_P0": {
+      "slope": 0.0551800941281652,
+      "intercept": 0.8606648809004407,
+      "R2": 0.005161982345507576,
+      "pearson_r": 0.07184693692501812,
+      "n": 7,
+      "p_one_sided": 0.4391717071026791,
+      "dep": "T1",
+      "pred": "P0",
+      "dep_key": "P_T1_pos",
+      "pred_key": "P0_RD_EL",
+      "shared_terms": [],
+      "is_circular": false
+    },
+    "T1_vs_P1": {
+      "slope": -0.4017379609314461,
+      "intercept": 1.0987026102013693,
+      "R2": 0.49858590324548613,
+      "pearson_r": -0.7061061557906757,
+      "n": 7,
+      "p_one_sided": 0.038094339750102756,
+      "dep": "T1",
+      "pred": "P1",
+      "dep_key": "P_T1_pos",
+      "pred_key": "P1_RD",
+      "shared_terms": [],
+      "is_circular": false
+    },
+    "T1_vs_P2": {
+      "slope": 0.09443251719714592,
+      "intercept": 0.8486242281185125,
+      "R2": 0.037919978144193234,
+      "pearson_r": 0.19473052699613685,
+      "n": 7,
+      "p_one_sided": 0.3378236299393105,
+      "dep": "T1",
+      "pred": "P2",
+      "dep_key": "P_T1_pos",
+      "pred_key": "P2_EL",
+      "shared_terms": [],
+      "is_circular": false
+    },
+    "T1_vs_P3": {
+      "slope": 0.11810190446535702,
+      "intercept": 0.8209455194918434,
+      "R2": 0.014289108455852073,
+      "pearson_r": 0.11953705892254772,
+      "n": 7,
+      "p_one_sided": 0.39925716738396755,
+      "dep": "T1",
+      "pred": "P3",
+      "dep_key": "P_T1_pos",
+      "pred_key": "P3_RD_Hcond",
+      "shared_terms": [
+        "H_cond"
+      ],
+      "is_circular": true
+    },
+    "T2_vs_P0": {
+      "slope": -0.04246347547641288,
+      "intercept": 0.01641247753127208,
+      "R2": 0.08922743938650368,
+      "pearson_r": -0.2987096238598676,
+      "n": 7,
+      "p_one_sided": 0.25760626934231834,
+      "dep": "T2",
+      "pred": "P0",
+      "dep_key": "P_T2_pos",
+      "pred_key": "P0_RD_EL",
+      "shared_terms": [],
+      "is_circular": false
+    },
+    "T2_vs_P1": {
+      "slope": -0.08862198377445686,
+      "intercept": 0.0628313865905631,
+      "R2": 0.7081950777072323,
+      "pearson_r": -0.8415432714407695,
+      "n": 7,
+      "p_one_sided": 0.008796341521721084,
+      "dep": "T2",
+      "pred": "P1",
+      "dep_key": "P_T2_pos",
+      "pred_key": "P1_RD",
+      "shared_terms": [],
+      "is_circular": false
+    },
+    "T2_vs_P2": {
+      "slope": -0.013831051826209998,
+      "intercept": 0.014342808442439759,
+      "R2": 0.02374384664240914,
+      "pearson_r": -0.15409038465267494,
+      "n": 7,
+      "p_one_sided": 0.3707512728945374,
+      "dep": "T2",
+      "pred": "P2",
+      "dep_key": "P_T2_pos",
+      "pred_key": "P2_EL",
+      "shared_terms": [],
+      "is_circular": false
+    },
+    "T2_vs_P3": {
+      "slope": -0.051662101481799484,
+      "intercept": 0.03174404868863819,
+      "R2": 0.07980887386651747,
+      "pearson_r": -0.2825046439733641,
+      "n": 7,
+      "p_one_sided": 0.26965592228798774,
+      "dep": "T2",
+      "pred": "P3",
+      "dep_key": "P_T2_pos",
+      "pred_key": "P3_RD_Hcond",
+      "shared_terms": [
+        "H_cond"
+      ],
+      "is_circular": true
+    },
+    "T3_vs_P0": {
+      "slope": 0.0551800941281652,
+      "intercept": 0.8606648809004407,
+      "R2": 0.005161982345507576,
+      "pearson_r": 0.07184693692501812,
+      "n": 7,
+      "p_one_sided": 0.4391717071026791,
+      "dep": "T3",
+      "pred": "P0",
+      "dep_key": "P_T3_pos",
+      "pred_key": "P0_RD_EL",
+      "shared_terms": [
+        "H_EL"
+      ],
+      "is_circular": true
+    },
+    "T3_vs_P1": {
+      "slope": -0.4017379609314461,
+      "intercept": 1.0987026102013693,
+      "R2": 0.49858590324548613,
+      "pearson_r": -0.7061061557906757,
+      "n": 7,
+      "p_one_sided": 0.038094339750102756,
+      "dep": "T3",
+      "pred": "P1",
+      "dep_key": "P_T3_pos",
+      "pred_key": "P1_RD",
+      "shared_terms": [],
+      "is_circular": false
+    },
+    "T3_vs_P2": {
+      "slope": 0.09443251719714592,
+      "intercept": 0.8486242281185125,
+      "R2": 0.037919978144193234,
+      "pearson_r": 0.19473052699613685,
+      "n": 7,
+      "p_one_sided": 0.3378236299393105,
+      "dep": "T3",
+      "pred": "P2",
+      "dep_key": "P_T3_pos",
+      "pred_key": "P2_EL",
+      "shared_terms": [
+        "H_EL"
+      ],
+      "is_circular": true
+    },
+    "T3_vs_P3": {
+      "slope": 0.11810190446535702,
+      "intercept": 0.8209455194918434,
+      "R2": 0.014289108455852073,
+      "pearson_r": 0.11953705892254772,
+      "n": 7,
+      "p_one_sided": 0.39925716738396755,
+      "dep": "T3",
+      "pred": "P3",
+      "dep_key": "P_T3_pos",
+      "pred_key": "P3_RD_Hcond",
+      "shared_terms": [
+        "H_cond"
+      ],
+      "is_circular": true
+    }
+  },
+  "summary": {
+    "n_noncircular_cells": 8,
+    "n_circular_cells": 8,
+    "mean_R2_noncircular": 0.23365481175722796,
+    "mean_R2_circular": 0.3057483475784324,
+    "min_R2_noncircular": 0.005161982345507576,
+    "max_R2_noncircular": 0.7081950777072323
+  },
+  "best_noncircular_cell": {
+    "slope": -0.08862198377445686,
+    "intercept": 0.0628313865905631,
+    "R2": 0.7081950777072323,
+    "pearson_r": -0.8415432714407695,
+    "n": 7,
+    "p_one_sided": 0.008796341521721084,
+    "dep": "T2",
+    "pred": "P1",
+    "dep_key": "P_T2_pos",
+    "pred_key": "P1_RD",
+    "shared_terms": [],
+    "is_circular": false,
+    "cell": "T2_vs_P1"
+  },
+  "verdict": "AMBIGUOUS — some non-circular cells support; others don't"
+}

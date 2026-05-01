@@ -1,0 +1,57 @@
+{
+  "F76_H_EL_median": {
+    "value": 0.9685208240372034,
+    "locked": 0.9685,
+    "tolerance": 0.0005,
+    "match": true,
+    "interpretation": "Locked median H_EL from _phi_universal_xtrad_sizing"
+  },
+  "F67_C_Omega": {
+    "value": 0.7985335304465797,
+    "locked": 0.7985,
+    "tolerance": 0.0005,
+    "match": true,
+    "interpretation": ""
+  },
+  "F75_invariant": {
+    "value": 5.31644412745751,
+    "locked": 5.75,
+    "tolerance": 0.5,
+    "match": true,
+    "interpretation": ""
+  },
+  "F79_D_max": {
+    "value": 3.8388340980204,
+    "locked": 3.84,
+    "tolerance": 0.01,
+    "match": true,
+    "interpretation": ""
+  },
+  "p_max_median": {
+    "value": 0.7272727272727273,
+    "locked": 0.7273,
+    "tolerance": 0.0005,
+    "match": true,
+    "interpretation": ""
+  },
+  "F81_L_mushaf_F1_det_L2": {
+    "value": 7.520870663223682,
+    "locked": 7.5929,
+    "tolerance": 0.001,
+    "match": false,
+    "interpretation": ""
+  },
+  "F82_classical_minus_nonclassical": {
+    "value": 0.033521894594263885,
+    "locked": 0.03,
+    "tolerance": 0.02,
+    "match": true,
+    "interpretation": "Small-but-positive contrast; sign matters more than magnitude"
+  },
+  "F55_max_delta": {
+    "value": 4,
+    "theorem_bound": 4,
+    "holds": true,
+    "interpretation": "Δ ≤ 2k=2 means 2 positions × 2 = max 4 L1"
+  }
+}

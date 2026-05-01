@@ -1,0 +1,10 @@
+{
+  "ok": false,
+  "changed": [
+    "DIR results\\integrity\\MANIFEST_v8.json"
+  ],
+  "pre_ts": "2026-04-26T23:39:14",
+  "post_ts": "2026-04-27T01:58:43",
+  "n_protected_files": 17,
+  "n_protected_dir_files": 36
+}

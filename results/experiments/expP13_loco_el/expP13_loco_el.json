@@ -1,0 +1,54 @@
+{
+  "experiment": "expP13_loco_el",
+  "prereg_sha256": "5021fb7860844e42a30731e6a0b257646974f07c68aa9f2674ea9cb158f9c83e",
+  "n_quran": 114,
+  "baseline_auc_in_sample": 0.9813473342181476,
+  "baseline_auc": 0.9813473342181476,
+  "loco": {
+    "poetry_jahili": {
+      "auc_in_sample": 0.9813362177795119,
+      "auc": 0.9813362177795119,
+      "n_ctrl_remaining": 4586,
+      "delta_vs_baseline": -1.1116438635716541e-05
+    },
+    "poetry_islami": {
+      "auc_in_sample": 0.981230255940745,
+      "auc": 0.981230255940745,
+      "n_ctrl_remaining": 4254,
+      "delta_vs_baseline": -0.00011707827740259358
+    },
+    "poetry_abbasi": {
+      "auc_in_sample": 0.9799925049966689,
+      "auc": 0.9799925049966689,
+      "n_ctrl_remaining": 1896,
+      "delta_vs_baseline": -0.0013548292214786706
+    },
+    "ksucca": {
+      "auc_in_sample": 0.9814013711062607,
+      "auc": 0.9814013711062607,
+      "n_ctrl_remaining": 4678,
+      "delta_vs_baseline": 5.403688811311813e-05
+    },
+    "arabic_bible": {
+      "auc_in_sample": 0.9823618718742558,
+      "auc": 0.9823618718742558,
+      "n_ctrl_remaining": 3536,
+      "delta_vs_baseline": 0.0010145376561082609
+    },
+    "hindawi": {
+      "auc_in_sample": 0.981191811606519,
+      "auc": 0.981191811606519,
+      "n_ctrl_remaining": 4645,
+      "delta_vs_baseline": -0.00015552261162854464
+    }
+  },
+  "min_loco_auc_in_sample": 0.9799925049966689,
+  "min_loco_auc": 0.9799925049966689,
+  "max_loco_auc_in_sample": 0.9823618718742558,
+  "max_loco_auc": 0.9823618718742558,
+  "mean_loco_auc_in_sample": 0.9812523388839934,
+  "mean_loco_auc": 0.9812523388839934,
+  "verdict": "ROBUST_STRONG",
+  "verdict_basis": "in_sample_auc",
+  "wall_time_s": 12.502674341201782
+}

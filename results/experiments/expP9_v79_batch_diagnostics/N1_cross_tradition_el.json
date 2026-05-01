@@ -1,0 +1,181 @@
+{
+  "experiment": "expP9_v79_batch_diagnostics",
+  "schema_version": 1,
+  "prereg_document": "experiments/expP9_v79_batch_diagnostics/PREREG.md",
+  "prereg_hash": "b7978038e65ee5718141f9440a4b53d0dddf60e4e972e260e4be45c43ebecc0f",
+  "frozen_constants": {
+    "seed": 42,
+    "min_verses": 2,
+    "n_boot_auc": 500,
+    "n_boot_renyi2": 10000,
+    "n_sim_bag": 5000,
+    "corruption_levels": [
+      0.01,
+      0.05,
+      0.1,
+      0.2,
+      0.5
+    ],
+    "el_boundary": 0.314,
+    "arabic_ctrl": [
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "non_arabic": [
+      "hebrew_tanakh",
+      "greek_nt",
+      "iliad_greek",
+      "pali_dn",
+      "pali_mn",
+      "rigveda",
+      "avestan_yasna"
+    ],
+    "band_a": [
+      15,
+      100
+    ]
+  },
+  "payload_tag": "N1_cross_tradition_el",
+  "per_corpus": {
+    "poetry_jahili": {
+      "n_quran": 114,
+      "n_ctrl": 133,
+      "auc": 0.9817306423954624,
+      "accuracy": 0.9554655870445344,
+      "w": 4.824858976352633,
+      "b": -1.6892655788247817,
+      "median_el_quran": 0.7271518777002326,
+      "median_el_ctrl": 0.08196721311475409,
+      "bootstrap_ci": {
+        "median": 0.982950798047751,
+        "ci_lo": 0.9613532185727478,
+        "ci_hi": 0.9949751022292573
+      }
+    },
+    "poetry_islami": {
+      "n_quran": 114,
+      "n_ctrl": 465,
+      "auc": 0.9824184116204489,
+      "accuracy": 0.9654576856649395,
+      "w": 5.5368245635444575,
+      "b": -1.9770866885447003,
+      "median_el_quran": 0.7271518777002326,
+      "median_el_ctrl": 0.08571428571428572,
+      "bootstrap_ci": {
+        "median": 0.9836304470854556,
+        "ci_lo": 0.9653874269005849,
+        "ci_hi": 0.9945783814374646
+      }
+    },
+    "poetry_abbasi": {
+      "n_quran": 114,
+      "n_ctrl": 2823,
+      "auc": 0.9822572726538272,
+      "accuracy": 0.9662921348314607,
+      "w": 6.942148601013043,
+      "b": -2.3884299115699887,
+      "median_el_quran": 0.7271518777002326,
+      "median_el_ctrl": 0.08108108108108109,
+      "bootstrap_ci": {
+        "median": 0.9828212490134298,
+        "ci_lo": 0.9658612524936144,
+        "ci_hi": 0.9936069861600512
+      }
+    },
+    "ksucca": {
+      "n_quran": 114,
+      "n_ctrl": 41,
+      "auc": 0.9751818570817288,
+      "accuracy": 0.9225806451612903,
+      "w": 4.53213454081744,
+      "b": -1.8183020753132864,
+      "median_el_quran": 0.7271518777002326,
+      "median_el_ctrl": 0.13793103448275862,
+      "bootstrap_ci": {
+        "median": 0.97566324347454,
+        "ci_lo": 0.9520539152759948,
+        "ci_hi": 0.9933782627299956
+      }
+    },
+    "arabic_bible": {
+      "n_quran": 114,
+      "n_ctrl": 1183,
+      "auc": 0.9783148700152748,
+      "accuracy": 0.9676175790285274,
+      "w": 6.829977851974445,
+      "b": -2.4149888649348776,
+      "median_el_quran": 0.7271518777002326,
+      "median_el_ctrl": 0.12121212121212122,
+      "bootstrap_ci": {
+        "median": 0.9799980721033353,
+        "ci_lo": 0.9572439790304164,
+        "ci_hi": 0.9935321847518205
+      }
+    },
+    "hindawi": {
+      "n_quran": 114,
+      "n_ctrl": 74,
+      "auc": 0.9911095305832147,
+      "accuracy": 0.9627659574468085,
+      "w": 4.590163933333253,
+      "b": -1.4918032822571146,
+      "median_el_quran": 0.7271518777002326,
+      "median_el_ctrl": 0.06111111111111111,
+      "bootstrap_ci": {
+        "median": 0.9912873399715505,
+        "ci_lo": 0.9744828710289237,
+        "ci_hi": 0.9999407302038882
+      }
+    },
+    "hebrew_tanakh": {
+      "skipped": "too few units",
+      "n_ctrl": 0
+    },
+    "greek_nt": {
+      "skipped": "too few units",
+      "n_ctrl": 0
+    },
+    "iliad_greek": {
+      "n_quran": 114,
+      "n_ctrl": 24,
+      "auc": 0.9780701754385965,
+      "accuracy": 0.9202898550724637,
+      "w": 4.699449272630785,
+      "b": -1.8481510796154188,
+      "median_el_quran": 0.7271518777002326,
+      "median_el_ctrl": 0.17210453480945284,
+      "bootstrap_ci": {
+        "median": 0.9791666666666667,
+        "ci_lo": 0.9502741228070176,
+        "ci_hi": 0.9987298976608188
+      }
+    },
+    "pali_dn": {
+      "skipped": "too few units",
+      "n_ctrl": 0
+    },
+    "pali_mn": {
+      "skipped": "too few units",
+      "n_ctrl": 0
+    },
+    "rigveda": {
+      "skipped": "too few units",
+      "n_ctrl": 0
+    },
+    "avestan_yasna": {
+      "skipped": "too few units",
+      "n_ctrl": 0
+    }
+  },
+  "aggregate": {
+    "min_auc_arabic": 0.9751818570817288,
+    "min_auc_nonarabic": 0.9780701754385965,
+    "n_corpora_arabic": 6,
+    "n_corpora_nonarabic": 1
+  },
+  "verdict": "PASS_quran_specific_cross_script"
+}

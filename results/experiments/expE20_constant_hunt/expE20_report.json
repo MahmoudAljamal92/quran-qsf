@@ -1,0 +1,263 @@
+{
+  "experiment": "E20_constant_hunt",
+  "target_constant": {
+    "name": "VL_CV_FLOOR",
+    "value": 0.1962,
+    "source": "build_pipeline_p1.py:96",
+    "usage_sites": [
+      "build_pipeline_p2.py:59",
+      "build_pipeline_p2.py:127",
+      "build_pipeline_p2.py:192",
+      "build_pipeline_p2.py:208",
+      "build_pipeline_p3.py:370",
+      "build_pipeline_p3.py:618"
+    ]
+  },
+  "A_direct_measurements": {
+    "chars_nospace": {
+      "min_surah": 110,
+      "min_val": 0.13208784677395982,
+      "p2_surah": 106,
+      "p2_val": 0.19543398999264291,
+      "p3_surah": 93,
+      "p3_val": 0.21067056948439883,
+      "count_below_target": 2,
+      "pct_below_target": 1.7543859649122806
+    },
+    "chars_all": {
+      "min_surah": 110,
+      "min_val": 0.13884631631813704,
+      "p2_surah": 93,
+      "p2_val": 0.20911709199471748,
+      "p3_surah": 106,
+      "p3_val": 0.20916929676974436,
+      "count_below_target": 1,
+      "pct_below_target": 0.8771929824561403
+    },
+    "words": {
+      "min_surah": 110,
+      "min_val": 0.15061311370164152,
+      "p2_surah": 93,
+      "p2_val": 0.19364916731037085,
+      "p3_surah": 63,
+      "p3_val": 0.2477657651106128,
+      "count_below_target": 2,
+      "pct_below_target": 1.7543859649122806
+    }
+  },
+  "B_sensitivity_sweep": {
+    "measure": "chars_nospace",
+    "grid": [
+      {
+        "floor": 0.1,
+        "n_excluded": 0,
+        "n_included": 114
+      },
+      {
+        "floor": 0.11,
+        "n_excluded": 0,
+        "n_included": 114
+      },
+      {
+        "floor": 0.12,
+        "n_excluded": 0,
+        "n_included": 114
+      },
+      {
+        "floor": 0.13,
+        "n_excluded": 0,
+        "n_included": 114
+      },
+      {
+        "floor": 0.14,
+        "n_excluded": 1,
+        "n_included": 113
+      },
+      {
+        "floor": 0.15,
+        "n_excluded": 1,
+        "n_included": 113
+      },
+      {
+        "floor": 0.16,
+        "n_excluded": 1,
+        "n_included": 113
+      },
+      {
+        "floor": 0.17,
+        "n_excluded": 1,
+        "n_included": 113
+      },
+      {
+        "floor": 0.18,
+        "n_excluded": 1,
+        "n_included": 113
+      },
+      {
+        "floor": 0.19,
+        "n_excluded": 1,
+        "n_included": 113
+      },
+      {
+        "floor": 0.2,
+        "n_excluded": 2,
+        "n_included": 112
+      },
+      {
+        "floor": 0.21,
+        "n_excluded": 2,
+        "n_included": 112
+      },
+      {
+        "floor": 0.22,
+        "n_excluded": 3,
+        "n_included": 111
+      },
+      {
+        "floor": 0.23,
+        "n_excluded": 3,
+        "n_included": 111
+      },
+      {
+        "floor": 0.24,
+        "n_excluded": 3,
+        "n_included": 111
+      },
+      {
+        "floor": 0.25,
+        "n_excluded": 3,
+        "n_included": 111
+      }
+    ],
+    "neighborhood_10pct": {
+      "lo": 0.17658000000000001,
+      "hi": 0.21582000000000004,
+      "exclusion_counts_in_nbh": [
+        1,
+        2,
+        3
+      ],
+      "stable": false
+    }
+  },
+  "C_closed_form_candidates": [
+    {
+      "expr": "1/sqrt(26)",
+      "value": 0.19611613513818404,
+      "abs_err": 8.386486181596875e-05,
+      "rel_err": 0.0004274457788785359
+    },
+    {
+      "expr": "1/(2*pi*0.81)",
+      "value": 0.1964875840640683,
+      "abs_err": 0.00028758406406828585,
+      "rel_err": 0.0014657699493796424
+    },
+    {
+      "expr": "2nd_smallest_Quran_VL_CV_chars_nospace",
+      "value": 0.19543398999264291,
+      "abs_err": 0.0007660100073570986,
+      "rel_err": 0.0039042304146641106
+    },
+    {
+      "expr": "2nd_smallest_Quran_VL_CV_words",
+      "value": 0.19364916731037085,
+      "abs_err": 0.002550832689629162,
+      "rel_err": 0.01300118598180001
+    },
+    {
+      "expr": "1/(2*e)",
+      "value": 0.18393972058572117,
+      "abs_err": 0.012260279414278846,
+      "rel_err": 0.062488682029963535
+    },
+    {
+      "expr": "ln(6)/π²",
+      "value": 0.18154319022455342,
+      "abs_err": 0.014656809775446589,
+      "rel_err": 0.07470341373825988
+    },
+    {
+      "expr": "1/(π+e/2)",
+      "value": 0.2221860025552496,
+      "abs_err": 0.025986002555249577,
+      "rel_err": 0.13244649620412627
+    },
+    {
+      "expr": "(e - 2)/(π)",
+      "value": 0.2286362070646837,
+      "abs_err": 0.0324362070646837,
+      "rel_err": 0.1653221562929852
+    },
+    {
+      "expr": "min(Quran_VL_CV_chars_nospace) + 2nd/2",
+      "value": 0.16376091838330137,
+      "abs_err": 0.032439081616698645,
+      "rel_err": 0.16533680742455986
+    },
+    {
+      "expr": "1/(phi^3)",
+      "value": 0.2360679774997897,
+      "abs_err": 0.03986797749978968,
+      "rel_err": 0.2032007008144224
+    },
+    {
+      "expr": "log10(π)/e^(1/2)",
+      "value": 0.30153664026122473,
+      "abs_err": 0.10533664026122472,
+      "rel_err": 0.5368839972539485
+    },
+    {
+      "expr": "e/(e+π)/sqrt(2)",
+      "value": 0.3280130862815875,
+      "abs_err": 0.13181308628158747,
+      "rel_err": 0.6718302053088046
+    },
+    {
+      "expr": "(sqrt(5)-1)/sqrt(π*e)",
+      "value": 0.42298033624942766,
+      "abs_err": 0.22678033624942764,
+      "rel_err": 1.1558630797626281
+    }
+  ],
+  "D_downstream_T2_sensitivity": {
+    "T2_full_band_A": 4189.957637587393,
+    "drop_sensitivity": [
+      {
+        "drop_low": 0,
+        "T2": 4189.957637587393,
+        "n": 68
+      },
+      {
+        "drop_low": 1,
+        "T2": 4070.256783110131,
+        "n": 67
+      },
+      {
+        "drop_low": 2,
+        "T2": 3978.9043277043907,
+        "n": 66
+      },
+      {
+        "drop_low": 3,
+        "T2": 3858.9363711470332,
+        "n": 65
+      },
+      {
+        "drop_low": 5,
+        "T2": 3663.76329383107,
+        "n": 63
+      }
+    ],
+    "downstream_stable": true
+  },
+  "derived_analytic": true,
+  "derived_empirical": false,
+  "verdict": "DERIVED_ANALYTIC",
+  "seed": 42,
+  "pre_registered_criteria": {
+    "falsifier": "no closed-form derivation AND downstream claim collapses outside ±10% neighborhood",
+    "neighborhood": "±10% of 0.1962 = [0.1766, 0.2158]",
+    "closed_form_tolerance": "relative error < 1e-3"
+  }
+}

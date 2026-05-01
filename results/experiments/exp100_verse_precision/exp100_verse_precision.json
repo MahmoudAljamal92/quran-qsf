@@ -1,0 +1,87 @@
+{
+  "experiment": "exp100_verse_precision",
+  "prereg_sha256": "363669f14c95cc4ab3b4b1db904ae772c5e71f0c2c4d1d8641aff430052b67ab",
+  "hypothesis": "H55",
+  "metric_A_root_density": {
+    "medians": {
+      "quran": 0.6892718339566408,
+      "poetry_jahili": 0.7402597402597402,
+      "poetry_islami": 0.7460317460317459,
+      "poetry_abbasi": 0.7597402597402598,
+      "ksucca": 0.4822265153455887,
+      "arabic_bible": 0.7266149046613918,
+      "hindawi": 0.6437603183102677
+    },
+    "ranks": {
+      "quran": 5,
+      "poetry_jahili": 3,
+      "poetry_islami": 2,
+      "poetry_abbasi": 1,
+      "ksucca": 7,
+      "arabic_bible": 4,
+      "hindawi": 6
+    },
+    "quran_rank": 5,
+    "cohens_d_vs_next": -1.005614173067526
+  },
+  "metric_B_surprisal": {
+    "medians": {
+      "quran": 3.9683693813861467,
+      "poetry_jahili": 1.8242223036113752,
+      "poetry_islami": 2.9534123616240833,
+      "poetry_abbasi": 4.799042561917865,
+      "ksucca": 3.8771322154863905,
+      "arabic_bible": 4.924876066533553,
+      "hindawi": 2.148753314270915
+    },
+    "ranks": {
+      "quran": 5,
+      "poetry_jahili": 1,
+      "poetry_islami": 3,
+      "poetry_abbasi": 6,
+      "ksucca": 4,
+      "arabic_bible": 7,
+      "hindawi": 2
+    },
+    "quran_rank": 5,
+    "cohens_d_vs_next": 5.232945115827824
+  },
+  "corpus_stats": {
+    "quran": {
+      "n_units": 114,
+      "n_verses": 6236
+    },
+    "poetry_jahili": {
+      "n_units": 133,
+      "n_verses": 2561
+    },
+    "poetry_islami": {
+      "n_units": 465,
+      "n_verses": 10295
+    },
+    "poetry_abbasi": {
+      "n_units": 2823,
+      "n_verses": 76499
+    },
+    "ksucca": {
+      "n_units": 41,
+      "n_verses": 1967
+    },
+    "arabic_bible": {
+      "n_units": 1183,
+      "n_verses": 31083
+    },
+    "hindawi": {
+      "n_units": 74,
+      "n_verses": 1793
+    }
+  },
+  "audit": {
+    "a2_root_coverage": 0.6218594099756081,
+    "failures": [
+      "A2: root coverage 0.6219 < 0.95"
+    ]
+  },
+  "verdict": "FAIL_audit_A2",
+  "wall_time_s": 201.7086980342865
+}

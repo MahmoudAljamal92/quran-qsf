@@ -1,0 +1,178 @@
+{
+  "experiment": "E18_reed_solomon",
+  "FINAL_verdict": "NULL_UTF8_CONFOUND",
+  "FINAL_interpretation": "The primary UTF-8 pipeline showed Fisher p ≈ 0 at (n=31, nsym∈{8, 12}), but the SAME pipeline run on a compact 32-letter alphabet (every Arabic consonant mapped to a distinct byte, UTF-8 positional structure stripped) yields p = 0.63 at (31, 8) and p = 0.15 at (31, 12) — both NULL.\n\nThe signal was therefore **not** Reed–Solomon parity structure in the content.  It was driven by the lead-byte / continuation-byte interleave of UTF-8-encoded Arabic, which random byte-level shuffles destroy.  The pre-registered E18 claim is cleanly closed as NULL_UTF8_CONFOUND — the Reed–Solomon self-correcting-code claim is retired.",
+  "pre_registered_falsifier": "Bonferroni-corrected min fisher_p > 0.05 ⇒ NULL_NO_RS_STRUCTURE",
+  "decisive_contrasts": [
+    {
+      "n": 31,
+      "nsym": 8,
+      "p_quran_utf8": 0.0,
+      "p_quran_compact": 0.6325758534886351,
+      "p_poetry_utf8": 0.16000000000000003,
+      "B_kills_signal": true,
+      "C_agrees_signal": false
+    },
+    {
+      "n": 31,
+      "nsym": 12,
+      "p_quran_utf8": 0.0,
+      "p_quran_compact": 0.1541139204232007,
+      "p_poetry_utf8": 0.135,
+      "B_kills_signal": true,
+      "C_agrees_signal": false
+    }
+  ],
+  "arms_summary": {
+    "A_quran_utf8": {
+      "configs": [
+        {
+          "n": 15,
+          "nsym": 4,
+          "n_units": 114,
+          "fisher_chi2": 114.88345974444101,
+          "fisher_df": 228,
+          "fisher_p": 0.9999999999686009,
+          "n_sig_at_0.05": 1,
+          "n_sig_at_0.01": 0,
+          "runtime_sec": 31.104891300201416
+        },
+        {
+          "n": 31,
+          "nsym": 8,
+          "n_units": 114,
+          "fisher_chi2": 518.9185750381102,
+          "fisher_df": 228,
+          "fisher_p": 0.0,
+          "n_sig_at_0.05": 35,
+          "n_sig_at_0.01": 11,
+          "runtime_sec": 128.07218718528748
+        },
+        {
+          "n": 31,
+          "nsym": 12,
+          "n_units": 114,
+          "fisher_chi2": 455.05690683158576,
+          "fisher_df": 228,
+          "fisher_p": 0.0,
+          "n_sig_at_0.05": 25,
+          "n_sig_at_0.01": 13,
+          "runtime_sec": 171.66733813285828
+        },
+        {
+          "n": 63,
+          "nsym": 16,
+          "n_units": 114,
+          "fisher_chi2": 243.200032571536,
+          "fisher_df": 228,
+          "fisher_p": 0.23341911050933062,
+          "n_sig_at_0.05": 5,
+          "n_sig_at_0.01": 3,
+          "runtime_sec": 480.9494278430939
+        }
+      ]
+    },
+    "B_quran_compact": {
+      "configs": [
+        {
+          "n": 15,
+          "nsym": 4,
+          "n_units": 114,
+          "fisher_chi2": 224.11470222771908,
+          "fisher_df": 228,
+          "fisher_p": 0.5602957203940968,
+          "n_sig_at_0.05": 5,
+          "n_sig_at_0.01": 2,
+          "runtime_sec": 34.51748824119568
+        },
+        {
+          "n": 31,
+          "nsym": 8,
+          "n_units": 114,
+          "fisher_chi2": 220.18997597766514,
+          "fisher_df": 228,
+          "fisher_p": 0.6325758534886351,
+          "n_sig_at_0.05": 4,
+          "n_sig_at_0.01": 0,
+          "runtime_sec": 138.8451325893402
+        },
+        {
+          "n": 31,
+          "nsym": 12,
+          "n_units": 114,
+          "fisher_chi2": 249.75277379453146,
+          "fisher_df": 228,
+          "fisher_p": 0.1541139204232007,
+          "n_sig_at_0.05": 10,
+          "n_sig_at_0.01": 2,
+          "runtime_sec": 212.54483485221863
+        },
+        {
+          "n": 63,
+          "nsym": 16,
+          "n_units": 114,
+          "fisher_chi2": 269.3321320827958,
+          "fisher_df": 228,
+          "fisher_p": 0.031416533029259286,
+          "n_sig_at_0.05": 5,
+          "n_sig_at_0.01": 3,
+          "runtime_sec": 452.8550715446472
+        }
+      ]
+    },
+    "C_poetry_utf8": {
+      "configs": [
+        {
+          "n": 15,
+          "nsym": 4,
+          "n_units": 1,
+          "fisher_chi2": 5.800844187499332,
+          "fisher_df": 2,
+          "fisher_p": 0.05500000000000005,
+          "n_sig_at_0.05": 0,
+          "n_sig_at_0.01": 0,
+          "runtime_sec": 0.3071913719177246
+        },
+        {
+          "n": 31,
+          "nsym": 8,
+          "n_units": 1,
+          "fisher_chi2": 3.6651629274966204,
+          "fisher_df": 2,
+          "fisher_p": 0.16000000000000003,
+          "n_sig_at_0.05": 0,
+          "n_sig_at_0.01": 0,
+          "runtime_sec": 1.0089654922485352
+        },
+        {
+          "n": 31,
+          "nsym": 12,
+          "n_units": 1,
+          "fisher_chi2": 4.004961001087415,
+          "fisher_df": 2,
+          "fisher_p": 0.135,
+          "n_sig_at_0.05": 0,
+          "n_sig_at_0.01": 0,
+          "runtime_sec": 1.5457041263580322
+        },
+        {
+          "n": 63,
+          "nsym": 16,
+          "n_units": 1,
+          "fisher_chi2": 0.37265915638298697,
+          "fisher_df": 2,
+          "fisher_p": 0.83,
+          "n_sig_at_0.05": 0,
+          "n_sig_at_0.01": 0,
+          "runtime_sec": 4.104516983032227
+        }
+      ],
+      "note": "Chunker yielded only 1 unit; included for completeness."
+    }
+  },
+  "notes": [
+    "Arm A (Quran UTF-8) is the primary pre-registered pipeline.",
+    "Arm B (Quran compact alphabet, 32 letters mapped 1..32) strips UTF-8 positional byte-pair structure while preserving every semantic content byte.",
+    "Arm C (poetry.txt UTF-8 in surah-size chunks) is a cross-corpus control.  The chunker split on '\\n\\n' which turned out to be absent from the poetry file layout → only 1 unit produced; arm C is therefore informational only."
+  ]
+}

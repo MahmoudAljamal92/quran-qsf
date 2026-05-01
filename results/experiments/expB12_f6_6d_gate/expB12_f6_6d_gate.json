@@ -1,0 +1,162 @@
+{
+  "experiment": "expB12_f6_6d_gate",
+  "task_id": "B12",
+  "schema_version": 1,
+  "title": "F6 length-coherence (lag-1 Spearman of verse-length series) as candidate 6th Phi_M channel under exp53's pre-registered gate.",
+  "prereg": {
+    "extra_metric": "f6_lag1_spearman_vlen",
+    "ridge_lambda": 1e-06,
+    "gate_formula": "T2_6D >= 5D_T2 * 6/5",
+    "gate_threshold": 4268.807345405562,
+    "five_d_T2_baseline": 3557.339454504635,
+    "band_A": [
+      15,
+      100
+    ],
+    "control_pool": [
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "permutation_n": 10000,
+    "permutation_seed": 42,
+    "decision_rule": {
+      "PROMOTE_6TH_CHANNEL": "T2_6D >= gate AND perm_p <= 0.01 AND per_dim_gain >= 1.0",
+      "GATE_PASS_UNCERTAIN": "T2_6D >= gate AND perm_p > 0.01",
+      "SIGNIFICANT_BUT_REDUNDANT": "T2_6D >= T2_5D AND perm_p <= 0.05 AND gate FAILED",
+      "REJECT_6TH_CHANNEL": "otherwise"
+    },
+    "source_exp": "exp24_F6_autocorr (lag-1 Spearman, locked d ~ 0.877)",
+    "template_exp": "exp53_ar1_6d_gate (byte-for-byte gate clone)"
+  },
+  "row_counts": {
+    "n_quran_bandA": 68,
+    "n_ctrl_bandA": 2509,
+    "n_quran_dropped_nan_6th": 0,
+    "n_ctrl_dropped_nan_6th": 1443,
+    "ctrl_per_corpus_nan": {
+      "poetry_jahili": 65,
+      "poetry_islami": 211,
+      "poetry_abbasi": 1167,
+      "ksucca": 0,
+      "arabic_bible": 0,
+      "hindawi": 0
+    }
+  },
+  "row_alignment_check": {
+    "quran_5d_matches_phase06": true,
+    "ctrl_5d_matches_phase06": true
+  },
+  "five_d_sanity": {
+    "T2": 3557.3394545046353,
+    "F": 710.3626980606927,
+    "df1": 5,
+    "df2": 2571,
+    "p_F_tail": 0.0,
+    "scipy_log10_p_F_tail": -Infinity,
+    "highprec_log10_p_F_tail": -480.2531098456136,
+    "highprec_dps": 80,
+    "locked_T2": 3557.339454504635,
+    "abs_delta_vs_locked": 4.547473508864641e-13
+  },
+  "six_d_hotelling": {
+    "T2": 2303.106444677987,
+    "F": 382.1556188386472,
+    "df1": 6,
+    "df2": 1127,
+    "p_F_tail": 1.5730036604759103e-267,
+    "scipy_log10_p_F_tail": -266.80327026674564,
+    "highprec_log10_p_F_tail": null,
+    "highprec_dps": null,
+    "n_quran": 68,
+    "n_ctrl": 1066,
+    "p_dim": 6
+  },
+  "permutation_test": {
+    "p_value": 9.999000099990002e-05,
+    "observed_T2": 2303.106444677987,
+    "n_perm": 10000,
+    "n_perm_ge_observed": 0,
+    "null_mean_T2": 6.03355422056587,
+    "null_std_T2": 3.614036154716847,
+    "null_p95_T2": 12.884276722709043,
+    "null_p99_T2": 17.92118353871526
+  },
+  "f6_diagnostic": {
+    "quran_mean": 0.15800888445261413,
+    "quran_median": 0.17498877766856646,
+    "quran_std": 0.18977035234851286,
+    "ctrl_mean": -0.037001087243440034,
+    "ctrl_median": -0.04308035343230196,
+    "ctrl_std": 0.23680759679761504,
+    "cohen_d": 0.8323562522375649,
+    "mw_p_greater": 1.6910059414760584e-12,
+    "n_quran": 68,
+    "n_ctrl": 1066
+  },
+  "gate_verdict": {
+    "verdict": "REJECT_6TH_CHANNEL",
+    "gate_threshold": 4268.807345405562,
+    "observed_T2_6D": 2303.106444677987,
+    "observed_gate_ratio_6D_over_5D": 0.6474238610435613,
+    "marginal_delta_T2_6D_minus_5D": -1254.2330098266484,
+    "per_dim_T2_5D": 711.467890900927,
+    "per_dim_T2_6D": 383.8510741129978,
+    "per_dim_gain_ratio": 0.5395198842029677,
+    "permutation_p_value": 9.999000099990002e-05
+  },
+  "subset_fair_head_to_head": {
+    "comment": "F6 is structurally undefined on constant verse-length series (classical Arabic poetry has ~fixed meter). The 6-D matrix drops every poetry NaN row, so the gate above compares 5-D-on-FULL-pool vs 6-D-on-NON-POETRY-pool. This entry recomputes the 5-D T^2 on the SAME (F6-defined) subset, which is the fair head-to-head: does F6 add information CONDITIONAL on the 5 baseline channels for the units where F6 is defined?",
+    "n_quran_subset": 68,
+    "n_ctrl_subset": 1066,
+    "T2_5D_subset": 2293.517521769673,
+    "T2_6D_subset": 2303.106444677987,
+    "delta_T2_6D_minus_5D_subset": 9.588922908314089,
+    "per_dim_T2_5D_subset": 458.7035043539346,
+    "per_dim_T2_6D_subset": 383.8510741129978,
+    "per_dim_gain_ratio_subset": 0.8368174004984693,
+    "interpretation": "If per_dim_gain_ratio_subset >= 1.0 then F6 adds information conditional on the 5 baseline channels for non-poetry controls. If < 1.0, F6 is redundant with the 5 channels on this subset. Either way, F6 cannot be promoted as a UNIVERSAL 6th channel because it is undefined on poetry; only as a non-poetry-restricted channel."
+  },
+  "centroids": {
+    "mu_QURAN_bandA_6D": [
+      0.7074338713106889,
+      0.4823916757649949,
+      0.08596828788694996,
+      0.8671010277271484,
+      -0.482402750487046,
+      0.15800888445261413
+    ],
+    "mu_CTRL_POOL_bandA_6D": [
+      0.12815989439425907,
+      0.36388605143457214,
+      0.03230515331329449,
+      0.9406780217534173,
+      -2.254092459020158,
+      -0.03700108724344003
+    ],
+    "mu_CTRL_POOL_5D_locked": [
+      0.11080323011588314,
+      0.20034806488234075,
+      0.027711546452416184,
+      0.8251763392447035,
+      -2.4449410750637703
+    ],
+    "feature_cols_6D": [
+      "EL",
+      "VL_CV",
+      "CN",
+      "H_cond",
+      "T",
+      "f6_lag1_spearman_vlen"
+    ]
+  },
+  "reference": {
+    "input_checkpoint": "phase_06_phi_m.pkl",
+    "source_experiment": "exp24_F6_autocorr",
+    "template_experiment": "exp53_ar1_6d_gate"
+  },
+  "runtime_seconds": 5.48
+}

@@ -1,0 +1,137 @@
+{
+  "experiment": "expX3_prose_extremum_brown",
+  "task_id": "X3",
+  "title": "Brown-combined Quran-at-prose-extremum theorem from 5 internal witnesses (H5 scale hierarchy, H6 AR(1), H8 Benford, H14 fractal dim, H19 Hurst ladder).",
+  "method": "Pull or re-derive a one-sided Quran-extreme p-value per witness from existing experiment JSONs. Compute Fisher's combined chi^2 (independence) and Brown's correlation-corrected combined chi^2 (Kost-McDermott).",
+  "witnesses": [
+    {
+      "id": "W1_H6_AR1_phi1",
+      "source": "exp79_ar1_decorrelation.quran_vs_ctrl.p_phi1",
+      "raw_p": 8.187118971946896e-23,
+      "directional_p_quran_extreme": 8.187118971946896e-23,
+      "effect_size": 0.6699,
+      "polarity": "Quran phi_1 > 0 ; poetry phi_1 = 0",
+      "interpretation": "Quran has nonzero AR(1) on verse-length series; all 3 poetry corpora have phi_1 = 0 exactly. Strong prose-vs-poetry directional signal."
+    },
+    {
+      "id": "W2_H8_Benford_KL",
+      "source": "exp71_benford.per_corpus_raw[*].first_digit.kl_divergence",
+      "raw_p": 0.2857142857142857,
+      "directional_p_quran_extreme": 0.2857142857142857,
+      "effect_size": -0.008276,
+      "quran_KL": 0.014611,
+      "ctrl_KLs": {
+        "poetry_jahili": 2.55139,
+        "poetry_islami": 2.582909,
+        "poetry_abbasi": 2.622631,
+        "ksucca": 0.006335,
+        "arabic_bible": 0.269514,
+        "hindawi": 0.525664
+      },
+      "polarity": "Quran KL is lower than ARABIC_CTRL_POOL (more Benford-conforming)",
+      "interpretation": "Quran first-digit KL = 0.0146 vs poetry KL ~ 2.5. Rank-p is computed under the per-corpus rank null."
+    },
+    {
+      "id": "W3_H14_FractalDim",
+      "source": "exp75_fractal_dimension.per_corpus[*].(fractal_dim_mean|D2_mean|...)",
+      "raw_p": NaN,
+      "directional_p_quran_extreme": NaN,
+      "effect_size": NaN,
+      "quran_FD": NaN,
+      "ctrl_FDs": {
+        "poetry_jahili": NaN,
+        "poetry_islami": NaN,
+        "poetry_abbasi": NaN,
+        "ksucca": NaN,
+        "arabic_bible": NaN,
+        "hindawi": NaN
+      },
+      "polarity": "Quran fractal dim higher than poetry (closer to 1.0)",
+      "interpretation": "Per-corpus fractal-dim scalar; rank-p one-sided upper. NOTE: if exp75 stores fractal data under non-standard keys this may return NaN; check the JSON dict and update the _fd extractor."
+    },
+    {
+      "id": "W4_H19_Hurst_H_delta",
+      "source": "exp68_hurst_ladder.T5_cohen_d.H_delta[poetry_*]",
+      "raw_p": 2.1947744746173897e-36,
+      "directional_p_quran_extreme": 2.1947744746173897e-36,
+      "effect_size": -1.6173,
+      "polarity": "Quran H_delta is anti-persistent (~0.29) vs poetry persistent (~0.50+). Cohen d Quran-poetry is negative; large |d| means Quran is at the prose-side extremum.",
+      "interpretation": "z-test approximation from per-corpus Cohen d (n_q ~ 86, n_c ~ 200); one-sided Quran-lower-than-poetry p."
+    },
+    {
+      "id": "W5_H5_ScaleHierarchy_dword",
+      "source": "exp85_scale_hierarchy.per_corpus[*].d_word_mean",
+      "raw_p": 0.14285714285714285,
+      "directional_p_quran_extreme": 0.14285714285714285,
+      "effect_size": NaN,
+      "quran_d_word_mean": 0.04549,
+      "ctrl_d_word_means": {
+        "poetry_jahili": 0.041487,
+        "poetry_islami": 0.039161,
+        "poetry_abbasi": 0.036321,
+        "ksucca": 0.010692,
+        "arabic_bible": 0.020838,
+        "hindawi": 0.022767
+      },
+      "polarity": "d_word > d_verse > d_letter is the prose-text hierarchy. Quran's d_word is among the highest in the Arabic pool.",
+      "interpretation": "Rank-p one-sided upper. Note: this is a less-stringent witness than W1-W4 because the rank-N is only 6."
+    }
+  ],
+  "k_witnesses_total": 5,
+  "k_witnesses_valid": 4,
+  "rho_matrix_estimated": [
+    [
+      1.0,
+      -0.37062465833055064,
+      0.0,
+      -0.37062465833055064,
+      0.37062465833055064
+    ],
+    [
+      -0.37062465833055064,
+      1.0,
+      0.0,
+      0.8571428571428573,
+      0.3214285714285715
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      -0.37062465833055064,
+      0.8571428571428573,
+      0.0,
+      1.0,
+      0.4642857142857144
+    ],
+    [
+      0.37062465833055064,
+      0.3214285714285715,
+      0.0,
+      0.4642857142857144,
+      1.0
+    ]
+  ],
+  "fisher_combined": {
+    "chi2": 272.32510449179784,
+    "df": 8,
+    "p": 3.1548587785197574e-54,
+    "log10_p": -53.50102007638253
+  },
+  "brown_combined": {
+    "chi2_scaled": 164.9063478238523,
+    "f": 4.844396498269049,
+    "p": 6.655838752107826e-34,
+    "log10_p": -33.176797208039154
+  },
+  "verdict": "PROSE_EXTREMUM_BROWN_PASS",
+  "interpretation": [
+    "Fisher assumes the witnesses are statistically independent — an optimistic null. Brown corrects for the empirical correlation between witnesses' underlying per-corpus scalars.",
+    "If Brown-combined p < 0.001, the joint Quran-extremum claim survives correlation-aware combination and is ~3 sigma evidence for the unified theorem.",
+    "If Fisher passes but Brown does not, the unified claim is weakened by inter-witness correlation; report each witness separately rather than as a unified theorem."
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "experiment": "exp69_madd_bridge",
+  "hypothesis": "H25 — Does madd bridge structural (Phi_M) and acoustic (pitch) layers?",
+  "schema_version": 1,
+  "data": {
+    "n_surahs_exp52": 108,
+    "n_surahs_phase06": 114,
+    "n_common": 108
+  },
+  "T3_correlations": {
+    "madd_vs_pitch": {
+      "r": 0.207209,
+      "p": 0.03141845066922413,
+      "rho": 0.253404,
+      "p_rho": 0.008141577756844303,
+      "n": 108
+    },
+    "madd_vs_pitch_var": {
+      "r": 0.555346,
+      "p": 4.437376336611434e-10,
+      "rho": 0.611268,
+      "p_rho": 2.1227414738809433e-12,
+      "n": 108
+    },
+    "madd_vs_phi_m": {
+      "r": -0.321557,
+      "p": 0.0006902523846632204,
+      "rho": -0.220254,
+      "p_rho": 0.021991486836622595,
+      "n": 108
+    },
+    "madd_vs_duration": {
+      "r": 0.943317,
+      "p": 1.3770665499411436e-52,
+      "rho": 0.913188,
+      "p_rho": 4.024130475984428e-43,
+      "n": 108
+    },
+    "madd_full_vs_pitch": {
+      "r": 0.211716,
+      "p": 0.0278346111423509,
+      "rho": 0.286366,
+      "p_rho": 0.002659614271124585,
+      "n": 108
+    },
+    "madd_full_vs_phi_m": {
+      "r": -0.330683,
+      "p": 0.00047327408279824865,
+      "rho": -0.25407,
+      "p_rho": 0.007970059980317384,
+      "n": 108
+    }
+  },
+  "T4_partial": {
+    "madd_phim_given_pitchvar": {
+      "r": -0.259582,
+      "p": 0.006669111115663762,
+      "n": 108
+    },
+    "madd_phim_given_duration": {
+      "r": -0.092441,
+      "p": 0.3413319148873124,
+      "n": 108
+    }
+  },
+  "T5_falsifier": {
+    "r_madd_pitch": 0.207209,
+    "threshold": 0.2,
+    "triggered": false
+  },
+  "verdict": {
+    "verdict": "PARTIAL_BRIDGE",
+    "prereg": {
+      "BRIDGE_CONFIRMED": "|r(madd,pitch)| ≥ 0.4 AND |r(madd,Mah)| ≥ 0.3",
+      "PARTIAL_BRIDGE": "|r(madd,Mah)| ≥ 0.3",
+      "FALSIFIED": "|r(madd,pitch)| < 0.2"
+    }
+  },
+  "runtime_seconds": 0.31
+}

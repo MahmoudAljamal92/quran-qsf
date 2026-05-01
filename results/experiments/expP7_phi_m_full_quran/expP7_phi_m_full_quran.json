@@ -1,0 +1,155 @@
+{
+  "experiment": "expP7_phi_m_full_quran",
+  "schema_version": 1,
+  "prereg_document": "experiments/expP7_phi_m_full_quran/PREREG.md",
+  "prereg_hash": "dd6a8d36774553c9d6b61f63efd9720e3f517e43f3fddc2f2c2809a2ca0b5b26",
+  "frozen_constants": {
+    "seed": 42,
+    "svm_C": 1.0,
+    "n_boot": 500,
+    "band_B": [
+      2,
+      14
+    ],
+    "band_A": [
+      15,
+      100
+    ],
+    "band_C": [
+      101
+    ],
+    "min_verses": 2,
+    "arabic_ctrl": [
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "locked_t2_band_a": 3557.34,
+    "locked_t2_tol": 5.0
+  },
+  "n_quran_units": 114,
+  "n_ctrl_units": 4719,
+  "n_total_dropped_nonfinite": 0,
+  "overall": {
+    "T2": 3685.451465159369,
+    "F_tail_log10_p": null,
+    "auc": 0.993228196577479,
+    "accuracy": 0.9664804469273743,
+    "w": [
+      5.238876016863266,
+      5.8639699045570755,
+      0.49931000516879376,
+      -0.9451012462890134,
+      0.9147695040839672
+    ],
+    "b": -1.8146355324839272,
+    "bootstrap_ci": {
+      "median": 0.9935507076655402,
+      "ci_lo": 0.9894961298669432,
+      "ci_hi": 0.9964768684266291
+    }
+  },
+  "per_band": {
+    "B_short": {
+      "n_quran": 28,
+      "n_ctrl": 2068,
+      "T2": 559.2128696048535,
+      "F_tail_log10_p": null,
+      "auc": 0.9846815418623929,
+      "accuracy": 0.9222328244274809,
+      "w": [
+        0.9077522597141297,
+        6.163378517281991,
+        -0.32788454928243116,
+        -2.115825827368541,
+        3.1162489425692357
+      ],
+      "b": 2.8837843143163617,
+      "bootstrap_ci": {
+        "median": 0.9865985078751036,
+        "ci_lo": 0.9760547630560928,
+        "ci_hi": 0.9951061239292622
+      }
+    },
+    "A_paper": {
+      "n_quran": 68,
+      "n_ctrl": 2509,
+      "T2": 3557.7938125185647,
+      "F_tail_log10_p": null,
+      "auc": 0.9975734414929782,
+      "accuracy": 0.9837019790454016,
+      "w": [
+        5.707373465554435,
+        5.253648700949785,
+        0.03188057715819159,
+        -1.9002813126885876,
+        1.157040102357533
+      ],
+      "b": -0.21464457543203821,
+      "bootstrap_ci": {
+        "median": 0.9979544229010855,
+        "ci_lo": 0.9960838041872787,
+        "ci_hi": 0.9992712997913394
+      }
+    },
+    "C_long": {
+      "n_quran": 18,
+      "n_ctrl": 142,
+      "T2": 1908.7901535657095,
+      "F_tail_log10_p": null,
+      "auc": 1.0,
+      "accuracy": 0.9875,
+      "w": [
+        1.2825116330143533,
+        -0.005665682883305712,
+        0.11898267392934371,
+        -1.2970822140865925,
+        1.6833282058327335
+      ],
+      "b": 4.055873557378655,
+      "bootstrap_ci": {
+        "median": 1.0,
+        "ci_lo": 0.9999999999999999,
+        "ci_hi": 1.0
+      }
+    }
+  },
+  "band_a_sanity_lock": {
+    "locked_expected_T2": 3557.34,
+    "tol": 5.0,
+    "observed_T2": 3557.7938125185647,
+    "within_tol": true
+  },
+  "generalisation_bandA_trained": {
+    "train": {
+      "auc_on_bandA": NaN,
+      "w": [
+        5.707373465554435,
+        5.253648700949785,
+        0.03188057715819159,
+        -1.9002813126885876,
+        1.157040102357533
+      ],
+      "b": -0.21464457543203821
+    },
+    "evaluated": {
+      "B_short": {
+        "n_quran": 28,
+        "n_ctrl": 2068,
+        "auc_held_out": 0.9793451229621443,
+        "accuracy_held_out": 0.8692748091603053
+      },
+      "C_long": {
+        "n_quran": 18,
+        "n_ctrl": 142,
+        "auc_held_out": 0.9929577464788732,
+        "accuracy_held_out": 0.96875
+      }
+    }
+  },
+  "verdict": "PASS_full_quran_5D",
+  "runtime_seconds": 100.4
+}

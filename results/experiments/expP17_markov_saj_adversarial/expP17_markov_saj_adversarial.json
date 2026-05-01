@@ -1,0 +1,60 @@
+{
+  "experiment": "expP17_markov_saj_adversarial",
+  "prereg_sha256": "b933b046a23b01618069fc34fb1fc1b2a8f52a42b348d5fb005dd5f26c193d20",
+  "n_train_verses_poetry": 89355,
+  "n_train_verses_quran": 6236,
+  "markov_order": 3,
+  "n_samples_per_mode": 100,
+  "target_verses_per_sample": 50,
+  "target_words_per_verse": 10,
+  "training_corpus_pooled_EL": 0.09638068804977953,
+  "results_per_mode": {
+    "poetry_free": {
+      "n_samples": 100,
+      "mean": 0.07571428571428572,
+      "median": 0.061224489795918366,
+      "max": 0.20408163265306123,
+      "min": 0.0,
+      "std": 0.0402240056025874,
+      "p_above_0.314": 0.0,
+      "p_above_0.40": 0.0,
+      "p_above_0.55": 0.0
+    },
+    "poetry_saj_attack": {
+      "n_samples": 100,
+      "mean": 1.0,
+      "median": 1.0,
+      "max": 1.0,
+      "min": 1.0,
+      "std": 0.0,
+      "p_above_0.314": 1.0,
+      "p_above_0.40": 1.0,
+      "p_above_0.55": 1.0
+    },
+    "quran_free": {
+      "n_samples": 100,
+      "mean": 0.163469387755102,
+      "median": 0.16326530612244897,
+      "max": 0.2653061224489796,
+      "min": 0.0,
+      "std": 0.053603542906372544,
+      "p_above_0.314": 0.0,
+      "p_above_0.40": 0.0,
+      "p_above_0.55": 0.0
+    },
+    "quran_saj_attack": {
+      "n_samples": 100,
+      "mean": 1.0,
+      "median": 1.0,
+      "max": 1.0,
+      "min": 1.0,
+      "std": 0.0,
+      "p_above_0.314": 1.0,
+      "p_above_0.40": 1.0,
+      "p_above_0.55": 1.0
+    }
+  },
+  "max_EL_poetry_markov": 1.0,
+  "verdict": "EL_LAW_FALSIFIED",
+  "wall_time_s": 1042.458551645279
+}

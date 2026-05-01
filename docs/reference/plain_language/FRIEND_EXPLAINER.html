@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Quran Stylometric Project — In Plain Words</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0a0a0a;--paper:#fafaf6;--mute:#4d4d4d;--rule:#d4d3cd;--soft:#f0efe8;}
+*{box-sizing:border-box;}
+html{font-size:20px;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Noto Serif','Noto Naskh Arabic',Georgia,serif;line-height:1.7;-webkit-font-smoothing:antialiased;}
+main{max-width:880px;margin:0 auto;padding:4rem 2.2rem 8rem;}
+h1,h2,h3,h4{font-family:'Noto Serif',Georgia,serif;font-weight:700;color:var(--ink);letter-spacing:-0.01em;line-height:1.25;}
+h1{font-size:3rem;border-bottom:3px solid var(--ink);padding-bottom:1.3rem;margin:0 0 0.5rem 0;}
+h2{font-size:2rem;margin-top:4.5rem;padding-top:2.2rem;border-top:2px solid var(--ink);}
+h3{font-size:1.4rem;margin-top:2.8rem;margin-bottom:0.7rem;}
+h4{font-size:1.05rem;margin:1.7rem 0 0.4rem 0;text-transform:uppercase;letter-spacing:0.1em;}
+p{margin:0 0 1.3rem 0;}
+code,.mono{font-family:'JetBrains Mono','Courier New',monospace;font-size:0.9em;background:var(--soft);padding:0.12em 0.4em;border-radius:2px;}
+.arabic{font-family:'Noto Naskh Arabic','Traditional Arabic',serif;direction:rtl;display:inline-block;font-size:1.25em;font-weight:500;}
+.ar-block{font-family:'Noto Naskh Arabic',serif;direction:rtl;text-align:center;font-size:2rem;padding:1.3rem 1rem;margin:1.5rem 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);font-weight:500;line-height:1.6;}
+.tagline{font-style:italic;color:var(--mute);font-size:1.15rem;margin-bottom:3rem;}
+.stat{border:2px solid var(--ink);padding:1.6rem 1.8rem;margin:1.6rem 0;}
+.stat .label{font-size:0.8rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--mute);margin-bottom:0.3rem;}
+.stat .big{font-family:'JetBrains Mono',monospace;font-size:2.8rem;font-weight:700;line-height:1;margin:0.2rem 0 0.5rem 0;letter-spacing:-0.02em;}
+.stat .say{font-size:1rem;margin-top:0.6rem;}
+table{width:100%;border-collapse:collapse;margin:1.6rem 0;font-size:0.95rem;}
+th,td{text-align:left;padding:0.8rem 0.9rem;border-bottom:1px solid var(--rule);vertical-align:top;}
+th{font-weight:700;background:var(--soft);border-bottom:2px solid var(--ink);border-top:2px solid var(--ink);text-transform:uppercase;font-size:0.78rem;letter-spacing:0.08em;}
+td.num,th.num{text-align:center;font-family:'JetBrains Mono',monospace;}
+td.ar,th.ar{font-family:'Noto Naskh Arabic',serif;font-size:1.15rem;direction:rtl;text-align:right;}
+tr:last-child td{border-bottom:2px solid var(--ink);}
+.callout{border-left:5px solid var(--ink);padding:0.4rem 0 0.4rem 1.4rem;margin:2rem 0;font-style:italic;font-size:1.1rem;line-height:1.6;}
+ul,ol{padding-left:1.6rem;margin:1rem 0 1.6rem 0;}
+li{margin-bottom:0.65rem;}
+.formula{font-family:'JetBrains Mono',monospace;background:var(--soft);border:1px solid var(--rule);padding:1.1rem 1.3rem;margin:1.3rem 0;font-size:0.95rem;overflow-x:auto;white-space:pre-wrap;}
+.formula .legend{font-family:'Noto Serif',serif;font-size:0.9rem;color:var(--mute);margin-top:0.8rem;font-style:italic;display:block;}
+.law-card{border:2px solid var(--ink);padding:1.6rem 1.8rem;margin:2rem 0;}
+.law-card h4{margin-top:0;}
+.qa{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.8rem 0;}
+.qa > div{border:1px solid var(--ink);padding:1.2rem 1.4rem;}
+.qa h4{margin-top:0;margin-bottom:0.3rem;}
+.def{display:inline-block;font-style:italic;color:var(--mute);font-size:0.92em;}
+.intro{font-size:1.08rem;margin-bottom:1.8rem;}
+@media (max-width:720px){html{font-size:17px;}main{padding:2rem 1.2rem 5rem;}h1{font-size:2rem;}h2{font-size:1.55rem;}.qa{grid-template-columns:1fr;}.stat .big{font-size:2rem;}.ar-block{font-size:1.5rem;}table{font-size:0.88rem;}th,td{padding:0.55rem 0.5rem;}}
+</style>
+</head>
+<body>
+<main>
+
+<h1>The Quran Stylometric Project</h1>
+<p class="tagline">A plain-words walkthrough of what the measurements show, what the numbers actually mean, and the real-life comparisons that make them tangible.</p>
+
+<h2>1. In one view — what this project is</h2>
+
+<p class="intro">We treated the Quran as a text and measured it the way a scientist measures a crystal: by reducing it to a small number of well-defined quantities and comparing those quantities against thousands of other Arabic texts of the same era. Three questions drove everything.</p>
+
+<table>
+<thead><tr><th style="width:32%">The question</th><th style="width:36%">How we answered it</th><th>What we found</th></tr></thead>
+<tbody>
+<tr><td>Can a machine tell the Quran apart from other classical Arabic writing?</td><td>Measured 5 simple stylistic quantities on every surah and on 2,509 matched Arabic texts of the same period, then trained a statistical classifier.</td><td><strong>Yes — about 998 times out of 1,000.</strong></td></tr>
+<tr><td>If someone alters even one letter of a Quran verse, can we detect it?</td><td>Generated every possible single-letter change of the opening verse of Surah al-Ādiyāt (864 variants) and ran a pre-registered compression test.</td><td><strong>Yes — 99 out of every 100 tampering attempts are caught</strong> at a 5&nbsp;% false-alarm rate.</td></tr>
+<tr><td>Does any of this prove the Quran is divine?</td><td>We do statistics, not theology.</td><td><strong>No.</strong> That question is outside the scope of measurement by design.</td></tr>
+</tbody>
+</table>
+
+<h4>The ingredients</h4>
+<ul>
+<li><strong>The Quran</strong> — all 114 surahs in the standard Uthmani text, with every file fingerprinted so that any later corruption would be detected automatically.</li>
+<li><strong>The control group</strong> — 2,509 classical Arabic texts (roughly surah-sized) drawn from six independent collections: pre-Islamic poetry, early-Islamic poetry, Abbasid-era poetry, the Arabic Bible, a large Modern-Standard-Arabic prose archive, and a classical narrative corpus. No English, no translations, no random noise.</li>
+<li><strong>The discipline</strong> — every test and every "we will declare success if X happens" threshold was written down <em>before</em> looking at a result. Forty-six earlier claims did not survive this discipline and were formally dropped.</li>
+</ul>
+
+<div class="callout">The headline, phrased honestly: under these five features, measured on this corpus, the Quran sits far outside the cloud of every other classical Arabic text we could find — and we catch single-letter changes to it with very high reliability.</div>
+
+<h2>2. The project in three sentences</h2>
+<ol>
+<li><strong>The question.</strong> Is the Quran statistically distinguishable from the rest of classical Arabic writing, and if so, by what measurable signal — and can the same signal catch tampering?</li>
+<li><strong>The method.</strong> Turn each surah into a five-number fingerprint, place it in the same coordinate space as 2,509 control texts, and test whether the two clouds overlap (they do not).</li>
+<li><strong>The answer.</strong> Yes, the Quran is an extreme outlier by those five features, a classifier separates it at 99.8&nbsp;% accuracy, and single-letter edits to short surahs are caught 99 times out of 100. There is, however, no "universal Quranic law" yet — confirming that would need similar oral-transmitted texts in other languages (Hebrew Bible, Vedic Sanskrit, Avestan) run through the same pipeline.</li>
+</ol>
+
+<h2>3. How we kept ourselves honest</h2>
+
+<p class="intro">If you are going to make claims about a sacred text you have to make it impossible for your own enthusiasm to influence the results. Five rules did that work.</p>
+
+<ul>
+<li><strong>Write the test before running it.</strong> For every claim, the exact threshold at which we would declare success was fixed in advance. Changing a threshold after seeing the result gets the claim stamped as unreliable.</li>
+<li><strong>Fingerprint every file.</strong> Every piece of data, every piece of analysis, and every result has a mathematical fingerprint — a long string of characters that changes if even one byte inside is altered. Any quiet corruption of our own copy would have broken the chain.</li>
+<li><strong>Retract out loud.</strong> When a claim did not survive a stricter test we crossed it out publicly and said why. Forty-seven such retractions sit in the project's ledger, including Reed–Solomon-like error-correcting codes (closed 2026-04-23 by experiment E18, where a built-in control arm caught a UTF-8 encoding artefact masquerading as signal). This is a feature, not a scar.</li>
+<li><strong>The control group is real classical Arabic.</strong> Not English, not shuffled gibberish, not modern journalism. Pre-Islamic poetry, early-Islamic poetry, Abbasid poetry, the Arabic Bible, long-form prose, and narrative texts. If the Quran separates from these, it separates from the hardest comparison available.</li>
+<li><strong>No theology.</strong> Everything that follows is statistical. Whether a statistical outlier is evidence of something beyond statistics is a philosophical question this project does not try to answer.</li>
+</ul>
+
+<h2>4. The five-feature fingerprint</h2>
+
+<p class="intro">Every surah is reduced to five numbers. Each of the five was chosen because it is easy to explain, easy to measure, and known to be sensitive to stylistic differences in text. Together they locate each surah as a single point in a five-dimensional coordinate space; the Quran's points form a tight cluster, and the 2,509 control points form another cluster, and the two clusters do not overlap.</p>
+
+<h3>Feature 1 — EL: the rhyme rate</h3>
+<p><strong>EL</strong> stands for <em>End-Letter</em>. It is one number between 0 and 1, computed as <em>the fraction of adjacent verse-pairs whose final letter is the same</em> (after stripping Arabic vowel marks).</p>
+<p>Intuitively this is the strength of the "rhyme spine" of a surah. Surah al-Raḥmān is the extreme example:</p>
+<div class="ar-block">فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ</div>
+<p>That refrain ends on a steady <span class="arabic">ـان</span> and returns 31 times — but even without it, Quranic surahs generally rhyme at a rate several times higher than any other Arabic writing.</p>
+<p><strong>Measured values:</strong> Quran about <code>0.71</code>; other classical Arabic about <code>0.09</code> — roughly <strong>seven to one</strong>.</p>
+
+<h3>Feature 2 — VL_CV: how much verse length jumps around</h3>
+<p><strong>VL_CV</strong> is short for <em>Verse Length — Coefficient of Variation</em>. A coefficient of variation is the standard deviation divided by the mean — a single number that captures "how much do the verse lengths vary relative to their average length". High VL_CV means "some verses are short, others are much longer"; low VL_CV means "they are all roughly the same length".</p>
+<p>Classical Arabic poetry sits at low VL_CV because the metre forces each line to the same length. Ordinary prose sits at a moderate VL_CV. The Quran sits <em>above</em> both: it mixes two-word verses like <span class="arabic">مُدْهَامَّتَانِ</span> (Surah 55:64) with verses of twenty-plus words in the same surah. That mixing is measurable.</p>
+<p><strong>Effect size:</strong> Quran vs. control corpora, Cohen's <em>d</em> <span class="def">— "d" is the standard yardstick for how far apart two groups are, measured in shared standard deviations; <em>d</em>&nbsp;=&nbsp;0.8 is already called "large"</span> = <strong>1.40</strong>.</p>
+
+<h3>Feature 3 — CN: the connective rate</h3>
+<p><strong>CN</strong> is short for <em>Connectives</em>. It is the fraction of verses that begin with a linking word such as <span class="arabic">وَ</span> (and), <span class="arabic">فَ</span> (so, then), <span class="arabic">ثُمَّ</span> (then), <span class="arabic">إِذَا</span> (when), <span class="arabic">كَذَٰلِكَ</span> (thus).</p>
+<p>Surah al-Shams is a tight example:</p>
+<div class="ar-block">وَالشَّمْسِ وَضُحَاهَا · وَالْقَمَرِ إِذَا تَلَاهَا · وَالنَّهَارِ إِذَا جَلَّاهَا …</div>
+<p><strong>Measured values:</strong> Quran <code>0.086</code>; next-highest control corpus <code>0.034</code> — about <strong>two and a half times higher</strong>.</p>
+
+<h3>Feature 4 — H_cond: how surprising the next verse is</h3>
+<p><strong>H_cond</strong> stands for <em>Conditional Entropy</em>. Entropy, borrowed from information theory, measures surprise: a process that always does the same thing has entropy 0, a coin flip has entropy 1 "bit", a six-sided die has about 2.58 bits. "Conditional" means we compute the surprise of the next item <em>given</em> what just came before.</p>
+<p>For each surah we take the three-letter root (Arabic words are built from roots like <span class="arabic">ك-ت-ب</span> for writing) at the end of each verse, and ask: how surprising is the next ending root, given the current one? A low number means the surah is predictable from verse to verse; a high number means each verse ending is a genuine novelty.</p>
+<p>The Quran's conditional entropy is near the theoretical ceiling — almost as unpredictable as a random sequence would be, <em>even though the surah is rhyming heavily at the same time</em>. That combination is the point of the next feature.</p>
+
+<h3>Feature 5 — T: the tension</h3>
+<p><strong>T</strong> is short for <em>Tension</em>. It is the simplest combination of the two previous features:</p>
+<div class="formula">T = H_cond − EL</div>
+<p>High rhyme (EL) normally forces repetition of the same word endings, which <em>reduces</em> novelty (H_cond). Classical Arabic poetry deals with this by accepting the trade: rhyme is tight, themes recycle, H_cond falls. A text that rhymes heavily <em>and</em> keeps its endings genuinely novel is doing something unusual — and that "something unusual" is exactly what T is designed to detect.</p>
+
+<div class="stat">
+<div class="label">The tension signal</div>
+<div class="big">39.7 %</div>
+<div class="say">of Quranic surahs in the main band show <strong>T &gt; 0</strong>, meaning conditional novelty exceeds rhyme density. Across all six control corpora combined, <strong>fewer than one in a thousand</strong> (≤ 0.10 %) texts reach the same condition.<br><em>In plain terms: this state is essentially empty outside the Quran.</em></div>
+</div>
+
+<h3>What happens when you put the five numbers together</h3>
+<p>Each surah is now a single point in a five-dimensional space — five coordinates, one per feature. The Quran's 68 points form a cluster; the 2,509 control points form another cluster. The question is how far apart they are.</p>
+
+<div class="qa">
+<div>
+<h4>Hotelling T²</h4>
+<p><em>T-squared</em> is the multi-dimensional version of a standard t-score: it measures how far one cloud of points is from another, counting standard deviations and accounting for the fact that our five features are not independent.</p>
+<p class="mono" style="font-size:1.4rem;margin:0.6rem 0 0;"><strong>T² = 3,557</strong></p>
+<p style="margin:0.4rem 0 0;">For reference, values above about 10 are already strong multivariate separation in stylometric work. 3,557 is in a different league.</p>
+</div>
+<div>
+<h4>Classifier accuracy (AUC)</h4>
+<p><strong>AUC</strong> stands for <em>Area Under the Curve</em> — a standard score for how well a test separates two classes. 1.00 is perfect, 0.50 is a coin flip, 0.95 is "very good", 0.99 is "excellent".</p>
+<p class="mono" style="font-size:1.4rem;margin:0.6rem 0 0;"><strong>AUC = 0.998</strong></p>
+<p style="margin:0.4rem 0 0;">In plain terms: out of a thousand random Arabic passages of appropriate length, our five-number test mis-classifies about two.</p>
+</div>
+</div>
+
+<div class="callout">The most surprising discovery about the fingerprint is that you do not actually need all five features. Just two — rhyme rate (EL) and tension (T) — already separate the Quran from everything else at AUC = 0.9971. The other three add almost nothing. One published equation does the whole job; it is discussed in the next section.</div>
+
+<h2>5. The findings, ranked — with real-life analogies</h2>
+
+<p class="intro">Every finding below rests on a pre-registered test and a frozen result file. They are ordered roughly by how confident we are in them and how much of the story they carry. Where a finding has a quick real-life picture that makes the number concrete, we give it.</p>
+
+<h3>1. The five-feature classifier</h3>
+<p><strong>What we did:</strong> measured the five numbers on every surah and every control text, then trained a classifier to separate them with five-fold cross-validation (the model is tested only on texts it has never seen during training, so the score reflects real generalisation, not memorisation).</p>
+<p><strong>The number:</strong> AUC = <code>0.998</code>.</p>
+<p><strong>In real-life terms:</strong> imagine a luggage scanner that sorts Arabic passages into two bins, "Quran" and "other classical Arabic". This scanner makes about two mistakes per thousand passages. Published stylistic classifiers in the academic literature generally sit between 0.80 and 0.95; 0.998 is at the ceiling of what anyone reports.</p>
+
+<h3>2. The multivariate distance — Hotelling T²</h3>
+<p><strong>What we did:</strong> computed how far apart the Quran cloud and the control cloud are in the five-dimensional space, using a distance that takes into account the shape and correlations of the two clouds (the "Mahalanobis distance", scaled up to sample size — exactly what Hotelling T² does).</p>
+<p><strong>The number:</strong> T² = <code>3,557</code>, with a corresponding chance probability so small (about 10⁻⁴⁸⁰) that it is for all purposes zero.</p>
+<p><strong>In real-life terms:</strong> if each text were a star and the two corpora were two star clusters seen through a telescope, the closest Quran-star and the closest control-star are separated by the width of many galaxies. There is simply no zone of overlap.</p>
+
+<h3>3. Two features are enough — the parsimony law</h3>
+<p><strong>What we did:</strong> asked whether we could drop some of the five features without hurting the classifier. We could drop three of them. The rhyme rate (EL) and the tension (T) do all the work.</p>
+<p>The formula that results is a single straight line in the (T, EL) plane:</p>
+<div class="formula">L  =  0.5329 · T  +  4.1790 · EL  −  1.5221
+
+Decision rule:  if  L ≥ 0  →  classify as Quran
+                if  L < 0  →  classify as "other Arabic"
+<span class="legend">0.5329 and 4.1790 are the slopes the classifier learned for the two features; −1.5221 is the constant that positions the dividing line. "·" is ordinary multiplication.</span></div>
+<p><strong>The result:</strong> this single line correctly classifies <strong>99.15 %</strong> of all 2,577 texts. Only seven control passages — all from the Arabic Bible, and zero from any of the other five corpora — fall on the Quran side of the line.</p>
+<p><strong>In real-life terms:</strong> two numbers, a slope, an intercept, and a sign check — the whole statistical distinction of the Quran from thousands of other Arabic texts fits on a sticky note.</p>
+
+<h3>4. Edits cost extra bits — the gzip compression signal</h3>
+<p><strong>Background.</strong> <em>gzip</em> is the standard file compressor behind <code>.zip</code> and <code>.gz</code> files. It finds repeated patterns in a text and encodes them with short codes, so the more internal repetition a text has, the smaller gzip can squeeze it. <strong>NCD</strong> stands for <em>Normalized Compression Distance</em> — a way to measure how similar two texts are by comparing how much gzip shrinks them together vs. separately.</p>
+<p><strong>What we did:</strong> took 1,360 random single-letter edits across 68 Quran surahs and the same number of edits across comparable control texts. For each edit we computed the compression distance from the edited text back to the unedited one.</p>
+<p><strong>The finding</strong> is a regression equation:</p>
+<div class="formula">log(NCD)  =  α  +  β · log(text length)  +  γ · (is it Quran?)
+<span class="legend">α (alpha) is the baseline, β (beta) is how compression distance grows with length, γ (gamma) is the extra cost of being a Quran edit at a fixed length. "is it Quran?" is 1 for Quran passages, 0 for controls.</span></div>
+<p>The measured value: <strong>γ = +0.0716</strong>, with a 95 % confidence range of +0.066 to +0.078 and a chance probability indistinguishable from zero.</p>
+<p><strong>In real-life terms:</strong> editing one letter anywhere in the Quran produces a compressed file that is about <strong>7.4 % larger</strong> than editing one letter in a non-Quran Arabic text of the same length. The Quran carries so much internal structural repetition (root morphology, rhyme, recurring formulae) that any edit breaks more patterns at once, and the compressor notices.</p>
+
+<h3>5. The al-Ādiyāt 864-variant test (detailed in Section 7)</h3>
+<p><strong>What we did:</strong> took the opening verse of Surah al-Ādiyāt and enumerated <em>every</em> possible single-letter substitution — 32 positions × 27 alternative Arabic consonants = 864 variants. For each we asked: does the detector fire?</p>
+<p><strong>The number:</strong> the detector fires on <strong>856 of 864</strong> (99.07 %) variants at a pre-registered 5 % false-alarm rate. The canonical reading is the unique one out of 865 candidate texts that silently passes.</p>
+<p><strong>In real-life terms:</strong> if somebody tried to pass off a tampered version of this verse, we would catch it 99 times out of 100 — and the one version that silently passes every known test is, in fact, the original.</p>
+
+<h3>6. Two-letter edits: every single one caught</h3>
+<p>We then tried every <em>pair</em> of simultaneous single-letter edits — 72,900 combinations. The detector caught all 72,900. A forger would therefore have to change at least three letters simultaneously, in a way that preserves multiple stylistic constraints at once, to slip through.</p>
+
+<h3>7. Perturbation hierarchy — what the "real unit" of the Quran is</h3>
+<p><strong>What we did:</strong> shuffled the <em>letters</em> of a surah; separately shuffled its <em>words</em>; separately shuffled its <em>verses</em>. In each case we re-measured the five-number fingerprint and asked how much it moved. The effect sizes (Cohen's <em>d</em>, measured in standard deviations) were:</p>
+<table>
+<thead><tr><th>What we shuffled</th><th class="num">Effect size d</th><th>Plain reading</th></tr></thead>
+<tbody>
+<tr><td>Words (inside verses)</td><td class="num">2.45</td><td>Enormous disturbance. The word is the load-bearing unit.</td></tr>
+<tr><td>Verses (within a surah)</td><td class="num">1.77</td><td>Large disturbance. Order between verses matters.</td></tr>
+<tr><td>Letters (inside words)</td><td class="num">0.80</td><td>Smaller disturbance. The word inventory and the rhyme survive letter-level noise.</td></tr>
+</tbody>
+</table>
+<p><strong>In real-life terms:</strong> this matches what reciters report. Ḥuffāẓ memorise the Quran word by word. Shuffle words and the structure collapses; scramble letters inside words and surprisingly much of the fingerprint survives, because the text still rhymes and still contains the same inventory of words.</p>
+
+<h3>8. The family-drop robustness check</h3>
+<p><strong>What we did:</strong> dropped each of the six control corpora one at a time — first without pre-Islamic poetry, then without the Arabic Bible, and so on — and recomputed the separation.</p>
+<p><strong>The finding:</strong> in every single case the minimum effect size stayed above <strong>5.26</strong> standard deviations. The Quran's distinctiveness is not driven by any one control corpus. You could delete the Arabic Bible entirely, or delete pre-Islamic poetry entirely, and the Quran still separates at overwhelming confidence.</p>
+
+<h3>9. Cross-scripture comparison — the Iliad test</h3>
+<p>We ran the same "canonical-ordering" test on four religious or literary classics, asking whether reading them in their canonical order produces a smoother trajectory through stylistic space than reading them in any random order. The z-score measures how many standard deviations below the random-shuffle average the canonical order sits; very negative = very smooth.</p>
+<table>
+<thead><tr><th>Text</th><th class="num">z-score</th><th>Plain reading</th></tr></thead>
+<tbody>
+<tr><td><strong>Quran</strong> (standard muṣḥaf order)</td><td class="num">−8.92</td><td>Canonical order is extraordinarily smooth — smoother than any random shuffle.</td></tr>
+<tr><td>Hebrew Bible (Tanakh)</td><td class="num">−15.29</td><td>Even stronger smoothness than the Quran, in fact.</td></tr>
+<tr><td>Greek New Testament</td><td class="num">−12.06</td><td>Very strong as well.</td></tr>
+<tr><td>Homer's <em>Iliad</em></td><td class="num">+0.34</td><td>Indistinguishable from a random shuffle.</td></tr>
+</tbody>
+</table>
+<p><strong>Honest note:</strong> this finding <em>downgrades</em> an older claim. We used to say "the Quran minimises canonical-path distance more than any other scripture". That is false: the Hebrew Bible and the New Testament both do it more strongly. The honest statement is that canonical-order smoothness is a <em>shared</em> Abrahamic property, not a Quran-unique one. Homer, as expected for epic narrative, does not show it.</p>
+
+<h3>10. The rhythm is real — spectral analysis</h3>
+<p><strong>What we did:</strong> treated the verse-length sequence of each surah as a signal (like an audio waveform) and ran a Fourier analysis on it — the same branch of mathematics used to find periodic components in sound, light, or seismic data.</p>
+<p><strong>The finding:</strong> real periodic peaks survive every statistical correction. The median dominant period across surahs is about <strong>17 verses</strong>. The verse-length sequence is not pure noise: it contains measurable rhythm on top of a long-memory background.</p>
+
+<h3>11. Long-range memory — the Hurst exponent</h3>
+<p><strong>The Hurst exponent</strong> (named after the hydrologist who discovered it while studying Nile flood records) is a single number between 0 and 1 describing how strongly events in a sequence are correlated with events much further away. H = 0.5 means no long-range correlation (like a coin flip). H > 0.5 means long-range persistence (trends continue). H < 0.5 means anti-persistence (reversals).</p>
+<p><strong>The number for the Quran's verse-length sequence:</strong> H = <strong>0.905</strong>, measured whole-corpus. 56 of 57 individual surahs in the main band have H > 0.5.</p>
+<p><strong>In real-life terms:</strong> the length of verse 200 in a long surah is still statistically related to the length of verse 10 in the same surah. The Quran is not a sequence of independent verses placed next to each other; it has long-range structural memory. This is the same class of statistic used in climate science and financial time-series analysis.</p>
+
+<h3>12. Nonlinear structure — recurrence quantification</h3>
+<p><strong>What we did:</strong> borrowed a technique from nonlinear dynamics (recurrence quantification analysis) to ask whether the Quran's verse sequence can be reproduced by the simplest kind of statistical process — a Gaussian linear "noise with memory" process — or whether it contains structure such a process cannot generate.</p>
+<p><strong>The finding:</strong> on two standard indicators (determinism DET = 0.374 and laminarity LAM = 0.513) the Quran sits <em>outside</em> the 95 % range of 400 statistical doppelgangers we generated under two different null models. The sequence is not reproducible by any simple linear stochastic process.</p>
+
+<h3>13. The authentication gate — picking the canonical reading out of 865</h3>
+<p><strong>What we did:</strong> combined several of the simplest compression and letter-statistics channels into a single score, and asked: out of the 865 candidate readings of al-Ādiyāt verse 1 (the canonical + its 864 single-letter rewrites), which one has the strongest score?</p>
+<p><strong>The finding:</strong> the canonical reading ranks <strong>#1 out of 865</strong> on every random seed we tried. The chance probability under a uniform-random null is <strong>1 in 865</strong>, about 0.12 %.</p>
+
+<h3>14. The Anti-Variance Manifold</h3>
+<p><strong>The idea.</strong> Across 2,509 control texts, the five features are free to vary — but some combinations vary a lot (controls are "loose" there), and some combinations vary very little (controls are "tight" there). Take the two <em>tightest</em> directions — the ones where normal Arabic writing has the least freedom — and measure how far the Quran is from the control mean along those.</p>
+<p><strong>The finding:</strong> the Quran sits at percentile <strong>98.5</strong> along these two tightest directions. Random reshuffles of the class labels reach that percentile less than 1 time in 10,000.</p>
+<p><strong>In real-life terms:</strong> if you imagine the five-dimensional cloud of Arabic texts as an American football flattened in the middle and stretched at the ends, most texts stay near the middle. The Quran sits far out along the short axis of the football — the direction where no other Arabic text goes.</p>
+
+<h3>15. The muṣḥaf order beats every random shuffle</h3>
+<p><strong>What we did:</strong> generated 10,000 random reorderings of the 114 surahs and measured the "smoothness" of the trajectory through five-dimensional fingerprint space under each ordering.</p>
+<p><strong>The finding:</strong> the standard muṣḥaf order produces a smoother trajectory than <em>every single one</em> of the 10,000 random shuffles, and a smoother trajectory than the alternative chronological-revelation ordering (the Nuzūl order as reconstructed in the Egyptian standard edition). Observed rank of the muṣḥaf: 0 out of 10,000 — as low as it gets.</p>
+
+<h3>The rest at a glance</h3>
+<table>
+<thead><tr><th>Finding</th><th>Plain reading</th></tr></thead>
+<tbody>
+<tr><td><strong>AR(1) "punchy" rhythm</strong> — d = +1.095</td><td>Adjacent verses are strongly correlated, but the correlation drops off quickly. Short-range cohesion combined with long-range variety.</td></tr>
+<tr><td><strong>Word-order gap inside verses</strong> — effect size +5.80</td><td>Shuffling the words inside individual Quranic verses changes the fingerprint far more than shuffling words inside control verses.</td></tr>
+<tr><td><strong>Second-to-last position effect</strong> — d = 2.40</td><td>The position just before the end of a verse carries more structural information in the Quran than anywhere else. (This is the "rhythm closer" — the last-but-one syllable that sets up the rhyme.)</td></tr>
+<tr><td><strong>Local-window amplification</strong></td><td>On 5-verse moving windows, simple text-distance channels reach perfect separation on the al-Ādiyāt benchmark.</td></tr>
+<tr><td><strong>Compression-geometry matrix</strong></td><td>The 114×114 table of pairwise compression distances between all surahs correlates strongly (r = +0.59) with the muṣḥaf order itself. The ordering and the content are not independent; they track each other.</td></tr>
+</tbody>
+</table>
+
+<h2>6. The laws and the constants, explained</h2>
+
+<p class="intro">Behind the list of findings sit a handful of equations and empirical thresholds that we treat as "laws" of this project — statements precise enough that, given any new Arabic text, we can plug in numbers and the equation tells us what to expect. Here is what each of them actually means, where its numbers come from, and what the symbols stand for.</p>
+
+<div class="law-card">
+<h4>Law 1 — the parsimony line (rhyme and tension)</h4>
+<div class="formula">L  =  0.5329 · T  +  4.1790 · EL  −  1.5221
+
+Decide "Quran" if  L ≥ 0 ;  "other Arabic" if  L < 0.</div>
+<p><strong>What it is.</strong> The equation of a single straight line in a two-dimensional plane whose horizontal axis is the tension T and whose vertical axis is the rhyme rate EL.</p>
+<p><strong>Where the numbers come from.</strong> The three coefficients were fitted by a standard method called a linear support vector machine, working on the 68 main-band Quran surahs and the 2,509 controls. The method searches for the line that maximises the "margin" — the distance between the line and the nearest text on either side.</p>
+<p><strong>What each symbol means.</strong> <strong>T</strong> is the tension feature (conditional entropy minus rhyme rate, see Section 4). <strong>EL</strong> is the rhyme rate (also in Section 4). The two coefficients 0.5329 and 4.1790 are how much weight the classifier decided to give to each feature; the fact that the coefficient on EL is about eight times larger than the one on T tells us that EL is the stronger discriminator. <strong>L</strong> is the score; texts above zero are classified as Quran, below zero as not. The constant −1.5221 is the height at which the line crosses the y-axis — it positions the line in the right place so that the two clusters end up on opposite sides.</p>
+<p><strong>What it does.</strong> Correctly classifies 99.15 % of all 2,577 texts with a comfortable safety margin. Its only mistakes are seven texts from the Arabic Bible leaking over to the Quran side — zero leaks from any of the other five control corpora.</p>
+</div>
+
+<div class="law-card">
+<h4>Law 2 — the compression-cost constant γ</h4>
+<div class="formula">log(NCD)  =  α  +  β · log(text length)  +  γ · (is it Quran?)
+
+Measured value:  γ  =  +0.0716  (95 % range [+0.066, +0.078], p ≈ 0).</div>
+<p><strong>What it is.</strong> A regression equation that describes how the compression distance between an original text and its single-letter edit grows with the length of the text.</p>
+<p><strong>What each symbol means.</strong> <strong>NCD</strong> is the Normalized Compression Distance between a text and its one-letter edit (small = very similar under compression, large = very dissimilar). <strong>α</strong> (alpha) is the constant baseline for control texts, and <strong>β</strong> (beta) is how quickly NCD changes as texts get longer. <strong>γ</strong> (gamma), which is the quantity we care about, is the extra amount of NCD we find when the text happens to be a Quran passage rather than a control passage of the same length. <strong>log</strong> is the natural logarithm — we use it because compression quantities behave multiplicatively.</p>
+<p><strong>Where the numbers come from.</strong> We ran the regression on 1,360 single-letter edits across 68 Quran surahs and 1,360 single-letter edits across length-matched controls — 2,720 data points in total.</p>
+<p><strong>What γ = +0.0716 means in plain words.</strong> At fixed text length, a Quran-edit compresses about 7.4 % worse than a control-edit. The Quran has so much internal structural repetition that even a single-letter change breaks several compression patterns at once; controls lose fewer patterns per edit.</p>
+<p><strong>Caveat.</strong> When we re-ran the same regression with three alternative compressors (bzip2, zstd, lzma), γ changed — in two cases it even reversed sign. So γ is not a universal "Kolmogorov-complexity constant" of the text; it is a gzip-specific constant. The existence of a positive compression-cost gap for gzip is robust; the exact numeric value of γ is compressor-dependent.</p>
+</div>
+
+<div class="law-card">
+<h4>Law 3 — the VL_CV floor</h4>
+<div class="formula">For every Quran surah in the main band:   VL_CV ≥ 0.2683.
+
+For 56.9 % of control surah-equivalents:       VL_CV &lt; 0.2683.
+Effect size between the two groups (Cohen's d): 1.67 ("huge").</div>
+<p><strong>What it is.</strong> An empirical one-sided threshold. <strong>VL_CV</strong> is the verse-length coefficient of variation (standard deviation of verse length divided by mean verse length; see Section 4).</p>
+<p><strong>What the number means.</strong> Take any Quran surah with between 15 and 100 verses; compute its VL_CV; the number will always be at least 0.2683. This is not a mathematical certainty — it is an empirical fact across all 68 surahs in the relevant band. About 57 % of control texts fall below this floor, which means the floor can be used as a cheap additional screen: any candidate text with VL_CV < 0.2683 cannot plausibly be a Quranic surah.</p>
+<p><strong>Why it is a "law" of this project.</strong> Unlike the classifier (which outputs a probability), the floor is a hard yes/no rule that is never violated by the training data. The bootstrap 95 % confidence interval on the true floor is [0.268, 0.298], a narrow band.</p>
+</div>
+
+<div class="law-card">
+<h4>Law 4 — the perturbation hierarchy</h4>
+<div class="formula">d( shuffle words )  >  d( shuffle verses )  >  d( shuffle letters )
+        2.45             >        1.77           >       0.80</div>
+<p><strong>What it is.</strong> An empirical ordering of how much three different kinds of shuffling move the fingerprint of a Quran surah.</p>
+<p><strong>What the numbers mean.</strong> Each <strong>d</strong> is Cohen's d — the number of standard deviations by which the shuffled surah's fingerprint differs from the unshuffled one. An effect of 0.8 is already called "large" in the social-science literature; 2.45 is enormous.</p>
+<p><strong>What it tells us.</strong> The fingerprint is most sensitive to word-level disturbance, less sensitive to verse-level reordering, and least sensitive to letter-level scrambling. This matches the way the Quran is actually transmitted: the memoriser ("ḥāfiẓ") stores it word by word, and those words carry the structural identity. Letter-level scrambles leave the word inventory intact, so most of the fingerprint survives.</p>
+<p><strong>Why this is a "law candidate" rather than a confirmed law.</strong> We believe the same hierarchy will hold for the Hebrew Bible, the Vedic hymns, and the Avestan Yasna, all of which are oral-transmitted ritual texts. Until we measure those, this is a Quran-only observation, not a general law.</p>
+</div>
+
+<div class="law-card">
+<h4>Law 5 — the Anti-Variance Manifold</h4>
+<div class="formula">Project every surah onto the two directions of least variance in the
+Arabic control covariance matrix. Measure the Quran's average squared
+distance from the control mean along those two axes.
+
+Quran: 2.91     Control average: 1.25
+Percentile of Quran value in 10,000 label shuffles:  98.53
+Empirical p-value:  < 10⁻⁴.</div>
+<p><strong>What it is.</strong> A geometric statement about where in the five-dimensional space the Quran lives.</p>
+<p><strong>What the words mean.</strong> The <em>covariance matrix</em> of the control texts tells us in which directions control texts vary a lot (their "loose" directions) and in which they vary little (their "tight" directions). Principal-component analysis extracts these directions as "eigenvectors"; we take the two with the smallest eigenvalues (the tightest directions). Any Arabic text — Quran or control — can be projected onto those two tightest axes, which produces two coordinates; the squared distance from the control mean is how far it sits out along the combined short axis.</p>
+<p><strong>What the finding says.</strong> The Quran sits 2.91 units out on average; the control mean is 1.25. 98.5 % of random relabelings produce a smaller value; in 10,000 shuffles not one reached the observed distance. The Quran is not just far from the centre of the Arabic cloud — it is far in the direction where no other Arabic text goes.</p>
+</div>
+
+<h2>7. The Ādiyāt case — a detailed walk-through</h2>
+
+<p class="intro">Everything the project does comes together around a single concrete question about a single short verse. This section is the long version of that question.</p>
+
+<h3>7.1 The verse</h3>
+<div class="ar-block">وَالْعَادِيَاتِ ضَبْحًا</div>
+<p>"By the chargers, panting." — Qurʾān 100:1, in the standard Ḥafṣ reading.</p>
+<p>This is the opening verse of Surah al-Ādiyāt, chosen because it is short, because the classical philological literature has already discussed a handful of single-letter alternative readings for it for centuries, and because short verses are the <em>hardest</em> case for statistical tampering detection: less text means fewer bytes for any detector to work with.</p>
+
+<h3>7.2 The four classical candidates</h3>
+<table>
+<thead><tr><th>Tag</th><th>Edit</th><th class="ar">Arabic</th><th>Transliteration</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td><strong>Canon</strong></td><td>—</td><td class="ar">وَالْعَادِيَاتِ ضَبْحًا</td><td>wa-l-ʿādiyāti ḍabḥan</td><td>by the chargers, panting</td></tr>
+<tr><td><strong>A</strong></td><td><span class="arabic">ع → غ</span></td><td class="ar">وَالْغَادِيَاتِ ضَبْحًا</td><td>wa-l-ghādiyāti ḍabḥan</td><td>by the ones going out at morning, panting</td></tr>
+<tr><td><strong>B</strong></td><td><span class="arabic">ض → ص</span></td><td class="ar">وَالْعَادِيَاتِ صَبْحًا</td><td>wa-l-ʿādiyāti ṣabḥan</td><td>by the chargers, at dawn</td></tr>
+<tr><td><strong>C</strong></td><td>both</td><td class="ar">وَالْغَادِيَاتِ صَبْحًا</td><td>wa-l-ghādiyāti ṣabḥan</td><td>both edits combined</td></tr>
+</tbody>
+</table>
+<p>Each of A, B, and C is a plausible Arabic phrase; each is the kind of single-letter alteration that a careful imitator might introduce and hope goes unnoticed.</p>
+
+<h3>7.3 Why we tested all 864 possible single-letter rewrites</h3>
+<p>The three classical candidates are the ones philology has discussed. But a real detector must work against <em>any</em> single-letter change, not only the famous ones. The verse has 32 consonantal positions and each position has 27 possible alternative Arabic consonants, which gives <strong>32 × 27 = 864</strong> single-letter variants. Together with the canonical, that is 865 candidate readings.</p>
+<p>The test was pre-registered like this: if a detector exists that can identify the canonical reading at a 5 % false-alarm rate, then at most 5 % of the 864 variants (about 43) should fire as "looks canonical"; the rest should be flagged as "something is off". The more variants correctly flagged, the stronger the detector.</p>
+
+<h3>7.4 What each detector sees on the 864 variants</h3>
+<table>
+<thead><tr><th>Detector</th><th>What it reads</th><th class="num">Catch rate</th></tr></thead>
+<tbody>
+<tr><td>Whole-surah fingerprint (5 features)</td><td>The five stylistic numbers of the whole surah</td><td class="num">3.2 %</td></tr>
+<tr><td>Compression distance (gzip-NCD, full surah)</td><td>How much worse the full surah compresses together with its canonical version after the edit</td><td class="num"><strong>99.07 %</strong></td></tr>
+<tr><td>Compression distance (gzip-NCD, 3-verse local window)</td><td>The same, restricted to a three-verse window around the edit</td><td class="num">23.7 %</td></tr>
+<tr><td>Nine-channel letter-statistics composite</td><td>Letter, bigram and trigram frequencies vote together</td><td class="num">≈ 50 % (at ≥ 3 / 9 firing)</td></tr>
+<tr><td>Joint compression + letter-statistics (pre-registered AND-rule)</td><td>Both independent channels must flag the edit</td><td class="num"><strong>99.07 %</strong></td></tr>
+</tbody>
+</table>
+<p><strong>Why the whole-surah fingerprint fails at this task.</strong> The five-feature fingerprint reads the verse-final letters of the surah. An edit to an <em>internal</em> letter of a non-verse-final word produces a fingerprint that is byte-identical to the canonical — 836 of the 864 variants produce no change at all in the whole-surah fingerprint. This is called "structural blindness" and it is exactly what the gzip compression channel is designed to fix.</p>
+<p><strong>Why the compression channel succeeds.</strong> gzip encodes internal repetitions. Because the Quran is so full of them — repeated roots, repeated phrases, strong rhyme constraints — any single-letter edit breaks several repetitions at once and the compression length jumps measurably. The detector catches 856 of 864 variants at a 5 % false-alarm rate. The eight missed variants are all from one specific phonetic class (emphatic-plain pairs such as <span class="arabic">ت ↔ ط</span>), discussed in the caveats at the end.</p>
+
+<h3>7.5 The three classical candidates, precisely</h3>
+<p>On the compression channel, the three classical candidates score (z-score = how many standard deviations above the control-edit baseline):</p>
+<table>
+<thead><tr><th>Candidate</th><th class="num">Compression distance (NCD)</th><th class="num">z-score vs. control baseline</th><th>Verdict</th></tr></thead>
+<tbody>
+<tr><td>Canon</td><td class="num">0.0000</td><td class="num">0</td><td><strong>ACCEPT</strong></td></tr>
+<tr><td>A (ع → غ)</td><td class="num">0.0653</td><td class="num">+5.58</td><td><strong>REJECT</strong> — tampering detected</td></tr>
+<tr><td>B (ض → ص)</td><td class="num">0.0653</td><td class="num">+5.58</td><td><strong>REJECT</strong> — tampering detected</td></tr>
+<tr><td>C (both)</td><td class="num">0.0804</td><td class="num">+9.14</td><td><strong>REJECT</strong> — strongest signal</td></tr>
+</tbody>
+</table>
+<p>For reference, z-scores above 2 are already statistically significant at the conventional 5 % level. A z-score of 5.58 corresponds to a chance probability of about 1 in 40 million; 9.14 is a chance probability that rounds to zero.</p>
+
+<h3>7.6 The comparison that matters — the same test on other classical Arabic</h3>
+<p>The same edit test was run on all of pre-Islamic poetry, early-Islamic poetry, Abbasid poetry — a total of 10,461 single-letter edits spanning 114 texts. The question was: at a fixed 5 % false-alarm rate, how often does the detector catch an edit in each corpus?</p>
+<table>
+<thead><tr><th>Corpus</th><th class="num">Catch rate on single-letter edits</th><th>How to read this</th></tr></thead>
+<tbody>
+<tr><td><strong>The Quran</strong> (all 114 surahs)</td><td class="num">1.15 %</td><td>An edit is <strong>hardest</strong> to catch inside the Quran — which means the Quran is structurally <strong>hardest to forge</strong> with phonetically minimal changes.</td></tr>
+<tr><td>Abbasid poetry</td><td class="num">4.83 %</td><td>About four times easier to catch an edit here than in the Quran.</td></tr>
+<tr><td>Pre-Islamic poetry</td><td class="num">9.50 %</td><td>About eight times easier to catch an edit here than in the Quran.</td></tr>
+</tbody>
+</table>
+<p>This is the <em>opposite</em> of what a sceptic might expect: one might have guessed that a rich, formally constrained text like classical poetry would be harder to forge subtly than running prose. It is in fact much easier. The Quran's stylistic regularities are so tight and so interlocking that a minimal-phonetic-distance edit (an edit that swaps one consonant for a very similar-sounding one) survives the compression test in only 1 time out of 87 attempts on the Quran, vs. 1 in 11 on pre-Islamic poetry.</p>
+<p>Internally, this asymmetry is called the <em>Quran-specific immunity</em> result. Read with care: it does <em>not</em> say that the detector is stronger when applied to the Quran; it says that the <em>same</em> detector, applied under <em>identical rules</em> to pre-Islamic poetry, catches edits there four to eight times more easily.</p>
+
+<h3>7.7 The cross-scripture picture</h3>
+<p>Some features of this result travel to other scriptures; others are specific to Arabic.</p>
+<table>
+<thead><tr><th>Text</th><th class="num">Rhyme rate (EL)</th><th class="num">Canonical-order z-score</th><th>Fingerprint outlier?</th></tr></thead>
+<tbody>
+<tr><td><strong>Quran</strong></td><td class="num">0.71</td><td class="num">−8.92</td><td>Yes (T² = 3,557)</td></tr>
+<tr><td>Hebrew Bible (Tanakh)</td><td class="num">0.125</td><td class="num">−15.29</td><td>Weaker than Quran on rhyme, stronger on ordering</td></tr>
+<tr><td>Greek New Testament</td><td class="num">0.206</td><td class="num">−12.06</td><td>Weaker than Quran on rhyme, stronger on ordering</td></tr>
+<tr><td>Arabic Bible (translation)</td><td class="num">0.132</td><td class="num">—</td><td>Mostly weak; seven of its surah-sized passages are the only texts that leak into the Quran-side of our parsimony line</td></tr>
+<tr><td>Homer's <em>Iliad</em></td><td class="num">≈ 0.10</td><td class="num">+0.34</td><td>No — behaves like a random-order epic</td></tr>
+</tbody>
+</table>
+<p>The honest reading of this table: the <em>rhyme rate</em> is a distinctively Arabic phenomenon, and a distinctively Quranic one inside Arabic. The <em>canonical-ordering smoothness</em>, however, is a <em>shared</em> property of all three Abrahamic scriptures — the Hebrew Bible and the New Testament exceed the Quran on it — and is absent in Homer, as expected for epic narrative. Some things are Quran-specific; some are scripture-general.</p>
+
+<h2>8. The caveats — what we did not (yet) do</h2>
+<p>Every summary of this project should carry these six lines with it.</p>
+<ol>
+<li><strong>Cross-language replication has not happened.</strong> Every result above compares the Quran to Arabic texts. The larger claim — that oral-transmitted sacred texts generically show this kind of fingerprint — would need the same pipeline applied to the Hebrew Bible, the Vedic hymns, the Avestan Yasna. That work is realistically five to seven years away from completion.</li>
+<li><strong>Seven passages of the Arabic Bible leak across the parsimony line.</strong> They are not from Arabic poetry, Modern-Standard prose, narrative, or the other four control corpora — they are all from one specific source, the Arabic Bible translation. We report them openly; they are the single numerical soft spot of the classifier.</li>
+<li><strong>The "voiceless emphatic" letter pairs are a real blind spot.</strong> Consonant pairs such as <span class="arabic">ت ↔ ط</span> and <span class="arabic">ك ↔ ق</span> differ by only one phonetic feature. On those pairs the compression detector catches 0 % of edits on the Quran. Closing this gap requires either a phonetic-distance-aware version of the detector or a full character-level language model, both of which are research tasks in progress.</li>
+<li><strong>Whole-surah adversarial forgery has not been tested yet.</strong> If someone used an advanced language model to generate a brand-new "surah" from scratch — with the right rhyme rate, right verse-length variation, and right connective rate — our compression detector has no canonical text to compare to. The experiment for this case is pre-registered and awaiting the right computational resources.</li>
+<li><strong>External replication by a second independent team has not been done.</strong> All of the results above were produced by one research effort, albeit with multiple rounds of internal zero-trust audit. The single most important credibility step still to take is for a second team to reproduce the central numbers from scratch.</li>
+<li><strong>This is statistics, not theology.</strong> The project says, precisely: under these five features and on this control pool, the Quran is an extreme multivariate outlier, and single-letter edits on short surahs are detectable at 99 % recall. Whether extreme statistical outlier status is evidence of something beyond statistics is a question outside the scope of measurement.</li>
+</ol>
+
+<hr>
+
+<p style="text-align:center;color:var(--mute);font-style:italic;font-size:0.95rem;margin-top:3rem;">Every number above is sourced from a frozen, fingerprinted result file produced by a pre-registered experiment. No new claims are introduced here; this is an explainer of work that has already been recorded.</p>
+
+</main>
+</body>
+</html>

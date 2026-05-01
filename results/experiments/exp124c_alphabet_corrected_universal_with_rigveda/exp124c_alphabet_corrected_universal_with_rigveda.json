@@ -1,0 +1,172 @@
+{
+  "experiment": "exp124c_alphabet_corrected_universal_with_rigveda",
+  "hypothesis_id": "H85",
+  "hypothesis": "F78 (alphabet-corrected categorical Quran-uniqueness universal) generalises to a 12-corpus / 6-alphabet pool by adding Sanskrit Devanagari (Rigveda Saṃhitā, A=47) and tightening the threshold from 3.0 to 3.5 bits to respect the larger alphabet headroom. Quran is the unique corpus with Δ_max ≥ 3.5 bits across 6 alphabets; Rigveda is the subordinate-tier (Δ_max ≥ 3.0).",
+  "verdict": "PASS_alphabet_corrected_strict_6_alphabets",
+  "verdict_reason": "Quran Δ_max = 3.8388 bits, unique above 3.5-bit threshold across 6 alphabets (5 from V3.14 + Sanskrit Devanagari); gap to runner-up (rigveda) = 0.5720 ≥ 0.5; Rigveda Δ_max = 3.2668 confirms tier-2 above 3.0-bit subordinate threshold.",
+  "prereg_hash": "1ec29e75efe4945440e181bf8c8b4c61bebd8fdc2d5bc2160401c01ef9f34797",
+  "input_sources": {
+    "11pool": "results/auxiliary/_phi_universal_xtrad_sizing.json",
+    "11pool_sha256": "0f8dcf0f69106020fac6c596716b4729d78fdece828ebb83aba3aa2b0a79fc22",
+    "rigveda": "results/experiments/exp111_F63_rigveda_falsification/exp111_F63_rigveda_falsification.json",
+    "rigveda_sha256": "a2dcbf953be0b3a5a76e6fb272664a72467ae3a0cf47a1ca742ae15895d0bf2a",
+    "rigveda_verdict": "PASS_quran_rhyme_extremum_xtrad_with_rigveda"
+  },
+  "frozen_constants": {
+    "EXPECTED_CORPORA": [
+      "quran",
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "hindawi",
+      "ksucca",
+      "arabic_bible",
+      "hebrew_tanakh",
+      "greek_nt",
+      "pali",
+      "avestan_yasna",
+      "rigveda"
+    ],
+    "ALPHABET_SIZES": {
+      "quran": 28,
+      "poetry_jahili": 28,
+      "poetry_islami": 28,
+      "poetry_abbasi": 28,
+      "hindawi": 28,
+      "ksucca": 28,
+      "arabic_bible": 28,
+      "hebrew_tanakh": 22,
+      "greek_nt": 24,
+      "pali": 31,
+      "avestan_yasna": 26,
+      "rigveda": 47
+    },
+    "DELTA_MAX_THRESHOLD": 3.5,
+    "GAP_TO_RUNNER_UP_FLOOR": 0.5,
+    "RIGVEDA_TIER2_FLOOR": 3.0,
+    "ARABIC_LOG2_A_CEILING": 4.807354922057604
+  },
+  "results": {
+    "per_corpus_table_sorted_desc": [
+      {
+        "corpus": "quran",
+        "alphabet_size": 28,
+        "H_EL_bits": 0.9685208240372034,
+        "log2_A": 4.807354922057604,
+        "Delta_max_bits": 3.8388340980204,
+        "above_threshold": true
+      },
+      {
+        "corpus": "rigveda",
+        "alphabet_size": 47,
+        "H_EL_bits": 2.287783719941071,
+        "log2_A": 5.554588851677638,
+        "Delta_max_bits": 3.2668051317365667,
+        "above_threshold": false
+      },
+      {
+        "corpus": "pali",
+        "alphabet_size": 31,
+        "H_EL_bits": 2.089938976016876,
+        "log2_A": 4.954196310386875,
+        "Delta_max_bits": 2.864257334369999,
+        "above_threshold": false
+      },
+      {
+        "corpus": "avestan_yasna",
+        "alphabet_size": 26,
+        "H_EL_bits": 2.1180782093497093,
+        "log2_A": 4.700439718141093,
+        "Delta_max_bits": 2.5823615087913834,
+        "above_threshold": false
+      },
+      {
+        "corpus": "greek_nt",
+        "alphabet_size": 24,
+        "H_EL_bits": 2.433671200186647,
+        "log2_A": 4.584962500721156,
+        "Delta_max_bits": 2.151291300534509,
+        "above_threshold": false
+      },
+      {
+        "corpus": "poetry_islami",
+        "alphabet_size": 28,
+        "H_EL_bits": 2.688721875540867,
+        "log2_A": 4.807354922057604,
+        "Delta_max_bits": 2.1186330465167367,
+        "above_threshold": false
+      },
+      {
+        "corpus": "poetry_abbasi",
+        "alphabet_size": 28,
+        "H_EL_bits": 2.7516291673878226,
+        "log2_A": 4.807354922057604,
+        "Delta_max_bits": 2.055725754669781,
+        "above_threshold": false
+      },
+      {
+        "corpus": "poetry_jahili",
+        "alphabet_size": 28,
+        "H_EL_bits": 2.779539763336115,
+        "log2_A": 4.807354922057604,
+        "Delta_max_bits": 2.0278151587214888,
+        "above_threshold": false
+      },
+      {
+        "corpus": "ksucca",
+        "alphabet_size": 28,
+        "H_EL_bits": 2.907891879501107,
+        "log2_A": 4.807354922057604,
+        "Delta_max_bits": 1.899463042556497,
+        "above_threshold": false
+      },
+      {
+        "corpus": "arabic_bible",
+        "alphabet_size": 28,
+        "H_EL_bits": 2.918295834054489,
+        "log2_A": 4.807354922057604,
+        "Delta_max_bits": 1.8890590880031146,
+        "above_threshold": false
+      },
+      {
+        "corpus": "hebrew_tanakh",
+        "alphabet_size": 22,
+        "H_EL_bits": 3.053090083530327,
+        "log2_A": 4.459431618637297,
+        "Delta_max_bits": 1.4063415351069701,
+        "above_threshold": false
+      },
+      {
+        "corpus": "hindawi",
+        "alphabet_size": 28,
+        "H_EL_bits": 3.478902741597457,
+        "log2_A": 4.807354922057604,
+        "Delta_max_bits": 1.3284521804601468,
+        "above_threshold": false
+      }
+    ],
+    "quran_Delta_max_bits": 3.8388340980204,
+    "rigveda_Delta_max_bits": 3.2668051317365667,
+    "n_corpora_above_threshold": 1,
+    "corpora_above_threshold": [
+      "quran"
+    ],
+    "quran_unique_above_threshold": true,
+    "runner_up_corpus": "rigveda",
+    "runner_up_Delta_max_bits": 3.2668051317365667,
+    "gap_to_runner_up_bits": 0.5720289662838334
+  },
+  "audit_report": {
+    "ok": true,
+    "checks": {
+      "A1_11pool_sha256_match": true,
+      "A2_rigveda_verdict_match": true,
+      "A2_rigveda_input_sha256": "a2dcbf953be0b3a5a76e6fb272664a72467ae3a0cf47a1ca742ae15895d0bf2a",
+      "A3_n_corpora": 12,
+      "A4_alphabet_sizes_present": true,
+      "A5_all_delta_max_non_negative": true,
+      "A6_deterministic": true
+    }
+  },
+  "wall_time_s": 0.000764
+}

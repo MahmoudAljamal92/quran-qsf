@@ -1,0 +1,936 @@
+{
+  "G1_min_units": {
+    "actual": 1,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "G2_no_single_token": {
+    "actual": 1,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "G3_no_identical": {
+    "actual": 1,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "G4_cv_valid": {
+    "actual": 1,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "G5_arabic_ratio": {
+    "actual": 1,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "PickleBug_simulation": {
+    "actual": 1.0,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "Partial_quote_leak": {
+    "actual": 0.007785606279960107,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "H_cond_MM_quran": {
+    "actual": 1.5211226145275007,
+    "drift_ok": true,
+    "expected": null,
+    "tol": Infinity
+  },
+  "Phi_M_hotelling_T2": {
+    "actual": 3557.3394545046353,
+    "drift_ok": true,
+    "expected": 0.0,
+    "tol": Infinity,
+    "name": "Phi_M Hotelling T² (Band A)",
+    "verdict_expected": "HEADLINE (pending lock refresh)",
+    "abs_drift": 3557.3394545046353
+  },
+  "Phi_M_perm_p_value": {
+    "actual": 0.004975124378109453,
+    "drift_ok": true,
+    "expected": 0.0,
+    "tol": Infinity,
+    "name": "Phi_M permutation p-value",
+    "verdict_expected": "HEADLINE (pending lock refresh)",
+    "abs_drift": 0.004975124378109453
+  },
+  "D02": {
+    "actual": 6.663319682559802,
+    "drift_ok": true,
+    "expected": 6.34,
+    "tol": Infinity,
+    "name": "LEGACY Phi_M Cohen d (biased)",
+    "verdict_expected": "DEPRECATED (biased; see Phi_M_hotelling_T2)",
+    "abs_drift": 0.32331968255980215
+  },
+  "S1": {
+    "actual": 6.663319682559802,
+    "drift_ok": true,
+    "expected": 6.34,
+    "tol": Infinity,
+    "name": "LEGACY multivariate separation d",
+    "verdict_expected": "DEPRECATED (biased; see Phi_M_hotelling_T2)",
+    "abs_drift": 0.32331968255980215
+  },
+  "D28": {
+    "actual": 6.663319682559802,
+    "drift_ok": true,
+    "expected": 6.34,
+    "tol": Infinity,
+    "name": "LEGACY tight-fairness Cohen d",
+    "verdict_expected": "DEPRECATED (biased; see Phi_M_hotelling_T2)",
+    "abs_drift": 0.32331968255980215
+  },
+  "Tight_fairness_band_A": {
+    "actual": 6.663319682559802,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "Tight_fairness_band_B": {
+    "actual": 3.5497820761817995,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "Tight_fairness_band_C": {
+    "actual": 10.106500310456545,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "CamelTools_phi_m_rerun": {
+    "actual": 6.663319682559802,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "Heuristic_phi_m_rerun": {
+    "actual": 6.507568407127048,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "T1": {
+    "actual": 1.670425033842222,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "D01": {
+    "actual": 1.670425033842222,
+    "drift_ok": true,
+    "expected": 1.4,
+    "tol": Infinity,
+    "name": "Anti-metric VL_CV d (Band A, audit v5)",
+    "verdict_expected": "PENDING_REBLESS_v5 (was WEAKENED, pre-Band-A)",
+    "abs_drift": 0.27042503384222205
+  },
+  "T2": {
+    "actual": 6.663319682559802,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "T3": {
+    "actual": 0.8671010277271483,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "S3": {
+    "actual": 0.8671010277271483,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "T4": {
+    "actual": 8.29014668953456,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "D20": {
+    "actual": 8.29014668953456,
+    "drift_ok": true,
+    "expected": 7.89,
+    "tol": Infinity,
+    "name": "Hierarchical Omega (Quran) — audit v5",
+    "verdict_expected": "PENDING_REBLESS_v5 (was WEAKENED, pre-hadith-removal)",
+    "abs_drift": 0.40014668953455956
+  },
+  "D03": {
+    "actual": 0.7074338713106891,
+    "drift_ok": true,
+    "expected": 0.707,
+    "tol": 0.03,
+    "name": "Quran EL",
+    "verdict_expected": "PROVED",
+    "abs_drift": 0.0004338713106891712
+  },
+  "D04": {
+    "actual": 0.08596828788694998,
+    "drift_ok": true,
+    "expected": 0.086,
+    "tol": 0.01,
+    "name": "Quran CN",
+    "verdict_expected": "PROVED",
+    "abs_drift": 3.171211305001698e-05
+  },
+  "T7": {
+    "actual": 1.1748651293331884,
+    "drift_ok": true,
+    "expected": 1.17,
+    "tol": 0.1,
+    "name": "I(EL;CN) corpus-level (bits)",
+    "verdict_expected": "PROVED (corpus)",
+    "abs_drift": 0.0048651293331885
+  },
+  "D05": {
+    "actual": 0.09956653652022017,
+    "drift_ok": true,
+    "expected": 0.1,
+    "tol": 0.15,
+    "name": "I(EL;CN) unit-level (bits)",
+    "verdict_expected": "FALSIFIED (unit)",
+    "abs_drift": 0.0004334634797798359
+  },
+  "S2": {
+    "actual": 0.09956653652022017,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "MI_bin_sensitivity_range": {
+    "actual": 0.474438500350144,
+    "drift_ok": true,
+    "expected": null,
+    "tol": Infinity
+  },
+  "MI_D05_miller_madow": {
+    "actual": 0.025310174121523518,
+    "drift_ok": true,
+    "expected": null,
+    "tol": Infinity
+  },
+  "HSIC_EL_CN_quran": {
+    "actual": 0.004648664826993368,
+    "drift_ok": true,
+    "expected": 0.0,
+    "tol": Infinity,
+    "name": "HSIC(EL,CN) Quran (Band A)",
+    "verdict_expected": "REPORTING (binning-free MI alt)",
+    "abs_drift": 0.004648664826993368
+  },
+  "HSIC_EL_CN_perm_p": {
+    "actual": 0.5323383084577115,
+    "drift_ok": true,
+    "expected": 1.0,
+    "tol": Infinity,
+    "name": "HSIC(EL,CN) permutation p",
+    "verdict_expected": "REPORTING (binning-free MI alt)",
+    "abs_drift": 0.46766169154228854
+  },
+  "T10": {
+    "actual": 39.705882352941174,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "D10": {
+    "actual": 39.705882352941174,
+    "drift_ok": true,
+    "expected": 39.7,
+    "tol": 3.0,
+    "name": "%T>0 Quran",
+    "verdict_expected": "PROVED STRONGER",
+    "abs_drift": 0.005882352941171121
+  },
+  "T8": {
+    "actual": -2.4442155304240654,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "D17": {
+    "actual": -2.4442155304240654,
+    "drift_ok": true,
+    "expected": -3.96,
+    "tol": Infinity,
+    "name": "Canonical path z-score (Band A, audit v5)",
+    "verdict_expected": "PENDING_REBLESS_v5 (was PROVED, pre-Band-A)",
+    "abs_drift": 1.5157844695759346
+  },
+  "S5": {
+    "actual": -2.4442155304240654,
+    "drift_ok": true,
+    "expected": -3.96,
+    "tol": Infinity,
+    "name": "Shannon-Aljamal path minimality z (Band A, audit v5)",
+    "verdict_expected": "PENDING_REBLESS_v5 (was PROVED, pre-Band-A)",
+    "abs_drift": 1.5157844695759346
+  },
+  "T16": {
+    "actual": 8.287866767724822e-17,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "D07": {
+    "actual": 16.081557239078933,
+    "drift_ok": true,
+    "expected": 16.0,
+    "tol": Infinity,
+    "name": "Scale-free −log10 Fisher p @ W=10 — audit v5",
+    "verdict_expected": "PENDING_REBLESS_v5 (was 1.1e-16 machine-eps artefact; now chi2.sf)",
+    "abs_drift": 0.08155723907893275
+  },
+  "T17": {
+    "actual": 5.023237911180704,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "D11": {
+    "actual": 5.023237911180704,
+    "drift_ok": true,
+    "expected": 5.02,
+    "tol": Infinity,
+    "name": "Perturbation gap sum — audit v5",
+    "verdict_expected": "PENDING_REBLESS_v5 (was PROVED STRONGER, pre-hadith-removal)",
+    "abs_drift": 0.0032379111807046
+  },
+  "T18": {
+    "actual": 5.637600998552788,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "D14": {
+    "actual": 5.637600998552788,
+    "drift_ok": true,
+    "expected": 5.8,
+    "tol": Infinity,
+    "name": "Verse-internal gap — audit v5",
+    "verdict_expected": "PENDING_REBLESS_v5 (was PROVED STRONGER, pre-hadith-removal)",
+    "abs_drift": 0.16239900144721187
+  },
+  "T27": {
+    "actual": 0.8556226753324337,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "T9": {
+    "actual": 44.87962570304193,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "D08": {
+    "actual": 44.87962570304193,
+    "drift_ok": true,
+    "expected": 44.9,
+    "tol": Infinity,
+    "name": "Markov z-score (Quran) — audit v5",
+    "verdict_expected": "PENDING_REBLESS_v5 (was WEAKENED, pre-hadith-removal)",
+    "abs_drift": 0.02037429695806736
+  },
+  "T11": {
+    "actual": 0.22200325346788072,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "S4": {
+    "actual": 0.22200325346788072,
+    "drift_ok": true,
+    "expected": 0.222,
+    "tol": 0.02,
+    "name": "H3/H2 bigram sufficiency",
+    "verdict_expected": "PROVED (partial)",
+    "abs_drift": 3.253467880715011e-06
+  },
+  "T28": {
+    "actual": 0.4247059441469991,
+    "drift_ok": true,
+    "expected": -0.03,
+    "tol": Infinity,
+    "name": "H2/H1 Markov-order d — audit v5",
+    "verdict_expected": "PENDING_REBLESS_v5 (was NOT REPRODUCED, pre-hadith-removal)",
+    "abs_drift": 0.45470594414699905
+  },
+  "D06": {
+    "actual": 1.6444335038467603,
+    "drift_ok": true,
+    "expected": 1.644,
+    "tol": 0.05,
+    "name": "Turbo gain G_turbo",
+    "verdict_expected": "WEAKENED",
+    "abs_drift": 0.0004335038467604413
+  },
+  "T22": {
+    "actual": 0.6320540933861788,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "D22": {
+    "actual": 0.6320540933861788,
+    "drift_ok": true,
+    "expected": 0.632,
+    "tol": Infinity,
+    "name": "Root-diversity x EL — audit v5",
+    "verdict_expected": "PENDING_REBLESS_v5 (was PROVED STRONGER, pre-hadith-removal)",
+    "abs_drift": 5.409338617878845e-05
+  },
+  "G2": {
+    "actual": 0.31820188339183886,
+    "drift_ok": true,
+    "expected": 0.3,
+    "tol": 0.05,
+    "name": "Max normalised 5-ch MI",
+    "verdict_expected": "PROVED",
+    "abs_drift": 0.01820188339183887
+  },
+  "HSIC_G2_max_quran": {
+    "actual": 0.04752436554453165,
+    "drift_ok": true,
+    "expected": 0.0,
+    "tol": Infinity,
+    "name": "HSIC 5-ch max pair (Quran)",
+    "verdict_expected": "REPORTING (G2 kernel variant)",
+    "abs_drift": 0.04752436554453165
+  },
+  "HSIC_G2_perm_p": {
+    "actual": 0.004975124378109453,
+    "drift_ok": true,
+    "expected": 1.0,
+    "tol": Infinity,
+    "name": "HSIC 5-ch max perm p",
+    "verdict_expected": "REPORTING (G2 kernel variant)",
+    "abs_drift": 0.9950248756218906
+  },
+  "T5": {
+    "actual": 100.0,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "D23": {
+    "actual": 1.0,
+    "drift_ok": true,
+    "expected": 1.0,
+    "tol": 0.05,
+    "name": "Canon-wins rate (Quran)",
+    "verdict_expected": "PROVED",
+    "abs_drift": 0.0
+  },
+  "T20": {
+    "actual": -0.16,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "D21": {
+    "actual": -0.16,
+    "drift_ok": true,
+    "expected": -0.28,
+    "tol": 0.15,
+    "name": "Rhyme-swap P3 Quran vs Bible",
+    "verdict_expected": "NOT REPRODUCED",
+    "abs_drift": 0.12000000000000002
+  },
+  "T12": {
+    "actual": 7.298252960586856,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "D24": {
+    "actual": 7.298252960586856,
+    "drift_ok": true,
+    "expected": 6.89,
+    "tol": Infinity,
+    "name": "Phi_M 10-fold CV median d — audit v5",
+    "verdict_expected": "PENDING_REBLESS_v5 (was PROVED STRONGER, pre-hadith-removal)",
+    "abs_drift": 0.40825296058685634
+  },
+  "PreReg_A_leave_one_out": {
+    "actual": 5.255060192531855,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "T13": {
+    "actual": 0.7966215499488157,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "D25": {
+    "actual": 0.7966215499488157,
+    "drift_ok": true,
+    "expected": 0.8,
+    "tol": Infinity,
+    "name": "F_Meccan Band A — audit v5",
+    "verdict_expected": "PENDING_REBLESS_v5 (was FALSIFIED, pre-hadith-removal)",
+    "abs_drift": 0.003378450051184312
+  },
+  "PreReg_B_meccan_medinan": {
+    "actual": 0.7966215499488157,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "T14": {
+    "actual": 1.0,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "D26": {
+    "actual": 1.0,
+    "drift_ok": true,
+    "expected": 1.0,
+    "tol": 0.05,
+    "name": "Bootstrap Omega > 2.0 fraction",
+    "verdict_expected": "PROVED STRONGER",
+    "abs_drift": 0.0
+  },
+  "PreReg_C_bootstrap_omega": {
+    "actual": 1.0,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "T6": {
+    "actual": 0.9102201785737795,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "T15": {
+    "actual": 0.9980094187527925,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "D09": {
+    "actual": 0.9980094187527925,
+    "drift_ok": true,
+    "expected": 0.998,
+    "tol": Infinity,
+    "name": "Classifier AUC Quran vs Arabic ctrl — audit v5",
+    "verdict_expected": "PENDING_REBLESS_v5 (was PROVED STRONGER, pre-hadith-removal)",
+    "abs_drift": 9.41875279247828e-06
+  },
+  "T19": {
+    "actual": 0.3051935461722553,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "D16": {
+    "actual": 0.3051935461722553,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "T24": {
+    "actual": 0.0993589233895261,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "T25": {
+    "actual": 8.0,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "T26": {
+    "actual": 1.5748265548435412,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "T29": {
+    "actual": -0.9154654347698885,
+    "drift_ok": true,
+    "expected": -0.915,
+    "tol": 0.2,
+    "name": "phi_frac (golden-ratio claim)",
+    "verdict_expected": "NOT REPRODUCED",
+    "abs_drift": 0.0004654347698884731
+  },
+  "T30": {
+    "actual": 0.848329816341356,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "T31": {
+    "actual": 1.0,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "Supp_A_Hurst": {
+    "actual": 0.7381418019554716,
+    "drift_ok": true,
+    "expected": 0.7,
+    "tol": 0.15,
+    "name": "Quran Hurst H",
+    "verdict_expected": "PROVED",
+    "abs_drift": 0.03814180195547168
+  },
+  "Hurst_DFA_quran": {
+    "actual": 0.9010068429143633,
+    "drift_ok": true,
+    "expected": null,
+    "tol": Infinity
+  },
+  "Supp_A_Hurst_R2": {
+    "actual": 0.9911617873566603,
+    "drift_ok": true,
+    "expected": 1.0,
+    "tol": Infinity,
+    "name": "R/S Hurst log-log R² (Quran)",
+    "verdict_expected": "REPORTING (scaling-regime gate)",
+    "abs_drift": 0.008838212643339727
+  },
+  "Hurst_DFA_quran_R2": {
+    "actual": 0.9900854404561525,
+    "drift_ok": true,
+    "expected": 1.0,
+    "tol": Infinity,
+    "name": "DFA Hurst log-log R² (Quran)",
+    "verdict_expected": "REPORTING (scaling-regime gate)",
+    "abs_drift": 0.009914559543847457
+  },
+  "Supp_B_multilevel_Hurst": {
+    "actual": 0.5366279945540773,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "Supp_C_acoustic_bridge": {
+    "actual": 0.8724112694883126,
+    "drift_ok": true,
+    "expected": null,
+    "tol": Infinity
+  },
+  "Supp_C_acoustic_bridge_perm_p": {
+    "actual": 0.8656716417910447,
+    "drift_ok": true,
+    "expected": 1.0,
+    "tol": Infinity,
+    "name": "Supp-C rhyme×conn perm p",
+    "verdict_expected": "REPORTING (chi2 replacement)",
+    "abs_drift": 0.13432835820895528
+  },
+  "T23": {
+    "actual": 1.9638539165927966,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "E_harakat_capacity": {
+    "actual": 1.9638539165927966,
+    "drift_ok": true,
+    "expected": 1.96,
+    "tol": 0.15,
+    "name": "H(harakat | rasm) bits",
+    "verdict_expected": "PROVED",
+    "abs_drift": 0.003853916592796658
+  },
+  "E_epi_variants": {
+    "actual": 0.0,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "E_epi_waqf": {
+    "actual": 0.0,
+    "drift_ok": true,
+    "expected": null,
+    "tol": Infinity
+  },
+  "T21": {
+    "actual": 0.6475794898489234,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "D13_hindawi_in_pool_legacy": {
+    "actual": 2.0723034352044705,
+    "drift_ok": true,
+    "expected": null,
+    "tol": Infinity
+  },
+  "D13_hindawi_loo": {
+    "actual": 2.1452779558236714,
+    "drift_ok": true,
+    "expected": null,
+    "tol": Infinity
+  },
+  "D13": {
+    "actual": 2.1452779558236714,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "Nuzul_vs_Mushaf": {
+    "actual": 1.0,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "Blind_rejection_rates": {
+    "actual": 0.0,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "Abbasi_8_discriminators": {
+    "actual": 7.0,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "D27": {
+    "actual": 6.0,
+    "drift_ok": true,
+    "expected": 7.0,
+    "tol": Infinity,
+    "name": "LEGACY Abbasi discrimination (now directional)",
+    "verdict_expected": "DEPRECATED (non-directional; see D27_directional)",
+    "abs_drift": 1.0
+  },
+  "Abbasi_directional_beats": {
+    "actual": 6.0,
+    "drift_ok": true,
+    "expected": null,
+    "tol": Infinity
+  },
+  "D27_directional": {
+    "actual": 6.0,
+    "drift_ok": true,
+    "expected": null,
+    "tol": Infinity
+  },
+  "L1": {
+    "actual": 5.421288727132332,
+    "drift_ok": true,
+    "expected": 5.3,
+    "tol": 2.0,
+    "name": "SCI (Quran)",
+    "verdict_expected": "EXPLORATORY",
+    "abs_drift": 0.12128872713233196
+  },
+  "L2": {
+    "actual": 1.1501182544211965,
+    "drift_ok": true,
+    "expected": 1.0,
+    "tol": Infinity,
+    "name": "Retention scaling alpha",
+    "verdict_expected": "EXPLORATORY",
+    "abs_drift": 0.15011825442119653
+  },
+  "L3": {
+    "actual": 1.099808098928237,
+    "drift_ok": true,
+    "expected": 0.0,
+    "tol": 5.0,
+    "name": "Free-energy F (Quran)",
+    "verdict_expected": "EXPLORATORY",
+    "abs_drift": 1.099808098928237
+  },
+  "L4": {
+    "actual": 1.5506006024645875,
+    "drift_ok": true,
+    "expected": 1.7,
+    "tol": 1.0,
+    "name": "Aljamal invariance CV",
+    "verdict_expected": "EXPLORATORY",
+    "abs_drift": 0.14939939753541243
+  },
+  "L5": {
+    "actual": -74.40367044160934,
+    "drift_ok": true,
+    "expected": -74.0,
+    "tol": 15.0,
+    "name": "OBI inequality slack (kappa=1)",
+    "verdict_expected": "EXPLORATORY",
+    "abs_drift": 0.40367044160933574
+  },
+  "L6": {
+    "actual": -0.004281767137431652,
+    "drift_ok": true,
+    "expected": 0.0,
+    "tol": 0.5,
+    "name": "Empirical gamma slope b",
+    "verdict_expected": "EXPLORATORY",
+    "abs_drift": 0.004281767137431652,
+    "n_points": 7,
+    "corpora": [
+      "quran",
+      "poetry_abbasi",
+      "poetry_islami",
+      "poetry_jahili",
+      "arabic_bible",
+      "ksucca",
+      "hindawi"
+    ]
+  },
+  "L7": {
+    "actual": 1.0,
+    "drift_ok": true,
+    "expected": 1.0,
+    "tol": 1.0,
+    "name": "Psi(Quran) rank",
+    "verdict_expected": "EXPLORATORY",
+    "abs_drift": 0.0
+  },
+  "Psi_perm_p_value": {
+    "actual": 0.15920398009950248,
+    "drift_ok": true,
+    "expected": null,
+    "tol": Infinity
+  },
+  "Psi_quran_rank": {
+    "actual": 1.0,
+    "drift_ok": true,
+    "expected": null,
+    "tol": Infinity
+  },
+  "L7_sparse_pca_d": {
+    "actual": 4.813341982139178,
+    "drift_ok": true,
+    "expected": 0.0,
+    "tol": Infinity,
+    "name": "Sparse-PCA PC1 Cohen's d (Q vs ctrl)",
+    "verdict_expected": "REPORTING (Ψ alternative)",
+    "abs_drift": 4.813341982139178
+  },
+  "L7_sparse_pca_perm_p": {
+    "actual": 0.004975124378109453,
+    "drift_ok": true,
+    "expected": 1.0,
+    "tol": Infinity,
+    "name": "Sparse-PCA PC1 perm p",
+    "verdict_expected": "REPORTING (Ψ alternative)",
+    "abs_drift": 0.9950248756218906
+  },
+  "E3_berry_esseen": {
+    "actual": 0.09766268827526964,
+    "drift_ok": true,
+    "expected": null,
+    "tol": 1.0
+  },
+  "Adiyat_metric7_perm_p": {
+    "actual": 0.06965174129353234,
+    "drift_ok": true,
+    "expected": null,
+    "tol": Infinity
+  },
+  "Adiyat_blind": {
+    "actual": 0.5714285714285714,
+    "drift_ok": true,
+    "expected": 0.71,
+    "tol": 0.3,
+    "name": "Adiyat winning variant (7-metric)",
+    "verdict_expected": "PROVED",
+    "abs_drift": 0.13857142857142857
+  },
+  "MonteCarlo_const_null": {
+    "actual": 15.983973544231834,
+    "drift_ok": true,
+    "expected": null,
+    "tol": Infinity
+  },
+  "PROXY_1_compression_p1": {
+    "actual": 0.48095,
+    "drift_ok": true,
+    "expected": null,
+    "tol": Infinity
+  },
+  "PROXY_2_compression_p3": {
+    "actual": 0.005044057664165396,
+    "drift_ok": true,
+    "expected": null,
+    "tol": Infinity
+  },
+  "G1": {
+    "actual": 2.485682879489752,
+    "drift_ok": true,
+    "expected": 2.5,
+    "tol": 1.0,
+    "name": "Hill alpha min across 5 features",
+    "verdict_expected": "PROVED",
+    "abs_drift": 0.014317120510248138
+  },
+  "FDR_BH_n_significant": {
+    "actual": 7.0,
+    "drift_ok": true,
+    "expected": null,
+    "tol": null
+  },
+  "FDR_BH_n_tested": {
+    "actual": 13.0,
+    "drift_ok": true,
+    "expected": null,
+    "tol": Infinity
+  },
+  "FDR_BH_n_claims_total": {
+    "actual": 58.0,
+    "drift_ok": true,
+    "expected": null,
+    "tol": Infinity
+  },
+  "FDR_BH_coverage_frac": {
+    "actual": 0.22413793103448276,
+    "drift_ok": true,
+    "expected": null,
+    "tol": Infinity
+  },
+  "TDA_H1_max_persistence": {
+    "actual": 0.0,
+    "drift_ok": true,
+    "expected": 0.0,
+    "tol": Infinity,
+    "name": "Max H1 persistence (Quran 5D)",
+    "verdict_expected": "APPENDIX (USE_TDA)",
+    "abs_drift": 0.0
+  },
+  "TDA_n_loops_long_lived": {
+    "actual": 0.0,
+    "drift_ok": true,
+    "expected": 0.0,
+    "tol": Infinity,
+    "name": "# H1 features > 0.25 σ",
+    "verdict_expected": "APPENDIX (USE_TDA)",
+    "abs_drift": 0.0
+  },
+  "TDA_H1_bootstrap_p": {
+    "actual": 1.0,
+    "drift_ok": true,
+    "expected": 1.0,
+    "tol": Infinity,
+    "name": "TDA H1 marginal-shuffle perm p",
+    "verdict_expected": "REPORTING (closes caveat c)",
+    "abs_drift": 0.0
+  }
+}

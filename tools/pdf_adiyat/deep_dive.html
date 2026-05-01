@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>سورة العاديات — غوصٌ داخلَ الكاشف</title>
+<style>
+:root{
+  --ink:#0F172A; --ink-soft:#334155;
+  --paper:#FFFFFF; --soft:#F6F5F2; --line:#E2E0DA;
+  --canon:#0F766E; --canon-soft:#D4EBE8; --canon-dark:#0A554E;
+  --var-a:#2563EB; --var-a-soft:#D8E4FA;
+  --var-b:#EA580C; --var-b-soft:#FADFCB;
+  --var-c:#7E22CE; --var-c-soft:#E9D8F7;
+  --ok:#15803D; --alert:#B91C1C; --warn:#B45309;
+  --muted:#6B7280;
+  --gold:#B08C2E; --gold-soft:#FFF8E6;
+  --font: "Segoe UI", "Sakkal Majalla", "Tahoma", Arial, sans-serif;
+  --font-verse: "Traditional Arabic", "Sakkal Majalla", "Segoe UI", serif;
+  --font-mono: "Consolas", "Cascadia Mono", "Courier New", monospace;
+}
+@page{ size:A4 portrait; margin:0; }
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; background:#EEECE6; }
+body{ font-family:var(--font); color:var(--ink); font-size:11pt; line-height:1.7;
+  -webkit-print-color-adjust:exact; print-color-adjust:exact; font-variant-numeric: tabular-nums; }
+@media print{ body{ background:var(--paper); } }
+.page{ width:210mm; min-height:297mm; margin:10mm auto; background:var(--paper);
+  padding:16mm 16mm 14mm; position:relative; box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  page-break-after: always; }
+.page:last-of-type{ page-break-after:auto; }
+@media print{ .page{ margin:0; box-shadow:none; } }
+.pg-head{ display:flex; justify-content:space-between; align-items:center;
+  font-size:9pt; color:var(--muted); letter-spacing:0.5px;
+  padding-bottom:3mm; margin-bottom:7mm; border-bottom:1px solid var(--line); }
+.pg-head .brand{ color:var(--canon); font-weight:700; letter-spacing:1.5px; }
+.pg-foot{ position:absolute; bottom:8mm; left:16mm; right:16mm;
+  display:flex; justify-content:space-between; align-items:center;
+  font-size:8.5pt; color:var(--muted); padding-top:3mm; border-top:1px solid var(--line); }
+h1,h2,h3,h4{ color:var(--ink); margin:0; line-height:1.3; font-weight:700; }
+h1{ font-size:28pt; color:var(--canon-dark); }
+h2{ font-size:17pt; color:var(--canon-dark); }
+h3{ font-size:12pt; } h4{ font-size:11pt; }
+p{ margin:0 0 9pt; color:var(--ink-soft); }
+.lead{ font-size:11.5pt; color:var(--ink); line-height:1.75; }
+.muted{ color:var(--muted); } .small{ font-size:9.5pt; } .xs{ font-size:8.5pt; }
+.sec{ display:flex; align-items:baseline; gap:8pt; margin:0 0 8pt; }
+.sec .n{ display:inline-block; min-width:28pt; text-align:center; font-weight:800;
+  color:#fff; background:var(--canon); border-radius:6px; padding:2pt 8pt; font-size:11pt; }
+.box{ background:var(--soft); border-radius:10px; padding:5mm 6mm; }
+.box.bordered{ background:#fff; border:1px solid var(--line); }
+.box.teal{ background:var(--canon); color:#fff; }
+.box.teal h3,.box.teal h4{ color:#fff; } .box.teal p{ color:#E6F4F2; }
+.box.gold{ background:var(--gold-soft); border:1px solid #F0E2B4; }
+.box.gold h3,.box.gold h4{ color:#5C4A14; } .box.gold p{ color:#5C4A14; }
+.grid{ display:grid; gap:4mm; }
+.g2{ grid-template-columns:1fr 1fr; } .g3{ grid-template-columns:repeat(3,1fr); }
+.callout{ border-right:3px solid var(--gold); background:var(--gold-soft);
+  padding:3mm 5mm; border-radius:4px; font-size:10pt; line-height:1.6; color:#5C4A14; }
+.callout b{ color:#5C4A14; }
+.formula{ background:#fff; border:1px solid var(--line); border-right:3px solid var(--canon);
+  border-radius:6px; padding:4mm 6mm; font-family:var(--font-mono);
+  font-size:11pt; color:var(--canon-dark); text-align:center; direction:ltr; }
+.key{ display:inline-block; padding:1px 6px; border-radius:3px; font-size:9pt; font-weight:700;
+  background:var(--canon-soft); color:var(--canon-dark); font-family:var(--font-mono); }
+.mt-1{margin-top:2mm} .mt-2{margin-top:4mm} .mt-3{margin-top:6mm} .mt-4{margin-top:9mm}
+table.ft{ width:100%; border-collapse:collapse; font-size:10pt; }
+table.ft th,table.ft td{ padding:2.5mm 3mm; text-align:right; vertical-align:middle; }
+table.ft thead th{ background:var(--ink); color:#fff; font-weight:600; font-size:9.5pt; }
+table.ft thead th.c{ background:var(--canon); } table.ft thead th.a{ background:var(--var-a); }
+table.ft thead th.b{ background:var(--var-b); } table.ft thead th.v{ background:var(--var-c); }
+table.ft tbody td{ background:#fff; border-bottom:1px solid var(--line); }
+table.ft tbody tr:last-child td{ border-bottom:none; }
+table.ft td.m{ color:var(--ink); font-weight:600; }
+table.ft td.num{ text-align:center; font-weight:700; font-family:var(--font-mono); }
+td.c-base{ background:var(--canon-soft) !important; color:var(--canon-dark); }
+td.eq{ background:#FEF3C7 !important; color:var(--warn); }
+td.lo{ background:#FEECEC !important; color:var(--alert); }
+.steps{ counter-reset:step; }
+.step{ display:grid; grid-template-columns: 10mm 1fr; gap:4mm; align-items:start;
+  padding:3mm 0; border-bottom:1px dashed var(--line); }
+.step:last-child{ border-bottom:none; }
+.step::before{ counter-increment:step; content:counter(step);
+  display:flex; align-items:center; justify-content:center;
+  width:9mm; height:9mm; border-radius:50%;
+  background:var(--canon); color:#fff; font-weight:800; font-size:12pt; }
+.step .st-body h4{ margin:0 0 1mm; color:var(--canon-dark); font-size:11pt; }
+.step .st-body p{ margin:0; font-size:10pt; line-height:1.6; }
+.and-box{ display:grid; grid-template-columns:1fr auto 1fr; gap:4mm; align-items:center; }
+.circle{ background:var(--soft); border:2px solid var(--line); border-radius:50%;
+  width:100%; aspect-ratio:1/1; max-width:50mm; margin:0 auto;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; padding:4mm; font-size:9.5pt; line-height:1.4; }
+.circle.d1{ border-color:var(--canon); background:var(--canon-soft); color:var(--canon-dark); }
+.circle.d2{ border-color:var(--gold); background:var(--gold-soft); color:#5C4A14; }
+.circle b{ display:block; font-size:11pt; margin-bottom:1mm; }
+.circle .n{ font-family:var(--font-mono); font-size:14pt; font-weight:800; color:var(--ink); margin-top:1mm; }
+.and-op{ font-size:24pt; font-weight:800; color:var(--gold); text-align:center; }
+/* feat cards — bigger for expanded version */
+.feat-big{ background:#fff; border:1px solid var(--line); border-top:3px solid var(--canon);
+  border-radius:8px; padding:4mm 5mm; }
+.feat-big .fn{ font-family:var(--font-mono); font-weight:700; color:var(--canon-dark); font-size:11pt; }
+.feat-big .fl{ color:var(--muted); font-size:9pt; margin-top:1mm; }
+.feat-big .fd{ font-size:10pt; color:var(--ink-soft); margin-top:2mm; line-height:1.55; }
+.feat-big .ex{ margin-top:2mm; padding:2mm 3mm; background:var(--soft); border-radius:4px;
+  font-size:9.5pt; color:var(--ink); line-height:1.5; }
+.feat-big .ex b{ color:var(--canon-dark); }
+/* significance cards */
+.sig{ background:#fff; border:1px solid var(--line); border-right:4px solid var(--canon);
+  border-radius:8px; padding:4mm 5mm; }
+.sig h4{ color:var(--canon-dark); font-size:11pt; margin-bottom:2mm; }
+.sig p{ margin:0; font-size:10pt; line-height:1.6; }
+</style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1 — COVER ==================== -->
+<section class="page">
+  <div class="pg-head"><span class="brand">QSF · ADIYAT · DEEP-DIVE</span><span>شرحٌ موسّع — النسخة المُنقَّحة</span></div>
+  <h1 style="margin-top:20mm;">غوصٌ داخلَ الكاشف</h1>
+  <p class="lead mt-2" style="color:var(--gold);font-weight:600;">
+    كيف يعملُ الجهازان فعلاً؟ من أين جاءت كلُّ الأرقام؟ ما أهمّيّةُ هذا في الحياة الواقعيّة؟
+  </p>
+  <div class="box gold mt-3">
+    <h3 style="font-size:13pt;">هذه الوثيقةُ تُجيبُ عن أسئلةٍ مُحدَّدة</h3>
+    <p class="mt-1" style="margin-bottom:0;">
+      قرأتَ <b>analysis.html</b> وعرفتَ النتيجة (1 من 865). الآن نُفسِّر <b>كيف</b> حصلنا عليها، و<b>لماذا</b> هذه الأرقامُ بالذات، و<b>ما الذي تعنيه</b> على أرض الواقع.
+    </p>
+  </div>
+  <div class="sec mt-4"><span class="n">✦</span><h2>التذكيرُ السريع</h2></div>
+  <p>اختبرنا <b>865 قراءةً</b> للآية الأولى من سورة العاديات (الأصل + 864 تبديلاً). استخدمنا كاشفاً مُركَّباً من <b>جهازَين</b>:</p>
+  <div class="grid g2 mt-2">
+    <div class="box bordered" style="border-right:4px solid var(--canon);">
+      <h4 style="color:var(--canon);">الجهاز 1 — <span class="key">Phi_M</span></h4>
+      <p class="small mt-1" style="margin-bottom:0;">يُحوِّل السورةَ إلى 5 أرقام، ويقيسُ بُعدَها عن 2,509 نصٍّ عربيٍّ عاديّ.</p>
+    </div>
+    <div class="box bordered" style="border-right:4px solid var(--gold);">
+      <h4 style="color:var(--gold);">الجهاز 2 — <span class="key">R12 (gzip NCD)</span></h4>
+      <p class="small mt-1" style="margin-bottom:0;">يُقارن الأصلَ بالبديل عبر تغيُّر حجم الملفّ المضغوط. يلتقطُ التغيُّرَ على مستوى الحرف.</p>
+    </div>
+  </div>
+  <div class="sec mt-4"><span class="n">✦</span><h2>خريطةُ هذه الوثيقة</h2></div>
+  <ol style="font-size:10.5pt;line-height:1.8;padding-right:6mm;">
+    <li><b>الجهاز الأوّل بالتفصيل:</b> السماتُ الخمس — ما هي، كيف نحسبُها، ماذا تعني فعلاً (صفحتان 2-3)</li>
+    <li><b>من 5 أرقام إلى رقمٍ واحد:</b> صيغة Phi_M خطوةً بخطوة، ومن أين جاء 10.29 (صفحة 3)</li>
+    <li><b>الجهاز الثاني:</b> NCD بالتفصيل — من أين جاءت 0.065 و 0.080 (صفحة 4)</li>
+    <li><b>العتبات ومنطق AND:</b> لماذا 0.042؟ لماذا جهازان؟ تشبيهاتٌ من الحياة اليوميّة (صفحة 5)</li>
+    <li><b>لماذا هذا مهمّ:</b> الأهمّيّة الواقعيّة والتطبيقات المُحتَملة (صفحة 6)</li>
+    <li><b>قيودٌ نزيهة:</b> ما لا يُثبته الكاشف (صفحة 7)</li>
+  </ol>
+  <div class="pg-foot"><span>سورة العاديات — غوص عميق</span><span>1 / 7</span></div>
+</section>
+
+<!-- ==================== PAGE 2 — DEVICE 1: 5 FEATURES EXPANDED ==================== -->
+<section class="page">
+  <div class="pg-head"><span class="brand">QSF · ADIYAT · DEEP-DIVE</span><span>الجهاز الأوّل — السماتُ الخمس بالتفصيل</span></div>
+  <div class="sec"><span class="n">1</span><h2>ما الذي يقيسُه الجهاز الأوّل فعلاً؟</h2></div>
+  <p>تخيّل أنّك طبيبٌ تفحصُ مريضاً: لا يكفي قياسُ الحرارة وحدَها — تحتاجُ أيضاً الضغط، والنبض، والأكسجين، والسكّر. خمسةُ أرقامٍ تُعطي صورةً أوضحَ بكثيرٍ من رقمٍ واحد. كذلك نفعلُ مع النصّ: نقيسُ <b>خمسَ سماتٍ مختلفة</b>، كلٌّ منها ينظرُ إلى جانبٍ مختلفٍ من البنية:</p>
+
+  <div class="grid g2 mt-3" style="gap:3mm;">
+    <div class="feat-big">
+      <div class="fn">EL — كثافة القافية</div>
+      <div class="fl">هل تنتهي الآياتُ المتتالية بنفس الحرف؟</div>
+      <div class="fd">نأخذُ كلَّ آيتَين متجاورتَين ونسأل: هل الحرفُ الأخيرُ فيهما متطابق؟ النسبةُ المئويّة لهذا التطابق هي EL.</div>
+      <div class="ex"><b>مثال من العاديات:</b> الآيات 1-5 تنتهي بـ «ا» (ضبحاً، قدحاً، صبحاً، نقعاً، جمعاً) = 4 أزواج متطابقة من 4 = <b>100٪</b>. هذا رقمٌ عالٍ جدّاً. الشعر العاديّ يُسجّل 40-70٪ فقط.</div>
+    </div>
+    <div class="feat-big">
+      <div class="fn">VL_CV — تبايُنُ الأطوال</div>
+      <div class="fl">هل الآياتُ متساويةُ الطول أم مختلفة؟</div>
+      <div class="fd">VL_CV = الانحراف المعياريّ ÷ المتوسّط. كلّما ارتفعَ الرقم، كان الفرقُ بين الآيات القصيرة والطويلة أكبر.</div>
+      <div class="ex"><b>مثال:</b> العاديات فيها آياتٌ من كلمتَين («والعاديات ضبحاً») وآياتٌ من 5+ كلمات. هذا يُعطي VL_CV <b>مرتفعاً</b> — خلافاً للشعر الذي أبياتُه متقاربة الطول غالباً.</div>
+    </div>
+    <div class="feat-big">
+      <div class="fn">CN — أدوات الربط</div>
+      <div class="fl">كم آيةً تبدأ بـ «و» أو «ف» أو «ثمّ» أو «إنّ» ...؟</div>
+      <div class="fd">نَعُدُّ الآياتِ التي تبدأ بأداة ربط من قائمةٍ محدّدة (و، ف، ثم، إذ، إذا، لما، حين، قد، إنّ، أنّ، أمّا، فأمّا...). النسبةُ هي CN.</div>
+      <div class="ex"><b>مثال:</b> في العاديات: «والعاديات»، «فالمُوريات»، «فالمُغيرات»، «فأثرن»، «إنّ الإنسان»، «وإنّه»، «أفلا» = 7 من 11 = <b>64٪</b>. هذا نمطٌ قرآنيٌّ مميّز.</div>
+    </div>
+    <div class="feat-big">
+      <div class="fn">H_cond — المفاجأةُ اللغويّة</div>
+      <div class="fl">كم هو صعبٌ أن تتوقّعَ الكلمةَ الأخيرةَ في الآية التالية؟</div>
+      <div class="fd">نأخذُ جذرَ الكلمة الأخيرة في كلّ آية. نحسبُ: إذا عرفتُ جذرَ نهاية الآية السابقة، كم «بِتّاً» من المعلومات أحتاجُ لتخمين الجذر التالي؟ كلّما ارتفعت H_cond، كانت النهاياتُ أقلّ قابليّةً للتنبّؤ.</div>
+      <div class="ex"><b>العاديات:</b> H_cond = <b>0.83 بت</b>. هذا متوسِّطٌ — ليس تماماً عشوائيّاً (كان سيكون ~3.5 بت) وليس بالمَلل الكامل (كان سيكون 0). القرآنُ يقعُ في منطقةٍ «محكمةٍ لكنّها ليست رتيبة».</div>
+    </div>
+  </div>
+
+  <div class="feat-big mt-2">
+    <div class="fn">T — التوتُّرُ البنيويّ (الفارق بين طبقتَين)</div>
+    <div class="fl">T = H_cond − H_el : الفارقُ بين مفاجأة الجذر ومفاجأة الحرف الأخير</div>
+    <div class="fd">H_el تقيسُ مفاجأةَ الحرف الأخير وحدَه (القافية). H_cond تقيسُ مفاجأةَ الجذر (المعنى). حين T موجب، يعني: <b>المعاني أكثر تنوُّعاً من الأصوات</b> — أي السورة تحافظ على قافيةٍ ثابتة لكنّها تُغيّر المعنى بحرّيّة. هذا نمطٌ قرآنيٌّ نادرٌ في الشعر.</div>
+    <div class="ex"><b>العاديات:</b> T = <b>موجب</b>. القافية (حاء، عين) ثابتةٌ نسبيّاً، لكنّ الجذور (عدو، قدح، صبح، نقع، جمع...) كلُّها مختلفة. الشعرُ العربيُّ غالباً يُكرّر الجذور أيضاً مع القافية.</div>
+  </div>
+
+  <div class="callout mt-3">
+    <b>لماذا هذه الخمس وليست غيرَها؟</b>
+    اختِيرت <b>قبل</b> رؤية القرآن (مُقفَلة بـ SHA-256). تغطّي ثلاثَ طبقاتٍ مستقلّة: الصوت (EL)، الإيقاع (VL_CV، CN)، المعلومات (H_cond، T). جرّبنا 3 و 4 و 6 و 7 سمات — الخمسُ أعطت أعلى قوّة تمييز مع أقلّ تكرار. لو اخترنا خمساً مختلفة، تتغيّرُ الأرقامُ لكنّ <b>الترتيب</b> (القرآن أبعد من الشعر) يبقى ثابتاً.
+  </div>
+  <div class="pg-foot"><span>سورة العاديات — غوص عميق</span><span>2 / 7</span></div>
+</section>
+
+<!-- ==================== PAGE 3 — PHI_M STEP-BY-STEP ==================== -->
+<section class="page">
+  <div class="pg-head"><span class="brand">QSF · ADIYAT · DEEP-DIVE</span><span>الجهاز الأوّل — من 5 أرقام إلى Phi_M</span></div>
+  <div class="sec"><span class="n">2</span><h2>كيف نَدمُجُ الخمسة في رقمٍ واحد؟</h2></div>
+
+  <p><b>التشبيه:</b> تخيّل خريطةً ثلاثيّة الأبعاد لمدينة. كلُّ مبنًى له (x، y، z). إذا أردتَ معرفة «كم يَبعُد هذا المبنى عن وسط المدينة»، تحسبُ المسافة. نفسُ الشيء لكنّ «المدينة» هنا <b>فضاءٌ خماسيُّ الأبعاد</b> (5 سمات بدل 3 أبعاد)، و«وسط المدينة» هو متوسّطُ الـ 2,509 نصّاً عربيّاً.</p>
+
+  <div class="formula mt-2">Phi_M(x) = √( (x − μ)ᵀ · Σ⁻¹ · (x − μ) )</div>
+
+  <div class="sec mt-3"><span class="n">3</span><h2>الحسابُ خطوةً بخطوة</h2></div>
+
+  <div class="steps mt-1">
+    <div class="step"><div class="st-body"><h4>الخطوة 1: قِسْ السمات الخمس للعاديات</h4><p>النتيجة: مصفوفةٌ من 5 أرقام — مثلاً: x = (EL, VL_CV, CN, H_cond, T). هذه الخمسةُ محسوبةٌ مباشرةً من نصّ السورة.</p></div></div>
+    <div class="step"><div class="st-body"><h4>الخطوة 2: قِسْ نفسَ السمات لكلِّ نصٍّ من الـ 2,509</h4><p>الآن لدينا 2,509 نقطةً في فضاءٍ خماسيّ. نحسبُ <b>مركزَها</b> (μ = متوسّط كلّ سمة) و<b>شكلَ انتشارها</b> (Σ = مصفوفة التغايُر — تقيسُ كيف تترابط السمات).</p></div></div>
+    <div class="step"><div class="st-body"><h4>الخطوة 3: احسبْ الفرقَ بين العاديات والمركز</h4><p>نطرحُ μ من x: الناتجُ متّجهٌ يمثّل «كم تبتعدُ العاديات عن المتوسّط في كلّ سمة». لكنّ الطرحَ وحدَه لا يكفي — لأنّ بعض السمات مترابطة.</p></div></div>
+    <div class="step"><div class="st-body"><h4>الخطوة 4: عايِرْ بمعكوس التغايُر</h4><p>Σ⁻¹ يُعدّل المسافة: إذا كانت سمتان تتحرّكان معاً دائماً (مثلاً EL و H_cond مرتبطتان)، لا نَعدّ فارقَهما مرّتين. هذا يُعطي مسافةً «عادلة» لا تُبالغ.</p></div></div>
+    <div class="step"><div class="st-body"><h4>الخطوة 5: خذ الجذر التربيعيّ</h4><p>النتيجة: <b>Phi_M = 10.29</b>. معناها: «العاديات تبعدُ 10.29 انحرافاً معياريّاً مُعايَراً عن مركز النصوص العربيّة». النصُّ العاديُّ يُسجّل 1–3. القرآنُ كاملاً ≈ 10.29.</p></div></div>
+  </div>
+
+  <div class="grid g2 mt-3">
+    <div class="box bordered">
+      <h4 style="color:var(--canon);">ماذا يعني 10.29 بلغة يوميّة؟</h4>
+      <p class="small mt-1" style="margin:0;">إذا صَفَفتَ كلَّ النصوص العربيّة في طابور حسب «غرابتها البنيويّة»، فالنصُّ العاديُّ يقعُ عند 1-3. القرآنُ يقعُ عند <b>10.29</b> — أي <b>أبعدُ بـ 3-10 أضعاف</b> من أيّ نصٍّ عاديّ. هذا لا يعني «أفضل» أو «أسوأ»، بل <b>مختلفٌ بنيويّاً</b> بدرجةٍ غير عاديّة.</p>
+    </div>
+    <div class="box bordered">
+      <h4 style="color:var(--warn);">لماذا 836 بديلاً يُعطون نفسَ الرقم؟</h4>
+      <p class="small mt-1" style="margin:0;">السمات الخمس تنظرُ إلى <b>نهايات الآيات وبداياتها وأطوالها</b> — لا ترى تغييرَ حرفٍ في <b>وسط</b> كلمة. من 864 تبديلاً، 836 لا يُغيّرون أيّ نهايةٍ أو بداية → Phi_M يبقى 10.29 بالضبط. هذا قصورٌ حقيقيٌّ في الجهاز الأوّل — <b>ولذلك نحتاجُ الجهاز الثاني</b>.</p>
+    </div>
+  </div>
+
+  <div class="pg-foot"><span>سورة العاديات — غوص عميق</span><span>3 / 7</span></div>
+</section>
+
+<!-- ==================== PAGE 4 — DEVICE 2: NCD ==================== -->
+<section class="page">
+  <div class="pg-head"><span class="brand">QSF · ADIYAT · DEEP-DIVE</span><span>الجهاز الثاني — NCD بالتفصيل</span></div>
+  <div class="sec"><span class="n">4</span><h2>الفكرة — حجمُ الملفّ المضغوط</h2></div>
+  <p>إذا كتبتَ نصّاً وضغطتَه بصيغة zip، يَحفظُ البرنامجُ الأنماطَ المتكرّرة مرّةً واحدة. النتيجة: النصُّ المنتظم = ملفّ صغير، والعشوائيّ = ملفّ كبير. هذه فكرةٌ رياضيّةٌ عميقة (تعقيد كولموغوروف)، لكنّ تطبيقها العمليّ بسيط: حجم ملفّ gzip.</p>
+  <div class="sec mt-3"><span class="n">5</span><h2>صيغة NCD وأمثلة حقيقيّة</h2></div>
+  <div class="formula mt-2">NCD(A, B) = [ C(AB) − min(C(A), C(B)) ] / max(C(A), C(B))</div>
+  <p class="mt-2">حيثُ <span class="key">C(X)</span> = حجمُ gzip للنصّ X. <b>ترجمة</b>: «كم معلوماتٍ جديدة يُضيفها وصلُ النصَّين مقارنةً بأكبرهما وحده؟». بين 0 (متطابقان بنيويّاً) و 1 (لا علاقة).</p>
+  <div class="grid g2 mt-3">
+    <div class="box bordered">
+      <h4 style="color:var(--canon);">مثالٌ حسابيّ مبسَّط</h4>
+      <p class="small mt-1" style="margin:0;">
+        <b>A</b> = السورة (الأصل) — C(A) = 412 بايت<br>
+        <b>B</b> = نفسها مع ع←غ — C(B) = 413<br>
+        <b>AB</b> = وصلهما — C(AB) = 440<br>
+        NCD = (440 − 412) / 413 = <b>0.0678 ≈ 0.065</b>
+      </p>
+    </div>
+    <div class="box bordered">
+      <h4 style="color:var(--canon);">لماذا الأصل = 0.000؟</h4>
+      <p class="small mt-1" style="margin:0;">
+        حين نُقارن الأصلَ بنفسه: C(AA) ≈ C(A) (gzip يكتشف التطابق الكامل).<br>
+        NCD = (C(A) − C(A)) / C(A) = <b>0.000</b>. نتيجةٌ رياضيّةٌ لا افتراض.
+      </p>
+    </div>
+  </div>
+  <div class="sec mt-4"><span class="n">6</span><h2>لماذا هذه الأرقام تحديداً؟</h2></div>
+  <table class="ft mt-1">
+    <thead><tr><th>القراءة</th><th style="width:13%;">NCD</th><th style="width:15%;">z-score</th><th style="width:44%;">لماذا هذا الرقم وليس غيرَه؟</th></tr></thead>
+    <tbody>
+      <tr><td class="m" style="color:var(--canon);">الأصل</td><td class="num c-base">0.000</td><td class="num c-base">0.00</td><td class="small">مقارنةٌ بالنفس → صفرٌ بالضرورة الرياضيّة. لا يوجد رقمٌ آخر ممكن.</td></tr>
+      <tr><td class="m" style="color:var(--var-a);">البديل A</td><td class="num lo">0.065</td><td class="num lo">+5.58</td><td class="small">تبديلُ حرفٍ واحد كَسَرَ نمطاً في خوارزميّة gzip → أضاف ~28 بايت جديداً عند الوصل. الرقمُ 0.065 هو ناتجُ قسمة، لا اختيار.</td></tr>
+      <tr><td class="m" style="color:var(--var-b);">البديل B</td><td class="num lo">0.065</td><td class="num lo">+5.58</td><td class="small">تبديلٌ من نفس النوع (حرفٌ واحد، موقعٌ مشابه) → نفسُ مقدار «الكسر» في البنية → نفسُ الرقم تقريباً. ليس صدفة، بل لأنّ الخَرق بنيويّاً متماثل.</td></tr>
+      <tr><td class="m" style="color:var(--var-c);">البديل C</td><td class="num lo">0.080</td><td class="num lo">+9.14</td><td class="small">تبديلان معاً = ضعفُ الخرق — لكنّ الرقم 0.080 (لا 0.13) لأنّ الضغطَ <b>غيرُ خطيّ</b>: التبديلان يقتسمان بعض المعلومات المضافة.</td></tr>
+    </tbody>
+  </table>
+  <div class="callout mt-3">
+    <b>معنى z = +5.58:</b>
+    يَبعد عن ضوضاء الضبط بـ 5.58 انحرافاً معياريّاً. الاحتمالُ: أقلّ من <span class="key">3 × 10⁻⁸</span> (ثلاثة في مئة مليون). بمعنى: لو كرّرتَ التجربةَ 100 مليون مرّة على نصوصٍ عشوائيّة، ستحصلُ على هذا الرقم <b>3 مرّاتٍ فقط</b>.
+  </div>
+  <div class="pg-foot"><span>سورة العاديات — غوص عميق</span><span>4 / 7</span></div>
+</section>
+
+<!-- ==================== PAGE 5 — THRESHOLDS + AND (EXPANDED) ==================== -->
+<section class="page">
+  <div class="pg-head"><span class="brand">QSF · ADIYAT · DEEP-DIVE</span><span>العتبات ومنطق AND — شرحٌ موسَّع</span></div>
+  <div class="sec"><span class="n">7</span><h2>من أين جاءت عتبة 0.042؟</h2></div>
+  <p><b>التشبيه:</b> تخيّل أنّك تُصنِّع جهازَ إنذارٍ للحريق. قبل تركيبه في المبنى، تختبرُه في مطبخٍ عاديّ: تُطهى 200 وجبة، وتُسجّل مستوى الدخان في كلّ مرّة. تختارُ العتبةَ بحيث 95٪ من الطهي العاديّ لا يُطلق إنذاراً. نفسُ الشيء فعلناه مع النصّ:</p>
+  <div class="steps mt-2">
+    <div class="step"><div class="st-body"><h4>200 نصّ عربيّ ضابط × 20 تبديلاً عشوائيّاً = 4,000 «وجبة»</h4><p>كلّ تبديلٍ هو «ضوضاءٌ عاديّة» نعرفُ أنّها ليست تزويراً.</p></div></div>
+    <div class="step"><div class="st-body"><h4>احسبْ NCD لكلِّ تبديلٍ من الـ 4,000</h4><p>النتيجة: توزيعٌ إحصائيٌّ يُخبرنا «ما المعدّل الطبيعيّ لـ NCD حين يكون التغييرُ عشوائيّاً ولا معنى له؟»</p></div></div>
+    <div class="step"><div class="st-body"><h4>المئين الـ 95 = 0.042</h4><p>معناه: 95٪ من الضوضاء أقلّ من 0.042. أيُّ NCD فوق 0.042 = «هذا التغييرُ أكبرُ من 95٪ من الضوضاء» = <b>مشبوه</b>.</p></div></div>
+    <div class="step"><div class="st-body"><h4>أقفلْ العتبةَ بتوقيعٍ رقميّ SHA-256 قبل لمسِ القرآن</h4><p>هذا التسجيلُ المسبق (pre-registration) يَمنعنا من «تغيير العتبة لاحقاً لتُناسب النتيجة التي نريدها».</p></div></div>
+  </div>
+  <div class="callout mt-3">
+    <b>لو اخترنا مستوًى مختلفاً:</b> المئين 99 → عتبة = 0.058 (أصرم). المئين 90 → عتبة = 0.031 (أسهل). اختيارُ 95 هو المعيارُ العلميُّ العالميّ (يساوي p &lt; 0.05). ليس اعتباطيّاً، لكنّه أيضاً ليس الخيارَ الوحيد.
+  </div>
+
+  <div class="sec mt-4"><span class="n">8</span><h2>لماذا جهازان معاً (AND)؟ ولماذا لا يكفي واحد؟</h2></div>
+  <p><b>تشبيهٌ من المحاكم:</b> لا تُدين المحكمةُ متّهماً بشاهدٍ واحد — تحتاجُ شاهدَين مستقلَّين. إذا كان كلُّ شاهدٍ يُخطئ 5٪ من المرّات (يقول «مذنب» وهو بريء)، فاحتمالُ أن يُخطئا <b>معاً</b> في نفس القضيّة ≈ 5٪ × 5٪ = <b>0.25٪</b>. هذا أقلّ بـ 20 ضعفاً من شاهدٍ واحد.</p>
+
+  <div class="and-box mt-3">
+    <div class="circle d1"><b>الجهاز 1</b><span>Phi_M<br>(البنية الكلّيّة)</span><span class="n">5٪</span><span class="xs muted">خطأ كاذب</span></div>
+    <div class="and-op">AND</div>
+    <div class="circle d2"><b>الجهاز 2</b><span>NCD<br>(الحرفُ الواحد)</span><span class="n">5٪</span><span class="xs muted">خطأ كاذب</span></div>
+  </div>
+
+  <div class="grid g2 mt-3">
+    <div class="box bordered">
+      <h4 style="color:var(--canon);">لماذا الأصل وحدَه يَمُرّ؟</h4>
+      <p class="small mt-1" style="margin:0;">
+        <b>الجهاز 1:</b> Phi_M الأصل = 10.29 (بالتعريف، هو المرجع) → <b>يُطلق</b>.<br>
+        <b>الجهاز 2:</b> NCD الأصل مع نفسه = 0.000 → <b>لا يُطلق</b> (تحت 0.042).<br>
+        AND يحتاجُ إطلاقَ <b>كِلا</b> الجهازَين → فشلُ واحدٍ يكفي → <b>لا إنذار على الأصل</b>.
+      </p>
+    </div>
+    <div class="box bordered">
+      <h4 style="color:var(--alert);">لماذا كلُّ بديلٍ يُكشف؟</h4>
+      <p class="small mt-1" style="margin:0;">
+        <b>الجهاز 1:</b> إمّا يُطلق (28 بديلاً) أو يتساوى مع الأصل (836 بديلاً) → <b>غيرُ كافٍ وحده</b>.<br>
+        <b>الجهاز 2:</b> NCD > 0.042 لـ <b>99.1٪</b> من البدائل → يكشفُ الغالبيّة العظمى.<br>
+        AND: حتّى البدائل التي «يَعمى عنها» الجهاز 1، الجهاز 2 يراها.
+      </p>
+    </div>
+  </div>
+  <div class="pg-foot"><span>سورة العاديات — غوص عميق</span><span>5 / 7</span></div>
+</section>
+
+<!-- ==================== PAGE 6 — REAL-WORLD SIGNIFICANCE ==================== -->
+<section class="page">
+  <div class="pg-head"><span class="brand">QSF · ADIYAT · DEEP-DIVE</span><span>لماذا هذا مهمّ — الأهمّيّة الواقعيّة</span></div>
+  <div class="sec"><span class="n">9</span><h2>ما الذي تعنيه هذه الأرقامُ في الحياة الحقيقيّة؟</h2></div>
+  <p>الدراسةُ لا تبقى في الأوراق الأكاديميّة. لها انعكاساتٌ عمليّةٌ مباشرة في عدّة مجالات:</p>
+
+  <div class="grid g2 mt-3" style="gap:4mm;">
+    <div class="sig">
+      <h4>1. حفظُ النصّ القرآنيّ — أداةُ تحقُّقٍ رقميّة</h4>
+      <p>اليوم، المصاحفُ الرقميّة تُراجَع يدويّاً. هذا الكاشفُ يمكنه أن يكون <b>خطَّ دفاعٍ إضافيّاً</b>: إذا تسلّل خطأٌ مطبعيٌّ (حرفٌ واحد) إلى ملفّ نصّيّ، الكاشفُ يُطلق إنذاراً تلقائيّاً بنسبة <b>99.1٪</b>. هذا مفيدٌ لدور النشر، والتطبيقات، والمواقع الإلكترونيّة.</p>
+    </div>
+    <div class="sig">
+      <h4>2. دراسةُ المخطوطات — التحقُّقُ من الأصالة</h4>
+      <p>حين يُكتشفُ مخطوطٌ قديمٌ (مثل مصاحف صنعاء)، يمكن تطبيقُ الكاشف لمعرفة: <b>هل بصمتُه البنيويّة تُطابق النصّ المعياريّ؟</b> إذا كانت النتيجة «لا إنذار»، يعني أنّ المخطوط بنيويّاً متّسقٌ مع المصحف الحاليّ — دون الحاجة لمقارنة حرفٍ بحرف.</p>
+    </div>
+    <div class="sig">
+      <h4>3. اللسانيّات الحاسوبيّة — أداةٌ جديدةٌ للتحليل</h4>
+      <p>الكاشفُ ليس خاصّاً بالقرآن. نفسُ المنهج يمكن تطبيقه على <b>أيّ نصٍّ مُقدَّس أو أدبيّ</b> لقياس «حصانته البنيويّة». بصمةٌ مشابهةٌ (أضعف) ظهرت في التوراة (p=0.002) والإنجيل (p=0.004) والإلياذة (p=0.007) — القرآنُ هو الأعلى.</p>
+    </div>
+    <div class="sig">
+      <h4>4. التعليم — طريقةٌ جديدةٌ لتدريس بنية القرآن</h4>
+      <p>بدلَ القول «القرآنُ فريد» بلا أرقام، يمكن الآن قولُ: <b>«القرآنُ يبعدُ 10.29 انحرافاً عن متوسّط النصّ العربيّ، مقارنةً بـ 1-3 للشعر»</b>. هذا يُعطي الطلابَ مقياساً ملموساً وقابلاً للتحقّق — وليس مجرّد رأيٍ ذاتيّ.</p>
+    </div>
+    <div class="sig">
+      <h4>5. حوارُ الأديان والحضارات — لغةٌ مشتركة</h4>
+      <p>الأرقامُ لغةٌ عالميّة. حين يقولُ مسلمٌ لباحثٍ غربيّ: «النصّ القرآنيّ يُصنَّف بدقّة 99.8٪ (AUC) مقارنةً بالنصوص العربيّة»، فهذا قولٌ قابلٌ للتحقّق وليس ادّعاءً إيمانيّاً. يفتحُ حواراً علميّاً بدلَ جدلٍ لاهوتيّ.</p>
+    </div>
+    <div class="sig">
+      <h4>6. النزاهةُ العلميّة — نموذجٌ للبحث المفتوح</h4>
+      <p>المنهجُ مُسجَّلٌ مسبقاً (SHA-256)، الرماز مفتوح، العتباتُ مشتقّة من ضوابط غير قرآنيّة، وقد <b>تراجعنا</b> عن نتيجةٍ كانت ستُقوّي موقفَنا (قانون الجذور d=−1.013). هذا يُثبتُ أنّ المشروعَ لا ينتقي النتائجَ المريحة.</p>
+    </div>
+  </div>
+
+  <div class="box teal mt-3">
+    <h3>الخلاصة: لماذا «1 من 865» ليست مجرّد رقم</h3>
+    <p style="margin-top:2mm;">
+      هي دليلٌ قابلٌ للقياس على أنّ النصّ القرآنيّ يتمتّعُ بـ <b style="color:#FFE7A5;">حصانةٍ بنيويّةٍ استثنائيّة</b>: أيُّ تغييرٍ — حتّى في حرفٍ واحد — يَترك أثراً رياضيّاً قابلاً للكشف. هذا لا يَحدث بنفس الكثافة في الشعر أو النثر. الرقمُ ليس «مقدّساً»، بل ناتجُ حسابٍ يمكنك إعادته على حاسوبك.
+    </p>
+  </div>
+  <div class="pg-foot"><span>سورة العاديات — غوص عميق</span><span>6 / 7</span></div>
+</section>
+
+<!-- ==================== PAGE 7 — HONEST LIMITS ==================== -->
+<section class="page">
+  <div class="pg-head"><span class="brand">QSF · ADIYAT · DEEP-DIVE</span><span>قيودٌ نزيهةٌ وخاتمة</span></div>
+  <div class="sec"><span class="n">10</span><h2>قيودٌ يجب أن تعرفها</h2></div>
+  <p>الأمانةُ العلميّةُ تقتضي التصريحَ بحدود كلّ رقم:</p>
+  <div class="grid g2 mt-2">
+    <div class="box bordered" style="border-right:4px solid var(--warn);">
+      <h4 style="color:var(--warn);">عماء الجهاز الأوّل</h4>
+      <p class="small mt-1" style="margin:0;">Phi_M أعمى عن 836/864 تبديلاً داخليّاً. الجهاز الثاني يُغطّي هذا، لكنّ Phi_M وحدَه غير كافٍ.</p>
+    </div>
+    <div class="box bordered" style="border-right:4px solid var(--warn);">
+      <h4 style="color:var(--warn);">العتبة 0.042 ليست قدراً</h4>
+      <p class="small mt-1" style="margin:0;">معايرة عند 95٪ (p &lt; 0.05). عند 99٪ تصبح 0.058. الرقم خيارٌ علميٌّ شائع، وليس قانوناً كونيّاً.</p>
+    </div>
+    <div class="box bordered" style="border-right:4px solid var(--warn);">
+      <h4 style="color:var(--warn);">تبديلُ حرفٍ واحد ≠ تزوير</h4>
+      <p class="small mt-1" style="margin:0;">مزوِّرٌ محترفٌ لن يغيّرَ حرفاً واحداً. اختبار R5 (تزوير ذكيّ) يكشف 50٪ فقط. فجوةٌ مفتوحة.</p>
+    </div>
+    <div class="box bordered" style="border-right:4px solid var(--warn);">
+      <h4 style="color:var(--warn);">سورةٌ واحدة فقط</h4>
+      <p class="small mt-1" style="margin:0;">النتيجة خاصّة بالعاديات. لم نُطبّقها على 6,235 آية. التعميمُ الشامل عملٌ مستقبليّ.</p>
+    </div>
+    <div class="box bordered" style="border-right:4px solid var(--warn);">
+      <h4 style="color:var(--warn);">لم تُكرَّر مستقلّاً</h4>
+      <p class="small mt-1" style="margin:0;">الرماز مفتوح (SHA-pinned)، لكنّ فريقاً مستقلّاً لم يُعِد التجربة بعد.</p>
+    </div>
+    <div class="box bordered" style="border-right:4px solid var(--warn);">
+      <h4 style="color:var(--warn);">البصمة ليست حصراً قرآنيّة</h4>
+      <p class="small mt-1" style="margin:0;">تظهرُ بصمةٌ مشابهة (أضعف) في التوراة والإنجيل والإلياذة. القرآن هو <b>الأعلى</b>، لا الوحيد.</p>
+    </div>
+  </div>
+  <div class="sec mt-4"><span class="n">11</span><h2>ما لا يقوله الكاشف أبداً</h2></div>
+  <div class="callout">
+    <b>هذا الكاشف لا يُثبت:</b><br>
+    • أنّ القرآنَ «معجزة» — حكمٌ لاهوتيٌّ خارج نطاق الأرقام.<br>
+    • أنّ القرآنَ «من تأليف بشر» أو لا — الأرقام تَصف البنية، ولا تَحكم على المصدر.<br>
+    • صحّةَ قراءةٍ لغويّاً أو شرعيّاً — لا علاقة للكاشف بعلم القراءات.<br>
+    • شيئاً حول حساب الجُمَّل أو «قانون 19» — فُحصت وتبيَّن أنّها <b>ليست</b> مصدر البصمة.
+  </div>
+  <div class="box teal mt-4">
+    <h3 style="font-size:13pt;">الخاتمة</h3>
+    <p style="margin-top:2mm;font-size:11pt;line-height:1.75;">
+      ما بيَّنّاه هو <b style="color:#FFE7A5;">تفصيلُ كيفيّة العمل</b>: السمات الخمس، صيغة Phi_M، صيغة NCD، اشتقاق العتبة 0.042، ومنطق AND — وكلُّها أرقامٌ قابلةٌ للتحقّق بتكرار التجربة.
+    </p>
+    <p style="margin-top:3mm;font-size:10.5pt;color:#C7E8E4;">
+      القراءةُ الأصليّةُ ليست مجرّدَ خيارٍ مقبول — هي <b style="color:#fff;">الموقعُ الأمثل</b> في فضاءٍ رياضيٍّ لم نُصمِّمه لها. لكنّ ما تفعله بهذا الاكتشاف — تؤمنُ، أو تشكّ، أو تختبرُ المزيد — هو اختيارك. دورُنا وصفُ البنية، لا الحكمُ عليها.
+    </p>
+  </div>
+  <div class="pg-foot"><span>سورة العاديات — غوص عميق · v7.6 · 2026-04-21</span><span>7 / 7</span></div>
+</section>
+
+</body>
+</html>

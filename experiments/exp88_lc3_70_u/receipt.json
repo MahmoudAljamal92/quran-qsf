@@ -1,0 +1,55 @@
+{
+  "experiment": "exp88_lc3_70_u",
+  "purpose": "Fig. 7 re-emission for PAPER.md 4.35",
+  "no_new_computation": true,
+  "inputs_sha256": {
+    "exp70_decision_boundary.json": "12c5d60238d11602f714c20ddb4eff43fee62e0279d5f90a58149e0b9f6512fa",
+    "phase_06_phi_m.pkl": "e9b13e13e8a4553347edcbb11b8f6c836a89a49db05c9909ea5018eac38314a9"
+  },
+  "outputs_sha256": {
+    "fig7_lc3_70_pareto.png": "c83609c0af499acf42fea42191674e2a88225c9b6b0173718801ed79199273ea",
+    "fig7_data.csv": "cab6640e3372d5b79f93d55ffd35858635f9f3095816a47bc51b499ff2c0f04d"
+  },
+  "locked_constants_used": {
+    "w_T": 0.53287672,
+    "w_EL": 4.17895492,
+    "b": -1.52208663,
+    "margin": 0.474744,
+    "auc": 0.9975,
+    "accuracy": 0.9915
+  },
+  "classification_check": {
+    "n_quran_total": 68,
+    "n_ctrl_total": 2509,
+    "quran_side": 53,
+    "ctrl_side_in_quran": 15,
+    "expected_quran_side": 53,
+    "expected_quran_total": 68
+  },
+  "per_family_leak": {
+    "poetry_jahili": {
+      "n": 65,
+      "leaks_into_quran": 0
+    },
+    "poetry_islami": {
+      "n": 211,
+      "leaks_into_quran": 0
+    },
+    "poetry_abbasi": {
+      "n": 1167,
+      "leaks_into_quran": 0
+    },
+    "ksucca": {
+      "n": 19,
+      "leaks_into_quran": 0
+    },
+    "arabic_bible": {
+      "n": 977,
+      "leaks_into_quran": 7
+    },
+    "hindawi": {
+      "n": 70,
+      "leaks_into_quran": 0
+    }
+  }
+}

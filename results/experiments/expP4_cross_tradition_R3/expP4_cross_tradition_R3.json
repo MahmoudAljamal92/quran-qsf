@@ -1,0 +1,328 @@
+{
+  "experiment": "expP4_cross_tradition_R3",
+  "schema_version": 1,
+  "seed": 42,
+  "n_perm": 5000,
+  "metric": "Euclidean path cost over within-corpus z-scored 5-D features_lang_agnostic (EL, VL_CV, CN, H_cond_initials, T_lang)",
+  "corpus_order": [
+    "quran",
+    "hebrew_tanakh",
+    "greek_nt",
+    "iliad_greek",
+    "pali_dn",
+    "pali_mn",
+    "rigveda",
+    "avestan_yasna"
+  ],
+  "per_corpus": {
+    "quran": {
+      "n_units": 114,
+      "alphabet": "arabic",
+      "tradition_class": "oral_liturgical",
+      "canonical_path_cost": 240.48129353162417,
+      "perm_mean": 319.84254551103527,
+      "perm_std": 8.897036745471231,
+      "z_path": -8.919964506138243,
+      "pct_perms_below_canon": 0.0,
+      "p_one_sided": 0.0001999600079984003,
+      "n_perm": 5000,
+      "runtime_seconds": 0.83,
+      "feature_means_before_zscore": [
+        0.7062633038455213,
+        0.4646185566096261,
+        0.08711735551761604,
+        2.748010262745095,
+        1.5922850051452384
+      ],
+      "feature_stds_before_zscore": [
+        0.2207402063322697,
+        0.18560435504201786,
+        0.09446743382033045,
+        0.9316891098823873,
+        1.1750010286964943
+      ]
+    },
+    "hebrew_tanakh": {
+      "n_units": 921,
+      "alphabet": "hebrew",
+      "tradition_class": "narrative_or_mixed",
+      "canonical_path_cost": 2321.6077130932435,
+      "perm_mean": 2649.0742539368503,
+      "perm_std": 21.422866550970298,
+      "z_path": -15.285841419236908,
+      "pct_perms_below_canon": 0.0,
+      "p_one_sided": 0.0001999600079984003,
+      "n_perm": 5000,
+      "runtime_seconds": 4.24,
+      "feature_means_before_zscore": [
+        0.12633495680622103,
+        0.17989432659862198,
+        0.270055470504741,
+        2.8844714152679733,
+        -0.1266560963112586
+      ],
+      "feature_stds_before_zscore": [
+        0.0819201854183289,
+        0.05017226045589586,
+        0.14014330632010757,
+        0.34890231906673796,
+        0.3041362561507994
+      ]
+    },
+    "greek_nt": {
+      "n_units": 260,
+      "alphabet": "greek",
+      "tradition_class": "narrative_or_mixed",
+      "canonical_path_cost": 624.4757605477771,
+      "perm_mean": 764.5385937541222,
+      "perm_std": 11.611233601950154,
+      "z_path": -12.062700485400704,
+      "pct_perms_below_canon": 0.0,
+      "p_one_sided": 0.0001999600079984003,
+      "n_perm": 5000,
+      "runtime_seconds": 1.17,
+      "feature_means_before_zscore": [
+        0.20687527195476213,
+        0.35413204364749773,
+        0.4185115850677418,
+        3.098475643508594,
+        0.7188882378436965
+      ],
+      "feature_stds_before_zscore": [
+        0.09248289095392488,
+        0.05109865341579758,
+        0.20305374073670296,
+        0.1710489715337902,
+        0.22931707297549989
+      ]
+    },
+    "iliad_greek": {
+      "n_units": 24,
+      "alphabet": "greek",
+      "tradition_class": "narrative_or_mixed",
+      "canonical_path_cost": 72.07867074734214,
+      "perm_mean": 70.78935808987563,
+      "perm_std": 3.8376570694217964,
+      "z_path": 0.3359634886972237,
+      "pct_perms_below_canon": 0.6274,
+      "p_one_sided": 0.6274,
+      "n_perm": 5000,
+      "runtime_seconds": 1.12,
+      "feature_means_before_zscore": [
+        0.1715703954913096,
+        0.18512309973726881,
+        0.21238881406957424,
+        4.033317120229429,
+        1.1610547976776702
+      ],
+      "feature_stds_before_zscore": [
+        0.0192585941486927,
+        0.005804951317893523,
+        0.02315607655796175,
+        0.07145778259465664,
+        0.0976733906858726
+      ]
+    },
+    "pali_dn": {
+      "n_units": 34,
+      "alphabet": "latin_iast",
+      "tradition_class": "oral_liturgical",
+      "canonical_path_cost": 93.36852559295104,
+      "perm_mean": 94.48950485177518,
+      "perm_std": 4.24803551467152,
+      "z_path": -0.26388180017624346,
+      "pct_perms_below_canon": 0.3814,
+      "p_one_sided": 0.3814,
+      "n_perm": 5000,
+      "runtime_seconds": 1.46,
+      "feature_means_before_zscore": [
+        0.3749084812117843,
+        0.695017668018192,
+        0.05652886203110222,
+        3.564409492504024,
+        1.3519887115460194
+      ],
+      "feature_stds_before_zscore": [
+        0.09247877855007706,
+        0.1523138312864299,
+        0.03809866331715733,
+        0.37432273561919394,
+        0.41078875623674754
+      ]
+    },
+    "pali_mn": {
+      "n_units": 152,
+      "alphabet": "latin_iast",
+      "tradition_class": "oral_liturgical",
+      "canonical_path_cost": 409.86452783273745,
+      "perm_mean": 442.5042448180079,
+      "perm_std": 9.420015100922434,
+      "z_path": -3.4649325543092067,
+      "pct_perms_below_canon": 0.0002,
+      "p_one_sided": 0.0002,
+      "n_perm": 5000,
+      "runtime_seconds": 2.56,
+      "feature_means_before_zscore": [
+        0.4191149859562958,
+        0.7036474457542167,
+        0.09215230492440235,
+        3.123755694444198,
+        1.1826972508074132
+      ],
+      "feature_stds_before_zscore": [
+        0.13274725940993853,
+        0.15657244388009345,
+        0.07724712889644832,
+        0.37066153894721093,
+        0.39100794123601673
+      ]
+    },
+    "rigveda": {
+      "n_units": 1024,
+      "alphabet": "devanagari",
+      "tradition_class": "oral_liturgical",
+      "canonical_path_cost": 2467.438368105827,
+      "perm_mean": 2898.314260591486,
+      "perm_std": 22.756373583827244,
+      "z_path": -18.934295084339738,
+      "pct_perms_below_canon": 0.0,
+      "p_one_sided": 0.0001999600079984003,
+      "n_perm": 5000,
+      "runtime_seconds": 2.42,
+      "feature_means_before_zscore": [
+        0.13774730498528143,
+        0.22169384914599294,
+        0.14095684053513816,
+        2.2589330618846377,
+        -0.44682346250730826
+      ],
+      "feature_stds_before_zscore": [
+        0.14080171258256813,
+        0.09107246270077357,
+        0.13169690710071175,
+        0.48966351154398724,
+        0.43228921055903596
+      ]
+    },
+    "avestan_yasna": {
+      "n_units": 72,
+      "alphabet": "latin_geldner",
+      "tradition_class": "oral_liturgical",
+      "canonical_path_cost": 182.4658266207537,
+      "perm_mean": 209.4264591513381,
+      "perm_std": 6.773840961569771,
+      "z_path": -3.9801100562503526,
+      "pct_perms_below_canon": 0.0002,
+      "p_one_sided": 0.0002,
+      "n_perm": 5000,
+      "runtime_seconds": 0.36,
+      "feature_means_before_zscore": [
+        0.28642975289931616,
+        0.34471783334152684,
+        0.14202556371377145,
+        2.61981394109671,
+        -0.032148782469621454
+      ],
+      "feature_stds_before_zscore": [
+        0.14110690995227776,
+        0.09468744086302781,
+        0.11389469451244529,
+        0.44888014015743544,
+        0.5742358086755308
+      ]
+    }
+  },
+  "BH_pooling": {
+    "raw": [
+      0.0001999600079984003,
+      0.0001999600079984003,
+      0.0001999600079984003,
+      0.6274,
+      0.3814,
+      0.0002,
+      0.0001999600079984003,
+      0.0002
+    ],
+    "bh_adjusted": [
+      0.0002666666666666667,
+      0.0002666666666666667,
+      0.0002666666666666667,
+      0.6274,
+      0.4358857142857143,
+      0.0002666666666666667,
+      0.0002666666666666667,
+      0.0002666666666666667
+    ],
+    "min_bh": 0.0002666666666666667,
+    "n_tests": 8,
+    "per_corpus": {
+      "quran": 0.0002666666666666667,
+      "hebrew_tanakh": 0.0002666666666666667,
+      "greek_nt": 0.0002666666666666667,
+      "iliad_greek": 0.6274,
+      "pali_dn": 0.4358857142857143,
+      "pali_mn": 0.0002666666666666667,
+      "rigveda": 0.0002666666666666667,
+      "avestan_yasna": 0.0002666666666666667
+    }
+  },
+  "verdict_per_corpus_BH_alpha_0.05": {
+    "quran": "passes_BH",
+    "hebrew_tanakh": "passes_BH",
+    "greek_nt": "passes_BH",
+    "iliad_greek": "fails_BH",
+    "pali_dn": "fails_BH",
+    "pali_mn": "passes_BH",
+    "rigveda": "passes_BH",
+    "avestan_yasna": "passes_BH"
+  },
+  "pre_registered_predictions": {
+    "PRED_LC2_1_two_of_four_new_oral_z_lt_minus_2": "PASS",
+    "PRED_LC2_2_BH_pool_min_p_lt_0.05": "PASS",
+    "PRED_LC2_3_iliad_negative_control": "PASS",
+    "n_new_oral_passes": 3,
+    "iliad_BH_adjusted_p": 0.6274,
+    "overall_LC2_verdict": "SUPPORT"
+  },
+  "tradition_class_summary": {
+    "oral_liturgical": {
+      "n_corpora": 5,
+      "mean_z": -7.112636800242757,
+      "median_z": -3.9801100562503526,
+      "n_negative": 5,
+      "n_significantly_negative_z_lt_minus_2": 4
+    },
+    "narrative_or_mixed": {
+      "n_corpora": 3,
+      "mean_z": -9.004192805313464,
+      "median_z": -12.062700485400704,
+      "n_negative": 2,
+      "n_significantly_negative_z_lt_minus_2": 2
+    }
+  },
+  "interpretation": "Each corpus's canonical chapter/sutta/sūkta/Yasna ordering is compared to 5000 uniform random permutations of that corpus's unit sequence, in its own 5-D language-agnostic feature space (z-scored within corpus). A negative z means the canonical order is shorter than random -- consistent with the 'path-minimality' claim. The pre-registered LC2 hypothesis predicts that ORAL-LITURGICAL corpora (Quran, Pāli Tipiṭaka, Rigveda Saṃhitā, Avestan Yasna) should all show negative z, while NARRATIVE-OR-MIXED corpora (Iliad in particular) should not. See the full PREREG.md for falsifiers.",
+  "extends": {
+    "experiment": "exp35_R3_cross_scripture_redo",
+    "relationship": "strict superset: this experiment runs the same 4 corpora plus 4 new ones, using identical seed and metric. The 4-corpus z values must reproduce exp35's locked values to numerical precision."
+  },
+  "provenance": {
+    "corpora_loaded": [
+      "quran",
+      "hebrew_tanakh",
+      "greek_nt",
+      "iliad_greek",
+      "pali_dn",
+      "pali_mn",
+      "rigveda",
+      "avestan_yasna"
+    ],
+    "quran_stops": "ARABIC_CONN (14 items, paper §2.2)",
+    "nonquran_stops": "derive_stopwords(verses, top_n=20)",
+    "data_sources": {
+      "pali_dn": "github.com/suttacentral/bilara-data",
+      "pali_mn": "github.com/suttacentral/bilara-data",
+      "rigveda": "github.com/bhavykhatri/DharmicData",
+      "avestan_yasna": "avesta.org/yasna/ (Geldner 1896)"
+    }
+  }
+}

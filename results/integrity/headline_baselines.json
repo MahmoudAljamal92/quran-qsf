@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "timestamp": "2026-04-19T17:59:00",
+  "rel_tol": 0.05,
+  "entries": {
+    "Phi_M_hotelling_T2": 3557.3394545046353,
+    "Phi_M_perm_p_value": 0.004975124378109453
+  },
+  "note": "Headline Φ_M baselines pinned at first clean run. Delete this file (or set UPDATE_LOCK=True) to re-pin."
+}

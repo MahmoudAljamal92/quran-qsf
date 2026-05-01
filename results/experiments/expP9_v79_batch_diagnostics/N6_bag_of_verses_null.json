@@ -1,0 +1,107 @@
+{
+  "experiment": "expP9_v79_batch_diagnostics",
+  "schema_version": 1,
+  "prereg_document": "experiments/expP9_v79_batch_diagnostics/PREREG.md",
+  "prereg_hash": "b7978038e65ee5718141f9440a4b53d0dddf60e4e972e260e4be45c43ebecc0f",
+  "frozen_constants": {
+    "seed": 42,
+    "min_verses": 2,
+    "n_boot_auc": 500,
+    "n_boot_renyi2": 10000,
+    "n_sim_bag": 5000,
+    "corruption_levels": [
+      0.01,
+      0.05,
+      0.1,
+      0.2,
+      0.5
+    ],
+    "el_boundary": 0.314,
+    "arabic_ctrl": [
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "non_arabic": [
+      "hebrew_tanakh",
+      "greek_nt",
+      "iliad_greek",
+      "pali_dn",
+      "pali_mn",
+      "rigveda",
+      "avestan_yasna"
+    ],
+    "band_a": [
+      15,
+      100
+    ]
+  },
+  "payload_tag": "N6_bag_of_verses_null",
+  "n_surahs_tested": 114,
+  "n_exceeds_null_99pct": 50,
+  "pct_exceeds_null_99pct": 43.859649122807014,
+  "pool_pmf_top5": {
+    "ن": 0.50096215522771,
+    "ا": 0.1521808851828095,
+    "م": 0.10663887107119949,
+    "ر": 0.07216164207825529,
+    "ى": 0.03864656831302117
+  },
+  "n_sim_per_surah": 5000,
+  "per_surah_sample_top5_lowest_p": [
+    {
+      "label": "Q:014",
+      "n_verses": 52,
+      "obs_p_max_final": 0.21153846153846154,
+      "obs_dominant_final": "د",
+      "null_p_max_mean": 0.501876923076923,
+      "null_p_max_p99": 0.6538461538461539,
+      "p_one_sided_obs_geq_null": 1.0,
+      "exceeds_null_99pct": false
+    },
+    {
+      "label": "Q:075",
+      "n_verses": 40,
+      "obs_p_max_final": 0.25,
+      "obs_dominant_final": "ة",
+      "null_p_max_mean": 0.500625,
+      "null_p_max_p99": 0.675,
+      "p_one_sided_obs_geq_null": 1.0,
+      "exceeds_null_99pct": false
+    },
+    {
+      "label": "Q:086",
+      "n_verses": 17,
+      "obs_p_max_final": 0.23529411764705882,
+      "obs_dominant_final": "ق",
+      "null_p_max_mean": 0.5019529411764705,
+      "null_p_max_p99": 0.7647058823529411,
+      "p_one_sided_obs_geq_null": 0.9998,
+      "exceeds_null_99pct": false
+    },
+    {
+      "label": "Q:022",
+      "n_verses": 78,
+      "obs_p_max_final": 0.32051282051282054,
+      "obs_dominant_final": "ر",
+      "null_p_max_mean": 0.5004923076923076,
+      "null_p_max_p99": 0.6282051282051282,
+      "p_one_sided_obs_geq_null": 0.9996,
+      "exceeds_null_99pct": false
+    },
+    {
+      "label": "Q:084",
+      "n_verses": 25,
+      "obs_p_max_final": 0.24,
+      "obs_dominant_final": "ا",
+      "null_p_max_mean": 0.501264,
+      "null_p_max_p99": 0.72,
+      "p_one_sided_obs_geq_null": 0.9994,
+      "exceeds_null_99pct": false
+    }
+  ],
+  "verdict": "FAIL_consistent_with_pool_iid"
+}

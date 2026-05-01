@@ -1,0 +1,16 @@
+{
+  "B": 100000,
+  "L_mushaf": 7.59286042486681,
+  "diff_mushaf": 0.03494866861451734,
+  "z_L": -5.178368710626841,
+  "z_diff": 4.124568656839821,
+  "n_beat_L": 0,
+  "n_beat_diff": 3,
+  "n_beat_both": 0,
+  "p_joint_empirical": 9.99990000099999e-06,
+  "expected_joint_under_independence": 0.0,
+  "L_null_mean": 8.161030106331593,
+  "L_null_std": 0.10971981973759565,
+  "diff_null_mean": 4.7139362342582165e-05,
+  "diff_null_std": 0.008461861628681375
+}

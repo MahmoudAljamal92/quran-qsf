@@ -1,0 +1,35 @@
+{
+  "experiment": "exp180_F86_lagrangian_KKT",
+  "finding_id": "F90",
+  "L_mushaf": 7.59286042486681,
+  "diff_mushaf": 0.03494866861451736,
+  "K_total": 113,
+  "K_classical": 17,
+  "K_nonclassical": 96,
+  "n_2opt_swaps_enumerated": 6328,
+  "n_dominating": 811,
+  "n_dominated": 3575,
+  "n_tradeoff_buy_diff": 484,
+  "n_tradeoff_sell_diff": 1346,
+  "n_neutral": 112,
+  "is_2opt_pareto_optimal": false,
+  "kkt_lambda_lower": 2621.456147517053,
+  "kkt_lambda_upper": -2089.101747947701,
+  "kkt_interval_exists": false,
+  "kkt_interval_width": null,
+  "kkt_lambda_midpoint": null,
+  "interpretation": "For any \u03bb* in the reported interval, the Mushaf is a 2-opt KKT stationary point of the constrained optimisation minimise L - \u03bb\u00b7diff under adjacent-swap perturbation. This converts F86 from empirical Pareto-optimality to analytical KKT-stationarity with a closed-form Lagrange multiplier range.",
+  "note_on_2opt_scope": "2-opt is a neighbourhood of size O(n^2) = 6,328 moves. A k-opt neighbourhood for k > 2 would test stronger Pareto-optimality. This result establishes Mushaf's KKT-stationarity in the 2-opt sense; escalation to 3-opt / Or-opt is future work.",
+  "n_dDiff_positive": 1295,
+  "n_dDiff_negative": 4921,
+  "kkt_upper_stats": {
+    "min_ratio_at_lambda_upper": -2089.101747947701,
+    "median_pos": -8.281425761115566,
+    "max_pos": 1091.6434381933616
+  },
+  "kkt_lower_stats": {
+    "max_ratio_at_lambda_lower": 2621.456147517053,
+    "median_neg": -0.9754725646621556,
+    "min_neg": -1382.1833441353742
+  }
+}

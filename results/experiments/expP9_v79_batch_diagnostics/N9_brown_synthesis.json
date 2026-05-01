@@ -1,0 +1,68 @@
+{
+  "experiment": "expP9_v79_batch_diagnostics",
+  "schema_version": 1,
+  "prereg_document": "experiments/expP9_v79_batch_diagnostics/PREREG.md",
+  "prereg_hash": "b7978038e65ee5718141f9440a4b53d0dddf60e4e972e260e4be45c43ebecc0f",
+  "frozen_constants": {
+    "seed": 42,
+    "min_verses": 2,
+    "n_boot_auc": 500,
+    "n_boot_renyi2": 10000,
+    "n_sim_bag": 5000,
+    "corruption_levels": [
+      0.01,
+      0.05,
+      0.1,
+      0.2,
+      0.5
+    ],
+    "el_boundary": 0.314,
+    "arabic_ctrl": [
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "non_arabic": [
+      "hebrew_tanakh",
+      "greek_nt",
+      "iliad_greek",
+      "pali_dn",
+      "pali_mn",
+      "rigveda",
+      "avestan_yasna"
+    ],
+    "band_a": [
+      15,
+      100
+    ]
+  },
+  "payload_tag": "N9_brown_synthesis",
+  "p_vals_per_channel": {
+    "EL_full114": 0.00162260604727446,
+    "R3_canonical_path": 2.331441054085851e-19,
+    "J1_mushaf_smoothness": 1e-06,
+    "Hurst_unit_words": 0.0004
+  },
+  "channel_notes": {
+    "EL_full114": "exp104 overall AUC=0.9813, Hanley-McNeil z=2.944",
+    "R3_canonical_path": "expP4 z=-8.92, one-sided lower",
+    "J1_mushaf_smoothness": "expE17b 1M perms, p_one_sided <= 1/(1e6+1)",
+    "Hurst_unit_words": "expP4 H=0.914, perm-null 2/5000"
+  },
+  "stouffer": {
+    "z": Infinity,
+    "p": 0.0
+  },
+  "brown": {
+    "rho_assumed": 0.5,
+    "chi2_T": 141.93181706453282,
+    "df_eff": 2.4854368932038833,
+    "c_scale": 6.4375,
+    "p": 3.282832657274223e-05,
+    "log10_p": -4.483751254911444
+  },
+  "notes": "Brown rho=0.5 is a conservative correlation prior; tighter than Stouffer's rho=0 but looser than the within-Arabic empirical corr matrix would give. Replace once the 5-D feature corr matrix is estimated on controls."
+}

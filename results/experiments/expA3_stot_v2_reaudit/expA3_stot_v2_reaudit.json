@@ -1,0 +1,134 @@
+{
+  "experiment": "expA3_stot_v2_reaudit",
+  "task_id": "A3 (= H23)",
+  "title": "STOT v2 5-condition theorem re-derived from phase_06_phi_m under the audited pipeline (post-F11, post-hadith-quarantine, post-CamelTools).",
+  "pre_reg": {
+    "theorem": "A text satisfies STOT v2 iff it passes >= 4 of 5 conditions at BH-corrected p <= 0.01.",
+    "n_shuffles_C5": 200,
+    "seed": 42,
+    "method_source": "archive/2025-10_legacy_scripts/cross_language_stot_test_v2_fair.py:269-314 (re-derived; same Cohen d + Mann-Whitney + verse-shuffle null, but using audited X_QURAN / X_CTRL_POOL / Band-A from phase_06_phi_m instead of the legacy `target_df`/`control_df`).",
+    "code_thresholds_C1_C4": {
+      "d_min": 0.3,
+      "p_max": 0.05
+    },
+    "code_thresholds_C5": {
+      "q_sig_min": 0.3,
+      "enrich_min": 1.5
+    },
+    "md_thresholds_C1_C4": {
+      "C1_d_min": 0.3,
+      "C2_d_min": 0.5,
+      "C3_d_min": 0.3,
+      "C4_d_min": 0.15
+    },
+    "md_thresholds_C5": {
+      "q_sig_min": 0.3,
+      "enrich_min": 2.0
+    }
+  },
+  "conditions": [
+    {
+      "id": "C1_AntiMetric",
+      "feature": "VL_CV",
+      "n_target": 68,
+      "n_control": 2509,
+      "cohen_d_target_minus_control": 1.670425033842222,
+      "mannwhitney_p_one_sided_greater": 1.895765214819859e-30,
+      "code_threshold_d": 0.3,
+      "code_threshold_p": 0.05,
+      "md_threshold_d": 0.3,
+      "pass_code_thresholds": true,
+      "pass_md_thresholds": true,
+      "bh_q_value": 2.5276869530931453e-30,
+      "bh_rejected_at_alpha_0p01": true,
+      "bh_rejected_at_alpha_0p05": true
+    },
+    {
+      "id": "C2_DualChannel",
+      "feature": "EL",
+      "n_target": 68,
+      "n_control": 2509,
+      "cohen_d_target_minus_control": 7.100441431087436,
+      "mannwhitney_p_one_sided_greater": 6.468306827039341e-45,
+      "code_threshold_d": 0.3,
+      "code_threshold_p": 0.05,
+      "md_threshold_d": 0.5,
+      "pass_code_thresholds": true,
+      "pass_md_thresholds": true,
+      "bh_q_value": 2.5873227308157365e-44,
+      "bh_rejected_at_alpha_0p01": true,
+      "bh_rejected_at_alpha_0p05": true
+    },
+    {
+      "id": "C3_RootDiversity",
+      "feature": "H_cond",
+      "n_target": 68,
+      "n_control": 2509,
+      "cohen_d_target_minus_control": 0.12552001829852266,
+      "mannwhitney_p_one_sided_greater": 0.3036171687299868,
+      "code_threshold_d": 0.3,
+      "code_threshold_p": 0.05,
+      "md_threshold_d": 0.3,
+      "pass_code_thresholds": false,
+      "pass_md_thresholds": false,
+      "bh_q_value": 0.3036171687299868,
+      "bh_rejected_at_alpha_0p01": false,
+      "bh_rejected_at_alpha_0p05": false
+    },
+    {
+      "id": "C4_AntiRegularity",
+      "feature": "T",
+      "n_target": 68,
+      "n_control": 2509,
+      "cohen_d_target_minus_control": 3.9987041346486687,
+      "mannwhitney_p_one_sided_greater": 5.74018375410942e-40,
+      "code_threshold_d": 0.3,
+      "code_threshold_p": 0.05,
+      "md_threshold_d": 0.15,
+      "pass_code_thresholds": true,
+      "pass_md_thresholds": true,
+      "bh_q_value": 1.148036750821884e-39,
+      "bh_rejected_at_alpha_0p01": true,
+      "bh_rejected_at_alpha_0p05": true
+    },
+    {
+      "id": "C5_MinPathCost",
+      "feature": "EL via verse-shuffle null",
+      "n_target": 68,
+      "n_control": 2509,
+      "target_sig_rate": 0.5882352941176471,
+      "control_sig_rate": 0.06337186129932244,
+      "enrichment_ratio": 9.282278949315575,
+      "code_threshold_q_sig": 0.3,
+      "code_threshold_enrich": 1.5,
+      "md_threshold_enrich": 2.0,
+      "pass_code_thresholds": true,
+      "pass_md_thresholds": true
+    }
+  ],
+  "aggregate_verdict": {
+    "n_passed_code_thresholds": 4,
+    "n_passed_md_thresholds": 4,
+    "n_passed_bh_corrected_p_0p01": 4,
+    "n_passed_bh_corrected_p_0p05": 4,
+    "verdict_code_thresholds": "STOT_v2_SATISFIED",
+    "verdict_md_thresholds": "STOT_v2_SATISFIED",
+    "verdict_bh_0p01": "STOT_v2_SATISFIED",
+    "verdict_bh_0p05": "STOT_v2_SATISFIED"
+  },
+  "pre_registered_gate_pass_bh_0p01_4_of_5": true,
+  "independence_diagnostic": {
+    "comment": "Pairwise Spearman rho across the 4 features used in C1-C4. STOT v2 is most useful as a sufficiency theorem when the conditions are roughly independent (so passing >= 4/5 is non-trivial). Pre-reg note in HYPOTHESES_AND_TESTS.md:1220 asks for max |rho| < 0.3 across pairs.",
+    "pairs": {
+      "EL_x_VL_CV": 0.21476537861814401,
+      "EL_x_H_cond": 0.06673069392848849,
+      "EL_x_T": 0.4195301584892788,
+      "VL_CV_x_H_cond": 0.19316011811006908,
+      "VL_CV_x_T": 0.36195213765704565,
+      "H_cond_x_T": 0.5670486373418533
+    },
+    "max_abs_pair_corr": 0.5670486373418533,
+    "passes_independence_threshold_0p3": false
+  },
+  "runtime_seconds": 262.26
+}

@@ -1,0 +1,246 @@
+{
+  "experiment": "exp135_F79_bootstrap_stability",
+  "hypothesis_id": "H87",
+  "hypothesis": "F79's PASS_alphabet_corrected_strict_6_alphabets verdict is robust under bootstrap-resampling-of-units: Quran is the unique above-3.5-bit corpus on Δ_max in ≥ 95% of 200 bootstraps, with Rigveda tier-2 (≥ 3.0) preserved in ≥ 95%, upgrading F79 to PASS_strict_BOOTSTRAP_ROBUST.",
+  "verdict": "FAIL_F79_breaks_under_resampling",
+  "verdict_reason": "Bootstrap-mean Quran Δ_max = 3.7994; freq above 3.5 = 93.0%.",
+  "prereg_hash": "feee3000fdbc861501dffa15480f363d702d03ea82865aef09e53501acfaa315",
+  "frozen_constants": {
+    "EXPECTED_CORPORA": [
+      "quran",
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "hindawi",
+      "ksucca",
+      "arabic_bible",
+      "hebrew_tanakh",
+      "greek_nt",
+      "pali",
+      "avestan_yasna",
+      "rigveda"
+    ],
+    "ALPHABET_SIZES": {
+      "quran": 28,
+      "poetry_jahili": 28,
+      "poetry_islami": 28,
+      "poetry_abbasi": 28,
+      "hindawi": 28,
+      "ksucca": 28,
+      "arabic_bible": 28,
+      "hebrew_tanakh": 22,
+      "greek_nt": 24,
+      "pali": 31,
+      "avestan_yasna": 26,
+      "rigveda": 47
+    },
+    "DELTA_MAX_THRESHOLD": 3.5,
+    "RIGVEDA_TIER2_FLOOR": 3.0,
+    "PASS_FREQ_FLOOR": 0.95,
+    "N_BOOTSTRAP": 200,
+    "N_PERM_SANITY": 50,
+    "SEED": 42,
+    "Q1_TOLERANCE": 1e-12,
+    "A4_TOLERANCE": 0.001
+  },
+  "results": {
+    "per_corpus_point_estimate": {
+      "quran": {
+        "n_units": 114,
+        "Delta_max": 3.8388340980204,
+        "median_H_EL": 0.9685208240372034
+      },
+      "poetry_jahili": {
+        "n_units": 120,
+        "Delta_max": 2.0278151587214888,
+        "median_H_EL": 2.779539763336115
+      },
+      "poetry_islami": {
+        "n_units": 423,
+        "Delta_max": 2.1186330465167367,
+        "median_H_EL": 2.688721875540867
+      },
+      "poetry_abbasi": {
+        "n_units": 2575,
+        "Delta_max": 2.055725754669781,
+        "median_H_EL": 2.7516291673878226
+      },
+      "hindawi": {
+        "n_units": 72,
+        "Delta_max": 1.3284521804601468,
+        "median_H_EL": 3.478902741597457
+      },
+      "ksucca": {
+        "n_units": 42,
+        "Delta_max": 1.899463042556497,
+        "median_H_EL": 2.907891879501107
+      },
+      "arabic_bible": {
+        "n_units": 1183,
+        "Delta_max": 1.8890590880031146,
+        "median_H_EL": 2.918295834054489
+      },
+      "hebrew_tanakh": {
+        "n_units": 921,
+        "Delta_max": 1.4063415351069701,
+        "median_H_EL": 3.053090083530327
+      },
+      "greek_nt": {
+        "n_units": 260,
+        "Delta_max": 2.151291300534509,
+        "median_H_EL": 2.433671200186647
+      },
+      "pali": {
+        "n_units": 186,
+        "Delta_max": 2.864257334369999,
+        "median_H_EL": 2.089938976016876
+      },
+      "avestan_yasna": {
+        "n_units": 67,
+        "Delta_max": 2.5823615087913834,
+        "median_H_EL": 2.1180782093497093
+      },
+      "rigveda": {
+        "n_units": 1003,
+        "Delta_max": 3.2668051317365667,
+        "median_H_EL": 2.287783719941071
+      }
+    },
+    "per_corpus_bootstrap_stats": {
+      "quran": {
+        "mean": 3.799383312068928,
+        "std": 0.17895778686833397,
+        "cv": 0.047101798415512784,
+        "min": 3.3073549220576037,
+        "max": 4.085426827170242,
+        "p05": 3.427648201141097,
+        "p95": 4.023592718972064
+      },
+      "poetry_jahili": {
+        "mean": 2.0196177733895837,
+        "std": 0.07779535405763979,
+        "cv": 0.038519840280011784,
+        "min": 1.8231712022784152,
+        "max": 2.24863310040725,
+        "p05": 1.8854613725411207,
+        "p95": 2.1441035176619208
+      },
+      "poetry_islami": {
+        "mean": 2.126641972748501,
+        "std": 0.03526977982221396,
+        "cv": 0.016584728541133235,
+        "min": 2.0573549220576037,
+        "max": 2.2223924213364477,
+        "p05": 2.06880206847887,
+        "p95": 2.181540338363692
+      },
+      "poetry_abbasi": {
+        "mean": 2.0551625448121342,
+        "std": 0.011451672571422884,
+        "cv": 0.005572149317498242,
+        "min": 2.017456826593316,
+        "max": 2.085426827170241,
+        "p05": 2.030087116990714,
+        "p95": 2.075196030693033
+      },
+      "hindawi": {
+        "mean": 1.3378648262463977,
+        "std": 0.02531533401270456,
+        "cv": 0.01892219117811098,
+        "min": 1.2549943115814006,
+        "max": 1.3936342908396266,
+        "p05": 1.3039019917808694,
+        "p95": 1.3699762158939266
+      },
+      "ksucca": {
+        "mean": 1.9197518940774552,
+        "std": 0.13625946208955084,
+        "cv": 0.07097764169938788,
+        "min": 1.6892767127078945,
+        "max": 2.211376449309019,
+        "p05": 1.7200016990599405,
+        "p95": 2.1040110448484524
+      },
+      "arabic_bible": {
+        "mean": 1.8876363875377027,
+        "std": 0.013456846286287863,
+        "cv": 0.007128939861051011,
+        "min": 1.8534709190388559,
+        "max": 1.9208097984830563,
+        "p05": 1.8661967167616165,
+        "p95": 1.906250643646912
+      },
+      "hebrew_tanakh": {
+        "mean": 1.4080175420310985,
+        "std": 0.015090304221602692,
+        "cv": 0.01071741208553025,
+        "min": 1.3733830063242594,
+        "max": 1.4413411874882427,
+        "p05": 1.380882076801237,
+        "p95": 1.4350341482895979
+      },
+      "greek_nt": {
+        "mean": 2.152743579253145,
+        "std": 0.018564480724241987,
+        "cv": 0.008623637716612117,
+        "min": 2.1045484524807807,
+        "max": 2.201369281571692,
+        "p05": 2.12330900615034,
+        "p95": 2.178296183980467
+      },
+      "pali": {
+        "mean": 2.8577908927480236,
+        "std": 0.025505625865645268,
+        "cv": 0.008924944764282355,
+        "min": 2.7782025421612477,
+        "max": 2.901373071890533,
+        "p05": 2.8184182933253425,
+        "p95": 2.889348734586573
+      },
+      "avestan_yasna": {
+        "mean": 2.604361098676112,
+        "std": 0.07207179411846648,
+        "cv": 0.027673502785425224,
+        "min": 2.393251141978424,
+        "max": 2.7821438840866035,
+        "p05": 2.522745447037326,
+        "p95": 2.7785116232537304
+      },
+      "rigveda": {
+        "mean": 3.266601990181452,
+        "std": 0.031702470521874214,
+        "cv": 0.009705030064012549,
+        "min": 3.1992003094701036,
+        "max": 3.302959684289815,
+        "p05": 3.2326607567902754,
+        "p95": 3.302959684289815
+      }
+    },
+    "freq_quran_rank_1": 1.0,
+    "freq_quran_above_3p5": 0.93,
+    "freq_quran_unique_above_3p5": 0.93,
+    "freq_rigveda_above_3p0": 1.0,
+    "quran_delta_bootstrap_mean": 3.799383312068928,
+    "quran_rank_distribution": {
+      "1": 200
+    },
+    "n_corpora_above_3p5_distribution": {
+      "1": 186,
+      "0": 14
+    }
+  },
+  "audit_report": {
+    "ok": true,
+    "checks": {
+      "A1_eleven_pool_sha_via_indirect": "11-pool data routed through _phi_universal_xtrad_sizing.py loaders",
+      "A2_rigveda_via_loader_v2": "Rigveda data via _rigveda_loader_v2.load_rigveda()",
+      "A3_n_corpora": 12,
+      "A4_F79_point_estimate_match": true,
+      "A4_max_drift": 0.0001294912086167166,
+      "A5_unit_shuffle_max_dev": 0.0,
+      "A5_sanity_pass": true,
+      "A6_deterministic": true
+    }
+  },
+  "wall_time_s": 12.5015
+}

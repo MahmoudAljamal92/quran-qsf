@@ -1,0 +1,627 @@
+{
+  "experiment": "exp91_meccan_medinan_stability",
+  "hypothesis": "H-MM-STABILITY — LC3-70-U diachronic stability across 23-year composition arc",
+  "schema_version": 1,
+  "prereg_document": "experiments/exp91_meccan_medinan_stability/PREREG.md",
+  "prereg_constants": {
+    "BAND_LO": 15,
+    "BAND_HI": 100,
+    "w_T": 0.5329,
+    "w_EL": 4.179,
+    "b": -1.5221,
+    "CROSSING_GAP_MAX": 0.25,
+    "COHEN_D_MAX": 1.0
+  },
+  "medinan_set": [
+    2,
+    3,
+    4,
+    5,
+    8,
+    9,
+    22,
+    24,
+    33,
+    47,
+    48,
+    49,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    76,
+    98,
+    99,
+    110
+  ],
+  "n_medinan_in_bandA": 12,
+  "n_meccan_in_bandA": 56,
+  "n_total_bandA": 68,
+  "meccan_summary": {
+    "label": "meccan",
+    "n": 56,
+    "mean": 1.273439,
+    "std": 1.165667,
+    "median": 1.185707,
+    "min": -1.039875,
+    "max": 3.360159,
+    "frac_over_zero": 0.839286,
+    "n_over_zero": 47,
+    "mean_T": -0.489928,
+    "mean_EL": 0.731424
+  },
+  "medinan_summary": {
+    "label": "medinan",
+    "n": 12,
+    "mean": 0.72805,
+    "std": 1.732875,
+    "median": 0.191973,
+    "min": -1.538528,
+    "max": 3.077029,
+    "frac_over_zero": 0.5,
+    "n_over_zero": 6,
+    "mean_T": -0.447285,
+    "mean_EL": 0.595479
+  },
+  "comparison": {
+    "cohen_d_meccan_vs_medinan_on_L": 0.426816,
+    "crossing_rate_gap": 0.339286,
+    "opposite_signs": false,
+    "mean_L_meccan": 1.273439,
+    "mean_L_medinan": 0.72805
+  },
+  "per_surah": [
+    {
+      "surah": 8,
+      "label": "medinan",
+      "T": -0.493395,
+      "EL": 0.554054,
+      "L": 0.530362,
+      "Q_side": true
+    },
+    {
+      "surah": 13,
+      "label": "meccan",
+      "T": -1.339386,
+      "EL": 0.357143,
+      "L": -0.743359,
+      "Q_side": false
+    },
+    {
+      "surah": 14,
+      "label": "meccan",
+      "T": -2.170385,
+      "EL": 0.392157,
+      "L": -1.039875,
+      "Q_side": false
+    },
+    {
+      "surah": 15,
+      "label": "meccan",
+      "T": 0.89911,
+      "EL": 0.704082,
+      "L": 1.899393,
+      "Q_side": true
+    },
+    {
+      "surah": 19,
+      "label": "meccan",
+      "T": 0.723409,
+      "EL": 0.948454,
+      "L": 2.826992,
+      "Q_side": true
+    },
+    {
+      "surah": 22,
+      "label": "medinan",
+      "T": -2.169553,
+      "EL": 0.272727,
+      "L": -1.538528,
+      "Q_side": false
+    },
+    {
+      "surah": 24,
+      "label": "medinan",
+      "T": -0.210185,
+      "EL": 0.539683,
+      "L": 0.621226,
+      "Q_side": true
+    },
+    {
+      "surah": 25,
+      "label": "meccan",
+      "T": 1.011124,
+      "EL": 0.973684,
+      "L": 3.085754,
+      "Q_side": true
+    },
+    {
+      "surah": 27,
+      "label": "meccan",
+      "T": 0.93388,
+      "EL": 0.826087,
+      "L": 2.427782,
+      "Q_side": true
+    },
+    {
+      "surah": 28,
+      "label": "meccan",
+      "T": 0.665816,
+      "EL": 0.885057,
+      "L": 2.531369,
+      "Q_side": true
+    },
+    {
+      "surah": 29,
+      "label": "meccan",
+      "T": 0.708011,
+      "EL": 0.764706,
+      "L": 2.050905,
+      "Q_side": true
+    },
+    {
+      "surah": 30,
+      "label": "meccan",
+      "T": 0.631356,
+      "EL": 0.847458,
+      "L": 2.355875,
+      "Q_side": true
+    },
+    {
+      "surah": 31,
+      "label": "meccan",
+      "T": -1.354695,
+      "EL": 0.606061,
+      "L": 0.28871,
+      "Q_side": true
+    },
+    {
+      "surah": 32,
+      "label": "meccan",
+      "T": -0.163936,
+      "EL": 0.827586,
+      "L": 1.849021,
+      "Q_side": true
+    },
+    {
+      "surah": 33,
+      "label": "medinan",
+      "T": 0.951359,
+      "EL": 0.972222,
+      "L": 3.047796,
+      "Q_side": true
+    },
+    {
+      "surah": 34,
+      "label": "meccan",
+      "T": -1.377043,
+      "EL": 0.528302,
+      "L": -0.048153,
+      "Q_side": false
+    },
+    {
+      "surah": 35,
+      "label": "meccan",
+      "T": -1.133359,
+      "EL": 0.659091,
+      "L": 0.628274,
+      "Q_side": true
+    },
+    {
+      "surah": 36,
+      "label": "meccan",
+      "T": 0.647909,
+      "EL": 0.780488,
+      "L": 2.084829,
+      "Q_side": true
+    },
+    {
+      "surah": 38,
+      "label": "meccan",
+      "T": -1.118245,
+      "EL": 0.551724,
+      "L": 0.187643,
+      "Q_side": true
+    },
+    {
+      "surah": 39,
+      "label": "meccan",
+      "T": -0.569644,
+      "EL": 0.635135,
+      "L": 0.828566,
+      "Q_side": true
+    },
+    {
+      "surah": 40,
+      "label": "meccan",
+      "T": -1.319414,
+      "EL": 0.488095,
+      "L": -0.185466,
+      "Q_side": false
+    },
+    {
+      "surah": 41,
+      "label": "meccan",
+      "T": -1.203006,
+      "EL": 0.603774,
+      "L": 0.359988,
+      "Q_side": true
+    },
+    {
+      "surah": 42,
+      "label": "meccan",
+      "T": -1.723619,
+      "EL": 0.346154,
+      "L": -0.99404,
+      "Q_side": false
+    },
+    {
+      "surah": 43,
+      "label": "meccan",
+      "T": 0.93283,
+      "EL": 0.784091,
+      "L": 2.251721,
+      "Q_side": true
+    },
+    {
+      "surah": 44,
+      "label": "meccan",
+      "T": 0.492075,
+      "EL": 0.706897,
+      "L": 1.694248,
+      "Q_side": true
+    },
+    {
+      "surah": 45,
+      "label": "meccan",
+      "T": 0.334097,
+      "EL": 0.833333,
+      "L": 2.13844,
+      "Q_side": true
+    },
+    {
+      "surah": 46,
+      "label": "meccan",
+      "T": -0.400199,
+      "EL": 0.617647,
+      "L": 0.845781,
+      "Q_side": true
+    },
+    {
+      "surah": 47,
+      "label": "medinan",
+      "T": 0.725799,
+      "EL": 0.891892,
+      "L": 2.591894,
+      "Q_side": true
+    },
+    {
+      "surah": 48,
+      "label": "medinan",
+      "T": 0.669817,
+      "EL": 1.0,
+      "L": 3.013846,
+      "Q_side": true
+    },
+    {
+      "surah": 49,
+      "label": "medinan",
+      "T": -0.644425,
+      "EL": 0.235294,
+      "L": -0.88222,
+      "Q_side": false
+    },
+    {
+      "surah": 50,
+      "label": "meccan",
+      "T": -1.366482,
+      "EL": 0.477273,
+      "L": -0.255775,
+      "Q_side": false
+    },
+    {
+      "surah": 51,
+      "label": "meccan",
+      "T": -0.901047,
+      "EL": 0.728814,
+      "L": 1.043444,
+      "Q_side": true
+    },
+    {
+      "surah": 52,
+      "label": "meccan",
+      "T": -0.855234,
+      "EL": 0.666667,
+      "L": 0.808146,
+      "Q_side": true
+    },
+    {
+      "surah": 53,
+      "label": "meccan",
+      "T": 0.574187,
+      "EL": 0.885246,
+      "L": 2.483327,
+      "Q_side": true
+    },
+    {
+      "surah": 54,
+      "label": "meccan",
+      "T": 1.319683,
+      "EL": 1.0,
+      "L": 3.360159,
+      "Q_side": true
+    },
+    {
+      "surah": 55,
+      "label": "meccan",
+      "T": 1.203103,
+      "EL": 0.831169,
+      "L": 2.592488,
+      "Q_side": true
+    },
+    {
+      "surah": 56,
+      "label": "meccan",
+      "T": -0.675065,
+      "EL": 0.631579,
+      "L": 0.757526,
+      "Q_side": true
+    },
+    {
+      "surah": 57,
+      "label": "medinan",
+      "T": -1.472998,
+      "EL": 0.357143,
+      "L": -0.81456,
+      "Q_side": false
+    },
+    {
+      "surah": 58,
+      "label": "medinan",
+      "T": -1.15278,
+      "EL": 0.47619,
+      "L": -0.146416,
+      "Q_side": false
+    },
+    {
+      "surah": 59,
+      "label": "medinan",
+      "T": -0.990121,
+      "EL": 0.434783,
+      "L": -0.232779,
+      "Q_side": false
+    },
+    {
+      "surah": 64,
+      "label": "medinan",
+      "T": -1.369325,
+      "EL": 0.411765,
+      "L": -0.531049,
+      "Q_side": false
+    },
+    {
+      "surah": 67,
+      "label": "meccan",
+      "T": -0.739694,
+      "EL": 0.862069,
+      "L": 1.686303,
+      "Q_side": true
+    },
+    {
+      "surah": 68,
+      "label": "meccan",
+      "T": 0.16166,
+      "EL": 0.72549,
+      "L": 1.595872,
+      "Q_side": true
+    },
+    {
+      "surah": 69,
+      "label": "meccan",
+      "T": -1.394381,
+      "EL": 0.72549,
+      "L": 0.766658,
+      "Q_side": true
+    },
+    {
+      "surah": 70,
+      "label": "meccan",
+      "T": -1.689333,
+      "EL": 0.674419,
+      "L": 0.39605,
+      "Q_side": true
+    },
+    {
+      "surah": 71,
+      "label": "meccan",
+      "T": 0.349072,
+      "EL": 0.925926,
+      "L": 2.533365,
+      "Q_side": true
+    },
+    {
+      "surah": 72,
+      "label": "meccan",
+      "T": 1.13907,
+      "EL": 1.0,
+      "L": 3.26391,
+      "Q_side": true
+    },
+    {
+      "surah": 73,
+      "label": "meccan",
+      "T": 0.102314,
+      "EL": 0.894737,
+      "L": 2.271529,
+      "Q_side": true
+    },
+    {
+      "surah": 74,
+      "label": "meccan",
+      "T": -0.904235,
+      "EL": 0.8,
+      "L": 1.339233,
+      "Q_side": true
+    },
+    {
+      "surah": 75,
+      "label": "meccan",
+      "T": -1.48431,
+      "EL": 0.769231,
+      "L": 0.901527,
+      "Q_side": true
+    },
+    {
+      "surah": 76,
+      "label": "medinan",
+      "T": 0.788383,
+      "EL": 1.0,
+      "L": 3.077029,
+      "Q_side": true
+    },
+    {
+      "surah": 77,
+      "label": "meccan",
+      "T": -1.011909,
+      "EL": 0.77551,
+      "L": 1.179511,
+      "Q_side": true
+    },
+    {
+      "surah": 78,
+      "label": "meccan",
+      "T": 0.325423,
+      "EL": 0.923077,
+      "L": 2.508856,
+      "Q_side": true
+    },
+    {
+      "surah": 79,
+      "label": "meccan",
+      "T": -1.004211,
+      "EL": 0.822222,
+      "L": 1.378822,
+      "Q_side": true
+    },
+    {
+      "surah": 80,
+      "label": "meccan",
+      "T": -1.38782,
+      "EL": 0.780488,
+      "L": 0.999989,
+      "Q_side": true
+    },
+    {
+      "surah": 81,
+      "label": "meccan",
+      "T": -1.466823,
+      "EL": 0.75,
+      "L": 0.83048,
+      "Q_side": true
+    },
+    {
+      "surah": 82,
+      "label": "meccan",
+      "T": -1.46266,
+      "EL": 0.666667,
+      "L": 0.484449,
+      "Q_side": true
+    },
+    {
+      "surah": 83,
+      "label": "meccan",
+      "T": 0.031858,
+      "EL": 0.542857,
+      "L": 0.763477,
+      "Q_side": true
+    },
+    {
+      "surah": 84,
+      "label": "meccan",
+      "T": -2.251165,
+      "EL": 0.583333,
+      "L": -0.283996,
+      "Q_side": false
+    },
+    {
+      "surah": 85,
+      "label": "meccan",
+      "T": -1.038203,
+      "EL": 0.619048,
+      "L": 0.511642,
+      "Q_side": true
+    },
+    {
+      "surah": 86,
+      "label": "meccan",
+      "T": -2.329535,
+      "EL": 0.5,
+      "L": -0.674009,
+      "Q_side": false
+    },
+    {
+      "surah": 87,
+      "label": "meccan",
+      "T": 0.347508,
+      "EL": 0.888889,
+      "L": 2.377754,
+      "Q_side": true
+    },
+    {
+      "surah": 88,
+      "label": "meccan",
+      "T": -1.180704,
+      "EL": 0.8,
+      "L": 1.191903,
+      "Q_side": true
+    },
+    {
+      "surah": 89,
+      "label": "meccan",
+      "T": -2.266048,
+      "EL": 0.586207,
+      "L": -0.279918,
+      "Q_side": false
+    },
+    {
+      "surah": 90,
+      "label": "meccan",
+      "T": -1.016152,
+      "EL": 0.789474,
+      "L": 1.235603,
+      "Q_side": true
+    },
+    {
+      "surah": 91,
+      "label": "meccan",
+      "T": 0.482492,
+      "EL": 1.0,
+      "L": 2.91402,
+      "Q_side": true
+    },
+    {
+      "surah": 92,
+      "label": "meccan",
+      "T": 0.875489,
+      "EL": 1.0,
+      "L": 3.123448,
+      "Q_side": true
+    },
+    {
+      "surah": 96,
+      "label": "meccan",
+      "T": -2.029495,
+      "EL": 0.666667,
+      "L": 0.182382,
+      "Q_side": true
+    }
+  ],
+  "verdict": "FAIL_crossing_gap",
+  "runtime_seconds": 0.22
+}

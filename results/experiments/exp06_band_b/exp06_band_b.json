@@ -1,0 +1,199 @@
+{
+  "experiment": "exp06_band_b",
+  "description": "Short-surah Band B (n_verses ∈ [5, 14]) reference. μ_B and Σ_B estimated from controls only. Tests whether the 5-D framework generalises to short surahs.",
+  "band": {
+    "lo": 5,
+    "hi": 14
+  },
+  "control_corpora": [
+    "poetry_jahili",
+    "poetry_islami",
+    "poetry_abbasi",
+    "ksucca",
+    "arabic_bible",
+    "hindawi"
+  ],
+  "sizes": {
+    "n_quran_B": 23,
+    "n_ctrl_B": 2068
+  },
+  "mu_B_ctrl": {
+    "EL": 0.10437672417846491,
+    "VL_CV": 0.20097889935846172,
+    "CN": 0.025169004110009996,
+    "H_cond": 0.3024119077401657,
+    "T": -2.013829429066474
+  },
+  "hotelling_two_sample": {
+    "T2": 442.0149105325504,
+    "F": 88.23370880424774,
+    "df1": 5,
+    "df2": 2085,
+    "p_F_tail": 2.352415398980511e-84,
+    "log10_p_F_tail": -83.62848598635622,
+    "multivariate_cohens_d": 4.408149257219983,
+    "n1": 23,
+    "n2": 2068,
+    "highprec_log10_p_F_tail": -83.62848598635622
+  },
+  "phi_m_distribution": {
+    "ctrl_mean": 2.0458280272407863,
+    "ctrl_median": 1.8658117713389086,
+    "ctrl_95pct": 3.6749028736270093,
+    "ctrl_max": 16.334418594987923,
+    "quran_mean": 5.291752610971606,
+    "quran_median": 5.288854965923518,
+    "quran_max": 8.891082025769062,
+    "quran_above_ctrl_95pct": 18,
+    "quran_total": 23,
+    "fraction_above_95": 0.782608695652174
+  },
+  "per_surah_ranked": [
+    {
+      "label": "Q:102",
+      "n_verses": 8,
+      "phi_m_band_B": 8.891082025769062,
+      "above_ctrl_95pct": true
+    },
+    {
+      "label": "Q:105",
+      "n_verses": 5,
+      "phi_m_band_B": 7.647582765312615,
+      "above_ctrl_95pct": true
+    },
+    {
+      "label": "Q:114",
+      "n_verses": 6,
+      "phi_m_band_B": 7.375544988629547,
+      "above_ctrl_95pct": true
+    },
+    {
+      "label": "Q:098",
+      "n_verses": 8,
+      "phi_m_band_B": 7.291657246984926,
+      "above_ctrl_95pct": true
+    },
+    {
+      "label": "Q:097",
+      "n_verses": 5,
+      "phi_m_band_B": 7.035611880288034,
+      "above_ctrl_95pct": true
+    },
+    {
+      "label": "Q:063",
+      "n_verses": 11,
+      "phi_m_band_B": 7.022094051838674,
+      "above_ctrl_95pct": true
+    },
+    {
+      "label": "Q:100",
+      "n_verses": 11,
+      "phi_m_band_B": 6.546775268531273,
+      "above_ctrl_95pct": true
+    },
+    {
+      "label": "Q:065",
+      "n_verses": 12,
+      "phi_m_band_B": 5.819766056771001,
+      "above_ctrl_95pct": true
+    },
+    {
+      "label": "Q:095",
+      "n_verses": 8,
+      "phi_m_band_B": 5.467269081297494,
+      "above_ctrl_95pct": true
+    },
+    {
+      "label": "Q:111",
+      "n_verses": 5,
+      "phi_m_band_B": 5.446118904166551,
+      "above_ctrl_95pct": true
+    },
+    {
+      "label": "Q:094",
+      "n_verses": 8,
+      "phi_m_band_B": 5.39706890447356,
+      "above_ctrl_95pct": true
+    },
+    {
+      "label": "Q:093",
+      "n_verses": 11,
+      "phi_m_band_B": 5.288854965923518,
+      "above_ctrl_95pct": true
+    },
+    {
+      "label": "Q:104",
+      "n_verses": 9,
+      "phi_m_band_B": 5.217736667530185,
+      "above_ctrl_95pct": true
+    },
+    {
+      "label": "Q:107",
+      "n_verses": 7,
+      "phi_m_band_B": 5.172256161577793,
+      "above_ctrl_95pct": true
+    },
+    {
+      "label": "Q:099",
+      "n_verses": 8,
+      "phi_m_band_B": 4.792989884593273,
+      "above_ctrl_95pct": true
+    },
+    {
+      "label": "Q:062",
+      "n_verses": 11,
+      "phi_m_band_B": 4.7042988749284635,
+      "above_ctrl_95pct": true
+    },
+    {
+      "label": "Q:066",
+      "n_verses": 12,
+      "phi_m_band_B": 3.964014464679687,
+      "above_ctrl_95pct": true
+    },
+    {
+      "label": "Q:061",
+      "n_verses": 14,
+      "phi_m_band_B": 3.712991397939996,
+      "above_ctrl_95pct": true
+    },
+    {
+      "label": "Q:001",
+      "n_verses": 7,
+      "phi_m_band_B": 3.655490962278711,
+      "above_ctrl_95pct": false
+    },
+    {
+      "label": "Q:113",
+      "n_verses": 5,
+      "phi_m_band_B": 3.382731097220125,
+      "above_ctrl_95pct": false
+    },
+    {
+      "label": "Q:101",
+      "n_verses": 11,
+      "phi_m_band_B": 3.034747209617497,
+      "above_ctrl_95pct": false
+    },
+    {
+      "label": "Q:060",
+      "n_verses": 13,
+      "phi_m_band_B": 2.8385577834072273,
+      "above_ctrl_95pct": false
+    },
+    {
+      "label": "Q:109",
+      "n_verses": 6,
+      "phi_m_band_B": 2.005069408587713,
+      "above_ctrl_95pct": false
+    }
+  ],
+  "adiyat_specific": {
+    "label": "Q:100",
+    "phi_m_band_B": 6.546775268531273,
+    "rank_in_quran_band_B": 7,
+    "total_band_B_surahs": 23,
+    "above_ctrl_95pct": true,
+    "ctrl_95pct_phi": 3.6749028736270093
+  }
+}

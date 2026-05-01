@@ -1,0 +1,389 @@
+{
+  "experiment": "exp141_QFootprint_Dual_Pool",
+  "hypothesis_id": "H94_Dual_Pool",
+  "hypothesis": "Quran joint Stouffer Z is rank-1 in BOTH Arabic-only (n=7) and non-Arabic-only (n=6) pools, with Z_A ≥ 10, Z_B ≥ 5, and column-shuffle null p < 0.001 in each pool.",
+  "verdict": "FAIL_dual_pool_inhomogeneous",
+  "verdict_reason": "Only 0/5 PASS",
+  "prereg_hash": "f017d1c8c0a084d2d03873f98bd14421ce05b72c026856d0c0617dd847c79fb2",
+  "frozen_constants": {
+    "POOL_A": [
+      "quran",
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "hindawi",
+      "ksucca",
+      "arabic_bible"
+    ],
+    "POOL_B": [
+      "quran",
+      "hebrew_tanakh",
+      "greek_nt",
+      "pali",
+      "avestan_yasna",
+      "rigveda"
+    ],
+    "POOL_C": [
+      "quran",
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "hindawi",
+      "ksucca",
+      "arabic_bible",
+      "hebrew_tanakh",
+      "greek_nt",
+      "pali",
+      "avestan_yasna",
+      "rigveda"
+    ],
+    "AXES": [
+      "z_HEL_pool",
+      "z_pmax_pool",
+      "z_HEL_unit_median",
+      "z_HEL_unit_p25",
+      "z_VL_CV_median",
+      "z_bigram_distinct_pool",
+      "z_gzip_eff_pool",
+      "z_Delta_max_unit"
+    ],
+    "N_PERM": 10000,
+    "RIDGE": 0.001,
+    "SEED": 42
+  },
+  "results": {
+    "summary_table": {
+      "Pool_A_Arabic": {
+        "n": 7,
+        "quran_Z": 9.648655266887614,
+        "quran_rank": 1,
+        "p_col_shuffle": 0.0
+      },
+      "Pool_B_non_Arabic": {
+        "n": 6,
+        "quran_Z": 1.8160519486828417,
+        "quran_rank": 1,
+        "p_col_shuffle": 0.0231
+      },
+      "Pool_C_combined": {
+        "n": 12,
+        "quran_Z": 2.650734801088931,
+        "quran_rank": 1,
+        "p_col_shuffle": 0.0001
+      },
+      "Z_min_across_pools": 1.8160519486828417
+    },
+    "per_pool": {
+      "A_Arabic_only": {
+        "n_corpora": 7,
+        "K_eff_brown": 2.196464493259487,
+        "Z_brown_sorted": [
+          {
+            "corpus": "quran",
+            "Z": 9.648655266887614
+          },
+          {
+            "corpus": "ksucca",
+            "Z": 1.0544534687268698
+          },
+          {
+            "corpus": "arabic_bible",
+            "Z": 0.559752944508321
+          },
+          {
+            "corpus": "poetry_islami",
+            "Z": 0.47629636882376236
+          },
+          {
+            "corpus": "poetry_abbasi",
+            "Z": 0.09075204401405178
+          },
+          {
+            "corpus": "poetry_jahili",
+            "Z": -0.3975278347567005
+          },
+          {
+            "corpus": "hindawi",
+            "Z": -1.7837269913163163
+          }
+        ],
+        "T2_sorted": [
+          {
+            "corpus": "quran",
+            "T2": 32860.53526493383
+          },
+          {
+            "corpus": "hindawi",
+            "T2": 4.162388272893636
+          },
+          {
+            "corpus": "ksucca",
+            "T2": 4.1619585118470575
+          },
+          {
+            "corpus": "poetry_jahili",
+            "T2": 4.154978086695759
+          },
+          {
+            "corpus": "poetry_abbasi",
+            "T2": 4.148365116766864
+          },
+          {
+            "corpus": "arabic_bible",
+            "T2": 4.146644448524009
+          },
+          {
+            "corpus": "poetry_islami",
+            "T2": 4.112267468064277
+          }
+        ],
+        "quran_Z_brown": 9.648655266887614,
+        "quran_rank_Z_of_n": 1,
+        "rank_2_corpus_Z": "ksucca",
+        "rank_2_Z": 1.0544534687268698,
+        "gap_Z_quran_to_rank2": 8.594201798160745,
+        "quran_T2": 32860.53526493383,
+        "quran_rank_T2_of_n": 1,
+        "gap_T2_quran_to_rank2": 32856.372876660935,
+        "p_Z_column_shuffle": 0.0,
+        "quran_rank1_freq_perm": 0.1476,
+        "M_z_sha256": "b858c6b091531ef1b136c35fa38bdc61f69b110bf0a122d7bd48ca716eaa35f7",
+        "z_per_axis_quran": {
+          "z_HEL_pool": 20.96117672804988,
+          "z_pmax_pool": 11.45346173089945,
+          "z_HEL_unit_median": 6.784047439137329,
+          "z_HEL_unit_p25": 4.5853327105761865,
+          "z_VL_CV_median": 0.23177518864003102,
+          "z_bigram_distinct_pool": 0.2741039917765822,
+          "z_gzip_eff_pool": 1.008897858018191,
+          "z_Delta_max_unit": 6.78404743913733
+        }
+      },
+      "B_non_Arabic": {
+        "n_corpora": 6,
+        "K_eff_brown": 1.8471957896772973,
+        "Z_brown_sorted": [
+          {
+            "corpus": "quran",
+            "Z": 1.8160519486828417
+          },
+          {
+            "corpus": "pali",
+            "Z": 1.3884339969896657
+          },
+          {
+            "corpus": "avestan_yasna",
+            "Z": 0.24863545868096626
+          },
+          {
+            "corpus": "greek_nt",
+            "Z": 0.020104132138235337
+          },
+          {
+            "corpus": "rigveda",
+            "Z": -0.2642663536866779
+          },
+          {
+            "corpus": "hebrew_tanakh",
+            "Z": -1.392907234122188
+          }
+        ],
+        "T2_sorted": [
+          {
+            "corpus": "quran",
+            "T2": 7066.854464097243
+          },
+          {
+            "corpus": "rigveda",
+            "T2": 3.197474861799793
+          },
+          {
+            "corpus": "avestan_yasna",
+            "T2": 3.1955518180380595
+          },
+          {
+            "corpus": "hebrew_tanakh",
+            "T2": 3.190384664348059
+          },
+          {
+            "corpus": "pali",
+            "T2": 3.1895065202784494
+          },
+          {
+            "corpus": "greek_nt",
+            "T2": 3.1490369991351628
+          }
+        ],
+        "quran_Z_brown": 1.8160519486828417,
+        "quran_rank_Z_of_n": 1,
+        "rank_2_corpus_Z": "pali",
+        "rank_2_Z": 1.3884339969896657,
+        "gap_Z_quran_to_rank2": 0.42761795169317596,
+        "quran_T2": 7066.854464097243,
+        "quran_rank_T2_of_n": 1,
+        "gap_T2_quran_to_rank2": 7063.656989235444,
+        "p_Z_column_shuffle": 0.0231,
+        "quran_rank1_freq_perm": 0.1678,
+        "M_z_sha256": "bcc5aa78c4e2ea5d8e22719866ce2a081700084cee7b6768de69d5d3e49ae57a",
+        "z_per_axis_quran": {
+          "z_HEL_pool": 0.9234820314070367,
+          "z_pmax_pool": 1.787563853951788,
+          "z_HEL_unit_median": 3.63942142738627,
+          "z_HEL_unit_p25": 3.752809170463643,
+          "z_VL_CV_median": 0.04901573883622386,
+          "z_bigram_distinct_pool": -0.8201991844514684,
+          "z_gzip_eff_pool": -0.5838867958909923,
+          "z_Delta_max_unit": 1.9414020051748186
+        }
+      },
+      "C_combined_12": {
+        "n_corpora": 12,
+        "K_eff_brown": 1.7454541725187236,
+        "Z_brown_sorted": [
+          {
+            "corpus": "quran",
+            "Z": 2.650734801088931
+          },
+          {
+            "corpus": "pali",
+            "Z": 2.0076634817527035
+          },
+          {
+            "corpus": "avestan_yasna",
+            "Z": 1.0234336658757603
+          },
+          {
+            "corpus": "greek_nt",
+            "Z": 0.6627157365533719
+          },
+          {
+            "corpus": "rigveda",
+            "Z": 0.4885693196366083
+          },
+          {
+            "corpus": "ksucca",
+            "Z": 0.20628618454878117
+          },
+          {
+            "corpus": "arabic_bible",
+            "Z": -0.29388763454205363
+          },
+          {
+            "corpus": "poetry_abbasi",
+            "Z": -0.40708044798541126
+          },
+          {
+            "corpus": "poetry_islami",
+            "Z": -0.41609318191436523
+          },
+          {
+            "corpus": "hebrew_tanakh",
+            "Z": -0.8200053047045441
+          },
+          {
+            "corpus": "poetry_jahili",
+            "Z": -1.0037397137252435
+          },
+          {
+            "corpus": "hindawi",
+            "Z": -1.4478621054956125
+          }
+        ],
+        "T2_sorted": [
+          {
+            "corpus": "quran",
+            "T2": 154.7531920156593
+          },
+          {
+            "corpus": "rigveda",
+            "T2": 8.87076891619646
+          },
+          {
+            "corpus": "avestan_yasna",
+            "T2": 8.75581251807267
+          },
+          {
+            "corpus": "hindawi",
+            "T2": 8.670867273796308
+          },
+          {
+            "corpus": "poetry_jahili",
+            "T2": 8.545411263474389
+          },
+          {
+            "corpus": "ksucca",
+            "T2": 8.526121500931847
+          },
+          {
+            "corpus": "pali",
+            "T2": 7.587644231327142
+          },
+          {
+            "corpus": "hebrew_tanakh",
+            "T2": 6.345103137517125
+          },
+          {
+            "corpus": "poetry_abbasi",
+            "T2": 5.900749217797401
+          },
+          {
+            "corpus": "poetry_islami",
+            "T2": 4.36268324017588
+          },
+          {
+            "corpus": "greek_nt",
+            "T2": 3.4800902434885796
+          },
+          {
+            "corpus": "arabic_bible",
+            "T2": 2.2600826925862716
+          }
+        ],
+        "quran_Z_brown": 2.650734801088931,
+        "quran_rank_Z_of_n": 1,
+        "rank_2_corpus_Z": "pali",
+        "rank_2_Z": 2.0076634817527035,
+        "gap_Z_quran_to_rank2": 0.6430713193362276,
+        "quran_T2": 154.7531920156593,
+        "quran_rank_T2_of_n": 1,
+        "gap_T2_quran_to_rank2": 145.88242309946284,
+        "p_Z_column_shuffle": 0.0001,
+        "quran_rank1_freq_perm": 0.0827,
+        "M_z_sha256": "aa6acbb2b2ce0925bfe8f5ce0546455d6acbab7f5c6d92fff2fcf0177d5fd6a8",
+        "z_per_axis_quran": {
+          "z_HEL_pool": 1.7654771172408994,
+          "z_pmax_pool": 2.924355616406938,
+          "z_HEL_unit_median": 4.062932491827744,
+          "z_HEL_unit_p25": 3.9419854497382767,
+          "z_VL_CV_median": 0.15747666527771015,
+          "z_bigram_distinct_pool": 0.0397789291454589,
+          "z_gzip_eff_pool": 0.22192894542387764,
+          "z_Delta_max_unit": 2.937062817947411
+        }
+      }
+    },
+    "criteria_pass": {
+      "A1_Pool_A_Z_geq_10_rank1": false,
+      "A2_Pool_B_Z_geq_5_rank1": false,
+      "A3_Pool_C_Z_geq_8_rank1": false,
+      "A4_bilateral_Z_min_geq_5": false,
+      "A5_all_pools_p_lt_001": false,
+      "n_pass_of_5": 0
+    }
+  },
+  "audit_report": {
+    "exp138_reproduction_check": {
+      "exp138_locked_Z_brown": 12.149,
+      "Pool_C_Z_brown_now": 2.650734801088931,
+      "diff": -9.498265198911067,
+      "match_within_005": false
+    },
+    "n_corpora_per_pool": {
+      "A": 7,
+      "B": 6,
+      "C": 12
+    },
+    "Z_min_across_pools": 1.8160519486828417
+  },
+  "wall_time_s": 47.32076668739319
+}

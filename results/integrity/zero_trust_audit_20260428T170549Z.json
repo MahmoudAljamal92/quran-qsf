@@ -1,0 +1,673 @@
+{
+  "schema": "zero_trust_audit_v1",
+  "completed_at_utc": "2026-04-28T17:05:49.356566+00:00",
+  "n_receipts_scanned": 155,
+  "tally_by_severity": {
+    "CRITICAL": 1,
+    "WARN": 52,
+    "INFO": 57
+  },
+  "issues": [
+    {
+      "level": "L2_stale_dep_missing",
+      "severity": "CRITICAL",
+      "receipt": "results/experiments/exp95f_short_envelope_replication/exp95f_short_envelope_replication.json",
+      "cited_dep": "exp95e_full_114_consensus_universal",
+      "msg": "Receipt cites results/experiments/exp95e_full_114_consensus_universal/ but it does not exist on disk."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp02_mi_criticality/exp02_mi_criticality.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp07_tension_law/exp07_tension_law.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp08_tension_noncircular/exp08_tension_noncircular.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp09_R1_variant_forensics_9ch/exp09_R1_variant_forensics_9ch.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp102_imitation_battery/exp102_imitation_battery.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp105_harakat_restoration/exp105_harakat_restoration.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp21_E1_EL_survival/exp21_E1_EL_survival.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp29_cascade_product_code/exp29_cascade_product_code.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp30_cascade_R1_9ch/exp30_cascade_R1_9ch.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp43_adiyat_864_compound/exp43_adiyat_864_compound.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp44_F6_spectrum/exp44_F6_spectrum.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp45_two_letter_746k/exp45_two_letter_746k.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp47_phonetic_distance_law/exp47_phonetic_distance_law.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp48_verse_graph_topology/exp48_verse_graph_topology.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp49_6d_hotelling/exp49_6d_hotelling.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp53_ar1_6d_gate/exp53_ar1_6d_gate.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp54_phonetic_law_full/exp54_phonetic_law_full.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp55_gamma_length_stratified/exp55_gamma_length_stratified.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp60_lc3_parsimony_theorem/exp60_lc3_parsimony_theorem.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp61_vl_cv_floor_sensitivity/exp61_vl_cv_floor_sensitivity.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp63_var1_cross_feature/exp63_var1_cross_feature.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp64_unified_law_ensemble/exp64_unified_law_ensemble.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp65_dual_state_bic/exp65_dual_state_bic.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp66_extended_mahalanobis/exp66_extended_mahalanobis.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp67_adjacent_jaccard/exp67_adjacent_jaccard.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp69_madd_bridge/exp69_madd_bridge.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp80_mi_decay/exp80_mi_decay.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp87_unified_probe/exp87_unified_probe.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp89_lc3_ablation/exp89_lc3_ablation.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp90_cross_language_el/exp90_cross_language_el.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp93_unified_stack/exp93_unified_stack.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp94_adiyat_864/exp94_adiyat_864.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp95_phonetic_modulation/exp95_phonetic_modulation.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp95b_local_ncd_adiyat/exp95b_local_ncd_adiyat.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp95c_multi_compressor_adiyat/exp95c_multi_compressor_adiyat.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp95d_multi_compressor_robust/exp95d_multi_compressor_robust.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp95e_full_114_consensus_universal/short/exp95e_full_114_consensus_universal.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp95f_short_envelope_replication/exp95f_short_envelope_replication.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp95i_bigram_shift_detector/exp95i_bigram_shift_detector.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp95j_bigram_shift_universal/exp95j_bigram_shift_universal.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp95k_msfc_amplification/exp95k_msfc_amplification.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp96a_phi_master/exp96a_phi_master.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp97_multifractal_spectrum/exp97_multifractal_spectrum.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp98_per_verse_mdl/exp98_per_verse_mdl.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp98_vlcv_floor/exp98_vlcv_floor.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/exp99_adversarial_complexity/exp99_adversarial_complexity.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/expA3_stot_v2_reaudit/expA3_stot_v2_reaudit.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/expB12_f6_6d_gate/expB12_f6_6d_gate.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/expB5_gamma_scope_audit/expB5_gamma_scope_audit.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/expP10_hadith_N1_prereg/expP10_hadith_N1_prereg.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/expP4_cross_tradition_R3_loo/expP4_cross_tradition_R3_loo.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L6_no_calibration_source_declared",
+      "severity": "WARN",
+      "receipt": "results/experiments/expX1_psi_oral/expX1_psi_oral.json",
+      "msg": "Receipt carries a tau/threshold-style field but declares no calibration_source. Cannot verify that calibration is independent of the test fold."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp02_mi_criticality/exp02_mi_criticality.json",
+      "msg": "Receipt exp02_mi_criticality is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp03_adiyat/exp03_adiyat.json",
+      "msg": "Receipt exp03_adiyat is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp04_onomatopoeia/exp04_onomatopoeia.json",
+      "msg": "Receipt exp04_onomatopoeia is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp05_subclass_atlas/exp05_subclass_atlas.json",
+      "msg": "Receipt exp05_subclass_atlas is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp06_band_b/exp06_band_b.json",
+      "msg": "Receipt exp06_band_b is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp07_tension_law/exp07_tension_law.json",
+      "msg": "Receipt exp07_tension_law is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp08_tension_noncircular/exp08_tension_noncircular.json",
+      "msg": "Receipt exp08_tension_noncircular is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp105_harakat_restoration/exp105_harakat_restoration.json",
+      "msg": "Receipt exp105_harakat_restoration is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp11_R3_cross_scripture/exp11_R3_cross_scripture.json",
+      "msg": "Receipt exp11_R3_cross_scripture is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp12_R4_char_lm/exp12_R4_char_lm.json",
+      "msg": "Receipt exp12_R4_char_lm is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp13_R5_adversarial/exp13_R5_adversarial.json",
+      "msg": "Receipt exp13_R5_adversarial is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp14_R6_word_graph_modularity/exp14_R6_word_graph_modularity.json",
+      "msg": "Receipt exp14_R6_word_graph_modularity is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp15_R7_noise_curve/exp15_R7_noise_curve.json",
+      "msg": "Receipt exp15_R7_noise_curve is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp16_R8_null_ladder/exp16_R8_null_ladder.json",
+      "msg": "Receipt exp16_R8_null_ladder is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp17_R9_cross_scale_VIS/exp17_R9_cross_scale_VIS.json",
+      "msg": "Receipt exp17_R9_cross_scale_VIS is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp18_R10_verse_internal_order/exp18_R10_verse_internal_order.json",
+      "msg": "Receipt exp18_R10_verse_internal_order is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp62_adiyat_2d_retest/exp62_adiyat_2d_retest.json",
+      "msg": "Receipt exp62_adiyat_2d_retest is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp65_dual_state_bic/exp65_dual_state_bic.json",
+      "msg": "Receipt exp65_dual_state_bic is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp69_madd_bridge/exp69_madd_bridge.json",
+      "msg": "Receipt exp69_madd_bridge is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp71_benford/exp71_benford.json",
+      "msg": "Receipt exp71_benford is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp75_fractal_dimension/exp75_fractal_dimension.json",
+      "msg": "Receipt exp75_fractal_dimension is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp77_gamma_entropy/exp77_gamma_entropy.json",
+      "msg": "Receipt exp77_gamma_entropy is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp78_inverse_phi_cascade/exp78_inverse_phi_cascade.json",
+      "msg": "Receipt exp78_inverse_phi_cascade is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp79_ar1_decorrelation/exp79_ar1_decorrelation.json",
+      "msg": "Receipt exp79_ar1_decorrelation is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp81_entropy_rate/exp81_entropy_rate.json",
+      "msg": "Receipt exp81_entropy_rate is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp82_transfer_entropy/exp82_transfer_entropy.json",
+      "msg": "Receipt exp82_transfer_entropy is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp85_scale_hierarchy/exp85_scale_hierarchy.json",
+      "msg": "Receipt exp85_scale_hierarchy is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp91_meccan_medinan_stability/exp91_meccan_medinan_stability.json",
+      "msg": "Receipt exp91_meccan_medinan_stability is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp92_genai_adversarial_forge/exp92_genai_adversarial_forge.json",
+      "msg": "Receipt exp92_genai_adversarial_forge is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp97_multifractal_spectrum/exp97_multifractal_spectrum.json",
+      "msg": "Receipt exp97_multifractal_spectrum is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/exp98_per_verse_mdl/exp98_per_verse_mdl.json",
+      "msg": "Receipt exp98_per_verse_mdl is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expA2_diacritic_capacity_universal/expA2_diacritic_capacity_universal.json",
+      "msg": "Receipt expA2_diacritic_capacity_universal is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expA3_stot_v2_reaudit/expA3_stot_v2_reaudit.json",
+      "msg": "Receipt expA3_stot_v2_reaudit is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expA5_segmentation_sensitivity/expA5_segmentation_sensitivity.json",
+      "msg": "Receipt expA5_segmentation_sensitivity is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expA6_structural_coherence_score/expA6_structural_coherence_score.json",
+      "msg": "Receipt expA6_structural_coherence_score is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expA7_dna_reconstruction/expA7_dna_reconstruction.json",
+      "msg": "Receipt expA7_dna_reconstruction is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expB12_f6_6d_gate/expB12_f6_6d_gate.json",
+      "msg": "Receipt expB12_f6_6d_gate is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expB14b_hamza_aware_9ch/expB14b_hamza_aware_9ch.json",
+      "msg": "Receipt expB14b_hamza_aware_9ch is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expB5_gamma_scope_audit/expB5_gamma_scope_audit.json",
+      "msg": "Receipt expB5_gamma_scope_audit is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expC1_C3_el_inv_sqrt2/expC1_C3_el_inv_sqrt2.json",
+      "msg": "Receipt expC1_C3_el_inv_sqrt2 is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expC2_vl_cv_floor_sqrt26/expC2_vl_cv_floor_sqrt26.json",
+      "msg": "Receipt expC2_vl_cv_floor_sqrt26 is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expD7_juz_partition_smoothness/expD7_juz_partition_smoothness.json",
+      "msg": "Receipt expD7_juz_partition_smoothness is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expP10_hadith_N1_prereg/expP10_hadith_N1_prereg.json",
+      "msg": "Receipt expP10_hadith_N1_prereg is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expP11_brown_empirical_corr/expP11_brown_empirical_corr.json",
+      "msg": "Receipt expP11_brown_empirical_corr is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expP14_cross_script_dominant_letter/expP14_cross_script_dominant_letter.json",
+      "msg": "Receipt expP14_cross_script_dominant_letter is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expP16_maqamat_hariri/expP16_maqamat_hariri.json",
+      "msg": "Receipt expP16_maqamat_hariri is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expP17_markov_saj_adversarial/expP17_markov_saj_adversarial.json",
+      "msg": "Receipt expP17_markov_saj_adversarial is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expP18_shannon_capacity_el/expP18_shannon_capacity_el.json",
+      "msg": "Receipt expP18_shannon_capacity_el is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expParadigm2_continuation_ACD/expParadigm2_continuation_ACD.json",
+      "msg": "Receipt expParadigm2_continuation_ACD is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expParadigm2_info_theoretic_derivation/expParadigm2_info_theoretic_derivation.json",
+      "msg": "Receipt expParadigm2_info_theoretic_derivation is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expParadigm2_OP1_OP3_proofs/expParadigm2_OP1_OP3_proofs.json",
+      "msg": "Receipt expParadigm2_OP1_OP3_proofs is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expParadigm2_OP2_feature_pair_search/expParadigm2_OP2_feature_pair_search.json",
+      "msg": "Receipt expParadigm2_OP2_feature_pair_search is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expParadigm2_OP2_T_alt_band_robustness/expParadigm2_OP2_T_alt_band_robustness.json",
+      "msg": "Receipt expParadigm2_OP2_T_alt_band_robustness is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expParadigm2_OP2_T_alt_validation/expParadigm2_OP2_T_alt_validation.json",
+      "msg": "Receipt expParadigm2_OP2_T_alt_validation is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expParadigm2_OP2_T_canon_plus_T_alt_6D/expParadigm2_OP2_T_canon_plus_T_alt_6D.json",
+      "msg": "Receipt expParadigm2_OP2_T_canon_plus_T_alt_6D is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expS_synth_geometric_info_theorem/expS_synth_geometric_info_theorem.json",
+      "msg": "Receipt expS_synth_geometric_info_theorem is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    },
+    {
+      "level": "L8_orphan_receipt",
+      "severity": "INFO",
+      "receipt": "results/experiments/expX3_prose_extremum_brown/expX3_prose_extremum_brown.json",
+      "msg": "Receipt expX3_prose_extremum_brown is not referenced from any of RANKED_FINDINGS / PROGRESS / PAPER / REFERENCE."
+    }
+  ]
+}

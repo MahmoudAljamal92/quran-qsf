@@ -1,0 +1,196 @@
+{
+  "schema": "phi_universal_xtrad_sizing_v1",
+  "filed_as": "exploratory_diagnostic",
+  "purpose": "Sanity check before exp109_phi_universal_cross_tradition PREREG. Cross-tradition Quran-distinctiveness on a strictly universal 5-D structural feature space.",
+  "features": [
+    "VL_CV",
+    "p_max",
+    "H_EL",
+    "bigram_distinct_ratio",
+    "gzip_efficiency"
+  ],
+  "n_corpora": 11,
+  "n_units_per_corpus": {
+    "quran": 114,
+    "poetry_jahili": 120,
+    "poetry_islami": 423,
+    "poetry_abbasi": 2575,
+    "hindawi": 72,
+    "ksucca": 42,
+    "arabic_bible": 1183,
+    "hebrew_tanakh": 921,
+    "greek_nt": 260,
+    "pali": 186,
+    "avestan_yasna": 67
+  },
+  "medians": {
+    "quran": {
+      "VL_CV": 0.4458599267397876,
+      "p_max": 0.7272727272727273,
+      "H_EL": 0.9685208240372034,
+      "bigram_distinct_ratio": 0.2370250378991638,
+      "gzip_efficiency": 0.3616735757342784,
+      "n_units": 114
+    },
+    "poetry_jahili": {
+      "VL_CV": 0.10475656017578483,
+      "p_max": 0.264391447368421,
+      "H_EL": 2.779539763336115,
+      "bigram_distinct_ratio": 0.4598757876603654,
+      "gzip_efficiency": 0.4600684383365069,
+      "n_units": 120
+    },
+    "poetry_islami": {
+      "VL_CV": 0.10475656017578483,
+      "p_max": 0.2857142857142857,
+      "H_EL": 2.688721875540867,
+      "bigram_distinct_ratio": 0.4745308310991957,
+      "gzip_efficiency": 0.4605543710021322,
+      "n_units": 423
+    },
+    "poetry_abbasi": {
+      "VL_CV": 0.09318706807596218,
+      "p_max": 0.2857142857142857,
+      "H_EL": 2.7516291673878226,
+      "bigram_distinct_ratio": 0.4834123222748815,
+      "gzip_efficiency": 0.4623015873015873,
+      "n_units": 2575
+    },
+    "hindawi": {
+      "VL_CV": 0.40269180782142755,
+      "p_max": 0.1836734693877551,
+      "H_EL": 3.478902741597457,
+      "bigram_distinct_ratio": 0.18057867175015063,
+      "gzip_efficiency": 0.369732271503725,
+      "n_units": 72
+    },
+    "ksucca": {
+      "VL_CV": 0.9557006632274367,
+      "p_max": 0.28001792114695345,
+      "H_EL": 2.907891879501107,
+      "bigram_distinct_ratio": 0.06810285333753682,
+      "gzip_efficiency": 0.27051422757554233,
+      "n_units": 42
+    },
+    "arabic_bible": {
+      "VL_CV": 0.3472644672608059,
+      "p_max": 0.2727272727272727,
+      "H_EL": 2.918295834054489,
+      "bigram_distinct_ratio": 0.21794871794871795,
+      "gzip_efficiency": 0.3519163763066202,
+      "n_units": 1183
+    },
+    "hebrew_tanakh": {
+      "VL_CV": 0.18498288468188753,
+      "p_max": 0.2413793103448276,
+      "H_EL": 3.053090083530327,
+      "bigram_distinct_ratio": 0.21621621621621623,
+      "gzip_efficiency": 0.3475519287833828,
+      "n_units": 921
+    },
+    "greek_nt": {
+      "VL_CV": 0.35183353097644743,
+      "p_max": 0.3333333333333333,
+      "H_EL": 2.433671200186647,
+      "bigram_distinct_ratio": 0.11842906006989695,
+      "gzip_efficiency": 0.3064422918853299,
+      "n_units": 260
+    },
+    "pali": {
+      "VL_CV": 0.721151423497471,
+      "p_max": 0.4808201058201058,
+      "H_EL": 2.089938976016876,
+      "bigram_distinct_ratio": 0.027269824311977352,
+      "gzip_efficiency": 0.19440524276024063,
+      "n_units": 186
+    },
+    "avestan_yasna": {
+      "VL_CV": 0.7236013706086589,
+      "p_max": 0.375,
+      "H_EL": 2.1180782093497093,
+      "bigram_distinct_ratio": 0.11845102505694761,
+      "gzip_efficiency": 0.42716711349419123,
+      "n_units": 67
+    }
+  },
+  "ranks": {
+    "poetry_abbasi": {
+      "VL_CV": 1,
+      "p_max": 7,
+      "H_EL": 6,
+      "bigram_distinct_ratio": 11,
+      "gzip_efficiency": 11
+    },
+    "poetry_jahili": {
+      "VL_CV": 2,
+      "p_max": 3,
+      "H_EL": 7,
+      "bigram_distinct_ratio": 9,
+      "gzip_efficiency": 9
+    },
+    "poetry_islami": {
+      "VL_CV": 3,
+      "p_max": 6,
+      "H_EL": 5,
+      "bigram_distinct_ratio": 10,
+      "gzip_efficiency": 10
+    },
+    "hebrew_tanakh": {
+      "VL_CV": 4,
+      "p_max": 2,
+      "H_EL": 10,
+      "bigram_distinct_ratio": 6,
+      "gzip_efficiency": 4
+    },
+    "arabic_bible": {
+      "VL_CV": 5,
+      "p_max": 4,
+      "H_EL": 9,
+      "bigram_distinct_ratio": 7,
+      "gzip_efficiency": 5
+    },
+    "greek_nt": {
+      "VL_CV": 6,
+      "p_max": 8,
+      "H_EL": 4,
+      "bigram_distinct_ratio": 3,
+      "gzip_efficiency": 3
+    },
+    "hindawi": {
+      "VL_CV": 7,
+      "p_max": 1,
+      "H_EL": 11,
+      "bigram_distinct_ratio": 5,
+      "gzip_efficiency": 7
+    },
+    "quran": {
+      "VL_CV": 8,
+      "p_max": 11,
+      "H_EL": 1,
+      "bigram_distinct_ratio": 8,
+      "gzip_efficiency": 6
+    },
+    "pali": {
+      "VL_CV": 9,
+      "p_max": 10,
+      "H_EL": 2,
+      "bigram_distinct_ratio": 1,
+      "gzip_efficiency": 1
+    },
+    "avestan_yasna": {
+      "VL_CV": 10,
+      "p_max": 9,
+      "H_EL": 3,
+      "bigram_distinct_ratio": 4,
+      "gzip_efficiency": 8
+    },
+    "ksucca": {
+      "VL_CV": 11,
+      "p_max": 5,
+      "H_EL": 8,
+      "bigram_distinct_ratio": 2,
+      "gzip_efficiency": 2
+    }
+  },
+  "wall_time_s": 20.260868310928345
+}

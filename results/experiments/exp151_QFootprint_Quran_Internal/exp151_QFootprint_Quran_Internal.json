@@ -1,0 +1,300 @@
+{
+  "experiment": "exp151_QFootprint_Quran_Internal",
+  "hypothesis_id": "H95_Quran_Internal",
+  "hypothesis": "The Quran's joint Q-Footprint at the sūrah-pool resolution (114 sūrahs as units) exhibits a clear top-1 sūrah by joint Hotelling T² with gap ≥ 1.5× to top-2, top-3 sūrahs span ≥ 2 chronological periods, and bootstrap rank-1 freq ≥ 80%.",
+  "verdict": "FAIL_quran_internal_indeterminate",
+  "verdict_reason": "Only 1/3 PASS",
+  "prereg_hash": "554e256a201a70e0b893bd439632a7a48d8e8c10f9e9b09d298c5a87ecb09967",
+  "frozen_constants": {
+    "AXES": [
+      "H_EL_surah",
+      "p_max_surah",
+      "Delta_max_surah",
+      "VL_CV_surah",
+      "bigram_distinct_surah",
+      "gzip_eff_surah",
+      "n_verses_surah",
+      "mean_verse_words_surah"
+    ],
+    "N_BOOTSTRAP": 1000,
+    "RIDGE": 0.001,
+    "SEED": 42,
+    "ALPHABET_SIZE_AR": 28
+  },
+  "results": {
+    "sub_A_per_surah_stats": {
+      "n_surahs": 114,
+      "axes": [
+        "H_EL_surah",
+        "p_max_surah",
+        "Delta_max_surah",
+        "VL_CV_surah",
+        "bigram_distinct_surah",
+        "gzip_eff_surah",
+        "n_verses_surah",
+        "mean_verse_words_surah"
+      ],
+      "per_axis_stats": {
+        "H_EL_surah": {
+          "median": 0.9685208240372032,
+          "p5": -0.0,
+          "p95": 2.5263451166325486,
+          "mean": 1.11386422707522,
+          "std": 0.8059946035591159,
+          "cv": 0.7236021985152474
+        },
+        "p_max_surah": {
+          "median": 0.7272727272727273,
+          "p5": 0.3434108527131783,
+          "p95": 1.0,
+          "mean": 0.7081135997791647,
+          "std": 0.22793516180945408,
+          "cv": 0.32189067104563296
+        },
+        "Delta_max_surah": {
+          "median": 3.8388340980204005,
+          "p5": 2.2810098054250547,
+          "p95": 4.807354922057604,
+          "mean": 3.693490694982384,
+          "std": 0.8059946035591159,
+          "cv": 0.21822028810145958
+        },
+        "VL_CV_surah": {
+          "median": 0.4458599267397876,
+          "p5": 0.28542771485024526,
+          "p95": 0.6693700838514504,
+          "mean": 0.4646185566096261,
+          "std": 0.18642380430260752,
+          "cv": 0.40124054808090964
+        },
+        "bigram_distinct_surah": {
+          "median": 0.23726206530682745,
+          "p5": 0.04723540470533675,
+          "p95": 0.6476841130152846,
+          "mean": 0.280375919452661,
+          "std": 0.19764005079433708,
+          "cv": 0.7049109323659547
+        },
+        "gzip_eff_surah": {
+          "median": 0.3639182610626466,
+          "p5": 0.27501295502918754,
+          "p95": 0.639370717634331,
+          "mean": 0.3947115898239667,
+          "std": 0.1098365823542888,
+          "cv": 0.27827047694057744
+        },
+        "n_verses_surah": {
+          "median": 39.0,
+          "p5": 5.0,
+          "p95": 168.84999999999994,
+          "mean": 54.70175438596491,
+          "std": 53.213367444383735,
+          "cv": 0.9727908737427431
+        },
+        "mean_verse_words_surah": {
+          "median": 8.620550383351588,
+          "p5": 3.788742393509128,
+          "p95": 21.432320804195804,
+          "mean": 10.53683394318955,
+          "std": 6.303392475544893,
+          "cv": 0.5982245245137484
+        }
+      }
+    },
+    "sub_B_top10_T2": [
+      {
+        "rank": 1,
+        "surah_id": 74,
+        "T2": 40.28612248703813,
+        "n_verses": 56,
+        "period": "Meccan",
+        "chrono_rank": 2
+      },
+      {
+        "rank": 2,
+        "surah_id": 73,
+        "T2": 39.39003538673332,
+        "n_verses": 20,
+        "period": "Meccan",
+        "chrono_rank": 3
+      },
+      {
+        "rank": 3,
+        "surah_id": 2,
+        "T2": 35.322736576306475,
+        "n_verses": 286,
+        "period": "Medinan",
+        "chrono_rank": 84
+      },
+      {
+        "rank": 4,
+        "surah_id": 108,
+        "T2": 28.62965248195192,
+        "n_verses": 3,
+        "period": "Meccan",
+        "chrono_rank": 12
+      },
+      {
+        "rank": 5,
+        "surah_id": 112,
+        "T2": 23.381393884837777,
+        "n_verses": 4,
+        "period": "Meccan",
+        "chrono_rank": 19
+      },
+      {
+        "rank": 6,
+        "surah_id": 26,
+        "T2": 16.487808803036636,
+        "n_verses": 227,
+        "period": "Meccan",
+        "chrono_rank": 44
+      },
+      {
+        "rank": 7,
+        "surah_id": 60,
+        "T2": 15.368773159983277,
+        "n_verses": 13,
+        "period": "Medinan",
+        "chrono_rank": 88
+      },
+      {
+        "rank": 8,
+        "surah_id": 113,
+        "T2": 13.832578689037126,
+        "n_verses": 5,
+        "period": "Meccan",
+        "chrono_rank": 17
+      },
+      {
+        "rank": 9,
+        "surah_id": 3,
+        "T2": 12.497442262742378,
+        "n_verses": 200,
+        "period": "Medinan",
+        "chrono_rank": 86
+      },
+      {
+        "rank": 10,
+        "surah_id": 65,
+        "T2": 11.171156397584086,
+        "n_verses": 12,
+        "period": "Medinan",
+        "chrono_rank": 96
+      }
+    ],
+    "sub_C_top10_signfree": [
+      {
+        "rank": 1,
+        "surah_id": 74,
+        "joint_Z_signfree": 6.196281545750642,
+        "period": "Meccan",
+        "chrono_rank": 2
+      },
+      {
+        "rank": 2,
+        "surah_id": 73,
+        "joint_Z_signfree": 6.126280079169697,
+        "period": "Meccan",
+        "chrono_rank": 3
+      },
+      {
+        "rank": 3,
+        "surah_id": 2,
+        "joint_Z_signfree": 5.15598973535488,
+        "period": "Medinan",
+        "chrono_rank": 84
+      },
+      {
+        "rank": 4,
+        "surah_id": 108,
+        "joint_Z_signfree": 5.033205715123454,
+        "period": "Meccan",
+        "chrono_rank": 12
+      },
+      {
+        "rank": 5,
+        "surah_id": 112,
+        "joint_Z_signfree": 4.275689157118638,
+        "period": "Meccan",
+        "chrono_rank": 19
+      },
+      {
+        "rank": 6,
+        "surah_id": 14,
+        "joint_Z_signfree": 4.121222945053334,
+        "period": "Meccan",
+        "chrono_rank": 69
+      },
+      {
+        "rank": 7,
+        "surah_id": 105,
+        "joint_Z_signfree": 4.027931710392746,
+        "period": "Meccan",
+        "chrono_rank": 16
+      },
+      {
+        "rank": 8,
+        "surah_id": 86,
+        "joint_Z_signfree": 4.00334176947411,
+        "period": "Meccan",
+        "chrono_rank": 33
+      },
+      {
+        "rank": 9,
+        "surah_id": 106,
+        "joint_Z_signfree": 3.966441068812809,
+        "period": "Meccan",
+        "chrono_rank": 26
+      },
+      {
+        "rank": 10,
+        "surah_id": 110,
+        "joint_Z_signfree": 3.8640450125238592,
+        "period": "Medinan",
+        "chrono_rank": 111
+      }
+    ],
+    "sub_D_chronological_distribution": {
+      "top10_period_counts": {
+        "Meccan": 6,
+        "Medinan": 4
+      },
+      "top3_unique_periods": [
+        "Medinan",
+        "Meccan"
+      ],
+      "period_diversity_top3": 2
+    },
+    "sub_E_bootstrap": {
+      "top1_surah_id_actual": 74,
+      "top1_period": "Meccan",
+      "top1_n_verses": 56,
+      "top1_length_class": "medium",
+      "top1_top2_ratio": 1.0227490808654265,
+      "boot_top1_match_freq": 0.306,
+      "boot_top3_overlap_freq": 0.932
+    },
+    "criteria_pass": {
+      "A1_top1_gap_geq_1p5x_top2": false,
+      "A2_top3_spans_2plus_periods": true,
+      "A3_boot_top1_freq_geq_80pct": false,
+      "n_pass_of_3": 1
+    },
+    "descriptive_A4_highest_cv_axis": "n_verses_surah",
+    "descriptive_A5_top1_length_class": "medium"
+  },
+  "audit_report": {
+    "feature_matrix_sha256": "0b0e751b5358f3b045049985bb4c894afc592e7fea189d5ce4a7ee4791974e55",
+    "n_surahs_processed": 114,
+    "F79_match_check": {
+      "median_H_EL_surah_now": 0.9685208240372032,
+      "F79_implied_H_EL_median": 0.9685209220576039,
+      "diff": -9.802040068507267e-08,
+      "match_within_001": true
+    },
+    "highest_CV_axis": "n_verses_surah",
+    "highest_CV_value": 0.9727908737427431
+  },
+  "wall_time_s": 1.2988510131835938
+}

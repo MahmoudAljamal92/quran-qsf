@@ -1,0 +1,46 @@
+{
+  "audit": "Tier-4 zero-trust audit (E15/E16/E17; E14 DEFERRED)",
+  "generated_utc": "2026-04-23T20:21:03+00:00",
+  "experiments_audited": [
+    "E15",
+    "E16",
+    "E17"
+  ],
+  "n_flags": 4,
+  "flags_by_severity": {
+    "HIGH": 0,
+    "MED": 0,
+    "LOW": 4
+  },
+  "verdicts": {
+    "E15": "ANTI_VARIANCE_LAW",
+    "E16": "WEAK_LC2",
+    "E17": "MUSHAF_ONE_AXIS_DOMINANT"
+  },
+  "flags": [
+    {
+      "task": "E15",
+      "severity": "LOW",
+      "code": "A6_SIGMA_REESTIMATION",
+      "message": "E15 permutation reestimates Σ per shuffle, which is the correct null (eigenstructure of RANDOM membership). Paired with stable basis choice (2 smallest λ of Σ_ctrl on non-shuffled data) for the observed statistic."
+    },
+    {
+      "task": "E16",
+      "severity": "LOW",
+      "code": "A6_V_DOMINATED_AT_HIGH_LAMBDA",
+      "message": "E16 WEAK_LC2 is driven almost entirely by V (verse-final letter entropy) at high λ. The M term (H_cond root transitions) contributes little. Interpretation: the signature largely re-encodes the pre-existing 'high-EL Quran outlier' property rather than a joint M+V optimization."
+    },
+    {
+      "task": "E17",
+      "severity": "LOW",
+      "code": "A6_J2_NOT_EXTREMISED",
+      "message": "E17 MUSHAF_ONE_AXIS_DOMINANT: J1 (smoothness) quantile = 0.0 (Mushaf beats ALL 10,000 random perms), but J2 (sign-direction entropy) is NOT at the low extreme (q≈0.84). Dual-optimization falsified on J2; only the smoothness claim survives."
+    },
+    {
+      "task": "E17",
+      "severity": "LOW",
+      "code": "A6_NUZUL_SOURCE",
+      "message": "E17 uses Egyptian Standard Edition (Azhar) chronology as Nuzul proxy. True historical chronology is uncertain; sensitivity to alternative chronological reconstructions (e.g., Nöldeke) not tested."
+    }
+  ]
+}

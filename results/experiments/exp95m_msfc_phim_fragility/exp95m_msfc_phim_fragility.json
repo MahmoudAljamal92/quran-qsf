@@ -1,0 +1,409 @@
+{
+  "experiment": "exp95m_msfc_phim_fragility",
+  "schema_version": "1.0",
+  "hypothesis": "H46",
+  "verdict": "FAIL_audit_features_drift",
+  "prereg_hash_expected": "8d4e7dbb6d7d7fd8948f560a1f0a5e260d338f35ad4213e3e1c3c633960328c6",
+  "prereg_hash_actual": "8d4e7dbb6d7d7fd8948f560a1f0a5e260d338f35ad4213e3e1c3c633960328c6",
+  "frozen_constants": {
+    "EPS_TOP1": 1.5,
+    "K_CANON": 3,
+    "N_EDITS": 20,
+    "MIN_VERSES_PER_UNIT": 5,
+    "RNG_SEED": 95000,
+    "ARABIC_POOL": [
+      "quran",
+      "poetry_jahili",
+      "poetry_islami",
+      "poetry_abbasi",
+      "ksucca",
+      "arabic_bible",
+      "hindawi"
+    ],
+    "T2_BANDA_TARGET": 3557.34,
+    "T2_BANDA_TOL": 30.0
+  },
+  "audit": {
+    "t2_banda_value": 2292.330396064629,
+    "t2_banda_target": 3557.34,
+    "t2_banda_tol": 30.0,
+    "t2_banda_drift": true,
+    "n_band_a_units": 68,
+    "n_ctrl_units": 4719
+  },
+  "per_corpus": {
+    "quran": {
+      "n_units": 109,
+      "K_canon_used": 3,
+      "phim_fragility": 0.0,
+      "phim_fragility_min_unit": 0.0,
+      "phim_fragility_max_unit": 0.0,
+      "per_canon": [
+        {
+          "label": "Q:044",
+          "letter_count": 1493,
+          "n_edits_kept": 20,
+          "median_d_M": 0.0,
+          "min_d_M": 0.0,
+          "max_d_M": 0.18099492573916884
+        },
+        {
+          "label": "Q:050",
+          "letter_count": 1526,
+          "n_edits_kept": 20,
+          "median_d_M": 0.0,
+          "min_d_M": 0.0,
+          "max_d_M": 0.27028274497211835
+        },
+        {
+          "label": "Q:049",
+          "letter_count": 1552,
+          "n_edits_kept": 20,
+          "median_d_M": 0.0,
+          "min_d_M": 0.0,
+          "max_d_M": 0.0
+        }
+      ],
+      "mu_C": [
+        0.7065506113613709,
+        0.4689618571299429,
+        0.08193925255970852,
+        0.9028488101895495,
+        -0.2837051671712681
+      ],
+      "cov_C_diag": [
+        0.044023945078678045,
+        0.03509083914238551,
+        0.006025110213824956,
+        0.2629680254331458,
+        1.0889062229143334
+      ]
+    },
+    "poetry_jahili": {
+      "n_units": 133,
+      "K_canon_used": 3,
+      "phim_fragility": 0.0,
+      "phim_fragility_min_unit": 0.0,
+      "phim_fragility_max_unit": 0.0,
+      "per_canon": [
+        {
+          "label": "poetry_jahili:1469",
+          "letter_count": 370,
+          "n_edits_kept": 20,
+          "median_d_M": 0.0,
+          "min_d_M": 0.0,
+          "max_d_M": 0.3434138141352108
+        },
+        {
+          "label": "poetry_jahili:1006",
+          "letter_count": 397,
+          "n_edits_kept": 20,
+          "median_d_M": 0.0,
+          "min_d_M": 0.0,
+          "max_d_M": 0.9726613658440232
+        },
+        {
+          "label": "poetry_jahili:1366",
+          "letter_count": 416,
+          "n_edits_kept": 20,
+          "median_d_M": 0.0,
+          "min_d_M": 0.0,
+          "max_d_M": 0.22932202329046616
+        }
+      ],
+      "mu_C": [
+        0.0996912825688848,
+        0.13854386391344586,
+        0.02686759416890009,
+        0.48631684556945076,
+        -2.29891645838517
+      ],
+      "cov_C_diag": [
+        0.011314151923742256,
+        0.014726003442568426,
+        0.002351941951323567,
+        0.13298078961162413,
+        0.2964856954730149
+      ]
+    },
+    "poetry_islami": {
+      "n_units": 465,
+      "K_canon_used": 3,
+      "phim_fragility": 0.0,
+      "phim_fragility_min_unit": 0.0,
+      "phim_fragility_max_unit": 0.0,
+      "per_canon": [
+        {
+          "label": "poetry_islami:308",
+          "letter_count": 357,
+          "n_edits_kept": 20,
+          "median_d_M": 0.0,
+          "min_d_M": 0.0,
+          "max_d_M": 0.0
+        },
+        {
+          "label": "poetry_islami:9193",
+          "letter_count": 358,
+          "n_edits_kept": 20,
+          "median_d_M": 0.0,
+          "min_d_M": 0.0,
+          "max_d_M": 0.8125296134413406
+        },
+        {
+          "label": "poetry_islami:2772",
+          "letter_count": 358,
+          "n_edits_kept": 20,
+          "median_d_M": 0.0,
+          "min_d_M": 0.0,
+          "max_d_M": 0.7252550802666302
+        }
+      ],
+      "mu_C": [
+        0.10063771006299896,
+        0.1343666300766454,
+        0.028567414337302872,
+        0.49028624795581566,
+        -2.2416541037197844
+      ],
+      "cov_C_diag": [
+        0.010887278245444101,
+        0.011701891108636838,
+        0.0035176467665122297,
+        0.17001559783144335,
+        0.287735624867425
+      ]
+    },
+    "poetry_abbasi": {
+      "n_units": 2823,
+      "K_canon_used": 3,
+      "phim_fragility": 0.0,
+      "phim_fragility_min_unit": 0.0,
+      "phim_fragility_max_unit": 0.0,
+      "per_canon": [
+        {
+          "label": "poetry_abbasi:6178",
+          "letter_count": 355,
+          "n_edits_kept": 20,
+          "median_d_M": 0.0,
+          "min_d_M": 0.0,
+          "max_d_M": 0.5363168274548171
+        },
+        {
+          "label": "poetry_abbasi:5865",
+          "letter_count": 355,
+          "n_edits_kept": 20,
+          "median_d_M": 0.0,
+          "min_d_M": 0.0,
+          "max_d_M": 0.8702042197868324
+        },
+        {
+          "label": "poetry_abbasi:5394",
+          "letter_count": 355,
+          "n_edits_kept": 20,
+          "median_d_M": 0.0,
+          "min_d_M": 0.0,
+          "max_d_M": 0.0
+        }
+      ],
+      "mu_C": [
+        0.09901059322055392,
+        0.13191473699711845,
+        0.02472377714150114,
+        0.4887008926804781,
+        -2.3052861873280204
+      ],
+      "cov_C_diag": [
+        0.011380038444842365,
+        0.013393778394143383,
+        0.0025501131267697797,
+        0.18745945679261544,
+        0.28691177104667526
+      ]
+    },
+    "ksucca": {
+      "n_units": 41,
+      "K_canon_used": 3,
+      "phim_fragility": 0.0,
+      "phim_fragility_min_unit": 0.0,
+      "phim_fragility_max_unit": 0.0,
+      "per_canon": [
+        {
+          "label": "ksucca:040",
+          "letter_count": 7063,
+          "n_edits_kept": 20,
+          "median_d_M": 0.0,
+          "min_d_M": 0.0,
+          "max_d_M": 0.0664493486739462
+        },
+        {
+          "label": "ksucca:037",
+          "letter_count": 7222,
+          "n_edits_kept": 20,
+          "median_d_M": 0.0,
+          "min_d_M": 0.0,
+          "max_d_M": 0.3521019939183276
+        },
+        {
+          "label": "ksucca:020",
+          "letter_count": 7340,
+          "n_edits_kept": 20,
+          "median_d_M": 0.0,
+          "min_d_M": 0.0,
+          "max_d_M": 0.0
+        }
+      ],
+      "mu_C": [
+        0.14428399246426826,
+        0.9824907590343452,
+        0.011311603251995882,
+        1.056972542427039,
+        -2.011939561521211
+      ],
+      "cov_C_diag": [
+        0.01185368884711532,
+        0.1918551024516259,
+        0.0006163506497941272,
+        0.30112280990574836,
+        0.16375256426975024
+      ]
+    },
+    "arabic_bible": {
+      "n_units": 1183,
+      "K_canon_used": 3,
+      "phim_fragility": 0.0,
+      "phim_fragility_min_unit": 0.0,
+      "phim_fragility_max_unit": 0.0,
+      "per_canon": [
+        {
+          "label": "bible:تكوين :3",
+          "letter_count": 1477,
+          "n_edits_kept": 20,
+          "median_d_M": 0.0,
+          "min_d_M": 0.0,
+          "max_d_M": 0.0
+        },
+        {
+          "label": "bible:تكوين :7",
+          "letter_count": 1479,
+          "n_edits_kept": 20,
+          "median_d_M": 0.0,
+          "min_d_M": 0.0,
+          "max_d_M": 0.0
+        },
+        {
+          "label": "bible:سفر رؤيا يوحنا :1",
+          "letter_count": 1480,
+          "n_edits_kept": 20,
+          "median_d_M": 0.0,
+          "min_d_M": 0.0,
+          "max_d_M": 0.5894643777584427
+        }
+      ],
+      "mu_C": [
+        0.13343039470568133,
+        0.34651806640957733,
+        0.03125068729528151,
+        0.9442172266051453,
+        -2.1225815085539304
+      ],
+      "cov_C_diag": [
+        0.00984489549818259,
+        0.007089459787228625,
+        0.0028068270503499647,
+        0.08261109818235282,
+        0.28064974471183063
+      ]
+    },
+    "hindawi": {
+      "n_units": 74,
+      "K_canon_used": 3,
+      "phim_fragility": 0.0,
+      "phim_fragility_min_unit": 0.0,
+      "phim_fragility_max_unit": 0.0,
+      "per_canon": [
+        {
+          "label": "hindawi:116",
+          "letter_count": 1198,
+          "n_edits_kept": 20,
+          "median_d_M": 0.0,
+          "min_d_M": 0.0,
+          "max_d_M": 0.0
+        },
+        {
+          "label": "hindawi:069",
+          "letter_count": 1202,
+          "n_edits_kept": 20,
+          "median_d_M": 0.0,
+          "min_d_M": 0.0,
+          "max_d_M": 0.46778927409360443
+        },
+        {
+          "label": "hindawi:094",
+          "letter_count": 1234,
+          "n_edits_kept": 20,
+          "median_d_M": 0.0,
+          "min_d_M": 0.0,
+          "max_d_M": 0.3118487588882314
+        }
+      ],
+      "mu_C": [
+        0.06525248915822204,
+        0.38111284692051395,
+        0.014216004461013532,
+        0.7715174910799834,
+        -2.6195511698595384
+      ],
+      "cov_C_diag": [
+        0.003068203804919521,
+        0.0075331308132490235,
+        0.0005181996840408085,
+        0.11205456946720671,
+        0.1620670722685131
+      ]
+    }
+  },
+  "ranking": [
+    {
+      "rank": 1,
+      "corpus": "quran",
+      "phim_fragility": 0.0
+    },
+    {
+      "rank": 2,
+      "corpus": "poetry_jahili",
+      "phim_fragility": 0.0
+    },
+    {
+      "rank": 3,
+      "corpus": "poetry_islami",
+      "phim_fragility": 0.0
+    },
+    {
+      "rank": 4,
+      "corpus": "poetry_abbasi",
+      "phim_fragility": 0.0
+    },
+    {
+      "rank": 5,
+      "corpus": "ksucca",
+      "phim_fragility": 0.0
+    },
+    {
+      "rank": 6,
+      "corpus": "arabic_bible",
+      "phim_fragility": 0.0
+    },
+    {
+      "rank": 7,
+      "corpus": "hindawi",
+      "phim_fragility": 0.0
+    }
+  ],
+  "quran_rank": null,
+  "quran_phim_fragility": null,
+  "next_corpus": null,
+  "next_phim_fragility": null,
+  "margin_ratio_quran_over_next": null,
+  "wall_time_s": 20.95,
+  "ts_utc": "2026-04-27T06:58:09Z"
+}

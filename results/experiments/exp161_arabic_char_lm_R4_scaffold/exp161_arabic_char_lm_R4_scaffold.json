@@ -1,0 +1,163 @@
+{
+  "experiment": "exp161_arabic_char_lm_R4_scaffold",
+  "schema_version": 1,
+  "scaffold_only": true,
+  "hypothesis": "A character-level transformer LM trained on pre-Islamic poetry (Quran-excluded) assigns lower log-prob to emphatic-substitution variants than to non-emphatic ones at >= 3 sigma effect size, closing the universal-compressor blind spot. This script provides the n-gram CPU floor; transformer training requires GPU.",
+  "verdict": "WEAK_NGRAM_FLOOR_TRANSFORMER_NEEDED",
+  "completed_at_utc": "2026-04-30T20:54:20Z",
+  "wall_time_s": 7.065910577774048,
+  "frozen_constants": {
+    "ARABIC_28": "ابتثجحخدذرزسشصضطظعغفقكلمنهوي",
+    "EMPHATIC_PAIRS": [
+      [
+        "ت",
+        "ط"
+      ],
+      [
+        "د",
+        "ض"
+      ],
+      [
+        "س",
+        "ص"
+      ],
+      [
+        "ز",
+        "ظ"
+      ],
+      [
+        "ك",
+        "ق"
+      ]
+    ],
+    "NGRAM_ORDER": 5,
+    "TRAIN_TOKENS_TARGET": 100000000,
+    "MODEL_SCALES": [
+      {
+        "name": "tiny",
+        "params": 5000000,
+        "d": 256,
+        "L": 6,
+        "h": 8
+      },
+      {
+        "name": "small",
+        "params": 50000000,
+        "d": 512,
+        "L": 12,
+        "h": 8
+      },
+      {
+        "name": "medium",
+        "params": 200000000,
+        "d": 768,
+        "L": 24,
+        "h": 12
+      }
+    ],
+    "SEED": 42
+  },
+  "results": {
+    "training_corpus": {
+      "n_verses": 89173,
+      "n_chars": 3047601,
+      "n_units": 3421,
+      "pool_buildable": true,
+      "quran_excluded": true
+    },
+    "transformer_resource_estimates": [
+      {
+        "name": "tiny",
+        "params": 5000000,
+        "d": 256,
+        "L": 6,
+        "h": 8,
+        "PFLOPs_total": 3.0,
+        "wall_seconds_estimated": {
+          "RTX_3090_FP16": 37.5,
+          "A100_40GB_FP16": 9.615384615384615,
+          "H100_80GB_FP8": 2.0
+        },
+        "wall_days_estimated": {
+          "RTX_3090_FP16": 0.00043402777777777775,
+          "A100_40GB_FP16": 0.00011128917378917378,
+          "H100_80GB_FP8": 2.3148148148148147e-05
+        }
+      },
+      {
+        "name": "small",
+        "params": 50000000,
+        "d": 512,
+        "L": 12,
+        "h": 8,
+        "PFLOPs_total": 30.0,
+        "wall_seconds_estimated": {
+          "RTX_3090_FP16": 375.0,
+          "A100_40GB_FP16": 96.15384615384616,
+          "H100_80GB_FP8": 20.0
+        },
+        "wall_days_estimated": {
+          "RTX_3090_FP16": 0.004340277777777778,
+          "A100_40GB_FP16": 0.001112891737891738,
+          "H100_80GB_FP8": 0.0002314814814814815
+        }
+      },
+      {
+        "name": "medium",
+        "params": 200000000,
+        "d": 768,
+        "L": 24,
+        "h": 12,
+        "PFLOPs_total": 120.0,
+        "wall_seconds_estimated": {
+          "RTX_3090_FP16": 1500.0,
+          "A100_40GB_FP16": 384.61538461538464,
+          "H100_80GB_FP8": 80.0
+        },
+        "wall_days_estimated": {
+          "RTX_3090_FP16": 0.017361111111111112,
+          "A100_40GB_FP16": 0.004451566951566952,
+          "H100_80GB_FP8": 0.000925925925925926
+        }
+      }
+    ],
+    "ngram_baseline": {
+      "order": 5,
+      "vocab_size": 29,
+      "n_contexts": 84855,
+      "training_verses_used": 50000,
+      "training_seconds": 3.0298473834991455
+    },
+    "emphatic_test_on_Q100": {
+      "canon_text_length_28letters": 221,
+      "canon_logprob": -545.772088910521,
+      "canon_per_char_logprob": -2.469556963396023,
+      "n_emphatic_variants": 23,
+      "n_nonemphatic_variants": 22,
+      "emphatic_shift_mean": -2.786254113093259,
+      "emphatic_shift_std": 2.6209303622452866,
+      "nonemphatic_shift_mean": -3.3867626275393676,
+      "nonemphatic_shift_std": 3.4046844598703787,
+      "cohen_d_emphatic_vs_nonemphatic": 0.19765361670299805
+    },
+    "training_recipe_for_GPU_run": {
+      "model_class": "GPT-style decoder transformer",
+      "tokenizer": "byte-level (UTF-8 bytes 0..255 + 5 special tokens)",
+      "block_size": 1024,
+      "batch_size": "tune to GPU; aim 512K tokens/step",
+      "learning_rate": 0.0003,
+      "schedule": "cosine with 1k warmup steps",
+      "total_steps": 190,
+      "validation_split": "Q:100, Q:103, Q:108, Q:112 (held-out)",
+      "early_stopping": "val perplexity not improving for 5 evals",
+      "expected_PPL_at_convergence": "~3.5 - 5.0 chars/bit"
+    },
+    "next_steps": [
+      "1. Acquire single A100 (Colab Pro+, Lambda Labs, etc.).",
+      "2. Run scripts/train_arabic_char_lm.py using the recipe above.",
+      "3. Snapshot final checkpoint at val perplexity minimum.",
+      "4. Run exp161b_arabic_char_lm_emphatic_test on the trained checkpoint with the same emphatic-pair test as this scaffold.",
+      "5. If transformer Cohen-d on emphatic >= 3sigma, lock as F-row 'F80_charLM_emphatic_closure'."
+    ]
+  }
+}

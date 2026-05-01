@@ -1,0 +1,75 @@
+{
+  "schema": "y28_bigram_sizing_v1",
+  "filed_as": "exploratory_diagnostic",
+  "purpose": "Sanity check before exp108_F55_y28_bigram PREREG draft",
+  "target_yasna": 28,
+  "target_n_verses": 13,
+  "target_n_letters_skeleton": 1658,
+  "target_n_distinct_letters": 24,
+  "tau_high": 2.0,
+  "safety_margin_x": 5.0,
+  "peer_audit_floor_f55": 50,
+  "alphabet_size_locked": 26,
+  "alphabet_size_corpus_attested": 24,
+  "alphabet_attested": "abcdefghijkmnoprstuvwxyz",
+  "alphabet_string_locked": "abcdefghijklmnopqrstuvwxyz",
+  "peer_pool_strategy": "all_other_yasna_chapters_no_length_matching_matches_exp95j_arabic_and_exp106_greek_protocol",
+  "n_yasnas_total": 73,
+  "n_peers": 72,
+  "normaliser_sentinel": {
+    "raw": "ahy&acirc; &yacute;&acirc;s&acirc; nemangh&acirc;",
+    "normalised": "ahyayasanemangha",
+    "expected": "ahyayasanemangha",
+    "ok": true
+  },
+  "variant_audit": {
+    "n_sampled": 1000,
+    "min": 1.0,
+    "mean": 1.998,
+    "max": 2.0,
+    "n_zero": 0,
+    "n_above_tau": 0,
+    "theorem_ok": true
+  },
+  "peer_audit": {
+    "n_peers": 72,
+    "min": 291.0,
+    "p5": 329.5,
+    "median": 573.0,
+    "mean": 734.1527777777778,
+    "max": 2724.5,
+    "min_over_tau_ratio": 145.5,
+    "fpr_floor_ok": true,
+    "pool_above_f55_floor": true,
+    "five_closest": [
+      {
+        "yasna": 50,
+        "delta": 291.0,
+        "n_letters": 1466
+      },
+      {
+        "yasna": 33,
+        "delta": 300.5,
+        "n_letters": 1841
+      },
+      {
+        "yasna": 30,
+        "delta": 329.5,
+        "n_letters": 1471
+      },
+      {
+        "yasna": 45,
+        "delta": 330.0,
+        "n_letters": 1708
+      },
+      {
+        "yasna": 53,
+        "delta": 339.5,
+        "n_letters": 1757
+      }
+    ]
+  },
+  "verdict": "PROCEED_TO_PREREG",
+  "message": "Variant theorem holds (max = 2.00 <= 2.0); peer min = 291.00 >= 5.0x safety margin; peer pool 72 >= F55-family floor 50. Cross-tradition F55 on Avestan Yasna 28 is safe to PREREG and run.",
+  "wall_time_s": 0.1823279857635498
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "pareto_frontier_v1",
+  "n_corpora": 9,
+  "computed_from": "results/checkpoints/phase_06_phi_m.pkl",
+  "rows": [
+    {
+      "corpus": "quran",
+      "h_word_bits": 11.050188491097169,
+      "h_el_bits": 2.5189727900554915,
+      "n_unique_words": 14868,
+      "log10_unique_words": 4.172252552423688,
+      "n_words_total": 78248,
+      "n_verses": 6236,
+      "n_units": 114,
+      "is_pareto_optimal": false
+    },
+    {
+      "corpus": "poetry_jahili",
+      "h_word_bits": 12.103228678462152,
+      "h_el_bits": 3.912897360530994,
+      "n_unique_words": 9827,
+      "log10_unique_words": 3.9924209560520243,
+      "n_words_total": 17502,
+      "n_verses": 2561,
+      "n_units": 133,
+      "is_pareto_optimal": false
+    },
+    {
+      "corpus": "poetry_islami",
+      "h_word_bits": 12.907426695523272,
+      "h_el_bits": 3.86625782874906,
+      "n_unique_words": 28156,
+      "log10_unique_words": 4.44957095653121,
+      "n_words_total": 70614,
+      "n_verses": 10295,
+      "n_units": 465,
+      "is_pareto_optimal": true
+    },
+    {
+      "corpus": "poetry_abbasi",
+      "h_word_bits": 13.703594121211621,
+      "h_el_bits": 3.9439135608184097,
+      "n_unique_words": 112744,
+      "log10_unique_words": 5.052093438920491,
+      "n_words_total": 526821,
+      "n_verses": 76499,
+      "n_units": 2823,
+      "is_pareto_optimal": true
+    },
+    {
+      "corpus": "ksucca",
+      "h_word_bits": 10.660948614771874,
+      "h_el_bits": 3.9824859063457128,
+      "n_unique_words": 17790,
+      "log10_unique_words": 4.250175948083925,
+      "n_words_total": 129889,
+      "n_verses": 1967,
+      "n_units": 41,
+      "is_pareto_optimal": false
+    },
+    {
+      "corpus": "arabic_bible",
+      "h_word_bits": 12.190399833605039,
+      "h_el_bits": 3.8784253420756833,
+      "n_unique_words": 55639,
+      "log10_unique_words": 4.745379315813454,
+      "n_words_total": 434881,
+      "n_verses": 31083,
+      "n_units": 1183,
+      "is_pareto_optimal": false
+    },
+    {
+      "corpus": "hadith_bukhari",
+      "h_word_bits": 9.878442977412078,
+      "h_el_bits": 3.7987564336208877,
+      "n_unique_words": 31223,
+      "log10_unique_words": 4.494474629054753,
+      "n_words_total": 521987,
+      "n_verses": 7271,
+      "n_units": 95,
+      "is_pareto_optimal": false
+    },
+    {
+      "corpus": "hindawi",
+      "h_word_bits": 11.54633678767151,
+      "h_el_bits": 4.035738080189597,
+      "n_unique_words": 8545,
+      "log10_unique_words": 3.931712067056756,
+      "n_words_total": 20600,
+      "n_verses": 1793,
+      "n_units": 74,
+      "is_pareto_optimal": false
+    },
+    {
+      "corpus": "iliad_greek",
+      "h_word_bits": 11.447042161347708,
+      "h_el_bits": 0.0,
+      "n_unique_words": 19961,
+      "log10_unique_words": 4.300182294646901,
+      "n_words_total": 111895,
+      "n_verses": 15687,
+      "n_units": 24,
+      "is_pareto_optimal": true
+    }
+  ]
+}

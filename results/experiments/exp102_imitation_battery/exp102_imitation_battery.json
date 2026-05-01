@@ -1,0 +1,83 @@
+{
+  "experiment": "exp102_imitation_battery",
+  "schema_version": 1,
+  "hypothesis_id": "H40",
+  "prereg_document": "experiments/exp102_imitation_battery/PREREG.md",
+  "prereg_hash": "58bded11b0a72d8ea819ee923ef6418cdb5ed16ffb57ef0e5cfbce6673eeb575",
+  "prereg_hash_expected": "58bded11b0a72d8ea819ee923ef6418cdb5ed16ffb57ef0e5cfbce6673eeb575",
+  "frozen_constants": {
+    "feat_cols": [
+      "EL",
+      "VL_CV",
+      "CN",
+      "H_cond",
+      "T"
+    ],
+    "stops_count": 20,
+    "stops_sample": [
+      "أن",
+      "إلا",
+      "إلى",
+      "إن",
+      "الذين",
+      "الله",
+      "به",
+      "ثم",
+      "على",
+      "في",
+      "قال",
+      "لا",
+      "لكم",
+      "لهم",
+      "ما",
+      "من",
+      "ولا",
+      "وما",
+      "ومن",
+      "يا"
+    ]
+  },
+  "imitations_dir": "data/corpora/imitations",
+  "n_imitation_subdirs": 0,
+  "n_imitations_scored": 0,
+  "tau_inside_p95_quran": 146.27014294881505,
+  "quran_phi_m_stats": {
+    "n": 68,
+    "min": 10.238170841445513,
+    "median": 77.11422838680583,
+    "p95": 146.27014294881505,
+    "max": 178.45796148201237
+  },
+  "per_imitation": [],
+  "audit_report": {
+    "ok": true,
+    "prereg_hash_sentinel": {
+      "ok": true,
+      "actual": "58bded11b0a72d8ea819ee923ef6418cdb5ed16ffb57ef0e5cfbce6673eeb575",
+      "expected": "58bded11b0a72d8ea819ee923ef6418cdb5ed16ffb57ef0e5cfbce6673eeb575"
+    },
+    "pipeline_import_sentinel": {
+      "ok": true,
+      "error": null,
+      "locked_load_error": null
+    },
+    "tau_inside_sanity": {
+      "ok": true,
+      "tau_inside": 146.27014294881505,
+      "quran_phi_m_stats": {
+        "n": 68,
+        "min": 10.238170841445513,
+        "median": 77.11422838680583,
+        "p95": 146.27014294881505,
+        "max": 178.45796148201237
+      }
+    }
+  },
+  "verdict_block": {
+    "verdict": "BLOCKED_no_imitations_on_disk",
+    "branch": 2
+  },
+  "verdict": "BLOCKED_no_imitations_on_disk",
+  "started_at_utc": "2026-04-28T15:55:14.233584+00:00",
+  "completed_at_utc": "2026-04-28T15:55:14.572414+00:00"
+}

@@ -1,0 +1,70 @@
+{
+  "experiment": "exp104_F53_tanakh_pilot",
+  "hypothesis_id": "H59",
+  "hypothesis": "F53 multi-compressor consensus K=2 with Hebrew-side tau calibration closes single-letter forgery on Psalm 19 at recall >= 0.999 / FPR <= 0.05.",
+  "verdict": "BLOCKED_psalm_19_too_short",
+  "verdict_reason": "Psalm 19 has 533 letters / 12 verses (need >= 1000 / 10).",
+  "started_at_utc": "2026-04-28T17:46:19.210177+00:00",
+  "completed_at_utc": "2026-04-28T17:46:20.168738+00:00",
+  "wall_time_s": 0.9585614204406738,
+  "prereg_hash": "30694bfbcfd07f2076f2719e990fff732fd03cd90eed303f898856d27a58c5b9",
+  "prereg_expected_hash": "30694bfbcfd07f2076f2719e990fff732fd03cd90eed303f898856d27a58c5b9",
+  "prereg_document": "experiments/exp104_F53_tanakh_pilot/PREREG.md",
+  "frozen_constants": {
+    "SEED": 42,
+    "consensus_K": 2,
+    "tau_percentile": 5,
+    "length_match_frac": 0.3,
+    "compressors": [
+      "gzip",
+      "bz2",
+      "lzma",
+      "zstd"
+    ],
+    "compressor_levels": {
+      "gzip": 9,
+      "bz2": 9,
+      "lzma": 9,
+      "zstd": 9
+    },
+    "target_book": "תהלים",
+    "target_chapter": "יט",
+    "psalm_19_min_letters": 1000,
+    "psalm_19_min_verses": 10,
+    "peer_books": [
+      "בראשית",
+      "שמות",
+      "יהושע",
+      "שופטים",
+      "שמואל א",
+      "שמואל ב",
+      "מלכים א",
+      "מלכים ב"
+    ],
+    "target_n_peers": 200,
+    "peer_audit_floor": 100,
+    "n_calib_variants_per_peer": 30,
+    "bootstrap_n": 200,
+    "bootstrap_cv_ceil": 0.3,
+    "recall_floor": 0.999,
+    "fpr_ceil": 0.05,
+    "n_fpr_pairs": 500
+  },
+  "audit_report": {
+    "ok": true,
+    "checks": {
+      "n_chapters_total": 929,
+      "psalm_19_n_verses": 12,
+      "psalm_19_n_letters": 533
+    },
+    "warnings": [],
+    "errors": []
+  },
+  "psalm_19": {
+    "book": "תהלים",
+    "chapter": "יט",
+    "n_verses": 12,
+    "letters_22": "למנצחמזמורלדודבהשמיממספרימכבודאלומעשהידיומגידאללילהיחוהדעתדאינאמרואינהרקיעגיומליומיביעאמרולילהדברימבלינשמעקולמהבכלהארציצאקומובקצהתבלמליהמלשמששמאהלבהמווהואכחתניצאמחפתוישישכגבורלרוצארחמחמתונסתרואינעלקצותמותקופתומוצאוהשמימזמקצהחתורתיהוהתמימהמשיבתנפשעדותיהוהנאמנהמחכימתפתיעיניממאירתברהיהוהמצותמשמחילבישרימיהוהטפקודייחדוצדקואמתמשפטייהוהלעדעומדתטהורהיהוהייראתככיאהנחמדיממזהבומפזרבומתוקיממדבשונפתצופימיבגמעבדנזהרבהמבשמרמעקברביגשגיאותמייבינמנסתרותנקניידגמככאלימשלוביאזאיתמונקיתימפשערבטויהיוככעבדמזדימחשככיהוהצוריוגאלילרצונאמריפיוהגיונלבילפני",
+    "n_letters": 533
+  }
+}
