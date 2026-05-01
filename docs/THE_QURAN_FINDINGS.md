@@ -430,7 +430,7 @@ Aljamal, M. (2026). The Quranic Structural Fingerprint —
   and multifractal geometric fingerprint.
   Pre-print, v7.9-cand patch H V3.30. docs/PAPER.md.
   Code-audit commit: [GitHub link once published].
-  OSF DOI: [pending].
+  OSF DOI: 10.17605/OSF.IO/N46Y5.
 ```
 
 ---

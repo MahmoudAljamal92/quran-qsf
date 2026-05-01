@@ -38,7 +38,7 @@ Aljamal, M. (2026). The Quranic Structural Fingerprint —
   A Reproducible Information-Theoretic Characterisation of a Multivariate Outlier
   in Classical-Arabic Prose, with an 8-Channel Authentication Ring.
   v7.9-cand patch H V3.30 (project closure, 2026-05-01).
-  OSF DOI: PENDING (see docs/PUBLISHING_PLAN.md §2.1).
+  OSF DOI: 10.17605/OSF.IO/N46Y5 (see docs/PUBLISHING_PLAN.md §2.1).
   arXiv: PENDING (see docs/PUBLISHING_PLAN.md §2.2).
   Code SHA-256 (deposit): 2f90a87a0fa0ac42057dbd6785e591355b075a14ab0bfd52cc49d396ca7f0205
 ```

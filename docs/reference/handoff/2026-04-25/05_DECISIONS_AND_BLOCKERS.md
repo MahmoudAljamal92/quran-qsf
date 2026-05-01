@@ -56,14 +56,14 @@ The project default at decision time was Option C (Hybrid) without committed Opt
 
 ### Why it matters
 
-Currently every paper draft says "Pre-registration: `OSF_DOI_PENDING`" with the deposit SHA `2f90a87a0fa0ac42057dbd6785e591355b075a14ab0bfd52cc49d396ca7f0205` referencing `arxiv_submission/osf_deposit_v73/qsf_v73_deposit.zip`. **Without an actual OSF DOI**, the pre-registration claim is paper-internal only — reviewers at *PRX* / *PNAS* / *Entropy* / *PLOS ONE* will flag this as a credibility risk.
+Currently every paper draft says "Pre-registration: `10.17605/OSF.IO/N46Y5`" with the deposit SHA `2f90a87a0fa0ac42057dbd6785e591355b075a14ab0bfd52cc49d396ca7f0205` referencing `arxiv_submission/osf_deposit_v73/qsf_v73_deposit.zip`. **Without an actual OSF DOI**, the pre-registration claim is paper-internal only — reviewers at *PRX* / *PNAS* / *Entropy* / *PLOS ONE* will flag this as a credibility risk.
 
 The deposit zip is already prepared. The procedure is in `docs/reference/prereg/OSF_UPLOAD_CHECKLIST.md`. The action is literally:
 
 1. Create OSF account (if not already).
 2. Upload the zip.
 3. Get the DOI.
-4. Replace `OSF_DOI_PENDING` with the real DOI in `PAPER.md`.
+4. Replace `10.17605/OSF.IO/N46Y5` with the real DOI in `PAPER.md`.
 
 ### ROI analysis
 

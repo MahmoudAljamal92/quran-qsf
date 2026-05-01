@@ -84,10 +84,10 @@ Once minted, fill it into the placeholder in `docs/PAPER.md` (see §3 below). Al
 
 ## 3. Placeholder inserted into PAPER.md
 
-Already added to `docs/PAPER.md` in the "Run of record" header line and the Reproducibility section. Search for the string `OSF_DOI_PENDING` and replace with your minted DOI:
+Already added to `docs/PAPER.md` in the "Run of record" header line and the Reproducibility section. Search for the string `10.17605/OSF.IO/N46Y5` and replace with your minted DOI:
 
 ```
-OSF pre-registration DOI: OSF_DOI_PENDING (upload pending; deposit SHA-256 = 2f90a87a0fa0ac42057dbd6785e591355b075a14ab0bfd52cc49d396ca7f0205)
+OSF pre-registration DOI: 10.17605/OSF.IO/N46Y5 (upload pending; deposit SHA-256 = 2f90a87a0fa0ac42057dbd6785e591355b075a14ab0bfd52cc49d396ca7f0205)
 ```
 
 After upload:
@@ -108,7 +108,7 @@ A journal-style pre-registration claim hinges on the **order** of two events: (a
 
 Once the DOI is live:
 
-1. Replace every `OSF_DOI_PENDING` string in `docs/PAPER.md` and `README.md` with the real DOI.
+1. Replace every `10.17605/OSF.IO/N46Y5` string in `docs/PAPER.md` and `README.md` with the real DOI.
 2. Add an entry to `CHANGELOG.md` under v7.7 or the next version:
    > `- OSF pre-registration deposited at <DOI> on YYYY-MM-DD. Deposit SHA-256 and file list in arxiv_submission/osf_deposit_v73/osf_deposit_manifest.json.`
 3. Commit the three edits with message:

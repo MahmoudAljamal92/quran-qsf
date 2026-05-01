@@ -29,7 +29,7 @@ Steps:
 4. Click "Register" → choose "OSF Preregistration" template → public immediately → **get a DOI**. This creates a **permanent, timestamped, DOI-backed record**.
 5. In the project wiki, add: "This project is being published to GitHub at `https://github.com/<your-username>/quran-qsf` under a dual license (see `LICENSE-DUAL.md` in the repo). First OSF deposit timestamps the research; GitHub is the living code host."
 
-**Once the DOI is issued, paste it back into `README.md` and `PAPER.md` §0 in the `Cite as:` lines that currently say `OSF_DOI_PENDING`.**
+**Once the DOI is issued, paste it back into `README.md` and `PAPER.md` §0 in the `Cite as:` lines that currently say `10.17605/OSF.IO/N46Y5`.**
 
 ### 2.2 arXiv upload (recommended secondary)
 
@@ -266,7 +266,7 @@ Start with arXiv + OSF + GitHub (1 week turn-around); feed the arXiv pre-print t
 ## 8. Executable checklist (in order)
 
 - [ ] **Day 0 (timestamp):** Push to GitHub with `v1.0.0-project-closure` tag.
-- [ ] **Day 0 (timestamp):** Upload to OSF, register pre-registration, get DOI. Replace `OSF_DOI_PENDING` throughout the repo.
+- [ ] **Day 0 (timestamp):** Upload to OSF, register pre-registration, get DOI. Replace `10.17605/OSF.IO/N46Y5` throughout the repo.
 - [ ] **Day 0 (timestamp):** Run `ots stamp` on the git commit hash; commit `.ots` proof back.
 - [ ] **Day 1:** Create `LICENSE-DUAL.md` + `LICENSE-CODE-AGPL.txt` + `LICENSE-DOCS-CC-BY-SA.txt`. Commit.
 - [ ] **Day 1:** Add provenance banners to top of `PAPER.md` and `THE_QURAN_FINDINGS.md`.

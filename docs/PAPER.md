@@ -113,7 +113,7 @@ The banner is an **addendum**, not a rewrite. The V3.22 body text of this paper 
 >
 > **Audit memo with full derivation**: `docs/reference/sprints/AUDIT_F1_BROWN_STOUFFER_2026-04-29.md`.
 > **Regression tests**: `tests/test_fix_F1_brown_stouffer.py` (7 tests; verified fail-on-revert).
-**Pre-registration**: `OSF_DOI_PENDING` (upload scheduled before arXiv submission; deposit SHA-256 = `2f90a87a0fa0ac42057dbd6785e591355b075a14ab0bfd52cc49d396ca7f0205`; deposit at `arxiv_submission/osf_deposit_v73/qsf_v73_deposit.zip`; upload procedure in `docs/reference/prereg/OSF_UPLOAD_CHECKLIST.md`). **arXiv ID**: `arXiv_PENDING` (to be filled after upload; placeholders in this file are intentional and will be batch-replaced post-DOI issuance).
+**Pre-registration**: `10.17605/OSF.IO/N46Y5` (upload scheduled before arXiv submission; deposit SHA-256 = `2f90a87a0fa0ac42057dbd6785e591355b075a14ab0bfd52cc49d396ca7f0205`; deposit at `arxiv_submission/osf_deposit_v73/qsf_v73_deposit.zip`; upload procedure in `docs/reference/prereg/OSF_UPLOAD_CHECKLIST.md`). **arXiv ID**: `arXiv_PENDING` (to be filled after upload; placeholders in this file are intentional and will be batch-replaced post-DOI issuance).
 
 ## AI-disclosure
 

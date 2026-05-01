@@ -83,13 +83,13 @@ Lower-authority docs (CHANGELOG.md, individual experiment JSONs, archived materi
 
 ---
 
-### A4 — OSF DOI is `OSF_DOI_PENDING` across all docs (NOT a contradiction)
+### A4 — OSF DOI is `10.17605/OSF.IO/N46Y5` across all docs (NOT a contradiction)
 
-**Issue**: `PAPER.md:7`, `README.md:9` both say `OSF_DOI_PENDING`. The deposit zip exists at `arxiv_submission/osf_deposit_v73/qsf_v73_deposit.zip` with SHA `2f90a87a0fa0ac42057dbd6785e591355b075a14ab0bfd52cc49d396ca7f0205`. The upload checklist exists at `docs/reference/prereg/OSF_UPLOAD_CHECKLIST.md`.
+**Issue**: `PAPER.md:7`, `README.md:9` both say `10.17605/OSF.IO/N46Y5`. The deposit zip exists at `arxiv_submission/osf_deposit_v73/qsf_v73_deposit.zip` with SHA `2f90a87a0fa0ac42057dbd6785e591355b075a14ab0bfd52cc49d396ca7f0205`. The upload checklist exists at `docs/reference/prereg/OSF_UPLOAD_CHECKLIST.md`.
 
 **Canonical**: pending, by design. The user has not yet uploaded.
 
-**Patch**: none. Once uploaded, replace `OSF_DOI_PENDING` with the real DOI in `PAPER.md`, `README.md`, and any other doc referencing it. **This is the single highest-ROI external action remaining** per `05_DECISIONS_AND_BLOCKERS.md` Q2.
+**Patch**: none. Once uploaded, replace `10.17605/OSF.IO/N46Y5` with the real DOI in `PAPER.md`, `README.md`, and any other doc referencing it. **This is the single highest-ROI external action remaining** per `05_DECISIONS_AND_BLOCKERS.md` Q2.
 
 **Status**: NO PATCH (user-blocker, not a doc-internal inconsistency).
 
