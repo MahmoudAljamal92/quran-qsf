@@ -33,7 +33,7 @@ How to upload to arXiv (web, 20 minutes)
    - Or wait: arXiv sometimes auto-endorses based on first-submission quality review.
 3. arXiv -> Submit -> New submission.
 4. Primary archive: cs, category: cs.CL. Secondary: stat.AP, math.IT.
-5. Title: "The Quranic Structural Fingerprint: A Reproducible Information-Theoretic Characterisation of a Multivariate Outlier in Classical-Arabic Prose, with an 8-Channel Authentication Ring"
+5. Title: "The Quranic Structural Fingerprint: A Reproducible Information-Theoretic Characterisation of a Multivariate Outlier Against Classical-Arabic Prose Baselines, with an 8-Channel Authentication Ring"
 6. Authors: M. Aljamal.
 7. Abstract: paste the one-paragraph elevator summary (bottom of this file).
 8. File upload: upload paper.pdf as the primary manuscript.
@@ -45,4 +45,4 @@ How to upload to arXiv (web, 20 minutes)
 
 One-paragraph elevator summary (use as arXiv abstract)
 ------------------------------------------------------
-The Quranic Structural Fingerprint project is a reproducible, SHA-256-locked characterisation of the Quran as a multivariate statistical outlier in classical-Arabic prose, with cross-tradition replications in 6 alphabets and 5 language families. Headline results include a 1-bit categorical universal (Quran is the unique corpus with verse-final-letter Shannon entropy below 1 bit), a universal 5.75-bit Shannon-Renyi-infinity gap invariant across 11 oral canons at CV = 1.94 %, a Mushaf-as-tour coherence finding (p <= 10^-7 at 10M permutations), a 3-axis multifractal fingerprint (pool-z = 4.2, LOO-z = 22.6), and an 8-channel authentication ring deployable as a single command-line tool. The project includes 66 honest retractions. All 70+ positive findings are reproducible from raw data; no claim relies on unaudited AI output despite the ~99 %-AI-pair-programmed authorship.
+The Quranic Structural Fingerprint project is a reproducible, SHA-256-locked characterisation of the Quran as a multivariate statistical outlier against classical-Arabic prose baselines, with cross-tradition replications in 6 alphabets and 5 language families. Headline results include a 1-bit categorical universal (Quran is the unique corpus with verse-final-letter Shannon entropy below 1 bit), a universal 5.75-bit Shannon-Renyi-infinity gap invariant across 11 oral canons at CV = 1.94 %, a Mushaf-as-tour coherence finding (p <= 10^-7 at 10M permutations), a 3-axis multifractal fingerprint (pool-z = 4.2, LOO-z = 22.6), and an 8-channel authentication ring deployable as a single command-line tool. The project includes 66 honest retractions. All 70+ positive findings are reproducible from raw data; no claim relies on unaudited AI output despite the ~99 %-AI-pair-programmed authorship.
