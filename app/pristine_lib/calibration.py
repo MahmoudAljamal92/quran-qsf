@@ -23,15 +23,49 @@ Guarantee: every Quranic N-verse passage scores 100% on every axis
 """
 from __future__ import annotations
 
+import os
 from collections import defaultdict
 from dataclasses import dataclass
 from functools import lru_cache
+from pathlib import Path
 from typing import Callable, Dict, List, Tuple
 
 import numpy as np
 
 from . import metrics
+from .constants import QURAN_TXT
 from .corpus import _load_verses
+
+# Disk cache: tiny .npy files keyed by (axis, n_verses, corpus_sha_prefix).
+# Lives next to the corpus so it travels with the repo. The corpus SHA is
+# baked into the file name so any corpus drift invalidates the cache.
+_CACHE_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "calibration_cache"
+
+
+def _cache_path(axis: str, n_verses: int) -> Path:
+    # Use first 8 hex chars of corpus SHA as a stamp; loaded lazily.
+    from .constants import verify_quran_corpus
+    sha = verify_quran_corpus().sha256_actual[:8]
+    return _CACHE_DIR / f"{axis}__N{n_verses:03d}__{sha}.npy"
+
+
+def _try_load_cached(axis: str, n_verses: int):
+    p = _cache_path(axis, n_verses)
+    if p.is_file():
+        try:
+            return np.load(p)
+        except Exception:  # noqa: BLE001
+            return None
+    return None
+
+
+def _save_cached(axis: str, n_verses: int, arr: np.ndarray) -> None:
+    p = _cache_path(axis, n_verses)
+    try:
+        p.parent.mkdir(parents=True, exist_ok=True)
+        np.save(p, arr)
+    except Exception:  # noqa: BLE001
+        pass  # caching is best-effort; failures must not break analysis
 
 # ----- Axis extractors -------------------------------------------------------
 # For each axis, a function (verses_raw_list) -> value or NaN.
@@ -100,6 +134,10 @@ class WindowedDistribution:
     vmax: float
     median: float
     p01: float
+    p10: float
+    p20: float
+    p80: float
+    p90: float
     p99: float
 
     @property
@@ -111,10 +149,32 @@ class WindowedDistribution:
         return float(self.vmax - self.vmin)
 
 
-@lru_cache(maxsize=256)
+def _arr_to_distribution(axis: str, n_verses: int,
+                         arr: np.ndarray) -> "WindowedDistribution":
+    if arr.size == 0:
+        nan = float("nan")
+        return WindowedDistribution(
+            axis=axis, n_verses=n_verses, values=arr,
+            vmin=nan, vmax=nan, median=nan,
+            p01=nan, p10=nan, p20=nan, p80=nan, p90=nan, p99=nan,
+        )
+    return WindowedDistribution(
+        axis=axis, n_verses=n_verses, values=arr,
+        vmin=float(arr.min()), vmax=float(arr.max()),
+        median=float(np.median(arr)),
+        p01=float(np.percentile(arr, 1)),
+        p10=float(np.percentile(arr, 10)),
+        p20=float(np.percentile(arr, 20)),
+        p80=float(np.percentile(arr, 80)),
+        p90=float(np.percentile(arr, 90)),
+        p99=float(np.percentile(arr, 99)),
+    )
+
+
+@lru_cache(maxsize=512)
 def windowed_distribution(axis: str, n_verses: int) -> WindowedDistribution:
-    """Compute the distribution of `axis` over every N-verse window inside
-    every Quranic surah with at least N verses. Cached by (axis, n_verses).
+    """Distribution of `axis` over every N-verse window inside every Quranic
+    surah with at least N verses. Cached in memory and on disk.
 
     Windows never cross surah boundaries — each surah contributes
     (surah_len - N + 1) windows.
@@ -123,8 +183,13 @@ def windowed_distribution(axis: str, n_verses: int) -> WindowedDistribution:
         raise ValueError(f"Unknown axis: {axis}")
     if n_verses < 1:
         raise ValueError(f"n_verses must be >= 1, got {n_verses}")
-    extractor = AXIS_EXTRACTORS[axis]
 
+    # Try disk cache first.
+    cached = _try_load_cached(axis, n_verses)
+    if cached is not None:
+        return _arr_to_distribution(axis, n_verses, cached)
+
+    extractor = AXIS_EXTRACTORS[axis]
     verses = _load_verses()
     by_surah: Dict[int, List] = defaultdict(list)
     for v in verses:
@@ -141,23 +206,8 @@ def windowed_distribution(axis: str, n_verses: int) -> WindowedDistribution:
                 values.append(float(val))
 
     arr = np.asarray(sorted(values), dtype=float)
-    if arr.size == 0:
-        return WindowedDistribution(
-            axis=axis, n_verses=n_verses,
-            values=arr,
-            vmin=float("nan"), vmax=float("nan"), median=float("nan"),
-            p01=float("nan"), p99=float("nan"),
-        )
-    return WindowedDistribution(
-        axis=axis,
-        n_verses=n_verses,
-        values=arr,
-        vmin=float(arr.min()),
-        vmax=float(arr.max()),
-        median=float(np.median(arr)),
-        p01=float(np.percentile(arr, 1)),
-        p99=float(np.percentile(arr, 99)),
-    )
+    _save_cached(axis, n_verses, arr)
+    return _arr_to_distribution(axis, n_verses, arr)
 
 
 # ----- Match score using length-calibrated percentile bands ------------------
@@ -199,11 +249,15 @@ def length_calibrated_match(axis: str, value: float, n_verses: int) -> dict:
     arr = dist.values
     pct = float(np.searchsorted(arr, value)) / arr.size
     out["percentile"] = pct
+    out["p10"] = dist.p10
+    out["p90"] = dist.p90
+    out["p01"] = dist.p01
+    out["p99"] = dist.p99
 
-    p01 = float(np.percentile(arr, 1))
-    p10 = float(np.percentile(arr, 10))
-    p90 = float(np.percentile(arr, 90))
-    p99 = float(np.percentile(arr, 99))
+    p01 = dist.p01
+    p10 = dist.p10
+    p90 = dist.p90
+    p99 = dist.p99
 
     # Band 1 — inner 80% → 100%.
     if p10 <= value <= p90:

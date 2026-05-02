@@ -266,74 +266,124 @@ def fuzzy_match(input_skeleton: str,
     idx = _kgram_index()
     offs = _verse_offsets()
 
-    # --- Pick seeds: start, end, middle, plus a sprinkle every ~k letters.
-    seed_positions = set()
-    n_seeds = max(4, target_len // (k * 2))
+    # --- Pick seeds spread across the input. For a true near-match (small
+    # edit distance), MOST seeds will independently point at the correct
+    # start position; we use multi-seed agreement to filter candidates and
+    # avoid testing every spurious k-gram coincidence in the corpus.
+    seed_positions = []
+    n_seeds = min(20, max(6, target_len // (k * 2)))
     for t in range(n_seeds):
         p = int(t * (target_len - k) / max(1, n_seeds - 1))
-        seed_positions.add(p)
-    # Always include start and end seeds.
-    seed_positions.add(0)
-    seed_positions.add(max(0, target_len - k))
+        seed_positions.append(p)
+    if 0 not in seed_positions:
+        seed_positions.insert(0, 0)
+    last_p = max(0, target_len - k)
+    if last_p not in seed_positions:
+        seed_positions.append(last_p)
+    seed_positions = sorted(set(seed_positions))
 
-    # --- Gather candidate starting offsets in the canonical stream.
-    candidates: set = set()
+    # --- Vote-count candidate starting offsets.
+    # Bin votes by start_position; small misalignments (within max_dist of
+    # each other) are coalesced into the same bin.
+    BIN = max(1, max_dist // 2 + 1)
+    votes: Dict[int, int] = {}
     for sp in seed_positions:
         gram = input_skeleton[sp : sp + k]
-        for pos in idx.get(gram, ()):  # every place this gram appears
+        positions = idx.get(gram, ())
+        for pos in positions:
             start = pos - sp
-            if 0 <= start <= full_len - (target_len - max_dist):
-                candidates.add(start)
+            if not (0 <= start <= full_len - (target_len - max_dist)):
+                continue
+            bin_key = start // BIN
+            votes[bin_key] = votes.get(bin_key, 0) + 1
 
-    if not candidates:
+    if not votes:
         return None
 
-    # --- Test each candidate with a short span of length ~target_len.
+    # Select candidate starts: keep bins with the highest vote counts.
+    # For an input that's ≤ max_dist edits away, the true start gets
+    # roughly (n_seeds - max_dist) votes (each undamaged seed votes for
+    # the true start). Use min_votes = max(2, n_seeds // 4) as a strong
+    # filter; expand if no bin meets it.
+    min_votes = max(2, n_seeds // 4)
+    candidate_starts: List[int] = []
+    for bin_key, v in votes.items():
+        if v >= min_votes:
+            # Probe a small window around the bin to absorb misalignment.
+            base = bin_key * BIN
+            for dx in range(-BIN, BIN + 1):
+                s = base + dx
+                if 0 <= s <= full_len - (target_len - max_dist):
+                    candidate_starts.append(s)
+    if not candidate_starts:
+        # Fallback: take the top N highest-voted bins.
+        top = sorted(votes.items(), key=lambda kv: -kv[1])[:32]
+        for bin_key, _ in top:
+            base = bin_key * BIN
+            for dx in range(-BIN, BIN + 1):
+                s = base + dx
+                if 0 <= s <= full_len - (target_len - max_dist):
+                    candidate_starts.append(s)
+    candidate_starts = sorted(set(candidate_starts))
+
+    if not candidate_starts:
+        return None
+
+    # --- Test each candidate. Try length delta 0 first (most common case),
+    # then expand outward only if the best so far suggests an indel edit.
     best: Optional[FuzzyHit] = None
     best_dist = max_dist + 1
+    verses = _load_verses()
 
-    # Test spans of length target_len, target_len-1, target_len+1, etc.
-    # to absorb indel edits. Up to ±max_dist.
-    length_deltas = [0] + [d for pair in
-                           zip(range(1, max_dist + 1), range(-1, -max_dist - 1, -1))
-                           for d in pair]
+    # Phase 1: test length_delta = 0 only. Fast for 99% of cases.
+    for start in candidate_starts:
+        end = start + target_len
+        if end > full_len:
+            continue
+        cand_skel = full[start:end]
+        d = _levenshtein(input_skeleton, cand_skel, best_dist - 1)
+        if d < best_dist:
+            best_dist = d
+            s_s, a_s, vi_s = _offset_to_verse(start)
+            s_e, a_e, vi_e = _offset_to_verse(end - 1)
+            best = FuzzyHit(
+                surah=s_s, ayah_start=a_s, ayah_end=a_e,
+                edit_distance=d,
+                n_letters_canonical=len(cand_skel),
+                n_letters_input=target_len,
+                deviation_pct=100.0 * d / max(1, target_len),
+                canonical_skeleton=cand_skel,
+                canonical_raw=" ".join(verses[k_].raw for k_ in range(vi_s, vi_e + 1)),
+            )
+            if best_dist == 0:
+                return best
 
-    # To avoid pathological O(N) scans, cap to a safety budget.
-    MAX_CANDIDATES = 20000
-    cand_list = sorted(candidates)
-    if len(cand_list) > MAX_CANDIDATES:
-        # Keep evenly-spaced subsample; fine because near-Quran inputs
-        # produce << 20k candidates.
-        step = len(cand_list) // MAX_CANDIDATES + 1
-        cand_list = cand_list[::step]
-
-    for start in cand_list:
-        for dl in length_deltas:
-            end = start + target_len + dl
-            if end > full_len or end <= start:
-                continue
-            cand_skel = full[start:end]
-            d = _levenshtein(input_skeleton, cand_skel, best_dist - 1)
-            if d < best_dist:
-                best_dist = d
-                # Map [start:end] back to verse range.
-                s_s, a_s, vi_s = _offset_to_verse(start)
-                s_e, a_e, vi_e = _offset_to_verse(max(start, end - 1))
-                verses = _load_verses()
-                cand_raw = " ".join(verses[k_].raw for k_ in range(vi_s, vi_e + 1))
-                best = FuzzyHit(
-                    surah=s_s,
-                    ayah_start=a_s,
-                    ayah_end=a_e,
-                    edit_distance=d,
-                    n_letters_canonical=len(cand_skel),
-                    n_letters_input=target_len,
-                    deviation_pct=100.0 * d / max(1, target_len),
-                    canonical_skeleton=cand_skel,
-                    canonical_raw=cand_raw,
-                )
-                if best_dist == 0:
-                    return best  # perfect (unreachable — exact_match caught it)
+    # Phase 2: only if best so far is non-trivial, try length deltas
+    # to absorb indel edits. Cap deltas to half max_dist to bound cost.
+    if best_dist > 1 and best_dist <= max_dist:
+        delta_cap = max(1, max_dist // 2)
+        for start in candidate_starts:
+            for dl in range(-delta_cap, delta_cap + 1):
+                if dl == 0:
+                    continue
+                end = start + target_len + dl
+                if end > full_len or end <= start:
+                    continue
+                cand_skel = full[start:end]
+                d = _levenshtein(input_skeleton, cand_skel, best_dist - 1)
+                if d < best_dist:
+                    best_dist = d
+                    s_s, a_s, vi_s = _offset_to_verse(start)
+                    s_e, a_e, vi_e = _offset_to_verse(end - 1)
+                    best = FuzzyHit(
+                        surah=s_s, ayah_start=a_s, ayah_end=a_e,
+                        edit_distance=d,
+                        n_letters_canonical=len(cand_skel),
+                        n_letters_input=target_len,
+                        deviation_pct=100.0 * d / max(1, target_len),
+                        canonical_skeleton=cand_skel,
+                        canonical_raw=" ".join(verses[k_].raw for k_ in range(vi_s, vi_e + 1)),
+                    )
 
     if best is None or best_dist > max_dist:
         return None

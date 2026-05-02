@@ -49,8 +49,8 @@ st.set_page_config(
 
 CSS = """
 <style>
-/* ---- Typography ---------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap');
+/* ---- Typography (TWO families only) ------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root {
   --ink:        #0b0d10;
@@ -73,7 +73,6 @@ CSS = """
   --red:        #a91e1e;
   --red-soft:   #f5d8d8;
 
-  --serif:  'Fraunces', 'New York', 'Iowan Old Style', Georgia, serif;
   --sans:   'Inter', -apple-system, 'Segoe UI', Roboto, system-ui, sans-serif;
   --mono:   'JetBrains Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
 
@@ -98,22 +97,20 @@ html, body, [class*="block-container"], [data-testid="stAppViewContainer"] {
 #MainMenu, header[data-testid="stHeader"] { display: none; }
 footer { visibility: hidden; }
 
-/* ---- Typography hierarchy ---------------------------------------------- */
-h1, h2, h3, h4 { color: var(--ink); letter-spacing: -0.01em; }
+/* ---- Typography hierarchy (Inter only, weight-driven) ------------------ */
+h1, h2, h3, h4 { color: var(--ink); letter-spacing: -0.02em; font-family: var(--sans); }
 h1 {
-  font-family: var(--serif);
-  font-weight: 600;
-  font-size: 2.1rem;
-  line-height: 1.15;
-  margin: 0 0 0.25rem 0;
-  letter-spacing: -0.02em;
+  font-weight: 800;
+  font-size: 2.0rem;
+  line-height: 1.1;
+  margin: 0 0 0.3rem 0;
+  letter-spacing: -0.03em;
 }
 h2 {
-  font-family: var(--sans);
   font-weight: 600;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   color: var(--ink-soft);
   margin: 1.6rem 0 0.7rem 0;
   border-bottom: 1px solid var(--line);
@@ -142,13 +139,13 @@ p, li { color: var(--ink-2); line-height: 1.55; }
   border: 1px solid var(--gold-soft);
 }
 .tagline {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 1.02rem;
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 1.0rem;
   color: var(--ink-soft);
-  margin: 0.3rem 0 1.6rem 0;
+  margin: 0.4rem 0 1.6rem 0;
   max-width: 760px;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 /* ---- Verdict ribbon (hero card) ---------------------------------------- */
@@ -174,11 +171,11 @@ p, li { color: var(--ink-2); line-height: 1.55; }
   border: 1px solid var(--line);
 }
 .verdict .title {
-  font-family: var(--serif);
-  font-weight: 600;
-  font-size: 1.35rem;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 1.3rem;
   color: var(--ink);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   line-height: 1.25;
 }
 .verdict .subtitle {
@@ -407,20 +404,30 @@ p, li { color: var(--ink-2); line-height: 1.55; }
   margin-top: 0.1rem;
 }
 
-/* ---- Input area -------------------------------------------------------- */
+/* ---- Input area (Arabic-first: RTL by default, browser flips for LTR via dir=auto) - */
 .stTextArea textarea {
-  font-family: var(--mono);
-  font-size: 0.92rem;
-  line-height: 1.6;
+  font-family: 'Amiri', 'Scheherazade New', 'Traditional Arabic', var(--mono);
+  font-size: 1.05rem;
+  line-height: 1.9;
   background: var(--paper-2) !important;
   border: 1px solid var(--line) !important;
   border-radius: 8px !important;
   color: var(--ink) !important;
   caret-color: var(--gold);
+  direction: rtl;
+  text-align: right;
+  unicode-bidi: plaintext;
 }
 .stTextArea textarea:focus {
   border-color: var(--gold) !important;
   box-shadow: 0 0 0 3px var(--gold-tint) !important;
+}
+.stTextArea textarea::placeholder {
+  direction: ltr;
+  text-align: left;
+  opacity: 0.55;
+  font-family: var(--sans);
+  font-size: 0.92rem;
 }
 
 /* ---- Buttons ----------------------------------------------------------- */
@@ -443,19 +450,39 @@ p, li { color: var(--ink-2); line-height: 1.55; }
 }
 .stButton > button:active { transform: translateY(0); }
 
-/* Primary action button */
-.stButton.run-btn > button,
-button[kind="primary"] {
+/* Primary action button — force WHITE text on every child element */
+button[kind="primary"],
+button[kind="primary"] *,
+.stButton button[kind="primary"],
+.stButton button[kind="primary"] *,
+.stButton button[kind="primary"] p,
+.stButton button[kind="primary"] div,
+.stButton button[kind="primary"] span,
+.stButton button[kind="primary"] [data-testid="stMarkdownContainer"] p {
   background: var(--ink) !important;
-  color: white !important;
-  border: 1px solid var(--ink) !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.01em;
+  color: #ffffff !important;
+  border-color: var(--ink) !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
-button[kind="primary"]:hover {
-  background: var(--ink-2) !important;
-  border-color: var(--ink-2) !important;
+.stButton button[kind="primary"] {
+  font-weight: 700 !important;
+  letter-spacing: 0.01em;
+  font-size: 0.9rem !important;
+  padding: 0.55rem 1.05rem !important;
+}
+.stButton button[kind="primary"]:hover {
+  background: #1f242c !important;
+  border-color: #1f242c !important;
   transform: translateY(-1px);
+}
+.stButton button[kind="primary"]:disabled,
+.stButton button[kind="primary"][disabled] {
+  background: #c9c8c0 !important;
+  border-color: #c9c8c0 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  cursor: not-allowed;
+  transform: none;
 }
 
 /* ---- Sidebar ---------------------------------------------------------- */
@@ -478,11 +505,11 @@ button[kind="primary"]:hover {
   box-shadow: none;
 }
 [data-testid="stSidebar"] .brand {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 1.35rem;
-  font-weight: 600;
+  font-weight: 800;
   color: var(--ink);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.03em;
   margin-bottom: 0.15rem;
 }
 [data-testid="stSidebar"] .brand-sub {
@@ -512,7 +539,75 @@ hr { border: none; border-top: 1px solid var(--line); margin: 1.2rem 0; }
 .muted { color: var(--ink-soft); }
 
 /* RTL support for Arabic text display */
-.rtl-text { direction: rtl; text-align: right; font-family: 'Amiri', 'Traditional Arabic', serif; font-size: 1.1rem; line-height: 2; }
+.rtl-text {
+  direction: rtl;
+  text-align: right;
+  font-family: 'Amiri', 'Scheherazade New', 'Traditional Arabic', serif;
+  font-size: 1.15rem;
+  line-height: 2;
+  background: var(--paper);
+  padding: 0.6rem 0.9rem;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+}
+
+/* ---- Per-axis row hover + expander chevron ---------------------------- */
+.axis-detail {
+  background: var(--line-soft);
+  border-radius: 6px;
+  padding: 0.7rem 0.95rem;
+  margin: 0.3rem 0 0.5rem 0;
+  font-size: 0.84rem;
+  color: var(--ink-2);
+  line-height: 1.55;
+}
+.axis-detail .label {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.axis-detail .ranges {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+  margin-top: 0.45rem;
+}
+.axis-detail .range-card {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 0.45rem 0.6rem;
+}
+.axis-detail .range-card .lbl {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+.axis-detail .range-card .val {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+  margin-top: 0.1rem;
+}
+
+/* ---- Section sub-headers within the input panel --------------------- */
+.section-eyebrow {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
 </style>
 """
 st.markdown(CSS, unsafe_allow_html=True)
@@ -681,7 +776,11 @@ def analyse(input_text: str, progress=None):
                 "q_lo": dist.vmin if dist is not None else float("nan"),
                 "q_hi": dist.vmax if dist is not None else float("nan"),
                 "q_median": dist.median if dist is not None else float("nan"),
+                "p10": dist.p10 if dist is not None else float("nan"),
+                "p90": dist.p90 if dist is not None else float("nan"),
+                "n_windows": dist.n_windows if dist is not None else 0,
                 "inside_p80": r.get("inside_p80", False),
+                "explainer": _exp,
             })
         valid = [r for r in rows if np.isfinite(r["match"])]
         composite = float(np.mean([r["match"] for r in valid])) if valid else float("nan")
@@ -932,9 +1031,27 @@ def render_layer_a(result: dict):
     _layer_close()
 
 
+def _axis_status_for(r: dict, a_status: str, deciding_key: str | None) -> tuple:
+    """Return (verdict_text, verdict_class) describing where the input sits
+    on this axis relative to the Quranic distribution."""
+    if not np.isfinite(r["match"]):
+        return ("Insufficient data on this axis at the input length.", "gray")
+    if r["match"] >= 100.0:
+        return ("Inside the inner-80% Quranic band — typical Quranic value.", "green")
+    if r["match"] >= 75.0:
+        return ("In the outer 10–20% tail of Quranic values — still inside the "
+                "Quranic range, but unusual for the Quran.", "amber")
+    if r["match"] >= 25.0:
+        return ("In the extreme tail of Quranic values, near the edge of the "
+                "Quranic distribution.", "amber")
+    return ("Outside the Quranic distribution entirely — value never observed "
+            "in any Quranic N-verse window.", "red")
+
+
 def render_layer_b(result: dict):
     b = result["layer_b"]
     a_status = result["layer_a"]["status"]
+    script = result.get("script", "ar")
 
     if b.get("status") == "skip_short":
         _layer_open("B", "Fingerprint", "8 corpus-pooled axes",
@@ -955,21 +1072,39 @@ def render_layer_b(result: dict):
     summary = (
         f"Length-calibrated fingerprint match against Quranic {n_verses}-verse windows: "
         f"<b>{composite:.1f}%</b> across {n_axes} axes. "
-        f"<b>{inside_count}/{n_axes}</b> values fall inside the inner 80% of Quranic values."
+        f"<b>{inside_count}/{n_axes}</b> axis value{'s' if inside_count != 1 else ''} "
+        f"fall inside the inner 80% of Quranic values at this length."
     )
     _layer_open("B", "Fingerprint",
                 f"length-calibrated · N = {n_verses}",
                 summary)
 
-    # Scale-limit caveat for small inputs that aren't in corpus.
-    if n_verses < 15 and a_status == "miss":
+    # Strong caveat for non-Arabic input (Hebrew, Latin, …): we still compute
+    # the axes on the raw character stream, but they are not directly
+    # comparable to a corpus calibrated on the 28-letter Arabic rasm.
+    if script != "ar":
+        st.markdown(
+            '<div class="callout note" style="border-left-color: var(--red)">'
+            f'<b>Cross-script comparison caveat.</b> Your input is not Arabic '
+            f'(detected: <b>{script}</b>). The 8 axes are still computed on the '
+            f'raw character stream, but they are calibrated on the Quran\'s '
+            f'<b>28-letter Arabic rasm distribution</b>. A high match% here does '
+            f'<b>not</b> mean the text resembles the Quran — it means the input\'s '
+            f'character statistics happen to fall inside the Arabic-rasm envelope. '
+            f'Treat the numbers below as illustrative only.'
+            '</div>',
+            unsafe_allow_html=True,
+        )
+
+    # Scale-limit caveat for small inputs that aren't in the corpus.
+    if n_verses < 15 and a_status == "miss" and script == "ar":
         st.markdown(
             '<div class="callout note">'
             '<b>Scale-limit caveat.</b> Layer B cannot reliably distinguish Quran '
             'from other classical Arabic text below ~15 verses — small Arabic '
             'passages cluster tightly in this feature space regardless of origin. '
-            'The project\'s AUC = 0.998 discrimination was measured on 15–100 verse '
-            'surahs vs 2,509 control units of similar size.'
+            'The project\'s AUC = 0.998 discrimination was measured on 15–100 '
+            'verse surahs vs 2,509 control units of similar size.'
             '</div>',
             unsafe_allow_html=True,
         )
@@ -981,8 +1116,9 @@ def render_layer_b(result: dict):
         st.markdown(
             f'<div class="deciding">'
             f'<div class="label">Deciding axis</div>'
-            f'<b>{dec["name"]}</b> — Quran typical range '
-            f'<span class="kv">[{dec["q_lo"]:.3f} … {dec["q_hi"]:.3f}]</span>, '
+            f'<b>{dec["name"]}</b> — typical Quran band '
+            f'<span class="kv">[{dec.get("p10", float("nan")):.3f} … '
+            f'{dec.get("p90", float("nan")):.3f}]</span>, '
             f'your value <span class="kv"><b>{dec["you"]:.4f}</b></span>. '
             f'This axis carries the largest gap and is the strongest structural '
             f'reason your text differs from the Quran.'
@@ -990,12 +1126,12 @@ def render_layer_b(result: dict):
             unsafe_allow_html=True,
         )
 
-    # Axis table
+    # Axis table — header
     st.markdown('<div class="axis-table">', unsafe_allow_html=True)
     st.markdown(
         '<div class="axis-row head">'
         '<div>Axis</div>'
-        '<div>Quran range (N-verse)</div>'
+        '<div>Quran typical band (p10–p90)</div>'
         '<div>You</div>'
         '<div>Match</div>'
         '<div></div>'
@@ -1006,6 +1142,7 @@ def render_layer_b(result: dict):
         b["rows"],
         key=lambda r: (r["match"] if np.isfinite(r["match"]) else 999.0),
     )
+    deciding_key = dec["key"] if dec is not None else None
     for r in rows_sorted:
         bucket = _bucket(r["match"])
         is_deciding = (a_status == "miss" and dec is not None
@@ -1017,9 +1154,12 @@ def render_layer_b(result: dict):
             you_disp = f"{r['you']:.4f}"
             match_disp = f"{r['match']:.0f}%"
             bar_w = max(2, int(round(r["match"])))
-            range_disp = (f"[{r['q_lo']:.3f} … {r['q_hi']:.3f}]"
-                          if np.isfinite(r.get("q_lo", float("nan")))
-                          else f"{r['ref']:.4f}")
+            if np.isfinite(r.get("p10", float("nan"))):
+                range_disp = f"[{r['p10']:.3f} … {r['p90']:.3f}]"
+            else:
+                range_disp = f"{r['ref']:.4f}"
+
+        # Row + per-axis expander details.
         st.markdown(
             f'<div class="axis-row{" deciding" if is_deciding else ""}">'
             f'<div class="axis-name">{r["name"]} <span class="symbol">{r["sym"]}</span></div>'
@@ -1031,20 +1171,91 @@ def render_layer_b(result: dict):
             f'</div>',
             unsafe_allow_html=True,
         )
+
+        # Per-axis details expander
+        with st.expander(
+            f"  ↳ Details — what {r['sym']} measures, the Quran band, and where you sit",
+            expanded=False,
+        ):
+            wiki = C.PROVENANCE[r["key"]]["wikipedia"]
+            fid = C.PROVENANCE[r["key"]]["f_id"]
+            verdict_text, _ = _axis_status_for(r, a_status, deciding_key)
+
+            # Special handling for HFD / Δα when N is too small.
+            if not np.isfinite(r["match"]):
+                if r["key"] == "HFD":
+                    explanation = ("Higuchi fractal dimension requires a series of "
+                                   "≥ 32 numbers (your input has fewer verses). "
+                                   "This axis cannot be computed at this length — "
+                                   "this is a mathematical requirement, not a missing "
+                                   "feature.")
+                elif r["key"] == "Delta_alpha":
+                    explanation = ("Multifractal spectrum width (MFDFA) requires "
+                                   "a series of ≥ 64 numbers for stable percentile "
+                                   "estimation. This axis cannot be computed at this "
+                                   "length — paste a longer surah (e.g. Al-Baqarah, "
+                                   "286 verses) to enable it.")
+                else:
+                    explanation = "Could not compute this axis on the input."
+                st.markdown(
+                    f'<div class="axis-detail">'
+                    f'<div class="label">Why n/a</div>'
+                    f'{explanation}'
+                    f'</div>',
+                    unsafe_allow_html=True,
+                )
+            else:
+                st.markdown(
+                    f'<div class="axis-detail">'
+                    f'<div class="label">What this measures</div>'
+                    f'{r["explainer"]}'
+                    f'<div class="ranges">'
+                    f'<div class="range-card">'
+                    f'<div class="lbl">Typical Quran (inner 80% · p10–p90)</div>'
+                    f'<div class="val">[{r["p10"]:.4f} … {r["p90"]:.4f}]</div>'
+                    f'</div>'
+                    f'<div class="range-card">'
+                    f'<div class="lbl">Extreme Quran range (full p0–p100)</div>'
+                    f'<div class="val">[{r["q_lo"]:.4f} … {r["q_hi"]:.4f}]</div>'
+                    f'</div>'
+                    f'</div>'
+                    f'<div class="ranges">'
+                    f'<div class="range-card">'
+                    f'<div class="lbl">Your value</div>'
+                    f'<div class="val">{r["you"]:.4f}</div>'
+                    f'</div>'
+                    f'<div class="range-card">'
+                    f'<div class="lbl">Quran median</div>'
+                    f'<div class="val">{r["q_median"]:.4f}</div>'
+                    f'</div>'
+                    f'</div>'
+                    f'<div style="margin-top:0.6rem"><b>Verdict:</b> {verdict_text}</div>'
+                    f'<div style="margin-top:0.4rem" class="kv">'
+                    f'Empirical CDF: <b>{(r["percentile"]*100):.1f}%</b> · '
+                    f'Whole-Quran reference: <b>{BOOT["ref"][r["key"]]:.4f}</b> · '
+                    f'{r["n_windows"]:,} N-verse windows · '
+                    f'F-id <b>{fid}</b> · '
+                    f'<a href="{wiki}" target="_blank">Wikipedia ↗</a>'
+                    f'</div>'
+                    f'</div>',
+                    unsafe_allow_html=True,
+                )
+
     st.markdown('</div>', unsafe_allow_html=True)
 
-    with st.expander("What does each axis measure?"):
-        for key, name, sym, exp in _AXIS_DEFS:
-            wiki = C.PROVENANCE[key]["wikipedia"]
-            f_id = C.PROVENANCE[key]["f_id"]
-            st.markdown(
-                f'**{name}** &nbsp;<span class="kv">{sym} · {f_id}</span>  \n'
-                f'{exp}  \n'
-                f'<span class="fine-print">Whole-Quran reference '
-                f'<b>{BOOT["ref"][key]:.4f}</b> · '
-                f'<a href="{wiki}" target="_blank">Wikipedia ↗</a></span>',
-                unsafe_allow_html=True,
-            )
+    # Calibration legend so the colour bands are not opaque.
+    st.markdown(
+        '<div class="fine-print" style="margin-top:0.7rem">'
+        '<b>How match% is calibrated.</b> For each axis, every N-verse Quranic '
+        'window is computed (~5,000 windows). Your value is then placed against '
+        'this empirical distribution: '
+        '<b>100%</b> = inside p10–p90 (typical Quran); '
+        '<b>50–100%</b> = in p1–p10 or p90–p99 tail; '
+        '<b>25–50%</b> = in the extreme [min, p1] or [p99, max] tail; '
+        '<b>&lt;25%</b> = outside the observed Quranic range entirely.'
+        '</div>',
+        unsafe_allow_html=True,
+    )
 
     _layer_close()
 
@@ -1334,21 +1545,31 @@ def main():
             st.session_state["pending_analysis"] = False
             if txt and txt.strip():
                 prog_slot = st.empty()
-                bar = prog_slot.progress(0, text="Starting…")
+                t_start = time.time()
+                bar = prog_slot.progress(0, text="0% · starting…")
 
                 def progress(frac, msg):
-                    bar.progress(min(1.0, float(frac)), text=msg)
+                    f = max(0.0, min(1.0, float(frac)))
+                    elapsed_so_far = time.time() - t_start
+                    if f > 0.05:
+                        eta = elapsed_so_far / f * (1.0 - f)
+                        eta_str = f"{eta:.0f}s left"
+                    else:
+                        eta_str = "estimating…"
+                    bar.progress(
+                        f,
+                        text=f"{int(f*100)}% · {msg} · {elapsed_so_far:.1f}s elapsed · {eta_str}",
+                    )
 
-                t0 = time.time()
                 try:
                     result = analyse(txt, progress=progress)
                 except Exception as e:  # noqa: BLE001
                     prog_slot.empty()
                     st.error(f"Analysis failed: {e}")
                     return
-                elapsed = time.time() - t0
-                bar.progress(1.0, text=f"Complete · {elapsed:.1f}s")
-                time.sleep(0.15)
+                elapsed = time.time() - t_start
+                bar.progress(1.0, text=f"100% · complete · {elapsed:.1f}s total")
+                time.sleep(0.25)
                 prog_slot.empty()
                 result["elapsed"] = elapsed
                 st.session_state["result"] = result
@@ -1385,6 +1606,40 @@ def main():
             f'Input SHA-16: <code>{result["hash"]}</code>.</div>',
             unsafe_allow_html=True,
         )
+
+        # Inline explainer: what does this verdict actually rest on?
+        with st.expander(
+            "How this verdict was reached — and what it would look like without "
+            "access to the Quran corpus",
+            expanded=False,
+        ):
+            st.markdown(
+                "**This verdict uses two ingredients:**\n\n"
+                "1. **Reference text** — the SHA-256-locked canonical Hafs Quran "
+                "(`data/corpora/ar/quran_bare.txt`, viewable in the sidebar). "
+                "This is a published, hashed text file — not a trained model.\n"
+                "2. **Pure mathematics on top of it** — substring search, "
+                "Levenshtein distance, bigram histograms, gzip compression, "
+                "letter-frequency entropy. Zero learned parameters.\n\n"
+                "**If we removed the reference text entirely, here is exactly what "
+                "the math could and could not still do:**\n\n"
+                "| Capability | With Quran corpus | **WITHOUT** corpus |\n"
+                "|---|---|---|\n"
+                "| Detect verbatim Quranic passage | ✓ exact | ✗ impossible — comparison needs a reference |\n"
+                "| Count letter edits in a Quranic passage | ✓ exact (Levenshtein) | ✗ impossible — same reason |\n"
+                "| Detect a 1-letter edit's existence | ✓ via F69: Δ<sub>bigram</sub> ∈ [1,2] | ✗ impossible — F69 is a *relative* metric |\n"
+                "| Detect 'is this Arabic-rasm scripture?' | ✓ via F75 ≈ 5.75 ± 5% | ⚠ partial — F75 is corpus-free per scripture, but you still need to know what 5.75 means as a target |\n"
+                "| Detect 'is this rhymed text?' | ✓ via p_max | ✓ yes — rhyme entropy is intrinsic |\n"
+                "| Detect 'is this even Arabic?' | ✓ trivially via script | ✓ yes — Unicode block lookup |\n"
+                "| Authenticate authorship of an unknown verse | ✗ — out of scope | ✗ — same |\n\n"
+                "**The honest summary:** *to say something is or is not the Quran*, "
+                "you must have the Quran somewhere. We hold it as a hashed, "
+                "auditable text file. The math layered on top is fully memory-free, "
+                "deterministic, and reproducible — but it cannot conjure a "
+                "reference out of nothing. No tool can. Anyone who claims otherwise "
+                "is either using an undisclosed reference, or measuring something "
+                "weaker than 'is this the Quran'."
+            )
 
         st.markdown("## Layered evaluation")
         render_layer_a(result)
