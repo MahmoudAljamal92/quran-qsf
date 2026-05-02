@@ -379,6 +379,25 @@ p, li { color: var(--ink-2); line-height: 1.55; }
 .match-pct.red   { color: var(--red); }
 .match-pct.gray  { color: var(--ink-muted); }
 
+/* Directional chip inside each axis row.  Sits under the bar. */
+.dir-tag {
+  display: inline-block;
+  margin-top: 0.32rem;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.10rem 0.45rem;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  cursor: help;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.dir-tag.dir-inside  { color: var(--green); background: var(--green-soft); border-color: var(--green-soft); }
+.dir-tag.dir-beyond  { color: var(--gold);  background: var(--gold-tint);  border-color: var(--gold-soft); }
+.dir-tag.dir-below   { color: var(--red);   background: var(--red-soft);   border-color: var(--red-soft); }
+
 /* ---- Callout + deciding axis ------------------------------------------- */
 .deciding {
   background: var(--gold-tint);
@@ -733,6 +752,33 @@ _AXIS_DEFS = [
     ("Delta_alpha", "Multifractal width",        "Δα",
      "Width of the multifractal spectrum — scale-dependence of verse-length variability."),
 ]
+
+
+# -----------------------------------------------------------------------------
+# Per-axis Quran extremum direction.  Required for the directional indicator
+# on axis rows so the user can see whether their value is INSIDE the Quran's
+# typical band, BEYOND the Quran in its extremum direction (surpassing), or
+# BELOW the Quran (falling short of the pattern).  Without this, a 100%
+# "match" looks better than a 40% "match" even when the 40% text is more
+# extreme than any Quranic window — which is both misleading and the exact
+# UX defect flagged by the user.
+#
+#   "high"   : Quran sits at the top of the observed range (extremum is high);
+#              value > p90 is "beyond Quran (surpasses)", < p10 is "below".
+#   "low"    : Quran sits at the bottom of the observed range (extremum low);
+#              value < p10 is "beyond Quran (surpasses)", > p90 is "below".
+#   "center" : Quran sits in the middle as an attractor; neither tail is
+#              "more extreme" — both directions are simply "outside Quran".
+AXIS_DIRECTION = {
+    "H_EL":        "low",     # Quran ~0.97 bits, near-floor (lower = more rhyme)
+    "p_max":       "high",    # Quran extremum: p_max → 1.0
+    "C_Omega":     "high",    # Quran rank-1 across 12 corpora
+    "D_max":       "high",    # Quran 3.84, rank-1 of 12 alphabets
+    "Delta_alpha": "high",    # Quran Δα = 0.51 (multi-scaling)
+    "F75":         "center",  # attractor at 5.316; deviations in either direction fail
+    "d_info":      "center",  # distribution-shape metric, centered
+    "HFD":         "center",  # Quran ~0.965; both directions fail
+}
 
 
 def _hash_input(text: str) -> str:
@@ -1301,6 +1347,69 @@ def _axis_status_for(r: dict, a_status: str, deciding_key: str | None) -> tuple:
             "in any Quranic N-verse window.", "red")
 
 
+def _direction_tag(r: dict) -> tuple[str, str, str]:
+    """Return (label, css_class, tooltip) describing whether the user's value
+    is INSIDE the Quran band, BEYOND it in the Quran's extremum direction
+    (i.e. surpasses the Quran on this axis), or BELOW it.
+
+    Uses AXIS_DIRECTION to interpret each axis correctly — e.g. on H_EL the
+    Quran's extremum is low, so a value BELOW p10 is "beyond-Quran" (more
+    extreme), not a failure.
+
+    Returns ("", "", "") if the tag is not applicable (e.g. NaN, centered
+    axis at a tail).
+    """
+    if not np.isfinite(r["match"]):
+        return ("", "", "")
+    you = r.get("you", float("nan"))
+    p10 = r.get("p10", float("nan"))
+    p90 = r.get("p90", float("nan"))
+    if not (np.isfinite(you) and np.isfinite(p10) and np.isfinite(p90)):
+        return ("", "", "")
+    inside = (p10 <= you <= p90)
+    if inside:
+        return ("inside Quran", "inside",
+                f"Your value {you:.3f} is inside the Quran's inner-80% band "
+                f"[{p10:.3f}, {p90:.3f}] — typical Quranic value.")
+
+    direction = AXIS_DIRECTION.get(r["key"], "center")
+    above = you > p90
+    below = you < p10
+
+    if direction == "high":
+        if above:
+            return ("beyond Quran ↑", "beyond",
+                    f"Your value {you:.3f} exceeds the Quran's p90 = {p90:.3f}. "
+                    f"The Quran's extremum on this axis is HIGH — your text "
+                    f"surpasses the typical Quranic band in the Quran's own "
+                    f"extremum direction.")
+        if below:
+            return ("below Quran ↓", "below",
+                    f"Your value {you:.3f} is below the Quran's p10 = {p10:.3f}. "
+                    f"The Quran's extremum is HIGH — your text falls short of "
+                    f"the Quranic pattern in the opposite direction.")
+    elif direction == "low":
+        if below:
+            return ("beyond Quran ↓", "beyond",
+                    f"Your value {you:.3f} is below the Quran's p10 = {p10:.3f}. "
+                    f"The Quran's extremum on this axis is LOW — your text "
+                    f"surpasses the typical Quranic band in the Quran's own "
+                    f"extremum direction.")
+        if above:
+            return ("below Quran ↑", "below",
+                    f"Your value {you:.3f} exceeds the Quran's p90 = {p90:.3f}. "
+                    f"The Quran's extremum is LOW — your text falls short of "
+                    f"the Quranic pattern in the opposite direction.")
+    else:  # "center" — attractor axis, both tails are failures
+        side = "high" if above else "low"
+        return (f"outside Quran ({side})", "below",
+                f"Your value {you:.3f} is outside the Quran's inner-80% band "
+                f"[{p10:.3f}, {p90:.3f}]. This axis has a centered extremum "
+                f"(the Quran sits at the attractor), so deviation in either "
+                f"direction is a failure mode, not a surpassing.")
+    return ("", "", "")
+
+
 def render_layer_b(result: dict):
     b = result["layer_b"]
     a_status = result["layer_a"]["status"]
@@ -1431,6 +1540,27 @@ def render_layer_b(result: dict):
             unsafe_allow_html=True,
         )
 
+    # Legend for the directional chips before the axis table.
+    st.markdown(
+        '<div class="callout note" style="font-size:0.82rem; margin-top:0.4rem">'
+        '<b>Reading the direction chips.</b> Each axis has a known Quran '
+        'extremum direction. A chip of '
+        '<span class="dir-tag dir-inside">inside Quran</span> means your value '
+        'lies in the Quran\'s inner-80% band. '
+        '<span class="dir-tag dir-beyond">beyond Quran</span> means your value '
+        'is <b>more extreme than the typical Quranic band in the Quran\'s own '
+        'extremum direction</b> (e.g. lower H_EL, higher p_max) — on that '
+        'single axis you surpass the Quran. '
+        '<span class="dir-tag dir-below">below Quran</span> means your value '
+        'deviates in the opposite direction, failing the Quranic pattern. '
+        'Hover each chip for the exact numbers. '
+        '<b>Surpassing the Quran on one axis is possible; surpassing on '
+        '<i>all</i> axes jointly is the actual uniqueness claim and has not '
+        'been observed in 11 control traditions.</b>'
+        '</div>',
+        unsafe_allow_html=True,
+    )
+
     # Axis table — header
     st.markdown('<div class="axis-table">', unsafe_allow_html=True)
     st.markdown(
@@ -1464,6 +1594,14 @@ def render_layer_b(result: dict):
             else:
                 range_disp = f"{r['ref']:.4f}"
 
+        # Directional tag: inside / beyond-Quran / below-Quran.  Critical
+        # UX fix so users understand that a low match% can mean either
+        # "surpasses Quran in its extremum direction" or "fails Quranic
+        # pattern" — very different interpretations.
+        dir_label, dir_cls, dir_tip = _direction_tag(r)
+        dir_html = (f'<span class="dir-tag dir-{dir_cls}" title="{dir_tip}">'
+                    f'{dir_label}</span>' if dir_label else '')
+
         # Row + per-axis expander details.
         st.markdown(
             f'<div class="axis-row{" deciding" if is_deciding else ""}">'
@@ -1471,7 +1609,7 @@ def render_layer_b(result: dict):
             f'<div class="axis-num range">{range_disp}</div>'
             f'<div class="axis-num">{you_disp}</div>'
             f'<div><div class="bar-track"><div class="bar-fill {bucket}" '
-            f'style="width:{bar_w}%"></div></div></div>'
+            f'style="width:{bar_w}%"></div></div>{dir_html}</div>'
             f'<div class="match-pct {bucket}">{match_disp}</div>'
             f'</div>',
             unsafe_allow_html=True,
