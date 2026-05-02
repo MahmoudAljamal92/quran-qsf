@@ -910,32 +910,66 @@ def render_verdict(result: dict):
                  "Identity lookup is skipped. Too short for a fingerprint claim.")
         return
 
-    # a == "miss"
+    # a == "miss"  —  Layer A says "not in the Quran corpus". The remaining
+    # verdict is about whether the text is in the broad Arabic-rasm
+    # rhymed-scripture CLASS (high Layer B) vs outside it (low Layer B).
+    # It is NOT a Quran-identity claim: Layer B at short N cannot separate
+    # Quran from well-formed classical Arabic poetry.
+    n_verses = result["input_axes"]["n_verses"]
+
     if not np.isfinite(composite):
         _row("err", "✗", "Not Quran",
              "Not found in the canonical Hafs corpus, and too short to compute "
-             "a fingerprint. Provide a longer passage for a match score.")
+             "a class fingerprint. Provide a longer passage for more structural "
+             "information.")
+        return
+
+    if composite >= 95:
+        # Inside the Arabic-rasm rhymed-scripture class.
+        if n_verses < 32:
+            label = "Not Quran · in the Arabic-rasm rhymed-scripture class"
+            desc = (f"Not a verbatim or near-verbatim Quranic passage. Its "
+                    f"structural values sit inside the Quranic range on every "
+                    f"measurable axis at N = {n_verses} — consistent with "
+                    f"classical Arabic verse, rhymed prose, hadith, or an "
+                    f"imitation. <b>At N &lt; 32 verses these axes measure "
+                    f"class membership, not Quran-specific identity</b>, so "
+                    f"this score is <u>expected</u> for Mu'allaqa-style "
+                    f"classical poetry too. The Quran-unique signatures "
+                    f"(F87 multifractal fingerprint, F76 corpus-aggregate) "
+                    f"require N ≥ 64 or a whole-surah input and cannot fire here.")
+        else:
+            label = "Not Quran · but structurally Quran-like"
+            desc = (f"Not a verbatim or near-verbatim Quranic passage. At "
+                    f"N = {n_verses} the full fingerprint including HFD "
+                    f"(and Δα at N ≥ 64) is active and your values still sit "
+                    f"inside the Quranic range — rare for non-Quranic text at "
+                    f"this length. Possible: long classical saj' composition, "
+                    f"very skilled imitation, or data that shares the Quran's "
+                    f"multifractal signature.")
+        _row("warn", "≈", label, desc, f"{composite:.0f}%", "class-match")
         return
 
     if composite >= 60:
-        _row("warn", "≈", "Not in the corpus, but Quran-like shape",
-             "Not a verbatim or near-verbatim Quranic passage, yet its mathematical "
-             "fingerprint overlaps the Quranic envelope — consistent with classical "
-             "Arabic verse, a well-crafted imitation, or a hadith.",
-             f"{composite:.0f}%", "fingerprint")
+        _row("warn", "≈", "Not Quran · partial class membership",
+             f"Not in the corpus. Some axes land inside the Quranic range, "
+             f"others don't. At N = {n_verses} this suggests Arabic text "
+             f"with partial overlap with the rhymed-scripture class "
+             f"(e.g. some rhyme structure without full channel saturation).",
+             f"{composite:.0f}%", "class-match")
         return
 
     if composite >= 30:
         _row("err", "✗", "Not Quran",
-             "Not in the corpus. Fingerprint is mildly Arabic-shaped but clearly "
-             "outside the Quranic envelope on the deciding axes.",
-             f"{composite:.0f}%", "fingerprint")
+             f"Not in the corpus. Structurally outside the Arabic-rasm "
+             f"rhymed-scripture class on the deciding axes.",
+             f"{composite:.0f}%", "class-match")
         return
 
     _row("err", "✗", "Not Quran",
-         "Not in the corpus. Fingerprint is far from the Quran's mathematical "
-         "signature on every measurable axis.",
-         f"{composite:.0f}%", "fingerprint")
+         f"Not in the corpus. Structural profile is far from the Arabic-rasm "
+         f"rhymed-scripture class on every measurable axis.",
+         f"{composite:.0f}%", "class-match")
 
 
 # -----------------------------------------------------------------------------
@@ -1069,15 +1103,67 @@ def render_layer_b(result: dict):
     n_axes = b["n_axes"]
     n_verses = b["n_verses"]
 
+    # Determine what this layer can actually claim at this length.
+    # The Quran-unique signatures we documented all need either corpus-
+    # aggregate scale (F76, F67, F79), long-surah fractal scale (F87:
+    # HFD at N≥32, Δα at N≥64), or the Quran reference itself (F55, F69
+    # — which is Layer A/C). Everything at short N is class-membership
+    # only.
+    if n_verses >= 64:
+        scope_label = "full fingerprint active"
+        scope_note = ("At N ≥ 64 verses, all 8 axes including HFD and Δα are "
+                      "available — the F87 multifractal fingerprint "
+                      "(Quran-unique at rank 1/7 with LOO-z = 22.59) can "
+                      "be tested on your input.")
+    elif n_verses >= 32:
+        scope_label = "partial fingerprint · Δα disabled"
+        scope_note = ("At 32 ≤ N < 64, HFD is available but Δα is not. "
+                      "The F87 multifractal uniqueness test is only partial "
+                      "at this length; full F87 needs N ≥ 64.")
+    elif n_verses >= 15:
+        scope_label = "class-membership scale"
+        scope_note = ("At 15 ≤ N < 32, both fractal axes (HFD, Δα) are "
+                      "mathematically unavailable. The remaining 6 axes "
+                      "measure <b>Arabic-rasm rhymed-scripture class "
+                      "membership</b>, not Quran-specific identity. Other "
+                      "rhymed Arabic texts (classical qasida, some modern "
+                      "nasheed) legitimately pass these axes.")
+    else:
+        scope_label = "sub-discrimination scale"
+        scope_note = ("At N < 15, Layer B cannot reliably distinguish Quran "
+                      "from any other classical Arabic text. Use Layer A "
+                      "(identity) and Layer C (forensics) as the primary "
+                      "signals; Layer B is informational only.")
+
     summary = (
-        f"Length-calibrated fingerprint match against Quranic {n_verses}-verse windows: "
+        f"Length-calibrated class-match against Quranic {n_verses}-verse windows: "
         f"<b>{composite:.1f}%</b> across {n_axes} axes. "
         f"<b>{inside_count}/{n_axes}</b> axis value{'s' if inside_count != 1 else ''} "
-        f"fall inside the inner 80% of Quranic values at this length."
+        f"fall inside the inner 80% of Quranic values at this length. "
+        f"<br><br>{scope_note}"
     )
-    _layer_open("B", "Fingerprint",
-                f"length-calibrated · N = {n_verses}",
+    _layer_open("B", "Class fingerprint",
+                f"N = {n_verses} · {scope_label}",
                 summary)
+
+    # Separate, prominent honesty note about what passing Layer B means.
+    if n_verses < 32:
+        st.markdown(
+            '<div class="callout note">'
+            '<b>What a high Layer B score means at this length.</b> '
+            '<b>100%</b> on an axis = your value is inside the observed '
+            'Quranic range at this length — your text is <b>consistent '
+            'with</b> being Quran on that axis. It does <b>not</b> mean '
+            'your text <b>is</b> uniquely the Quran on that axis. The '
+            'Quran\'s documented uniqueness signatures (F87 multifractal, '
+            'F76 corpus-aggregate H_EL &lt; 1 bit, F67 C_Ω rank-1 across '
+            '12 corpora) all require either N ≥ 64 or whole-corpus '
+            'aggregation — neither is possible on your input at length '
+            f'{n_verses}. Use Layer A for identity and Layer C for '
+            'tampering forensics.'
+            '</div>',
+            unsafe_allow_html=True,
+        )
 
     # Strong caveat for non-Arabic input (Hebrew, Latin, …): we still compute
     # the axes on the raw character stream, but they are not directly
@@ -1243,16 +1329,21 @@ def render_layer_b(result: dict):
 
     st.markdown('</div>', unsafe_allow_html=True)
 
-    # Calibration legend so the colour bands are not opaque.
+    # Calibration legend — match the current scoring in calibration.py.
     st.markdown(
         '<div class="fine-print" style="margin-top:0.7rem">'
-        '<b>How match% is calibrated.</b> For each axis, every N-verse Quranic '
-        'window is computed (~5,000 windows). Your value is then placed against '
-        'this empirical distribution: '
-        '<b>100%</b> = inside p10–p90 (typical Quran); '
-        '<b>50–100%</b> = in p1–p10 or p90–p99 tail; '
-        '<b>25–50%</b> = in the extreme [min, p1] or [p99, max] tail; '
-        '<b>&lt;25%</b> = outside the observed Quranic range entirely.'
+        '<b>How match% is calibrated.</b> For each axis, every N-verse '
+        'Quranic window is computed (~5,000 windows) and your value is '
+        'placed against this empirical distribution. '
+        '<b>100%</b> = value is inside <code>[vmin, vmax]</code>, the full '
+        'observed Quranic range at this length — your text is '
+        '<b>consistent with</b> being Quran on that axis. '
+        '<b>&lt;100%</b> = value falls outside the observed range; score '
+        'decays linearly in units of the Quranic range-width, reaching 0 '
+        'at one full range-width beyond the extreme. '
+        'The per-axis <i>details</i> also show whether the value lands '
+        'in the <b>inner-80% typical band</b> (p10–p90) — a secondary '
+        'typicality indicator orthogonal to the primary identity score.'
         '</div>',
         unsafe_allow_html=True,
     )

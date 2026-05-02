@@ -258,15 +258,34 @@ def length_calibrated_match(axis: str, value: float, n_verses: int) -> dict:
     p10 = dist.p10
     p90 = dist.p90
     p99 = dist.p99
+    vmin = dist.vmin
+    vmax = dist.vmax
 
-    # Band 1 — inner 80% → 100%.
-    if p10 <= value <= p90:
+    # Identity rule (authored 2026-05-02): ANY value inside the observed
+    # Quranic range [vmin, vmax] scores 100% match. This guarantees that
+    # a verbatim Quranic N-verse window always scores 100% on every
+    # computable axis — the primary match% is a Quran-consistency claim,
+    # not a typicality claim. The p10/p90 "typicality" band and the
+    # percentile are still exposed for per-axis drill-down.
+    if vmin <= value <= vmax:
         out["match_pct"] = 100.0
-        out["inside_p80"] = True
         out["inside_range"] = True
+        out["inside_p80"] = (p10 <= value <= p90)
         return out
 
-    # Band 2 — inside [p1, p10) or (p90, p99] → 100% → 50% linear.
+    # Outside the observed Quranic range: decay linearly in units of the
+    # Quranic range width. Beyond one full range-width, score = 0.
+    rng = max(1e-12, vmax - vmin)
+    if value < vmin:
+        gap = (vmin - value) / rng
+    else:
+        gap = (value - vmax) / rng
+    out["match_pct"] = max(0.0, 100.0 * (1.0 - gap))
+    out["inside_range"] = False
+    out["inside_p80"] = False
+    return out
+
+    # (Legacy banded scoring retained below for reference — unreachable.)
     if p01 <= value < p10:
         frac = (value - p01) / max(p10 - p01, 1e-9)
         out["match_pct"] = 50.0 + 50.0 * frac
