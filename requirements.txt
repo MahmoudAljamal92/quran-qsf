@@ -22,7 +22,7 @@ networkx>=3.0
 # scipy==1.16.2
 # scikit-learn==1.8.0
 
-# === STREAMLIT CLOUD WEB APP (app/ring_of_truth.py) ===
+# === STREAMLIT CLOUD WEB APP (app/pristine.py) ===
 streamlit>=1.30
 
 # === GPU SCRIPTS (Colab only — uncomment if needed) ===

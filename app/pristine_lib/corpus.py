@@ -159,11 +159,10 @@ def exact_match(input_skeleton: str) -> Optional[ExactHit]:
             break
     if s_start is None or s_end is None:
         return None
+    # Count verses whose stored range [st, en) overlaps [pos, end).
     n_verses = sum(
         1 for st, en, s, a in offs
-        if (s == s_start and a >= a_start) or
-           (s_start < s < s_end) or
-           (s == s_end and a <= a_end)
+        if st < end and en > pos
     )
     return ExactHit(
         surah=s_start,
@@ -201,54 +200,131 @@ def _levenshtein(a: str, b: str, max_dist: int) -> int:
     return prev[lb]
 
 
+_KGRAM_K = 6  # seed length for fuzzy candidate retrieval
+
+
+@lru_cache(maxsize=1)
+def _kgram_index() -> dict:
+    """Build a k-gram -> sorted list of positions index on the full skeleton.
+
+    A 1-letter edit destroys at most `k` consecutive k-grams; every other
+    k-gram of the input is preserved verbatim somewhere in the canonical
+    stream (if the input is near-Quran). That lets us find candidate
+    starting offsets in O(|input|) without scanning the whole corpus.
+    """
+    full = _load_full_skeleton()
+    idx: dict = {}
+    n = len(full)
+    k = _KGRAM_K
+    for i in range(n - k + 1):
+        gram = full[i : i + k]
+        idx.setdefault(gram, []).append(i)
+    return idx
+
+
+def _offset_to_verse(offset: int) -> Tuple[int, int, int]:
+    """Map a character offset in the full skeleton to (surah, ayah, verse_idx)."""
+    offs = _verse_offsets()
+    # Binary search would be cleaner; verse count ~6k so a linear scan is fine.
+    for vi, (st, en, s, a) in enumerate(offs):
+        if st <= offset < en:
+            return s, a, vi
+    # After last verse -> clip to last.
+    last = offs[-1]
+    return last[2], last[3], len(offs) - 1
+
+
 def fuzzy_match(input_skeleton: str,
                 max_pct_deviation: float = 0.10) -> Optional[FuzzyHit]:
-    """Find the canonical Quranic passage (verse-aligned) that is closest
-    to the input by Levenshtein distance, capped at `max_pct_deviation`
-    of the input length.
+    """Find the Quranic span that is closest to the input by Levenshtein
+    distance, capped at `max_pct_deviation` of the input length.
 
-    Strategy: for each starting verse i, walk j forward; while the span
-    [i:j] has total length within [0.8, 1.2] × input_length, test it as
-    a candidate. Keep the minimum-Levenshtein span.
+    Strategy: k-gram seed retrieval. Pick several k-grams from the input
+    (start, middle, end, and a uniform sprinkle). For each seed, find
+    every position where it occurs in the canonical skeleton; that gives
+    a candidate starting offset (seed_position - seed_offset_in_input).
+    Test bounded Levenshtein on each candidate span whose length is near
+    the input's. Early-exit when distance drops to 1.
+
+    This handles:
+      - inputs that start mid-verse (including after the Basmala prefix
+        that the corpus prepends to verse 1 of every surah);
+      - single-letter edits (at least one seed survives);
+      - multi-seed edits across the input (uniform sprinkle).
     """
     if not input_skeleton:
         return None
     target_len = len(input_skeleton)
     max_dist = max(1, int(round(max_pct_deviation * target_len)))
+    k = _KGRAM_K
 
-    verses = _load_verses()
+    if target_len < k:
+        return None
+
+    full = _load_full_skeleton()
+    full_len = len(full)
+    idx = _kgram_index()
+    offs = _verse_offsets()
+
+    # --- Pick seeds: start, end, middle, plus a sprinkle every ~k letters.
+    seed_positions = set()
+    n_seeds = max(4, target_len // (k * 2))
+    for t in range(n_seeds):
+        p = int(t * (target_len - k) / max(1, n_seeds - 1))
+        seed_positions.add(p)
+    # Always include start and end seeds.
+    seed_positions.add(0)
+    seed_positions.add(max(0, target_len - k))
+
+    # --- Gather candidate starting offsets in the canonical stream.
+    candidates: set = set()
+    for sp in seed_positions:
+        gram = input_skeleton[sp : sp + k]
+        for pos in idx.get(gram, ()):  # every place this gram appears
+            start = pos - sp
+            if 0 <= start <= full_len - (target_len - max_dist):
+                candidates.add(start)
+
+    if not candidates:
+        return None
+
+    # --- Test each candidate with a short span of length ~target_len.
     best: Optional[FuzzyHit] = None
     best_dist = max_dist + 1
 
-    skel_lens = [len(v.skeleton) for v in verses]
-    n_v = len(verses)
-    lo = int(0.8 * target_len)
-    hi = int(1.2 * target_len)
+    # Test spans of length target_len, target_len-1, target_len+1, etc.
+    # to absorb indel edits. Up to ±max_dist.
+    length_deltas = [0] + [d for pair in
+                           zip(range(1, max_dist + 1), range(-1, -max_dist - 1, -1))
+                           for d in pair]
 
-    for i in range(n_v):
-        if skel_lens[i] == 0:
-            continue
-        span = 0
-        j = i
-        # Walk j forward, testing every [i:j] whose length is in [lo, hi].
-        while j < n_v and span <= hi:
-            span += skel_lens[j]
-            j += 1
-            if span < lo:
+    # To avoid pathological O(N) scans, cap to a safety budget.
+    MAX_CANDIDATES = 20000
+    cand_list = sorted(candidates)
+    if len(cand_list) > MAX_CANDIDATES:
+        # Keep evenly-spaced subsample; fine because near-Quran inputs
+        # produce << 20k candidates.
+        step = len(cand_list) // MAX_CANDIDATES + 1
+        cand_list = cand_list[::step]
+
+    for start in cand_list:
+        for dl in length_deltas:
+            end = start + target_len + dl
+            if end > full_len or end <= start:
                 continue
-            if span > hi:
-                break
-            cand_skel = "".join(verses[k].skeleton for k in range(i, j))
-            if not cand_skel:
-                continue
+            cand_skel = full[start:end]
             d = _levenshtein(input_skeleton, cand_skel, best_dist - 1)
             if d < best_dist:
                 best_dist = d
-                cand_raw = " ".join(verses[k].raw for k in range(i, j))
+                # Map [start:end] back to verse range.
+                s_s, a_s, vi_s = _offset_to_verse(start)
+                s_e, a_e, vi_e = _offset_to_verse(max(start, end - 1))
+                verses = _load_verses()
+                cand_raw = " ".join(verses[k_].raw for k_ in range(vi_s, vi_e + 1))
                 best = FuzzyHit(
-                    surah=verses[i].surah,
-                    ayah_start=verses[i].ayah,
-                    ayah_end=verses[j-1].ayah,
+                    surah=s_s,
+                    ayah_start=a_s,
+                    ayah_end=a_e,
                     edit_distance=d,
                     n_letters_canonical=len(cand_skel),
                     n_letters_input=target_len,
@@ -256,10 +332,10 @@ def fuzzy_match(input_skeleton: str,
                     canonical_skeleton=cand_skel,
                     canonical_raw=cand_raw,
                 )
-                # Early exit if we found a perfect / near-perfect match.
-                if best_dist <= 1:
-                    return best
-    if best_dist > max_dist:
+                if best_dist == 0:
+                    return best  # perfect (unreachable — exact_match caught it)
+
+    if best is None or best_dist > max_dist:
         return None
     return best
 
