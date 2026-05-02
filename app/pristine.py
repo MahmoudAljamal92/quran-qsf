@@ -152,15 +152,20 @@ p, li { color: var(--ink-2); line-height: 1.55; }
 .verdict {
   display: grid;
   grid-template-columns: 58px 1fr auto;
+  grid-template-areas: "sigil body score";
   align-items: center;
-  gap: 1.2rem;
-  padding: 1.2rem 1.4rem;
+  gap: 1rem;
+  padding: 1.1rem 1.3rem;
   border-radius: 10px;
   background: var(--paper-2);
   box-shadow: var(--shadow-md);
   border: 1px solid var(--line);
-  margin: 0.4rem 0 1.6rem 0;
+  margin: 0.4rem 0 1rem 0;
 }
+.verdict .sigil    { grid-area: sigil; }
+.verdict-body      { grid-area: body;  min-width: 0; }
+.verdict .score    { grid-area: score; text-align: right; }
+
 .verdict .sigil {
   width: 46px; height: 46px;
   display: grid; place-items: center;
@@ -173,16 +178,16 @@ p, li { color: var(--ink-2); line-height: 1.55; }
 .verdict .title {
   font-family: var(--sans);
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   color: var(--ink);
   letter-spacing: -0.02em;
   line-height: 1.25;
+  word-wrap: break-word;
 }
 .verdict .subtitle {
   font-size: 0.86rem;
   color: var(--ink-soft);
-  margin-top: 0.18rem;
-  max-width: 70ch;
+  margin-top: 0.2rem;
   line-height: 1.5;
 }
 .verdict .score {
@@ -191,12 +196,37 @@ p, li { color: var(--ink-2); line-height: 1.55; }
   font-weight: 600;
   font-variant-numeric: tabular-nums;
   color: var(--ink);
+  white-space: nowrap;
 }
 .verdict .score .pct {
-  font-size: 0.66rem; color: var(--ink-muted);
+  font-size: 0.64rem; color: var(--ink-muted);
   font-family: var(--sans); letter-spacing: 0.1em;
   text-transform: uppercase; display: block;
   margin-top: 0.05rem; font-weight: 500;
+}
+
+/* On narrow screens (mobile) stack the card:
+      sigil + title on one row, subtitle below, score at the bottom-right. */
+@media (max-width: 700px) {
+  .verdict {
+    grid-template-columns: 48px 1fr;
+    grid-template-areas:
+      "sigil body"
+      "score score";
+    gap: 0.7rem 0.9rem;
+    padding: 0.95rem 1rem;
+  }
+  .verdict .sigil { width: 40px; height: 40px; font-size: 1.1rem; }
+  .verdict .title { font-size: 1.05rem; }
+  .verdict .subtitle { font-size: 0.82rem; }
+  .verdict .score {
+    text-align: left;
+    font-size: 1.15rem;
+    border-top: 1px solid var(--line-soft);
+    padding-top: 0.55rem;
+    margin-top: 0.1rem;
+  }
+  .verdict .score .pct { display: inline-block; margin-left: 0.4rem; margin-top: 0; }
 }
 
 .verdict.ok         { background: linear-gradient(180deg, #f7fcf9 0%, var(--paper-2) 100%); border-color: var(--green-soft); }
@@ -914,7 +944,15 @@ def render_verdict(result: dict):
     n_letters = result["input_axes"]["n_letters"]
     composite = b.get("composite", float("nan"))
 
-    def _row(kind, sigil, title, subtitle, score_num="", score_lbl=""):
+    def _row(kind, sigil, title, subtitle, score_num="", score_lbl="",
+             why=None):
+        """Render the hero verdict card.
+
+        Layout is stacked (mobile-friendly):
+          [sigil]  TITLE                                 [score]
+                   short one-sentence subtitle           [label]
+                   [Why? expander with the long text]
+        """
         score_html = ""
         if score_num:
             score_html = (f'<div class="score">{score_num}'
@@ -922,30 +960,34 @@ def render_verdict(result: dict):
         st.markdown(
             f'<div class="verdict {kind}">'
             f'<div class="sigil">{sigil}</div>'
-            f'<div><div class="title">{title}</div>'
-            f'<div class="subtitle">{subtitle}</div></div>'
+            f'<div class="verdict-body">'
+            f'<div class="title">{title}</div>'
+            f'<div class="subtitle">{subtitle}</div>'
+            f'</div>'
             f'{score_html}</div>',
             unsafe_allow_html=True,
         )
+        if why:
+            with st.expander("Why this verdict? — detailed reasoning", expanded=False):
+                st.markdown(why, unsafe_allow_html=True)
 
-    if a == "skip_short" or b.get("status") == "skip_short":
-        _row("neut", "?", "Input too short to decide",
-             f"Need at least 3 verses AND 42 normalised Arabic letters "
-             f"(shortest Quranic surah, Al-Kawthar). You gave {n_verses} verses, "
-             f"{n_letters} letters.")
-        return
-
+    # ------------------------------------------------------------------
+    # IDENTITY FIRST.  If Layer A matched exactly or near-exactly, that
+    # trumps every Layer B / Layer X length gate.  A verbatim Quranic
+    # verse is still "Verbatim Quran" even when Layer B cannot run on
+    # a single canonical verse — saying "too short to decide" would be
+    # absurd and misleading.
+    # ------------------------------------------------------------------
     if a == "exact":
         ncd = c.get("ncd", 0.0) if c.get("status") == "ok" else 0.0
         bd = c.get("bigram_d", 0.0) if c.get("status") == "ok" else 0.0
         hit = result["layer_a"]["hit"]
         loc = (f"Surah {hit.surah}, ayah {hit.ayah_start}"
                f"{'' if hit.ayah_start == hit.ayah_end else f'–{hit.ayah_end}'}")
-        sub = (f"Letter-for-letter match against the SHA-locked Hafs corpus · "
-               f"{loc} · {hit.n_letters:,} normalised letters across {hit.n_verses} verse"
-               f"{'s' if hit.n_verses != 1 else ''}.")
+        sub = (f"{loc} · {hit.n_letters:,} letters, "
+               f"{hit.n_verses} verse{'s' if hit.n_verses != 1 else ''}.")
         if bd > 0.001 or ncd >= 0.10:
-            sub += " Tampering forensics flagged — see Layer C."
+            sub += " Tampering flagged — see Layer C."
         _row("ok", "✓", "Verbatim Quran", sub, "100%", "identity match")
         return
 
@@ -959,19 +1001,28 @@ def render_verdict(result: dict):
         preservation = 100.0 - hit.deviation_pct
         if bd > 0.001 and ncd < 0.20:
             kind_desc = (f"At least {edits} letter substitution"
-                         f"{'s' if edits != 1 else ''} detected "
+                         f"{'s' if edits != 1 else ''} "
                          "(F55 bigram-shift). Sequence order preserved.")
         elif bd <= 0.001 and ncd >= 0.05:
-            kind_desc = ("Letters identical to canonical but sequence order broken "
-                         "(F70 gzip-NCD) — verse or word reordering.")
+            kind_desc = ("Letters identical but sequence reordered "
+                         "(F70 gzip-NCD).")
         elif bd > 0.001 and ncd >= 0.20:
-            kind_desc = ("Both letter edits AND sequence reordering detected — "
-                         "mixed tampering signature.")
+            kind_desc = "Letter edits AND reordering detected."
         else:
-            kind_desc = f"{hit.edit_distance} letter edit(s), {hit.deviation_pct:.2f}% deviation."
+            kind_desc = f"{hit.edit_distance} edit(s), {hit.deviation_pct:.2f}% deviation."
         _row("warn", "≈", "Modified Quran",
              f"{loc} · {kind_desc}",
              f"{preservation:.1f}%", "preservation")
+        return
+
+    # ------------------------------------------------------------------
+    # No identity match.  Now length gates and Layer B composite apply.
+    # ------------------------------------------------------------------
+    if a == "skip_short" or b.get("status") == "skip_short":
+        _row("neut", "?", "Input too short to decide",
+             f"You gave {n_verses} verse{'s' if n_verses != 1 else ''}, "
+             f"{n_letters} letters. Need ≥ 3 verses and ≥ 42 letters "
+             "(shortest Quranic surah = Al-Kawthar).")
         return
 
     if a == "skip_nonarabic":
@@ -1027,60 +1078,75 @@ def render_verdict(result: dict):
         cp, ct = challenge.n_class_passed, challenge.n_class_testable
         sp, st_ = challenge.n_strict_passed, challenge.n_strict_testable
         j = challenge.joint_f87
-        chal_tail = (f" · Extremum Challenge: {sp}/{st_} strict Quran-thresholds "
-                     f"reached, {cp}/{ct} class envelopes")
+        chal_short = (f"Layer X: {sp}/{st_} strict · {cp}/{ct} class")
+        chal_long = (f"<b>Extremum Challenge:</b> {sp}/{st_} strict Quran-thresholds reached, "
+                     f"{cp}/{ct} class envelopes.")
         if j and j.can_test:
-            chal_tail += (f" · F87 partial joint "
-                          f"{'PASSES' if j.joint_pass else 'FAILS'}")
+            chal_short += f" · F87 joint {'✓' if j.joint_pass else '✗'}"
+            chal_long += f" F87 partial joint {'<b>PASSES</b>' if j.joint_pass else '<b>FAILS</b>'}."
     else:
-        chal_tail = ""
+        chal_short = ""
+        chal_long = ""
 
     if composite >= 90:
         if n_verses < 32:
-            label = "Not Quran · typical inside Quranic N-verse range"
-            desc = (f"Not a verbatim or near-verbatim Quranic passage. Every "
-                    f"measurable axis value lands inside the Quran's own "
-                    f"{n_verses}-verse sliding-window distribution. "
-                    f"<b>This is NOT a Quran-uniqueness signal</b> — rhymed "
-                    f"Arabic poetry, rhymed prose, and even accidentally "
-                    f"rhyme-heavy modern prose can all reach this score at "
-                    f"small N because the Quran's own N-verse window range "
-                    f"is wide.  The Quran-discriminating tests (F87 needs "
-                    f"N ≥ 64, cross-tradition F67/F76 need a multi-surah "
-                    f"corpus) do not fire at this length. <b>See the "
-                    f"Extremum Challenge panel below</b> — it is the "
-                    f"layer that actually discriminates Quran-extremum "
-                    f"thresholds from class-membership thresholds."
-                    f"{chal_tail}.")
+            label = "Not Quran · values typical of a Quranic window"
+            short = (f"Not in the corpus, but every axis lands inside the Quran's own "
+                     f"{n_verses}-verse range. "
+                     + (chal_short + "." if chal_short else ""))
+            why = (f"<p>Your text was <b>not found</b> verbatim or near-verbatim in the "
+                   f"Hafs corpus. However, every measurable Layer B axis lies inside "
+                   f"the Quran's own sliding-window distribution at N = {n_verses}.</p>"
+                   f"<p><b>This is not proof of Quran-like structure.</b> "
+                   f"At small N, rhymed Arabic poetry, rhymed prose, and even "
+                   f"accidentally rhyme-heavy modern prose can all reach this score "
+                   f"because the Quran's own N-verse window range is wide.</p>"
+                   f"<p>The Quran-discriminating tests (F87 multifractal at N ≥ 64, "
+                   f"cross-tradition F67 / F76 on multi-surah corpora) do not fire "
+                   f"at this length — see Layer X for the strict-threshold verdict "
+                   f"that actually discriminates Quran-extremum from class-membership.</p>"
+                   f"<p>{chal_long}</p>")
         else:
-            label = "Not Quran · but values typical across the full fingerprint"
-            desc = (f"Not a verbatim or near-verbatim Quranic passage. At "
-                    f"N = {n_verses} the fingerprint includes HFD (and Δα "
-                    f"at N ≥ 64). Your values still sit inside the Quran's "
-                    f"own N-verse distribution — rare for arbitrary non-Quranic "
-                    f"text at this length. <b>Read the Extremum Challenge "
-                    f"panel for the strict Quran-threshold verdict</b>: "
-                    f"typicality-vs-Quran (this layer) and reaching-Quran-extremum "
-                    f"(Layer X) are different questions.{chal_tail}.")
-        _row("warn", "≈", label, desc, f"{composite:.0f}%",
-             "typicality vs Quranic N-verse windows")
+            label = "Not Quran · values typical across the full fingerprint"
+            short = (f"Not in the corpus, but values sit inside Quran's own "
+                     f"{n_verses}-verse distribution (HFD included). "
+                     + (chal_short + "." if chal_short else ""))
+            why = (f"<p>Not a verbatim or near-verbatim Quranic passage. At N = {n_verses} "
+                   f"the fingerprint includes HFD (and Δα at N ≥ 64). Your values still sit "
+                   f"inside the Quran's own N-verse distribution — rare for arbitrary "
+                   f"non-Quranic text at this length.</p>"
+                   f"<p>Typicality-vs-Quran (this layer) and reaching-Quran-extremum "
+                   f"(Layer X) are different questions. Read Layer X for the strict "
+                   f"verdict.</p>"
+                   f"<p>{chal_long}</p>")
+        _row("warn", "≈", label, short, f"{composite:.0f}%",
+             "typicality vs Quran",
+             why=why)
         return
 
     if composite >= 50:
-        _row("warn", "≈", "Not Quran · partial typicality",
-             f"Not in the corpus. Some axes land inside the typical Quranic "
-             f"band (p10–p90), others don't. At N = {n_verses} this suggests "
-             f"Arabic text partially overlapping Quran's structural envelope "
-             f"(e.g., some rhyme regularity without full channel saturation). "
-             f"See the Extremum Challenge panel for the strict-threshold "
-             f"verdict.{chal_tail}.",
-             f"{composite:.0f}%", "typicality vs Quranic N-verse windows")
+        short = (f"Some axes in the typical Quranic band, others outside. "
+                 + (chal_short + "." if chal_short else ""))
+        why = (f"<p>Not found in the canonical Hafs corpus. At N = {n_verses}, some "
+               f"axis values land inside the Quran's typical band (p10–p90), others "
+               f"fall outside. This suggests Arabic text partially overlapping the "
+               f"Quran's structural envelope — e.g., some rhyme regularity without "
+               f"full channel saturation.</p>"
+               f"<p>See Layer X below for the strict-threshold verdict.</p>"
+               f"<p>{chal_long}</p>")
+        _row("warn", "≈", "Not Quran · partial typicality", short,
+             f"{composite:.0f}%", "typicality vs Quran",
+             why=why)
         return
 
-    _row("err", "✗", "Not Quran",
-         f"Not in the corpus. Structural values sit outside the Quran's own "
-         f"{n_verses}-verse window distribution on most deciding axes.{chal_tail}.",
-         f"{composite:.0f}%", "typicality vs Quranic N-verse windows")
+    short = (f"Values outside the Quran's {n_verses}-verse distribution on deciding axes. "
+             + (chal_short + "." if chal_short else ""))
+    why = (f"<p>Not found in the canonical Hafs corpus. Structural values sit outside "
+           f"the Quran's own {n_verses}-verse window distribution on most deciding axes.</p>"
+           f"<p>{chal_long}</p>")
+    _row("err", "✗", "Not Quran", short,
+         f"{composite:.0f}%", "typicality vs Quran",
+         why=why)
 
 
 # -----------------------------------------------------------------------------
