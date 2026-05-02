@@ -798,8 +798,14 @@ def analyse(input_text: str, progress=None):
             a_hit = exact
         else:
             step(0.28, "Layer A · near-verbatim search…")
-            fh = corpus.fuzzy_match(skel)
-            if fh is not None and fh.deviation_pct < 10.0:
+            # 20% threshold catches Sanaa-style / variant readings with
+            # scattered word drops and substitutions. Below that, Layer C
+            # forensics (F55 bigram-shift, F70 gzip-NCD) already quantify
+            # *what kind* of edit happened, so a wider fuzzy net does not
+            # muddy the verdict — it just correctly identifies the nearest
+            # canonical neighbour instead of giving up with "not in corpus".
+            fh = corpus.fuzzy_match(skel, max_pct_deviation=0.20)
+            if fh is not None and fh.deviation_pct < 20.0:
                 a_status = "fuzzy"
                 a_hit = fh
     elif script != "ar":
