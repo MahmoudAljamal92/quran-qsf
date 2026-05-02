@@ -709,9 +709,21 @@ def _hash_input(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()[:16]
 
 
-def _compute_input_axes(input_text: str):
-    verses = split_into_verses(input_text)
-    skel_full = normalize_arabic_letters_only(input_text)
+def _compute_input_axes(input_text: str, override_verses: list | None = None):
+    """Compute 8-axis fingerprint on the input text.
+
+    If `override_verses` is provided (e.g., the canonical Quranic verses that
+    Layer A matched), use those as the verse split instead of the heuristic
+    line-based splitter.  This prevents mushaf line-wrapping from corrupting
+    the per-verse metrics (rhyme, entropy, CV) when the user pasted one long
+    verse across multiple display lines.
+    """
+    if override_verses is not None:
+        verses = override_verses
+        skel_full = "".join(normalize_arabic_letters_only(v) for v in verses)
+    else:
+        verses = split_into_verses(input_text)
+        skel_full = normalize_arabic_letters_only(input_text)
     he = metrics.pooled_H_EL_pmax(verses)
     di = metrics.d_info(skel_full)
     verse_lens = np.array(
@@ -766,9 +778,37 @@ def analyse(input_text: str, progress=None):
         a_status = "skip_short"
     out["layer_a"] = {"status": a_status, "hit": a_hit}
 
+    # --- Canonical verse override for Layer B / Extremum Challenge -------
+    # When Layer A found a verbatim or near-verbatim match, we know the
+    # true Quranic verse boundaries. Pasting from a mushaf typically wraps
+    # one long verse across several display lines; without this override,
+    # every line-break becomes a fake "verse end" and the structural
+    # metrics (rhyme, entropy, CV) collapse to garbage values. Use the
+    # canonical verses from the Hafs corpus instead of the raw text split.
+    canonical_verses = None
+    line_verses = split_into_verses(input_text)
+    # Only substitute canonical verses when Layer A matched EXACTLY. For
+    # fuzzy matches the user's text differs from canonical by definition,
+    # so we must not substitute the canonical text — the metrics would
+    # then describe the Quran, not the user's edited version.
+    if a_status == "exact" and a_hit is not None:
+        try:
+            surah_vs = [v for v in corpus.surah_verses(a_hit.surah)
+                        if a_hit.ayah_start <= v.ayah <= a_hit.ayah_end]
+            if surah_vs and len(surah_vs) != len(line_verses):
+                canonical_verses = [v.raw for v in surah_vs]
+        except Exception:  # noqa: BLE001
+            canonical_verses = None
+
+    out["verse_split_info"] = {
+        "line_count": len(line_verses),
+        "canonical_count": len(canonical_verses) if canonical_verses else None,
+        "used_canonical": canonical_verses is not None,
+    }
+
     # --- Layer B: fingerprint --------------------------------------------
     step(0.45, "Layer B · computing 8 fingerprint axes…")
-    inp = _compute_input_axes(input_text)
+    inp = _compute_input_axes(input_text, override_verses=canonical_verses)
     out["input_axes"] = inp
 
     layer_b = {"status": "skip_short", **inp, "rows": [], "composite": float("nan")}
@@ -822,7 +862,7 @@ def analyse(input_text: str, progress=None):
     # --- Extremum Challenge: locked thresholds vs your text --------------
     step(0.84, "Extremum challenge · locked thresholds…")
     try:
-        verses_list = split_into_verses(input_text)
+        verses_list = canonical_verses if canonical_verses is not None else line_verses
         is_arabic = (script == "ar") and (len(verses_list) >= 1)
         out["challenge"] = challenge.run_challenge(verses_list, is_arabic=is_arabic)
     except Exception as e:  # noqa: BLE001
@@ -1087,6 +1127,8 @@ def render_layer_a(result: dict):
         h = a["hit"]
         rng = f"{h.surah}:{h.ayah_start}" if h.ayah_start == h.ayah_end \
               else f"{h.surah}:{h.ayah_start}–{h.ayah_end}"
+        vsi = result.get("verse_split_info", {})
+        line_count = vsi.get("line_count", h.n_verses)
         _layer_open("A", "Identity", "verbatim match",
                     f"Your text appears <b>verbatim</b> in the canonical Hafs Quran at "
                     f"<b>{rng}</b> — letter-for-letter across "
@@ -1094,6 +1136,23 @@ def render_layer_a(result: dict):
                     f"{h.n_verses} verse{'s' if h.n_verses != 1 else ''}.")
         st.markdown('<span class="pill ok">✓ verbatim in corpus</span>',
                     unsafe_allow_html=True)
+        # Inform about mushaf line-break correction
+        if vsi.get("used_canonical") and line_count != h.n_verses:
+            st.markdown(
+                '<div class="mushaf-warning" style="margin-top:0.6rem; padding:0.6rem; '
+                'background:#d1ecf1; border-left:4px solid #17a2b8; border-radius:4px; '
+                'color:#0c5460;">'
+                '<b>ℹ️ Verse boundaries auto-corrected</b><br>'
+                f"You pasted <b>{line_count} lines</b>, but this passage is actually "
+                f"<b>{h.n_verses} verse{'s' if h.n_verses != 1 else ''}</b> in the Quran "
+                "(digital mushaf text often wraps one long verse across several display lines). "
+                "Since Layer A matched exactly, <b>Layer B and the Extremum Challenge were "
+                "re-computed on the canonical Quranic verse boundaries</b> — not on your "
+                "mushaf line breaks. This is why the numbers here may differ from what you'd "
+                "get by analysing this same text when it's <i>not</i> recognised as Quran "
+                "(e.g., after any edit). The corrected scores are the honest ones."
+                '</div>',
+                unsafe_allow_html=True)
         _layer_close()
         return
 
@@ -1101,6 +1160,8 @@ def render_layer_a(result: dict):
         h = a["hit"]
         rng = f"{h.surah}:{h.ayah_start}" if h.ayah_start == h.ayah_end \
               else f"{h.surah}:{h.ayah_start}–{h.ayah_end}"
+        canonical_verses = h.ayah_end - h.ayah_start + 1
+        user_verses = result.get("input_axes", {}).get("n_verses", canonical_verses)
         _layer_open("A", "Identity", "near-verbatim match",
                     f"Your text is <b>not verbatim</b>, but is within a short edit "
                     f"distance of <b>{rng}</b>: <b>{h.edit_distance} letter edit"
@@ -1113,6 +1174,21 @@ def render_layer_a(result: dict):
             f'deviation <b>{h.deviation_pct:.2f}%</b></div>',
             unsafe_allow_html=True,
         )
+        # Warn about mushaf line-break corruption of structural metrics
+        if user_verses != canonical_verses:
+            st.markdown(
+                '<div class="mushaf-warning" style="margin-top:0.6rem; padding:0.6rem; '
+                'background:#fff3cd; border-left:4px solid #ffc107; border-radius:4px; '
+                'color:#856404;">'
+                '<b>⚠️ Structural metrics may be corrupted by line breaks</b><br>'
+                f"You entered <b>{user_verses} lines</b>, but this passage spans "
+                f"<b>{canonical_verses} verse{'s' if canonical_verses != 1 else ''}</b> in the Quran. "
+                "If you pasted from digital mushaf with wrapped lines, verse-final metrics "
+                "(rhyme, entropy) are computed on mid-sentence fragments. "
+                "<b>For accurate Layer B/C results, ensure each true verse is on one line</b> "
+                "(or use pipe separators between verses)."
+                '</div>',
+                unsafe_allow_html=True)
         with st.expander("Show canonical Hafs text side by side"):
             col_a, col_b = st.columns(2)
             with col_a:
