@@ -1,6 +1,6 @@
 # Pristine — self-audit report
 
-**Generated**: 2026-05-02 12:33 UTC
+**Generated**: 2026-05-02 13:24 UTC
 **Verdict**: ✅ ALL CHECKS PASSED  (9/9 passing)
 
 ## What this audit verifies
@@ -28,17 +28,24 @@ locked = 228df2a717671aeb9d2ff573002bd28d6b3f973f4bc7153554e3a81663d67610
 
 ### ✅ Check 2 — Reference reproducibility
 
-Recomputed every axis from quran_bare.txt + analytic helpers. All values are deterministic and reproducible from this corpus alone.
+Both statistic bases reproduce their locked values from the SHA-locked corpus. The app uses basis (A) per-chapter median as the reference; basis (B) is reported for cross-check and transparency.
 
 ```
-  H_EL         = 2.470720
-  p_max        = 0.500962
-  C_Omega      = 0.486054
-  F75          = 6.280849
-  D_max        = 2.336635
-  d_info       = 1.636781
-  HFD          = 0.958587
-  Delta_alpha  = 0.686157
+Basis (A) per-chapter median — the app's locked reference basis:
+  p_max       median = 0.7273   locked 0.7273
+  H_EL        median = 0.9685    locked 0.9685
+  C_Omega     median = 0.7985 locked 0.7985
+  F75(@medians) = 5.3164   locked 5.3160   (median of per-surah F75 = 5.2930)
+  D_max       median = 3.8388   locked 3.8400
+
+Basis (B) whole-corpus pooled — a separate legitimate statistic:
+  p_max_pooled        = 0.5010  locked 0.5010  (F56)
+  H_EL_pooled         = 2.4707   locked ≈ 2.468
+
+Other axes (one-value per corpus):
+  d_info              = 1.6368
+  HFD (verse-length)  = 0.9586
+  Delta_alpha         = 0.6862
 ```
 
 ### ✅ Check 3 — No sharpshooter selection

@@ -195,6 +195,13 @@ def _bin_for(n: int) -> Tuple[int, int]:
 
 
 def _value(row: SurahStats, axis: str) -> float:
+    """Return the value of `axis` on a SurahStats row, including derived axes.
+
+    Derived axes (not stored in CSV):
+      R_R  = p_max × VL_CV_letters    (Rhyme-Rhythm Product)
+    """
+    if axis == "R_R":
+        return row.p_max * row.VL_CV_letters
     return getattr(row, axis)
 
 
@@ -226,7 +233,7 @@ def percentile_in_similar_length(axis: str,
     surahs exist for this axis at any length (e.g., HFD with Quran's 32-verse
     floor and no surahs reach it — won't happen in practice).
     """
-    if axis not in SurahStats.__annotations__:
+    if axis != "R_R" and axis not in SurahStats.__annotations__:
         raise ValueError(f"Unknown axis: {axis}")
     if not np.isfinite(input_value):
         return None
@@ -243,27 +250,38 @@ def percentile_in_similar_length(axis: str,
 
     pool = _pool_for(bin_lo, bin_hi)
     if len(pool) < _MIN_SAMPLES:
-        # Widen by progressively merging neighbouring bins.
-        idx = next(i for i, (lo, _) in enumerate(_LENGTH_BINS) if lo == bin_lo)
-        lo_lo, hi_hi = bin_lo, bin_hi
-        while len(pool) < _MIN_SAMPLES and (idx > 0 or idx < len(_LENGTH_BINS) - 1):
+        # Widen by progressively merging neighbouring bins.  We track
+        # left_idx and right_idx as positions into _LENGTH_BINS, and
+        # alternately expand outward until we have enough samples or we've
+        # consumed the whole range.  (Previously the right-side index was
+        # recomputed from the ORIGINAL bin_lo each iteration, which meant
+        # it never advanced for long surahs — the reviewer's Bug 3.)
+        start_idx = next(
+            i for i, (lo, _) in enumerate(_LENGTH_BINS) if lo == bin_lo
+        )
+        left_idx = start_idx
+        right_idx = start_idx
+        expand_left = True   # alternate expansion direction
+        while len(pool) < _MIN_SAMPLES:
             grew = False
-            if idx > 0:
-                idx -= 1
-                lo_lo = _LENGTH_BINS[idx][0]
-                grew = True
-            if len(_pool_for(lo_lo, hi_hi)) < _MIN_SAMPLES and idx < len(_LENGTH_BINS) - 1:
-                next_idx = next(
-                    (i for i, (lo, _) in enumerate(_LENGTH_BINS) if lo == bin_lo),
-                    idx,
-                )
-                if next_idx + 1 < len(_LENGTH_BINS):
-                    hi_hi = _LENGTH_BINS[next_idx + 1][1]
-                    grew = True
-            new_pool = _pool_for(lo_lo, hi_hi)
-            if len(new_pool) <= len(pool) and not grew:
+            # Try the preferred side first, fall back to the other.
+            if expand_left and left_idx > 0:
+                left_idx -= 1; grew = True
+            elif (not expand_left) and right_idx < len(_LENGTH_BINS) - 1:
+                right_idx += 1; grew = True
+            elif left_idx > 0:
+                left_idx -= 1; grew = True
+            elif right_idx < len(_LENGTH_BINS) - 1:
+                right_idx += 1; grew = True
+            if not grew:
                 break
-            pool = new_pool
+            expand_left = not expand_left
+            lo_lo = _LENGTH_BINS[left_idx][0]
+            hi_hi = _LENGTH_BINS[right_idx][1]
+            pool = _pool_for(lo_lo, hi_hi)
+
+        lo_lo = _LENGTH_BINS[left_idx][0]
+        hi_hi = _LENGTH_BINS[right_idx][1]
         if len(pool) < _MIN_SAMPLES:
             # Final fallback: use ALL surahs with a finite value on this axis.
             pool = [_value(r, axis) for r in rows if np.isfinite(_value(r, axis))]

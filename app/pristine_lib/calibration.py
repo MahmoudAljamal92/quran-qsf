@@ -247,76 +247,57 @@ def length_calibrated_match(axis: str, value: float, n_verses: int) -> dict:
         return out
 
     arr = dist.values
+    # Empirical CDF percentile using the midpoint rule (searchsorted gives
+    # [0, N]; dividing by N gives a percentile in [0, 1]).  This is the
+    # fraction of Quranic N-verse windows whose value is ≤ `value`.
     pct = float(np.searchsorted(arr, value)) / arr.size
     out["percentile"] = pct
     out["p10"] = dist.p10
     out["p90"] = dist.p90
     out["p01"] = dist.p01
     out["p99"] = dist.p99
+    out["inside_p80"] = bool(dist.p10 <= value <= dist.p90)
+    out["inside_range"] = bool(dist.vmin <= value <= dist.vmax)
 
-    p01 = dist.p01
-    p10 = dist.p10
-    p90 = dist.p90
-    p99 = dist.p99
-    vmin = dist.vmin
-    vmax = dist.vmax
+    # ------------------------------------------------------------------
+    # PERCENTILE-BASED MATCH SCORE (rewritten 2026-05-02 after review).
+    # ------------------------------------------------------------------
+    # Previous "identity rule" (vmin ≤ value ≤ vmax → 100%) was too
+    # permissive: [vmin, vmax] spans every sliding Quranic N-verse window,
+    # which at most N is so wide that any rhymed Arabic hits 100%.  That
+    # silently broke Layer B as a discriminator.
+    #
+    # Piecewise empirical-CDF rule:
+    #   pct ∈ [0.10, 0.90]  (inner 80%, the typical Quranic band): 100%
+    #   pct ∈ [0.01, 0.10)  or  (0.90, 0.99]   : linear 60% → 100%
+    #   pct ∈ [0.00, 0.01)  or  (0.99, 1.00]   : linear  0% →  60%
+    #   value ∉ [vmin, vmax]                   : 0%
+    #
+    # This gives verbatim Quran the full 100% inside the typical band
+    # (the common case), honest partial credit (<100%) for tail values
+    # that are inside the observed Quranic range but atypical, and a
+    # hard 0% outside the observed range — which is the right answer
+    # given the range is derived from ~5,000 Quranic N-verse windows.
+    # ------------------------------------------------------------------
+    if not out["inside_range"]:
+        rng = max(1e-12, dist.vmax - dist.vmin)
+        gap = ((dist.vmin - value) if value < dist.vmin
+               else (value - dist.vmax)) / rng
+        out["match_pct"] = 0.0
+        out["outside_gap"] = gap
+        return out
 
-    # Identity rule (authored 2026-05-02): ANY value inside the observed
-    # Quranic range [vmin, vmax] scores 100% match. This guarantees that
-    # a verbatim Quranic N-verse window always scores 100% on every
-    # computable axis — the primary match% is a Quran-consistency claim,
-    # not a typicality claim. The p10/p90 "typicality" band and the
-    # percentile are still exposed for per-axis drill-down.
-    if vmin <= value <= vmax:
+    if 0.10 <= pct <= 0.90:
         out["match_pct"] = 100.0
-        out["inside_range"] = True
-        out["inside_p80"] = (p10 <= value <= p90)
-        return out
-
-    # Outside the observed Quranic range: decay linearly in units of the
-    # Quranic range width. Beyond one full range-width, score = 0.
-    rng = max(1e-12, vmax - vmin)
-    if value < vmin:
-        gap = (vmin - value) / rng
-    else:
-        gap = (value - vmax) / rng
-    out["match_pct"] = max(0.0, 100.0 * (1.0 - gap))
-    out["inside_range"] = False
-    out["inside_p80"] = False
-    return out
-
-    # (Legacy banded scoring retained below for reference — unreachable.)
-    if p01 <= value < p10:
-        frac = (value - p01) / max(p10 - p01, 1e-9)
-        out["match_pct"] = 50.0 + 50.0 * frac
-        out["inside_range"] = True
-        return out
-    if p90 < value <= p99:
-        frac = (p99 - value) / max(p99 - p90, 1e-9)
-        out["match_pct"] = 50.0 + 50.0 * frac
-        out["inside_range"] = True
-        return out
-
-    # Band 3 — inside [min, p1) or (p99, max] → 50% → 25% linear.
-    if dist.vmin <= value < p01:
-        frac = (value - dist.vmin) / max(p01 - dist.vmin, 1e-9)
-        out["match_pct"] = 25.0 + 25.0 * frac
-        out["inside_range"] = True
-        return out
-    if p99 < value <= dist.vmax:
-        frac = (dist.vmax - value) / max(dist.vmax - p99, 1e-9)
-        out["match_pct"] = 25.0 + 25.0 * frac
-        out["inside_range"] = True
-        return out
-
-    # Outside [min, max] entirely — drop from 25% toward 0% with distance.
-    scale = dist.range_width if dist.range_width > 0 else max(abs(value), 1e-9)
-    if value < dist.vmin:
-        distance = (dist.vmin - value) / scale
-    else:
-        distance = (value - dist.vmax) / scale
-    out["match_pct"] = max(0.0, 25.0 * (1.0 - distance))
-    out["inside_range"] = False
+    elif 0.01 <= pct < 0.10:
+        # pct = 0.10 -> 100;  pct = 0.01 -> 60.
+        out["match_pct"] = 60.0 + 40.0 * (pct - 0.01) / 0.09
+    elif 0.90 < pct <= 0.99:
+        out["match_pct"] = 60.0 + 40.0 * (0.99 - pct) / 0.09
+    elif 0.0 <= pct < 0.01:
+        out["match_pct"] = 60.0 * (pct / 0.01)
+    else:  # 0.99 < pct <= 1.0
+        out["match_pct"] = 60.0 * ((1.0 - pct) / 0.01)
     return out
 
 

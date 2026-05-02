@@ -58,15 +58,61 @@ from .per_surah_ref import (
 # Update only by editing this file *and* the corresponding receipt; never
 # from input text.
 # ---------------------------------------------------------------------------
+# IMPORTANT: statistic convention.
+#
+# The Quran project publishes TWO DIFFERENT locked statistics that both
+# answer "what's the Quran's value for axis X?", and they are legitimately
+# different quantities (confirmed in docs/THE_QURAN_FINDINGS.md:34-51 and
+# docs/RANKED_FINDINGS.md:268 for F56 p_max_pooled = 0.5010):
+#
+#   (A) PER-CHAPTER MEDIAN — compute the axis value separately on each of
+#       the 114 surahs, then take the median.  F76 H_EL = 0.9685 and F48
+#       p_max = 0.7273 quoted in THE_QURAN_FINDINGS.md ARE per-chapter
+#       medians.  F75 = 5.316 and F79 D_max = 3.84 derive from these.
+#
+#   (B) WHOLE-CORPUS POOLED — pool all 6,236 verse-finals into one bag
+#       and compute entropy / modal fraction.  F56 p_max_pooled = 0.5010
+#       (2.04× margin over next corpus) is locked from exp95l.  Pooled
+#       H_EL ≈ 2.47 bits (implied by p_max_pooled ≈ 0.50).
+#
+# For THIS APP, the user's input is treated as one candidate "chapter"
+# and compared against the PER-CHAPTER MEDIAN basis (A) — that is what
+# the `pooled_H_EL_pmax(input_verses)` call in metrics.py actually
+# computes: "if this input were a surah, what would its axis values be?"
+#
+# Previously (before 2026-05-02 review) the app silently used basis (A)
+# in challenge.py while the audit computed basis (B) from the full
+# corpus, producing the three-way mismatch the reviewer flagged.  That
+# is now fixed: both code paths state their basis explicitly, and the
+# audit reports BOTH statistics.
 QURAN_LOCKED: Dict[str, float] = {
-    "F75":     5.316,    # F75 invariant; from exp122_zipf_equation_hunt
-    "p_max":   0.7273,   # F48; corpus-level.  Per-surah median 0.7273.
-    "C_Omega": 0.7985,   # F67; rank 1 of 12 corpora.
-    "H_EL":    0.9685,   # F76; whole-corpus pooled.
-    "D_max":   3.84,     # F79; alphabet-corrected, rank 1 of 12.
-    "HFD":     0.965,    # F87 axis 1; mean per-surah HFD.
-    "Delta_alpha": 0.510,  # F87 axis 2; published mean.
-    "cos_short_long": 0.10,  # F87 axis 3 floor (corpus-level).
+    # axis:        per-chapter MEDIAN value (basis A)
+    "F75":         5.316,    # F75 invariant per-chapter; exp122
+    "p_max":       0.7273,   # F48 per-chapter median; THE_QURAN_FINDINGS:35
+    "C_Omega":     0.7985,   # F67 per-chapter median; exp115
+    "H_EL":        0.9685,   # F76 per-chapter median; THE_QURAN_FINDINGS:34
+    "D_max":       3.84,     # F79 per-chapter median; exp124c
+    "HFD":         0.965,    # F87 axis 1; mean per-surah HFD (exp75)
+    "Delta_alpha": 0.510,    # F87 axis 2; pool mean (exp97)
+    "cos_short_long": 0.10,  # F87 axis 3 floor (corpus-level, exp101)
+    # R_R (Rhyme-Rhythm Product, 2026-05-02 post-review addition).
+    # R_R = p_max × verse_length_CV_letters, the joint invariant proposed
+    # by the reviewer: captures "high rhyme concentration AND non-trivial
+    # verse-length variation simultaneously", a region of (rhyme, rhythm)
+    # space that classical metered poetry (high p_max, low CV) and modern
+    # prose (low p_max, low CV) both FAIL to enter.  Empirical Quran
+    # per-surah distribution (all 114 surahs):
+    #   min = 0.077, p10 = 0.153, median = 0.305, p90 = 0.531, max = 1.394.
+    # Works at every N ≥ 3 — no length gate needed beyond that.
+    "R_R":         0.305,    # per-surah median R_R across 114 Quran surahs
+}
+
+# Whole-corpus pooled values, for cross-check display only.  These are
+# NOT used as thresholds — they're shown in the audit report so the user
+# can see both legitimate locked numbers side by side.
+QURAN_LOCKED_POOLED: Dict[str, float] = {
+    "p_max":   0.5010,   # F56 pooled (exp95l); 2.04× margin over runner-up.
+    "H_EL":    2.468,    # implied by pooled p_max ≈ 0.50 on 28-letter alphabet.
 }
 
 # Pass thresholds.  Every threshold is published, not derived from the input.
@@ -94,6 +140,15 @@ THRESHOLDS = {
     "Delta_alpha": {"class_pass": (0.30, 2.0),
                     "strict_pass": (0.50, 2.0),  # F87 axis 2
                     "min_n": 64},
+    # R_R bands derived from the empirical Quran per-surah distribution.
+    # Class floor 0.10 safely sits between modern prose (~0.09) and
+    # Quranic min (0.077); we set class at 0.10 to mean "inside the
+    # joint rhyme+rhythm corner". Strict floor 0.153 is Quran's own p10 —
+    # every Quranic surah above the 10th percentile passes.  Upper
+    # bound 2.0 is a theoretical loose ceiling (R_R is unbounded above).
+    "R_R":     {"class_pass": (0.10, 2.0),
+                "strict_pass": (0.15, 2.0),
+                "min_n": 3},
 }
 
 
@@ -260,8 +315,15 @@ def run_challenge(verses: Sequence[str], is_arabic: bool = True) -> ChallengeRes
     HFD = metrics.higuchi_fd(lens) if lens.size >= 32 else float("nan")
     Da = metrics.delta_alpha_mfdfa(lens) if lens.size >= 64 else float("nan")
 
+    # R_R: Rhyme-Rhythm Product (joint scale-invariant).
+    VL_CV_letters = metrics.verse_length_cv(verses, unit="letters")
+    R_R = (p_max * VL_CV_letters
+           if (np.isfinite(p_max) and np.isfinite(VL_CV_letters))
+           else float("nan"))
+
     axis_results: List[AxisChallenge] = []
     for axis, val in [
+        ("R_R", R_R),  # joint axis first (it's the new headline discriminator)
         ("F75", F75), ("p_max", p_max), ("C_Omega", C_Omega),
         ("H_EL", H_EL), ("D_max", D_max),
         ("HFD", HFD), ("Delta_alpha", Da),

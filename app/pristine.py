@@ -301,6 +301,16 @@ p, li { color: var(--ink-2); line-height: 1.55; }
   padding: 0.62rem 0.6rem;
   border-bottom-color: var(--gold-soft);
 }
+.axis-explainer {
+  grid-column: 1 / -1;
+  padding: 0.3rem 0.2rem 0.75rem 0.2rem;
+  margin-top: -0.25rem;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+  line-height: 1.4;
+}
+.axis-explainer:last-child { border-bottom: none; }
 .axis-name { color: var(--ink); font-weight: 500; font-size: 0.9rem; }
 .axis-name .symbol {
   font-family: var(--mono);
@@ -497,12 +507,27 @@ button[kind="primary"] *,
 [data-testid="stSidebar"] h3 { font-size: 0.84rem; margin-top: 0.9rem; }
 [data-testid="stSidebar"] .stButton > button {
   width: 100%;
-  text-align: left;
-  padding: 0.4rem 0.7rem;
-  font-size: 0.82rem;
-  justify-content: flex-start;
+  text-align: left !important;
+  justify-content: flex-start !important;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.74rem;
+  line-height: 1.25;
   border-radius: 6px;
   box-shadow: none;
+  white-space: normal;
+  min-height: unset;
+  height: auto;
+  font-weight: 400;
+}
+[data-testid="stSidebar"] .stButton > button > div,
+[data-testid="stSidebar"] .stButton > button p {
+  text-align: left !important;
+  margin: 0 !important;
+  font-size: 0.74rem !important;
+  line-height: 1.25 !important;
+}
+[data-testid="stSidebar"] .stButton {
+  margin-bottom: 0.25rem;
 }
 [data-testid="stSidebar"] .brand {
   font-family: var(--sans);
@@ -911,13 +936,16 @@ def render_verdict(result: dict):
 
     if a == "skip_nonarabic":
         if np.isfinite(composite):
-            _row("neut", "—", "Not Arabic — fingerprint compared anyway",
-                 "Your text is not in the Arabic script so identity lookup is skipped. "
-                 "The fingerprint below is computed regardless, on character-level statistics.",
-                 f"{composite:.0f}%", "fingerprint")
+            _row("neut", "—", "Not Arabic script",
+                 "The locked Quran thresholds are defined on the 28-letter Arabic "
+                 "rasm; they do not apply to this input. A character-level "
+                 "fingerprint is shown below for curiosity, not as a Quran claim.",
+                 f"{composite:.0f}%", "non-Arabic fingerprint")
         else:
-            _row("neut", "—", "Not Arabic",
-                 "Identity lookup is skipped. Too short for a fingerprint claim.")
+            _row("neut", "—", "Not Arabic script",
+                 "The Quran's locked thresholds live on the 28-letter Arabic "
+                 "rasm; they do not apply to this input. Layer B is skipped "
+                 "because no Arabic verse-finals are present.")
         return
 
     # a == "miss"  —  Layer A says "not in the Quran corpus". The remaining
@@ -934,52 +962,85 @@ def render_verdict(result: dict):
              "information.")
         return
 
-    if composite >= 95:
-        # Inside the Arabic-rasm rhymed-scripture class.
+    # --------------------------------------------------------------------
+    # Honest-scope verdict (rewritten 2026-05-02 after reviewer audit).
+    #
+    # Layer B's composite is NOT a Quran-uniqueness score — it is
+    # "percentile-based typicality against the Quran's OWN sliding-window
+    # N-verse distribution".  The reviewer was right that a high score
+    # here does NOT prove Quran-like structure: modern Arabic prose and
+    # classical poetry can both land at ~95% at small N simply because
+    # the Quran's own N-verse window distribution is wide.
+    #
+    # The DISCRIMINATING verdict comes from Layer X (Extremum Challenge),
+    # which compares your text to locked published thresholds + per-surah
+    # references.  The verdict text therefore:
+    #   1. always describes Layer B honestly as "typicality vs Quranic
+    #      N-verse windows", not "class membership";
+    #   2. always points the user to Layer X for the real discriminator;
+    #   3. never asserts "in the rhymed-scripture class" as if that were
+    #      a distinctive positive finding.
+    # --------------------------------------------------------------------
+    challenge = result.get("challenge")
+    has_chal = challenge is not None and challenge.is_arabic and challenge.n_class_testable > 0
+    if has_chal:
+        cp, ct = challenge.n_class_passed, challenge.n_class_testable
+        sp, st_ = challenge.n_strict_passed, challenge.n_strict_testable
+        j = challenge.joint_f87
+        chal_tail = (f" · Extremum Challenge: {sp}/{st_} strict Quran-thresholds "
+                     f"reached, {cp}/{ct} class envelopes")
+        if j and j.can_test:
+            chal_tail += (f" · F87 partial joint "
+                          f"{'PASSES' if j.joint_pass else 'FAILS'}")
+    else:
+        chal_tail = ""
+
+    if composite >= 90:
         if n_verses < 32:
-            label = "Not Quran · in the Arabic-rasm rhymed-scripture class"
-            desc = (f"Not a verbatim or near-verbatim Quranic passage. Its "
-                    f"structural values sit inside the Quranic range on every "
-                    f"measurable axis at N = {n_verses} — consistent with "
-                    f"classical Arabic verse, rhymed prose, hadith, or an "
-                    f"imitation. <b>At N &lt; 32 verses these axes measure "
-                    f"class membership, not Quran-specific identity</b>, so "
-                    f"this score is <u>expected</u> for Mu'allaqa-style "
-                    f"classical poetry too. The Quran-unique signatures "
-                    f"(F87 multifractal fingerprint, F76 corpus-aggregate) "
-                    f"require N ≥ 64 or a whole-surah input and cannot fire here.")
+            label = "Not Quran · typical inside Quranic N-verse range"
+            desc = (f"Not a verbatim or near-verbatim Quranic passage. Every "
+                    f"measurable axis value lands inside the Quran's own "
+                    f"{n_verses}-verse sliding-window distribution. "
+                    f"<b>This is NOT a Quran-uniqueness signal</b> — rhymed "
+                    f"Arabic poetry, rhymed prose, and even accidentally "
+                    f"rhyme-heavy modern prose can all reach this score at "
+                    f"small N because the Quran's own N-verse window range "
+                    f"is wide.  The Quran-discriminating tests (F87 needs "
+                    f"N ≥ 64, cross-tradition F67/F76 need a multi-surah "
+                    f"corpus) do not fire at this length. <b>See the "
+                    f"Extremum Challenge panel below</b> — it is the "
+                    f"layer that actually discriminates Quran-extremum "
+                    f"thresholds from class-membership thresholds."
+                    f"{chal_tail}.")
         else:
-            label = "Not Quran · but structurally Quran-like"
+            label = "Not Quran · but values typical across the full fingerprint"
             desc = (f"Not a verbatim or near-verbatim Quranic passage. At "
-                    f"N = {n_verses} the full fingerprint including HFD "
-                    f"(and Δα at N ≥ 64) is active and your values still sit "
-                    f"inside the Quranic range — rare for non-Quranic text at "
-                    f"this length. Possible: long classical saj' composition, "
-                    f"very skilled imitation, or data that shares the Quran's "
-                    f"multifractal signature.")
-        _row("warn", "≈", label, desc, f"{composite:.0f}%", "class-match")
+                    f"N = {n_verses} the fingerprint includes HFD (and Δα "
+                    f"at N ≥ 64). Your values still sit inside the Quran's "
+                    f"own N-verse distribution — rare for arbitrary non-Quranic "
+                    f"text at this length. <b>Read the Extremum Challenge "
+                    f"panel for the strict Quran-threshold verdict</b>: "
+                    f"typicality-vs-Quran (this layer) and reaching-Quran-extremum "
+                    f"(Layer X) are different questions.{chal_tail}.")
+        _row("warn", "≈", label, desc, f"{composite:.0f}%",
+             "typicality vs Quranic N-verse windows")
         return
 
-    if composite >= 60:
-        _row("warn", "≈", "Not Quran · partial class membership",
-             f"Not in the corpus. Some axes land inside the Quranic range, "
-             f"others don't. At N = {n_verses} this suggests Arabic text "
-             f"with partial overlap with the rhymed-scripture class "
-             f"(e.g. some rhyme structure without full channel saturation).",
-             f"{composite:.0f}%", "class-match")
-        return
-
-    if composite >= 30:
-        _row("err", "✗", "Not Quran",
-             f"Not in the corpus. Structurally outside the Arabic-rasm "
-             f"rhymed-scripture class on the deciding axes.",
-             f"{composite:.0f}%", "class-match")
+    if composite >= 50:
+        _row("warn", "≈", "Not Quran · partial typicality",
+             f"Not in the corpus. Some axes land inside the typical Quranic "
+             f"band (p10–p90), others don't. At N = {n_verses} this suggests "
+             f"Arabic text partially overlapping Quran's structural envelope "
+             f"(e.g., some rhyme regularity without full channel saturation). "
+             f"See the Extremum Challenge panel for the strict-threshold "
+             f"verdict.{chal_tail}.",
+             f"{composite:.0f}%", "typicality vs Quranic N-verse windows")
         return
 
     _row("err", "✗", "Not Quran",
-         f"Not in the corpus. Structural profile is far from the Arabic-rasm "
-         f"rhymed-scripture class on every measurable axis.",
-         f"{composite:.0f}%", "class-match")
+         f"Not in the corpus. Structural values sit outside the Quran's own "
+         f"{n_verses}-verse window distribution on most deciding axes.{chal_tail}.",
+         f"{composite:.0f}%", "typicality vs Quranic N-verse windows")
 
 
 # -----------------------------------------------------------------------------
@@ -1371,6 +1432,44 @@ def _challenge_badge(label: str, kind: str) -> str:
     return f'<span class="pill {cls}">{label}</span>'
 
 
+def _axis_explainer(axis_key: str, a) -> str:
+    """One-sentence plain-English 'what this axis means and what your verdict
+    says'.  Displayed beneath every axis row in Layer X."""
+    sym = {
+        "R_R": "R×R", "F75": "F75", "p_max": "p_max", "C_Omega": "C_Ω",
+        "H_EL": "H_EL", "D_max": "D_max",
+        "HFD": "HFD", "Delta_alpha": "Δα",
+    }.get(axis_key, axis_key)
+    plain = {
+        "R_R":         ("the <b>joint</b> rhyme × verse-length-CV product. Classical metered poetry has high p_max but meter forces near-uniform lengths → low CV → low R×R. Modern prose has low p_max and low CV → low R×R. The Quran uniquely sits at high rhyme AND non-trivial length variation. Empirical Quran range 0.077–1.394 (N=114 surahs); this is the only axis that works at every N ≥ 3 without length-scaling problems."),
+        "F75":         "the cognitive-channel invariant that rhymed scripture pools land on (≈ 5.75 ± 0.11 across 11 traditions; Quran ≈ 5.316 rank-1)",
+        "p_max":       "how concentrated the rhyme is — the fraction of verses ending in the single most common letter",
+        "C_Omega":     "how much of the alphabet's 28-letter Shannon capacity the rhyme channel uses (F67 Quran rank 1 of 12)",
+        "H_EL":        "verse-final-letter Shannon entropy in bits (F76 Quran per-chapter median 0.97; smaller = more rhyme regularity)",
+        "D_max":       "bits of redundancy relative to a uniform 28-letter alphabet (F79 Quran 3.84, rank 1 of 12 alphabets)",
+        "HFD":         "Higuchi fractal dimension of the verse-length sequence (F87 axis 1; Quran ≈ 0.965 — highly irregular but bounded)",
+        "Delta_alpha": "width of the multifractal spectrum (F87 axis 2; Quran ≈ 0.51 — multi-scaling, not single-scale)",
+    }.get(axis_key, "")
+    if not a.can_test:
+        return (f"<b>{sym}</b> measures {plain}.  "
+                f"<b>Cannot be tested here:</b> {a.why_blocked}.")
+    if a.strict_pass:
+        return (f"<b>{sym}</b> measures {plain}.  "
+                f"Your value <b>{a.your_value:.3f}</b> is inside the Quran's "
+                f"locked strict band [{a.strict_band[0]:.2f}, {a.strict_band[1]:.2f}] — "
+                f"this matches the published Quran-extremum threshold.")
+    if a.class_pass:
+        return (f"<b>{sym}</b> measures {plain}.  "
+                f"Your value <b>{a.your_value:.3f}</b> is inside the broad "
+                f"class envelope [{a.class_band[0]:.2f}, {a.class_band[1]:.2f}] "
+                f"(shared by classical Arabic rhymed text) but outside the "
+                f"stricter Quran-extremum band [{a.strict_band[0]:.2f}, {a.strict_band[1]:.2f}].")
+    return (f"<b>{sym}</b> measures {plain}.  "
+            f"Your value <b>{a.your_value:.3f}</b> is outside the rhymed-scripture "
+            f"class envelope [{a.class_band[0]:.2f}, {a.class_band[1]:.2f}] — "
+            f"this axis shows no match to the Quranic pattern.")
+
+
 def render_extremum_challenge(result: dict):
     res = result.get("challenge")
     if res is None:
@@ -1435,6 +1534,7 @@ def render_extremum_challenge(result: dict):
     )
 
     F_NAMES = {
+        "R_R":         ("R×R", "Rhyme-Rhythm Product — joint scale-invariant"),
         "F75":         ("F75", "F75 universal invariant"),
         "p_max":       ("p_max", "F48 verse-final concentration"),
         "C_Omega":     ("C_Ω", "F67 channel utilization (rank 1/12)"),
@@ -1446,11 +1546,12 @@ def render_extremum_challenge(result: dict):
 
     for a in res.axis_results:
         sym, fname = F_NAMES.get(a.axis, (a.axis, a.axis))
+        explainer = _axis_explainer(a.axis, a)
+
         if not a.can_test:
             row = (
                 f'<div class="axis-row">'
-                f'<div><span class="axis-name">{fname}</span><br>'
-                f'<span style="color:var(--ink-muted);font-size:0.78rem">{a.why_blocked}</span></div>'
+                f'<div><span class="axis-name">{fname}</span></div>'
                 f'<div style="color:var(--ink-muted);font-family:var(--mono)">— n/a —</div>'
                 f'<div style="color:var(--ink-muted);font-family:var(--mono)">{a.locked:.3f}</div>'
                 f'<div style="color:var(--ink-muted);font-size:0.78rem">'
@@ -1458,6 +1559,7 @@ def render_extremum_challenge(result: dict):
                 f'strict: [{a.strict_band[0]:.2f}, {a.strict_band[1]:.2f}]</div>'
                 f'<div style="text-align:right">{_challenge_badge("BLOCKED · need N≥" + str(a.min_n), "block")}</div>'
                 f'</div>'
+                f'<div class="axis-explainer">{explainer}</div>'
             )
             st.markdown(row, unsafe_allow_html=True)
             continue
@@ -1466,17 +1568,25 @@ def render_extremum_challenge(result: dict):
         pct_text = (f"{ref.percentile:.0f}th percentile of {ref.n_samples} "
                     f"Quran surahs with {ref.bin_lo}≤N≤{ref.bin_hi}"
                     if ref else "no comparable Quran surahs at this length")
-        unstable_html = (_challenge_badge("UNSTABLE", "unstable")
+
+        # Decide single consolidated outcome pill per row (cleaner than 2 pills).
+        if a.strict_pass:
+            outcome_label = "REACHES Quran-extremum threshold"
+            outcome_kind = "pass"
+        elif a.class_pass:
+            outcome_label = "In class envelope, below strict Quran threshold"
+            outcome_kind = "warn" if False else "fail"  # yellow warning style
+            outcome_kind = "fail"  # soft fail (orange/red depending on CSS)
+        else:
+            outcome_label = "Outside class envelope"
+            outcome_kind = "fail"
+
+        unstable_pill = (_challenge_badge("UNSTABLE at this N", "unstable")
                          if a.unstable else "")
-        verdict_bits = []
-        verdict_bits.append(_challenge_badge(
-            "class ✓" if a.class_pass else "class ✗",
-            "pass" if a.class_pass else "fail"))
-        verdict_bits.append(_challenge_badge(
-            "strict ✓" if a.strict_pass else "strict ✗",
-            "pass" if a.strict_pass else "fail"))
-        if a.unstable:
-            verdict_bits.insert(0, unstable_html)
+        outcome_pill = _challenge_badge(outcome_label, outcome_kind)
+        if a.strict_pass:
+            # Override to green 'pass' styling regardless of class_pass.
+            outcome_pill = _challenge_badge(outcome_label, "pass")
 
         row = (
             f'<div class="axis-row">'
@@ -1489,9 +1599,10 @@ def render_extremum_challenge(result: dict):
             f'[{a.class_band[0]:.2f}, {a.class_band[1]:.2f}]</span><br>'
             f'strict: <span style="font-family:var(--mono)">'
             f'[{a.strict_band[0]:.2f}, {a.strict_band[1]:.2f}]</span></div>'
-            f'<div style="text-align:right;display:flex;gap:0.3rem;flex-wrap:wrap;justify-content:flex-end">'
-            f'{" ".join(verdict_bits)}</div>'
+            f'<div style="text-align:right;display:flex;gap:0.3rem;flex-wrap:wrap;justify-content:flex-end;align-items:center">'
+            f'{unstable_pill} {outcome_pill}</div>'
             f'</div>'
+            f'<div class="axis-explainer">{explainer}</div>'
         )
         st.markdown(row, unsafe_allow_html=True)
 
