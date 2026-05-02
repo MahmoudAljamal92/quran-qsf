@@ -44,15 +44,25 @@ def _final_letter(skeleton: str) -> str:
     )
 
 
-def pooled_H_EL_pmax(verses: Sequence[str]) -> Dict[str, float]:
+def pooled_H_EL_pmax(verses: Sequence[str],
+                     bias_correct: bool = False) -> Dict[str, float]:
     """Pooled verse-final entropy and p_max.
 
     Pools ALL verse-final letters of the input into one bag, then computes:
        p_max = most_common_count / total
-       H_EL  = -sum p_i log2(p_i)
+       H_EL  = -sum p_i log2(p_i)              (plug-in)
+       H_EL_mm = H_EL + (M-1)/(2 * N * ln 2)   (Miller-Madow corrected)
        C_Omega = 1 - H_EL / log2(28)
        F75   = H_EL + log2(p_max * 28)
        D_max = log2(28) - H_EL
+
+    M is the number of distinct verse-final letters observed; N is the number
+    of valid verse-finals.  The Miller-Madow correction adds the standard
+    small-sample plug-in bias adjustment for Shannon entropy and is only
+    meaningful when N is small (it vanishes as 1/N).
+
+    If bias_correct=True, the returned H_EL / C_Omega / F75 / D_max use the
+    Miller-Madow-corrected H_EL.  H_EL_raw is always returned alongside.
 
     Returns NaN values if fewer than 3 valid verse-finals are present.
     """
@@ -66,7 +76,10 @@ def pooled_H_EL_pmax(verses: Sequence[str]) -> Dict[str, float]:
     if n < 3:
         return {
             "n_finals": n,
+            "n_distinct_finals": 0,
             "H_EL": float("nan"),
+            "H_EL_raw": float("nan"),
+            "H_EL_mm": float("nan"),
             "p_max": float("nan"),
             "C_Omega": float("nan"),
             "F75": float("nan"),
@@ -75,19 +88,53 @@ def pooled_H_EL_pmax(verses: Sequence[str]) -> Dict[str, float]:
     counts = Counter(finals)
     total = float(n)
     probs = np.array([c / total for c in counts.values() if c > 0])
-    H_EL = float(-(probs * np.log2(probs)).sum())
+    H_raw = float(-(probs * np.log2(probs)).sum())
+    M = int(probs.size)
+    # Miller-Madow plug-in bias correction (1955).
+    H_mm = H_raw + (M - 1) / (2.0 * total * log(2.0)) if total > 0 else H_raw
+    H_EL = H_mm if bias_correct else H_raw
     p_max = float(max(counts.values()) / total)
     C_Omega = 1.0 - H_EL / LOG2_A
     F75 = H_EL + log2(p_max * ALPHABET_SIZE)
     D_max = LOG2_A - H_EL
     return {
         "n_finals": n,
+        "n_distinct_finals": M,
         "H_EL": H_EL,
+        "H_EL_raw": H_raw,
+        "H_EL_mm": H_mm,
         "p_max": p_max,
         "C_Omega": C_Omega,
         "F75": F75,
         "D_max": D_max,
     }
+
+
+def verse_length_cv(verses: Sequence[str], unit: str = "letters") -> float:
+    """Coefficient of variation of verse lengths (std / mean).
+
+    unit:  "letters" (default) measures rasm-skeleton length per verse;
+           "words"   measures whitespace-split word count per verse.
+
+    Returns NaN if fewer than 3 verses or mean ≤ 0.
+    """
+    if unit not in ("letters", "words"):
+        raise ValueError(f"unit must be 'letters' or 'words', got {unit!r}")
+    if len(verses) < 3:
+        return float("nan")
+    if unit == "letters":
+        lens = np.asarray(
+            [len(normalize_arabic_letters_only(v)) for v in verses],
+            dtype=float,
+        )
+    else:
+        lens = np.asarray(
+            [len(v.split()) for v in verses],
+            dtype=float,
+        )
+    if lens.size < 3 or lens.mean() <= 0:
+        return float("nan")
+    return float(lens.std(ddof=1) / lens.mean())
 
 
 def d_info(letter_skeleton: str, contraction: float = 0.18) -> float:
@@ -285,7 +332,7 @@ def match_pct(your_value: float, quran_value: float, tolerance: float) -> float:
 
 
 __all__ = [
-    "pooled_H_EL_pmax", "d_info",
+    "pooled_H_EL_pmax", "verse_length_cv", "d_info",
     "higuchi_fd", "delta_alpha_mfdfa",
     "bigram_histogram", "bigram_shift_delta", "gzip_ncd",
     "match_pct",

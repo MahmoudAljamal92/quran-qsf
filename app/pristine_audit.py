@@ -376,6 +376,8 @@ def check_examples(audit: AuditResult):
         "one_letter_edit": "fuzzy",
         "verse_swap":      "fuzzy",      # same letters, fuzzy match should hit
         "muallaqa":        "miss",
+        "kawthar":         "exact",      # 3-verse verbatim Quran preset
+        "baqarah_64":      "exact",      # 64-verse verbatim Quran preset (F87 testable)
         "modern_prose":    "miss",
         "psalm_23":        "skip_nonarabic_or_miss",
         "tiny":            "skip_any",   # too short -> any non-exact outcome ok

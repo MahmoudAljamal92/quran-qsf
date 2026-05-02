@@ -28,7 +28,7 @@ if str(_HERE) not in sys.path:
     sys.path.insert(0, str(_HERE))
 
 from pristine_lib import constants as C  # noqa: E402
-from pristine_lib import calibration, corpus, examples, metrics  # noqa: E402
+from pristine_lib import calibration, challenge, corpus, examples, metrics  # noqa: E402
 from pristine_lib.normalize import (  # noqa: E402
     detect_script,
     normalize_arabic_letters_only,
@@ -794,6 +794,16 @@ def analyse(input_text: str, progress=None):
         }
     out["layer_b"] = layer_b
 
+    # --- Extremum Challenge: locked thresholds vs your text --------------
+    step(0.84, "Extremum challenge · locked thresholds…")
+    try:
+        verses_list = split_into_verses(input_text)
+        is_arabic = (script == "ar") and (len(verses_list) >= 1)
+        out["challenge"] = challenge.run_challenge(verses_list, is_arabic=is_arabic)
+    except Exception as e:  # noqa: BLE001
+        out["challenge"] = None
+        out["challenge_error"] = str(e)
+
     # --- Layer C: tampering forensics ------------------------------------
     step(0.88, "Layer C · tampering forensics…")
     layer_c = {"status": "skip_far"}
@@ -1351,6 +1361,227 @@ def render_layer_b(result: dict):
     _layer_close()
 
 
+# =============================================================================
+# Extremum Challenge — locked thresholds vs your text
+# =============================================================================
+def _challenge_badge(label: str, kind: str) -> str:
+    """kind in {'pass', 'fail', 'block', 'unstable'}."""
+    cls = {"pass": "ok", "fail": "err", "block": "neut",
+           "unstable": "warn"}.get(kind, "neut")
+    return f'<span class="pill {cls}">{label}</span>'
+
+
+def render_extremum_challenge(result: dict):
+    res = result.get("challenge")
+    if res is None:
+        return  # nothing to show (computation failed; non-fatal)
+
+    if not res.is_arabic:
+        _layer_open("X", "Extremum challenge", "locked Quran thresholds",
+                    "All locked thresholds are defined on the 28-letter Arabic "
+                    "rasm. Your input is not in the Arabic script — the "
+                    "challenge is skipped. Submit Arabic text to test it.")
+        _layer_close()
+        return
+
+    _layer_open(
+        "X", "Extremum challenge", "locked Quran thresholds",
+        "Tests whether your text reaches the Quran's <b>published locked "
+        "extremum thresholds</b>. Every threshold is from a pre-registered "
+        "experiment in <code>docs/RANKED_FINDINGS.md</code>; nothing is fitted "
+        "to your input. Length-gate flags show which axes can and cannot be "
+        "tested at your N.",
+    )
+
+    # Headline ---------------------------------------------------------------
+    n = res.n_verses
+    cp, ct = res.n_class_passed, res.n_class_testable
+    sp, st_ = res.n_strict_passed, res.n_strict_testable
+    j = res.joint_f87
+
+    # Top-line summary in plain English.
+    headline_html = (
+        f'<div class="layer-summary" style="margin-top:0.5rem">'
+        f'<b>At N = {n} verses:</b> '
+        f'class envelopes passed {cp}/{ct} · '
+        f'strict Quran-extremum thresholds passed {sp}/{st_}'
+    )
+    if j is not None:
+        if j.can_test:
+            verdict = ("<b style='color:var(--green)'>F87 partial joint "
+                       "PASSES</b>" if j.joint_pass
+                       else "<b style='color:var(--red)'>F87 partial joint "
+                            "FAILS</b>")
+            headline_html += f' · {verdict} (HFD={j.hfd_value:.3f}, Δα={j.da_value:.3f})'
+        else:
+            headline_html += (
+                ' · F87 partial joint <b>cannot be tested</b> '
+                f'({j.why_blocked})'
+            )
+    headline_html += '</div>'
+    st.markdown(headline_html, unsafe_allow_html=True)
+
+    # Per-axis table ---------------------------------------------------------
+    st.markdown(
+        '<div class="axis-table" style="margin-top:1rem">'
+        '<div class="axis-row head">'
+        '<div>axis · what F-finding it tests</div>'
+        '<div>your value</div>'
+        '<div>locked Quran value</div>'
+        '<div>thresholds</div>'
+        '<div style="text-align:right">verdict</div>'
+        '</div>',
+        unsafe_allow_html=True,
+    )
+
+    F_NAMES = {
+        "F75":         ("F75", "F75 universal invariant"),
+        "p_max":       ("p_max", "F48 verse-final concentration"),
+        "C_Omega":     ("C_Ω", "F67 channel utilization (rank 1/12)"),
+        "H_EL":        ("H_EL", "F76 corpus < 1 bit (corpus-aggregate claim)"),
+        "D_max":       ("D_max", "F79 alphabet-corrected redundancy gap"),
+        "HFD":         ("HFD", "F87 axis 1 — Higuchi fractal dimension"),
+        "Delta_alpha": ("Δα", "F87 axis 2 — multifractal spectrum width"),
+    }
+
+    for a in res.axis_results:
+        sym, fname = F_NAMES.get(a.axis, (a.axis, a.axis))
+        if not a.can_test:
+            row = (
+                f'<div class="axis-row">'
+                f'<div><span class="axis-name">{fname}</span><br>'
+                f'<span style="color:var(--ink-muted);font-size:0.78rem">{a.why_blocked}</span></div>'
+                f'<div style="color:var(--ink-muted);font-family:var(--mono)">— n/a —</div>'
+                f'<div style="color:var(--ink-muted);font-family:var(--mono)">{a.locked:.3f}</div>'
+                f'<div style="color:var(--ink-muted);font-size:0.78rem">'
+                f'class: [{a.class_band[0]:.2f}, {a.class_band[1]:.2f}] · '
+                f'strict: [{a.strict_band[0]:.2f}, {a.strict_band[1]:.2f}]</div>'
+                f'<div style="text-align:right">{_challenge_badge("BLOCKED · need N≥" + str(a.min_n), "block")}</div>'
+                f'</div>'
+            )
+            st.markdown(row, unsafe_allow_html=True)
+            continue
+
+        ref = a.similar_length_ref
+        pct_text = (f"{ref.percentile:.0f}th percentile of {ref.n_samples} "
+                    f"Quran surahs with {ref.bin_lo}≤N≤{ref.bin_hi}"
+                    if ref else "no comparable Quran surahs at this length")
+        unstable_html = (_challenge_badge("UNSTABLE", "unstable")
+                         if a.unstable else "")
+        verdict_bits = []
+        verdict_bits.append(_challenge_badge(
+            "class ✓" if a.class_pass else "class ✗",
+            "pass" if a.class_pass else "fail"))
+        verdict_bits.append(_challenge_badge(
+            "strict ✓" if a.strict_pass else "strict ✗",
+            "pass" if a.strict_pass else "fail"))
+        if a.unstable:
+            verdict_bits.insert(0, unstable_html)
+
+        row = (
+            f'<div class="axis-row">'
+            f'<div><span class="axis-name">{fname} <span class="symbol">{sym}</span></span><br>'
+            f'<span style="color:var(--ink-muted);font-size:0.78rem">{pct_text}</span></div>'
+            f'<div style="font-family:var(--mono);font-weight:600">{a.your_value:.3f}</div>'
+            f'<div style="font-family:var(--mono);color:var(--ink-muted)">{a.locked:.3f}</div>'
+            f'<div style="font-size:0.78rem;color:var(--ink-muted)">'
+            f'class: <span style="font-family:var(--mono)">'
+            f'[{a.class_band[0]:.2f}, {a.class_band[1]:.2f}]</span><br>'
+            f'strict: <span style="font-family:var(--mono)">'
+            f'[{a.strict_band[0]:.2f}, {a.strict_band[1]:.2f}]</span></div>'
+            f'<div style="text-align:right;display:flex;gap:0.3rem;flex-wrap:wrap;justify-content:flex-end">'
+            f'{" ".join(verdict_bits)}</div>'
+            f'</div>'
+        )
+        st.markdown(row, unsafe_allow_html=True)
+
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    # F87 partial joint detail box ----------------------------------------
+    if j is not None:
+        if j.can_test:
+            color = "var(--green)" if j.joint_pass else "var(--red)"
+            label = "PASSES" if j.joint_pass else "FAILS"
+            j_html = (
+                f'<div class="layer-summary" style="margin-top:1.1rem;'
+                f'border-left:4px solid {color};padding-left:0.9rem">'
+                f'<b style="color:{color}">F87 partial joint test (single-text): {label}</b><br>'
+                f'<span style="font-size:0.83rem">'
+                f'F87 published thresholds for the joint multifractal '
+                f'fingerprint require all THREE of: '
+                f'<code>HFD ∈ [0.95, 1.00]</code> AND '
+                f'<code>Δα ≥ 0.50</code> AND '
+                f'<code>cos_short_long ≥ 0.10</code>. '
+                f'On a single text we can only test the first two. '
+                f'Your text: HFD = <b>{j.hfd_value:.3f}</b> '
+                f'({"PASS" if j.hfd_pass else "FAIL"}), '
+                f'Δα = <b>{j.da_value:.3f}</b> '
+                f'({"PASS" if j.da_pass else "FAIL"}).</span><br>'
+                f'<span style="color:var(--ink-muted);font-size:0.78rem;'
+                f'font-style:italic">{j.cos_short_long_status}</span>'
+                f'</div>'
+            )
+        else:
+            j_html = (
+                f'<div class="layer-summary" style="margin-top:1.1rem;'
+                f'border-left:4px solid var(--ink-muted);padding-left:0.9rem">'
+                f'<b>F87 partial joint test: cannot run.</b> '
+                f'<span style="font-size:0.83rem">{j.why_blocked}. '
+                f'Below this length, the F87 multifractal fingerprint test '
+                f'(the strongest single-text Quran-uniqueness claim, '
+                f'LOO-z = 22.59 across 7 Arabic-rasm corpora) is '
+                f'mathematically undefined.</span><br>'
+                f'<span style="color:var(--ink-muted);font-size:0.78rem;'
+                f'font-style:italic">{j.cos_short_long_status}</span>'
+                f'</div>'
+            )
+        st.markdown(j_html, unsafe_allow_html=True)
+
+    # Corpus-only claims ---------------------------------------------------
+    if res.corpus_only_claims:
+        with st.expander(
+            "Corpus-level findings (require multi-surah input — not testable here)",
+            expanded=False,
+        ):
+            st.markdown(
+                "These are the Quran's strongest published uniqueness claims, "
+                "but they all compare a **whole tradition** to other whole "
+                "traditions. To test any of them on a candidate text, you "
+                "need to submit a multi-surah corpus, not a single passage."
+            )
+            for cl in res.corpus_only_claims:
+                st.markdown(
+                    f"- **{cl.name}** · *requires:* {cl.requirement} · "
+                    f"*Quran's value:* {cl.quran_value}"
+                )
+
+    # Falsification note ---------------------------------------------------
+    st.markdown(
+        '<div class="fine-print" style="margin-top:1rem">'
+        '<b>What would falsify the Quran\'s extremum claim?</b> '
+        'A multi-surah Arabic-rasm corpus (≥ 100 chapters, ≥ 10 short and '
+        '≥ 10 long) that simultaneously hits all three F87 axes '
+        '(<code>HFD ∈ [0.95, 1.00]</code>, <code>Δα ≥ 0.50</code>, '
+        '<code>cos_short_long ≥ 0.10</code>) AND F76 '
+        '(<code>H_EL &lt; 1 bit</code> at corpus aggregate) AND F67 '
+        '(<code>C_Ω ≥ 0.79</code>). 11 tested traditions across 3 millennia '
+        'and 5 language families have failed at least one. The Quran is '
+        'currently the only known text passing all of them jointly '
+        '(LOO-z = 22.59 on F87, gap 0.36 to runner-up on F67, p ≤ 10⁻⁷ on '
+        'F89 Mushaf-order extremum).<br>'
+        '<b>What this panel CANNOT do:</b> falsify the Quran\'s claim from a '
+        'single short text. The axes that look "easy to satisfy" at small '
+        'N (p_max, C_Ω) are class-membership axes; passing them is expected '
+        'for any monorhyme classical Arabic poetry. The hard axes (Δα, '
+        'cos_short_long) require length and multi-surah structure that no '
+        'single passage can provide.'
+        '</div>',
+        unsafe_allow_html=True,
+    )
+
+    _layer_close()
+
+
 def render_layer_c(result: dict):
     c = result["layer_c"]
     a_status = result["layer_a"]["status"]
@@ -1784,6 +2015,7 @@ def main():
         st.markdown("## Layered evaluation")
         render_layer_a(result)
         render_layer_b(result)
+        render_extremum_challenge(result)
         render_layer_c(result)
 
 

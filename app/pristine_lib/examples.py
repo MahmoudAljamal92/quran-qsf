@@ -102,6 +102,20 @@ _PSALM_23 = """\
 _TINY = "abc 123 ✨"
 
 
+# Surah 108 (Al-Kawthar, 3 verses) — the shortest non-trivial Quran surah.
+# Loaded from the SHA-locked corpus so the example is always canonical.
+def _kawthar_text() -> str:
+    from .corpus import surah_verses
+    return "\n".join(v.raw for v in surah_verses(108))
+
+
+# Surah 2 (Al-Baqarah), verses 1-64 — the shortest verbatim-Quran prefix that
+# enables the F87 partial joint test (HFD requires N ≥ 32, Δα requires N ≥ 64).
+def _baqarah_64_text() -> str:
+    from .corpus import surah_verses
+    return "\n".join(v.raw for v in surah_verses(2)[:64])
+
+
 PRESETS = [
     {
         "id": "verbatim_quran",
@@ -126,6 +140,18 @@ PRESETS = [
         "label": "Pre-Islamic poetry — Mu'allaqa of Imru' al-Qais",
         "expected": "Layer A: ✗ not in corpus · Layer B: ~25-50% (rhymed but not Quranic)",
         "text": _MUALLAQA,
+    },
+    {
+        "id": "kawthar",
+        "label": "Verbatim Quran — Surah 108 (Al-Kawthar, 3 verses, the floor)",
+        "expected": "Only p_max is testable at N=3; everything else blocked by length gates.",
+        "text": _kawthar_text(),
+    },
+    {
+        "id": "baqarah_64",
+        "label": "Verbatim Quran — Al-Baqarah verses 1-64 (F87 partial joint testable)",
+        "expected": "First single-text input where F87 partial joint (HFD + Δα) can fire.",
+        "text": _baqarah_64_text(),
     },
     {
         "id": "modern_prose",

@@ -1,6 +1,6 @@
 # Pristine — self-audit report
 
-**Generated**: 2026-05-02 12:01 UTC
+**Generated**: 2026-05-02 12:33 UTC
 **Verdict**: ✅ ALL CHECKS PASSED  (9/9 passing)
 
 ## What this audit verifies
@@ -81,13 +81,15 @@ min=2.00  median=2.00  mean=2.00  max=2.00
 
 ### ✅ Check 9 — Examples reproduce expected outcomes
 
-All 7 preset texts produce the expected Layer A outcome.
+All 9 preset texts produce the expected Layer A outcome.
 
 ```
   verbatim_quran            -> exact
   one_letter_edit           -> fuzzy
   verse_swap                -> fuzzy
   muallaqa                  -> miss
+  kawthar                   -> exact
+  baqarah_64                -> exact
   modern_prose              -> miss
   psalm_23                  -> skip_nonarabic
   tiny                      -> skip_nonarabic
